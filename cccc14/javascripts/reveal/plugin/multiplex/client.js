@@ -1,0 +1,1 @@
+!function(){var e=Reveal.getConfig().multiplex,t=e.id,r=io.connect(e.url);r.on(e.id,function(e){e.socketId===t&&"localhost:1947"!==window.location.host&&Reveal.slide(e.indexh,e.indexv,e.indexf,"remote")})}();

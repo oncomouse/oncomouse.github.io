@@ -1,0 +1,1 @@
+!function(){window.addEventListener("message",function(e){var t=JSON.parse(e.data),r=t.method;t.args,"function"==typeof Reveal[r]&&Reveal[r].apply(Reveal,t.args)},!1)}();
