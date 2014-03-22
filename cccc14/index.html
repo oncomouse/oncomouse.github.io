@@ -9,39 +9,8 @@
     <meta charset='utf-8'>
     <meta content='IE=edge,chrome=1' http-equiv='X-UA-Compatible'>
     <title>CCCC Trip</title>
-    <meta content='' name=''>
-    <meta content='' name=''>
     <meta content='text/javascript' http-equiv='content-script-type'>
     <meta content='width=device-width, initial-scale=1.0' name='viewport'>
-    <base target='_blank'>
-    <script src='//cdnjs.cloudflare.com/ajax/libs/zepto/1.0/zepto.min.js'></script>
-    <script>
-      $(document).ready(function(){
-      	if((navigator.userAgent.match(/(iPhone|iPad|Android)/i))) {
-      		$('a').each(function(){
-      			var $this = $(this);
-      			//var replace_string = "maps";
-      			//if (navigator.userAgent.match(/OS 6_0/)) {
-      			var replace_string = "comgooglemaps";
-      			//}
-      			// https://developers.google.com/maps/documentation/ios/urlscheme#search
-      			if($this.attr('href').match(/www.google.com\/maps/)){
-      				if($this.attr('href').match(/\/place\//)) {
-      					var search_string = $this.attr('href').replace(/.*\:\/\/www.google.com\/maps\/place\//, "");
-      					var pieces = search_string.split("/");
-      					var query = pieces[0];
-      					var center = pieces[1].replace(/^\@/,"");
-      					$this.attr('href', replace_string + "://" + "?q=" + query + "&center=" + center);
-      				} else {
-      					$this.attr('href', $this.attr('href').replace("maps.apple.com", ""));
-      					$this.attr('href', $this.attr('href').replace("https://", "http://"));
-      					$this.attr('href', $this.attr('href').replace("http://", replace_string + "://"));
-      				}
-      			}
-      		});
-      	}
-      });
-    </script>
     <style>
       /* line 1, (__TEMPLATE__) */
       body {
