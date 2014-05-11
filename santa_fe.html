@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html lang="en" class="no-js ie6"> <![endif]-->
+<!--[if IE 7]>	  <html lang="en" class="no-js ie7"> <![endif]-->
+<!--[if IE 8]>	  <html lang="en" class="no-js ie8"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class='no-js' lang='en'>
+  <!--<![endif]-->
+  <head>
+    <meta charset='utf-8'>
+    <meta content='IE=edge,chrome=1' http-equiv='X-UA-Compatible'>
+    <title>
+      Santa Fe Trip
+    </title>
+    <meta content='' name=''>
+    <meta content='' name=''>
+    <meta content='text/javascript' http-equiv='content-script-type'>
+    <meta content='width=device-width, initial-scale=1.0' name='viewport'>
+    <base target='_blank'>
+    <script src='//cdnjs.cloudflare.com/ajax/libs/zepto/1.0/zepto.min.js'></script>
+    <script>
+      $(document).ready(function(){
+      	if((navigator.userAgent.match(/(iPhone|iPad|Android)/i))) {
+      		$('a').each(function(){
+      			var $this = $(this);
+      			//var replace_string = "maps";
+      			//if (navigator.userAgent.match(/OS 6_0/)) {
+      			var replace_string = "comgooglemaps";
+      			//}
+      			// https://developers.google.com/maps/documentation/ios/urlscheme#search
+      			if($this.attr('href').match(/www.google.com\/maps/)){
+      				if($this.attr('href').match(/\/place\//)) {
+      					var search_string = $this.attr('href').replace(/.*\:\/\/www.google.com\/maps\/place\//, "");
+      					var pieces = search_string.split("/");
+      					var query = pieces[0];
+      					var center = pieces[1].replace(/^\@/,"");
+      					$this.attr('href', replace_string + "://" + "?q=" + query + "&center=" + center);
+      				} else {
+      					$this.attr('href', $this.attr('href').replace("maps.apple.com", ""));
+      					$this.attr('href', $this.attr('href').replace("https://", "http://"));
+      					$this.attr('href', $this.attr('href').replace("http://", replace_string + "://"));
+      				}
+      			}
+      		});
+      	}
+      });
+    </script>
+    <style>
+      /*! Typebase.less v0.1.0 | MIT License */
+      /* Setup */
+      /* line 14, /Users/andrew/Desktop/Software/simple_pages/source/stylesheets/libraries/_typebase.sass */
+      html {
+        /* Change default typefaces here */
+        font-family: serif;
+        font-size: 137.5%;
+        -webkit-font-smoothing: antialiased; }
+      
+      /* Copy & Lists */
+      /* line 29, /Users/andrew/Desktop/Software/simple_pages/source/stylesheets/libraries/_typebase.sass */
+      p {
+        line-height: 1.5rem;
+        margin-top: 1.5rem;
+        margin-bottom: 0; }
+      
+      /* line 34, /Users/andrew/Desktop/Software/simple_pages/source/stylesheets/libraries/_typebase.sass */
+      ul, ol {
+        margin-top: 1.5rem;
+        margin-bottom: 1.5rem; }
+        /* line 37, /Users/andrew/Desktop/Software/simple_pages/source/stylesheets/libraries/_typebase.sass */
+        ul li, ol li {
+          line-height: 1.5rem; }
+        /* line 39, /Users/andrew/Desktop/Software/simple_pages/source/stylesheets/libraries/_typebase.sass */
+        ul ul, ul ol, ol ul, ol ol {
+          margin-top: 0;
+          margin-bottom: 0; }
+      
+      /* line 43, /Users/andrew/Desktop/Software/simple_pages/source/stylesheets/libraries/_typebase.sass */
+      blockquote {
+        line-height: 1.5rem;
+        margin-top: 1.5rem;
+        margin-bottom: 1.5rem; }
+      
+      /* Headings */
+      /* line 49, /Users/andrew/Desktop/Software/simple_pages/source/stylesheets/libraries/_typebase.sass */
+      h1, h2, h3, h4, h5, h6 {
+        /* Change heading typefaces here */
+        font-family: sans-serif;
+        margin-top: 1.5rem;
+        margin-bottom: 0;
+        line-height: 1.5rem; }
+      
+      /* line 56, /Users/andrew/Desktop/Software/simple_pages/source/stylesheets/libraries/_typebase.sass */
+      h1 {
+        font-size: 4.242rem;
+        line-height: 4.5rem;
+        margin-top: 3rem; }
+      
+      /* line 60, /Users/andrew/Desktop/Software/simple_pages/source/stylesheets/libraries/_typebase.sass */
+      h2 {
+        font-size: 2.828rem;
+        line-height: 3rem;
+        margin-top: 3rem; }
+      
+      /* line 64, /Users/andrew/Desktop/Software/simple_pages/source/stylesheets/libraries/_typebase.sass */
+      h3 {
+        font-size: 1.414rem; }
+      
+      /* line 66, /Users/andrew/Desktop/Software/simple_pages/source/stylesheets/libraries/_typebase.sass */
+      h4 {
+        font-size: 0.707rem; }
+      
+      /* line 68, /Users/andrew/Desktop/Software/simple_pages/source/stylesheets/libraries/_typebase.sass */
+      h5 {
+        font-size: 0.47133rem; }
+      
+      /* line 70, /Users/andrew/Desktop/Software/simple_pages/source/stylesheets/libraries/_typebase.sass */
+      h6 {
+        font-size: 0.3535rem; }
+      
+      /* Tables */
+      /* line 74, /Users/andrew/Desktop/Software/simple_pages/source/stylesheets/libraries/_typebase.sass */
+      table {
+        margin-top: 1.5rem;
+        border-spacing: 0px;
+        border-collapse: collapse; }
+        /* line 79, /Users/andrew/Desktop/Software/simple_pages/source/stylesheets/libraries/_typebase.sass */
+        table td, table th {
+          padding: 0;
+          line-height: 33px; }
+      
+      /* Code blocks */
+      /* line 84, /Users/andrew/Desktop/Software/simple_pages/source/stylesheets/libraries/_typebase.sass */
+      code {
+        vertical-align: bottom; }
+      
+      /* Leading paragraph text */
+      /* line 89, /Users/andrew/Desktop/Software/simple_pages/source/stylesheets/libraries/_typebase.sass */
+      .lead {
+        font-size: 1.414rem; }
+      
+      /* Hug a the block above you */
+      /* line 93, /Users/andrew/Desktop/Software/simple_pages/source/stylesheets/libraries/_typebase.sass */
+      .hug {
+        margin-top: 0; }
+      
+      /* line 9, (__TEMPLATE__) */
+      body {
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
+      
+      /* line 12, (__TEMPLATE__) */
+      a {
+        color: red; }
+      
+      /* line 14, (__TEMPLATE__) */
+      dd, dt {
+        line-height: 1.5rem; }
+      
+      /* line 16, (__TEMPLATE__) */
+      #content {
+        margin: 0 auto;
+          margin-bottom: 12em;
+        max-width: 850px;
+        width: 100%; }
+    </style>
+  </head>
+  <body>
+    <div id='content'>
+      <style>
+      	h2{
+      		text-transform: uppercase;}
+      </style>
+      
+      <h1 id="santa-fe-trip">Santa Fe Trip</h1>
+      
+      <h2 id="sunday-may-11">SUNDAY, MAY 11</h2>
+      
+      <p>between 8 and 9: Leave house</p>
+      
+      <dl>
+        <dt>Drive to Inn of the Governors (505-982-4333)</dt>
+        <dd>101 W Alameda St / Santa Fe, NM 87501</dd>
+        <dt>Check-in 4:00</dt>
+        <dd>Confirmation 9PBD232M2CP</dd>
+        <dd>Reservation representative said we were upgraded to a mini-suite</dd>
+        <dt>Walk to dinner at <a href="https://www.google.com/maps/place/Casa+Chimayo+Restaurant/@35.687871,-105.944109,17z/data=!3m1!4b1!4m2!3m1!1s0x871850406424369f:0xb58be1fae139b266">Casa Chimayo</a> </dt>
+        <dd>11-2 lunch, dinner 5-9 - not open Tuesdays</dd>
+        <dd><a href="https://www.google.com/maps/place/Casa+Chimayo+Restaurant/@35.687871,-105.944109,17z/data=!3m1!4b1!4m2!3m1!1s0x871850406424369f:0xb58be1fae139b266">409 West Water St (corner of Guadalupe and W Water St)</a></dd>
+        <dd>(between W Alameda and W San Franciso)</dd>
+        <dd>New Mexican - go there for calabacitas, posole, etc; fun atmosphere</dd>
+      </dl>
+      
+      <h2 id="monday-may-12">MONDAY, MAY 12</h2>
+      
+      <dl>
+        <dt>10:15: $10/pp two-hour guided Downtown Walking Tour</dt>
+        <dd>Meet: Palace Courtyard’s Blue Gate </dd>
+        <dd><a href="https://www.google.com/maps/place/113+Lincoln+Ave/@35.6882901,-105.9383956,17z/data=!3m1!4b1!4m2!3m1!1s0x8718504712eb5e4b:0xea21ddfd252af1fa">Just south of History Museum entrance at 113 Lincoln Ave</a></dd>
+        <dt>12:15: Walk to <a href="https://www.google.com/maps/place/Cafe+Pasqual's/@35.686615,-105.939661,17z/data=!3m1!4b1!4m2!3m1!1s0x87185046d99d7e3f:0x61810c040d645ed2">Cafe Pasqual</a>’s for breakfast/lunch</dt>
+        <dd><a href="https://www.google.com/maps/place/Cafe+Pasqual's/@35.686615,-105.939661,17z/data=!3m1!4b1!4m2!3m1!1s0x87185046d99d7e3f:0x61810c040d645ed2">121 Don Gaspar Ave (one block south of the Plaza at Water St)</a></dd>
+        <dd>Breakfast until 3 pm, bkfs &amp; lunch 11-3, not open from 3-5:30</dd>
+        <dt>Walk and shop around Santa Fe Plaza</dt>
+        <dd></dd>
+        <dt>7:00 Dinner reservations at <a href="https://www.google.com/maps/place/La+Plazuela+At+La+Fonda/@35.686518,-105.938018,17z/data=!3m1!4b1!4m2!3m1!1s0x87185046f909c017:0xbc0768e51c4ca40f">La Plazuela de La Fonda</a></dt>
+        <dd><a href="https://www.google.com/maps/place/La+Plazuela+At+La+Fonda/@35.686518,-105.938018,17z/data=!3m1!4b1!4m2!3m1!1s0x87185046f909c017:0xbc0768e51c4ca40f">100 E San Francisco St</a></dd>
+      </dl>
+      
+      <h2 id="tuesday-may-13">TUESDAY, MAY 13</h2>
+      
+      <dl>
+        <dt>between 8-12, Santa Fe Farmer’s Market</dt>
+        <dd><a href="https://www.google.com/maps/place/1607+Paseo+De+Peralta/@35.6821338,-105.9490908,17z/data=!3m1!4b1!4m2!3m1!1s0x871850699c254d4d:0x94987d2ca6fcee8c">1607 Paseo de Peralta</a> (at S. Guadalupe St)</dd>
+        <dd>Parking garage: between REI and Sanbusco</dd>
+        <dd>Or free shuttle from Canyon Rd or the Plaza (every 15 minutes)</dd>
+        <dt>Near there is Flying Star and the Second St Brewery Railyard location  </dt>
+        <dt><a href="https://www.google.com/maps/place/Flying+Star+Cafe/@35.683334,-105.94873,17z/data=!3m1!4b1!4m2!3m1!1s0x8718506a3bb0f59d:0xa173bfa1c06f606f">Flying Star Cafe</a></dt>
+        <dd><a href="https://www.google.com/maps/place/Flying+Star+Cafe/@35.683334,-105.94873,17z/data=!3m1!4b1!4m2!3m1!1s0x8718506a3bb0f59d:0xa173bfa1c06f606f">500 Market St</a>, 7 am to 9 pm</dd>
+        <dd>Locally roasted coffee, homemade pastries (eg almondine tart)
+      Second St Brewery</dd>
+        <dd><a href="https://www.google.com/maps/place/1607+Paseo+De+Peralta/@35.6821338,-105.9490908,17z/data=!3m1!4b1!4m2!3m1!1s0x871850699c254d4d:0x94987d2ca6fcee8c">1607 Pasaeo de Peralta</a> (11 am - 10 pm)</dd>
+        <dt>See <a href="https://www.google.com/maps/place/207+Old+Santa+Fe+Trail/@35.6853866,-105.9376372,17z/data=!3m1!4b1!4m2!3m1!1s0x87185046601df679:0x21fb3f9c23bbd86b">Loretto Chapel</a></dt>
+        <dd><a href="https://www.google.com/maps/place/207+Old+Santa+Fe+Trail/@35.6853866,-105.9376372,17z/data=!3m1!4b1!4m2!3m1!1s0x87185046601df679:0x21fb3f9c23bbd86b">207 Old Santa Fe Trail</a> (9-5)</dd>
+        <dt><a href="https://www.google.com/maps/place/New+Mexico+Museum+of+Art/@35.688095,-105.939223,17z/data=!3m1!4b1!4m2!3m1!1s0x871850473e74ed19:0x8d225169728ec8d5">New Mexico Museum of Art</a></dt>
+        <dd><a href="https://www.google.com/maps/place/New+Mexico+Museum+of+Art/@35.688095,-105.939223,17z/data=!3m1!4b1!4m2!3m1!1s0x871850473e74ed19:0x8d225169728ec8d5">107 West Palace Ave</a></dd>
+        <dd>Not open Monday</dd>
+        <dt>Canyon Road galleries (open till 5) and then the Tea House on the road</dt>
+        <dt>The Teahouse</dt>
+        <dd><a href="https://www.google.com/maps/place/821+Canyon+Rd/@35.6799969,-105.9238507,17z/data=!3m1!4b1!4m2!3m1!1s0x87185052b9904b27:0xfad152fe0a3f56c6">821 Canyon Road</a></dd>
+        <dd>Beer garden, french press, scones and clotted cream</dd>
+        <dd>A few breakfast dishes, lunch panini, baked polenta, Italian dinner dishes</dd>
+        <dt>7:00 Dinner reservations at <a href="https://www.google.com/maps/place/Tabla+de+Los+Santos/@35.686208,-105.939911,17z/data=!3m1!4b1!4m2!3m1!1s0x87185046d0185d01:0x3da7f6f563871c62">Tabla de Los Santos</a></dt>
+        <dd><a href="https://www.google.com/maps/place/Tabla+de+Los+Santos/@35.686208,-105.939911,17z/data=!3m1!4b1!4m2!3m1!1s0x87185046d0185d01:0x3da7f6f563871c62">210 Don Gaspar Avenue</a></dd>
+      </dl>
+      
+      <h2 id="wednesday-may-14">WEDNESDAY, MAY 14</h2>
+      
+      <dl>
+        <dt>Walk to <a href="https://www.google.com/maps/place/113+Lincoln+Ave/@35.6882901,-105.9383956,17z/data=!3m1!4b1!4m2!3m1!1s0x8718504712eb5e4b:0xea21ddfd252af1fa">Palace of the Governors and History of NM museum</a> (10 am - 5 pm)</dt>
+        <dd><a href="https://www.google.com/maps/place/113+Lincoln+Ave/@35.6882901,-105.9383956,17z/data=!3m1!4b1!4m2!3m1!1s0x8718504712eb5e4b:0xea21ddfd252af1fa">113 Lincoln Ave</a> (not open Mondays)</dd>
+        <dt>1:00 Lunch reservations at the <a href="https://www.google.com/maps/search/Inn+of+the+Anasazi/@35.688086,-105.937241,17z/data=!3m1!4b1">Inn of the Anasazi</a></dt>
+        <dd></dd>
+        <dt>Walk to <a href="https://www.google.com/maps/place/Georgia+O'Keeffe+Museum/@35.689051,-105.941095,17z/data=!3m1!4b1!4m2!3m1!1s0x87185040ada953dd:0x8148d7f8c1e98a79">Georgia O’Keefe museum</a></dt>
+        <dd>Starting at the northwest corner of the Plaza (corner of West Palace and Lincoln Avenues), walk west on West Palace Ave. After two blocks turn right onto Grant Avenue, then left onto Johnson Street. The Museum is on your right.</dd>
+        <dt><a href="https://www.google.com/maps/place/Museum+of+International+Folk+Art/@35.663825,-105.926421,17z/data=!3m1!4b1!4m2!3m1!1s0x871850fc2e1fd0eb:0x83ab3168051a4bf2">Museum of International Folk Art</a> </dt>
+        <dd>706 Camino Lejo</dd>
+        <dd>10-5 except closed Mondays</dd>
+        <dd>Close to Museum of Spanish Colonial Art, Museum of Indian Arts</dd>
+        <dt>Dinner reservations at 7:00 at <a href="https://www.google.com/maps/place/Coyote+Cafe/@35.686637,-105.940482,17z/data=!3m1!4b1!4m2!3m1!1s0x87185046d694c963:0x2c66595e95547a2d">Coyote Cafe</a></dt>
+        <dd><a href="https://www.google.com/maps/place/Coyote+Cafe/@35.686637,-105.940482,17z/data=!3m1!4b1!4m2!3m1!1s0x87185046d694c963:0x2c66595e95547a2d">1947 Cerillos Road</a></dd>
+        <dd>Then go up to the rooftop for another drink</dd>
+      </dl>
+      
+      <h2 id="thursday-may-15">THURSDAY, MAY 15</h2>
+      
+      <dl>
+        <dt>Check out by noon</dt>
+        <dd></dd>
+        <dt>Acoma pueblo tour: An hour and a half from Santa Fe</dt>
+        <dd>Tour every 1/2 hour from 9:30 - 3:30</dd>
+        <dd>Go to the <a href="https://www.google.com/maps/place/Sky+City+Cultural+Center+%2F+Haaku+Museum/@34.975606,-107.632279,17z/data=!3m1!4b1!4m2!3m1!1s0x8723bf99c174f00d:0x7a0054544f4f1a82">Sky City Cultural Center</a></dd>
+        <dd>
+          <p>Travel South on I-25 to Albuquerque.  Then travel West on I-40 for approximately 55 minutes.  Exit at Exit 102; continue to the roundabout and cross over I-40 following the signs to Acomita/Rest Area. At the last roundabout exit at the second right and head to the bottom of the small hill with a Stop sign, turn right and follow the signage to Sky City Cultural Center/Haak’u Museum. You will travel through the small village of Acomita for approximately 5 miles then turn left and follow the signs to Sky City Cultural Center/Haak’u Museum approximate drive is 15 miles from I-40.</p>
+        </dd>
+      </dl>
+      
+      <h2 id="restaurants-nm-or-mexican">RESTAURANTS: NM OR MEXICAN</h2>
+      
+      <dl>
+        <dt><a href="https://www.google.com/maps/place/Travel+Bug+Coffee+Shop/@35.685303,-105.933444,17z/data=!3m1!4b1!4m2!3m1!1s0x87185048b5b48ef7:0x9442b06ac23a6d14">Mucho Gusto</a></dt>
+        <dd>Mexican food (rather than New Mexican), very casual</dd>
+        <dd><a href="https://www.google.com/maps/place/Travel+Bug+Coffee+Shop/@35.685303,-105.933444,17z/data=!3m1!4b1!4m2!3m1!1s0x87185048b5b48ef7:0x9442b06ac23a6d14">839 Paseo de Peralta</a></dd>
+        <dt><a href="https://www.google.com/maps/place/La+Choza/@35.679172,-105.952892,17z/data=!3m1!4b1!4m2!3m1!1s0x8718506f2fb7c8bf:0x1473700e93dcf643">La Choza</a> (905 Alarid St)</dt>
+        <dd>11-2:30 and 5-9 </dd>
+        <dd>Sister restaurant to The Shed</dd>
+        <dt><a href="https://www.google.com/maps/place/Los+Potrillos/@35.663663,-105.975897,17z/data=!3m1!4b1!4m2!3m1!1s0x87185a8753bd6f35:0x4349b44c8272f4cf">Los Potrillos, Authentic Mexican for locals</a></dt>
+        <dd><a href="https://www.google.com/maps/place/Los+Potrillos/@35.663663,-105.975897,17z/data=!3m1!4b1!4m2!3m1!1s0x87185a8753bd6f35:0x4349b44c8272f4cf">1947 Cerrillos Rd</a></dd>
+        <dd>Goat dish, shrimp tostada</dd>
+        <dt><a href="https://www.google.com/maps/place/Palacio+Cafe/@35.687022,-105.935294,17z/data=!3m1!4b1!4m2!3m1!1s0x871850462e545985:0x286034a48f011ed5">Palacio Cafe</a></dt>
+        <dd><a href="https://www.google.com/maps/place/Palacio+Cafe/@35.687022,-105.935294,17z/data=!3m1!4b1!4m2!3m1!1s0x871850462e545985:0x286034a48f011ed5">209 E Palace Ave</a></dd>
+        <dd>Green chile stew for lunch (only!)</dd>
+        <dt><a href="https://www.google.com/maps/place/Pantry+Restaurant/@35.664937,-105.972481,17z/data=!3m1!4b1!4m2!3m1!1s0x87185a8066dce807:0xd2279f7b509d76ba">Pantry Restaurant</a></dt>
+        <dd><a href="https://www.google.com/maps/place/Pantry+Restaurant/@35.664937,-105.972481,17z/data=!3m1!4b1!4m2!3m1!1s0x87185a8066dce807:0xd2279f7b509d76ba">1820 Cerrillos Rd</a></dd>
+        <dd>Drive to it for a diner-like atmosphere w/NM food lunch or dinner</dd>
+        <dt>Del Charro Saloon - $15/day credit</dt>
+        <dd>Patio, decent burger, great margarita value</dd>
+      </dl>
+      
+      <h2 id="restaurants-other">RESTAURANTS: OTHER</h2>
+      
+      <dl>
+        <dt><a href="https://www.google.com/maps/place/L'OLIVIER/@35.685763,-105.941225,17z/data=!3m1!4b1!4m2!3m1!1s0x8718504130c1fa2f:0x40b18c0e90b7b83b">L’Olivier</a> (French Southwestern)</dt>
+        <dd><a href="https://www.google.com/maps/place/L'OLIVIER/@35.685763,-105.941225,17z/data=!3m1!4b1!4m2!3m1!1s0x8718504130c1fa2f:0x40b18c0e90b7b83b">229 Galisteo St</a></dd>
+        <dd>Dinner Mon-Thurs 5:30-9:30</dd>
+        <dd>Lunch Tues-Thurs 11:30-2 (croque monsier/madame, moules frites)</dd>
+        <dt><a href="https://www.google.com/maps/place/Kakawa+Chocolate+House/@35.681961,-105.934387,17z/data=!3m1!4b1!4m2!3m1!1s0x8718504f87cff853:0x86b49aff3d7dccff">Kakawa Chocolate House</a></dt>
+        <dd>Hot chocolate and pastries</dd>
+        <dd><a href="https://www.google.com/maps/place/Kakawa+Chocolate+House/@35.681961,-105.934387,17z/data=!3m1!4b1!4m2!3m1!1s0x8718504f87cff853:0x86b49aff3d7dccff">1050 Paseo de Peralta</a></dd>
+        <dd>Send our moms Mother’s Day presents</dd>
+        <dt><a href="https://www.google.com/maps/place/Clafoutis+French+Bakery+%26+Restaurant/@35.691576,-105.946121,17z/data=!3m1!4b1!4m2!3m1!1s0x8718503e2b9c4ad5:0x35214011a5cae5e4">Clafoutis French Bakery and Restaurant</a></dt>
+        <dd>Croissants, baguette, croque madame, charcuterie plate, pate</dd>
+        <dd>7 am - 4 pm daily</dd>
+        <dd><a href="https://www.google.com/maps/place/Clafoutis+French+Bakery+%26+Restaurant/@35.691576,-105.946121,17z/data=!3m1!4b1!4m2!3m1!1s0x8718503e2b9c4ad5:0x35214011a5cae5e4">402 N Guadalupe (walkable from Plaza)</a></dd>
+      </dl>
+      
+      <h2 id="restaurants-serious-eats">RESTAURANTS: SERIOUS EATS</h2>
+      
+      <dl>
+        <dt><a href="https://www.google.com/maps/place/Santa+Fe+Bite/@35.691576,-105.946121,17z/data=!4m2!3m1!1s0x87185045d0805169:0xe3924e024d1a2937">Santa Fe Bite</a> green chile cheeseburger: b/c the Bobcat Bite is shuttered</dt>
+        <dd><a href="https://www.google.com/maps/place/Santa+Fe+Bite/@35.691576,-105.946121,17z/data=!4m2!3m1!1s0x87185045d0805169:0xe3924e024d1a2937">311 Old Santa Fe Trail</a></dd>
+        <dd>Closed Monday</dd>
+        <dt><em>The Border cookbook</em> people love <a href="https://www.google.com/maps/place/The+Shed+Creative+Cooking/@35.687493,-105.937052,17z/data=!3m1!4b1!4m2!3m1!1s0x87185047ad75475b:0xd1931e3bbac538b6">The Shed</a>’s No 5 enchilada plate w/red</dt>
+        <dt><a href="https://www.google.com/maps/place/Bert's+Burger+Bowl/@35.690551,-105.944582,17z/data=!3m1!4b1!4m2!3m1!1s0x8718503f9bea504d:0xfbc72f9bae0b1188">Bert’s Burger Bowl</a></dt>
+        <dd>(#6 w/barbecue sauce)</dd>
+        <dd>Near the plaza</dd>
+        <dd>Try both the regular GCC and the kobe version</dd>
+        <dt><a href="https://www.google.com/maps/place/Atrisco+Cafe+%26+Bar/@35.69225,-105.95024,17z/data=!3m1!4b1!4m2!3m1!1s0x87185015bfd528cb:0xc7116af60c122b77">Atrisco Cafe</a> (NM beef, all local)</dt>
+        <dd></dd>
+      </dl>
+      
+      <ul>
+        <li>Macarons from Clafoutis</li>
+        <li>Tia Sophia’s breakfast burrito w/green</li>
+        <li>The Pantry’s stuffed sopaipilla</li>
+        <li>Reader recs: Guadalupe Cafe, Osteria (at 58 Federal Place), Acquasanta</li>
+        <li><a href="https://www.google.com/maps/place/851+Cerrillos+Rd/@35.678557,-105.951642,17z/data=!3m1!4b1!4m2!3m1!1s0x87185068b7f6f2b3:0x9b323c37e366d006">Whoo’s Doughnuts</a> (851 Cerrillos - $1 on Monday mornings, 7:00 am)
+          <ul>
+            <li>near the Railyard</li>
+          </ul>
+        </li>
+        <li><a href="https://www.google.com/maps/place/ChocolateSmith/@35.67873,-105.95176,17z/data=!3m1!4b1!4m2!3m1!1s0x87185080b7011fbd:0x4a82c9db38c8c080">Chocolatesmith</a> 851 Cerrillos - get the pinion square SPAT</li>
+        <li>Cocopeli’s tres leches cupcake</li>
+        <li><a href="https://www.google.com/maps/place/Sage+Bakehouse/@35.681737,-105.945436,17z/data=!3m1!4b1!4m2!3m1!1s0x871850426eba960f:0xb5fa1054d6b32673">Sage Bakehouse, 535 Cerrillos Rd</a> - expensive and perfect pastry
+          <ul>
+            <li>Don’t take credit cards</li>
+            <li>Cinnamon roll, almond croissant</li>
+          </ul>
+        </li>
+      </ul>
+      
+      <h2 id="coffee">COFFEE</h2>
+      
+      <dl>
+        <dt><a href="https://www.google.com/maps/place/Holy+Spirit+Espresso/@35.687855,-105.941564,17z/data=!3m1!4b1!4m2!3m1!1s0x87185040c70e43ff:0x354ef4e3755fc551">Holy Spirit Espresso</a></dt>
+        <dd><a href="https://www.google.com/maps/place/Holy+Spirit+Espresso/@35.687855,-105.941564,17z/data=!3m1!4b1!4m2!3m1!1s0x87185040c70e43ff:0x354ef4e3755fc551">225 W San Francisco St</a> (from the Plaza)</dd>
+        <dd>7 am - 4 pm most days, till 2 pm on Sun, closed Mon</dd>
+        <dt><a href="https://www.google.com/maps/place/Downtown+Subscription/@35.680355,-105.933625,17z/data=!3m1!4b1!4m2!3m1!1s0x8718504fe60654e3:0xb70163884ac34b87">Downtown Subscription</a></dt>
+        <dd><a href="https://www.google.com/maps/place/Downtown+Subscription/@35.680355,-105.933625,17z/data=!3m1!4b1!4m2!3m1!1s0x8718504fe60654e3:0xb70163884ac34b87">376 Garcia St</a> (near Canyon Road)</dd>
+        <dt><a href="https://www.google.com/maps/place/Ohori's+Coffee/@35.676191,-105.954326,17z/data=!3m1!4b1!4m2!3m1!1s0x871850659037f597:0x5d0a5b470aa691cf">Ohori’s Coffee</a></dt>
+        <dd><a href="https://www.google.com/maps/place/Ohori's+Coffee/@35.676191,-105.954326,17z/data=!3m1!4b1!4m2!3m1!1s0x871850659037f597:0x5d0a5b470aa691cf">1098 South St. Francis Drive</a> and <a href="https://www.google.com/maps/place/505+Cerrillos+Rd/@35.6824377,-105.9447552,17z/data=!3m1!4b1!4m2!3m1!1s0x871850423b074ec1:0xba365e150c875871">505 Cerrillos Rd</a></dd>
+        <dd>They roast it themselves</dd>
+        <dd>Most days it’s 7:30-6:00</dd>
+      </dl>
+      
+      <h2 id="cocktails">COCKTAILS</h2>
+      
+      <dl>
+        <dt><a href="https://www.google.com/maps/place/Tanti+Luce+221/@35.6824377,-105.9447552,17z/data=!4m2!3m1!1s0x87185046925eb2bd:0xe0874b4d2ad6067f">Tanti Luce 221</a> (the bar)</dt>
+        <dd>spherical ice, lavender bitters, etc</dd>
+        <dd>Says they have a good happy hour</dd>
+        <dd>221 Shelby St</dd>
+        <dt><a href="https://www.google.com/maps/search/The+Palace/@35.6880675,-105.9393635,17z/data=!3m1!4b1">The Palace</a> (two blocks from Plaza)</dt>
+        <dd>Classic saloon</dd>
+        <dd><a href="https://www.google.com/maps/search/The+Palace/@35.6880675,-105.9393635,17z/data=!3m1!4b1">142 West Palace Avenue</a></dd>
+        <dd>Closed Monday</dd>
+        <dt><a href="https://www.google.com/maps/place/Santa+Fe+Spirits/@35.6880675,-105.9393635,17z/data=!4m2!3m1!1s0x8718504218e456d7:0xf1c6facb78ee5c4b">Santa Fe Spirits</a></dt>
+        <dd><a href="https://www.google.com/maps/place/Santa+Fe+Spirits/@35.6880675,-105.9393635,17z/data=!4m2!3m1!1s0x8718504218e456d7:0xf1c6facb78ee5c4b">308 Read St</a>, 3-8:30 (not on Sun)</dd>
+        <dd>Between the Railyard and the Plaza</dd>
+        <dt><a href="https://www.google.com/maps/place/Coyote+Cafe/@35.683195,-105.945079,17z/data=!4m2!3m1!1s0x87185046d694c963:0x2c66595e95547a2d">Coyote Cafe Cantina</a> (rooftop)</dt>
+        <dd><a href="https://www.google.com/maps/place/Coyote+Cafe/@35.683195,-105.945079,17z/data=!4m2!3m1!1s0x87185046d694c963:0x2c66595e95547a2d">132 W Water St</a></dd>
+        <dt>Beer (only) at the <a href="https://www.google.com/maps/place/Blue+Corn+Cafe/@35.686637,-105.940482,17z/data=!4m2!3m1!1s0x87185046d68d1b79:0x81467b042eb15e21">Blue Corn Cafe</a></dt>
+        <dd><a href="https://www.google.com/maps/place/Blue+Corn+Cafe/@35.686637,-105.940482,17z/data=!4m2!3m1!1s0x87185046d68d1b79:0x81467b042eb15e21">133 W Water St</a></dd>
+        <dt>Del Charro open late - if our credit applies to drinks, then…!</dt>
+        <dd></dd>
+      </dl>
+      
+      <h2 id="other-attractions">Other Attractions</h2>
+      
+      <dl>
+        <dt><a href="https://www.google.com/maps/place/Nedra+Matteucci+Galleries/@35.681321,-105.934507,17z/data=!3m1!4b1!4m2!3m1!1s0x8718504f89a5478b:0xb172aeae2e63f217">Nedra Matteucci Galleries</a> (top in SF)</dt>
+        <dd>1075 Paseo de Peralta</dd>
+        <dt><a href="https://www.google.com/maps/place/Collected+Works-Book+Store/@35.686636,-105.941009,17z/data=!3m1!4b1!4m2!3m1!1s0x8718504129e80653:0x35760d15886a2581">Collected Works Bookstore</a></dt>
+        <dd><a href="https://www.google.com/maps/place/Collected+Works-Book+Store/@35.686636,-105.941009,17z/data=!3m1!4b1!4m2!3m1!1s0x8718504129e80653:0x35760d15886a2581">202 Galisteo St</a></dd>
+        <dt><a href="https://www.google.com/maps/place/Blake's+Lotaburger/@35.144417,-107.837274,15z/data=!4m2!3m1!1s0x87239b216dbe761f:0x8d8664dc5992544b">Blake’s Lotaburger</a> (green chile cheeseburgers, breakfast burritos)</dt>
+        <dd>There’s one in Grants, NM (5-1/4 hours away from PHX)</dd>
+        <dd>(So is <a href="https://www.google.com/maps/place/Badlands+Burgers+%26+Tortas/@35.152413,-107.853883,17z/data=!3m1!4b1!4m2!3m1!1s0x87239b33c094ef43:0xb04ce9fdbae3014f">Badlands Burgers</a> in Grants as well)</dd>
+        <dt><a href="https://www.google.com/maps/place/Five+%26+Dime+General+Store/@35.68714,-105.939166,17z/data=!3m1!4b1!4m2!3m1!1s0x87185046dfac4b09:0x248577747b3c1510">Five and Dime</a> (Santa Fe plaza) frito pie</dt>
+        <dd></dd>
+        <dt><a href="https://www.google.com/maps/place/Susan's+Fine+Wine+%26+Spirits/@35.67727,-105.953474,17z/data=!3m1!4b1!4m2!3m1!1s0x87185065ec2d827d:0x9a5774096a8c0ba9">Susan’s Fine Wine and Spirits</a></dt>
+        <dd><a href="https://www.google.com/maps/place/Susan's+Fine+Wine+%26+Spirits/@35.67727,-105.953474,17z/data=!3m1!4b1!4m2!3m1!1s0x87185065ec2d827d:0x9a5774096a8c0ba9">1005 South St Francis Dr #105</a></dd>
+      </dl>
+    </div>
+  </body>
+</html>
