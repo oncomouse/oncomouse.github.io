@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html lang="en" class="no-js ie6"> <![endif]-->
+<!--[if IE 7]>	  <html lang="en" class="no-js ie7"> <![endif]-->
+<!--[if IE 8]>	  <html lang="en" class="no-js ie8"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class='no-js' lang='en'>
+  <!--<![endif]-->
+  <head>
+    <meta charset='utf-8'>
+    <meta content='IE=edge,chrome=1' http-equiv='X-UA-Compatible'>
+    <title>Liberal Arts / Engineering Syllabus</title>
+    <meta content='text/javascript' http-equiv='content-script-type'>
+    <meta content='width=device-width, initial-scale=1.0' name='viewport'>
+    <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:400|Cantata+One" rel="stylesheet" type="text/css" media="all" />
+    <link href="stylesheets/typebase.css" rel="stylesheet" type="text/css" media="all" />
+    <style>
+      * { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+      
+      /*! normalize.css v3.0.0 | MIT License | git.io/normalize */
+      /** 1. Set default font family to sans-serif. 2. Prevent iOS text size adjust after orientation change, without disabling user zoom. */
+      html { font-family: sans-serif; /* 1 */ -ms-text-size-adjust: 100%; /* 2 */ -webkit-text-size-adjust: 100%; /* 2 */ }
+      
+      /** Remove default margin. */
+      body { margin: 0; }
+      
+      /* HTML5 display definitions ========================================================================== */
+      /** Correct `block` display not defined for any HTML5 element in IE 8/9. Correct `block` display not defined for `details` or `summary` in IE 10/11 and Firefox. Correct `block` display not defined for `main` in IE 11. */
+      article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary { display: block; }
+      
+      /** 1. Correct `inline-block` display not defined in IE 8/9. 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera. */
+      audio, canvas, progress, video { display: inline-block; /* 1 */ vertical-align: baseline; /* 2 */ }
+      
+      /** Prevent modern browsers from displaying `audio` without controls. Remove excess height in iOS 5 devices. */
+      audio:not([controls]) { display: none; height: 0; }
+      
+      /** Address `[hidden]` styling not present in IE 8/9/10. Hide the `template` element in IE 8/9/11, Safari, and Firefox < 22. */
+      [hidden], template { display: none; }
+      
+      /* Links ========================================================================== */
+      /** Remove the gray background color from active links in IE 10. */
+      a { background: transparent; }
+      
+      /** Improve readability when focused and also mouse hovered in all browsers. */
+      a:active, a:hover { outline: 0; }
+      
+      /* Text-level semantics ========================================================================== */
+      /** Address styling not present in IE 8/9/10/11, Safari, and Chrome. */
+      abbr[title] { border-bottom: 1px dotted; }
+      
+      /** Address style set to `bolder` in Firefox 4+, Safari, and Chrome. */
+      b, strong { font-weight: bold; }
+      
+      /** Address styling not present in Safari and Chrome. */
+      dfn { font-style: italic; }
+      
+      /** Address variable `h1` font-size and margin within `section` and `article` contexts in Firefox 4+, Safari, and Chrome. */
+      h1 { font-size: 2em; margin: 0.67em 0; }
+      
+      /** Address styling not present in IE 8/9. */
+      mark { background: #ff0; color: #000; }
+      
+      /** Address inconsistent and variable font size in all browsers. */
+      small { font-size: 80%; }
+      
+      /** Prevent `sub` and `sup` affecting `line-height` in all browsers. */
+      sub, sup { font-size: 75%; line-height: 0; position: relative; vertical-align: baseline; }
+      
+      sup { top: -0.5em; }
+      
+      sub { bottom: -0.25em; }
+      
+      /* Embedded content ========================================================================== */
+      /** Remove border when inside `a` element in IE 8/9/10. */
+      img { border: 0; }
+      
+      /** Correct overflow not hidden in IE 9/10/11. */
+      svg:not(:root) { overflow: hidden; }
+      
+      /* Grouping content ========================================================================== */
+      /** Address margin not present in IE 8/9 and Safari. */
+      figure { margin: 1em 40px; }
+      
+      /** Address differences between Firefox and other browsers. */
+      hr { -moz-box-sizing: content-box; box-sizing: content-box; height: 0; }
+      
+      /** Contain overflow in all browsers. */
+      pre { overflow: auto; }
+      
+      /** Address odd `em`-unit font size rendering in all browsers. */
+      code, kbd, pre, samp { font-family: monospace, monospace; font-size: 1em; }
+      
+      /* Forms ========================================================================== */
+      /** Known limitation: by default, Chrome and Safari on OS X allow very limited styling of `select`, unless a `border` property is set. */
+      /** 1. Correct color not being inherited. Known issue: affects color of disabled elements. 2. Correct font properties not being inherited. 3. Address margins set differently in Firefox 4+, Safari, and Chrome. */
+      button, input, optgroup, select, textarea { color: inherit; /* 1 */ font: inherit; /* 2 */ margin: 0; /* 3 */ }
+      
+      /** Address `overflow` set to `hidden` in IE 8/9/10/11. */
+      button { overflow: visible; }
+      
+      /** Address inconsistent `text-transform` inheritance for `button` and `select`. All other form control elements do not inherit `text-transform` values. Correct `button` style inheritance in Firefox, IE 8/9/10/11, and Opera. Correct `select` style inheritance in Firefox. */
+      button, select { text-transform: none; }
+      
+      /** 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio` and `video` controls. 2. Correct inability to style clickable `input` types in iOS. 3. Improve usability and consistency of cursor style between image-type `input` and others. */
+      button, html input[type="button"], input[type="reset"], input[type="submit"] { -webkit-appearance: button; /* 2 */ cursor: pointer; /* 3 */ }
+      
+      /** Re-set default cursor for disabled elements. */
+      button[disabled], html input[disabled] { cursor: default; }
+      
+      /** Remove inner padding and border in Firefox 4+. */
+      button::-moz-focus-inner, input::-moz-focus-inner { border: 0; padding: 0; }
+      
+      /** Address Firefox 4+ setting `line-height` on `input` using `!important` in the UA stylesheet. */
+      input { line-height: normal; }
+      
+      /** It's recommended that you don't attempt to style these elements. Firefox's implementation doesn't respect box-sizing, padding, or width.  1. Address box sizing set to `content-box` in IE 8/9/10. 2. Remove excess padding in IE 8/9/10. */
+      input[type="checkbox"], input[type="radio"] { box-sizing: border-box; /* 1 */ padding: 0; /* 2 */ }
+      
+      /** Fix the cursor style for Chrome's increment/decrement buttons. For certain `font-size` values of the `input`, it causes the cursor style of the decrement button to change from `default` to `text`. */
+      input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-outer-spin-button { height: auto; }
+      
+      /** 1. Address `appearance` set to `searchfield` in Safari and Chrome. 2. Address `box-sizing` set to `border-box` in Safari and Chrome (include `-moz` to future-proof). */
+      input[type="search"] { -webkit-appearance: textfield; /* 1 */ -moz-box-sizing: content-box; -webkit-box-sizing: content-box; /* 2 */ box-sizing: content-box; }
+      
+      /** Remove inner padding and search cancel button in Safari and Chrome on OS X. Safari (but not Chrome) clips the cancel button when the search input has padding (and `textfield` appearance). */
+      input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-decoration { -webkit-appearance: none; }
+      
+      /** Define consistent border, margin, and padding. */
+      fieldset { border: 1px solid #c0c0c0; margin: 0 2px; padding: 0.35em 0.625em 0.75em; }
+      
+      /** 1. Correct `color` not being inherited in IE 8/9/10/11. 2. Remove padding so people aren't caught out if they zero out fieldsets. */
+      legend { border: 0; /* 1 */ padding: 0; /* 2 */ }
+      
+      /** Remove default vertical scrollbar in IE 8/9/10/11. */
+      textarea { overflow: auto; }
+      
+      /** Don't inherit the `font-weight` (applied by a rule above). NOTE: the default cannot safely be changed in Chrome and Safari on OS X. */
+      optgroup { font-weight: bold; }
+      
+      /* Tables ========================================================================== */
+      /** Remove most spacing between table cells. */
+      table { border-collapse: collapse; border-spacing: 0; }
+      
+      td, th { padding: 0; }
+      
+      /*! Typebase.less v0.1.0 | MIT License */
+      /* Setup */
+      html { /* Change default typefaces here */ font-family: serif; font-size: 137.5%; -webkit-font-smoothing: antialiased; }
+      
+      /* Copy & Lists */
+      p { line-height: 1.5rem; margin-top: 1.5rem; margin-bottom: 0; }
+      
+      ul, ol { margin-top: 1.5rem; margin-bottom: 1.5rem; }
+      ul li, ol li { line-height: 1.5rem; }
+      ul ul, ul ol, ol ul, ol ol { margin-top: 0; margin-bottom: 0; }
+      
+      blockquote { line-height: 1.5rem; margin-top: 1.5rem; margin-bottom: 1.5rem; }
+      
+      /* Headings */
+      h1, h2, h3, h4, h5, h6 { /* Change heading typefaces here */ font-family: sans-serif; margin-top: 1.5rem; margin-bottom: 0; line-height: 1.5rem; }
+      
+      h1 { font-size: 4.242rem; line-height: 4.5rem; margin-top: 3rem; }
+      
+      h2 { font-size: 2.828rem; line-height: 3rem; margin-top: 3rem; }
+      
+      h3 { font-size: 1.414rem; }
+      
+      h4 { font-size: 0.707rem; }
+      
+      h5 { font-size: 0.47133rem; }
+      
+      h6 { font-size: 0.3535rem; }
+      
+      /* Tables */
+      table { margin-top: 1.5rem; border-spacing: 0px; border-collapse: collapse; }
+      table td, table th { padding: 0; line-height: 33px; }
+      
+      /* Code blocks */
+      code { vertical-align: bottom; }
+      
+      /* Leading paragraph text */
+      .lead { font-size: 1.414rem; }
+      
+      /* Hug a the block above you */
+      .hug { margin-top: 0; }
+      
+      .pure-form input[type="text"], .pure-form input[type="password"], .pure-form input[type="email"], .pure-form input[type="url"], .pure-form input[type="date"], .pure-form input[type="month"], .pure-form input[type="time"], .pure-form input[type="datetime"], .pure-form input[type="datetime-local"], .pure-form input[type="week"], .pure-form input[type="number"], .pure-form input[type="search"], .pure-form input[type="tel"], .pure-form input[type="color"], .pure-form select, .pure-form textarea { padding: 0.5em 0.6em; display: inline-block; border: 1px solid #ccc; box-shadow: inset 0 1px 3px #ddd; border-radius: 4px; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+      
+      /*
+      Need to separate out the :not() selector from the rest of the CSS 2.1 selectors
+      since IE8 won't execute CSS that contains a CSS3 selector.
+      */
+      .pure-form input:not([type]) { padding: 0.5em 0.6em; display: inline-block; border: 1px solid #ccc; box-shadow: inset 0 1px 3px #ddd; border-radius: 4px; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+      
+      /* Chrome (as of v.32/34 on OS X) needs additional room for color to display. */
+      /* May be able to remove this tweak as color inputs become more standardized across browsers. */
+      .pure-form input[type="color"] { padding: 0.2em 0.5em; }
+      
+      .pure-form input[type="text"]:focus, .pure-form input[type="password"]:focus, .pure-form input[type="email"]:focus, .pure-form input[type="url"]:focus, .pure-form input[type="date"]:focus, .pure-form input[type="month"]:focus, .pure-form input[type="time"]:focus, .pure-form input[type="datetime"]:focus, .pure-form input[type="datetime-local"]:focus, .pure-form input[type="week"]:focus, .pure-form input[type="number"]:focus, .pure-form input[type="search"]:focus, .pure-form input[type="tel"]:focus, .pure-form input[type="color"]:focus, .pure-form select:focus, .pure-form textarea:focus { outline: 0; outline: thin dotted \9; /* IE6-9 */ border-color: #129FEA; }
+      
+      /*
+      Need to separate out the :not() selector from the rest of the CSS 2.1 selectors
+      since IE8 won't execute CSS that contains a CSS3 selector.
+      */
+      .pure-form input:not([type]):focus { outline: 0; outline: thin dotted \9; /* IE6-9 */ border-color: #129FEA; }
+      
+      .pure-form input[type="file"]:focus, .pure-form input[type="radio"]:focus, .pure-form input[type="checkbox"]:focus { outline: thin dotted #333; outline: 1px auto #129FEA; }
+      
+      .pure-form .pure-checkbox, .pure-form .pure-radio { margin: 0.5em 0; display: block; }
+      
+      .pure-form input[type="text"][disabled], .pure-form input[type="password"][disabled], .pure-form input[type="email"][disabled], .pure-form input[type="url"][disabled], .pure-form input[type="date"][disabled], .pure-form input[type="month"][disabled], .pure-form input[type="time"][disabled], .pure-form input[type="datetime"][disabled], .pure-form input[type="datetime-local"][disabled], .pure-form input[type="week"][disabled], .pure-form input[type="number"][disabled], .pure-form input[type="search"][disabled], .pure-form input[type="tel"][disabled], .pure-form input[type="color"][disabled], .pure-form select[disabled], .pure-form textarea[disabled] { cursor: not-allowed; background-color: #eaeded; color: #cad2d3; }
+      
+      /*
+      Need to separate out the :not() selector from the rest of the CSS 2.1 selectors
+      since IE8 won't execute CSS that contains a CSS3 selector.
+      */
+      .pure-form input:not([type])[disabled] { cursor: not-allowed; background-color: #eaeded; color: #cad2d3; }
+      
+      .pure-form input[readonly], .pure-form select[readonly], .pure-form textarea[readonly] { background: #eee; /* menu hover bg color */ color: #777; /* menu text color */ border-color: #ccc; }
+      
+      .pure-form input:focus:invalid, .pure-form textarea:focus:invalid, .pure-form select:focus:invalid { color: #b94a48; border-color: #ee5f5b; }
+      
+      .pure-form input:focus:invalid:focus, .pure-form textarea:focus:invalid:focus, .pure-form select:focus:invalid:focus { border-color: #e9322d; }
+      
+      .pure-form input[type="file"]:focus:invalid:focus, .pure-form input[type="radio"]:focus:invalid:focus, .pure-form input[type="checkbox"]:focus:invalid:focus { outline-color: #e9322d; }
+      
+      .pure-form select { border: 1px solid #ccc; background-color: white; }
+      
+      .pure-form select[multiple] { height: auto; }
+      
+      .pure-form label { margin: 0.5em 0 0.2em; }
+      
+      .pure-form fieldset { margin: 0; padding: 0.35em 0 0.75em; border: 0; }
+      
+      .pure-form legend { display: block; width: 100%; padding: 0.3em 0; margin-bottom: 0.3em; color: #333; border-bottom: 1px solid #e5e5e5; }
+      
+      .pure-form-stacked input[type="text"], .pure-form-stacked input[type="password"], .pure-form-stacked input[type="email"], .pure-form-stacked input[type="url"], .pure-form-stacked input[type="date"], .pure-form-stacked input[type="month"], .pure-form-stacked input[type="time"], .pure-form-stacked input[type="datetime"], .pure-form-stacked input[type="datetime-local"], .pure-form-stacked input[type="week"], .pure-form-stacked input[type="number"], .pure-form-stacked input[type="search"], .pure-form-stacked input[type="tel"], .pure-form-stacked input[type="color"], .pure-form-stacked select, .pure-form-stacked label, .pure-form-stacked textarea { display: block; margin: 0; margin-top: 0.5em; }
+      
+      /*
+      Need to separate out the :not() selector from the rest of the CSS 2.1 selectors
+      since IE8 won't execute CSS that contains a CSS3 selector.
+      */
+      .pure-form-stacked input:not([type]) { display: block; margin: 0; margin-top: 0.5em; }
+      
+      .pure-form-aligned input, .pure-form-aligned textarea, .pure-form-aligned select, .pure-form-aligned .pure-help-inline, .pure-form-message-inline { display: inline-block; *display: inline; *zoom: 1; vertical-align: middle; }
+      
+      .pure-form-aligned textarea { vertical-align: top; }
+      
+      /* Aligned Forms */
+      .pure-form-aligned .pure-control-group { margin-bottom: 0.5em; }
+      
+      .pure-form-aligned .pure-control-group label { text-align: right; display: inline-block; vertical-align: middle; width: 10em; margin: 0 1em 0 0; }
+      
+      .pure-form-aligned .pure-controls { margin: 1.5em 0 0 10em; }
+      
+      /* Rounded Inputs */
+      .pure-form input.pure-input-rounded, .pure-form .pure-input-rounded { border-radius: 2em; padding: 0.5em 1em; }
+      
+      /* Grouped Inputs */
+      .pure-form .pure-group fieldset { margin-bottom: 10px; }
+      
+      .pure-form .pure-group input { display: block; padding: 10px; margin: 0; border-radius: 0; position: relative; top: -1px; }
+      
+      .pure-form .pure-group input:focus { z-index: 2; }
+      
+      .pure-form .pure-group input:first-child { top: 1px; border-radius: 4px 4px 0 0; }
+      
+      .pure-form .pure-group input:last-child { top: -2px; border-radius: 0 0 4px 4px; }
+      
+      .pure-form .pure-group button { margin: 0.35em 0; }
+      
+      .pure-form .pure-input-1 { width: 100%; }
+      
+      .pure-form .pure-input-2-3 { width: 66%; }
+      
+      .pure-form .pure-input-1-2 { width: 50%; }
+      
+      .pure-form .pure-input-1-3 { width: 33%; }
+      
+      .pure-form .pure-input-1-4 { width: 25%; }
+      
+      /* Inline help for forms */
+      /* NOTE: pure-help-inline is deprecated. Use .pure-form-message-inline instead. */
+      .pure-form .pure-help-inline, .pure-form-message-inline { display: inline-block; padding-left: 0.3em; color: #666; vertical-align: middle; font-size: 0.875em; }
+      
+      /* Block help for forms */
+      .pure-form-message { display: block; color: #666; font-size: 0.875em; }
+      
+      html { font-family: "Source Sans Pro", sans-serif; color: #222; weight: 400; }
+      
+      body { margin-bottom: 4rem; }
+      
+      a { color: #5E9EE4; text-decoration: none; -webkit-animation: hue 60s infinite linear; }
+      a:hover { text-decoration: underline; }
+      
+      h1, h2, h3, h4, h5, h6 { font-family: "Cantata One", serif; font-weight: 400; }
+      
+      h1 { font-size: 2.4rem; line-height: 3rem; margin-top: 1.5rem; }
+      
+      h2 { line-height: 2rem; font-size: 1.4rem; margin-top: 0.7rem; }
+      
+      fieldset legend { float: left; display: block; margin-right: 2.35765%; width: 100%; margin-right: 0; }
+      fieldset legend:last-child { margin-right: 0; }
+      fieldset .form-element { float: left; display: block; margin-right: 2.35765%; width: 48.82117%; }
+      fieldset .form-element:last-child { margin-right: 0; }
+      fieldset .form-element:nth-child(2n) { margin-right: 0; }
+      fieldset .form-element:nth-child(2n+1) { clear: left; }
+      @media screen and (max-width: 480px) { fieldset .form-element { float: left; display: block; margin-right: 2.35765%; width: 100%; margin-right: 0; }
+        fieldset .form-element:last-child { margin-right: 0; } }
+      fieldset .form-element:last-child:nth-child(2n+1) { float: left; display: block; margin-right: 2.35765%; width: 100%; margin-right: 0; text-align: center; }
+      fieldset .form-element:last-child:nth-child(2n+1):last-child { margin-right: 0; }
+      
+      input[type="text"], input[type="password"], input[type="email"], input[type="url"], input[type="date"], input[type="month"], input[type="time"], input[type="datetime"], input[type="datetime-local"], input[type="week"], input[type="number"], input[type="search"], input[type="tel"], input[type="color"] { width: 100%; }
+      
+      input[type="submit"] { border: 1px solid #1979e2; border-radius: 3px; box-shadow: inset 0 1px 0 0 #a4c6eb; color: white; display: inline-block; font-size: inherit; font-weight: bold; background-color: #5E9EE4; background-image: -webkit-linear-gradient(#5E9EE4, #2381e7); background-image: linear-gradient(#5E9EE4, #2381e7); padding: 7px 18px; text-decoration: none; text-shadow: 0 1px 0 #106fd6; background-clip: padding-box; font-size: 1.25rem; margin-top: 1rem; -webkit-animation: hue 60s infinite linear; }
+      input[type="submit"]:hover:not(:disabled) { box-shadow: inset 0 1px 0 0 #7aabe2; cursor: pointer; background-color: #4c91dc; background-image: -webkit-linear-gradient(#4c91dc, #1a79e1); background-image: linear-gradient(#4c91dc, #1a79e1); }
+      input[type="submit"]:active:not(:disabled), input[type="submit"]:focus:not(:disabled) { border: 1px solid #1979e2; box-shadow: inset 0 0 8px 4px #1a72d2, inset 0 0 8px 4px #1a72d2; }
+      input[type="submit"]:disabled { opacity: 0.5; cursor: not-allowed; }
+      
+      .compress { margin-top: 1rem; }
+      
+      article { max-width: 700px; margin-left: auto; margin-right: auto; margin: 6rem auto 0 auto; padding: 0 40px; max-width: 45rem; }
+      article:after { content: ""; display: table; clear: both; }
+      @media screen and (max-width: 480px) { article { max-width: 700px; margin-left: auto; margin-right: auto; }
+        article:after { content: ""; display: table; clear: both; } }
+      
+      header h1 { text-align: center; }
+      header h1.dynamic { color: #f35626; background-image: -webkit-linear-gradient(92deg, #185291, #a0c5ef); -webkit-background-clip: text; -webkit-text-fill-color: transparent; -webkit-animation: hue 60s infinite linear; }
+      
+      @-webkit-keyframes hue { from { -webkit-filter: hue-rotate(0deg); }
+        to { -webkit-filter: hue-rotate(-360deg); } }
+    </style>
+  </head>
+  <body>
+    <article>
+      <h1 id="liberal-arts--engineering-degree-intro-class">Liberal Arts / Engineering Degree Intro Class</h1>
+      
+      <h2 id="books">Books</h2>
+      
+      <ul>
+        <li>Langdon Winner, <a href="http://www.amazon.com/The-Whale-Reactor-Search-Technology/dp/0226902110"><em>The Whale and the Reactor</em></a></li>
+        <li>Rodney Brooks, <a href="http://www.amazon.com/Flesh-Machines-Robots-Will-Change/dp/037572527X"><em>Flesh and Machines</em></a></li>
+        <li>Mary Shelley, <a href="http://www.amazon.com/Frankenstein-Dover-Thrift-Editions-Shelley/dp/0486282112"><em>Frankenstein</em></a></li>
+        <li>Bruno Latour, <a href="http://www.amazon.com/Aramis-Love-Technology-Bruno-Latour/dp/0674043235"><em>Aramis, or, the Love of Technology</em></a></li>
+        <li>Jaron Lanier, <a href="http://www.amazon.com/You-Are-Not-Gadget-Manifesto/dp/0307389979"><em>You Are Not a Gadget</em></a></li>
+      </ul>
+      
+      <h2 id="films">Films</h2>
+      
+      <ul>
+        <li><a href="http://www.imdb.com/title/tt0119177"><em>Gattaca</em></a></li>
+        <li><a href="http://www.imdb.com/title/tt0390384"><em>Primer</em></a></li>
+        <li><a href="http://www.imdb.com/title/tt0083658"><em>Blade Runner</em></a></li>
+      </ul>
+      
+      <h2 id="essays">Essays</h2>
+      
+      <ul>
+        <li>Donna Haraway, <a href="http://www.staff.amu.edu.pl/~ewa/Haraway,%20Situated%20Knowledges.pdf">"Situated Knowledges"</a></li>
+        <li>Pierre Teilhard de Chardin, <a href="http://archive.org/stream/ActivationOfEnergy/Activation_of_Energy_djvu.txt">"On Looking at a Cyclotron"</a></li>
+      </ul>
+    </article>
+  </body>
+</html>
