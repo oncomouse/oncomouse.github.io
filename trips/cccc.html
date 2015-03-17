@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html lang="en" class="no-js ie6"> <![endif]-->
+<!--[if IE 7]>	  <html lang="en" class="no-js ie7"> <![endif]-->
+<!--[if IE 8]>	  <html lang="en" class="no-js ie8"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class='no-js' lang='en'>
+  <!--<![endif]-->
+  <head>
+    <meta charset='utf-8'>
+    <meta content='IE=edge,chrome=1' http-equiv='X-UA-Compatible'>
+    <title>CCCC Trip</title>
+    <meta content='' name=''>
+    <meta content='' name=''>
+    <meta content='text/javascript' http-equiv='content-script-type'>
+    <meta content='width=device-width, initial-scale=1.0' name='viewport'>
+    <base target='_blank'>
+    <script src='//cdnjs.cloudflare.com/ajax/libs/zepto/1.0/zepto.min.js'></script>
+    <script>
+      $(document).ready(function(){
+      	if((navigator.userAgent.match(/(iPhone|iPad|Android)/i))) {
+      		$('a').each(function(){
+      			var $this = $(this);
+      			//var replace_string = "maps";
+      			//if (navigator.userAgent.match(/OS 6_0/)) {
+      			var replace_string = "comgooglemaps";
+      			//}
+      			// https://developers.google.com/maps/documentation/ios/urlscheme#search
+      			if($this.attr('href').match(/www.google.com\/maps/)){
+      				if($this.attr('href').match(/\/place\//)) {
+      					var search_string = $this.attr('href').replace(/.*\:\/\/www.google.com\/maps\/place\//, "");
+      					var pieces = search_string.split("/");
+      					var query = pieces[0];
+      					var center = pieces[1].replace(/^\@/,"");
+      					$this.attr('href', replace_string + "://" + "?q=" + query + "&center=" + center);
+      				} else {
+      					$this.attr('href', $this.attr('href').replace("maps.apple.com", ""));
+      					$this.attr('href', $this.attr('href').replace("https://", "http://"));
+      					$this.attr('href', $this.attr('href').replace("http://", replace_string + "://"));
+      				}
+      			}
+      		});
+      	}
+      });
+    </script>
+    <style>
+      /* line 1, (__TEMPLATE__) */
+      body {
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-size: 1.4em; }
+      
+      /* line 5, (__TEMPLATE__) */
+      a {
+        color: red; }
+      
+      /* line 7, (__TEMPLATE__) */
+      p, li {
+        margin-bottom: 0.5em; }
+      
+      /* line 9, (__TEMPLATE__) */
+      li ul {
+        margin-top: 0.5em; }
+      
+      /* line 11, (__TEMPLATE__) */
+      ul {
+        padding-left: 1.25em; }
+      
+      /* line 13, (__TEMPLATE__) */
+      #content {
+        margin: 0 auto;
+          margin-bottom: 12em;
+        max-width: 850px;
+        width: 100%; }
+    </style>
+  </head>
+  <body>
+    <div id='content'>
+      <h1 id="cccc-trip">CCCC Trip</h1>
+      
+      <h2 id="hotel">Hotel</h2>
+      
+      <ul>
+        <li><a href="https://www.google.com/maps/place/JW+Marriott+Indianapolis/@39.7667161,-86.1673567,17z/data=!3m1!4b1!4m2!3m1!1s0x0:0xd790d496b8b2886a">JW Marriott</a>
+          <ul>
+            <li>Check-in: 4PM</li>
+            <li>Check-out: 11AM</li>
+          </ul>
+        </li>
+      </ul>
+      
+      <h2 id="panels">Panels</h2>
+      
+      <h3 id="thursday">Thursday</h3>
+      
+      <ul>
+        <li><a href="http://center.uoregon.edu/NCTE/2014CCCC/program/search_results.php?sessionid=1822126">The Future Will Be Open Access: Economics and Materiality of Links and Code</a>
+          <ul>
+            <li>4:45 PM - 6:00 PM</li>
+            <li>JW Marriott, Room 301, Third Floor</li>
+          </ul>
+        </li>
+      </ul>
+      
+      <h3 id="friday">Friday</h3>
+      
+      <ul>
+        <li><a href="http://center.uoregon.edu/NCTE/2014CCCC/program/search_results.php?sessionid=1748664">Getting Ontological: Opening Writing and Writing Studies to Theorizing What Writing Is</a>
+          <ul>
+            <li>8:00 AM - 9:15 AM</li>
+            <li>JW Marriott, Room 312, Third Floor</li>
+          </ul>
+        </li>
+        <li><a href="http://center.uoregon.edu/NCTE/2014CCCC/program/search_results.php?sessionid=1750620">Teaching That Matters: New Materialism Meets Composition Pedagogy</a>
+          <ul>
+            <li>11:00 AM - 12:15 PM</li>
+            <li>JW Marriott, Room 308, Third Floor</li>
+          </ul>
+        </li>
+        <li><strong><a href="http://center.uoregon.edu/NCTE/2014CCCC/program/search_results.php?sessionid=1743882">Mobile Data, Mobile Selves: Smartphones, Big Data and the Composition of Authorship</a></strong>
+          <ul>
+            <li>2:00 PM - 3:15 PM</li>
+            <li>JW Marriott, Room 310, Third Floor</li>
+          </ul>
+        </li>
+        <li></li>
+      </ul>
+      
+      <h2 id="coffee">Coffee</h2>
+      
+      <ul>
+        <li><a href="https://www.google.com/maps/place/Mo'Joe+Coffeehouse/@39.7705275,-86.1687955,16z/data=!4m19!1m16!4m15!1m6!1m2!1s0x886b50b18507434d:0xd790d496b8b2886a!2sJW+Marriott+Indianapolis,+10+S+West+St,+Indianapolis,+IN+46204!2m2!1d-86.167529!2d39.766788!1m6!1m2!1s0x886b50c7889807d1:0x3e90737f09612414!2sMo'Joe+Coffeehouse,+222+W+Michigan+St,+Indianapolis,+IN+46204!2m2!1d-86.162993!2d39.774394!3e2!3m1!1s0x886b50c7889807d1:0x3e90737f09612414">Mo'Joe Coffee</a>
+          <ul>
+            <li>15 Minute Walk</li>
+          </ul>
+        </li>
+        <li><a href="https://www.google.com/maps/place/Bee+Coffee+Roasters/@39.766788,-86.167529,15z/data=!4m5!1m2!2m1!1scoffee!3m1!1s0x0:0xc62f7a0001032723">Bee Coffee Roasters</a>
+          <ul>
+            <li>10 Minute Walk</li>
+            <li>Close to Convention Center</li>
+          </ul>
+        </li>
+      </ul>
+      
+      <h2 id="beer">Beer</h2>
+      
+      <ul>
+        <li><a href="https://www.google.com/maps/place/The+Tomlinson+Tap+Room/@39.7684701,-86.1535107,17z/data=!3m1!4b1!4m2!3m1!1s0x886b5096753ac2e5:0x97a9c8ae8a01fd81">Tomlinson Tap Room</a>
+          <ul>
+            <li>18 Minute Walk</li>
+          </ul>
+        </li>
+      </ul>
+      
+      <h2 id="fast-food">Fast Food</h2>
+      
+      <ul>
+        <li><a href="https://www.google.com/maps/place/China+King/@39.7649146,-86.1637204,15z/data=!4m5!1m2!2m1!1sChinese+Food!3m1!1s0x0:0x2c175431ee95828a">China King</a>
+          <ul>
+            <li>Take-out: (317) 685-8630</li>
+            <li>18 Minute Walk</li>
+            <li><a href="http://www.chinaking4indy.com/">Order Online</a></li>
+            <li>10PM Closing</li>
+          </ul>
+        </li>
+        <li><a href="https://www.google.com/maps/place/Taco+Bell/@39.76811,-86.1652522,16z/data=!3m1!5s0x886b50bc8e3baae3:0x7edf0a3a55c939f5!4m5!1m2!2m1!1sburrito!3m1!1s0x0:0xaff634431ee02b16">Taco Bell</a>
+          <ul>
+            <li>11 Minute Walk</li>
+            <li>In Circle Centre Mall</li>
+            <li>9PM Closing</li>
+          </ul>
+        </li>
+        <li><a href="https://www.google.com/maps/place/Qdoba+Mexican+Grill/@39.7665289,-86.1605387,17z/data=!4m5!1m2!2m1!1sburrito!3m1!1s0x0:0xdace2dfab9bcc0b1">Qdoba</a>
+          <ul>
+            <li>10PM Closing</li>
+          </ul>
+        </li>
+      </ul>
+      
+      <h2 id="events">Events</h2>
+      
+      <ul>
+        <li><a href="https://www.google.com/maps/place/Indiana+State+Museum/@39.7667162,-86.1673567,17z/data=!4m6!1m3!3m2!1s0x886b50b18507434d:0xd790d496b8b2886a!2sJW+Marriott+Indianapolis!3m1!1s0x0:0x6b881c9883451590">Indiana State Museum</a>
+          <ul>
+            <li>6-8 PM, Bedford / St. Martin's Party</li>
+          </ul>
+        </li>
+      </ul>
+      
+      <h2 id="barber-shop">Barber Shop</h2>
+      
+      <ul>
+        <li><a href="https://www.google.com/maps/place/Red's+Classic+Barber+Shop+Co/@39.766788,-86.167529,15z/data=!4m5!1m2!2m1!1sbarber+shop!3m1!1s0x886b50bdb5a31c61:0xc857db6c23060865">Red's Barber Shop</a></li>
+      </ul>
+    </div>
+  </body>
+</html>
