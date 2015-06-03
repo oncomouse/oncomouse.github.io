@@ -189,9 +189,8 @@
 				$('#color-sequence-area').html(
 					$('<p class="text-center">' +
 					_.range(number_colors).map(function(c) {
-						var rgb,r,g,b;
+						var rgb;
 						rgb = hsv_to_rgb(x,s,v);
-						r = rgb[0]; g = rgb[1]; b = rgb[2];
 						x += increment;
 						return '<span style="background-color: ' + rgb_to_html(rgb) + '; padding: 5px; border-radius: 3px;">'+rgb_to_html(rgb)+'</span>\n';
 					}).join('') +
