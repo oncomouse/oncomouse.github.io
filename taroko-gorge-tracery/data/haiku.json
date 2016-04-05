@@ -1,0 +1,13 @@
+{
+	"one": ["me", "you", "her", "glad", "blade"],
+	"two-word": ["modern", "ancient"],
+	"three-word": ["classical", "rhetoric"],
+	"four-word": ["voracious", "Aristotle"],
+	"two": ["#two-word#", "#one# #one#"],
+	"three": ["#three-word#", "#two# #one#", "#one# #two#"],
+	"four": ["#four-word#", "#three# #one#", "#one# #three#", "#two# #two#"],
+	"five": ["#two# #three#", "#three# #two#", "#one# #four#", "#four# #one"],
+	"six": ["#one# #five#", "#five# #one#", "#two# #four#", "#four# #two#", "#three# #three#"],
+	"seven": ["#one# #six#", "#six# #one#", "#two# #five#", "#five# #two#", "#three# #four#", "#four# #three#"],
+	"origin": ["#five# / #seven# / #five# / "]
+}
