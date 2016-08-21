@@ -76,57 +76,60 @@ footer a:hover, main a:hover {
     border-bottom: 3px solid #18ffff;
     opacity: 1; }
 
-/* line 91, app.css.scss */
-.mdl-layout__drawer .mdl-navigation__link {
-  background-color: transparent; }
-  /* line 93, app.css.scss */
-  .mdl-layout__drawer .mdl-navigation__link.is-active {
-    background-color: #80deea;
-    color: #212121;
-    opacity: 1; }
-    /* line 97, app.css.scss */
-    .mdl-layout__drawer .mdl-navigation__link.is-active:hover {
-      background-color: #4dd0e1; }
+/* line 90, app.css.scss */
+.mdl-layout__drawer {
+  position: fixed; }
+  /* line 92, app.css.scss */
+  .mdl-layout__drawer .mdl-navigation__link {
+    background-color: transparent; }
+    /* line 94, app.css.scss */
+    .mdl-layout__drawer .mdl-navigation__link.is-active {
+      background-color: #80deea;
+      color: #212121;
+      opacity: 1; }
+      /* line 98, app.css.scss */
+      .mdl-layout__drawer .mdl-navigation__link.is-active:hover {
+        background-color: #4dd0e1; }
 
-/* line 103, app.css.scss */
+/* line 104, app.css.scss */
 .mdl-layout__header--scroll {
   position: fixed; }
 
-/* line 106, app.css.scss */
+/* line 107, app.css.scss */
 .mdl-layout__content {
   width: 100%; }
-  /* line 108, app.css.scss */
+  /* line 109, app.css.scss */
   .has-scrolling-header .mdl-layout__content {
     margin-top: 64px; }
 
-/* line 113, app.css.scss */
+/* line 114, app.css.scss */
 .course-title small {
   display: block; }
 
-/* line 117, app.css.scss */
+/* line 118, app.css.scss */
 .mdl-layout__drawer > .mdl-layout__title, .mdl-layout__drawer > .mdl-layout-title {
   line-height: 30px;
   margin-top: 20px; }
 
-/* line 121, app.css.scss */
+/* line 122, app.css.scss */
 .mdl-data-table {
   font-size: 16px; }
-  /* line 123, app.css.scss */
+  /* line 124, app.css.scss */
   .mdl-data-table th {
     font-size: 15px; }
 
-/* line 127, app.css.scss */
+/* line 128, app.css.scss */
 .mdl-data-table--wide {
   width: 75%;
   margin: auto; }
-  /* line 130, app.css.scss */
+  /* line 131, app.css.scss */
   .mdl-data-table--wide td, .mdl-data-table--wide th {
     text-align: left; }
 
-/* line 134, app.css.scss */
+/* line 135, app.css.scss */
 .ie-only {
   display: none; }
 
-/* line 137, app.css.scss */
+/* line 138, app.css.scss */
 html.ie6, html.ie7, html.ie8, html.ie9 {
   display: block; }
