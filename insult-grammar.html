@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+	<title>Tracery Insult Generator</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cutestrap/1.3.1/css/cutestrap.min.css" />
+</head>
+<body>
+	<div class="wrapper-small">
+		<h1 class="page-title">Tracery Insult Generator</h1>
+		<p>We made an insult generator using <a href="http://www.pangloss.com/seidel/shake_rule.html">The Shakespeare Insult Kit</a>.</p>
+	</div>
+	<div class="wrapper-small">
+		<div id="story" class="tracery fw-semibold fs-large"></div>
+		<form>
+			<label for="numberOfStories" class="textfield">
+				<input type="number" id="numberOfStories" value="1">
+				<span class="textfield__label">Number of Stories to Generate:</span>
+			</label>
+			<div class="ta-center">
+				<input type="button" value="Create a New Story" id="newStory" class="btn">
+			</div>
+		</form>
+	</div>
+	<script id="grammar" type="application/json">
+		{
+			"origin": "#greeting.capitalize#. You are #insult.a#!",
+			"greeting": ["hello", "yo", "what's up", "hey", "salutations", "howdy"],
+			"insult": "#column1#, #column2# #column3#",
+			"column1": ["artless", "bawdy", "beslubbering", "bootless", "churlish", "cockered", "clouted", "craven", "currish", "dankish", "dissembling", "droning", "errant", "fawning", "fobbing", "froward", "frothy", "gleeking", "goatish", "gorbellied",
+				"impertinent", "infectious", "jarring", "loggerheaded", "lumpish", "mammering", "mangled", "mewling", "paunchy", "pribbling", "puking", "puny", "qualling", "rank", "reeky", "roguish", "ruttish", "saucy", "spleeny", "spongy", "surly",
+				"tottering", "unmuzzled", "vain", "venomed", "villainous", "warped", "wayward", "weedy", "yeasty"
+			],
+			"column2": ["base-court", "bat-fowling", "beef-witted", "beetle-headed", "boil-brained", "clapper-clawed", "clay-brained", "common-kissing", "crook-pated", "dismal-dreaming", "dizzy-eyed", "doghearted", "dread-bolted", "earth-vexing",
+				"elf-skinned", "fat-kidneyed", "fen-sucked", "flap-mouthed", "fly-bitten", "folly-fallen", "fool-born", "full-gorged", "guts-griping", "half-faced", "hasty-witted", "hedge-born", "hell-hated", "idle-headed", "ill-breeding", "ill-nurtured",
+				"knotty-pated", "milk-livered", "motley-minded", "onion-eyed", "plume-plucked", "pottle-deep", "pox-marked", "reeling-ripe", "rough-hewn", "rude-growing", "rump-fed", "shard-borne", "sheep-biting", "spur-galled", "swag-bellied", "tardy-gaited",
+				"tickle-brained", "toad-spotted", "unchin-snouted", "weather-bitten"
+			],
+			"column3": ["apple-john", "baggage", "barnacle", "bladder", "boar-pig", "bugbear", "bum-bailey", "canker-blossom", "clack-dish", "clotpole", "coxcomb", "codpiece", "death-token", "dewberry", "flap-dragon", "flax-wench", "flirt-gill",
+				"foot-licker", "fustilarian", "giglet", "gudgeon", "haggard", "harpy", "hedge-pig", "horn-beast", "hugger-mugger", "joithead", "lewdster", "lout", "maggot-pie", "malt-worm", "mammet", "measle", "minnow", "miscreant", "moldwarp", "mumble-news",
+				"nut-hook", "pigeon-egg", "pignut", "puttock", "pumpion", "ratsbane", "scut", "skainsmate", "strumpet", "varlot", "vassal", "whey-face", "wagtail"
+			]
+		}
+	</script>
+	<script src="/javascripts/tracery/tracery.min.js" async></script>
+	<script src="/javascripts/tracery/controls.min.js" async></script>
+</body>
+</html>
