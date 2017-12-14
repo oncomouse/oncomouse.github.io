@@ -1,3 +1,4 @@
+/*.lock
 .babelrc
 node_modules
 package.json
