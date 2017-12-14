@@ -1,0 +1,1 @@
+'use strict';(function(){var a=function(a){a.preventDefault(),document.querySelector('#absences-output').innerHTML=curve(parseInt(document.querySelector('#absences').value))};document.addEventListener('DOMContentLoaded',a),document.querySelector('#absences').addEventListener('change',a)})(curve);

@@ -19,7 +19,7 @@
 	</div>
 	<div class="wrapper-small">
 		<div class="fw-semibold fs-large"><p>
-      Points Lost for Attendance: <span id="absences-output"></span>
+      <span id="prompt">Points Lost for Attendance</span>: <span id="absences-output"></span>
     </p></div>
 		<form>
 			<label for="absences" class="textfield">
@@ -28,30 +28,7 @@
 			</label>
 		</form>
 	</div>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/ramda/0.25.0/ramda.min.js"></script>
-  <script>
-    var linearScale = R.curry(function (domain, range, n) {
-      var domainMin = domain[0], domainMax = domain[1];
-      var rangeMin = range[0], rangeMax = range[1];
-      return rangeMin + (n - domainMin) * (rangeMax - rangeMin) / (domainMax - domainMin)
-    });
-    var freeAbsences = 1;
-    var tooHighAbsences = 10;
-    var minMultiplier = 2;
-    var maxMultiplier = 5;
-    var scalarMap = R.cond([
-      [R.gte(tooHighAbsences), linearScale([freeAbsences + 1, tooHighAbsences], [minMultiplier, maxMultiplier])],
-      [R.T, R.always(maxMultiplier)]
-    ]);
-    var curve = function(n) {
-      return n <= freeAbsences ? 0 : Math.floor((n-1) * scalarMap(n));
-    };
-    function updateAbsences(ev) {
-      ev.preventDefault();
-      document.querySelector('#absences-output').innerHTML = curve(parseInt(document.querySelector('#absences').value))
-    }
-    document.addEventListener('DOMContentLoaded', updateAbsences);
-    document.querySelector('#absences').addEventListener('change', updateAbsences)
-  </script>
-	</body>
+    <script src="./assets/javascripts/curve.js"></script>
+    <script src="./assets/javascripts/controls.js"></script>
+</body>
 </html>
