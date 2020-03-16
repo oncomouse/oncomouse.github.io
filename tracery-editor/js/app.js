@@ -7,9 +7,20 @@ var app = {
   grammar: grammar,
   seedLocked: false
 };
+var savedGrammar = ''
 $(document).ready(function () {
+  localforage.config({
+    name: 'TraceryEditor',
+  })
   console.log("start");
-  setMode("authoring");
+  // Load local grammar from storage:
+  localforage.getItem('grammar', function (_err, grammar) {
+    if (grammar !== null) {
+      savedGrammar = JSON.parse(grammar)
+    }
+    setMode("authoring")
+  });
+
 });
 // Ways to interact
 
@@ -183,7 +194,7 @@ function setMode(mode) {
   setSeed(Math.floor(Math.random() * 9999999), true);
 
   $("#grammar-select").val("landscape");
-  loadGrammar(testGrammars[$("#grammar-select").val()]);
+  savedGrammar.length === 0 ? loadGrammar(testGrammars[$("#grammar-select").val()]) : loadGrammar(savedGrammar);
   generate();
   setVisualization("expansion");
 }
@@ -251,6 +262,7 @@ function reparseGrammar(raw) {
 
     }
 
+    localforage.setItem('grammar', JSON.stringify(json))
     app.grammar.loadFromRawObj(json);
 
     if (errors.length !== 0) {
