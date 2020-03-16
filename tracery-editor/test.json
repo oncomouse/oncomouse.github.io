@@ -1,0 +1,13 @@
+{
+  "origin": "#greeting#, #name#!",
+  "greeting": [
+    "Hello",
+    "Good Afternoon",
+    "Greetings",
+    "Hail and well-met"
+  ],
+  "name": [
+    "Andrew",
+    "Rudy"
+  ]
+}
