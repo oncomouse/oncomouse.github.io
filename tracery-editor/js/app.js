@@ -153,7 +153,8 @@ function setMode(mode) {
         id: "grammar-select",
         html: Object.keys(testGrammars).map(function (item) {
           return "<option>" + item + "</option>";
-        }).join("")
+        }).join(""),
+        disabled: Object.keys(savedGrammar).length !== 0,
       }).appendTo(grammarControls).change(function () {
         var grammarName = $(this).val();
         loadGrammar(testGrammars[grammarName]);
@@ -194,7 +195,8 @@ function setMode(mode) {
   setSeed(Math.floor(Math.random() * 9999999), true);
 
   $("#grammar-select").val("landscape");
-  savedGrammar.length === 0 ? loadGrammar(testGrammars[$("#grammar-select").val()]) : loadGrammar(savedGrammar);
+  // If there is a saved grammar, load it instead of the demo:
+  Object.keys(savedGrammar).length === 0 ? loadGrammar(testGrammars[$("#grammar-select").val()]) : loadGrammar(savedGrammar);
   generate();
   setVisualization("expansion");
 }
@@ -262,7 +264,9 @@ function reparseGrammar(raw) {
 
     }
 
+    // Save grammar to localforage:
     localforage.setItem('grammar', JSON.stringify(json))
+
     app.grammar.loadFromRawObj(json);
 
     if (errors.length !== 0) {
