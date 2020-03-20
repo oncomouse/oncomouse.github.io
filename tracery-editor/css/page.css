@@ -85,6 +85,10 @@ body {
 #origin-select {
 	width:100px;
 }
+.save-button {
+  float: left;
+  margin: 3px;
+}
 .login-id {
 	float:left;
 	top:-4px;

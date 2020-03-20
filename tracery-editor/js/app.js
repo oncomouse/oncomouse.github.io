@@ -1,5 +1,6 @@
 /**
  * @author Kate
+ * w/ additions by @oncomouse (added local save in browser cache and save to JSON file)
  */
 var app = {
   generateCount: 1,
@@ -161,11 +162,14 @@ function setMode(mode) {
         generate();
       });
 
-      // Login/id
-      var login = $("<span/>", {
-        html: "login",
-        class: "login-id"
-      }).appendTo(grammarControls);
+      // Save Current Grammar to File
+      var save = $("<button/>", {
+        html: "save",
+        class: "save-button",
+      }).appendTo(grammarControls).click(function () {
+        var blob = new Blob([JSON.stringify(app.grammar.raw, null, 2)], {type: 'application/json'});
+        saveAs(blob, 'grammar.json')
+      });
 
       // Toggle visual editing mode
       /*
@@ -265,7 +269,10 @@ function reparseGrammar(raw) {
     }
 
     // Save grammar to localforage:
-    localforage.setItem('grammar', JSON.stringify(json))
+    if (!isEqual(json, app.grammar.raw)) {
+      console.log('Saving to localForage')
+      localforage.setItem('grammar', JSON.stringify(json))
+    }
 
     app.grammar.loadFromRawObj(json);
 
@@ -276,6 +283,7 @@ function reparseGrammar(raw) {
         $("#errors").append("<div class='error'>" + errors[i].index + ": " + errors[i].log + "</div>");
       }
 
+    } else {
     }
   }
   rebuildSymbolList();
