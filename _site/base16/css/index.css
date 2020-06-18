@@ -1,0 +1,31 @@
+html {
+  font-family: "Fira Code";
+  font-size: 24px;
+  font-variant-ligatures: contextual;
+  font-feature-settings: "locl";
+}
+
+code,
+pre,
+select {
+  font-family: "Fira Code";
+}
+
+select {
+  border: 1px solid #666;
+  font-size: 1.25rem;
+  padding: 2px;
+  display: block;
+  margin: auto;
+}
+
+.explanation {
+  font-family: Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.root {
+  max-width: 960px;
+  margin: auto;
+  margin-bottom: 10rem;
+}
+

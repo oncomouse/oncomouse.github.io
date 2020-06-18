@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html lang="en" class="no-js ie6"> <![endif]-->
+<!--[if IE 7]>	  <html lang="en" class="no-js ie7"> <![endif]-->
+<!--[if IE 8]>	  <html lang="en" class="no-js ie8"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class='no-js' lang='en'>
+  <!--<![endif]-->
+  <head>
+    <meta charset='utf-8'>
+    <meta content='IE=edge,chrome=1' http-equiv='X-UA-Compatible'>
+    <title>
+      RSA 2014 Trip
+    </title>
+    <meta content='' name=''>
+    <meta content='' name=''>
+    <meta content='text/javascript' http-equiv='content-script-type'>
+    <meta content='width=device-width, initial-scale=1.0' name='viewport'>
+    <base target='_blank'>
+    <script src='//cdnjs.cloudflare.com/ajax/libs/zepto/1.0/zepto.min.js'></script>
+    <script>
+      $(document).ready(function(){
+      	if((navigator.userAgent.match(/(iPhone|iPad|Android)/i))) {
+      		$('a').each(function(){
+      			var $this = $(this);
+      			//var replace_string = "maps";
+      			//if (navigator.userAgent.match(/OS 6_0/)) {
+      			var replace_string = "comgooglemaps";
+      			//}
+      			// https://developers.google.com/maps/documentation/ios/urlscheme#search
+      			if($this.attr('href').match(/www.google.com\/maps/)){
+      				if($this.attr('href').match(/\/place\//)) {
+      					var search_string = $this.attr('href').replace(/.*\:\/\/www.google.com\/maps\/place\//, "");
+      					var pieces = search_string.split("/");
+      					var query = pieces[0];
+      					var center = pieces[1].replace(/^\@/,"");
+      					$this.attr('href', replace_string + "://" + "?q=" + query + "&center=" + center);
+      				} else {
+      					$this.attr('href', $this.attr('href').replace("maps.apple.com", ""));
+      					$this.attr('href', $this.attr('href').replace("https://", "http://"));
+      					$this.attr('href', $this.attr('href').replace("http://", replace_string + "://"));
+      				}
+      			}
+      		});
+      	}
+      });
+    </script>
+    <style>
+      /*! Typebase.less v0.1.0 | MIT License */
+      /* Setup */
+      /* line 14, /Users/andrew/Desktop/Software/simple_pages/source/stylesheets/libraries/_typebase.sass */
+      html {
+        /* Change default typefaces here */
+        font-family: serif;
+        font-size: 137.5%;
+        -webkit-font-smoothing: antialiased; }
+      
+      /* Copy & Lists */
+      /* line 29, /Users/andrew/Desktop/Software/simple_pages/source/stylesheets/libraries/_typebase.sass */
+      p {
+        line-height: 1.25rem;
+        margin-top: 1.25rem;
+        margin-bottom: 0; }
+      
+      /* line 34, /Users/andrew/Desktop/Software/simple_pages/source/stylesheets/libraries/_typebase.sass */
+      ul, ol {
+        margin-top: 1.25rem;
+        margin-bottom: 1.25rem; }
+        /* line 37, /Users/andrew/Desktop/Software/simple_pages/source/stylesheets/libraries/_typebase.sass */
+        ul li, ol li {
+          line-height: 1.25rem; }
+        /* line 39, /Users/andrew/Desktop/Software/simple_pages/source/stylesheets/libraries/_typebase.sass */
+        ul ul, ul ol, ol ul, ol ol {
+          margin-top: 0;
+          margin-bottom: 0; }
+      
+      /* line 43, /Users/andrew/Desktop/Software/simple_pages/source/stylesheets/libraries/_typebase.sass */
+      blockquote {
+        line-height: 1.25rem;
+        margin-top: 1.25rem;
+        margin-bottom: 1.25rem; }
+      
+      /* Headings */
+      /* line 49, /Users/andrew/Desktop/Software/simple_pages/source/stylesheets/libraries/_typebase.sass */
+      h1, h2, h3, h4, h5, h6 {
+        /* Change heading typefaces here */
+        font-family: sans-serif;
+        margin-top: 1.25rem;
+        margin-bottom: 0;
+        line-height: 1.25rem; }
+      
+      /* line 56, /Users/andrew/Desktop/Software/simple_pages/source/stylesheets/libraries/_typebase.sass */
+      h1 {
+        font-size: 3.6375rem;
+        line-height: 3.75rem;
+        margin-top: 2.5rem; }
+      
+      /* line 60, /Users/andrew/Desktop/Software/simple_pages/source/stylesheets/libraries/_typebase.sass */
+      h2 {
+        font-size: 2.425rem;
+        line-height: 2.5rem;
+        margin-top: 2.5rem; }
+      
+      /* line 64, /Users/andrew/Desktop/Software/simple_pages/source/stylesheets/libraries/_typebase.sass */
+      h3 {
+        font-size: 1.2125rem; }
+      
+      /* line 66, /Users/andrew/Desktop/Software/simple_pages/source/stylesheets/libraries/_typebase.sass */
+      h4 {
+        font-size: 0.60625rem; }
+      
+      /* line 68, /Users/andrew/Desktop/Software/simple_pages/source/stylesheets/libraries/_typebase.sass */
+      h5 {
+        font-size: 0.40417rem; }
+      
+      /* line 70, /Users/andrew/Desktop/Software/simple_pages/source/stylesheets/libraries/_typebase.sass */
+      h6 {
+        font-size: 0.30312rem; }
+      
+      /* Tables */
+      /* line 74, /Users/andrew/Desktop/Software/simple_pages/source/stylesheets/libraries/_typebase.sass */
+      table {
+        margin-top: 1.25rem;
+        border-spacing: 0px;
+        border-collapse: collapse; }
+        /* line 79, /Users/andrew/Desktop/Software/simple_pages/source/stylesheets/libraries/_typebase.sass */
+        table td, table th {
+          padding: 0;
+          line-height: 27.5px; }
+      
+      /* Code blocks */
+      /* line 84, /Users/andrew/Desktop/Software/simple_pages/source/stylesheets/libraries/_typebase.sass */
+      code {
+        vertical-align: bottom; }
+      
+      /* Leading paragraph text */
+      /* line 89, /Users/andrew/Desktop/Software/simple_pages/source/stylesheets/libraries/_typebase.sass */
+      .lead {
+        font-size: 1.2125rem; }
+      
+      /* Hug a the block above you */
+      /* line 93, /Users/andrew/Desktop/Software/simple_pages/source/stylesheets/libraries/_typebase.sass */
+      .hug {
+        margin-top: 0; }
+      
+      /* line 9, (__TEMPLATE__) */
+      body {
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
+      
+      /* line 12, (__TEMPLATE__) */
+      a {
+        color: red; }
+      
+      /* line 14, (__TEMPLATE__) */
+      dd, dt {
+        line-height: 1.5rem; }
+      
+      /* line 16, (__TEMPLATE__) */
+      #content {
+        margin: 0 auto;
+          margin-bottom: 12em;
+        max-width: 850px;
+        width: 100%; }
+    </style>
+  </head>
+  <body>
+    <div id='content'>
+      <h1 id="rsa-2014-trip">RSA 2014 Trip</h1>
+      
+      <ul>
+        <li><a href="http://eventmobi.com/rsa14/">RSA Mobile App</a></li>
+        <li>Your Talk:
+          <ul>
+            <li>Sunday 11AM</li>
+            <li>Salon I</li>
+          </ul>
+        </li>
+      </ul>
+      
+      <h2 id="hotel">Hotel</h2>
+      
+      <ul>
+        <li><a href="https://www.google.com/maps/preview?ie=UTF-8&amp;q=San+Antonio+Marriott+Rivercenter&amp;fb=1&amp;gl=us&amp;hq=SAN+ANTONIO+MARRIOTT+RIVERCENTER%3B+101+Bowie,+San+Antonio,+TX+78205,+UNITED+STATES&amp;cid=15352169330848329143&amp;ei=XzV6U43QNY3coASS0oDwBw&amp;ved=0CJoBEPwSMAs">Marriott Rivercenter</a>
+          <ul>
+            <li><a href="https://www.google.com/maps/preview?ie=UTF-8&amp;q=San+Antonio+Marriott+Rivercenter&amp;fb=1&amp;gl=us&amp;hq=SAN+ANTONIO+MARRIOTT+RIVERCENTER%3B+101+Bowie,+San+Antonio,+TX+78205,+UNITED+STATES&amp;cid=15352169330848329143&amp;ei=XzV6U43QNY3coASS0oDwBw&amp;ved=0CJoBEPwSMAs">101 Bowie St, San Antonio, TX 78205</a></li>
+          </ul>
+        </li>
+      </ul>
+      
+      <h2 id="panels">Panels</h2>
+      
+      <ul>
+        <li>Your Talk:
+          <ul>
+            <li>Sunday 11AM</li>
+            <li>Salon I</li>
+          </ul>
+        </li>
+      </ul>
+      
+      <h3 id="friday">Friday</h3>
+      
+      <p><strong>Lunch Between 12:15 and 3:45</strong></p>
+      
+      <ul>
+        <li>A01 Object-Oriented Ontology with/in/out Latour, Deleuze, Mol: Borders Between the Voices of Ontological Inquiry in Rhetorical Theory
+          <ul>
+            <li>9:30-10:45</li>
+            <li>Conf 14</li>
+          </ul>
+        </li>
+        <li>B23 Bullshit
+          <ul>
+            <li>11:00-12:15</li>
+            <li>Salon H</li>
+          </ul>
+        </li>
+        <li>E13 Crossing the Border Between Rhetoric and Big Data
+          <ul>
+            <li>3:45-5:00</li>
+            <li>Salon I</li>
+          </ul>
+        </li>
+        <li>Reception
+          <ul>
+            <li>6:30-8:30</li>
+            <li>Lobby</li>
+          </ul>
+        </li>
+      </ul>
+      
+      <h3 id="saturday">Saturday</h3>
+      
+      <p><strong>Lunch between 10:45 and 12:45 OR 2:00 and 3:45</strong></p>
+      
+      <ul>
+        <li>F11 Subjectivity on the Border: The Politics of Speaking for Nonhuman Others
+          <ul>
+            <li>8:00-9:15</li>
+            <li>Conf 17</li>
+          </ul>
+        </li>
+        <li>G16 Rhetorical Transcendence: Mystical Speech at the Border of Language and Consiousness
+          <ul>
+            <li>9:30-10:45</li>
+            <li>Conf 4</li>
+          </ul>
+        </li>
+        <li>I09 Bruno Latour and Rhetoric: A Roundtable Discussion
+          <ul>
+            <li>12:45-2:00</li>
+            <li>Salon E</li>
+          </ul>
+        </li>
+        <li>J15 Technology, Identity, and Agency in Occupy Wall Street
+          <ul>
+            <li>2:15-3:30</li>
+            <li>Salon A</li>
+          </ul>
+        </li>
+        <li>K20 Humanism’s Borders: On Rhetorics for the Human
+          <ul>
+            <li>3:45-5:00</li>
+            <li>Conf 11</li>
+          </ul>
+        </li>
+        <li>IC11 Rhetorical Theory: Questions, Provocations, Futures
+          <ul>
+            <li>5:15-6:30</li>
+            <li>Salon I</li>
+          </ul>
+        </li>
+        <li>Reception
+          <ul>
+            <li>6:30-8:30</li>
+            <li>Salon E-Foyer</li>
+          </ul>
+        </li>
+      </ul>
+      
+      <h3 id="sunday">Sunday</h3>
+      
+      <p><strong>Lunch after talk before airport</strong></p>
+      
+      <ul>
+        <li>L04 Rhetorics of Labor
+          <ul>
+            <li>8:00-9:15</li>
+            <li>Conf 9</li>
+          </ul>
+        </li>
+        <li>M21 Burkean Approaches to Science and Technology
+          <ul>
+            <li>9:30-10:45</li>
+            <li>Salon M</li>
+          </ul>
+        </li>
+        <li><strong>N13 Crossing the Borders Between Human and Nonhuman Rhetorics</strong>
+          <ul>
+            <li>11:00-12:15</li>
+            <li>Salon I</li>
+          </ul>
+        </li>
+      </ul>
+      
+      <h2 id="dining-schedule">Dining Schedule</h2>
+      
+      <h3 id="thursday">Thursday</h3>
+      
+      <ul>
+        <li>Late Dinner at <a href="https://www.google.com/maps/place/218+Produce+Row/@29.4250429,-98.4998763,17z/data=!3m1!4b1!4m2!3m1!1s0x865c5f4cb39c30c1:0x5c5c0527f6afd4dd">Mi Tierra Café y Panadería</a></li>
+      </ul>
+      
+      <h3 id="friday-1">Friday</h3>
+      
+      <ul>
+        <li>Lunch at <a href="https://www.google.com/maps/place/210+McCullough+Ave/@29.429406,-98.483685,17z/data=!3m1!4b1!4m2!3m1!1s0x865cf5ff653b20c9:0x220372af17ef7036">The Oasis</a> </li>
+        <li>Drinks at <a href="https://www.google.com/maps/place/516+Brooklyn+Ave/@29.4331598,-98.4848491,17z/data=!3m1!4b1!4m2!3m1!1s0x865c5f56220364b9:0x123a52d3dcbe72cd">The Brooklynite</a>
+          <ul>
+            <li>Head over after panel</li>
+          </ul>
+        </li>
+        <li>Dinner at <a href="https://www.google.com/maps/place/Pete's+Tako+House/@29.432835,-98.484317,17z/data=!4m2!3m1!1s0x865c5f5ac062b079:0xf8670a264aa4ab26">Pete’s Tako House</a></li>
+      </ul>
+      
+      <h3 id="saturday-1">Saturday</h3>
+      
+      <ul>
+        <li>Maybe Breakfast at <a href="https://www.google.com/maps/place/1000+S+St+Mary's+St/@29.414488,-98.488807,17z/data=!3m1!4b1!4m2!3m1!1s0x865c58a8a4ed8cc3:0x9a50a56a5bcab368">Cascabel’s Mexican Patio</a>
+          <ul>
+            <li>Open at 7AM</li>
+          </ul>
+        </li>
+        <li>Late Lunch (2PM) at <a href="https://www.google.com/maps/place/Lula's+Mexican+Cafe/@29.42758,-98.492933,17z/data=!3m1!4b1!4m2!3m1!1s0x865c5f52fc50debd:0x9b38d2cd1d2beab6">Lula’s</a></li>
+        <li>Dinner at <a href="https://www.google.com/maps/place/910+S+Alamo+St/@29.4147502,-98.4890062,14z/data=!4m2!3m1!1s0x865c58a8b51cd211:0x20c00520962b5d4b">Rosario’s</a></li>
+        <li>Drinks at <a href="https://www.google.com/maps/place/1420+S+Alamo+St/@29.4099492,-98.4957758,17z/data=!3m1!4b1!4m2!3m1!1s0x865c58bb2fb7e911:0x9de606f8e8285881">Bar 1919</a></li>
+      </ul>
+      
+      <h3 id="sunday-1">Sunday</h3>
+      
+      <ul>
+        <li>Lunch and Drinks at <a href="https://www.google.com/maps/place/155+E+Commerce+St/@29.424852,-98.4917346,17z/data=!3m1!4b1!4m2!3m1!1s0x865c58acce0f354b:0x6c02d5d0d35fb577">The Esquire</a></li>
+      </ul>
+      
+      <h2 id="coffee">Coffee</h2>
+      
+      <ul>
+        <li><a href="https://www.google.com/maps/place/160+E+Houston+St/@29.4264244,-98.4914486,17z/data=!3m1!4b1!4m2!3m1!1s0x865c5f533e9ffee9:0x62118a35942fe723">Sip Coffee</a>
+          <ul>
+            <li><a href="https://www.google.com/maps/place/160+E+Houston+St/@29.4264244,-98.4914486,17z/data=!3m1!4b1!4m2!3m1!1s0x865c5f533e9ffee9:0x62118a35942fe723">160 E Houston St</a></li>
+          </ul>
+        </li>
+      </ul>
+      
+      <h2 id="cocktails">Cocktails</h2>
+      
+      <ul>
+        <li><a href="https://www.google.com/maps/place/1420+S+Alamo+St/@29.4099492,-98.4957758,17z/data=!3m1!4b1!4m2!3m1!1s0x865c58bb2fb7e911:0x9de606f8e8285881">Bar 1919</a>
+          <ul>
+            <li>Opens 4PM</li>
+          </ul>
+        </li>
+        <li><a href="https://www.google.com/maps/place/516+Brooklyn+Ave/@29.4331598,-98.4848491,17z/data=!3m1!4b1!4m2!3m1!1s0x865c5f56220364b9:0x123a52d3dcbe72cd">The Brooklynite</a>
+          <ul>
+            <li>A little far but nice looking</li>
+            <li>Opens 5PM</li>
+          </ul>
+        </li>
+        <li><a href="https://www.google.com/maps/place/155+E+Commerce+St/@29.424852,-98.4917346,17z/data=!3m1!4b1!4m2!3m1!1s0x865c58acce0f354b:0x6c02d5d0d35fb577">The Esquire</a>
+          <ul>
+            <li>Opens 11:30AM</li>
+          </ul>
+        </li>
+      </ul>
+      
+      <h2 id="food-list">Food List</h2>
+      
+      <h3 id="not-tex-mex">Not Tex Mex</h3>
+      
+      <ul>
+        <li><a href="https://www.google.com/maps/place/155+E+Commerce+St/@29.424852,-98.4917346,17z/data=!3m1!4b1!4m2!3m1!1s0x865c58acce0f354b:0x6c02d5d0d35fb577">The Esquire</a>
+          <ul>
+            <li><a href="https://www.google.com/maps/place/155+E+Commerce+St/@29.424852,-98.4917346,17z/data=!3m1!4b1!4m2!3m1!1s0x865c58acce0f354b:0x6c02d5d0d35fb577">155 E Commerce St.</a></li>
+            <li>Noted for cocktails, but good bar food, too</li>
+          </ul>
+        </li>
+        <li><a href="https://www.google.com/maps/place/The+Luxury/@29.436278,-98.480584,17z/data=!3m1!4b1!4m2!3m1!1s0x865cf5f9c6ecaa4d:0xd20c5dd5722aba99">The Luxury</a>
+          <ul>
+            <li><a href="https://www.google.com/maps/place/The+Luxury/@29.436278,-98.480584,17z/data=!3m1!4b1!4m2!3m1!1s0x865cf5f9c6ecaa4d:0xd20c5dd5722aba99">103 E Jones Ave</a></li>
+            <li>Outdoor, Fancy Sandwich Shop</li>
+            <li>Local Beer</li>
+          </ul>
+        </li>
+      </ul>
+      
+      <h3 id="tex-mex">Tex Mex</h3>
+      <ul>
+        <li><a href="https://www.google.com/maps/place/Pete's+Tako+House/@29.432835,-98.484317,17z/data=!4m2!3m1!1s0x865c5f5ac062b079:0xf8670a264aa4ab26">Pete’s Tako House</a>
+          <ul>
+            <li><a href="https://www.google.com/maps/place/Pete's+Tako+House/@29.432835,-98.484317,17z/data=!4m2!3m1!1s0x865c5f5ac062b079:0xf8670a264aa4ab26">502 Brooklyn Ave</a></li>
+            <li>Tex Mex!</li>
+            <li>Opens at 6AM until 11PM Friday &amp; Saturday</li>
+            <li>4.5 Stars on Yelp</li>
+            <li>Next to the Brooklynite</li>
+          </ul>
+        </li>
+        <li><a href="https://www.google.com/maps/place/210+McCullough+Ave/@29.429406,-98.483685,17z/data=!3m1!4b1!4m2!3m1!1s0x865cf5ff653b20c9:0x220372af17ef7036">The Oasis</a>
+          <ul>
+            <li><a href="https://www.google.com/maps/place/210+McCullough+Ave/@29.429406,-98.483685,17z/data=!3m1!4b1!4m2!3m1!1s0x865cf5ff653b20c9:0x220372af17ef7036">210 McCullough Ave</a></li>
+            <li>Tex Mex!</li>
+            <li>4 Stars on Yelp</li>
+            <li>Breakfast (9AM)</li>
+            <li>Maybe No Dinner</li>
+          </ul>
+        </li>
+        <li><a href="https://www.google.com/maps/place/910+S+Alamo+St/@29.4147502,-98.4890062,14z/data=!4m2!3m1!1s0x865c58a8b51cd211:0x20c00520962b5d4b">Rosario’s</a>
+          <ul>
+            <li><a href="https://www.google.com/maps/place/910+S+Alamo+St/@29.4147502,-98.4890062,14z/data=!4m2!3m1!1s0x865c58a8b51cd211:0x20c00520962b5d4b">910 S. Alamo St</a></li>
+            <li>Tex Mex!</li>
+            <li>Enchiladas are boss</li>
+            <li>4 Stars on Yelp</li>
+            <li>Lunch &amp; Dinner (open til 1AM on Friday, 11PM on Saturday)</li>
+          </ul>
+        </li>
+        <li><a href="https://www.google.com/maps/place/Lula's+Mexican+Cafe/@29.42758,-98.492933,17z/data=!3m1!4b1!4m2!3m1!1s0x865c5f52fc50debd:0x9b38d2cd1d2beab6">Lula’s</a>
+          <ul>
+            <li><a href="https://www.google.com/maps/place/Lula's+Mexican+Cafe/@29.42758,-98.492933,17z/data=!3m1!4b1!4m2!3m1!1s0x865c5f52fc50debd:0x9b38d2cd1d2beab6">137 E Travis St</a></li>
+            <li>Tex Mex!</li>
+            <li>4 Stars on Yelp</li>
+          </ul>
+        </li>
+        <li><a href="https://www.google.com/maps/place/1000+S+St+Mary's+St/@29.414488,-98.488807,17z/data=!3m1!4b1!4m2!3m1!1s0x865c58a8a4ed8cc3:0x9a50a56a5bcab368">Cascabel’s Mexican Patio</a>
+          <ul>
+            <li><a href="https://www.google.com/maps/place/1000+S+St+Mary's+St/@29.414488,-98.488807,17z/data=!3m1!4b1!4m2!3m1!1s0x865c58a8a4ed8cc3:0x9a50a56a5bcab368">1000 S Saint Marys</a></li>
+            <li>Breakfast - Dinner (7AM - 9PM)</li>
+            <li>Authentic Mexican (not Tex Mex)</li>
+            <li>4.5 Stars on Yelp</li>
+          </ul>
+        </li>
+        <li><a href="https://www.google.com/maps/place/218+Produce+Row/@29.4250429,-98.4998763,17z/data=!3m1!4b1!4m2!3m1!1s0x865c5f4cb39c30c1:0x5c5c0527f6afd4dd">Mi Tierra Café y Panadería</a>
+          <ul>
+            <li><a href="https://www.google.com/maps/place/218+Produce+Row/@29.4250429,-98.4998763,17z/data=!3m1!4b1!4m2!3m1!1s0x865c5f4cb39c30c1:0x5c5c0527f6afd4dd">218 Produce Row</a></li>
+            <li>Open 24 Hours</li>
+            <li>Cabrito (Stewed Goat)</li>
+            <li>BUSY</li>
+            <li>3.5 Stars on Yelp</li>
+          </ul>
+        </li>
+        <li><a href="https://www.google.com/maps/place/Acenar/@29.426378,-98.49196,17z/data=!3m1!4b1!4m2!3m1!1s0x865c5f5323898fdb:0xc122d6b72f43a30f">Acenar</a>
+          <ul>
+            <li><a href="https://www.google.com/maps/place/Acenar/@29.426378,-98.49196,17z/data=!3m1!4b1!4m2!3m1!1s0x865c5f5323898fdb:0xc122d6b72f43a30f">146 E Houston St</a></li>
+            <li>Tex Mex!</li>
+            <li>On river walk (which can be bad).</li>
+            <li>Seems Fancier Than I Want</li>
+            <li>3.5 Stars on Yelp</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>

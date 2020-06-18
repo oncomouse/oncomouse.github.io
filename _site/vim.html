@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Vim Cheatsheet</title>
+  <link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700" rel="stylesheet">
+  <link rel="stylesheet" href="stylesheets/cheatsheet.css">
+</head>
+
+<body class="en_us">
+  <div class="container">
+    <div class="grid-block">
+      <div class="grid-1">
+        <h1><a class="site-title" href="/">Vim Cheatsheet</a></h1>
+        <p><em>
+		This is based off the version at <a href="https://vim.rtorr.com/">https://vim.rtorr.com/</a>. I have added some commands for plugins I use.
+	</em></p>
+      </div>
+    </div>
+    <div class="commands-container">
+      <div class="grid-block">
+        <div class="grid-lg-1-3">
+          <h2>Global</h2>
+          <ul>
+            <li><kbd>:help keyword</kbd> - open help for keyword</li>
+            <li><kbd>:saveas file</kbd> - save file as</li>
+            <li><kbd>:close</kbd> - close current pane</li>
+            <li><kbd>K</kbd> - open man page for word under the cursor</li>
+          </ul>
+          <h2>Cursor movement</h2>
+          <ul>
+            <li><kbd>h</kbd> - move cursor left</li>
+            <li><kbd>j</kbd> - move cursor down</li>
+            <li><kbd>k</kbd> - move cursor up</li>
+            <li><kbd>l</kbd> - move cursor right</li>
+            <li><kbd>H</kbd> - move to top of screen</li>
+            <li><kbd>M</kbd> - move to middle of screen</li>
+            <li><kbd>L</kbd> - move to bottom of screen</li>
+            <li><kbd>w</kbd> - jump forwards to the start of a word</li>
+            <li><kbd>W</kbd> - jump forwards to the start of a word (words can contain
+              punctuation)
+            </li>
+            <li><kbd>e</kbd> - jump forwards to the end of a word</li>
+            <li><kbd>E</kbd> - jump forwards to the end of a word (words can contain
+              punctuation)
+            </li>
+            <li><kbd>b</kbd> - jump backwards to the start of a word</li>
+            <li><kbd>B</kbd> - jump backwards to the start of a word (words can contain
+              punctuation)
+            </li>
+            <li><kbd>%</kbd> - move to matching character (default supported pairs: '()',
+              '{}', '[]' - use <code>:h matchpairs</code> in vim for more info)</li>
+	    <li><kbd>)</kbd> OR <kbd>(</kbd> - move forward or backward one sentence</li>
+	    <li><kbd>}</kbd> OR <kbd>{</kbd> - move forward or backward one paragraph</li>
+            <li><kbd>0</kbd> - jump to the start of the line</li>
+            <li><kbd>^</kbd> - jump to the first non-blank character of the line</li>
+            <li><kbd>$</kbd> - jump to the end of the line</li>
+            <li><kbd>g_</kbd> - jump to the last non-blank character of the line</li>
+            <li><kbd>gg</kbd> - go to the first line of the document</li>
+            <li><kbd>G</kbd> - go to the last line of the document</li>
+            <li><kbd>5G</kbd> - go to line 5</li>
+            <li><kbd>fx</kbd> - jump to next occurrence of character x</li>
+            <li><kbd>tx</kbd> - jump to before next occurrence of character x</li>
+            <li><kbd>Fx</kbd> - jump to previous occurence of character x</li>
+            <li><kbd>Tx</kbd> - jump to after previous occurence of character x</li>
+            <li><kbd>;</kbd> - repeat previous f, t, F or T movement</li>
+            <li><kbd>,</kbd> - repeat previous f, t, F or T movement, backwards</li>
+          </ul>
+          <h2>Insemode - inserting/appending text</h2>
+          <ul>
+            <li><kbd>i</kbd> - insert before the cursor</li>
+            <li><kbd>I</kbd> - insert at the beginning of the line</li>
+            <li><kbd>a</kbd> - insert (append) after the cursor</li>
+            <li><kbd>A</kbd> - insert (append) at the end of the line</li>
+            <li><kbd>o</kbd> - append (open) a new line below the current line</li>
+            <li><kbd>O</kbd> - append (open) a new line above the current line</li>
+            <li><kbd>ea</kbd> - insert (append) at the end of the word</li>
+            <li><kbd>Esc</kbd> - exit insert mode</li>
+          </ul>
+          <h2>Working with multiple files</h2>
+          <ul>
+            <li><kbd>:e file</kbd> - edit a file in a new buffer</li>
+            <li><kbd>:bnext</kbd> or <kbd>:bn</kbd> - go to the next buffer</li>
+            <li><kbd>:bprev</kbd> or <kbd>:bp</kbd> - go to the previous buffer</li>
+            <li><kbd>:bd</kbd> - delete a buffer (close a file)</li>
+            <li><kbd>:ls</kbd> - list all open buffers</li>
+            <li><kbd>:sp file</kbd> - open a file in a new buffer and split window</li>
+            <li><kbd>:vsp file</kbd> - open a file in a new buffer and vertically split
+              window
+            </li>
+            <li><kbd>Ctrl</kbd> + <kbd>ws</kbd> - split window</li>
+            <li><kbd>Ctrl</kbd> + <kbd>ww</kbd> - switch windows</li>
+            <li><kbd>Ctrl</kbd> + <kbd>wq</kbd> - quit a window</li>
+            <li><kbd>Ctrl</kbd> + <kbd>wv</kbd> - split window vertically</li>
+            <li><kbd>Ctrl</kbd> + <kbd>wh</kbd> - move cursor to the left window (vertical
+              split)
+            </li>
+            <li><kbd>Ctrl</kbd> + <kbd>wl</kbd> - move cursor to the right window (vertical
+              split)
+            </li>
+            <li><kbd>Ctrl</kbd> + <kbd>wj</kbd> - move cursor to the window below (horizontal
+              split)
+            </li>
+            <li><kbd>Ctrl</kbd> + <kbd>wk</kbd> - move cursor to the window above (horizontal
+              split)
+            </li>
+          </ul>
+        </div>
+        <div class="grid-lg-1-3">
+          <h2>Editing</h2>
+          <ul>
+            <li><kbd>r</kbd> - replace a single character</li>
+            <li><kbd>J</kbd> - join line below to the current one with one space in between</li>
+            <li><kbd>gJ</kbd> - join line below to the current one without space in between</li>
+            <li><kbd>gwip</kbd> - reflow paragraph</li>
+            <li><kbd>cc</kbd> - change (replace) entire line</li>
+            <li><kbd>c$</kbd> - change (replace) to the end of the line</li>
+            <li><kbd>ciw</kbd> - change (replace) entire word</li>
+            <li><kbd>cw</kbd> - change (replace) to the end of the word</li>
+            <li><kbd>s</kbd> - delete character and substitute text</li>
+            <li><kbd>S</kbd> - delete line and substitute text (same as cc)</li>
+            <li><kbd>xp</kbd> - transpose two letters (delete and paste)</li>
+            <li><kbd>u</kbd> - undo</li>
+            <li><kbd>Ctrl</kbd> + <kbd>r</kbd> - redo</li>
+            <li><kbd>.</kbd> - repeat last command</li>
+          </ul>
+          <h2>Marking text (visual mode)</h2>
+          <ul>
+            <li><kbd>v</kbd> - start visual mode, mark lines, then do a command (like
+              y-yank)
+            </li>
+            <li><kbd>V</kbd> - start linewise visual mode</li>
+            <li><kbd>o</kbd> - move to other end of marked area</li>
+            <li><kbd>Ctrl</kbd> + <kbd>v</kbd> - start visual block mode</li>
+            <li><kbd>O</kbd> - move to other corner of block</li>
+            <li><kbd>aw</kbd> - mark a word</li>
+            <li><kbd>ab</kbd> - a block with ()</li>
+            <li><kbd>aB</kbd> - a block with {}</li>
+            <li><kbd>ib</kbd> - inner block with ()</li>
+            <li><kbd>iB</kbd> - inner block with {}</li>
+            <li><kbd>Esc</kbd> - exit visual mode</li>
+          </ul>
+          <h2>Visual commands</h2>
+          <ul>
+            <li><kbd>&gt;</kbd> - shift text right</li>
+            <li><kbd>&lt;</kbd> - shift text left</li>
+            <li><kbd>y</kbd> - yank (copy) marked text</li>
+            <li><kbd>d</kbd> - delete marked text</li>
+            <li><kbd>~</kbd> - switch case</li>
+          </ul>
+          <h2>Registers</h2>
+          <ul>
+            <li><kbd>:reg</kbd> - show registers content</li>
+            <li><kbd>"xy</kbd> - yank into register x</li>
+            <li><kbd>"xp</kbd> - paste contents of register x</li>
+          </ul>
+          <div class="well">
+            <strong>Tip</strong> Registers are being stored in ~/.viminfo, and will
+            be loaded again on next restart of vim.
+          </div>
+          <div class="well">
+            <strong>Tip</strong> Register 0 contains always the value of the last
+            yank command.
+          </div>
+          <h2>Marks</h2>
+          <ul>
+            <li><kbd>:marks</kbd> - list of marks</li>
+            <li><kbd>ma</kbd> - set current position for mark A</li>
+            <li><kbd>`a</kbd> - jump to position of mark A</li>
+            <li><kbd>y`a</kbd> - yank text to position of mark A</li>
+          </ul>
+          <h2>Macros</h2>
+          <ul>
+            <li><kbd>qa</kbd> - record macro a</li>
+            <li><kbd>q</kbd> - stop recording macro</li>
+            <li><kbd>@a</kbd> - run macro a</li>
+            <li><kbd>@@</kbd> - rerun last run macro</li>
+          </ul>
+          <h2 class="plugin">Commands</h2>
+          <ul>
+            <li><kbd>:call (Html|JS|CSS)Beautify()</kbd> - Beautify (using .editorconfig)
+              current file.</li>
+            <li><kbd>:call dein#update()</kbd> - Update installed packages.</li>
+            <li><kbd>:Goyo</kbd> - Activate distraction-free writing.</li>
+	    <li><kbd>Ctrl + P</kbd> - Activate Fuzzy search (<kbd>Ctrl + B</kbd> opens most recent files; <kbd>backspace</kbd> closes)</li>
+	    <li><kbd>cs{from}{to}</kbd> - Change surround {from} to {to}.</li>
+	    <li><kbd>ysiw{to}</kbd> - Wrap with {to} (needs to be end, if paired; so ")" or "]")</li>
+	    <li><kbd>yss{to}</kbd> - Wrap entire line with {to}</li>
+	    <li><kbd>S{to}</kbd> - In line-wise visual mode (<kbd>V</kbd>), wrap selection with {to}</li>
+	    <li><kbd>:IndentGuidesEnable</kbd> - Enable indentation guides</li>
+	    <li><kbd>gJ</kbd> - Join block into a one-liner</li>
+	    <li><kbd>gS</kbd> - Split one-liner into a block</li>
+          </ul>
+          <h2 class="plugin">Fugitive (Git)</h2>
+          <ul>
+            <li><kbd>:Gstatus</kbd> - Load status. <kbd>-</kbd> adds or resets files.
+              <kbd>cc</kbd> commits. <kbd>U</kbd> undoes changes.</li>
+            <li><kbd>:Gpush</kbd> - Push. Include minimum of <kbd>-u</kbd> as an option.</li>
+          </ul>
+        </div>
+        <div class="grid-lg-1-3">
+          <h2>Cut and paste</h2>
+          <ul>
+            <li><kbd>yy</kbd> - yank (copy) a line</li>
+            <li><kbd>2yy</kbd> - yank (copy) 2 lines</li>
+            <li><kbd>yw</kbd> - yank (copy) the characters of the word from the cursor
+              position to the start of the next word</li>
+            <li><kbd>y$</kbd> - yank (copy) to end of line</li>
+            <li><kbd>p</kbd> - put (paste) the clipboard after cursor</li>
+            <li><kbd>P</kbd> - put (paste) before cursor</li>
+            <li><kbd>dd</kbd> - delete (cut) a line</li>
+            <li><kbd>2dd</kbd> - delete (cut) 2 lines</li>
+            <li><kbd>dw</kbd> - delete (cut) the characters of the word from the cursor
+              position to the start of the next word</li>
+            <li><kbd>D</kbd> - delete (cut) to the end of the line</li>
+            <li><kbd>d$</kbd> - delete (cut) to the end of the line</li>
+            <li><kbd>x</kbd> - delete (cut) character</li>
+          </ul>
+          <h2>Exiting</h2>
+          <ul>
+            <li><kbd>:w</kbd> - write (save) the file, but don't exit</li>
+            <li><kbd>:w !sudo tee %</kbd> - write out the current file using sudo</li>
+            <li><kbd>:wq</kbd> or <kbd>:x</kbd> or <kbd>ZZ</kbd> - write (save) and quit</li>
+            <li><kbd>:q</kbd> - quit (fails if there are unsaved changes)</li>
+            <li><kbd>:q!</kbd> or <kbd>ZQ</kbd> - quit and throw away unsaved changes</li>
+            <li><kbd>:wqa</kbd> - write (save) and quit on all tabs</li>
+          </ul>
+          <h2>Search and replace</h2>
+          <ul>
+            <li><kbd>/pattern</kbd> - search for pattern</li>
+            <li><kbd>?pattern</kbd> - search backward for pattern</li>
+            <li><kbd>\vpattern</kbd> - 'very magic' pattern: non-alphanumeric characters
+              are interpreted as special regex symbols (no escaping needed)</li>
+            <li><kbd>n</kbd> - repeat search in same direction</li>
+            <li><kbd>N</kbd> - repeat search in opposite direction</li>
+            <li><kbd>:%s/old/new/g</kbd> - replace all old with new throughout file</li>
+            <li><kbd>:%s/old/new/gc</kbd> - replace all old with new throughout file
+              with confirmations
+            </li>
+            <li><kbd>:noh</kbd> - remove highlighting of search matches</li>
+          </ul>
+          <h2>Search in multiple files</h2>
+          <ul>
+            <li><kbd>:vimgrep /pattern/ {file}</kbd> - search for pattern in multiple
+              files
+            </li>
+          </ul>
+          <div class="well">
+            e.g.
+            <kbd>:vimgrep /foo/ **/*</kbd>
+          </div>
+          <ul>
+            <li><kbd>:cn</kbd> - jump to the next match</li>
+            <li><kbd>:cp</kbd> - jump to the previous match</li>
+            <li><kbd>:copen</kbd> - open a window containing the list of matches</li>
+          </ul>
+          <h2 class="plugin">Pandoc Support</h2>
+          <ul>
+            <li><kbd>Ctrl + x</kbd> + <kbd>Ctrl + o</kbd> - (in insert mode) Expands
+              a citation key.</li>
+            <li><kbd>&lt;localleader&gt;i</kbd> - toggles emphasis</li>
+            <li><kbd>&lt;localleader&gt;b</kbd> - toggles bold</li>
+            <li><kbd>&lt;localleader&gt;`</kbd> - toggles verbatim</li>
+            <li><kbd>&lt;localleader&gt;~~</kbd> - toggles strikeout</li>
+            <li><kbd>&lt;localleader&gt;^</kbd> - toggles superscript</li>
+            <li><kbd>&lt;localleader&gt;_</kbd> - toggles subscript</li>
+            <li><kbd>&lt;localleader&gt;i</kbd> - toggles emphasis</li>
+            <li><kbd>&lt;localleader&gt;#</kbd> - apply header (accepts a count)</li>
+            <li><kbd>&lt;localleader&gt;hd</kbd> - remove header</li>
+            <li><kbd>&lt;localleader&gt;hn</kbd> - move to next header</li>
+            <li><kbd>&lt;localleader&gt;hb</kbd> - move to previous header</li>
+            <li><kbd>&lt;localleader&gt;hh</kbd> - go to current header</li>
+            <li><kbd>&lt;localleader&gt;hp</kbd> - go to current header's parent</li>
+            <li><kbd>&lt;localleader&gt;hsn</kbd> - move to next sibling header</li>
+            <li><kbd>&lt;localleader&gt;hsb</kbd> - move to previous sibling header</li>
+            <li><kbd>&lt;localleader&gt;hcf</kbd> - move fo first child header</li>
+            <li><kbd>&lt;localleader&gt;hcl</kbd> - move to last child header</li>
+            <li><kbd>&lt;localleader&gt;hcn</kbd> - move to [count] nth child header</li>
+            <li><kbd>]]</kbd> - [count] sections forward (like
+              <localleader>hn)</li>
+            <li><kbd>[[</kbd> - [count] sections backwards</li>
+            <li><kbd>][</kbd> - [count] move to the next section end</li>
+            <li><kbd>[]</kbd> - [count] move to the previous section end</li>
+            <li><kbd>aS</kbd> - select a section, including header</li>
+            <li><kbd>iS</kbd> - select a section, excluding header</li>
+            <li><kbd>&lt;localleader&gt;nr</kbd> - insert a ref definition after this
+              paragraph
+            </li>
+            <li><kbd>&lt;localleader&gt;rg</kbd> - go to reference definition</li>
+            <li><kbd>&lt;localleader&gt;rb</kbd> - go back to reference label</li>
+            <li><kbd>&lt;localleader&gt;gl</kbd> - go to current link in current window</li>
+            <li><kbd>&lt;localleader&gt;sl</kbd> - go to current link in split window</li>
+            <li><kbd>&lt;localleader&gt;gb</kbd> - go back from link</li>
+            <li><kbd>&lt;localleader&gt;gB</kbd> - go back from link to the previous
+              file
+            </li>
+            <li><kbd>&lt;localleader&gt;ln</kbd> - move to next list item</li>
+            <li><kbd>&lt;localleader&gt;lp</kbd> - move to previous list item</li>
+            <li><kbd>&lt;localleader&gt;ll</kbd> - move to the current list item</li>
+            <li><kbd>&lt;localleader&gt;llp</kbd> - move to parent of the current list
+              item
+            </li>
+            <li><kbd>&lt;localleader&gt;lsn</kbd> - move to the next list item sibling</li>
+            <li><kbd>&lt;localleader&gt;lsp</kbd> - move to the previous list item sibling
+            </li>
+            <li><kbd>&lt;localleader&gt;lcf</kbd> - move to the first list item child</li>
+            <li><kbd>&lt;localleader&gt;lcl</kbd> - move to the last list item child</li>
+            <li><kbd>&lt;localleader&gt;lcn</kbd> - move to the [count] nth list item
+              child
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

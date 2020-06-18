@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <meta charset='utf-8'>
+    <meta content='IE=Edge,chrome=1' http-equiv='X-UA-Compatible'>
+    <meta content='width=device-width, initial-scale=1.0' name='viewport'>
+    <title></title>
+    <link href="/modsource/stylesheets/bootstrap-theme/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="/modsource/stylesheets/layout.css" rel="stylesheet" type="text/css" />
+    
+    <!--[if lt IE 9]>
+      <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.1/html5shiv.js" type="text/javascript"></script>
+      <script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.js" type="text/javascript"></script>
+    <![endif]-->
+  </head>
+  <body class='tools tools_file-name'>
+    <div class='container'>
+      <header>
+        <div id='modsource-logo'>
+          <h1>#modsource</h1>
+        </div>
+        <p class='lead text-center hug'><a href="/"><i class='fa fa-home fa-lg'></i> Home</a></p>
+      </header>
+      <div class='row no-gutter'>
+        <article class='clearfix col-sm-6'>
+          <form class='form-horizontal'>
+            <div class='col-sm-9 col-sm-offset-3'>
+              <h3>Author Information</h3>
+            </div>
+            <div class='form-group'>
+              <label class='control-label col-sm-3' for='firstName'>First Name</label>
+              <div class='col-sm-9'>
+                <input class='form-control' id='firstName' placeholder='First Name'>
+              </div>
+            </div>
+            <div class='form-group'>
+              <label class='control-label col-sm-3' for='lastName'>Last Name</label>
+              <div class='col-sm-9'>
+                <input class='form-control' id='lastName' placeholder='Last Name'>
+              </div>
+            </div>
+            <div class='col-sm-9 col-sm-offset-3'>
+              <h3>Document Information</h3>
+            </div>
+            <div class='form-group'>
+              <label class='control-label col-sm-3' for='documentTitle'>Title</label>
+              <div class='col-sm-9'>
+                <input class='form-control' id='documentTitle' placeholder='Document Title'>
+              </div>
+            </div>
+            <div class='form-group'>
+              <label class='control-label col-sm-3' for='documentYear'>Year</label>
+              <div class='col-sm-9'>
+                <input class='form-control' id='documentYear' placeholder='Document Year of Publication'>
+              </div>
+            </div>
+            <div class='form-group'>
+              <label class='control-label col-sm-3' for='documentPublisher'>Publisher</label>
+              <div class='col-sm-9'>
+                <input class='form-control' id='documentPublisher' placeholder='Document Publisher'>
+              </div>
+            </div>
+            <!-- Contributor information -->
+            <!-- Archive / Provenance -->
+            <div class='col-sm-9 col-sm-offset-3'>
+              <h3 id="file-format">File Format</h3>
+              
+              <p><em>If you don't know what this means, leave it as <a href="/modsource/help/markdown.html">Markdown</a>, which is the easiest format.</em></p>
+            </div>
+            <div class='form-group'>
+              <label class='control-label col-sm-3' for='format'>Format</label>
+              <div class='col-sm-9'>
+                <select class='form-control' id='format'>
+                  <option selected value='.md'>Markdown</option>
+                  <option value=''>HTML</option>
+                  <option value='.haml'>HAML</option>
+                  <option value='.textile'>Textile</option>
+                  <option value='.slim'>Slim</option>
+                  <option value='.erb'>Erubis</option>
+                  <option value='.liquid'>Liquid</option>
+                </select>
+              </div>
+            </div>
+            <div class='form-group' style='margin-top: 4rem'>
+              <div class='col-sm-9 col-sm-offset-3'>
+                <button class='btn btn-primary btn-lg' data-target='#file-name' data-toggle='modal' id='create'>Generate File Name</button>
+              </div>
+            </div>
+          </form>
+          <div aria-hidden='true' aria-labelledby='file-name-title' class='modal fade' id='file-name' role='dialog' tabindex='-1'>
+            <div class='modal-dialog'>
+              <div class='modal-content'>
+                <div class='modal-header'>
+                  <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                  <h4 class='modal-title' id='file-name-title'>Your File Name</h4>
+                </div>
+                <div class='modal-body'>
+                  <h2>Your File Name:</h2>
+                  <p class='file-name text-center'></p>
+                  <p class='text-center'>
+                    <em>(Rename your file to this text.)</em>
+                  </p>
+                </div>
+                <div class='modal-footer'>
+                  <button class='btn btn-default btn-lg' data-dismiss='modal' type='button'>Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+      <footer>
+        <p class='lead text-center hug'><a href="/"><i class='fa fa-home fa-lg'></i> Home</a></p>
+      </footer>
+    </div>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js" type="text/javascript"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="/modsource/javascripts/pages/tools/file-name.js" type="text/javascript"></script>
+  </body>
+</html>
