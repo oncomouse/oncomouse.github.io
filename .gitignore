@@ -1,5 +1,6 @@
-/*.lock
-.babelrc
-node_modules
-package.json
-*.es6.js
+*.gem
+.bundle
+.jekyll-cache
+.sass-cache
+_site
+Gemfile.lock
