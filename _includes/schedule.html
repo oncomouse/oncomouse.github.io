@@ -13,6 +13,7 @@
 {% assign unit = 1 %}
 <article class="schedule schedule--{{ daysOfTheWeek }}-per-week">
   {% for index in (0..max) %} 
+    {% if daysOfTheWeek == 0 %}<h1>No meetings detected. Check your <code>.yml</code> File</h1>{% break %}{% endif %}
     {% assign isWeek = class | modulo: daysOfTheWeek %}
     {% assign day = index | times: 86400 | plus: date %}
     {% assign weekDay = day | date: "%A" | downcase %}
