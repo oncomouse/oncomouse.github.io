@@ -1,5 +1,9 @@
 ---
-url: ""  # the base hostname & protocol for your site, e.g. http://example.com
-baseurl: ""  # the subpath of your site, e.g. /blog
+title: "Oncomouse Course Site"
+url: ""
+baseurl: ""
 markdown: kramdown
-title: "Oncomouse Course Site"  # Don't change this; title is built via the _data/course.yml file
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - Rakefile
