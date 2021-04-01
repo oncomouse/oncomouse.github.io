@@ -206,12 +206,14 @@
   <li><a href="../documentation/00-authors.md.html">Authors</a></li>
   <li><a href="../documentation/01-readme.md.html">Readme</a></li>
   <li><a href="../documentation/02-contributing.md.html">Contributing</a></li>
-  <li><a href="../documentation/03-declarative-layout.md.html">The AwesomeWM widget system</a></li>
+  <li><a href="../documentation/03-declarative-layout.md.html">The Widget system</a></li>
   <li><a href="../documentation/04-new-widgets.md.html">Creating new widget</a></li>
   <li><a href="../documentation/05-awesomerc.md.html">Default configuration file documentation</a></li>
   <li><a href="../documentation/06-appearance.md.html">Change Awesome appearance</a></li>
   <li><a href="../documentation/07-my-first-awesome.md.html">My first Awesome</a></li>
+  <li><a href="../documentation/08-client-layout-system.md.html">The AwesomeWM client layout system</a></li>
   <li><a href="../documentation/09-options.md.html">Startup options</a></li>
+  <li><a href="../documentation/10-building-and-testing.md.html">Building and Testing</a></li>
   <li><a href="../documentation/16-using-cairo.md.html">Using Cairo and LGI</a></li>
   <li><a href="../documentation/17-porting-tips.md.html">Tips for upgrading your configuration</a></li>
   <li><a href="../documentation/89-NEWS.md.html">NEWS</a></li>
@@ -262,6 +264,11 @@
 </table>
 <h2><a href="#Object_properties">Object properties</a></h2>
 <table class="function_list">
+    <tr>
+      <td class="shortname" ><a href="#border_width">border_width</a></td>
+      <td class="summarytype" nowrap><span class='summary_type'>number</span></td>
+      <td colspan="2" class="summary">Set the graph border_width.</td>
+    </tr>
     <tr>
       <td class="shortname" ><a href="#border_color">border_color</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>gears.color</span></td>
@@ -574,7 +581,7 @@
 
 
 
-    <span id=item1374 class="hide_extra">
+    <span id=item1377 class="hide_extra">
     </span>
 
 </dd>
@@ -582,6 +589,59 @@
     <h2 class="section-header "><a name="Object_properties"></a>Object properties</h2>
 
     <dl class="function">
+    <dt>
+    <a name = "border_width"></a>
+    <strong>border_width</strong>
+    <span class="proptype"><span class='summary_type'>number</span></span>
+    <span class="baseclass" >
+         &middot 1 signal
+    </span>
+    </dt>
+    <dd>
+    Set the graph border_width. </p>
+
+
+
+<p><img src="../images/AUTOGEN_wibox_widget_graph_border_width.svg" alt="Usage example"/>
+
+
+
+
+    <h3>See also:</h3>
+    <ul>
+         <a href="../widgets/wibox.widget.graph.html#border_color">border_color</a>
+    </ul>
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example"><span class="keyword">for</span> _, width <span class="keyword">in</span> <span class="global">ipairs</span> { <span class="number">1</span>, <span class="number">2</span>, <span class="number">4</span>, <span class="number">10</span> } <span class="keyword">do</span>
+    wibox.widget {
+        max_value     = <span class="number">30</span>,
+        border_color  = beautiful.border_color,
+        widget        = wibox.widget.graph,
+    }
+ <span class="keyword">end</span></pre>
+    </ul>
+
+     <br />
+     <center id=button1378>
+     <a class="show_more_button" onclick="show_extra('1378')">
+      Click to display more
+     </a>
+     </center>
+
+    <span id=item1378 class="hide_extra">
+     <h3>Emit signals:</h3>
+     <ul>
+          <li><span class="parameter"><code>property::border_width</code></span>  When the <a href="../widgets/wibox.widget.graph.html#border_width">border_width</a> value changes.</li>
+           <ul>
+             <li><span class="parameter"><code>self</code></span> <span class="types"><a href="../widgets/wibox.widget.graph.html#">wibox.widget.graph</a></span> The object which changed (useful when connecting many object to the same callback).</li>
+             <li><span class="parameter"><code>new_value</code></span> <span class="types"><a href="../widgets/wibox.widget.graph.html#border_width">border_width</a></span> The new value affected to the property.</li>
+           </ul>
+     </ul>
+    </span>
+
+</dd>
     <dt>
     <a name = "border_color"></a>
     <strong>border_color</strong>
@@ -594,7 +654,11 @@
     <dd>
     Set the graph border color. </p>
 
-<p> If the value is nil, no border will be drawn.
+<p> If the value is nil, no border will be drawn.</p>
+
+
+
+<p><img src="../images/AUTOGEN_wibox_widget_graph_border_color.svg" alt="Usage example"/>
 
     <h3>Type constraints:</h3>
     <ul>
@@ -611,15 +675,25 @@
          <a href="../theme_related_libraries/gears.color.html#">gears.color</a>
     </ul>
 
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example"><span class="keyword">for</span> _, color <span class="keyword">in</span> <span class="global">ipairs</span> {<span class="string">'#ff0000'</span>, <span class="string">'#00ff00'</span>, <span class="string">'#0000ff'</span>, <span class="string">'#ff00ff'</span> } <span class="keyword">do</span>
+    wibox.widget {
+        max_value     = <span class="number">29</span>,
+        border_color  = color,
+        widget        = wibox.widget.graph,
+    }
+ <span class="keyword">end</span></pre>
+    </ul>
 
      <br />
-     <center id=button1375>
-     <a class="show_more_button" onclick="show_extra('1375')">
+     <center id=button1379>
+     <a class="show_more_button" onclick="show_extra('1379')">
       Click to display more
      </a>
      </center>
 
-    <span id=item1375 class="hide_extra">
+    <span id=item1379 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::border_color</code></span>  When the <a href="../widgets/wibox.widget.graph.html#border_color">border_color</a> value changes.</li>
@@ -649,7 +723,11 @@
     </span>
     </dt>
     <dd>
-    Set the graph foreground color.
+    Set the graph foreground color. </p>
+
+
+
+<p><img src="../images/AUTOGEN_wibox_widget_graph_color.svg" alt="Usage example"/>
 
     <h3>Type constraints:</h3>
     <ul>
@@ -666,15 +744,25 @@
          <a href="../theme_related_libraries/gears.color.html#">gears.color</a>
     </ul>
 
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example"><span class="keyword">for</span> _, color <span class="keyword">in</span> <span class="global">ipairs</span> {<span class="string">'#ff0000'</span>, <span class="string">'#00ff00'</span>, <span class="string">'#0000ff'</span>, <span class="string">'#ff00ff'</span> } <span class="keyword">do</span>
+    wibox.widget {
+        max_value = <span class="number">29</span>,
+        color     = color,
+        widget    = wibox.widget.graph,
+    }
+ <span class="keyword">end</span></pre>
+    </ul>
 
      <br />
-     <center id=button1376>
-     <a class="show_more_button" onclick="show_extra('1376')">
+     <center id=button1380>
+     <a class="show_more_button" onclick="show_extra('1380')">
       Click to display more
      </a>
      </center>
 
-    <span id=item1376 class="hide_extra">
+    <span id=item1380 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::color</code></span>  When the <a href="../widgets/wibox.widget.graph.html#color">color</a> value changes.</li>
@@ -704,7 +792,11 @@
     </span>
     </dt>
     <dd>
-    Set the graph background color.
+    Set the graph background color. </p>
+
+
+
+<p><img src="../images/AUTOGEN_wibox_widget_graph_background_color.svg" alt="Usage example"/>
 
     <h3>Type constraints:</h3>
     <ul>
@@ -721,15 +813,25 @@
          <a href="../theme_related_libraries/gears.color.html#">gears.color</a>
     </ul>
 
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example"><span class="keyword">for</span> _, color <span class="keyword">in</span> <span class="global">ipairs</span> {<span class="string">'#ff0000'</span>, <span class="string">'#00ff00'</span>, <span class="string">'#0000ff'</span>, <span class="string">'#ff00ff'</span> } <span class="keyword">do</span>
+    wibox.widget {
+        max_value        = <span class="number">29</span>,
+        background_color = color,
+        widget        = wibox.widget.graph,
+    }
+ <span class="keyword">end</span></pre>
+    </ul>
 
      <br />
-     <center id=button1377>
-     <a class="show_more_button" onclick="show_extra('1377')">
+     <center id=button1381>
+     <a class="show_more_button" onclick="show_extra('1381')">
       Click to display more
      </a>
      </center>
 
-    <span id=item1377 class="hide_extra">
+    <span id=item1381 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::background_color</code></span>  When the <a href="../widgets/wibox.widget.graph.html#background_color">background_color</a> value changes.</li>
@@ -760,22 +862,38 @@
     <dd>
     Set the maximum value the graph should handle. </p>
 
-<p> If "scale" is also set, the graph never scales up below this value, but it
- automatically scales down to make all data fit.
+
+
+<p><img src="../images/AUTOGEN_wibox_widget_graph_max_value.svg" alt="Usage example"/>
 
 
 
 
 
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example">wibox.widget {
+    max_value = <span class="number">30</span>,
+    widget    = wibox.widget.graph,
+}
+
+wibox.widget {
+    max_value = <span class="number">10</span>,
+    widget    = wibox.widget.graph,
+}
+
+If <span class="string">"scale"</span> is also set, the graph never scales up below this value, but it
+automatically scales down to make all data fit.</pre>
+    </ul>
 
      <br />
-     <center id=button1378>
-     <a class="show_more_button" onclick="show_extra('1378')">
+     <center id=button1382>
+     <a class="show_more_button" onclick="show_extra('1382')">
       Click to display more
      </a>
      </center>
 
-    <span id=item1378 class="hide_extra">
+    <span id=item1382 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::max_value</code></span>  When the <a href="../widgets/wibox.widget.graph.html#max_value">max_value</a> value changes.</li>
@@ -798,22 +916,39 @@
     <dd>
     The minimum value. </p>
 
-<p> Note that the min_value is not supported when used along with the stack
- property.
+
+
+<p><img src="../images/AUTOGEN_wibox_widget_graph_min_value.svg" alt="Usage example"/>
 
 
 
 
 
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example">wibox.widget {
+    max_value = <span class="number">30</span>,
+    widget    = wibox.widget.graph,
+}
+
+wibox.widget {
+    min_value = <span class="number">10</span>,
+    max_value = <span class="number">30</span>,
+    widget    = wibox.widget.graph,
+}
+
+Note that the min_value is <span class="keyword">not</span> supported when used along with the stack
+property.</pre>
+    </ul>
 
      <br />
-     <center id=button1379>
-     <a class="show_more_button" onclick="show_extra('1379')">
+     <center id=button1383>
+     <a class="show_more_button" onclick="show_extra('1383')">
       Click to display more
      </a>
      </center>
 
-    <span id=item1379 class="hide_extra">
+    <span id=item1383 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::min_value</code></span>  When the <a href="../widgets/wibox.widget.graph.html#min_value">min_value</a> value changes.</li>
@@ -834,21 +969,37 @@
     </span>
     </dt>
     <dd>
-    Set the graph to automatically scale its values.  Default is false.
+    Set the graph to automatically scale its values.  Default is false.</p>
+
+
+
+<p><img src="../images/AUTOGEN_wibox_widget_graph_scale1.svg" alt="Usage example"/>
 
 
 
 
 
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example">wibox.widget {
+    scale  = <span class="keyword">false</span>,
+    widget = wibox.widget.graph,
+}
+
+wibox.widget {
+    scale  = <span class="keyword">true</span>,
+    widget = wibox.widget.graph,
+}</pre>
+    </ul>
 
      <br />
-     <center id=button1380>
-     <a class="show_more_button" onclick="show_extra('1380')">
+     <center id=button1384>
+     <a class="show_more_button" onclick="show_extra('1384')">
       Click to display more
      </a>
      </center>
 
-    <span id=item1380 class="hide_extra">
+    <span id=item1384 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::scale</code></span>  When the <a href="../widgets/wibox.widget.graph.html#scale">scale</a> value changes.</li>
@@ -883,25 +1034,26 @@
 
     <h3>Usage:</h3>
     <ul>
-        <pre class="example">wibox.widget {
-    max_value = <span class="number">29</span>,
-    step_width = <span class="number">3</span>,
-    step_spacing = <span class="number">1</span>,
-    step_shape = <span class="keyword">function</span>(cr, width, height)
-        gears.shape.rounded_rect(cr, width, height, <span class="number">2</span>)
-    <span class="keyword">end</span>,
-    widget = wibox.widget.graph
-}</pre>
+        <pre class="example"><span class="keyword">for</span> _, width <span class="keyword">in</span> <span class="global">ipairs</span> {<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">10</span>} <span class="keyword">do</span>
+    wibox.widget {
+        step_width   = width,
+        step_spacing = <span class="number">1</span>,
+        step_shape   = <span class="keyword">function</span>(cr, s_width, height)
+            gears.shape.rounded_rect(cr, s_width, height, <span class="number">2</span>)
+        <span class="keyword">end</span>,
+        widget       = wibox.widget.graph,
+    }
+ <span class="keyword">end</span></pre>
     </ul>
 
      <br />
-     <center id=button1381>
-     <a class="show_more_button" onclick="show_extra('1381')">
+     <center id=button1385>
+     <a class="show_more_button" onclick="show_extra('1385')">
       Click to display more
      </a>
      </center>
 
-    <span id=item1381 class="hide_extra">
+    <span id=item1385 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::step_width</code></span>  When the <a href="../widgets/wibox.widget.graph.html#step_width">step_width</a> value changes.</li>
@@ -924,21 +1076,35 @@
     <dd>
     Set the spacing between the steps. </p>
 
-<p> Note that it isn't supported when used along with stacked graphs.
+<p> Note that it isn't supported when used along with stacked graphs.</p>
+
+
+
+<p><img src="../images/AUTOGEN_wibox_widget_graph_step_spacing.svg" alt="Usage example"/>
 
 
 
 
 
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example"><span class="keyword">for</span> _, spacing <span class="keyword">in</span> <span class="global">ipairs</span> {<span class="number">0</span>, <span class="number">2</span>, <span class="number">4</span>, <span class="number">10</span>} <span class="keyword">do</span>
+    wibox.widget {
+        max_value    = <span class="number">29</span>,
+        step_spacing = spacing,
+        widget       = wibox.widget.graph,
+    }
+ <span class="keyword">end</span></pre>
+    </ul>
 
      <br />
-     <center id=button1382>
-     <a class="show_more_button" onclick="show_extra('1382')">
+     <center id=button1386>
+     <a class="show_more_button" onclick="show_extra('1386')">
       Click to display more
      </a>
      </center>
 
-    <span id=item1382 class="hide_extra">
+    <span id=item1386 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::step_spacing</code></span>  When the <a href="../widgets/wibox.widget.graph.html#step_spacing">step_spacing</a> value changes.</li>
@@ -959,7 +1125,11 @@
     </span>
     </dt>
     <dd>
-    The step shape.
+    The step shape. </p>
+
+
+
+<p><img src="../images/AUTOGEN_wibox_widget_graph_step_shape.svg" alt="Usage example"/>
 
 
 
@@ -969,15 +1139,33 @@
          <a href="../theme_related_libraries/gears.shape.html#">gears.shape</a>
     </ul>
 
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example"><span class="keyword">local</span> shapes = {
+    gears.shape.squircle,
+    gears.shape.octogon,
+    gears.shape.rounded_bar,
+    gears.shape.arrow
+}
+
+<span class="keyword">for</span> _, shape <span class="keyword">in</span> <span class="global">ipairs</span>(shapes) <span class="keyword">do</span>
+    wibox.widget {
+        step_width   = <span class="number">5</span>,
+        step_spacing = <span class="number">1</span>,
+        step_shape   = shape,
+        widget       = wibox.widget.graph,
+    }
+ <span class="keyword">end</span></pre>
+    </ul>
 
      <br />
-     <center id=button1383>
-     <a class="show_more_button" onclick="show_extra('1383')">
+     <center id=button1387>
+     <a class="show_more_button" onclick="show_extra('1387')">
       Click to display more
      </a>
      </center>
 
-    <span id=item1383 class="hide_extra">
+    <span id=item1387 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::step_shape</code></span>  When the <a href="../widgets/wibox.widget.graph.html#step_shape">step_shape</a> value changes.</li>
@@ -998,21 +1186,40 @@
     </span>
     </dt>
     <dd>
-    Set the graph to draw stacks.  Default is false.
+    Set the graph to draw stacks.  Default is false.</p>
+
+
+
+<p><img src="../images/AUTOGEN_wibox_widget_graph_stacked.svg" alt="Usage example"/>
 
 
 
 
 
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example"><span class="keyword">local</span> colors = {
+    <span class="string">'#ff0000'</span>,
+    <span class="string">'#00ff00'</span>,
+    <span class="string">'#0000ff'</span>
+}
+
+wibox.widget {
+    max_value     = <span class="number">29</span>,
+    stack         = <span class="keyword">true</span>,
+    stack_colors  = colors,
+    widget        = wibox.widget.graph,
+}</pre>
+    </ul>
 
      <br />
-     <center id=button1384>
-     <a class="show_more_button" onclick="show_extra('1384')">
+     <center id=button1388>
+     <a class="show_more_button" onclick="show_extra('1388')">
       Click to display more
      </a>
      </center>
 
-    <span id=item1384 class="hide_extra">
+    <span id=item1388 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::stack</code></span>  When the <a href="../widgets/wibox.widget.graph.html#stack">stack</a> value changes.</li>
@@ -1047,7 +1254,7 @@
 
 
 
-    <span id=item1385 class="hide_extra">
+    <span id=item1389 class="hide_extra">
     </span>
 
 </dd>
@@ -1075,13 +1282,13 @@
 
 
      <br />
-     <center id=button1386>
-     <a class="show_more_button" onclick="show_extra('1386')">
+     <center id=button1390>
+     <a class="show_more_button" onclick="show_extra('1390')">
       Click to display more
      </a>
      </center>
 
-    <span id=item1386 class="hide_extra">
+    <span id=item1390 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::height</code></span>  When the <a href="../widgets/wibox.widget.graph.html#height">height</a> value changes.</li>
@@ -1116,13 +1323,13 @@
 
 
      <br />
-     <center id=button1387>
-     <a class="show_more_button" onclick="show_extra('1387')">
+     <center id=button1391>
+     <a class="show_more_button" onclick="show_extra('1391')">
       Click to display more
      </a>
      </center>
 
-    <span id=item1387 class="hide_extra">
+    <span id=item1391 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::width</code></span>  When the <a href="../widgets/wibox.widget.graph.html#width">width</a> value changes.</li>
@@ -1158,7 +1365,7 @@
 
 
 
-    <span id=item1388 class="hide_extra">
+    <span id=item1392 class="hide_extra">
     </span>
 
 </dd>
@@ -1189,7 +1396,7 @@
 
 
 
-    <span id=item1389 class="hide_extra">
+    <span id=item1393 class="hide_extra">
     </span>
 
 </dd>
@@ -1217,7 +1424,7 @@
 
 
 
-    <span id=item1390 class="hide_extra">
+    <span id=item1394 class="hide_extra">
     </span>
 
 </dd>
@@ -1245,7 +1452,7 @@
 
 
 
-    <span id=item1391 class="hide_extra">
+    <span id=item1395 class="hide_extra">
     </span>
 
 </dd>
@@ -1274,7 +1481,7 @@
 
 
 
-    <span id=item1392 class="hide_extra">
+    <span id=item1396 class="hide_extra">
     </span>
 
 </dd>
@@ -1295,7 +1502,7 @@
 
 
 
-    <span id=item1393 class="hide_extra">
+    <span id=item1397 class="hide_extra">
     </span>
 
 </dd>
@@ -1322,7 +1529,7 @@
 
 
 
-    <span id=item1394 class="hide_extra">
+    <span id=item1398 class="hide_extra">
     </span>
 
 </dd>
@@ -1358,7 +1565,7 @@
 
 
 
-    <span id=item1395 class="hide_extra">
+    <span id=item1399 class="hide_extra">
     </span>
 
 </dd>
@@ -1378,7 +1585,7 @@
 
 
 
-    <span id=item1396 class="hide_extra">
+    <span id=item1400 class="hide_extra">
     </span>
 
 </dd>
@@ -1406,7 +1613,7 @@
 
 
 
-    <span id=item1397 class="hide_extra">
+    <span id=item1401 class="hide_extra">
     </span>
 
 </dd>
@@ -1434,7 +1641,7 @@
 
 
 
-    <span id=item1398 class="hide_extra">
+    <span id=item1402 class="hide_extra">
     </span>
 
 </dd>
@@ -1469,7 +1676,7 @@
 
 
 
-    <span id=item1399 class="hide_extra">
+    <span id=item1403 class="hide_extra">
     </span>
 
 </dd>
@@ -1502,7 +1709,7 @@
 
 
 
-    <span id=item1400 class="hide_extra">
+    <span id=item1404 class="hide_extra">
     </span>
 
 </dd>
@@ -1534,7 +1741,7 @@
 
 
 
-    <span id=item1401 class="hide_extra">
+    <span id=item1405 class="hide_extra">
     </span>
 
 </dd>
@@ -1573,7 +1780,7 @@
 
 
 
-    <span id=item1402 class="hide_extra">
+    <span id=item1406 class="hide_extra">
     </span>
 
 </dd>
@@ -1604,7 +1811,7 @@
 
 
 
-    <span id=item1403 class="hide_extra">
+    <span id=item1407 class="hide_extra">
     </span>
 
 </dd>
@@ -1631,7 +1838,7 @@
 
 
 
-    <span id=item1404 class="hide_extra">
+    <span id=item1408 class="hide_extra">
     </span>
 
 </dd>
@@ -1728,7 +1935,7 @@
 
 
 
-    <span id=item1405 class="hide_extra">
+    <span id=item1409 class="hide_extra">
     </span>
 
 </dd>
@@ -1825,7 +2032,7 @@
 
 
 
-    <span id=item1406 class="hide_extra">
+    <span id=item1410 class="hide_extra">
     </span>
 
 </dd>
@@ -1904,7 +2111,7 @@
 
 
 
-    <span id=item1407 class="hide_extra">
+    <span id=item1411 class="hide_extra">
     </span>
 
 </dd>
@@ -1983,7 +2190,7 @@
 
 
 
-    <span id=item1408 class="hide_extra">
+    <span id=item1412 class="hide_extra">
     </span>
 
 </dd>
@@ -2007,7 +2214,7 @@
 
 
 
-    <span id=item1409 class="hide_extra">
+    <span id=item1413 class="hide_extra">
     </span>
 
 </dd>
@@ -2027,7 +2234,7 @@
 
 
 
-    <span id=item1410 class="hide_extra">
+    <span id=item1414 class="hide_extra">
     </span>
 
 </dd>
@@ -2047,7 +2254,7 @@
 
 
 
-    <span id=item1411 class="hide_extra">
+    <span id=item1415 class="hide_extra">
     </span>
 
 </dd>
@@ -2058,7 +2265,7 @@
 </div> <!-- id="main" -->
 <div id="about">
 <i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.6</a></i>
-<i style="float:right;">Last updated 2021-03-06 17:23:43 </i>
+<i style="float:right;">Last updated 2021-03-29 13:33:10 </i>
 </div> <!-- id="about" -->
 </div> <!-- id="container" -->
 </body>

@@ -206,12 +206,14 @@
   <li><a href="../documentation/00-authors.md.html">Authors</a></li>
   <li><a href="../documentation/01-readme.md.html">Readme</a></li>
   <li><a href="../documentation/02-contributing.md.html">Contributing</a></li>
-  <li><a href="../documentation/03-declarative-layout.md.html">The AwesomeWM widget system</a></li>
+  <li><a href="../documentation/03-declarative-layout.md.html">The Widget system</a></li>
   <li><a href="../documentation/04-new-widgets.md.html">Creating new widget</a></li>
   <li><a href="../documentation/05-awesomerc.md.html">Default configuration file documentation</a></li>
   <li><a href="../documentation/06-appearance.md.html">Change Awesome appearance</a></li>
   <li><a href="../documentation/07-my-first-awesome.md.html">My first Awesome</a></li>
+  <li><a href="../documentation/08-client-layout-system.md.html">The AwesomeWM client layout system</a></li>
   <li><a href="../documentation/09-options.md.html">Startup options</a></li>
+  <li><a href="../documentation/10-building-and-testing.md.html">Building and Testing</a></li>
   <li><a href="../documentation/16-using-cairo.md.html">Using Cairo and LGI</a></li>
   <li><a href="../documentation/17-porting-tips.md.html">Tips for upgrading your configuration</a></li>
   <li><a href="../documentation/89-NEWS.md.html">NEWS</a></li>
@@ -300,6 +302,60 @@ top_titlebar : setup {
       </td>
       <td colspan="2" class="summary">Get a client's titlebar.</td>
     </tr>
+    <tr>
+      <td class="name" >
+        <a href="#awful.titlebar.widget.titlewidget"><span class='function_modname'>awful.titlebar.</span>widget.titlewidget <span class='function_args'> <b>(</b>c<b>)</b></span></a>
+      </td>
+      <td colspan="2" class="summary">Create a new titlewidget.</td>
+    </tr>
+    <tr>
+      <td class="name" >
+        <a href="#awful.titlebar.widget.iconwidget"><span class='function_modname'>awful.titlebar.</span>widget.iconwidget <span class='function_args'> <b>(</b>c<b>)</b></span></a>
+      </td>
+      <td colspan="2" class="summary">Create a new icon widget.</td>
+    </tr>
+    <tr>
+      <td class="name" >
+        <a href="#awful.titlebar.widget.button"><span class='function_modname'>awful.titlebar.</span>widget.button <span class='function_args'> <b>(</b>c, name, selector, action<b>)</b></span></a>
+      </td>
+      <td colspan="2" class="summary">Create a new button widget.</td>
+    </tr>
+    <tr>
+      <td class="name" >
+        <a href="#awful.titlebar.widget.floatingbutton"><span class='function_modname'>awful.titlebar.</span>widget.floatingbutton <span class='function_args'> <b>(</b>c<b>)</b></span></a>
+      </td>
+      <td colspan="2" class="summary">Create a new float button for a client.</td>
+    </tr>
+    <tr>
+      <td class="name" >
+        <a href="#awful.titlebar.widget.maximizedbutton"><span class='function_modname'>awful.titlebar.</span>widget.maximizedbutton <span class='function_args'> <b>(</b>c<b>)</b></span></a>
+      </td>
+      <td colspan="2" class="summary">Create a new maximize button for a client.</td>
+    </tr>
+    <tr>
+      <td class="name" >
+        <a href="#awful.titlebar.widget.minimizebutton"><span class='function_modname'>awful.titlebar.</span>widget.minimizebutton <span class='function_args'> <b>(</b>c<b>)</b></span></a>
+      </td>
+      <td colspan="2" class="summary">Create a new minimize button for a client.</td>
+    </tr>
+    <tr>
+      <td class="name" >
+        <a href="#awful.titlebar.widget.closebutton"><span class='function_modname'>awful.titlebar.</span>widget.closebutton <span class='function_args'> <b>(</b>c<b>)</b></span></a>
+      </td>
+      <td colspan="2" class="summary">Create a new closing button for a client.</td>
+    </tr>
+    <tr>
+      <td class="name" >
+        <a href="#awful.titlebar.widget.ontopbutton"><span class='function_modname'>awful.titlebar.</span>widget.ontopbutton <span class='function_args'> <b>(</b>c<b>)</b></span></a>
+      </td>
+      <td colspan="2" class="summary">Create a new ontop button for a client.</td>
+    </tr>
+    <tr>
+      <td class="name" >
+        <a href="#awful.titlebar.widget.stickybutton"><span class='function_modname'>awful.titlebar.</span>widget.stickybutton <span class='function_args'> <b>(</b>c<b>)</b></span></a>
+      </td>
+      <td colspan="2" class="summary">Create a new sticky button for a client.</td>
+    </tr>
 </table>
 <h2><a href="#Static_module_functions">Static module functions</a></h2>
 <table class="function_list">
@@ -323,69 +379,6 @@ top_titlebar : setup {
         <span class="summarytype"></span>
       </td>
       <td colspan="2" class="summary">Toggle a client's titlebar, hiding it if it is visible, otherwise showing it.</td>
-    </tr>
-    <tr>
-      <td class="name" >
-        <a href="#awful.titlebar.widget.titlewidget"><span class='function_modname'>awful.titlebar.</span>widget.titlewidget <span class='function_args'> <b>(</b>c<b>)</b></span></a>
-        <span class="summarytype"><span class='summary_type'> -&gt;&nbsp;()</span></span>
-      </td>
-      <td colspan="2" class="summary">Create a new titlewidget.</td>
-    </tr>
-    <tr>
-      <td class="name" >
-        <a href="#awful.titlebar.widget.iconwidget"><span class='function_modname'>awful.titlebar.</span>widget.iconwidget <span class='function_args'> <b>(</b>c<b>)</b></span></a>
-        <span class="summarytype"><span class='summary_type'> -&gt;&nbsp;()</span></span>
-      </td>
-      <td colspan="2" class="summary">Create a new icon widget.</td>
-    </tr>
-    <tr>
-      <td class="name" >
-        <a href="#awful.titlebar.widget.button"><span class='function_modname'>awful.titlebar.</span>widget.button <span class='function_args'> <b>(</b>c, name, selector, action<b>)</b></span></a>
-        <span class="summarytype"><span class='summary_type'> -&gt;&nbsp;()</span></span>
-      </td>
-      <td colspan="2" class="summary">Create a new button widget.</td>
-    </tr>
-    <tr>
-      <td class="name" >
-        <a href="#awful.titlebar.widget.floatingbutton"><span class='function_modname'>awful.titlebar.</span>widget.floatingbutton <span class='function_args'> <b>(</b>c<b>)</b></span></a>
-        <span class="summarytype"></span>
-      </td>
-      <td colspan="2" class="summary">Create a new float button for a client.</td>
-    </tr>
-    <tr>
-      <td class="name" >
-        <a href="#awful.titlebar.widget.maximizedbutton"><span class='function_modname'>awful.titlebar.</span>widget.maximizedbutton <span class='function_args'> <b>(</b>c<b>)</b></span></a>
-        <span class="summarytype"></span>
-      </td>
-      <td colspan="2" class="summary">Create a new maximize button for a client.</td>
-    </tr>
-    <tr>
-      <td class="name" >
-        <a href="#awful.titlebar.widget.minimizebutton"><span class='function_modname'>awful.titlebar.</span>widget.minimizebutton <span class='function_args'> <b>(</b>c<b>)</b></span></a>
-        <span class="summarytype"></span>
-      </td>
-      <td colspan="2" class="summary">Create a new minimize button for a client.</td>
-    </tr>
-    <tr>
-      <td class="name" >
-        <a href="#awful.titlebar.widget.closebutton"><span class='function_modname'>awful.titlebar.</span>widget.closebutton <span class='function_args'> <b>(</b>c<b>)</b></span></a>
-        <span class="summarytype"></span>
-      </td>
-      <td colspan="2" class="summary">Create a new closing button for a client.</td>
-    </tr>
-    <tr>
-      <td class="name" >
-        <a href="#awful.titlebar.widget.ontopbutton"><span class='function_modname'>awful.titlebar.</span>widget.ontopbutton <span class='function_args'> <b>(</b>c<b>)</b></span></a>
-        <span class="summarytype"></span>
-      </td>
-      <td colspan="2" class="summary">Create a new ontop button for a client.</td>
-    </tr>
-    <tr>
-      <td class="name" >
-        <a href="#awful.titlebar.widget.stickybutton"><span class='function_modname'>awful.titlebar.</span>widget.stickybutton <span class='function_args'> <b>(</b>c<b>)</b></span></a>
-        <span class="summarytype"></span>
-      </td>
-      <td colspan="2" class="summary">Create a new sticky button for a client.</td>
     </tr>
 </table>
 <h2><a href="#Object_methods">Object methods </a></h2>
@@ -892,7 +885,268 @@ top_titlebar : setup {
 
 
 
-    <span id=item2347 class="hide_extra">
+    <span id=item2351 class="hide_extra">
+    </span>
+
+</dd>
+    <dt>
+    <a name = "awful.titlebar.widget.titlewidget"></a>
+    <strong><span class='function_modname'>awful.titlebar.</span>widget.titlewidget <span class='function_args'> <b>(</b>c<b>)</b></span></strong>
+    <span class="baseclass" >
+    </span>
+    </dt>
+    <dd>
+    Create a new titlewidget.  A title widget displays the name of a client.
+ Please note that this returns a textbox and all of textbox' API is available.
+ This way, you can e.g. modify the font that is used.
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">c</span>
+         The client for which a titlewidget should be created.
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        The title widget.
+    </ol>
+
+
+
+
+
+    <span id=item2352 class="hide_extra">
+    </span>
+
+</dd>
+    <dt>
+    <a name = "awful.titlebar.widget.iconwidget"></a>
+    <strong><span class='function_modname'>awful.titlebar.</span>widget.iconwidget <span class='function_args'> <b>(</b>c<b>)</b></span></strong>
+    <span class="baseclass" >
+    </span>
+    </dt>
+    <dd>
+    Create a new icon widget.  An icon widget displays the icon of a client.
+ Please note that this returns an imagebox and all of the imagebox' API is
+ available. This way, you can e.g. disallow resizes.
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">c</span>
+         The client for which an icon widget should be created.
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        The icon widget.
+    </ol>
+
+
+
+
+
+    <span id=item2353 class="hide_extra">
+    </span>
+
+</dd>
+    <dt>
+    <a name = "awful.titlebar.widget.button"></a>
+    <strong><span class='function_modname'>awful.titlebar.</span>widget.button <span class='function_args'> <b>(</b>c, name, selector, action<b>)</b></span></strong>
+    <span class="baseclass" >
+    </span>
+    </dt>
+    <dd>
+    Create a new button widget.  A button widget displays an image and reacts to
+ mouse clicks. Please note that the caller has to make sure that this widget
+ gets redrawn when needed by calling the returned widget's update() function.
+ The selector function should return a value describing a state. If the value
+ is a boolean, either "active" or "inactive" are used. The actual image is
+ then found in the theme as "titlebar<em>[name]</em>button<em>[normal/focus]</em>[state]".
+ If that value does not exist, the focused state is ignored for the next try.
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">c</span>
+         The client for which a button is created.
+        </li>
+        <li><span class="parameter">name</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+         Name of the button, used for accessing the theme and
+   in the tooltip.
+        </li>
+        <li><span class="parameter">selector</span>
+         A function that selects the image that should be displayed.
+        </li>
+        <li><span class="parameter">action</span>
+         Function that is called when the button is clicked.
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        The widget
+    </ol>
+
+
+
+
+
+    <span id=item2354 class="hide_extra">
+    </span>
+
+</dd>
+    <dt>
+    <a name = "awful.titlebar.widget.floatingbutton"></a>
+    <strong><span class='function_modname'>awful.titlebar.</span>widget.floatingbutton <span class='function_args'> <b>(</b>c<b>)</b></span></strong>
+    <span class="baseclass" >
+    </span>
+    </dt>
+    <dd>
+    Create a new float button for a client.
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">c</span>
+         The client for which the button is wanted.
+        </li>
+    </ul>
+
+
+
+
+
+
+    <span id=item2355 class="hide_extra">
+    </span>
+
+</dd>
+    <dt>
+    <a name = "awful.titlebar.widget.maximizedbutton"></a>
+    <strong><span class='function_modname'>awful.titlebar.</span>widget.maximizedbutton <span class='function_args'> <b>(</b>c<b>)</b></span></strong>
+    <span class="baseclass" >
+    </span>
+    </dt>
+    <dd>
+    Create a new maximize button for a client.
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">c</span>
+         The client for which the button is wanted.
+        </li>
+    </ul>
+
+
+
+
+
+
+    <span id=item2356 class="hide_extra">
+    </span>
+
+</dd>
+    <dt>
+    <a name = "awful.titlebar.widget.minimizebutton"></a>
+    <strong><span class='function_modname'>awful.titlebar.</span>widget.minimizebutton <span class='function_args'> <b>(</b>c<b>)</b></span></strong>
+    <span class="baseclass" >
+    </span>
+    </dt>
+    <dd>
+    Create a new minimize button for a client.
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">c</span>
+         The client for which the button is wanted.
+        </li>
+    </ul>
+
+
+
+
+
+
+    <span id=item2357 class="hide_extra">
+    </span>
+
+</dd>
+    <dt>
+    <a name = "awful.titlebar.widget.closebutton"></a>
+    <strong><span class='function_modname'>awful.titlebar.</span>widget.closebutton <span class='function_args'> <b>(</b>c<b>)</b></span></strong>
+    <span class="baseclass" >
+    </span>
+    </dt>
+    <dd>
+    Create a new closing button for a client.
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">c</span>
+         The client for which the button is wanted.
+        </li>
+    </ul>
+
+
+
+
+
+
+    <span id=item2358 class="hide_extra">
+    </span>
+
+</dd>
+    <dt>
+    <a name = "awful.titlebar.widget.ontopbutton"></a>
+    <strong><span class='function_modname'>awful.titlebar.</span>widget.ontopbutton <span class='function_args'> <b>(</b>c<b>)</b></span></strong>
+    <span class="baseclass" >
+    </span>
+    </dt>
+    <dd>
+    Create a new ontop button for a client.
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">c</span>
+         The client for which the button is wanted.
+        </li>
+    </ul>
+
+
+
+
+
+
+    <span id=item2359 class="hide_extra">
+    </span>
+
+</dd>
+    <dt>
+    <a name = "awful.titlebar.widget.stickybutton"></a>
+    <strong><span class='function_modname'>awful.titlebar.</span>widget.stickybutton <span class='function_args'> <b>(</b>c<b>)</b></span></strong>
+    <span class="baseclass" >
+    </span>
+    </dt>
+    <dd>
+    Create a new sticky button for a client.
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">c</span>
+         The client for which the button is wanted.
+        </li>
+    </ul>
+
+
+
+
+
+
+    <span id=item2360 class="hide_extra">
     </span>
 
 </dd>
@@ -928,13 +1182,13 @@ top_titlebar : setup {
 
 
      <br />
-     <center id=button2348>
-     <a class="show_more_button" onclick="show_extra('2348')">
+     <center id=button2361>
+     <a class="show_more_button" onclick="show_extra('2361')">
       Click to display more
      </a>
      </center>
 
-    <span id=item2348 class="hide_extra">
+    <span id=item2361 class="hide_extra">
      <h3>Requested actions or permissions:</h3>
      <table class='widget_list' border=1>
          <tr style='font-weight: bold;'>
@@ -976,7 +1230,7 @@ top_titlebar : setup {
 
 
 
-    <span id=item2349 class="hide_extra">
+    <span id=item2362 class="hide_extra">
     </span>
 
 </dd>
@@ -1008,13 +1262,13 @@ top_titlebar : setup {
 
 
      <br />
-     <center id=button2350>
-     <a class="show_more_button" onclick="show_extra('2350')">
+     <center id=button2363>
+     <a class="show_more_button" onclick="show_extra('2363')">
       Click to display more
      </a>
      </center>
 
-    <span id=item2350 class="hide_extra">
+    <span id=item2363 class="hide_extra">
      <h3>Requested actions or permissions:</h3>
      <table class='widget_list' border=1>
          <tr style='font-weight: bold;'>
@@ -1026,276 +1280,6 @@ top_titlebar : setup {
          </tr>
           <tr><td>client</td><td>titlebars</td><td>toggle</td><td>granted</td><td>Called when <a href="../popups_and_bars/awful.titlebar.html#toggle">awful.titlebar.toggle</a> is called.</td></tr>
      </table>
-    </span>
-
-</dd>
-    <dt>
-    <a name = "awful.titlebar.widget.titlewidget"></a>
-    <strong><span class='function_modname'>awful.titlebar.</span>widget.titlewidget <span class='function_args'> <b>(</b>c<b>)</b></span></strong>
-    <span class="proptype"><span class='summary_type'> -&gt;&nbsp;()</span></span>
-    <span class="baseclass" >
-    </span>
-    </dt>
-    <dd>
-    Create a new titlewidget.  A title widget displays the name of a client.
- Please note that this returns a textbox and all of textbox' API is available.
- This way, you can e.g. modify the font that is used.
-
-    <h3>Parameters:</h3>
-    <ul>
-        <li><span class="parameter">c</span>
-         The client for which a titlewidget should be created.
-        </li>
-    </ul>
-
-    <h3>Returns:</h3>
-    <ol>
-
-        The title widget.
-    </ol>
-
-
-
-
-
-    <span id=item2351 class="hide_extra">
-    </span>
-
-</dd>
-    <dt>
-    <a name = "awful.titlebar.widget.iconwidget"></a>
-    <strong><span class='function_modname'>awful.titlebar.</span>widget.iconwidget <span class='function_args'> <b>(</b>c<b>)</b></span></strong>
-    <span class="proptype"><span class='summary_type'> -&gt;&nbsp;()</span></span>
-    <span class="baseclass" >
-    </span>
-    </dt>
-    <dd>
-    Create a new icon widget.  An icon widget displays the icon of a client.
- Please note that this returns an imagebox and all of the imagebox' API is
- available. This way, you can e.g. disallow resizes.
-
-    <h3>Parameters:</h3>
-    <ul>
-        <li><span class="parameter">c</span>
-         The client for which an icon widget should be created.
-        </li>
-    </ul>
-
-    <h3>Returns:</h3>
-    <ol>
-
-        The icon widget.
-    </ol>
-
-
-
-
-
-    <span id=item2352 class="hide_extra">
-    </span>
-
-</dd>
-    <dt>
-    <a name = "awful.titlebar.widget.button"></a>
-    <strong><span class='function_modname'>awful.titlebar.</span>widget.button <span class='function_args'> <b>(</b>c, name, selector, action<b>)</b></span></strong>
-    <span class="proptype"><span class='summary_type'> -&gt;&nbsp;()</span></span>
-    <span class="baseclass" >
-    </span>
-    </dt>
-    <dd>
-    Create a new button widget.  A button widget displays an image and reacts to
- mouse clicks. Please note that the caller has to make sure that this widget
- gets redrawn when needed by calling the returned widget's update() function.
- The selector function should return a value describing a state. If the value
- is a boolean, either "active" or "inactive" are used. The actual image is
- then found in the theme as "titlebar<em>[name]</em>button<em>[normal/focus]</em>[state]".
- If that value does not exist, the focused state is ignored for the next try.
-
-    <h3>Parameters:</h3>
-    <ul>
-        <li><span class="parameter">c</span>
-         The client for which a button is created.
-        </li>
-        <li><span class="parameter">name</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
-         Name of the button, used for accessing the theme and
-   in the tooltip.
-        </li>
-        <li><span class="parameter">selector</span>
-         A function that selects the image that should be displayed.
-        </li>
-        <li><span class="parameter">action</span>
-         Function that is called when the button is clicked.
-        </li>
-    </ul>
-
-    <h3>Returns:</h3>
-    <ol>
-
-        The widget
-    </ol>
-
-
-
-
-
-    <span id=item2353 class="hide_extra">
-    </span>
-
-</dd>
-    <dt>
-    <a name = "awful.titlebar.widget.floatingbutton"></a>
-    <strong><span class='function_modname'>awful.titlebar.</span>widget.floatingbutton <span class='function_args'> <b>(</b>c<b>)</b></span></strong>
-    <span class="proptype"></span>
-    <span class="baseclass" >
-    </span>
-    </dt>
-    <dd>
-    Create a new float button for a client.
-
-    <h3>Parameters:</h3>
-    <ul>
-        <li><span class="parameter">c</span>
-         The client for which the button is wanted.
-        </li>
-    </ul>
-
-
-
-
-
-
-    <span id=item2354 class="hide_extra">
-    </span>
-
-</dd>
-    <dt>
-    <a name = "awful.titlebar.widget.maximizedbutton"></a>
-    <strong><span class='function_modname'>awful.titlebar.</span>widget.maximizedbutton <span class='function_args'> <b>(</b>c<b>)</b></span></strong>
-    <span class="proptype"></span>
-    <span class="baseclass" >
-    </span>
-    </dt>
-    <dd>
-    Create a new maximize button for a client.
-
-    <h3>Parameters:</h3>
-    <ul>
-        <li><span class="parameter">c</span>
-         The client for which the button is wanted.
-        </li>
-    </ul>
-
-
-
-
-
-
-    <span id=item2355 class="hide_extra">
-    </span>
-
-</dd>
-    <dt>
-    <a name = "awful.titlebar.widget.minimizebutton"></a>
-    <strong><span class='function_modname'>awful.titlebar.</span>widget.minimizebutton <span class='function_args'> <b>(</b>c<b>)</b></span></strong>
-    <span class="proptype"></span>
-    <span class="baseclass" >
-    </span>
-    </dt>
-    <dd>
-    Create a new minimize button for a client.
-
-    <h3>Parameters:</h3>
-    <ul>
-        <li><span class="parameter">c</span>
-         The client for which the button is wanted.
-        </li>
-    </ul>
-
-
-
-
-
-
-    <span id=item2356 class="hide_extra">
-    </span>
-
-</dd>
-    <dt>
-    <a name = "awful.titlebar.widget.closebutton"></a>
-    <strong><span class='function_modname'>awful.titlebar.</span>widget.closebutton <span class='function_args'> <b>(</b>c<b>)</b></span></strong>
-    <span class="proptype"></span>
-    <span class="baseclass" >
-    </span>
-    </dt>
-    <dd>
-    Create a new closing button for a client.
-
-    <h3>Parameters:</h3>
-    <ul>
-        <li><span class="parameter">c</span>
-         The client for which the button is wanted.
-        </li>
-    </ul>
-
-
-
-
-
-
-    <span id=item2357 class="hide_extra">
-    </span>
-
-</dd>
-    <dt>
-    <a name = "awful.titlebar.widget.ontopbutton"></a>
-    <strong><span class='function_modname'>awful.titlebar.</span>widget.ontopbutton <span class='function_args'> <b>(</b>c<b>)</b></span></strong>
-    <span class="proptype"></span>
-    <span class="baseclass" >
-    </span>
-    </dt>
-    <dd>
-    Create a new ontop button for a client.
-
-    <h3>Parameters:</h3>
-    <ul>
-        <li><span class="parameter">c</span>
-         The client for which the button is wanted.
-        </li>
-    </ul>
-
-
-
-
-
-
-    <span id=item2358 class="hide_extra">
-    </span>
-
-</dd>
-    <dt>
-    <a name = "awful.titlebar.widget.stickybutton"></a>
-    <strong><span class='function_modname'>awful.titlebar.</span>widget.stickybutton <span class='function_args'> <b>(</b>c<b>)</b></span></strong>
-    <span class="proptype"></span>
-    <span class="baseclass" >
-    </span>
-    </dt>
-    <dd>
-    Create a new sticky button for a client.
-
-    <h3>Parameters:</h3>
-    <ul>
-        <li><span class="parameter">c</span>
-         The client for which the button is wanted.
-        </li>
-    </ul>
-
-
-
-
-
-
-    <span id=item2359 class="hide_extra">
     </span>
 
 </dd>
@@ -1326,7 +1310,7 @@ top_titlebar : setup {
 
 
 
-    <span id=item2360 class="hide_extra">
+    <span id=item2364 class="hide_extra">
     </span>
 
 </dd>
@@ -1354,7 +1338,7 @@ top_titlebar : setup {
 
 
 
-    <span id=item2361 class="hide_extra">
+    <span id=item2365 class="hide_extra">
     </span>
 
 </dd>
@@ -1378,7 +1362,7 @@ top_titlebar : setup {
 
 
 
-    <span id=item2362 class="hide_extra">
+    <span id=item2366 class="hide_extra">
     </span>
 
 </dd>
@@ -1402,7 +1386,7 @@ top_titlebar : setup {
 
 
 
-    <span id=item2363 class="hide_extra">
+    <span id=item2367 class="hide_extra">
     </span>
 
 </dd>
@@ -1426,7 +1410,7 @@ top_titlebar : setup {
 
 
 
-    <span id=item2364 class="hide_extra">
+    <span id=item2368 class="hide_extra">
     </span>
 
 </dd>
@@ -1450,7 +1434,7 @@ top_titlebar : setup {
 
 
 
-    <span id=item2365 class="hide_extra">
+    <span id=item2369 class="hide_extra">
     </span>
 
 </dd>
@@ -1474,7 +1458,7 @@ top_titlebar : setup {
 
 
 
-    <span id=item2366 class="hide_extra">
+    <span id=item2370 class="hide_extra">
     </span>
 
 </dd>
@@ -1498,7 +1482,7 @@ top_titlebar : setup {
 
 
 
-    <span id=item2367 class="hide_extra">
+    <span id=item2371 class="hide_extra">
     </span>
 
 </dd>
@@ -1522,7 +1506,7 @@ top_titlebar : setup {
 
 
 
-    <span id=item2368 class="hide_extra">
+    <span id=item2372 class="hide_extra">
     </span>
 
 </dd>
@@ -1546,7 +1530,7 @@ top_titlebar : setup {
 
 
 
-    <span id=item2369 class="hide_extra">
+    <span id=item2373 class="hide_extra">
     </span>
 
 </dd>
@@ -1570,7 +1554,7 @@ top_titlebar : setup {
 
 
 
-    <span id=item2370 class="hide_extra">
+    <span id=item2374 class="hide_extra">
     </span>
 
 </dd>
@@ -1594,7 +1578,7 @@ top_titlebar : setup {
 
 
 
-    <span id=item2371 class="hide_extra">
+    <span id=item2375 class="hide_extra">
     </span>
 
 </dd>
@@ -1618,7 +1602,7 @@ top_titlebar : setup {
 
 
 
-    <span id=item2372 class="hide_extra">
+    <span id=item2376 class="hide_extra">
     </span>
 
 </dd>
@@ -1642,7 +1626,7 @@ top_titlebar : setup {
 
 
 
-    <span id=item2373 class="hide_extra">
+    <span id=item2377 class="hide_extra">
     </span>
 
 </dd>
@@ -1666,7 +1650,7 @@ top_titlebar : setup {
 
 
 
-    <span id=item2374 class="hide_extra">
+    <span id=item2378 class="hide_extra">
     </span>
 
 </dd>
@@ -1690,7 +1674,7 @@ top_titlebar : setup {
 
 
 
-    <span id=item2375 class="hide_extra">
+    <span id=item2379 class="hide_extra">
     </span>
 
 </dd>
@@ -1714,7 +1698,7 @@ top_titlebar : setup {
 
 
 
-    <span id=item2376 class="hide_extra">
+    <span id=item2380 class="hide_extra">
     </span>
 
 </dd>
@@ -1738,7 +1722,7 @@ top_titlebar : setup {
 
 
 
-    <span id=item2377 class="hide_extra">
+    <span id=item2381 class="hide_extra">
     </span>
 
 </dd>
@@ -1762,7 +1746,7 @@ top_titlebar : setup {
 
 
 
-    <span id=item2378 class="hide_extra">
+    <span id=item2382 class="hide_extra">
     </span>
 
 </dd>
@@ -1786,7 +1770,7 @@ top_titlebar : setup {
 
 
 
-    <span id=item2379 class="hide_extra">
+    <span id=item2383 class="hide_extra">
     </span>
 
 </dd>
@@ -1810,7 +1794,7 @@ top_titlebar : setup {
 
 
 
-    <span id=item2380 class="hide_extra">
+    <span id=item2384 class="hide_extra">
     </span>
 
 </dd>
@@ -1834,7 +1818,7 @@ top_titlebar : setup {
 
 
 
-    <span id=item2381 class="hide_extra">
+    <span id=item2385 class="hide_extra">
     </span>
 
 </dd>
@@ -1858,7 +1842,7 @@ top_titlebar : setup {
 
 
 
-    <span id=item2382 class="hide_extra">
+    <span id=item2386 class="hide_extra">
     </span>
 
 </dd>
@@ -1882,7 +1866,7 @@ top_titlebar : setup {
 
 
 
-    <span id=item2383 class="hide_extra">
+    <span id=item2387 class="hide_extra">
     </span>
 
 </dd>
@@ -1906,7 +1890,7 @@ top_titlebar : setup {
 
 
 
-    <span id=item2384 class="hide_extra">
+    <span id=item2388 class="hide_extra">
     </span>
 
 </dd>
@@ -1930,7 +1914,7 @@ top_titlebar : setup {
 
 
 
-    <span id=item2385 class="hide_extra">
+    <span id=item2389 class="hide_extra">
     </span>
 
 </dd>
@@ -1954,7 +1938,7 @@ top_titlebar : setup {
 
 
 
-    <span id=item2386 class="hide_extra">
+    <span id=item2390 class="hide_extra">
     </span>
 
 </dd>
@@ -1978,7 +1962,7 @@ top_titlebar : setup {
 
 
 
-    <span id=item2387 class="hide_extra">
+    <span id=item2391 class="hide_extra">
     </span>
 
 </dd>
@@ -2002,7 +1986,7 @@ top_titlebar : setup {
 
 
 
-    <span id=item2388 class="hide_extra">
+    <span id=item2392 class="hide_extra">
     </span>
 
 </dd>
@@ -2026,7 +2010,7 @@ top_titlebar : setup {
 
 
 
-    <span id=item2389 class="hide_extra">
+    <span id=item2393 class="hide_extra">
     </span>
 
 </dd>
@@ -2050,7 +2034,7 @@ top_titlebar : setup {
 
 
 
-    <span id=item2390 class="hide_extra">
+    <span id=item2394 class="hide_extra">
     </span>
 
 </dd>
@@ -2074,7 +2058,7 @@ top_titlebar : setup {
 
 
 
-    <span id=item2391 class="hide_extra">
+    <span id=item2395 class="hide_extra">
     </span>
 
 </dd>
@@ -2098,7 +2082,7 @@ top_titlebar : setup {
 
 
 
-    <span id=item2392 class="hide_extra">
+    <span id=item2396 class="hide_extra">
     </span>
 
 </dd>
@@ -2122,7 +2106,7 @@ top_titlebar : setup {
 
 
 
-    <span id=item2393 class="hide_extra">
+    <span id=item2397 class="hide_extra">
     </span>
 
 </dd>
@@ -2146,7 +2130,7 @@ top_titlebar : setup {
 
 
 
-    <span id=item2394 class="hide_extra">
+    <span id=item2398 class="hide_extra">
     </span>
 
 </dd>
@@ -2170,7 +2154,7 @@ top_titlebar : setup {
 
 
 
-    <span id=item2395 class="hide_extra">
+    <span id=item2399 class="hide_extra">
     </span>
 
 </dd>
@@ -2194,7 +2178,7 @@ top_titlebar : setup {
 
 
 
-    <span id=item2396 class="hide_extra">
+    <span id=item2400 class="hide_extra">
     </span>
 
 </dd>
@@ -2218,7 +2202,7 @@ top_titlebar : setup {
 
 
 
-    <span id=item2397 class="hide_extra">
+    <span id=item2401 class="hide_extra">
     </span>
 
 </dd>
@@ -2242,7 +2226,7 @@ top_titlebar : setup {
 
 
 
-    <span id=item2398 class="hide_extra">
+    <span id=item2402 class="hide_extra">
     </span>
 
 </dd>
@@ -2266,7 +2250,7 @@ top_titlebar : setup {
 
 
 
-    <span id=item2399 class="hide_extra">
+    <span id=item2403 class="hide_extra">
     </span>
 
 </dd>
@@ -2290,7 +2274,7 @@ top_titlebar : setup {
 
 
 
-    <span id=item2400 class="hide_extra">
+    <span id=item2404 class="hide_extra">
     </span>
 
 </dd>
@@ -2314,7 +2298,7 @@ top_titlebar : setup {
 
 
 
-    <span id=item2401 class="hide_extra">
+    <span id=item2405 class="hide_extra">
     </span>
 
 </dd>
@@ -2338,7 +2322,7 @@ top_titlebar : setup {
 
 
 
-    <span id=item2402 class="hide_extra">
+    <span id=item2406 class="hide_extra">
     </span>
 
 </dd>
@@ -2362,7 +2346,7 @@ top_titlebar : setup {
 
 
 
-    <span id=item2403 class="hide_extra">
+    <span id=item2407 class="hide_extra">
     </span>
 
 </dd>
@@ -2386,7 +2370,7 @@ top_titlebar : setup {
 
 
 
-    <span id=item2404 class="hide_extra">
+    <span id=item2408 class="hide_extra">
     </span>
 
 </dd>
@@ -2410,7 +2394,7 @@ top_titlebar : setup {
 
 
 
-    <span id=item2405 class="hide_extra">
+    <span id=item2409 class="hide_extra">
     </span>
 
 </dd>
@@ -2434,7 +2418,7 @@ top_titlebar : setup {
 
 
 
-    <span id=item2406 class="hide_extra">
+    <span id=item2410 class="hide_extra">
     </span>
 
 </dd>
@@ -2458,7 +2442,7 @@ top_titlebar : setup {
 
 
 
-    <span id=item2407 class="hide_extra">
+    <span id=item2411 class="hide_extra">
     </span>
 
 </dd>
@@ -2482,7 +2466,7 @@ top_titlebar : setup {
 
 
 
-    <span id=item2408 class="hide_extra">
+    <span id=item2412 class="hide_extra">
     </span>
 
 </dd>
@@ -2506,7 +2490,7 @@ top_titlebar : setup {
 
 
 
-    <span id=item2409 class="hide_extra">
+    <span id=item2413 class="hide_extra">
     </span>
 
 </dd>
@@ -2530,7 +2514,7 @@ top_titlebar : setup {
 
 
 
-    <span id=item2410 class="hide_extra">
+    <span id=item2414 class="hide_extra">
     </span>
 
 </dd>
@@ -2554,7 +2538,7 @@ top_titlebar : setup {
 
 
 
-    <span id=item2411 class="hide_extra">
+    <span id=item2415 class="hide_extra">
     </span>
 
 </dd>
@@ -2578,7 +2562,7 @@ top_titlebar : setup {
 
 
 
-    <span id=item2412 class="hide_extra">
+    <span id=item2416 class="hide_extra">
     </span>
 
 </dd>
@@ -2602,7 +2586,7 @@ top_titlebar : setup {
 
 
 
-    <span id=item2413 class="hide_extra">
+    <span id=item2417 class="hide_extra">
     </span>
 
 </dd>
@@ -2626,7 +2610,7 @@ top_titlebar : setup {
 
 
 
-    <span id=item2414 class="hide_extra">
+    <span id=item2418 class="hide_extra">
     </span>
 
 </dd>
@@ -2650,7 +2634,7 @@ top_titlebar : setup {
 
 
 
-    <span id=item2415 class="hide_extra">
+    <span id=item2419 class="hide_extra">
     </span>
 
 </dd>
@@ -2674,7 +2658,7 @@ top_titlebar : setup {
 
 
 
-    <span id=item2416 class="hide_extra">
+    <span id=item2420 class="hide_extra">
     </span>
 
 </dd>
@@ -2698,7 +2682,7 @@ top_titlebar : setup {
 
 
 
-    <span id=item2417 class="hide_extra">
+    <span id=item2421 class="hide_extra">
     </span>
 
 </dd>
@@ -2722,7 +2706,7 @@ top_titlebar : setup {
 
 
 
-    <span id=item2418 class="hide_extra">
+    <span id=item2422 class="hide_extra">
     </span>
 
 </dd>
@@ -2746,7 +2730,7 @@ top_titlebar : setup {
 
 
 
-    <span id=item2419 class="hide_extra">
+    <span id=item2423 class="hide_extra">
     </span>
 
 </dd>
@@ -2770,7 +2754,7 @@ top_titlebar : setup {
 
 
 
-    <span id=item2420 class="hide_extra">
+    <span id=item2424 class="hide_extra">
     </span>
 
 </dd>
@@ -2794,7 +2778,7 @@ top_titlebar : setup {
 
 
 
-    <span id=item2421 class="hide_extra">
+    <span id=item2425 class="hide_extra">
     </span>
 
 </dd>
@@ -2818,7 +2802,7 @@ top_titlebar : setup {
 
 
 
-    <span id=item2422 class="hide_extra">
+    <span id=item2426 class="hide_extra">
     </span>
 
 </dd>
@@ -2842,7 +2826,7 @@ top_titlebar : setup {
 
 
 
-    <span id=item2423 class="hide_extra">
+    <span id=item2427 class="hide_extra">
     </span>
 
 </dd>
@@ -2866,7 +2850,7 @@ top_titlebar : setup {
 
 
 
-    <span id=item2424 class="hide_extra">
+    <span id=item2428 class="hide_extra">
     </span>
 
 </dd>
@@ -2890,7 +2874,7 @@ top_titlebar : setup {
 
 
 
-    <span id=item2425 class="hide_extra">
+    <span id=item2429 class="hide_extra">
     </span>
 
 </dd>
@@ -2914,7 +2898,7 @@ top_titlebar : setup {
 
 
 
-    <span id=item2426 class="hide_extra">
+    <span id=item2430 class="hide_extra">
     </span>
 
 </dd>
@@ -2938,7 +2922,7 @@ top_titlebar : setup {
 
 
 
-    <span id=item2427 class="hide_extra">
+    <span id=item2431 class="hide_extra">
     </span>
 
 </dd>
@@ -2962,7 +2946,7 @@ top_titlebar : setup {
 
 
 
-    <span id=item2428 class="hide_extra">
+    <span id=item2432 class="hide_extra">
     </span>
 
 </dd>
@@ -2986,7 +2970,7 @@ top_titlebar : setup {
 
 
 
-    <span id=item2429 class="hide_extra">
+    <span id=item2433 class="hide_extra">
     </span>
 
 </dd>
@@ -3010,7 +2994,7 @@ top_titlebar : setup {
 
 
 
-    <span id=item2430 class="hide_extra">
+    <span id=item2434 class="hide_extra">
     </span>
 
 </dd>
@@ -3034,7 +3018,7 @@ top_titlebar : setup {
 
 
 
-    <span id=item2431 class="hide_extra">
+    <span id=item2435 class="hide_extra">
     </span>
 
 </dd>
@@ -3058,7 +3042,7 @@ top_titlebar : setup {
 
 
 
-    <span id=item2432 class="hide_extra">
+    <span id=item2436 class="hide_extra">
     </span>
 
 </dd>
@@ -3082,7 +3066,7 @@ top_titlebar : setup {
 
 
 
-    <span id=item2433 class="hide_extra">
+    <span id=item2437 class="hide_extra">
     </span>
 
 </dd>
@@ -3106,7 +3090,7 @@ top_titlebar : setup {
 
 
 
-    <span id=item2434 class="hide_extra">
+    <span id=item2438 class="hide_extra">
     </span>
 
 </dd>
@@ -3130,7 +3114,7 @@ top_titlebar : setup {
 
 
 
-    <span id=item2435 class="hide_extra">
+    <span id=item2439 class="hide_extra">
     </span>
 
 </dd>
@@ -3154,7 +3138,7 @@ top_titlebar : setup {
 
 
 
-    <span id=item2436 class="hide_extra">
+    <span id=item2440 class="hide_extra">
     </span>
 
 </dd>
@@ -3178,7 +3162,7 @@ top_titlebar : setup {
 
 
 
-    <span id=item2437 class="hide_extra">
+    <span id=item2441 class="hide_extra">
     </span>
 
 </dd>
@@ -3202,7 +3186,7 @@ top_titlebar : setup {
 
 
 
-    <span id=item2438 class="hide_extra">
+    <span id=item2442 class="hide_extra">
     </span>
 
 </dd>
@@ -3222,7 +3206,7 @@ top_titlebar : setup {
 
 
 
-    <span id=item2439 class="hide_extra">
+    <span id=item2443 class="hide_extra">
     </span>
 
 </dd>
@@ -3233,7 +3217,7 @@ top_titlebar : setup {
 </div> <!-- id="main" -->
 <div id="about">
 <i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.6</a></i>
-<i style="float:right;">Last updated 2021-03-06 17:23:43 </i>
+<i style="float:right;">Last updated 2021-03-29 13:33:10 </i>
 </div> <!-- id="about" -->
 </div> <!-- id="container" -->
 </body>

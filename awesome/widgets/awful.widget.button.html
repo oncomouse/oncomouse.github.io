@@ -205,12 +205,14 @@
   <li><a href="../documentation/00-authors.md.html">Authors</a></li>
   <li><a href="../documentation/01-readme.md.html">Readme</a></li>
   <li><a href="../documentation/02-contributing.md.html">Contributing</a></li>
-  <li><a href="../documentation/03-declarative-layout.md.html">The AwesomeWM widget system</a></li>
+  <li><a href="../documentation/03-declarative-layout.md.html">The Widget system</a></li>
   <li><a href="../documentation/04-new-widgets.md.html">Creating new widget</a></li>
   <li><a href="../documentation/05-awesomerc.md.html">Default configuration file documentation</a></li>
   <li><a href="../documentation/06-appearance.md.html">Change Awesome appearance</a></li>
   <li><a href="../documentation/07-my-first-awesome.md.html">My first Awesome</a></li>
+  <li><a href="../documentation/08-client-layout-system.md.html">The AwesomeWM client layout system</a></li>
   <li><a href="../documentation/09-options.md.html">Startup options</a></li>
+  <li><a href="../documentation/10-building-and-testing.md.html">Building and Testing</a></li>
   <li><a href="../documentation/16-using-cairo.md.html">Using Cairo and LGI</a></li>
   <li><a href="../documentation/17-porting-tips.md.html">Tips for upgrading your configuration</a></li>
   <li><a href="../documentation/89-NEWS.md.html">NEWS</a></li>
@@ -227,11 +229,20 @@
 
 
 
+<p>DOC<em>GEN</em>IMAGE --DOC_HIDE</p>
+
+<p><img src="../images/AUTOGEN_wibox_awidget_defaults_button.svg" alt="Usage example"/></p>
+
+
+
 <pre>
-button.buttons = {
-    awful.button({}, <span class="number">1</span>, <span class="keyword">nil</span>, <span class="keyword">function</span> ()
-        <span class="global">print</span>(<span class="string">"Mouse was clicked"</span>)
-    <span class="keyword">end</span>)
+awful.widget.button {
+    image   = beautiful.awesome_icon,
+    buttons = {
+        awful.button({}, <span class="number">1</span>, <span class="keyword">nil</span>, <span class="keyword">function</span> ()
+            <span class="global">print</span>(<span class="string">'Mouse was clicked'</span>)
+        <span class="keyword">end</span>)
+    }
 }
 </pre>
 
@@ -452,9 +463,17 @@ button.buttons = {
 
     <h3>Parameters:</h3>
     <ul>
-        <li><span class="parameter">args</span>
-         Widget arguments. "image" is the image to display.
+        <li><span class="parameter">args</span> Widget arguments.
+        <ul>
+        <li><span class="parameter">image</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+         "image" is the image to display (mandatory).
         </li>
+        <li><span class="parameter">buttons</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+         The buttons.
+        </li>
+        </li></ul>
     </ul>
 
     <h3>Returns:</h3>
@@ -467,7 +486,7 @@ button.buttons = {
 
 
 
-    <span id=item855 class="hide_extra">
+    <span id=item858 class="hide_extra">
     </span>
 
 </dd>
@@ -499,7 +518,7 @@ button.buttons = {
 
 
 
-    <span id=item856 class="hide_extra">
+    <span id=item859 class="hide_extra">
     </span>
 
 </dd>
@@ -530,7 +549,7 @@ button.buttons = {
 
 
 
-    <span id=item857 class="hide_extra">
+    <span id=item860 class="hide_extra">
     </span>
 
 </dd>
@@ -558,7 +577,7 @@ button.buttons = {
 
 
 
-    <span id=item858 class="hide_extra">
+    <span id=item861 class="hide_extra">
     </span>
 
 </dd>
@@ -586,7 +605,7 @@ button.buttons = {
 
 
 
-    <span id=item859 class="hide_extra">
+    <span id=item862 class="hide_extra">
     </span>
 
 </dd>
@@ -615,7 +634,7 @@ button.buttons = {
 
 
 
-    <span id=item860 class="hide_extra">
+    <span id=item863 class="hide_extra">
     </span>
 
 </dd>
@@ -636,7 +655,7 @@ button.buttons = {
 
 
 
-    <span id=item861 class="hide_extra">
+    <span id=item864 class="hide_extra">
     </span>
 
 </dd>
@@ -663,7 +682,7 @@ button.buttons = {
 
 
 
-    <span id=item862 class="hide_extra">
+    <span id=item865 class="hide_extra">
     </span>
 
 </dd>
@@ -695,7 +714,7 @@ button.buttons = {
 
 
 
-    <span id=item863 class="hide_extra">
+    <span id=item866 class="hide_extra">
     </span>
 
 </dd>
@@ -723,7 +742,7 @@ button.buttons = {
 
 
 
-    <span id=item864 class="hide_extra">
+    <span id=item867 class="hide_extra">
     </span>
 
 </dd>
@@ -758,7 +777,7 @@ button.buttons = {
 
 
 
-    <span id=item865 class="hide_extra">
+    <span id=item868 class="hide_extra">
     </span>
 
 </dd>
@@ -791,7 +810,7 @@ button.buttons = {
 
 
 
-    <span id=item866 class="hide_extra">
+    <span id=item869 class="hide_extra">
     </span>
 
 </dd>
@@ -823,7 +842,7 @@ button.buttons = {
 
 
 
-    <span id=item867 class="hide_extra">
+    <span id=item870 class="hide_extra">
     </span>
 
 </dd>
@@ -862,7 +881,7 @@ button.buttons = {
 
 
 
-    <span id=item868 class="hide_extra">
+    <span id=item871 class="hide_extra">
     </span>
 
 </dd>
@@ -893,7 +912,7 @@ button.buttons = {
 
 
 
-    <span id=item869 class="hide_extra">
+    <span id=item872 class="hide_extra">
     </span>
 
 </dd>
@@ -920,7 +939,7 @@ button.buttons = {
 
 
 
-    <span id=item870 class="hide_extra">
+    <span id=item873 class="hide_extra">
     </span>
 
 </dd>
@@ -1017,7 +1036,7 @@ button.buttons = {
 
 
 
-    <span id=item871 class="hide_extra">
+    <span id=item874 class="hide_extra">
     </span>
 
 </dd>
@@ -1114,7 +1133,7 @@ button.buttons = {
 
 
 
-    <span id=item872 class="hide_extra">
+    <span id=item875 class="hide_extra">
     </span>
 
 </dd>
@@ -1193,7 +1212,7 @@ button.buttons = {
 
 
 
-    <span id=item873 class="hide_extra">
+    <span id=item876 class="hide_extra">
     </span>
 
 </dd>
@@ -1272,7 +1291,7 @@ button.buttons = {
 
 
 
-    <span id=item874 class="hide_extra">
+    <span id=item877 class="hide_extra">
     </span>
 
 </dd>
@@ -1283,7 +1302,7 @@ button.buttons = {
 </div> <!-- id="main" -->
 <div id="about">
 <i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.6</a></i>
-<i style="float:right;">Last updated 2021-03-06 17:23:43 </i>
+<i style="float:right;">Last updated 2021-03-29 13:33:10 </i>
 </div> <!-- id="about" -->
 </div> <!-- id="container" -->
 </body>
