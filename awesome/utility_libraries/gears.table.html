@@ -31,6 +31,8 @@
 <div id="main">
 
 
+
+
 <!-- Menu -->
 
 <div id="navigation">
@@ -246,6 +248,11 @@ for i=1, #res do
 end
 </pre>
     </ul>
+    <div class="extra-header">
+
+
+
+</div>
 
 
 <h2><a href="#Static_module_functions">Static module functions</a></h2>
@@ -298,6 +305,13 @@ end
         <span class="summarytype"><span class='summary_type'> -&gt;&nbsp;table</span></span>
       </td>
       <td colspan="2" class="summary">Get a sorted table with all keys from a table.</td>
+    </tr>
+    <tr>
+      <td class="name" >
+        <a href="#count_keys"><span class='function_modname'>gears.table.</span>count_keys <span class='function_args'> <b>(</b>t<b>)</b></span></a>
+        <span class="summarytype"><span class='summary_type'> -&gt;&nbsp;number</span></span>
+      </td>
+      <td colspan="2" class="summary">Get the number of keys in a table, both integer and string indicies.</td>
     </tr>
     <tr>
       <td class="name" >
@@ -394,7 +408,7 @@ end
 
 
 
-    <span id=item2688 class="hide_extra">
+    <span id=item2093 class="hide_extra">
     </span>
 
 </dd>
@@ -438,7 +452,7 @@ end
 
 
 
-    <span id=item2689 class="hide_extra">
+    <span id=item2094 class="hide_extra">
     </span>
 
 </dd>
@@ -476,7 +490,7 @@ end
 
 
 
-    <span id=item2690 class="hide_extra">
+    <span id=item2095 class="hide_extra">
     </span>
 
 </dd>
@@ -520,7 +534,7 @@ end
 
 
 
-    <span id=item2691 class="hide_extra">
+    <span id=item2096 class="hide_extra">
     </span>
 
 </dd>
@@ -570,7 +584,7 @@ end
 
 
 
-    <span id=item2692 class="hide_extra">
+    <span id=item2097 class="hide_extra">
     </span>
 
 </dd>
@@ -613,7 +627,7 @@ end
 
 
 
-    <span id=item2693 class="hide_extra">
+    <span id=item2098 class="hide_extra">
     </span>
 
 </dd>
@@ -646,7 +660,53 @@ end
 
 
 
-    <span id=item2694 class="hide_extra">
+    <span id=item2099 class="hide_extra">
+    </span>
+
+</dd>
+    <dt>
+    <a name = "count_keys"></a>
+    <strong><span class='function_modname'>gears.table.</span>count_keys <span class='function_args'> <b>(</b>t<b>)</b></span></strong>
+    <span class="proptype"><span class='summary_type'> -&gt;&nbsp;number</span></span>
+    <span class="baseclass" >
+    </span>
+    </dt>
+    <dd>
+    Get the number of keys in a table, both integer and string indicies. </p>
+
+<p> This is functionally equivalent, but faster than <code>#gears.table.keys(t)</code>.</p>
+
+
+
+
+<p><strong>Usage example output</strong>:
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">t</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+         The table for which to count the keys.
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">number</span></span>
+        The number of keys in the table.
+    </ol>
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example"><span class="keyword">local</span> tab = { <span class="number">1</span>, <span class="keyword">nil</span>, <span class="string">'a'</span>, <span class="string">'b'</span>, foo = <span class="string">'bar'</span> }
+<span class="keyword">local</span> count = gears.<span class="global">table</span>.count_keys(tab)
+<span class="global">print</span>(<span class="string">'The table has '</span> .. count .. <span class="string">' keys'</span>)</pre>
+    </ul>
+
+
+    <span id=item2100 class="hide_extra">
     </span>
 
 </dd>
@@ -683,7 +743,7 @@ end
 
 
 
-    <span id=item2695 class="hide_extra">
+    <span id=item2101 class="hide_extra">
     </span>
 
 </dd>
@@ -716,7 +776,7 @@ end
 
 
 
-    <span id=item2696 class="hide_extra">
+    <span id=item2102 class="hide_extra">
     </span>
 
 </dd>
@@ -754,7 +814,7 @@ end
 
 
 
-    <span id=item2697 class="hide_extra">
+    <span id=item2103 class="hide_extra">
     </span>
 
 </dd>
@@ -778,18 +838,19 @@ end
          The input table.
         </li>
         <li><span class="parameter">value</span>
-         A value from the table.
+         The start value. Must be an element of the input table <code>t</code>.
         </li>
         <li><span class="parameter">step_size</span>
             <span class="types"><span class="type">number</span></span>
-         How many element forward (or backward) to pick.
+         The amount to increment the index by.
+   When this is negative, the function will cycle through the table backwards.
          (<em>default</em> 1)
         </li>
         <li><span class="parameter">filter</span>
             <span class="types"><span class="type">function</span></span>
-         An optional function. When it returns
-  <code>false</code>, the element are skipped until a match if found. It takes the value
-  as its sole parameter.
+         An optional filter function. It receives a
+   value from the table as parameter and should return a boolean. If it
+   returns <code>false</code>, the value is skipped and <a href="../utility_libraries/gears.table.html#cycle_value">cycle_value</a> tries the next one.
          (<em>default</em> nil)
         </li>
         <li><span class="parameter">start_at</span>
@@ -802,17 +863,18 @@ end
     <h3>Returns:</h3>
     <ol>
         <li>
-        The value. If no element match, then <code>nil</code> is returned.</li>
+        The next eligible value. If no value matches, <code>nil</code> is returned.</li>
         <li>
            <span class="types"><span class="type">number</span> or <span class="type">nil</span></span>
-        The element (if any) key.</li>
+        If a value is found, this is its index within the input
+   table.</li>
     </ol>
 
 
 
 
 
-    <span id=item2698 class="hide_extra">
+    <span id=item2104 class="hide_extra">
     </span>
 
 </dd>
@@ -861,7 +923,7 @@ end
 
 
 
-    <span id=item2699 class="hide_extra">
+    <span id=item2105 class="hide_extra">
     </span>
 
 </dd>
@@ -898,7 +960,7 @@ end
 
 
 
-    <span id=item2700 class="hide_extra">
+    <span id=item2106 class="hide_extra">
     </span>
 
 </dd>
@@ -973,7 +1035,7 @@ end
     </ul>
 
 
-    <span id=item2701 class="hide_extra">
+    <span id=item2107 class="hide_extra">
     </span>
 
 </dd>
@@ -1015,7 +1077,7 @@ end
 
 
 
-    <span id=item2702 class="hide_extra">
+    <span id=item2108 class="hide_extra">
     </span>
 
 </dd>
@@ -1026,7 +1088,7 @@ end
 </div> <!-- id="main" -->
 <div id="about">
 <i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.6</a></i>
-<i style="float:right;">Last updated 2021-03-29 13:33:10 </i>
+<i style="float:right;">Last updated 2021-04-10 13:22:11 </i>
 </div> <!-- id="about" -->
 </div> <!-- id="container" -->
 </body>

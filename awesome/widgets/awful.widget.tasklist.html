@@ -31,6 +31,8 @@
 <div id="main">
 
 
+
+
 <!-- Menu -->
 
 <div id="navigation">
@@ -451,11 +453,18 @@ awful.popup {
 </pre>
 
 </p>
+    <div class="extra-header">
+
+
+  <div class="extra-header__section">
     <h3>Info:</h3>
     <ul>
-        <li><strong>Copyright</strong>: 2008-2009 Julien Danjou</li>
-        <li><strong>Author</strong>: Julien Danjou &lt;julien@danjou.info&gt;</li>
+            <li><strong>Copyright</strong>: 2008-2009 Julien Danjou</li>
+            <li><strong>Author</strong>: Julien Danjou &lt;julien@danjou.info&gt;</li>
     </ul>
+  </div>
+
+</div>
 
 
 <h2><a href="#Constructors">Constructors</a></h2>
@@ -473,7 +482,7 @@ awful.popup {
       <td class="shortname" ><a href="#children">children</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>table</span></td>
       <td colspan="1" class="summary">Get or set the children elements.</td>
-      <td class="baseclass" >
+      <td class="baseclass" nowrap>
         Inherited from wibox.widget
       </td>
     </tr>
@@ -481,7 +490,7 @@ awful.popup {
       <td class="shortname" ><a href="#all_children">all_children</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>table</span></td>
       <td colspan="1" class="summary">Get all direct and indirect children widgets.</td>
-      <td class="baseclass" >
+      <td class="baseclass" nowrap>
         Inherited from wibox.widget
       </td>
     </tr>
@@ -489,7 +498,7 @@ awful.popup {
       <td class="shortname" ><a href="#forced_height">forced_height</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>number <i>or</i> nil</span></td>
       <td colspan="1" class="summary">Force a widget height.</td>
-      <td class="baseclass" >
+      <td class="baseclass" nowrap>
         Inherited from wibox.widget
       </td>
     </tr>
@@ -497,7 +506,7 @@ awful.popup {
       <td class="shortname" ><a href="#forced_width">forced_width</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>number <i>or</i> nil</span></td>
       <td colspan="1" class="summary">Force a widget width.</td>
-      <td class="baseclass" >
+      <td class="baseclass" nowrap>
         Inherited from wibox.widget
       </td>
     </tr>
@@ -505,7 +514,7 @@ awful.popup {
       <td class="shortname" ><a href="#opacity">opacity</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>number</span></td>
       <td colspan="1" class="summary">The widget opacity (transparency).</td>
-      <td class="baseclass" >
+      <td class="baseclass" nowrap>
         Inherited from wibox.widget
       </td>
     </tr>
@@ -513,7 +522,7 @@ awful.popup {
       <td class="shortname" ><a href="#visible">visible</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>boolean</span></td>
       <td colspan="1" class="summary">The widget visibility.</td>
-      <td class="baseclass" >
+      <td class="baseclass" nowrap>
         Inherited from wibox.widget
       </td>
     </tr>
@@ -521,7 +530,7 @@ awful.popup {
       <td class="shortname" ><a href="#buttons">buttons</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>table</span></td>
       <td colspan="1" class="summary">The widget buttons.</td>
-      <td class="baseclass" >
+      <td class="baseclass" nowrap>
         Inherited from wibox.widget
       </td>
     </tr>
@@ -534,7 +543,7 @@ awful.popup {
         <span class="summarytype"></span>
       </td>
       <td colspan="1" class="summary">Set a declarative widget hierarchy description.</td>
-      <td class="baseclass" >
+      <td class="baseclass" nowrap>
         Inherited from wibox.widget
       </td>
     </tr>
@@ -544,7 +553,7 @@ awful.popup {
         <span class="summarytype"></span>
       </td>
       <td colspan="1" class="summary">Add a new <a href="../input_handling/awful.button.html#">awful.button</a> to this widget.</td>
-      <td class="baseclass" >
+      <td class="baseclass" nowrap>
         Inherited from wibox.widget
       </td>
     </tr>
@@ -555,7 +564,7 @@ awful.popup {
       </td>
       <td colspan="1" class="summary">Emit a signal and ensure all parent widgets in the hierarchies also
  forward the signal.</td>
-      <td class="baseclass" >
+      <td class="baseclass" nowrap>
         Inherited from wibox.widget
       </td>
     </tr>
@@ -565,7 +574,7 @@ awful.popup {
         <span class="summarytype"></span>
       </td>
       <td colspan="1" class="summary">Emit a signal.</td>
-      <td class="baseclass" >
+      <td class="baseclass" nowrap>
         Inherited from gears.object
       </td>
     </tr>
@@ -575,7 +584,7 @@ awful.popup {
         <span class="summarytype"></span>
       </td>
       <td colspan="1" class="summary">Connect to a signal.</td>
-      <td class="baseclass" >
+      <td class="baseclass" nowrap>
         Inherited from gears.object
       </td>
     </tr>
@@ -585,7 +594,7 @@ awful.popup {
         <span class="summarytype"></span>
       </td>
       <td colspan="1" class="summary">Connect to a signal weakly.</td>
-      <td class="baseclass" >
+      <td class="baseclass" nowrap>
         Inherited from gears.object
       </td>
     </tr>
@@ -597,7 +606,7 @@ awful.popup {
         <a href="#widget::layout_changed">widget::layout_changed</a>
       </td>
       <td colspan="1" class="summary">When the layout (size) change.</td>
-      <td class="baseclass" >
+      <td class="baseclass" nowrap>
         Inherited from wibox.widget
       </td>
     </tr>
@@ -606,7 +615,7 @@ awful.popup {
         <a href="#widget::redraw_needed">widget::redraw_needed</a>
       </td>
       <td colspan="1" class="summary">When the widget content changed.</td>
-      <td class="baseclass" >
+      <td class="baseclass" nowrap>
         Inherited from wibox.widget
       </td>
     </tr>
@@ -615,7 +624,7 @@ awful.popup {
         <a href="#button::press">button::press</a>
       </td>
       <td colspan="1" class="summary">When a mouse button is pressed over the widget.</td>
-      <td class="baseclass" >
+      <td class="baseclass" nowrap>
         Inherited from wibox.widget
       </td>
     </tr>
@@ -624,7 +633,7 @@ awful.popup {
         <a href="#button::release">button::release</a>
       </td>
       <td colspan="1" class="summary">When a mouse button is released over the widget.</td>
-      <td class="baseclass" >
+      <td class="baseclass" nowrap>
         Inherited from wibox.widget
       </td>
     </tr>
@@ -633,7 +642,7 @@ awful.popup {
         <a href="#mouse::enter">mouse::enter</a>
       </td>
       <td colspan="1" class="summary">When the mouse enter a widget.</td>
-      <td class="baseclass" >
+      <td class="baseclass" nowrap>
         Inherited from wibox.widget
       </td>
     </tr>
@@ -642,7 +651,7 @@ awful.popup {
         <a href="#mouse::leave">mouse::leave</a>
       </td>
       <td colspan="1" class="summary">When the mouse leave a widget.</td>
-      <td class="baseclass" >
+      <td class="baseclass" nowrap>
         Inherited from wibox.widget
       </td>
     </tr>
@@ -1254,7 +1263,7 @@ awful.popup {
 
 
 
-    <span id=item1088 class="hide_extra">
+    <span id=item1039 class="hide_extra">
     </span>
 
 </dd>
@@ -1286,7 +1295,7 @@ awful.popup {
 
 
 
-    <span id=item1089 class="hide_extra">
+    <span id=item1040 class="hide_extra">
     </span>
 
 </dd>
@@ -1317,7 +1326,7 @@ awful.popup {
 
 
 
-    <span id=item1090 class="hide_extra">
+    <span id=item1041 class="hide_extra">
     </span>
 
 </dd>
@@ -1345,7 +1354,7 @@ awful.popup {
 
 
 
-    <span id=item1091 class="hide_extra">
+    <span id=item1042 class="hide_extra">
     </span>
 
 </dd>
@@ -1373,7 +1382,7 @@ awful.popup {
 
 
 
-    <span id=item1092 class="hide_extra">
+    <span id=item1043 class="hide_extra">
     </span>
 
 </dd>
@@ -1402,7 +1411,7 @@ awful.popup {
 
 
 
-    <span id=item1093 class="hide_extra">
+    <span id=item1044 class="hide_extra">
     </span>
 
 </dd>
@@ -1423,7 +1432,7 @@ awful.popup {
 
 
 
-    <span id=item1094 class="hide_extra">
+    <span id=item1045 class="hide_extra">
     </span>
 
 </dd>
@@ -1450,7 +1459,7 @@ awful.popup {
 
 
 
-    <span id=item1095 class="hide_extra">
+    <span id=item1046 class="hide_extra">
     </span>
 
 </dd>
@@ -1482,7 +1491,7 @@ awful.popup {
 
 
 
-    <span id=item1096 class="hide_extra">
+    <span id=item1047 class="hide_extra">
     </span>
 
 </dd>
@@ -1510,7 +1519,7 @@ awful.popup {
 
 
 
-    <span id=item1097 class="hide_extra">
+    <span id=item1048 class="hide_extra">
     </span>
 
 </dd>
@@ -1545,7 +1554,7 @@ awful.popup {
 
 
 
-    <span id=item1098 class="hide_extra">
+    <span id=item1049 class="hide_extra">
     </span>
 
 </dd>
@@ -1578,7 +1587,7 @@ awful.popup {
 
 
 
-    <span id=item1099 class="hide_extra">
+    <span id=item1050 class="hide_extra">
     </span>
 
 </dd>
@@ -1610,7 +1619,7 @@ awful.popup {
 
 
 
-    <span id=item1100 class="hide_extra">
+    <span id=item1051 class="hide_extra">
     </span>
 
 </dd>
@@ -1649,7 +1658,7 @@ awful.popup {
 
 
 
-    <span id=item1101 class="hide_extra">
+    <span id=item1052 class="hide_extra">
     </span>
 
 </dd>
@@ -1680,7 +1689,7 @@ awful.popup {
 
 
 
-    <span id=item1102 class="hide_extra">
+    <span id=item1053 class="hide_extra">
     </span>
 
 </dd>
@@ -1707,7 +1716,7 @@ awful.popup {
 
 
 
-    <span id=item1103 class="hide_extra">
+    <span id=item1054 class="hide_extra">
     </span>
 
 </dd>
@@ -1804,7 +1813,7 @@ awful.popup {
 
 
 
-    <span id=item1104 class="hide_extra">
+    <span id=item1055 class="hide_extra">
     </span>
 
 </dd>
@@ -1901,7 +1910,7 @@ awful.popup {
 
 
 
-    <span id=item1105 class="hide_extra">
+    <span id=item1056 class="hide_extra">
     </span>
 
 </dd>
@@ -1980,7 +1989,7 @@ awful.popup {
 
 
 
-    <span id=item1106 class="hide_extra">
+    <span id=item1057 class="hide_extra">
     </span>
 
 </dd>
@@ -2059,7 +2068,7 @@ awful.popup {
 
 
 
-    <span id=item1107 class="hide_extra">
+    <span id=item1058 class="hide_extra">
     </span>
 
 </dd>
@@ -2087,7 +2096,7 @@ awful.popup {
 
 
 
-    <span id=item1108 class="hide_extra">
+    <span id=item1059 class="hide_extra">
     </span>
 
 </dd>
@@ -2111,7 +2120,7 @@ awful.popup {
 
 
 
-    <span id=item1109 class="hide_extra">
+    <span id=item1060 class="hide_extra">
     </span>
 
 </dd>
@@ -2135,7 +2144,7 @@ awful.popup {
 
 
 
-    <span id=item1110 class="hide_extra">
+    <span id=item1061 class="hide_extra">
     </span>
 
 </dd>
@@ -2159,7 +2168,7 @@ awful.popup {
 
 
 
-    <span id=item1111 class="hide_extra">
+    <span id=item1062 class="hide_extra">
     </span>
 
 </dd>
@@ -2183,7 +2192,7 @@ awful.popup {
 
 
 
-    <span id=item1112 class="hide_extra">
+    <span id=item1063 class="hide_extra">
     </span>
 
 </dd>
@@ -2207,7 +2216,7 @@ awful.popup {
 
 
 
-    <span id=item1113 class="hide_extra">
+    <span id=item1064 class="hide_extra">
     </span>
 
 </dd>
@@ -2231,7 +2240,7 @@ awful.popup {
 
 
 
-    <span id=item1114 class="hide_extra">
+    <span id=item1065 class="hide_extra">
     </span>
 
 </dd>
@@ -2255,7 +2264,7 @@ awful.popup {
 
 
 
-    <span id=item1115 class="hide_extra">
+    <span id=item1066 class="hide_extra">
     </span>
 
 </dd>
@@ -2275,7 +2284,7 @@ awful.popup {
 
 
 
-    <span id=item1116 class="hide_extra">
+    <span id=item1067 class="hide_extra">
     </span>
 
 </dd>
@@ -2295,7 +2304,7 @@ awful.popup {
 
 
 
-    <span id=item1117 class="hide_extra">
+    <span id=item1068 class="hide_extra">
     </span>
 
 </dd>
@@ -2315,7 +2324,7 @@ awful.popup {
 
 
 
-    <span id=item1118 class="hide_extra">
+    <span id=item1069 class="hide_extra">
     </span>
 
 </dd>
@@ -2335,7 +2344,7 @@ awful.popup {
 
 
 
-    <span id=item1119 class="hide_extra">
+    <span id=item1070 class="hide_extra">
     </span>
 
 </dd>
@@ -2355,7 +2364,7 @@ awful.popup {
 
 
 
-    <span id=item1120 class="hide_extra">
+    <span id=item1071 class="hide_extra">
     </span>
 
 </dd>
@@ -2375,7 +2384,7 @@ awful.popup {
 
 
 
-    <span id=item1121 class="hide_extra">
+    <span id=item1072 class="hide_extra">
     </span>
 
 </dd>
@@ -2397,7 +2406,7 @@ awful.popup {
 
 
 
-    <span id=item1122 class="hide_extra">
+    <span id=item1073 class="hide_extra">
     </span>
 
 </dd>
@@ -2417,7 +2426,7 @@ awful.popup {
 
 
 
-    <span id=item1123 class="hide_extra">
+    <span id=item1074 class="hide_extra">
     </span>
 
 </dd>
@@ -2437,7 +2446,7 @@ awful.popup {
 
 
 
-    <span id=item1124 class="hide_extra">
+    <span id=item1075 class="hide_extra">
     </span>
 
 </dd>
@@ -2457,7 +2466,7 @@ awful.popup {
 
 
 
-    <span id=item1125 class="hide_extra">
+    <span id=item1076 class="hide_extra">
     </span>
 
 </dd>
@@ -2477,7 +2486,7 @@ awful.popup {
 
 
 
-    <span id=item1126 class="hide_extra">
+    <span id=item1077 class="hide_extra">
     </span>
 
 </dd>
@@ -2497,7 +2506,7 @@ awful.popup {
 
 
 
-    <span id=item1127 class="hide_extra">
+    <span id=item1078 class="hide_extra">
     </span>
 
 </dd>
@@ -2517,7 +2526,7 @@ awful.popup {
 
 
 
-    <span id=item1128 class="hide_extra">
+    <span id=item1079 class="hide_extra">
     </span>
 
 </dd>
@@ -2537,7 +2546,7 @@ awful.popup {
 
 
 
-    <span id=item1129 class="hide_extra">
+    <span id=item1080 class="hide_extra">
     </span>
 
 </dd>
@@ -2557,7 +2566,7 @@ awful.popup {
 
 
 
-    <span id=item1130 class="hide_extra">
+    <span id=item1081 class="hide_extra">
     </span>
 
 </dd>
@@ -2577,7 +2586,7 @@ awful.popup {
 
 
 
-    <span id=item1131 class="hide_extra">
+    <span id=item1082 class="hide_extra">
     </span>
 
 </dd>
@@ -2605,7 +2614,7 @@ awful.popup {
 
 
 
-    <span id=item1132 class="hide_extra">
+    <span id=item1083 class="hide_extra">
     </span>
 
 </dd>
@@ -2625,7 +2634,7 @@ awful.popup {
 
 
 
-    <span id=item1133 class="hide_extra">
+    <span id=item1084 class="hide_extra">
     </span>
 
 </dd>
@@ -2645,7 +2654,7 @@ awful.popup {
 
 
 
-    <span id=item1134 class="hide_extra">
+    <span id=item1085 class="hide_extra">
     </span>
 
 </dd>
@@ -2665,7 +2674,7 @@ awful.popup {
 
 
 
-    <span id=item1135 class="hide_extra">
+    <span id=item1086 class="hide_extra">
     </span>
 
 </dd>
@@ -2693,7 +2702,7 @@ awful.popup {
 
 
 
-    <span id=item1136 class="hide_extra">
+    <span id=item1087 class="hide_extra">
     </span>
 
 </dd>
@@ -2713,7 +2722,7 @@ awful.popup {
 
 
 
-    <span id=item1137 class="hide_extra">
+    <span id=item1088 class="hide_extra">
     </span>
 
 </dd>
@@ -2733,7 +2742,7 @@ awful.popup {
 
 
 
-    <span id=item1138 class="hide_extra">
+    <span id=item1089 class="hide_extra">
     </span>
 
 </dd>
@@ -2757,7 +2766,7 @@ awful.popup {
 
 
 
-    <span id=item1139 class="hide_extra">
+    <span id=item1090 class="hide_extra">
     </span>
 
 </dd>
@@ -2777,7 +2786,7 @@ awful.popup {
 
 
 
-    <span id=item1140 class="hide_extra">
+    <span id=item1091 class="hide_extra">
     </span>
 
 </dd>
@@ -2797,7 +2806,7 @@ awful.popup {
 
 
 
-    <span id=item1141 class="hide_extra">
+    <span id=item1092 class="hide_extra">
     </span>
 
 </dd>
@@ -2821,7 +2830,7 @@ awful.popup {
 
 
 
-    <span id=item1142 class="hide_extra">
+    <span id=item1093 class="hide_extra">
     </span>
 
 </dd>
@@ -2841,7 +2850,7 @@ awful.popup {
 
 
 
-    <span id=item1143 class="hide_extra">
+    <span id=item1094 class="hide_extra">
     </span>
 
 </dd>
@@ -2861,7 +2870,7 @@ awful.popup {
 
 
 
-    <span id=item1144 class="hide_extra">
+    <span id=item1095 class="hide_extra">
     </span>
 
 </dd>
@@ -2885,7 +2894,7 @@ awful.popup {
 
 
 
-    <span id=item1145 class="hide_extra">
+    <span id=item1096 class="hide_extra">
     </span>
 
 </dd>
@@ -2905,7 +2914,7 @@ awful.popup {
 
 
 
-    <span id=item1146 class="hide_extra">
+    <span id=item1097 class="hide_extra">
     </span>
 
 </dd>
@@ -2925,7 +2934,7 @@ awful.popup {
 
 
 
-    <span id=item1147 class="hide_extra">
+    <span id=item1098 class="hide_extra">
     </span>
 
 </dd>
@@ -2949,7 +2958,7 @@ awful.popup {
 
 
 
-    <span id=item1148 class="hide_extra">
+    <span id=item1099 class="hide_extra">
     </span>
 
 </dd>
@@ -2974,7 +2983,7 @@ awful.popup {
 
 
 
-    <span id=item1149 class="hide_extra">
+    <span id=item1100 class="hide_extra">
     </span>
 
 </dd>
@@ -2997,7 +3006,7 @@ awful.popup {
 
 
 
-    <span id=item1150 class="hide_extra">
+    <span id=item1101 class="hide_extra">
     </span>
 
 </dd>
@@ -3024,7 +3033,7 @@ awful.popup {
 
 
 
-    <span id=item1151 class="hide_extra">
+    <span id=item1102 class="hide_extra">
     </span>
 
 </dd>
@@ -3051,7 +3060,7 @@ awful.popup {
 
 
 
-    <span id=item1152 class="hide_extra">
+    <span id=item1103 class="hide_extra">
     </span>
 
 </dd>
@@ -3078,7 +3087,7 @@ awful.popup {
 
 
 
-    <span id=item1153 class="hide_extra">
+    <span id=item1104 class="hide_extra">
     </span>
 
 </dd>
@@ -3105,7 +3114,7 @@ awful.popup {
 
 
 
-    <span id=item1154 class="hide_extra">
+    <span id=item1105 class="hide_extra">
     </span>
 
 </dd>
@@ -3116,7 +3125,7 @@ awful.popup {
 </div> <!-- id="main" -->
 <div id="about">
 <i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.6</a></i>
-<i style="float:right;">Last updated 2021-03-29 13:33:10 </i>
+<i style="float:right;">Last updated 2021-04-10 13:22:11 </i>
 </div> <!-- id="about" -->
 </div> <!-- id="container" -->
 </body>

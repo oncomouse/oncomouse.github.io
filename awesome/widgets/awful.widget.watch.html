@@ -31,6 +31,8 @@
 <div id="main">
 
 
+
+
 <!-- Menu -->
 
 <div id="navigation">
@@ -268,11 +270,18 @@ awful.widget.watch(<span class="string">'bash -c '</span>echo Hello world! | gre
 </pre>
 
 </p>
+    <div class="extra-header">
+
+
+  <div class="extra-header__section">
     <h3>Info:</h3>
     <ul>
-        <li><strong>Copyright</strong>: 2015, 2016 Benjamin Petrenko, Yauheni Kirylau</li>
-        <li><strong>Author</strong>: Benjamin Petrenko,Yauheni Kirylau</li>
+            <li><strong>Copyright</strong>: 2015, 2016 Benjamin Petrenko, Yauheni Kirylau</li>
+            <li><strong>Author</strong>: Benjamin Petrenko,Yauheni Kirylau</li>
     </ul>
+  </div>
+
+</div>
 
 
 <h2><a href="#Constructors">Constructors</a></h2>
@@ -291,7 +300,7 @@ awful.widget.watch(<span class="string">'bash -c '</span>echo Hello world! | gre
       <td class="shortname" ><a href="#children">children</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>table</span></td>
       <td colspan="1" class="summary">Get or set the children elements.</td>
-      <td class="baseclass" >
+      <td class="baseclass" nowrap>
         Inherited from wibox.widget
       </td>
     </tr>
@@ -299,7 +308,7 @@ awful.widget.watch(<span class="string">'bash -c '</span>echo Hello world! | gre
       <td class="shortname" ><a href="#all_children">all_children</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>table</span></td>
       <td colspan="1" class="summary">Get all direct and indirect children widgets.</td>
-      <td class="baseclass" >
+      <td class="baseclass" nowrap>
         Inherited from wibox.widget
       </td>
     </tr>
@@ -307,7 +316,7 @@ awful.widget.watch(<span class="string">'bash -c '</span>echo Hello world! | gre
       <td class="shortname" ><a href="#forced_height">forced_height</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>number <i>or</i> nil</span></td>
       <td colspan="1" class="summary">Force a widget height.</td>
-      <td class="baseclass" >
+      <td class="baseclass" nowrap>
         Inherited from wibox.widget
       </td>
     </tr>
@@ -315,7 +324,7 @@ awful.widget.watch(<span class="string">'bash -c '</span>echo Hello world! | gre
       <td class="shortname" ><a href="#forced_width">forced_width</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>number <i>or</i> nil</span></td>
       <td colspan="1" class="summary">Force a widget width.</td>
-      <td class="baseclass" >
+      <td class="baseclass" nowrap>
         Inherited from wibox.widget
       </td>
     </tr>
@@ -323,7 +332,7 @@ awful.widget.watch(<span class="string">'bash -c '</span>echo Hello world! | gre
       <td class="shortname" ><a href="#opacity">opacity</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>number</span></td>
       <td colspan="1" class="summary">The widget opacity (transparency).</td>
-      <td class="baseclass" >
+      <td class="baseclass" nowrap>
         Inherited from wibox.widget
       </td>
     </tr>
@@ -331,7 +340,7 @@ awful.widget.watch(<span class="string">'bash -c '</span>echo Hello world! | gre
       <td class="shortname" ><a href="#visible">visible</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>boolean</span></td>
       <td colspan="1" class="summary">The widget visibility.</td>
-      <td class="baseclass" >
+      <td class="baseclass" nowrap>
         Inherited from wibox.widget
       </td>
     </tr>
@@ -339,7 +348,7 @@ awful.widget.watch(<span class="string">'bash -c '</span>echo Hello world! | gre
       <td class="shortname" ><a href="#buttons">buttons</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>table</span></td>
       <td colspan="1" class="summary">The widget buttons.</td>
-      <td class="baseclass" >
+      <td class="baseclass" nowrap>
         Inherited from wibox.widget
       </td>
     </tr>
@@ -352,7 +361,7 @@ awful.widget.watch(<span class="string">'bash -c '</span>echo Hello world! | gre
         <span class="summarytype"></span>
       </td>
       <td colspan="1" class="summary">Set a declarative widget hierarchy description.</td>
-      <td class="baseclass" >
+      <td class="baseclass" nowrap>
         Inherited from wibox.widget
       </td>
     </tr>
@@ -362,7 +371,7 @@ awful.widget.watch(<span class="string">'bash -c '</span>echo Hello world! | gre
         <span class="summarytype"></span>
       </td>
       <td colspan="1" class="summary">Add a new <a href="../input_handling/awful.button.html#">awful.button</a> to this widget.</td>
-      <td class="baseclass" >
+      <td class="baseclass" nowrap>
         Inherited from wibox.widget
       </td>
     </tr>
@@ -373,7 +382,7 @@ awful.widget.watch(<span class="string">'bash -c '</span>echo Hello world! | gre
       </td>
       <td colspan="1" class="summary">Emit a signal and ensure all parent widgets in the hierarchies also
  forward the signal.</td>
-      <td class="baseclass" >
+      <td class="baseclass" nowrap>
         Inherited from wibox.widget
       </td>
     </tr>
@@ -383,7 +392,7 @@ awful.widget.watch(<span class="string">'bash -c '</span>echo Hello world! | gre
         <span class="summarytype"></span>
       </td>
       <td colspan="1" class="summary">Emit a signal.</td>
-      <td class="baseclass" >
+      <td class="baseclass" nowrap>
         Inherited from gears.object
       </td>
     </tr>
@@ -393,7 +402,7 @@ awful.widget.watch(<span class="string">'bash -c '</span>echo Hello world! | gre
         <span class="summarytype"></span>
       </td>
       <td colspan="1" class="summary">Connect to a signal.</td>
-      <td class="baseclass" >
+      <td class="baseclass" nowrap>
         Inherited from gears.object
       </td>
     </tr>
@@ -403,7 +412,7 @@ awful.widget.watch(<span class="string">'bash -c '</span>echo Hello world! | gre
         <span class="summarytype"></span>
       </td>
       <td colspan="1" class="summary">Connect to a signal weakly.</td>
-      <td class="baseclass" >
+      <td class="baseclass" nowrap>
         Inherited from gears.object
       </td>
     </tr>
@@ -415,7 +424,7 @@ awful.widget.watch(<span class="string">'bash -c '</span>echo Hello world! | gre
         <a href="#widget::layout_changed">widget::layout_changed</a>
       </td>
       <td colspan="1" class="summary">When the layout (size) change.</td>
-      <td class="baseclass" >
+      <td class="baseclass" nowrap>
         Inherited from wibox.widget
       </td>
     </tr>
@@ -424,7 +433,7 @@ awful.widget.watch(<span class="string">'bash -c '</span>echo Hello world! | gre
         <a href="#widget::redraw_needed">widget::redraw_needed</a>
       </td>
       <td colspan="1" class="summary">When the widget content changed.</td>
-      <td class="baseclass" >
+      <td class="baseclass" nowrap>
         Inherited from wibox.widget
       </td>
     </tr>
@@ -433,7 +442,7 @@ awful.widget.watch(<span class="string">'bash -c '</span>echo Hello world! | gre
         <a href="#button::press">button::press</a>
       </td>
       <td colspan="1" class="summary">When a mouse button is pressed over the widget.</td>
-      <td class="baseclass" >
+      <td class="baseclass" nowrap>
         Inherited from wibox.widget
       </td>
     </tr>
@@ -442,7 +451,7 @@ awful.widget.watch(<span class="string">'bash -c '</span>echo Hello world! | gre
         <a href="#button::release">button::release</a>
       </td>
       <td colspan="1" class="summary">When a mouse button is released over the widget.</td>
-      <td class="baseclass" >
+      <td class="baseclass" nowrap>
         Inherited from wibox.widget
       </td>
     </tr>
@@ -451,7 +460,7 @@ awful.widget.watch(<span class="string">'bash -c '</span>echo Hello world! | gre
         <a href="#mouse::enter">mouse::enter</a>
       </td>
       <td colspan="1" class="summary">When the mouse enter a widget.</td>
-      <td class="baseclass" >
+      <td class="baseclass" nowrap>
         Inherited from wibox.widget
       </td>
     </tr>
@@ -460,7 +469,7 @@ awful.widget.watch(<span class="string">'bash -c '</span>echo Hello world! | gre
         <a href="#mouse::leave">mouse::leave</a>
       </td>
       <td colspan="1" class="summary">When the mouse leave a widget.</td>
-      <td class="baseclass" >
+      <td class="baseclass" nowrap>
         Inherited from wibox.widget
       </td>
     </tr>
@@ -546,7 +555,7 @@ awful.widget.watch(<span class="string">'bash -c '</span>echo Hello world! | gre
 
 
 
-    <span id=item1155 class="hide_extra">
+    <span id=item1106 class="hide_extra">
     </span>
 
 </dd>
@@ -578,7 +587,7 @@ awful.widget.watch(<span class="string">'bash -c '</span>echo Hello world! | gre
 
 
 
-    <span id=item1156 class="hide_extra">
+    <span id=item1107 class="hide_extra">
     </span>
 
 </dd>
@@ -609,7 +618,7 @@ awful.widget.watch(<span class="string">'bash -c '</span>echo Hello world! | gre
 
 
 
-    <span id=item1157 class="hide_extra">
+    <span id=item1108 class="hide_extra">
     </span>
 
 </dd>
@@ -637,7 +646,7 @@ awful.widget.watch(<span class="string">'bash -c '</span>echo Hello world! | gre
 
 
 
-    <span id=item1158 class="hide_extra">
+    <span id=item1109 class="hide_extra">
     </span>
 
 </dd>
@@ -665,7 +674,7 @@ awful.widget.watch(<span class="string">'bash -c '</span>echo Hello world! | gre
 
 
 
-    <span id=item1159 class="hide_extra">
+    <span id=item1110 class="hide_extra">
     </span>
 
 </dd>
@@ -694,7 +703,7 @@ awful.widget.watch(<span class="string">'bash -c '</span>echo Hello world! | gre
 
 
 
-    <span id=item1160 class="hide_extra">
+    <span id=item1111 class="hide_extra">
     </span>
 
 </dd>
@@ -715,7 +724,7 @@ awful.widget.watch(<span class="string">'bash -c '</span>echo Hello world! | gre
 
 
 
-    <span id=item1161 class="hide_extra">
+    <span id=item1112 class="hide_extra">
     </span>
 
 </dd>
@@ -742,7 +751,7 @@ awful.widget.watch(<span class="string">'bash -c '</span>echo Hello world! | gre
 
 
 
-    <span id=item1162 class="hide_extra">
+    <span id=item1113 class="hide_extra">
     </span>
 
 </dd>
@@ -774,7 +783,7 @@ awful.widget.watch(<span class="string">'bash -c '</span>echo Hello world! | gre
 
 
 
-    <span id=item1163 class="hide_extra">
+    <span id=item1114 class="hide_extra">
     </span>
 
 </dd>
@@ -802,7 +811,7 @@ awful.widget.watch(<span class="string">'bash -c '</span>echo Hello world! | gre
 
 
 
-    <span id=item1164 class="hide_extra">
+    <span id=item1115 class="hide_extra">
     </span>
 
 </dd>
@@ -837,7 +846,7 @@ awful.widget.watch(<span class="string">'bash -c '</span>echo Hello world! | gre
 
 
 
-    <span id=item1165 class="hide_extra">
+    <span id=item1116 class="hide_extra">
     </span>
 
 </dd>
@@ -870,7 +879,7 @@ awful.widget.watch(<span class="string">'bash -c '</span>echo Hello world! | gre
 
 
 
-    <span id=item1166 class="hide_extra">
+    <span id=item1117 class="hide_extra">
     </span>
 
 </dd>
@@ -902,7 +911,7 @@ awful.widget.watch(<span class="string">'bash -c '</span>echo Hello world! | gre
 
 
 
-    <span id=item1167 class="hide_extra">
+    <span id=item1118 class="hide_extra">
     </span>
 
 </dd>
@@ -941,7 +950,7 @@ awful.widget.watch(<span class="string">'bash -c '</span>echo Hello world! | gre
 
 
 
-    <span id=item1168 class="hide_extra">
+    <span id=item1119 class="hide_extra">
     </span>
 
 </dd>
@@ -972,7 +981,7 @@ awful.widget.watch(<span class="string">'bash -c '</span>echo Hello world! | gre
 
 
 
-    <span id=item1169 class="hide_extra">
+    <span id=item1120 class="hide_extra">
     </span>
 
 </dd>
@@ -999,7 +1008,7 @@ awful.widget.watch(<span class="string">'bash -c '</span>echo Hello world! | gre
 
 
 
-    <span id=item1170 class="hide_extra">
+    <span id=item1121 class="hide_extra">
     </span>
 
 </dd>
@@ -1096,7 +1105,7 @@ awful.widget.watch(<span class="string">'bash -c '</span>echo Hello world! | gre
 
 
 
-    <span id=item1171 class="hide_extra">
+    <span id=item1122 class="hide_extra">
     </span>
 
 </dd>
@@ -1193,7 +1202,7 @@ awful.widget.watch(<span class="string">'bash -c '</span>echo Hello world! | gre
 
 
 
-    <span id=item1172 class="hide_extra">
+    <span id=item1123 class="hide_extra">
     </span>
 
 </dd>
@@ -1272,7 +1281,7 @@ awful.widget.watch(<span class="string">'bash -c '</span>echo Hello world! | gre
 
 
 
-    <span id=item1173 class="hide_extra">
+    <span id=item1124 class="hide_extra">
     </span>
 
 </dd>
@@ -1351,7 +1360,7 @@ awful.widget.watch(<span class="string">'bash -c '</span>echo Hello world! | gre
 
 
 
-    <span id=item1174 class="hide_extra">
+    <span id=item1125 class="hide_extra">
     </span>
 
 </dd>
@@ -1362,7 +1371,7 @@ awful.widget.watch(<span class="string">'bash -c '</span>echo Hello world! | gre
 </div> <!-- id="main" -->
 <div id="about">
 <i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.6</a></i>
-<i style="float:right;">Last updated 2021-03-29 13:33:10 </i>
+<i style="float:right;">Last updated 2021-04-10 13:22:11 </i>
 </div> <!-- id="about" -->
 </div> <!-- id="container" -->
 </body>
