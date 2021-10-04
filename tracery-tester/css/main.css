@@ -1,0 +1,19 @@
+* {
+	/* Sets our Baseline Grid */
+	--rhythm: 1.5rem;
+
+	/* Sets font-size relative to rhythm */
+	--line-height-ratio: 1.4;
+}
+
+@media (max-width: 55rem) {
+	* {
+		--rhythm: 1.2rem;
+	}
+}
+
+@media (min-width: 110rem) {
+	* {
+		--rhythm: 1.8rem;
+	}
+}

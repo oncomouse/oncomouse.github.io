@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html class="no-js" lang="">
+	<head>
+		<meta charset="utf-8" />
+		<title>Tracery Tester</title>
+		<meta name="description" content="" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<meta property="og:title" content="" />
+		<meta property="og:type" content="" />
+		<meta property="og:url" content="" />
+		<meta property="og:image" content="" />
+
+		<link rel="manifest" href="site.webmanifest" />
+		<link rel="apple-touch-icon" href="icon.png" />
+		<!-- Place favicon.ico in the root directory -->
+
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/cutestrap@2.0.0-4/dist/css/cutestrap.min.css"
+		/>
+		<link rel="stylesheet" href="css/main.css" />
+
+		<meta name="theme-color" content="#fafafa" />
+	</head>
+
+	<body>
+		<div class="wrapper">
+			<h1 class="ta-center">Tracery Tester</h1>
+			<p id="output"></p>
+			<p id="error"></p>
+			<form>
+				<label class="field">
+					<textarea id="grammar" rows="20"></textarea>
+					<span class="label">Paste Your JSON Here</span>
+				</label>
+				<div class="ta-center">
+					<input class="button" id="generate" value="Generate Another">
+				</div>
+			</form>
+		</div>
+		<script src="https://cdn.jsdelivr.net/npm/ramda@0.27.0/dist/ramda.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/cash-dom@8.0.0/dist/cash.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/kefir@3.8.8/dist/kefir.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/json-lint@0.1.0/jsonlint.js"></script>
+		<script src="https://cdn.jsdelivr.net/gh/galaxykate/tracery/js/tracery.min.js"></script>
+		<script src="js/vendor/modernizr-3.11.2.min.js"></script>
+		<script src="js/plugins.js"></script>
+		<script src="js/main.js"></script>
+	</body>
+</html>
