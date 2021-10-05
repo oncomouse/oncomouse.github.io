@@ -1,3 +1,4 @@
+/* global R,$,Kefir,tracery */
 $(function () {
 	var grammarInput = Kefir.fromEvents($("#grammar"), "keyup").map(
 		R.path(["target", "value"])
@@ -36,10 +37,12 @@ $(function () {
 
 	var traceryGrammar = grammar.map(tracery.createGrammar).toProperty();
 
-	var createGrammar = function (t) {
-		$("#output").html(t.flatten("#origin#").replace(/\n/g, "<br>"));
-	};
-	var clickGrammar = Kefir.fromEvents($("#generate"), "click");
-	traceryGrammar.onValue(createGrammar);
-	traceryGrammar.sampledBy(clickGrammar).onValue(createGrammar);
+	var createTrace = R.pipe(
+		function(x) { return x.flatten("#origin#") },
+		R.replace(/\n/g, "<br>"),
+		R.tap(function(x) { $("#output").html(x) })
+	)
+	var clickGenerateButton = Kefir.fromEvents($("#generate"), "click");
+	traceryGrammar.onValue(createTrace);
+	traceryGrammar.sampledBy(clickGenerateButton).onValue(createTrace);
 });
