@@ -139,6 +139,7 @@
   <li><a href="../popups_and_bars/awful.popup.html">awful.popup</a></li>
   <li><a href="../popups_and_bars/awful.titlebar.html">awful.titlebar</a></li>
   <li><a href="../popups_and_bars/awful.tooltip.html">awful.tooltip</a></li>
+  <li><a href="../popups_and_bars/awful.wallpaper.html">awful.wallpaper</a></li>
   <li><a href="../popups_and_bars/awful.wibar.html">awful.wibar</a></li>
   <li><a href="../popups_and_bars/awful.widget.calendar_popup.html">awful.widget.calendar_popup</a></li>
   <li><a href="../popups_and_bars/menubar.html">menubar</a></li>
@@ -261,8 +262,15 @@
   <div class="extra-header__section">
     <h3>Info:</h3>
     <ul>
-            <li><strong>Copyright</strong>: 2017 Uli Schlachter</li>
-            <li><strong>Author</strong>: Uli Schlachter</li>
+                <li><strong>Copyright</strong>: 2017 Uli Schlachter</li>
+                <li>
+                    <strong>Originally authored by</strong>: Uli Schlachter<br />
+                    <small>(Full contributors list available on
+                    <a href="https://github.com/awesomeWM/awesome/graphs/contributors">
+                        our github project)
+                    </a></small>
+
+                </li>
     </ul>
   </div>
 
@@ -275,7 +283,9 @@
       <td class="name" >
         <a href="#awful.widget.only_on_screen">awful.widget.only_on_screen <span class='function_args'> <b>(</b>[widget[, s]]<b>)</b></span></a>
       </td>
-      <td colspan="2" class="summary">Returns a new only<em>on</em>screen container.</td>
+      <td colspan="2" class="summary">
+        Returns a new only<em>on</em>screen container.
+      </td>
     </tr>
 </table>
 <h2><a href="#Object_properties">Object properties</a></h2>
@@ -283,17 +293,23 @@
     <tr>
       <td class="shortname" ><a href="#widget">widget</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>widget</span></td>
-      <td colspan="2" class="summary">The widget to be displayed</td>
+      <td colspan="2" class="summary">
+        The widget to be displayed
+      </td>
     </tr>
     <tr>
       <td class="shortname" ><a href="#screen">screen</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>screen <i>or</i> string <i>or</i> integer</span></td>
-      <td colspan="2" class="summary">The screen to display on.</td>
+      <td colspan="2" class="summary">
+        The screen to display on.
+      </td>
     </tr>
     <tr>
       <td class="shortname" ><a href="#wibox.widget.base.children">children</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>table</span></td>
-      <td colspan="1" class="summary">Get or set the children elements.</td>
+      <td colspan="1" class="summary">
+        Get or set the children elements.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from wibox.widget.base
       </td>
@@ -301,7 +317,9 @@
     <tr>
       <td class="shortname" ><a href="#wibox.widget.base.all_children">all_children</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>table</span></td>
-      <td colspan="1" class="summary">Get all direct and indirect children widgets.</td>
+      <td colspan="1" class="summary">
+        Get all direct and indirect children widgets.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from wibox.widget.base
       </td>
@@ -309,7 +327,9 @@
     <tr>
       <td class="shortname" ><a href="#wibox.widget.base.forced_height">forced_height</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>number <i>or</i> nil</span></td>
-      <td colspan="1" class="summary">Force a widget height.</td>
+      <td colspan="1" class="summary">
+        Force a widget height.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from wibox.widget.base
       </td>
@@ -317,7 +337,9 @@
     <tr>
       <td class="shortname" ><a href="#wibox.widget.base.forced_width">forced_width</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>number <i>or</i> nil</span></td>
-      <td colspan="1" class="summary">Force a widget width.</td>
+      <td colspan="1" class="summary">
+        Force a widget width.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from wibox.widget.base
       </td>
@@ -325,7 +347,9 @@
     <tr>
       <td class="shortname" ><a href="#wibox.widget.base.opacity">opacity</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>number</span></td>
-      <td colspan="1" class="summary">The widget opacity (transparency).</td>
+      <td colspan="1" class="summary">
+        The widget opacity (transparency).
+      </td>
       <td class="baseclass" nowrap>
         Inherited from wibox.widget.base
       </td>
@@ -333,7 +357,9 @@
     <tr>
       <td class="shortname" ><a href="#wibox.widget.base.visible">visible</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>boolean</span></td>
-      <td colspan="1" class="summary">The widget visibility.</td>
+      <td colspan="1" class="summary">
+        The widget visibility.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from wibox.widget.base
       </td>
@@ -341,7 +367,9 @@
     <tr>
       <td class="shortname" ><a href="#wibox.widget.base.buttons">buttons</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>table</span></td>
-      <td colspan="1" class="summary">The widget buttons.</td>
+      <td colspan="1" class="summary">
+        The widget buttons.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from wibox.widget.base
       </td>
@@ -354,7 +382,9 @@
         <a href="#wibox.widget.base:add_button">:add_button <span class='function_args'> <b>(</b>button<b>)</b></span></a>
         <span class="summarytype"></span>
       </td>
-      <td colspan="1" class="summary">Add a new <a href="../input_handling/awful.button.html#">awful.button</a> to this widget.</td>
+      <td colspan="1" class="summary">
+        Add a new <a href="../input_handling/awful.button.html#">awful.button</a> to this widget.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from wibox.widget.base
       </td>
@@ -364,8 +394,10 @@
         <a href="#wibox.widget.base:emit_signal_recursive">:emit_signal_recursive <span class='function_args'> <b>(</b>signal_name, ...<b>)</b></span></a>
         <span class="summarytype"></span>
       </td>
-      <td colspan="1" class="summary">Emit a signal and ensure all parent widgets in the hierarchies also
- forward the signal.</td>
+      <td colspan="1" class="summary">
+        Emit a signal and ensure all parent widgets in the hierarchies also
+ forward the signal.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from wibox.widget.base
       </td>
@@ -375,7 +407,9 @@
         <a href="#wibox.widget.base:index">:index <span class='function_args'> <b>(</b>widget[, recursive[, ...]]<b>)</b></span></a>
         <span class="summarytype"><span class='summary_type'> -&gt;&nbsp;(number, widget, table)</span></span>
       </td>
-      <td colspan="1" class="summary">Get the index of a widget.</td>
+      <td colspan="1" class="summary">
+        Get the index of a widget.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from wibox.widget.base
       </td>
@@ -385,7 +419,9 @@
         <a href="#connect_signal">:connect_signal <span class='function_args'> <b>(</b>name, func<b>)</b></span></a>
         <span class="summarytype"></span>
       </td>
-      <td colspan="1" class="summary">Connect to a signal.</td>
+      <td colspan="1" class="summary">
+        Connect to a signal.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from gears.object
       </td>
@@ -395,7 +431,9 @@
         <a href="#weak_connect_signal">:weak_connect_signal <span class='function_args'> <b>(</b>name, func<b>)</b></span></a>
         <span class="summarytype"></span>
       </td>
-      <td colspan="1" class="summary">Connect to a signal weakly.</td>
+      <td colspan="1" class="summary">
+        Connect to a signal weakly.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from gears.object
       </td>
@@ -405,7 +443,9 @@
         <a href="#disconnect_signal">:disconnect_signal <span class='function_args'> <b>(</b>name, func<b>)</b></span></a>
         <span class="summarytype"></span>
       </td>
-      <td colspan="1" class="summary">Disonnect from a signal.</td>
+      <td colspan="1" class="summary">
+        Disonnect from a signal.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from gears.object
       </td>
@@ -415,7 +455,9 @@
         <a href="#emit_signal">:emit_signal <span class='function_args'> <b>(</b>name, ...<b>)</b></span></a>
         <span class="summarytype"></span>
       </td>
-      <td colspan="1" class="summary">Emit a signal.</td>
+      <td colspan="1" class="summary">
+        Emit a signal.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from gears.object
       </td>
@@ -427,7 +469,9 @@
       <td class="name" >
         <a href="#widget::layout_changed">widget::layout_changed</a>
       </td>
-      <td colspan="1" class="summary">When the layout (size) change.</td>
+      <td colspan="1" class="summary">
+        When the layout (size) change.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from wibox.widget.base
       </td>
@@ -436,7 +480,9 @@
       <td class="name" >
         <a href="#widget::redraw_needed">widget::redraw_needed</a>
       </td>
-      <td colspan="1" class="summary">When the widget content changed.</td>
+      <td colspan="1" class="summary">
+        When the widget content changed.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from wibox.widget.base
       </td>
@@ -445,7 +491,9 @@
       <td class="name" >
         <a href="#button::press">button::press</a>
       </td>
-      <td colspan="1" class="summary">When a mouse button is pressed over the widget.</td>
+      <td colspan="1" class="summary">
+        When a mouse button is pressed over the widget.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from wibox.widget.base
       </td>
@@ -454,7 +502,9 @@
       <td class="name" >
         <a href="#button::release">button::release</a>
       </td>
-      <td colspan="1" class="summary">When a mouse button is released over the widget.</td>
+      <td colspan="1" class="summary">
+        When a mouse button is released over the widget.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from wibox.widget.base
       </td>
@@ -463,7 +513,9 @@
       <td class="name" >
         <a href="#mouse::enter">mouse::enter</a>
       </td>
-      <td colspan="1" class="summary">When the mouse enter a widget.</td>
+      <td colspan="1" class="summary">
+        When the mouse enter a widget.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from wibox.widget.base
       </td>
@@ -472,7 +524,9 @@
       <td class="name" >
         <a href="#mouse::leave">mouse::leave</a>
       </td>
-      <td colspan="1" class="summary">When the mouse leave a widget.</td>
+      <td colspan="1" class="summary">
+        When the mouse leave a widget.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from wibox.widget.base
       </td>
@@ -512,7 +566,7 @@
     <h3>Returns:</h3>
     <ol>
 
-           <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+           <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
         A new only<em>on</em>screen container
     </ol>
 
@@ -520,7 +574,7 @@
 
 
 
-    <span id=item1448 class="hide_extra">
+    <span id=item1461 class="hide_extra">
     </span>
 
 </dd>
@@ -551,7 +605,7 @@
 
 
 
-    <span id=item1449 class="hide_extra">
+    <span id=item1462 class="hide_extra">
     </span>
 
 </dd>
@@ -569,7 +623,7 @@
     <h3>Type constraints:</h3>
     <ul>
         <li><span class="parameter">screen</span>
-            <span class="types"><a class="type" href="../widget_containers/awful.widget.only_on_screen.html#screen">screen</a>, <a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a> or <span class="type">integer</span></span>
+            <span class="types"><a class="type" href="../widget_containers/awful.widget.only_on_screen.html#screen">screen</a>, <a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a> or <span class="type">integer</span></span>
          The screen.
         </li>
     </ul>
@@ -579,7 +633,7 @@
 
 
 
-    <span id=item1450 class="hide_extra">
+    <span id=item1463 class="hide_extra">
     </span>
 
 </dd>
@@ -597,7 +651,7 @@
     <h3>Type constraints:</h3>
     <ul>
         <li><span class="parameter">children</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          The children.
         </li>
     </ul>
@@ -607,7 +661,7 @@
 
 
 
-    <span id=item869 class="hide_extra">
+    <span id=item871 class="hide_extra">
     </span>
 
 </dd>
@@ -629,7 +683,7 @@
     <h3>Type constraints:</h3>
     <ul>
         <li><span class="parameter">children</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          The children.
         </li>
     </ul>
@@ -639,7 +693,7 @@
 
 
 
-    <span id=item870 class="hide_extra">
+    <span id=item872 class="hide_extra">
     </span>
 
 </dd>
@@ -667,7 +721,7 @@
 
 
 
-    <span id=item871 class="hide_extra">
+    <span id=item873 class="hide_extra">
     </span>
 
 </dd>
@@ -695,7 +749,7 @@
 
 
 
-    <span id=item872 class="hide_extra">
+    <span id=item874 class="hide_extra">
     </span>
 
 </dd>
@@ -715,7 +769,7 @@
         <li><span class="parameter">opacity</span>
             <span class="types"><span class="type">number</span></span>
          The opacity (between 0 and 1)
-         (<em>default</em> 1)
+         (<em>default</em> <code>1</code>)
         </li>
     </ul>
 
@@ -724,7 +778,7 @@
 
 
 
-    <span id=item873 class="hide_extra">
+    <span id=item875 class="hide_extra">
     </span>
 
 </dd>
@@ -745,7 +799,7 @@
 
 
 
-    <span id=item874 class="hide_extra">
+    <span id=item876 class="hide_extra">
     </span>
 
 </dd>
@@ -772,7 +826,7 @@
 
 
 
-    <span id=item875 class="hide_extra">
+    <span id=item877 class="hide_extra">
     </span>
 
 </dd>
@@ -804,7 +858,7 @@
 
 
 
-    <span id=item876 class="hide_extra">
+    <span id=item878 class="hide_extra">
     </span>
 
 </dd>
@@ -842,7 +896,7 @@
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">signal_name</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
 
 
 
@@ -857,7 +911,7 @@
 
 
 
-    <span id=item877 class="hide_extra">
+    <span id=item879 class="hide_extra">
     </span>
 
 </dd>
@@ -901,7 +955,7 @@
            <span class="types"><a class="type" href="../widget_containers/awful.widget.only_on_screen.html#widget">widget</a></span>
         The parent widget.</li>
         <li>
-           <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+           <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
         The hierarchy path between "self" and "widget".</li>
     </ol>
 
@@ -909,7 +963,7 @@
 
 
 
-    <span id=item878 class="hide_extra">
+    <span id=item880 class="hide_extra">
     </span>
 
 </dd>
@@ -940,7 +994,7 @@ In slot [obj]   foo bar 42
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">name</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          The name of the signal.
         </li>
         <li><span class="parameter">func</span>
@@ -957,23 +1011,23 @@ In slot [obj]   foo bar 42
         <pre class="example"><span class="keyword">local</span> o = gears.object{}
 <span class="comment">-- Function can be attached to signals
 </span><span class="keyword">local</span> <span class="keyword">function</span> slot(obj, a, b, c)
-    <span class="global">print</span>(<span class="string">'In slot'</span>, obj, a, b, c)
+    <span class="global">print</span>(<span class="string">"In slot"</span>, obj, a, b, c)
 <span class="keyword">end</span>
-o:connect_signal(<span class="string">'my_signal'</span>, slot)
+o:connect_signal(<span class="string">"my_signal"</span>, slot)
 <span class="comment">-- Emitting can be done without arguments. In that case, the object will be
 </span><span class="comment">-- implicitly added as an argument.
-</span>o:emit_signal <span class="string">'my_signal'</span>
+</span>o:emit_signal <span class="string">"my_signal"</span>
 <span class="comment">-- It is also possible to add as many random arguments are required.
-</span>o:emit_signal(<span class="string">'my_signal'</span>, <span class="string">'foo'</span>, <span class="string">'bar'</span>, <span class="number">42</span>)
+</span>o:emit_signal(<span class="string">"my_signal"</span>, <span class="string">"foo"</span>, <span class="string">"bar"</span>, <span class="number">42</span>)
 <span class="comment">-- Finally, to allow the object to be garbage collected (the memory freed), it
 </span><span class="comment">-- is necessary to disconnect the signal or use <code>weak_connect_signal</code>
-</span>o:disconnect_signal(<span class="string">'my_signal'</span>, slot)
+</span>o:disconnect_signal(<span class="string">"my_signal"</span>, slot)
 <span class="comment">-- This time, the <code>slot</code> wont be called as it is no longer connected.
-</span>o:emit_signal <span class="string">'my_signal'</span></pre>
+</span>o:emit_signal <span class="string">"my_signal"</span></pre>
     </ul>
 
 
-    <span id=item879 class="hide_extra">
+    <span id=item881 class="hide_extra">
     </span>
 
 </dd>
@@ -997,7 +1051,7 @@ o:connect_signal(<span class="string">'my_signal'</span>, slot)
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">name</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          The name of the signal.
         </li>
         <li><span class="parameter">func</span>
@@ -1011,7 +1065,7 @@ o:connect_signal(<span class="string">'my_signal'</span>, slot)
 
 
 
-    <span id=item880 class="hide_extra">
+    <span id=item882 class="hide_extra">
     </span>
 
 </dd>
@@ -1029,7 +1083,7 @@ o:connect_signal(<span class="string">'my_signal'</span>, slot)
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">name</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          The name of the signal.
         </li>
         <li><span class="parameter">func</span>
@@ -1043,7 +1097,7 @@ o:connect_signal(<span class="string">'my_signal'</span>, slot)
 
 
 
-    <span id=item881 class="hide_extra">
+    <span id=item883 class="hide_extra">
     </span>
 
 </dd>
@@ -1061,7 +1115,7 @@ o:connect_signal(<span class="string">'my_signal'</span>, slot)
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">name</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          The name of the signal
         </li>
         <li><span class="parameter">...</span>
@@ -1076,7 +1130,7 @@ o:connect_signal(<span class="string">'my_signal'</span>, slot)
 
 
 
-    <span id=item882 class="hide_extra">
+    <span id=item884 class="hide_extra">
     </span>
 
 </dd>
@@ -1107,7 +1161,7 @@ o:connect_signal(<span class="string">'my_signal'</span>, slot)
 
 
 
-    <span id=item883 class="hide_extra">
+    <span id=item885 class="hide_extra">
     </span>
 
 </dd>
@@ -1134,7 +1188,7 @@ o:connect_signal(<span class="string">'my_signal'</span>, slot)
 
 
 
-    <span id=item884 class="hide_extra">
+    <span id=item886 class="hide_extra">
     </span>
 
 </dd>
@@ -1151,7 +1205,7 @@ o:connect_signal(<span class="string">'my_signal'</span>, slot)
     <h3>Arguments:</h3>
     <ul>
         <li><span class="parameter">self</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          The current object instance itself.
         </li>
         <li><span class="parameter">lx</span>
@@ -1169,184 +1223,8 @@ o:connect_signal(<span class="string">'my_signal'</span>, slot)
          The button number.
         </li>
         <li><span class="parameter">mods</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          The modifiers (mod4, mod1 (alt), Control, Shift)
-        </li>
-        <li><span class="parameter">find_widgets_result</span> The entry from the result of
- <a href="../classes/wibox.drawable.html#wibox.drawable:find_widgets">wibox.drawable:find_widgets</a> for the position that the mouse hit.
-        <ul>
-        <li><span class="parameter">drawable</span>
-            <span class="types"><a class="type" href="../classes/wibox.drawable.html#">wibox.drawable</a></span>
-         The drawable containing
- the widget.
-        </li>
-        <li><span class="parameter">widget</span>
-            <span class="types"><a class="type" href="../widget_containers/awful.widget.only_on_screen.html#widget">widget</a></span>
-         The widget being displayed.
-        </li>
-        <li><span class="parameter">hierarchy</span>
-            <span class="types"><a class="type" href="../classes/wibox.hierarchy.html#">wibox.hierarchy</a></span>
-         The hierarchy
- managing the widget's geometry.
-        </li>
-        <li><span class="parameter">x</span>
-            <span class="types"><span class="type">number</span></span>
-         An approximation of the X position that
- the widget is visible at on the surface.
-        </li>
-        <li><span class="parameter">y</span>
-            <span class="types"><span class="type">number</span></span>
-         An approximation of the Y position that
- the widget is visible at on the surface.
-        </li>
-        <li><span class="parameter">width</span>
-            <span class="types"><span class="type">number</span></span>
-         An approximation of the width that
- the widget is visible at on the surface.
-        </li>
-        <li><span class="parameter">height</span>
-            <span class="types"><span class="type">number</span></span>
-         An approximation of the height that
- the widget is visible at on the surface.
-        </li>
-        <li><span class="parameter">widget_width</span>
-            <span class="types"><span class="type">number</span></span>
-         The exact width of the widget
- in its local coordinate system.
-        </li>
-        <li><span class="parameter">widget_height</span>
-            <span class="types"><span class="type">number</span></span>
-         The exact height of the widget
- in its local coordinate system.
-        </li>
-        </li></ul>
-    </ul>
-
-
-
-    <h3>See also:</h3>
-    <ul>
-         <a href="../input_handling/mouse.html#">mouse</a>
-    </ul>
-
-
-
-    <span id=item885 class="hide_extra">
-    </span>
-
-</dd>
-    <dt>
-    <a name = "button::release"></a>
-    <strong>button::release</strong>
-    <span class="baseclass" >
-    &middot;&nbsp;Inherited from wibox.widget.base
-    </span>
-    </dt>
-    <dd>
-    When a mouse button is released over the widget.
-
-    <h3>Arguments:</h3>
-    <ul>
-        <li><span class="parameter">self</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
-         The current object instance itself.
-        </li>
-        <li><span class="parameter">lx</span>
-            <span class="types"><span class="type">number</span></span>
-         The horizontal position relative to the (0,0) position in
- the widget.
-        </li>
-        <li><span class="parameter">ly</span>
-            <span class="types"><span class="type">number</span></span>
-         The vertical position relative to the (0,0) position in the
- widget.
-        </li>
-        <li><span class="parameter">button</span>
-            <span class="types"><span class="type">number</span></span>
-         The button number.
-        </li>
-        <li><span class="parameter">mods</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
-         The modifiers (mod4, mod1 (alt), Control, Shift)
-        </li>
-        <li><span class="parameter">find_widgets_result</span> The entry from the result of
- <a href="../classes/wibox.drawable.html#wibox.drawable:find_widgets">wibox.drawable:find_widgets</a> for the position that the mouse hit.
-        <ul>
-        <li><span class="parameter">drawable</span>
-            <span class="types"><a class="type" href="../classes/wibox.drawable.html#">wibox.drawable</a></span>
-         The drawable containing
- the widget.
-        </li>
-        <li><span class="parameter">widget</span>
-            <span class="types"><a class="type" href="../widget_containers/awful.widget.only_on_screen.html#widget">widget</a></span>
-         The widget being displayed.
-        </li>
-        <li><span class="parameter">hierarchy</span>
-            <span class="types"><a class="type" href="../classes/wibox.hierarchy.html#">wibox.hierarchy</a></span>
-         The hierarchy
- managing the widget's geometry.
-        </li>
-        <li><span class="parameter">x</span>
-            <span class="types"><span class="type">number</span></span>
-         An approximation of the X position that
- the widget is visible at on the surface.
-        </li>
-        <li><span class="parameter">y</span>
-            <span class="types"><span class="type">number</span></span>
-         An approximation of the Y position that
- the widget is visible at on the surface.
-        </li>
-        <li><span class="parameter">width</span>
-            <span class="types"><span class="type">number</span></span>
-         An approximation of the width that
- the widget is visible at on the surface.
-        </li>
-        <li><span class="parameter">height</span>
-            <span class="types"><span class="type">number</span></span>
-         An approximation of the height that
- the widget is visible at on the surface.
-        </li>
-        <li><span class="parameter">widget_width</span>
-            <span class="types"><span class="type">number</span></span>
-         The exact width of the widget
- in its local coordinate system.
-        </li>
-        <li><span class="parameter">widget_height</span>
-            <span class="types"><span class="type">number</span></span>
-         The exact height of the widget
- in its local coordinate system.
-        </li>
-        </li></ul>
-    </ul>
-
-
-
-    <h3>See also:</h3>
-    <ul>
-         <a href="../input_handling/mouse.html#">mouse</a>
-    </ul>
-
-
-
-    <span id=item886 class="hide_extra">
-    </span>
-
-</dd>
-    <dt>
-    <a name = "mouse::enter"></a>
-    <strong>mouse::enter</strong>
-    <span class="baseclass" >
-    &middot;&nbsp;Inherited from wibox.widget.base
-    </span>
-    </dt>
-    <dd>
-    When the mouse enter a widget.
-
-    <h3>Arguments:</h3>
-    <ul>
-        <li><span class="parameter">self</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
-         The current object instance itself.
         </li>
         <li><span class="parameter">find_widgets_result</span> The entry from the result of
  <a href="../classes/wibox.drawable.html#wibox.drawable:find_widgets">wibox.drawable:find_widgets</a> for the position that the mouse hit.
@@ -1412,20 +1290,38 @@ o:connect_signal(<span class="string">'my_signal'</span>, slot)
 
 </dd>
     <dt>
-    <a name = "mouse::leave"></a>
-    <strong>mouse::leave</strong>
+    <a name = "button::release"></a>
+    <strong>button::release</strong>
     <span class="baseclass" >
     &middot;&nbsp;Inherited from wibox.widget.base
     </span>
     </dt>
     <dd>
-    When the mouse leave a widget.
+    When a mouse button is released over the widget.
 
     <h3>Arguments:</h3>
     <ul>
         <li><span class="parameter">self</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          The current object instance itself.
+        </li>
+        <li><span class="parameter">lx</span>
+            <span class="types"><span class="type">number</span></span>
+         The horizontal position relative to the (0,0) position in
+ the widget.
+        </li>
+        <li><span class="parameter">ly</span>
+            <span class="types"><span class="type">number</span></span>
+         The vertical position relative to the (0,0) position in the
+ widget.
+        </li>
+        <li><span class="parameter">button</span>
+            <span class="types"><span class="type">number</span></span>
+         The button number.
+        </li>
+        <li><span class="parameter">mods</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+         The modifiers (mod4, mod1 (alt), Control, Shift)
         </li>
         <li><span class="parameter">find_widgets_result</span> The entry from the result of
  <a href="../classes/wibox.drawable.html#wibox.drawable:find_widgets">wibox.drawable:find_widgets</a> for the position that the mouse hit.
@@ -1490,6 +1386,164 @@ o:connect_signal(<span class="string">'my_signal'</span>, slot)
     </span>
 
 </dd>
+    <dt>
+    <a name = "mouse::enter"></a>
+    <strong>mouse::enter</strong>
+    <span class="baseclass" >
+    &middot;&nbsp;Inherited from wibox.widget.base
+    </span>
+    </dt>
+    <dd>
+    When the mouse enter a widget.
+
+    <h3>Arguments:</h3>
+    <ul>
+        <li><span class="parameter">self</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+         The current object instance itself.
+        </li>
+        <li><span class="parameter">find_widgets_result</span> The entry from the result of
+ <a href="../classes/wibox.drawable.html#wibox.drawable:find_widgets">wibox.drawable:find_widgets</a> for the position that the mouse hit.
+        <ul>
+        <li><span class="parameter">drawable</span>
+            <span class="types"><a class="type" href="../classes/wibox.drawable.html#">wibox.drawable</a></span>
+         The drawable containing
+ the widget.
+        </li>
+        <li><span class="parameter">widget</span>
+            <span class="types"><a class="type" href="../widget_containers/awful.widget.only_on_screen.html#widget">widget</a></span>
+         The widget being displayed.
+        </li>
+        <li><span class="parameter">hierarchy</span>
+            <span class="types"><a class="type" href="../classes/wibox.hierarchy.html#">wibox.hierarchy</a></span>
+         The hierarchy
+ managing the widget's geometry.
+        </li>
+        <li><span class="parameter">x</span>
+            <span class="types"><span class="type">number</span></span>
+         An approximation of the X position that
+ the widget is visible at on the surface.
+        </li>
+        <li><span class="parameter">y</span>
+            <span class="types"><span class="type">number</span></span>
+         An approximation of the Y position that
+ the widget is visible at on the surface.
+        </li>
+        <li><span class="parameter">width</span>
+            <span class="types"><span class="type">number</span></span>
+         An approximation of the width that
+ the widget is visible at on the surface.
+        </li>
+        <li><span class="parameter">height</span>
+            <span class="types"><span class="type">number</span></span>
+         An approximation of the height that
+ the widget is visible at on the surface.
+        </li>
+        <li><span class="parameter">widget_width</span>
+            <span class="types"><span class="type">number</span></span>
+         The exact width of the widget
+ in its local coordinate system.
+        </li>
+        <li><span class="parameter">widget_height</span>
+            <span class="types"><span class="type">number</span></span>
+         The exact height of the widget
+ in its local coordinate system.
+        </li>
+        </li></ul>
+    </ul>
+
+
+
+    <h3>See also:</h3>
+    <ul>
+         <a href="../input_handling/mouse.html#">mouse</a>
+    </ul>
+
+
+
+    <span id=item889 class="hide_extra">
+    </span>
+
+</dd>
+    <dt>
+    <a name = "mouse::leave"></a>
+    <strong>mouse::leave</strong>
+    <span class="baseclass" >
+    &middot;&nbsp;Inherited from wibox.widget.base
+    </span>
+    </dt>
+    <dd>
+    When the mouse leave a widget.
+
+    <h3>Arguments:</h3>
+    <ul>
+        <li><span class="parameter">self</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+         The current object instance itself.
+        </li>
+        <li><span class="parameter">find_widgets_result</span> The entry from the result of
+ <a href="../classes/wibox.drawable.html#wibox.drawable:find_widgets">wibox.drawable:find_widgets</a> for the position that the mouse hit.
+        <ul>
+        <li><span class="parameter">drawable</span>
+            <span class="types"><a class="type" href="../classes/wibox.drawable.html#">wibox.drawable</a></span>
+         The drawable containing
+ the widget.
+        </li>
+        <li><span class="parameter">widget</span>
+            <span class="types"><a class="type" href="../widget_containers/awful.widget.only_on_screen.html#widget">widget</a></span>
+         The widget being displayed.
+        </li>
+        <li><span class="parameter">hierarchy</span>
+            <span class="types"><a class="type" href="../classes/wibox.hierarchy.html#">wibox.hierarchy</a></span>
+         The hierarchy
+ managing the widget's geometry.
+        </li>
+        <li><span class="parameter">x</span>
+            <span class="types"><span class="type">number</span></span>
+         An approximation of the X position that
+ the widget is visible at on the surface.
+        </li>
+        <li><span class="parameter">y</span>
+            <span class="types"><span class="type">number</span></span>
+         An approximation of the Y position that
+ the widget is visible at on the surface.
+        </li>
+        <li><span class="parameter">width</span>
+            <span class="types"><span class="type">number</span></span>
+         An approximation of the width that
+ the widget is visible at on the surface.
+        </li>
+        <li><span class="parameter">height</span>
+            <span class="types"><span class="type">number</span></span>
+         An approximation of the height that
+ the widget is visible at on the surface.
+        </li>
+        <li><span class="parameter">widget_width</span>
+            <span class="types"><span class="type">number</span></span>
+         The exact width of the widget
+ in its local coordinate system.
+        </li>
+        <li><span class="parameter">widget_height</span>
+            <span class="types"><span class="type">number</span></span>
+         The exact height of the widget
+ in its local coordinate system.
+        </li>
+        </li></ul>
+    </ul>
+
+
+
+    <h3>See also:</h3>
+    <ul>
+         <a href="../input_handling/mouse.html#">mouse</a>
+    </ul>
+
+
+
+    <span id=item890 class="hide_extra">
+    </span>
+
+</dd>
 </dl>
 
 
@@ -1497,7 +1551,6 @@ o:connect_signal(<span class="string">'my_signal'</span>, slot)
 </div> <!-- id="main" -->
 <div id="about">
 <i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.6</a></i>
-<i style="float:right;">Last updated 2021-05-01 17:20:18 </i>
 </div> <!-- id="about" -->
 </div> <!-- id="container" -->
 </body>

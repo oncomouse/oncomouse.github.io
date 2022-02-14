@@ -149,6 +149,7 @@
   <li><a href="../popups_and_bars/awful.popup.html">awful.popup</a></li>
   <li><a href="../popups_and_bars/awful.titlebar.html">awful.titlebar</a></li>
   <li><a href="../popups_and_bars/awful.tooltip.html">awful.tooltip</a></li>
+  <li><a href="../popups_and_bars/awful.wallpaper.html">awful.wallpaper</a></li>
   <li><a href="../popups_and_bars/awful.wibar.html">awful.wibar</a></li>
   <li><a href="../popups_and_bars/awful.widget.calendar_popup.html">awful.widget.calendar_popup</a></li>
   <li><a href="../popups_and_bars/menubar.html">menubar</a></li>
@@ -241,7 +242,7 @@
 </p>
     <h3>Usage:</h3>
     <ul>
-        <pre class="example">local res = {&apos;a&apos;, &apos;b&apos;, &apos;c&apos;, &apos;d&apos;, &apos;e&apos;}
+        <pre class="example">local res = {&quot;a&quot;, &quot;b&quot;, &quot;c&quot;, &quot;d&quot;, &quot;e&quot;}
 for i=1, #res do
     local k = res[i]
     local v = gears.table.cycle_value(res, k, 1)
@@ -263,112 +264,144 @@ end
         <a href="#join"><span class='function_modname'>gears.table.</span>join <span class='function_args'> <b>(</b>...<b>)</b></span></a>
         <span class="summarytype"><span class='summary_type'> -&gt;&nbsp;table</span></span>
       </td>
-      <td colspan="2" class="summary">Join all tables given as arguments.</td>
+      <td colspan="2" class="summary">
+        Join all tables given as arguments.
+      </td>
     </tr>
     <tr>
       <td class="name" >
-        <a href="#crush"><span class='function_modname'>gears.table.</span>crush <span class='function_args'> <b>(</b>t, set[, raw=false]<b>)</b></span></a>
+        <a href="#crush"><span class='function_modname'>gears.table.</span>crush <span class='function_args'> <b>(</b>target, source[, raw=false]<b>)</b></span></a>
         <span class="summarytype"><span class='summary_type'> -&gt;&nbsp;table</span></span>
       </td>
-      <td colspan="2" class="summary">Override elements in the first table by the one in the second.</td>
+      <td colspan="2" class="summary">
+        Override elements in the target table with values from the source table.
+      </td>
     </tr>
     <tr>
       <td class="name" >
         <a href="#from_sparse"><span class='function_modname'>gears.table.</span>from_sparse <span class='function_args'> <b>(</b>t<b>)</b></span></a>
         <span class="summarytype"><span class='summary_type'> -&gt;&nbsp;table</span></span>
       </td>
-      <td colspan="2" class="summary">Pack all elements with an integer key into a new table.</td>
+      <td colspan="2" class="summary">
+        Pack all elements with an integer key into a new table.
+      </td>
     </tr>
     <tr>
       <td class="name" >
         <a href="#hasitem"><span class='function_modname'>gears.table.</span>hasitem <span class='function_args'> <b>(</b>t, item<b>)</b></span></a>
         <span class="summarytype"><span class='summary_type'> -&gt;&nbsp;string <i>or</i> number <i>or</i> nil</span></span>
       </td>
-      <td colspan="2" class="summary">Check if a table has an item and return its key.</td>
+      <td colspan="2" class="summary">
+        Check if a table has an item and return its key.
+      </td>
     </tr>
     <tr>
       <td class="name" >
         <a href="#find_keys"><span class='function_modname'>gears.table.</span>find_keys <span class='function_args'> <b>(</b>t, matcher[, ordered=false[, max=nil]]<b>)</b></span></a>
         <span class="summarytype"><span class='summary_type'> -&gt;&nbsp;table <i>or</i> nil</span></span>
       </td>
-      <td colspan="2" class="summary">Get all matching table keys for a <code>matcher</code> function.</td>
+      <td colspan="2" class="summary">
+        Get all matching table keys for a <code>matcher</code> function.
+      </td>
     </tr>
     <tr>
       <td class="name" >
         <a href="#find_first_key"><span class='function_modname'>gears.table.</span>find_first_key <span class='function_args'> <b>(</b>t, matcher[, ordered=false]<b>)</b></span></a>
         <span class="summarytype"><span class='summary_type'> -&gt;&nbsp;()</span></span>
       </td>
-      <td colspan="2" class="summary">Find the first key that matches a function.</td>
+      <td colspan="2" class="summary">
+        Find the first key that matches a function.
+      </td>
     </tr>
     <tr>
       <td class="name" >
         <a href="#keys"><span class='function_modname'>gears.table.</span>keys <span class='function_args'> <b>(</b>t<b>)</b></span></a>
         <span class="summarytype"><span class='summary_type'> -&gt;&nbsp;table</span></span>
       </td>
-      <td colspan="2" class="summary">Get a sorted table with all keys from a table.</td>
+      <td colspan="2" class="summary">
+        Get a sorted table with all keys from a table.
+      </td>
     </tr>
     <tr>
       <td class="name" >
         <a href="#count_keys"><span class='function_modname'>gears.table.</span>count_keys <span class='function_args'> <b>(</b>t<b>)</b></span></a>
         <span class="summarytype"><span class='summary_type'> -&gt;&nbsp;number</span></span>
       </td>
-      <td colspan="2" class="summary">Get the number of keys in a table, both integer and string indicies.</td>
+      <td colspan="2" class="summary">
+        Get the number of keys in a table, both integer and string indicies.
+      </td>
     </tr>
     <tr>
       <td class="name" >
         <a href="#keys_filter"><span class='function_modname'>gears.table.</span>keys_filter <span class='function_args'> <b>(</b>t, ...<b>)</b></span></a>
         <span class="summarytype"><span class='summary_type'> -&gt;&nbsp;table</span></span>
       </td>
-      <td colspan="2" class="summary">Filter a table's keys for certain content type.</td>
+      <td colspan="2" class="summary">
+        Filter a table's keys for certain content type.
+      </td>
     </tr>
     <tr>
       <td class="name" >
         <a href="#reverse"><span class='function_modname'>gears.table.</span>reverse <span class='function_args'> <b>(</b>t<b>)</b></span></a>
         <span class="summarytype"><span class='summary_type'> -&gt;&nbsp;table</span></span>
       </td>
-      <td colspan="2" class="summary">Reverse a table.</td>
+      <td colspan="2" class="summary">
+        Reverse a table.
+      </td>
     </tr>
     <tr>
       <td class="name" >
         <a href="#clone"><span class='function_modname'>gears.table.</span>clone <span class='function_args'> <b>(</b>t[, deep=true]<b>)</b></span></a>
         <span class="summarytype"><span class='summary_type'> -&gt;&nbsp;table</span></span>
       </td>
-      <td colspan="2" class="summary">Clone a table.</td>
+      <td colspan="2" class="summary">
+        Clone a table.
+      </td>
     </tr>
     <tr>
       <td class="name" >
         <a href="#cycle_value"><span class='function_modname'>gears.table.</span>cycle_value <span class='function_args'> <b>(</b>t, value[, step_size=1[, filter=nil[, start_at=1]]]<b>)</b></span></a>
         <span class="summarytype"><span class='summary_type'> -&gt;&nbsp;number <i>or</i> nil</span></span>
       </td>
-      <td colspan="2" class="summary">Get the next (or previous) value from a table and cycle if necessary.</td>
+      <td colspan="2" class="summary">
+        Get the next (or previous) value from a table and cycle if necessary.
+      </td>
     </tr>
     <tr>
       <td class="name" >
         <a href="#iterate"><span class='function_modname'>gears.table.</span>iterate <span class='function_args'> <b>(</b>t, filter, start<b>)</b></span></a>
         <span class="summarytype"><span class='summary_type'> -&gt;&nbsp;func</span></span>
       </td>
-      <td colspan="2" class="summary">Iterate over a table.</td>
+      <td colspan="2" class="summary">
+        Iterate over a table.
+      </td>
     </tr>
     <tr>
       <td class="name" >
-        <a href="#merge"><span class='function_modname'>gears.table.</span>merge <span class='function_args'> <b>(</b>t, set<b>)</b></span></a>
+        <a href="#merge"><span class='function_modname'>gears.table.</span>merge <span class='function_args'> <b>(</b>target, source<b>)</b></span></a>
         <span class="summarytype"><span class='summary_type'> -&gt;&nbsp;table</span></span>
       </td>
-      <td colspan="2" class="summary">Merge items from one table to another one.</td>
+      <td colspan="2" class="summary">
+        Merge items from the source table into the target table.
+      </td>
     </tr>
     <tr>
       <td class="name" >
         <a href="#diff_merge"><span class='function_modname'>gears.table.</span>diff_merge <span class='function_args'> <b>(</b>target, new, identifier[, merger]<b>)</b></span></a>
         <span class="summarytype"><span class='summary_type'> -&gt;&nbsp;(table, table, table, table)</span></span>
       </td>
-      <td colspan="2" class="summary">Update the <code>target</code> table with entries from the <code>new</code> table.</td>
+      <td colspan="2" class="summary">
+        Update the <code>target</code> table with entries from the <code>new</code> table.
+      </td>
     </tr>
     <tr>
       <td class="name" >
         <a href="#map"><span class='function_modname'>gears.table.</span>map <span class='function_args'> <b>(</b>f, tbl<b>)</b></span></a>
         <span class="summarytype"><span class='summary_type'> -&gt;&nbsp;table</span></span>
       </td>
-      <td colspan="2" class="summary">Map a function to a table.</td>
+      <td colspan="2" class="summary">
+        Map a function to a table.
+      </td>
     </tr>
 </table>
 
@@ -393,7 +426,7 @@ end
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">...</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          Tables to join.
         </li>
     </ul>
@@ -401,7 +434,7 @@ end
     <h3>Returns:</h3>
     <ol>
 
-           <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+           <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
         A new table containing all entries from the arguments.
     </ol>
 
@@ -409,51 +442,55 @@ end
 
 
 
-    <span id=item2107 class="hide_extra">
+    <span id=item2146 class="hide_extra">
     </span>
 
 </dd>
     <dt>
     <a name = "crush"></a>
-    <strong><span class='function_modname'>gears.table.</span>crush <span class='function_args'> <b>(</b>t, set[, raw=false]<b>)</b></span></strong>
+    <strong><span class='function_modname'>gears.table.</span>crush <span class='function_args'> <b>(</b>target, source[, raw=false]<b>)</b></span></strong>
     <span class="proptype"><span class='summary_type'> -&gt;&nbsp;table</span></span>
     <span class="baseclass" >
     </span>
     </dt>
     <dd>
-    Override elements in the first table by the one in the second. </p>
+    Override elements in the target table with values from the source table. </p>
 
 <p> Note that this method doesn't copy entries found in <code>__index</code>.
+ Nested tables are copied by reference and not recursed into.
 
     <h3>Parameters:</h3>
     <ul>
-        <li><span class="parameter">t</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
-         the table to be overriden
+        <li><span class="parameter">target</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+         The target table. Values from <code>source</code> will be copied
+   into this table.
         </li>
-        <li><span class="parameter">set</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
-         the table used to override members of <code>t</code>
+        <li><span class="parameter">source</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+         The source table. Its values will be copied into
+   <code>target</code>.
         </li>
         <li><span class="parameter">raw</span>
             <span class="types"><span class="type">bool</span></span>
-         Use rawset (avoid the metatable)
-         (<em>default</em> false)
+         If <code>true</code>, values will be assigned with <a href="https://www.lua.org/manual/5.1/manual.html#pdf-rawset">rawset</a>.
+   This will bypass metamethods on <code>target</code>.
+         (<em>default</em> <code>false</code>)
         </li>
     </ul>
 
     <h3>Returns:</h3>
     <ol>
 
-           <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
-        t (for convenience)
+           <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+        The target table.
     </ol>
 
 
 
 
 
-    <span id=item2108 class="hide_extra">
+    <span id=item2147 class="hide_extra">
     </span>
 
 </dd>
@@ -475,7 +512,7 @@ end
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">t</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          A potentially sparse table.
         </li>
     </ul>
@@ -483,7 +520,7 @@ end
     <h3>Returns:</h3>
     <ol>
 
-           <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+           <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
         A packed table with only numeric keys.
     </ol>
 
@@ -491,7 +528,7 @@ end
 
 
 
-    <span id=item2109 class="hide_extra">
+    <span id=item2148 class="hide_extra">
     </span>
 
 </dd>
@@ -508,7 +545,7 @@ end
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">t</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          The table.
         </li>
         <li><span class="parameter">item</span>
@@ -519,7 +556,7 @@ end
     <h3>Returns:</h3>
     <ol>
 
-           <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a> or <span class="type">number</span></span>
+           <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a> or <span class="type">number</span></span>
         The key of the item.
     </ol>
      <h3>Or</h3>
@@ -535,7 +572,7 @@ end
 
 
 
-    <span id=item2110 class="hide_extra">
+    <span id=item2149 class="hide_extra">
     </span>
 
 </dd>
@@ -552,7 +589,7 @@ end
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">t</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          The table.
         </li>
         <li><span class="parameter">matcher</span>
@@ -564,19 +601,19 @@ end
             <span class="types"><span class="type">boolean</span></span>
          If true, only look for continuous
    numeric keys.
-         (<em>default</em> false)
+         (<em>default</em> <code>false</code>)
         </li>
         <li><span class="parameter">max</span>
             <span class="types"><span class="type">number</span></span>
          The maximum number of entries to find.
-         (<em>default</em> nil)
+         (<em>default</em> <code>nil</code>)
         </li>
     </ul>
 
     <h3>Returns:</h3>
     <ol>
 
-           <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a> or <span class="type">nil</span></span>
+           <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a> or <span class="type">nil</span></span>
         An ordered table with all the keys or <code>nil</code> if none were
    found.
     </ol>
@@ -585,7 +622,7 @@ end
 
 
 
-    <span id=item2111 class="hide_extra">
+    <span id=item2150 class="hide_extra">
     </span>
 
 </dd>
@@ -602,7 +639,7 @@ end
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">t</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          The table.
         </li>
         <li><span class="parameter">matcher</span>
@@ -614,7 +651,7 @@ end
             <span class="types"><span class="type">boolean</span></span>
          If true, only look for continuous
    numeric keys.
-         (<em>default</em> false)
+         (<em>default</em> <code>false</code>)
         </li>
     </ul>
 
@@ -628,7 +665,7 @@ end
 
 
 
-    <span id=item2112 class="hide_extra">
+    <span id=item2151 class="hide_extra">
     </span>
 
 </dd>
@@ -645,7 +682,7 @@ end
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">t</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          The table for which the keys to get.
         </li>
     </ul>
@@ -653,7 +690,7 @@ end
     <h3>Returns:</h3>
     <ol>
 
-           <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+           <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
         A table with keys.
     </ol>
 
@@ -661,7 +698,7 @@ end
 
 
 
-    <span id=item2113 class="hide_extra">
+    <span id=item2152 class="hide_extra">
     </span>
 
 </dd>
@@ -685,7 +722,7 @@ end
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">t</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          The table for which to count the keys.
         </li>
     </ul>
@@ -701,13 +738,13 @@ end
 
     <h3>Usage:</h3>
     <ul>
-        <pre class="example"><span class="keyword">local</span> tab = { <span class="number">1</span>, <span class="keyword">nil</span>, <span class="string">'a'</span>, <span class="string">'b'</span>, foo = <span class="string">'bar'</span> }
+        <pre class="example"><span class="keyword">local</span> tab = { <span class="number">1</span>, <span class="keyword">nil</span>, <span class="string">"a"</span>, <span class="string">"b"</span>, foo = <span class="string">"bar"</span> }
 <span class="keyword">local</span> count = gears.<span class="global">table</span>.count_keys(tab)
-<span class="global">print</span>(<span class="string">'The table has '</span> .. count .. <span class="string">' keys'</span>)</pre>
+<span class="global">print</span>(<span class="string">"The table has "</span> .. count .. <span class="string">" keys"</span>)</pre>
     </ul>
 
 
-    <span id=item2114 class="hide_extra">
+    <span id=item2153 class="hide_extra">
     </span>
 
 </dd>
@@ -724,11 +761,11 @@ end
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">t</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          The table to retrieve the keys for.
         </li>
         <li><span class="parameter">...</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          The types to look for.
         </li>
     </ul>
@@ -736,7 +773,7 @@ end
     <h3>Returns:</h3>
     <ol>
 
-           <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+           <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
         A filtered table.
     </ol>
 
@@ -744,7 +781,7 @@ end
 
 
 
-    <span id=item2115 class="hide_extra">
+    <span id=item2154 class="hide_extra">
     </span>
 
 </dd>
@@ -761,7 +798,7 @@ end
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">t</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          The table to reverse.
         </li>
     </ul>
@@ -769,7 +806,7 @@ end
     <h3>Returns:</h3>
     <ol>
 
-           <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+           <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
         A reversed table.
     </ol>
 
@@ -777,7 +814,7 @@ end
 
 
 
-    <span id=item2116 class="hide_extra">
+    <span id=item2155 class="hide_extra">
     </span>
 
 </dd>
@@ -794,20 +831,21 @@ end
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">t</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          The table to clone.
         </li>
         <li><span class="parameter">deep</span>
             <span class="types"><span class="type">bool</span></span>
-         Create a deep clone?
-         (<em>default</em> true)
+         If <code>true</code>, recurse into nested tables to create
+   a deep clone.
+         (<em>default</em> <code>true</code>)
         </li>
     </ul>
 
     <h3>Returns:</h3>
     <ol>
 
-           <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+           <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
         A clone of <code>t</code>.
     </ol>
 
@@ -815,7 +853,7 @@ end
 
 
 
-    <span id=item2117 class="hide_extra">
+    <span id=item2156 class="hide_extra">
     </span>
 
 </dd>
@@ -835,7 +873,7 @@ end
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">t</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          The input table.
         </li>
         <li><span class="parameter">value</span>
@@ -845,19 +883,19 @@ end
             <span class="types"><span class="type">number</span></span>
          The amount to increment the index by.
    When this is negative, the function will cycle through the table backwards.
-         (<em>default</em> 1)
+         (<em>default</em> <code>1</code>)
         </li>
         <li><span class="parameter">filter</span>
             <span class="types"><span class="type">function</span></span>
          An optional filter function. It receives a
    value from the table as parameter and should return a boolean. If it
    returns <code>false</code>, the value is skipped and <a href="../utility_libraries/gears.table.html#cycle_value">cycle_value</a> tries the next one.
-         (<em>default</em> nil)
+         (<em>default</em> <code>nil</code>)
         </li>
         <li><span class="parameter">start_at</span>
             <span class="types"><span class="type">number</span></span>
          Where to start the lookup from.
-         (<em>default</em> 1)
+         (<em>default</em> <code>1</code>)
         </li>
     </ul>
 
@@ -875,7 +913,7 @@ end
 
 
 
-    <span id=item2118 class="hide_extra">
+    <span id=item2157 class="hide_extra">
     </span>
 
 </dd>
@@ -895,7 +933,7 @@ end
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">t</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          The table to iterate.
         </li>
         <li><span class="parameter">filter</span>
@@ -907,7 +945,7 @@ end
             <span class="types"><span class="type">int</span></span>
          Index to start iterating from.
    Default is 1 (=> start of the table).
-         (<em>default</em> 1)
+         (<em>default</em> <code>1</code>)
         </li>
     </ul>
 
@@ -924,44 +962,50 @@ end
 
 
 
-    <span id=item2119 class="hide_extra">
+    <span id=item2158 class="hide_extra">
     </span>
 
 </dd>
     <dt>
     <a name = "merge"></a>
-    <strong><span class='function_modname'>gears.table.</span>merge <span class='function_args'> <b>(</b>t, set<b>)</b></span></strong>
+    <strong><span class='function_modname'>gears.table.</span>merge <span class='function_args'> <b>(</b>target, source<b>)</b></span></strong>
     <span class="proptype"><span class='summary_type'> -&gt;&nbsp;table</span></span>
     <span class="baseclass" >
     </span>
     </dt>
     <dd>
-    Merge items from one table to another one.
+    Merge items from the source table into the target table. </p>
+
+<p> Note that this only considers the array part of <code>source</code> (same semantics
+ as <a href="https://www.lua.org/manual/5.1/manual.html#pdf-ipairs">ipairs</a>).
+ Nested tables are copied by reference and not recursed into.
 
     <h3>Parameters:</h3>
     <ul>
-        <li><span class="parameter">t</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
-         The container table
+        <li><span class="parameter">target</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+         The target table. Values from <code>source</code> will be copied
+   into this table.
         </li>
-        <li><span class="parameter">set</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
-         The mixin table.
+        <li><span class="parameter">source</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+         The source table. Its values will be copied into
+   <code>target</code>.
         </li>
     </ul>
 
     <h3>Returns:</h3>
     <ol>
 
-           <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
-        (for convenience).
+           <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+        The target table.
     </ol>
 
 
 
 
 
-    <span id=item2120 class="hide_extra">
+    <span id=item2159 class="hide_extra">
     </span>
 
 </dd>
@@ -988,11 +1032,11 @@ end
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">target</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          The table to modify.
         </li>
         <li><span class="parameter">new</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          The table which contains the new content.
         </li>
         <li><span class="parameter">identifier</span>
@@ -1013,16 +1057,16 @@ end
     <h3>Returns:</h3>
     <ol>
         <li>
-           <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+           <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
         The target table (for daisy chaining).</li>
         <li>
-           <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+           <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
         The new entries.</li>
         <li>
-           <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+           <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
         The removed entries.</li>
         <li>
-           <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+           <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
         The updated entries.</li>
     </ol>
 
@@ -1036,7 +1080,7 @@ end
     </ul>
 
 
-    <span id=item2121 class="hide_extra">
+    <span id=item2160 class="hide_extra">
     </span>
 
 </dd>
@@ -1050,7 +1094,7 @@ end
     <dd>
     Map a function to a table. </p>
 
-<p> The function is applied to each value on the table, returning a modified
+<p> The function is applied to each value in the table, returning a modified
  table.
 
     <h3>Parameters:</h3>
@@ -1060,7 +1104,7 @@ end
          The function to be applied to each value in the table.
         </li>
         <li><span class="parameter">tbl</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          The container table whose values will be operated on.
         </li>
     </ul>
@@ -1068,7 +1112,7 @@ end
     <h3>Returns:</h3>
     <ol>
 
-           <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+           <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
 
 
 
@@ -1078,7 +1122,7 @@ end
 
 
 
-    <span id=item2122 class="hide_extra">
+    <span id=item2161 class="hide_extra">
     </span>
 
 </dd>
@@ -1089,7 +1133,6 @@ end
 </div> <!-- id="main" -->
 <div id="about">
 <i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.6</a></i>
-<i style="float:right;">Last updated 2021-05-01 17:20:18 </i>
 </div> <!-- id="about" -->
 </div> <!-- id="container" -->
 </body>

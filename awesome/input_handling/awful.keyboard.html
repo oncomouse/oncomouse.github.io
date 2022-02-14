@@ -137,6 +137,7 @@
   <li><a href="../popups_and_bars/awful.popup.html">awful.popup</a></li>
   <li><a href="../popups_and_bars/awful.titlebar.html">awful.titlebar</a></li>
   <li><a href="../popups_and_bars/awful.tooltip.html">awful.tooltip</a></li>
+  <li><a href="../popups_and_bars/awful.wallpaper.html">awful.wallpaper</a></li>
   <li><a href="../popups_and_bars/awful.wibar.html">awful.wibar</a></li>
   <li><a href="../popups_and_bars/awful.widget.calendar_popup.html">awful.widget.calendar_popup</a></li>
   <li><a href="../popups_and_bars/menubar.html">menubar</a></li>
@@ -235,8 +236,15 @@
   <div class="extra-header__section">
     <h3>Info:</h3>
     <ul>
-            <li><strong>Copyright</strong>: 2018-2019 Emmanuel Lepage Vallee</li>
-            <li><strong>Author</strong>: Emmanuel Lepage Vallee &lt;elv1313@gmail.com&gt;</li>
+                <li><strong>Copyright</strong>: 2018-2019 Emmanuel Lepage Vallee</li>
+                <li>
+                    <strong>Originally authored by</strong>: Emmanuel Lepage Vallee &lt;elv1313@gmail.com&gt;<br />
+                    <small>(Full contributors list available on
+                    <a href="https://github.com/awesomeWM/awesome/graphs/contributors">
+                        our github project)
+                    </a></small>
+
+                </li>
     </ul>
   </div>
 
@@ -249,7 +257,9 @@
       <td class="name" >
         <a href="#module.append_global_keybindings">awful.keyboard.append_global_keybindings (keys)</a>
       </td>
-      <td colspan="2" class="summary">Add multiple <a href="../input_handling/awful.key.html#">awful.key</a> based keybindings to the global set.</td>
+      <td colspan="2" class="summary">
+        Add multiple <a href="../input_handling/awful.key.html#">awful.key</a> based keybindings to the global set.
+      </td>
     </tr>
 </table>
 <h2><a href="#Static_module_functions">Static module functions</a></h2>
@@ -259,49 +269,63 @@
         <a href="#emulate_key_combination"><span class='function_modname'>awful.keyboard.</span>emulate_key_combination <span class='function_args'> <b>(</b>modifiers, key<b>)</b></span></a>
         <span class="summarytype"></span>
       </td>
-      <td colspan="2" class="summary">Execute a key combination.</td>
+      <td colspan="2" class="summary">
+        Execute a key combination.
+      </td>
     </tr>
     <tr>
       <td class="name" >
         <a href="#append_global_keybinding"><span class='function_modname'>awful.keyboard.</span>append_global_keybinding <span class='function_args'> <b>(</b>key<b>)</b></span></a>
         <span class="summarytype"></span>
       </td>
-      <td colspan="2" class="summary">Add an <a href="../input_handling/awful.key.html#">awful.key</a> based keybinding to the global set.</td>
+      <td colspan="2" class="summary">
+        Add an <a href="../input_handling/awful.key.html#">awful.key</a> based keybinding to the global set.
+      </td>
     </tr>
     <tr>
       <td class="name" >
         <a href="#remove_global_keybinding"><span class='function_modname'>awful.keyboard.</span>remove_global_keybinding <span class='function_args'> <b>(</b>key<b>)</b></span></a>
         <span class="summarytype"></span>
       </td>
-      <td colspan="2" class="summary">Remove a keybinding from the global set.</td>
+      <td colspan="2" class="summary">
+        Remove a keybinding from the global set.
+      </td>
     </tr>
     <tr>
       <td class="name" >
         <a href="#append_client_keybinding"><span class='function_modname'>awful.keyboard.</span>append_client_keybinding <span class='function_args'> <b>(</b>key<b>)</b></span></a>
         <span class="summarytype"></span>
       </td>
-      <td colspan="2" class="summary">Add an <a href="../input_handling/awful.key.html#">awful.key</a> to the default client keys.</td>
+      <td colspan="2" class="summary">
+        Add an <a href="../input_handling/awful.key.html#">awful.key</a> to the default client keys.
+      </td>
     </tr>
     <tr>
       <td class="name" >
         <a href="#append_client_keybindings"><span class='function_modname'>awful.keyboard.</span>append_client_keybindings <span class='function_args'> <b>(</b>keys<b>)</b></span></a>
         <span class="summarytype"></span>
       </td>
-      <td colspan="2" class="summary">Add a <a href="../input_handling/awful.key.html#">awful.key</a>s to the default client keys.</td>
+      <td colspan="2" class="summary">
+        Add a <a href="../input_handling/awful.key.html#">awful.key</a>s to the default client keys.
+      </td>
     </tr>
     <tr>
       <td class="name" >
         <a href="#remove_client_keybinding"><span class='function_modname'>awful.keyboard.</span>remove_client_keybinding <span class='function_args'> <b>(</b>key<b>)</b></span></a>
         <span class="summarytype"><span class='summary_type'> -&gt;&nbsp;boolean</span></span>
       </td>
-      <td colspan="2" class="summary">Remove a key from the default client keys.</td>
+      <td colspan="2" class="summary">
+        Remove a key from the default client keys.
+      </td>
     </tr>
     <tr>
       <td class="name" >
         <a href="#get_key_name"><span class='function_modname'>awful.keyboard.</span>get_key_name <span class='function_args'> <b>(</b><b>)</b></span></a>
         <span class="summarytype"><span class='summary_type'> -&gt;&nbsp;(string, nil) <i>or</i> (string, nil)</span></span>
       </td>
-      <td colspan="2" class="summary">Get X11 keysym and a one-character representation from an Awesome keycode.</td>
+      <td colspan="2" class="summary">
+        Get X11 keysym and a one-character representation from an Awesome keycode.
+      </td>
     </tr>
 </table>
 
@@ -328,7 +352,7 @@
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">keys</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          A table of <a href="../input_handling/awful.key.html#">awful.key</a> objects. Optionally, it can have
   a <code>group</code> entry. If set, the <code>group</code> property will be set on all <code>awful.keys</code>
   objects.
@@ -346,7 +370,7 @@
 
 
 
-    <span id=item760 class="hide_extra">
+    <span id=item757 class="hide_extra">
     </span>
 
 </dd>
@@ -374,12 +398,12 @@
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">modifiers</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          A modified table. Valid modifiers are: <code>Any</code>, <code>Mod1</code>,
    <code>Mod2</code>, <code>Mod3</code>, <code>Mod4</code>, <code>Mod5</code>, <code>Shift</code>, <code>Lock</code> and <code>Control</code>.
         </li>
         <li><span class="parameter">key</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          The key.
         </li>
     </ul>
@@ -393,7 +417,7 @@
 
 
 
-    <span id=item761 class="hide_extra">
+    <span id=item758 class="hide_extra">
     </span>
 
 </dd>
@@ -430,7 +454,7 @@
 
 
 
-    <span id=item762 class="hide_extra">
+    <span id=item759 class="hide_extra">
     </span>
 
 </dd>
@@ -462,7 +486,7 @@
 
 
 
-    <span id=item763 class="hide_extra">
+    <span id=item760 class="hide_extra">
     </span>
 
 </dd>
@@ -495,13 +519,13 @@
 
 
      <br />
-     <center id=button764>
-     <a class="show_more_button" onclick="show_extra('764')">
+     <center id=button761>
+     <a class="show_more_button" onclick="show_extra('761')">
       Click to display more
      </a>
      </center>
 
-    <span id=item764 class="hide_extra">
+    <span id=item761 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>client_keybinding::added</code></span>  </li>
@@ -526,7 +550,7 @@
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">keys</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          A table containing <a href="../input_handling/awful.key.html#">awful.key</a> objects.
         </li>
     </ul>
@@ -541,13 +565,13 @@
 
 
      <br />
-     <center id=button765>
-     <a class="show_more_button" onclick="show_extra('765')">
+     <center id=button762>
+     <a class="show_more_button" onclick="show_extra('762')">
       Click to display more
      </a>
      </center>
 
-    <span id=item765 class="hide_extra">
+    <span id=item762 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>client_keybinding::added</code></span>  </li>
@@ -591,7 +615,7 @@
 
 
 
-    <span id=item766 class="hide_extra">
+    <span id=item763 class="hide_extra">
     </span>
 
 </dd>
@@ -620,7 +644,7 @@
     <h3>Returns:</h3>
     <ol>
         <li>
-           <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+           <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
         keysym The keysym name</li>
         <li>
            <span class="types"><span class="type">nil</span></span>
@@ -629,7 +653,7 @@
      <h3>Or</h3>
     <ol>
         <li>
-           <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+           <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
         printsymbol The xkb<em>keysym</em>to_utf8 result</li>
         <li>
            <span class="types"><span class="type">nil</span></span>
@@ -640,7 +664,7 @@
 
 
 
-    <span id=item767 class="hide_extra">
+    <span id=item764 class="hide_extra">
     </span>
 
 </dd>
@@ -651,7 +675,6 @@
 </div> <!-- id="main" -->
 <div id="about">
 <i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.6</a></i>
-<i style="float:right;">Last updated 2021-05-01 17:20:18 </i>
 </div> <!-- id="about" -->
 </div> <!-- id="container" -->
 </body>

@@ -144,6 +144,7 @@
   <li><a href="../popups_and_bars/awful.popup.html">awful.popup</a></li>
   <li><a href="../popups_and_bars/awful.titlebar.html">awful.titlebar</a></li>
   <li><a href="../popups_and_bars/awful.tooltip.html">awful.tooltip</a></li>
+  <li><a href="../popups_and_bars/awful.wallpaper.html">awful.wallpaper</a></li>
   <li><a href="../popups_and_bars/awful.wibar.html">awful.wibar</a></li>
   <li><a href="../popups_and_bars/awful.widget.calendar_popup.html">awful.widget.calendar_popup</a></li>
   <li><a href="../popups_and_bars/menubar.html">menubar</a></li>
@@ -280,8 +281,15 @@ clientbuttons = awful.util.<span class="global">table</span>.join(
   <div class="extra-header__section">
     <h3>Info:</h3>
     <ul>
-            <li><strong>Copyright</strong>: 2008-2009 Julien Danjou</li>
-            <li><strong>Author</strong>: Julien Danjou &lt;julien@danjou.info&gt;</li>
+                <li><strong>Copyright</strong>: 2008-2009 Julien Danjou</li>
+                <li>
+                    <strong>Originally authored by</strong>: Julien Danjou &lt;julien@danjou.info&gt;<br />
+                    <small>(Full contributors list available on
+                    <a href="https://github.com/awesomeWM/awesome/graphs/contributors">
+                        our github project)
+                    </a></small>
+
+                </li>
     </ul>
   </div>
 
@@ -294,7 +302,9 @@ clientbuttons = awful.util.<span class="global">table</span>.join(
       <td class="name" >
         <a href="#append_global_mousebindings"><span class='function_modname'>mouse.</span>append_global_mousebindings (buttons)</a>
       </td>
-      <td colspan="2" class="summary">Add multiple <a href="../input_handling/awful.button.html#">awful.button</a> based mousebindings to the global set.</td>
+      <td colspan="2" class="summary">
+        Add multiple <a href="../input_handling/awful.button.html#">awful.button</a> based mousebindings to the global set.
+      </td>
     </tr>
 </table>
 <h2><a href="#Static_module_functions">Static module functions</a></h2>
@@ -304,56 +314,72 @@ clientbuttons = awful.util.<span class="global">table</span>.join(
         <a href="#object_under_pointer"><span class='function_modname'>mouse.</span>object_under_pointer <span class='function_args'> <b>(</b><b>)</b></span></a>
         <span class="summarytype"><span class='summary_type'> -&gt;&nbsp;client.object <i>or</i> nil</span></span>
       </td>
-      <td colspan="2" class="summary">Get the client or any object which is under the pointer.</td>
+      <td colspan="2" class="summary">
+        Get the client or any object which is under the pointer.
+      </td>
     </tr>
     <tr>
       <td class="name" >
         <a href="#awful.mouse.wibox.move">awful.mouse.wibox.move <span class='function_args'> <b>(</b>w<b>)</b></span></a>
         <span class="summarytype"></span>
       </td>
-      <td colspan="2" class="summary">Move the wibox under the cursor.</td>
+      <td colspan="2" class="summary">
+        Move the wibox under the cursor.
+      </td>
     </tr>
     <tr>
       <td class="name" >
         <a href="#awful.mouse.append_global_mousebinding">awful.mouse.append_global_mousebinding <span class='function_args'> <b>(</b>button<b>)</b></span></a>
         <span class="summarytype"></span>
       </td>
-      <td colspan="2" class="summary">Add an <a href="../input_handling/awful.button.html#">awful.button</a> based mousebinding to the global set.</td>
+      <td colspan="2" class="summary">
+        Add an <a href="../input_handling/awful.button.html#">awful.button</a> based mousebinding to the global set.
+      </td>
     </tr>
     <tr>
       <td class="name" >
         <a href="#awful.mouse.remove_global_mousebinding">awful.mouse.remove_global_mousebinding <span class='function_args'> <b>(</b>button<b>)</b></span></a>
         <span class="summarytype"></span>
       </td>
-      <td colspan="2" class="summary">Remove a mousebinding from the global set.</td>
+      <td colspan="2" class="summary">
+        Remove a mousebinding from the global set.
+      </td>
     </tr>
     <tr>
       <td class="name" >
         <a href="#awful.mouse.append_client_mousebinding">awful.mouse.append_client_mousebinding <span class='function_args'> <b>(</b>button<b>)</b></span></a>
         <span class="summarytype"></span>
       </td>
-      <td colspan="2" class="summary">Add an <a href="../input_handling/awful.button.html#">awful.button</a> to the default client buttons.</td>
+      <td colspan="2" class="summary">
+        Add an <a href="../input_handling/awful.button.html#">awful.button</a> to the default client buttons.
+      </td>
     </tr>
     <tr>
       <td class="name" >
         <a href="#awful.mouse.append_client_mousebindings">awful.mouse.append_client_mousebindings <span class='function_args'> <b>(</b>buttons<b>)</b></span></a>
         <span class="summarytype"></span>
       </td>
-      <td colspan="2" class="summary">Add a <a href="../input_handling/awful.button.html#">awful.button</a>s to the default client buttons.</td>
+      <td colspan="2" class="summary">
+        Add a <a href="../input_handling/awful.button.html#">awful.button</a>s to the default client buttons.
+      </td>
     </tr>
     <tr>
       <td class="name" >
         <a href="#awful.mouse.remove_client_mousebinding">awful.mouse.remove_client_mousebinding <span class='function_args'> <b>(</b>button<b>)</b></span></a>
         <span class="summarytype"><span class='summary_type'> -&gt;&nbsp;boolean</span></span>
       </td>
-      <td colspan="2" class="summary">Remove a mousebinding from the default client buttons.</td>
+      <td colspan="2" class="summary">
+        Remove a mousebinding from the default client buttons.
+      </td>
     </tr>
     <tr>
       <td class="name" >
         <a href="#coords"><span class='function_modname'>mouse.</span>coords <span class='function_args'> <b>(</b>[coords_table=nil[, silent=nil]]<b>)</b></span></a>
         <span class="summarytype"><span class='summary_type'> -&gt;&nbsp;(integer, integer, table)</span></span>
       </td>
-      <td colspan="2" class="summary">Get or set the mouse coords.</td>
+      <td colspan="2" class="summary">
+        Get or set the mouse coords.
+      </td>
     </tr>
 </table>
 <h2><a href="#Object_properties">Object properties</a></h2>
@@ -361,52 +387,72 @@ clientbuttons = awful.util.<span class="global">table</span>.join(
     <tr>
       <td class="shortname" ><a href="#screen">screen</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>screen</span></td>
-      <td colspan="2" class="summary">The <a href="../core_components/screen.html#">screen</a> under the cursor</td>
+      <td colspan="2" class="summary">
+        The <a href="../core_components/screen.html#">screen</a> under the cursor
+      </td>
     </tr>
     <tr>
       <td class="shortname" ><a href="#current_client">current_client</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>client <i>or</i> nil</span></td>
-      <td colspan="2" class="summary">Get the client currently under the mouse cursor.</td>
+      <td colspan="2" class="summary">
+        Get the client currently under the mouse cursor.
+      </td>
     </tr>
     <tr>
       <td class="shortname" ><a href="#current_wibox">current_wibox</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>wibox <i>or</i> nil</span></td>
-      <td colspan="2" class="summary">Get the wibox currently under the mouse cursor.</td>
+      <td colspan="2" class="summary">
+        Get the wibox currently under the mouse cursor.
+      </td>
     </tr>
     <tr>
       <td class="shortname" ><a href="#current_widgets">current_widgets</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>nil <i>or</i> table</span></td>
-      <td colspan="2" class="summary">Get the widgets currently under the mouse cursor.</td>
+      <td colspan="2" class="summary">
+        Get the widgets currently under the mouse cursor.
+      </td>
     </tr>
     <tr>
       <td class="shortname" ><a href="#current_widget">current_widget</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>widget <i>or</i> nil</span></td>
-      <td colspan="2" class="summary">Get the topmost widget currently under the mouse cursor.</td>
+      <td colspan="2" class="summary">
+        Get the topmost widget currently under the mouse cursor.
+      </td>
     </tr>
     <tr>
       <td class="shortname" ><a href="#current_widget_geometry">current_widget_geometry</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>table</span></td>
-      <td colspan="2" class="summary">Get the current widget geometry.</td>
+      <td colspan="2" class="summary">
+        Get the current widget geometry.
+      </td>
     </tr>
     <tr>
       <td class="shortname" ><a href="#current_widget_geometries">current_widget_geometries</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>table</span></td>
-      <td colspan="2" class="summary">Get the current widget geometries.</td>
+      <td colspan="2" class="summary">
+        Get the current widget geometries.
+      </td>
     </tr>
     <tr>
       <td class="shortname" ><a href="#is_left_mouse_button_pressed">is_left_mouse_button_pressed</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>boolean</span></td>
-      <td colspan="2" class="summary">True if the left mouse button is pressed.</td>
+      <td colspan="2" class="summary">
+        True if the left mouse button is pressed.
+      </td>
     </tr>
     <tr>
       <td class="shortname" ><a href="#is_right_mouse_button_pressed">is_right_mouse_button_pressed</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>boolean</span></td>
-      <td colspan="2" class="summary">True if the right mouse button is pressed.</td>
+      <td colspan="2" class="summary">
+        True if the right mouse button is pressed.
+      </td>
     </tr>
     <tr>
       <td class="shortname" ><a href="#is_middle_mouse_button_pressed">is_middle_mouse_button_pressed</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>boolean</span></td>
-      <td colspan="2" class="summary">True if the middle mouse button is pressed.</td>
+      <td colspan="2" class="summary">
+        True if the middle mouse button is pressed.
+      </td>
     </tr>
 </table>
 <h2><a href="#Theme_variables">Theme variables</a></h2>
@@ -414,22 +460,30 @@ clientbuttons = awful.util.<span class="global">table</span>.join(
     <tr>
       <td class="shortname" ><a href="#beautiful.snap_bg">beautiful.snap_bg</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>color <i>or</i> string <i>or</i> gradient <i>or</i> pattern</span></td>
-      <td colspan="2" class="summary">The snap outline background color.</td>
+      <td colspan="2" class="summary">
+        The snap outline background color.
+      </td>
     </tr>
     <tr>
       <td class="shortname" ><a href="#beautiful.snap_border_width">beautiful.snap_border_width</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>integer</span></td>
-      <td colspan="2" class="summary">The snap outline width.</td>
+      <td colspan="2" class="summary">
+        The snap outline width.
+      </td>
     </tr>
     <tr>
       <td class="shortname" ><a href="#beautiful.snap_shape">beautiful.snap_shape</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>function</span></td>
-      <td colspan="2" class="summary">The snap outline shape.</td>
+      <td colspan="2" class="summary">
+        The snap outline shape.
+      </td>
     </tr>
     <tr>
       <td class="shortname" ><a href="#beautiful.snapper_gap">beautiful.snapper_gap</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>number</span></td>
-      <td colspan="2" class="summary">The gap between snapped clients.</td>
+      <td colspan="2" class="summary">
+        The gap between snapped clients.
+      </td>
     </tr>
 </table>
 <h2><a href="#Deprecated_functions">Deprecated functions</a></h2>
@@ -438,35 +492,47 @@ clientbuttons = awful.util.<span class="global">table</span>.join(
       <td class="name" >
         <a href="#awful.mouse.client_under_pointer">awful.mouse.client_under_pointer<i class="deprecated_label"> [deprecated]</i></a>
       </td>
-      <td colspan="2" class="summary">Get the client object under the pointer.</td>
+      <td colspan="2" class="summary">
+        Get the client object under the pointer.
+      </td>
     </tr>
 </table>
 <h2><a href="#Fields">Fields</a></h2>
 <table class="function_list">
     <tr>
-      <td class="shortname" ><a href="#awful.mouse.snap.default_distance"><span class='function_modname'>mouse.</span>awful.mouse.snap.default_distance</a></td>
+      <td class="shortname" ><a href="#snap.default_distance"><span class='function_modname'>mouse.</span>snap.default_distance</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>integer</span></td>
-      <td colspan="2" class="summary">The default distance before snapping clients together.</td>
+      <td colspan="2" class="summary">
+        The default distance before snapping clients together.
+      </td>
     </tr>
     <tr>
-      <td class="shortname" ><a href="#awful.mouse.snap.aerosnap_distance"><span class='function_modname'>mouse.</span>awful.mouse.snap.aerosnap_distance</a></td>
+      <td class="shortname" ><a href="#snap.aerosnap_distance"><span class='function_modname'>mouse.</span>snap.aerosnap_distance</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>integer</span></td>
-      <td colspan="2" class="summary">The default distance before activating screen edge snap.</td>
+      <td colspan="2" class="summary">
+        The default distance before activating screen edge snap.
+      </td>
     </tr>
     <tr>
-      <td class="shortname" ><a href="#awful.mouse.snap.edge_enabled"><span class='function_modname'>mouse.</span>awful.mouse.snap.edge_enabled</a></td>
-      <td class="summarytype" nowrap><span class='summary_type'>N/A</span></td>
-      <td colspan="2" class="summary">Enable screen edges snapping.</td>
+      <td class="shortname" ><a href="#snap.edge_enabled"><span class='function_modname'>mouse.</span>snap.edge_enabled</a></td>
+      <td class="summarytype" nowrap><span class='summary_type'>boolean</span></td>
+      <td colspan="2" class="summary">
+        Enable screen edges snapping.
+      </td>
     </tr>
     <tr>
-      <td class="shortname" ><a href="#awful.mouse.snap.client_enabled"><span class='function_modname'>mouse.</span>awful.mouse.snap.client_enabled</a></td>
-      <td class="summarytype" nowrap><span class='summary_type'>N/A</span></td>
-      <td colspan="2" class="summary">Enable client to client snapping.</td>
+      <td class="shortname" ><a href="#snap.client_enabled"><span class='function_modname'>mouse.</span>snap.client_enabled</a></td>
+      <td class="summarytype" nowrap><span class='summary_type'>boolean</span></td>
+      <td colspan="2" class="summary">
+        Enable client to client snapping.
+      </td>
     </tr>
     <tr>
-      <td class="shortname" ><a href="#awful.mouse.drag_to_tag.enabled"><span class='function_modname'>mouse.</span>awful.mouse.drag_to_tag.enabled</a></td>
-      <td class="summarytype" nowrap><span class='summary_type'>N/A</span></td>
-      <td colspan="2" class="summary">Enable changing tag when a client is dragged to the edge of the screen.</td>
+      <td class="shortname" ><a href="#drag_to_tag.enabled"><span class='function_modname'>mouse.</span>drag_to_tag.enabled</a></td>
+      <td class="summarytype" nowrap><span class='summary_type'>boolean</span></td>
+      <td colspan="2" class="summary">
+        Enable changing tag when a client is dragged to the edge of the screen.
+      </td>
     </tr>
 </table>
 <h2><a href="#lib_awful_mouse_client_Functions">lib.awful.mouse.client Functions</a></h2>
@@ -476,26 +542,34 @@ clientbuttons = awful.util.<span class="global">table</span>.join(
         <a href="#awful.mouse.client.move">awful.mouse.client.move <span class='function_args'> <b>(</b>c, snap, finished_cb<b>)</b></span></a>
         <span class="summarytype"></span>
       </td>
-      <td colspan="2" class="summary">Move a client.</td>
+      <td colspan="2" class="summary">
+        Move a client.
+      </td>
     </tr>
     <tr>
       <td class="name" >
         <a href="#awful.mouse.client.dragtotag.border">awful.mouse.client.dragtotag.border<i class="deprecated_label"> [deprecated]</i></a>
       </td>
-      <td colspan="2" class="summary">Move a client to a tag by dragging it onto the left / right side of the screen.</td>
+      <td colspan="2" class="summary">
+        Move a client to a tag by dragging it onto the left / right side of the screen.
+      </td>
     </tr>
     <tr>
       <td class="name" >
         <a href="#awful.mouse.client.corner">awful.mouse.client.corner<i class="deprecated_label"> [deprecated]</i></a>
       </td>
-      <td colspan="2" class="summary">Get a client corner coordinates.</td>
+      <td colspan="2" class="summary">
+        Get a client corner coordinates.
+      </td>
     </tr>
     <tr>
       <td class="name" >
         <a href="#awful.mouse.client.resize">awful.mouse.client.resize <span class='function_args'> <b>(</b>c, corner[, args={}]<b>)</b></span></a>
         <span class="summarytype"><span class='summary_type'> -&gt;&nbsp;string</span></span>
       </td>
-      <td colspan="2" class="summary">Resize a client.</td>
+      <td colspan="2" class="summary">
+        Resize a client.
+      </td>
     </tr>
 </table>
 <h2><a href="#lib_awful_mouse_resize_Functions">lib.awful.mouse.resize Functions</a></h2>
@@ -503,43 +577,57 @@ clientbuttons = awful.util.<span class="global">table</span>.join(
     <tr>
       <td class="shortname" ><a href="#beautiful.cursor_mouse_resize">beautiful.cursor_mouse_resize</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>string</span></td>
-      <td colspan="2" class="summary">The resize cursor name.</td>
+      <td colspan="2" class="summary">
+        The resize cursor name.
+      </td>
     </tr>
     <tr>
       <td class="shortname" ><a href="#beautiful.cursor_mouse_move">beautiful.cursor_mouse_move</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>string</span></td>
-      <td colspan="2" class="summary">The move cursor name.</td>
+      <td colspan="2" class="summary">
+        The move cursor name.
+      </td>
     </tr>
     <tr>
       <td class="name" >
         <a href="#awful.mouse.resize.set_mode">awful.mouse.resize.set_mode (m)</a>
       </td>
-      <td colspan="2" class="summary">Set the resize mode.</td>
+      <td colspan="2" class="summary">
+        Set the resize mode.
+      </td>
     </tr>
     <tr>
       <td class="name" >
         <a href="#awful.mouse.resize.add_enter_callback">awful.mouse.resize.add_enter_callback (cb, context)</a>
       </td>
-      <td colspan="2" class="summary">Add an initialization callback.</td>
+      <td colspan="2" class="summary">
+        Add an initialization callback.
+      </td>
     </tr>
     <tr>
       <td class="name" >
         <a href="#awful.mouse.resize.add_move_callback">awful.mouse.resize.add_move_callback (cb, context)</a>
       </td>
-      <td colspan="2" class="summary">Add a "move" callback.</td>
+      <td colspan="2" class="summary">
+        Add a "move" callback.
+      </td>
     </tr>
     <tr>
       <td class="name" >
         <a href="#awful.mouse.resize.add_leave_callback">awful.mouse.resize.add_leave_callback (cb, context)</a>
       </td>
-      <td colspan="2" class="summary">Add a "leave" callback
- This callback is executed just before the <a href="../core_components/mousegrabber.html#">mousegrabber</a> stop</td>
+      <td colspan="2" class="summary">
+        Add a "leave" callback
+ This callback is executed just before the <a href="../core_components/mousegrabber.html#">mousegrabber</a> stop
+      </td>
     </tr>
     <tr>
       <td class="name" >
         <a href="#awful.mouse.resize">awful.mouse.resize (client, context[, args={}])</a>
       </td>
-      <td colspan="2" class="summary">Resize the drawable.</td>
+      <td colspan="2" class="summary">
+        Resize the drawable.
+      </td>
     </tr>
 </table>
 <h2><a href="#lib_awful_mouse_snap_Functions">lib.awful.mouse.snap Functions</a></h2>
@@ -548,7 +636,9 @@ clientbuttons = awful.util.<span class="global">table</span>.join(
       <td class="name" >
         <a href="#awful.mouse.snap">awful.mouse.snap (c, snap, x, y, fixed_x, fixed_y)</a>
       </td>
-      <td colspan="2" class="summary">Snap a client to the closest client or screen edge.</td>
+      <td colspan="2" class="summary">
+        Snap a client to the closest client or screen edge.
+      </td>
     </tr>
 </table>
 
@@ -575,7 +665,7 @@ clientbuttons = awful.util.<span class="global">table</span>.join(
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">buttons</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          A table of <a href="../input_handling/awful.button.html#">awful.button</a> objects. Optionally, it can have
   a <code>group</code> entry. If set, the <code>group</code> property will be set on all <code>awful.buttons</code>
   objects.
@@ -591,7 +681,7 @@ clientbuttons = awful.util.<span class="global">table</span>.join(
 
 
 
-    <span id=item768 class="hide_extra">
+    <span id=item765 class="hide_extra">
     </span>
 
 </dd>
@@ -621,7 +711,7 @@ clientbuttons = awful.util.<span class="global">table</span>.join(
 
 
 
-    <span id=item769 class="hide_extra">
+    <span id=item766 class="hide_extra">
     </span>
 
 </dd>
@@ -649,13 +739,13 @@ clientbuttons = awful.util.<span class="global">table</span>.join(
 
 
      <br />
-     <center id=button770>
-     <a class="show_more_button" onclick="show_extra('770')">
+     <center id=button767>
+     <a class="show_more_button" onclick="show_extra('767')">
       Click to display more
      </a>
      </center>
 
-    <span id=item770 class="hide_extra">
+    <span id=item767 class="hide_extra">
      <h3>Requested actions or permissions:</h3>
      <table class='widget_list' border=1>
          <tr style='font-weight: bold;'>
@@ -701,7 +791,7 @@ clientbuttons = awful.util.<span class="global">table</span>.join(
 
 
 
-    <span id=item771 class="hide_extra">
+    <span id=item768 class="hide_extra">
     </span>
 
 </dd>
@@ -732,7 +822,7 @@ clientbuttons = awful.util.<span class="global">table</span>.join(
 
 
 
-    <span id=item772 class="hide_extra">
+    <span id=item769 class="hide_extra">
     </span>
 
 </dd>
@@ -765,13 +855,13 @@ clientbuttons = awful.util.<span class="global">table</span>.join(
 
 
      <br />
-     <center id=button773>
-     <a class="show_more_button" onclick="show_extra('773')">
+     <center id=button770>
+     <a class="show_more_button" onclick="show_extra('770')">
       Click to display more
      </a>
      </center>
 
-    <span id=item773 class="hide_extra">
+    <span id=item770 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>client_mousebinding::added</code></span>  </li>
@@ -795,7 +885,7 @@ clientbuttons = awful.util.<span class="global">table</span>.join(
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">buttons</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          A table containing <a href="../input_handling/awful.button.html#">awful.button</a> objects.
         </li>
     </ul>
@@ -812,7 +902,7 @@ clientbuttons = awful.util.<span class="global">table</span>.join(
 
 
 
-    <span id=item774 class="hide_extra">
+    <span id=item771 class="hide_extra">
     </span>
 
 </dd>
@@ -849,7 +939,7 @@ clientbuttons = awful.util.<span class="global">table</span>.join(
 
 
 
-    <span id=item775 class="hide_extra">
+    <span id=item772 class="hide_extra">
     </span>
 
 </dd>
@@ -884,19 +974,19 @@ clientbuttons = awful.util.<span class="global">table</span>.join(
         <li><span class="parameter">x</span>
             <span class="types"><span class="type">integer</span></span>
          The mouse horizontal position
-         (<em>default</em> nil)
+         (<em>default</em> <code>nil</code>)
         </li>
         <li><span class="parameter">y</span>
             <span class="types"><span class="type">integer</span></span>
          The mouse vertical position
-         (<em>default</em> nil)
+         (<em>default</em> <code>nil</code>)
         </li>
         </li></ul>
         <li><span class="parameter">silent</span>
             <span class="types"><span class="type">boolean</span></span>
          Disable mouse::enter or mouse::leave events that
   could be triggered by the pointer when moving.
-         (<em>default</em> false)
+         (<em>default</em> <code>false</code>)
         </li>
     </ul>
 
@@ -909,7 +999,7 @@ clientbuttons = awful.util.<span class="global">table</span>.join(
            <span class="types"><span class="type">integer</span></span>
         table.y The vertical position</li>
         <li>
-           <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+           <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
         table.buttons Table containing the status of buttons, e.g. field [1] is true
   when button 1 is pressed.</li>
     </ol>
@@ -928,7 +1018,7 @@ clientbuttons = awful.util.<span class="global">table</span>.join(
     </ul>
 
 
-    <span id=item776 class="hide_extra">
+    <span id=item773 class="hide_extra">
     </span>
 
 </dd>
@@ -952,7 +1042,7 @@ clientbuttons = awful.util.<span class="global">table</span>.join(
 
 
 
-    <span id=item777 class="hide_extra">
+    <span id=item774 class="hide_extra">
     </span>
 
 </dd>
@@ -979,7 +1069,7 @@ clientbuttons = awful.util.<span class="global">table</span>.join(
 
 
 
-    <span id=item778 class="hide_extra">
+    <span id=item775 class="hide_extra">
     </span>
 
 </dd>
@@ -1006,7 +1096,7 @@ clientbuttons = awful.util.<span class="global">table</span>.join(
 
 
 
-    <span id=item779 class="hide_extra">
+    <span id=item776 class="hide_extra">
     </span>
 
 </dd>
@@ -1023,7 +1113,7 @@ clientbuttons = awful.util.<span class="global">table</span>.join(
     <h3>Type constraints:</h3>
     <ul>
         <li><span class="parameter">list</span>
-            <span class="types"><span class="type">nil</span> or <a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><span class="type">nil</span> or <a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          The widget list
         </li>
     </ul>
@@ -1033,7 +1123,7 @@ clientbuttons = awful.util.<span class="global">table</span>.join(
 
 
 
-    <span id=item780 class="hide_extra">
+    <span id=item777 class="hide_extra">
     </span>
 
 </dd>
@@ -1064,7 +1154,7 @@ clientbuttons = awful.util.<span class="global">table</span>.join(
 
 
 
-    <span id=item781 class="hide_extra">
+    <span id=item778 class="hide_extra">
     </span>
 
 </dd>
@@ -1081,7 +1171,7 @@ clientbuttons = awful.util.<span class="global">table</span>.join(
     <h3>Type constraints:</h3>
     <ul>
         <li><span class="parameter">The</span>
-            <span class="types">optional <a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types">optional <a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          geometry.
         </li>
     </ul>
@@ -1095,7 +1185,7 @@ clientbuttons = awful.util.<span class="global">table</span>.join(
 
 
 
-    <span id=item782 class="hide_extra">
+    <span id=item779 class="hide_extra">
     </span>
 
 </dd>
@@ -1112,7 +1202,7 @@ clientbuttons = awful.util.<span class="global">table</span>.join(
     <h3>Type constraints:</h3>
     <ul>
         <li><span class="parameter">A</span>
-            <span class="types">optional <a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types">optional <a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          list of geometry tables.
         </li>
     </ul>
@@ -1126,7 +1216,7 @@ clientbuttons = awful.util.<span class="global">table</span>.join(
 
 
 
-    <span id=item783 class="hide_extra">
+    <span id=item780 class="hide_extra">
     </span>
 
 </dd>
@@ -1146,7 +1236,7 @@ clientbuttons = awful.util.<span class="global">table</span>.join(
 
 
 
-    <span id=item784 class="hide_extra">
+    <span id=item781 class="hide_extra">
     </span>
 
 </dd>
@@ -1166,7 +1256,7 @@ clientbuttons = awful.util.<span class="global">table</span>.join(
 
 
 
-    <span id=item785 class="hide_extra">
+    <span id=item782 class="hide_extra">
     </span>
 
 </dd>
@@ -1186,7 +1276,7 @@ clientbuttons = awful.util.<span class="global">table</span>.join(
 
 
 
-    <span id=item786 class="hide_extra">
+    <span id=item783 class="hide_extra">
     </span>
 
 </dd>
@@ -1210,7 +1300,7 @@ clientbuttons = awful.util.<span class="global">table</span>.join(
 
 
 
-    <span id=item787 class="hide_extra">
+    <span id=item784 class="hide_extra">
     </span>
 
 </dd>
@@ -1230,7 +1320,7 @@ clientbuttons = awful.util.<span class="global">table</span>.join(
 
 
 
-    <span id=item788 class="hide_extra">
+    <span id=item785 class="hide_extra">
     </span>
 
 </dd>
@@ -1257,7 +1347,7 @@ clientbuttons = awful.util.<span class="global">table</span>.join(
 
 
 
-    <span id=item789 class="hide_extra">
+    <span id=item786 class="hide_extra">
     </span>
 
 </dd>
@@ -1277,7 +1367,7 @@ clientbuttons = awful.util.<span class="global">table</span>.join(
 
 
 
-    <span id=item790 class="hide_extra">
+    <span id=item787 class="hide_extra">
     </span>
 
 </dd>
@@ -1309,7 +1399,7 @@ clientbuttons = awful.util.<span class="global">table</span>.join(
 
 
 
-    <span id=item791 class="hide_extra">
+    <span id=item788 class="hide_extra">
     </span>
 
 </dd>
@@ -1318,8 +1408,8 @@ clientbuttons = awful.util.<span class="global">table</span>.join(
 
     <dl class="function">
     <dt>
-    <a name = "awful.mouse.snap.default_distance"></a>
-    <strong><span class='function_modname'>mouse.</span>awful.mouse.snap.default_distance</strong>
+    <a name = "snap.default_distance"></a>
+    <strong><span class='function_modname'>mouse.</span>snap.default_distance</strong>
     <span class="proptype"><span class='summary_type'>integer</span></span>
     <span class="baseclass" >
     </span>
@@ -1341,13 +1431,13 @@ clientbuttons = awful.util.<span class="global">table</span>.join(
 
 
 
-    <span id=item792 class="hide_extra">
+    <span id=item789 class="hide_extra">
     </span>
 
 </dd>
     <dt>
-    <a name = "awful.mouse.snap.aerosnap_distance"></a>
-    <strong><span class='function_modname'>mouse.</span>awful.mouse.snap.aerosnap_distance</strong>
+    <a name = "snap.aerosnap_distance"></a>
+    <strong><span class='function_modname'>mouse.</span>snap.aerosnap_distance</strong>
     <span class="proptype"><span class='summary_type'>integer</span></span>
     <span class="baseclass" >
     </span>
@@ -1365,21 +1455,19 @@ clientbuttons = awful.util.<span class="global">table</span>.join(
 
 
 
-    <span id=item793 class="hide_extra">
+    <span id=item790 class="hide_extra">
     </span>
 
 </dd>
     <dt>
-    <a name = "awful.mouse.snap.edge_enabled"></a>
-    <strong><span class='function_modname'>mouse.</span>awful.mouse.snap.edge_enabled</strong>
-    <span class="proptype"><span class='summary_type'>N/A</span></span>
+    <a name = "snap.edge_enabled"></a>
+    <strong><span class='function_modname'>mouse.</span>snap.edge_enabled</strong>
+    <span class="proptype"><span class='summary_type'>boolean</span></span>
     <span class="baseclass" >
     </span>
     </dt>
     <dd>
     Enable screen edges snapping. </p>
-
-
 
 
 
@@ -1391,14 +1479,14 @@ clientbuttons = awful.util.<span class="global">table</span>.join(
 
 
 
-    <span id=item794 class="hide_extra">
+    <span id=item791 class="hide_extra">
     </span>
 
 </dd>
     <dt>
-    <a name = "awful.mouse.snap.client_enabled"></a>
-    <strong><span class='function_modname'>mouse.</span>awful.mouse.snap.client_enabled</strong>
-    <span class="proptype"><span class='summary_type'>N/A</span></span>
+    <a name = "snap.client_enabled"></a>
+    <strong><span class='function_modname'>mouse.</span>snap.client_enabled</strong>
+    <span class="proptype"><span class='summary_type'>boolean</span></span>
     <span class="baseclass" >
     </span>
     </dt>
@@ -1411,14 +1499,14 @@ clientbuttons = awful.util.<span class="global">table</span>.join(
 
 
 
-    <span id=item795 class="hide_extra">
+    <span id=item792 class="hide_extra">
     </span>
 
 </dd>
     <dt>
-    <a name = "awful.mouse.drag_to_tag.enabled"></a>
-    <strong><span class='function_modname'>mouse.</span>awful.mouse.drag_to_tag.enabled</strong>
-    <span class="proptype"><span class='summary_type'>N/A</span></span>
+    <a name = "drag_to_tag.enabled"></a>
+    <strong><span class='function_modname'>mouse.</span>drag_to_tag.enabled</strong>
+    <span class="proptype"><span class='summary_type'>boolean</span></span>
     <span class="baseclass" >
     </span>
     </dt>
@@ -1431,7 +1519,7 @@ clientbuttons = awful.util.<span class="global">table</span>.join(
 
 
 
-    <span id=item796 class="hide_extra">
+    <span id=item793 class="hide_extra">
     </span>
 
 </dd>
@@ -1468,13 +1556,13 @@ clientbuttons = awful.util.<span class="global">table</span>.join(
 
 
      <br />
-     <center id=button797>
-     <a class="show_more_button" onclick="show_extra('797')">
+     <center id=button794>
+     <a class="show_more_button" onclick="show_extra('794')">
       Click to display more
      </a>
      </center>
 
-    <span id=item797 class="hide_extra">
+    <span id=item794 class="hide_extra">
      <h3>Requested actions or permissions:</h3>
      <table class='widget_list' border=1>
          <tr style='font-weight: bold;'>
@@ -1510,7 +1598,7 @@ clientbuttons = awful.util.<span class="global">table</span>.join(
 
 
 
-    <span id=item798 class="hide_extra">
+    <span id=item795 class="hide_extra">
     </span>
 
 </dd>
@@ -1528,10 +1616,10 @@ clientbuttons = awful.util.<span class="global">table</span>.join(
         <li><span class="parameter">c</span>
             <span class="types"><span class="type">client</span></span>
          The client to get corner from, focused one by default.
-         (<em>default</em> client.focus)
+         (<em>default</em> <code>client.focus</code>)
         </li>
         <li><span class="parameter">corner</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          The corner to use: auto, top<em>left, top</em>right, bottom<em>left,
  bottom</em>right, left, right, top bottom. Default is auto, and auto find the
  nearest corner.
@@ -1541,7 +1629,7 @@ clientbuttons = awful.util.<span class="global">table</span>.join(
     <h3>Returns:</h3>
     <ol>
         <li>
-           <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+           <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
         The corner name</li>
         <li>
            <span class="types"><span class="type">number</span></span>
@@ -1555,7 +1643,7 @@ clientbuttons = awful.util.<span class="global">table</span>.join(
 
 
 
-    <span id=item799 class="hide_extra">
+    <span id=item796 class="hide_extra">
     </span>
 
 </dd>
@@ -1576,20 +1664,20 @@ clientbuttons = awful.util.<span class="global">table</span>.join(
          The client to resize, or the focused one by default.
         </li>
         <li><span class="parameter">corner</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          The corner to grab on resize. Auto detected by default.
         </li>
         <li><span class="parameter">args</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          A set of <a href="../libraries/awful.placement.html#">awful.placement</a> arguments
-         (<em>default</em> {})
+         (<em>default</em> <code>{}</code>)
         </li>
     </ul>
 
     <h3>Returns:</h3>
     <ol>
 
-           <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+           <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
         The corner (or side) name
     </ol>
 
@@ -1597,13 +1685,13 @@ clientbuttons = awful.util.<span class="global">table</span>.join(
 
 
      <br />
-     <center id=button800>
-     <a class="show_more_button" onclick="show_extra('800')">
+     <center id=button797>
+     <a class="show_more_button" onclick="show_extra('797')">
       Click to display more
      </a>
      </center>
 
-    <span id=item800 class="hide_extra">
+    <span id=item797 class="hide_extra">
      <h3>Requested actions or permissions:</h3>
      <table class='widget_list' border=1>
          <tr style='font-weight: bold;'>
@@ -1638,7 +1726,7 @@ clientbuttons = awful.util.<span class="global">table</span>.join(
 
 
 
-    <span id=item801 class="hide_extra">
+    <span id=item798 class="hide_extra">
     </span>
 
 </dd>
@@ -1658,7 +1746,7 @@ clientbuttons = awful.util.<span class="global">table</span>.join(
 
 
 
-    <span id=item802 class="hide_extra">
+    <span id=item799 class="hide_extra">
     </span>
 
 </dd>
@@ -1682,7 +1770,7 @@ clientbuttons = awful.util.<span class="global">table</span>.join(
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">m</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          The mode
         </li>
     </ul>
@@ -1692,7 +1780,7 @@ clientbuttons = awful.util.<span class="global">table</span>.join(
 
 
 
-    <span id=item803 class="hide_extra">
+    <span id=item800 class="hide_extra">
     </span>
 
 </dd>
@@ -1713,7 +1801,7 @@ clientbuttons = awful.util.<span class="global">table</span>.join(
          The callback (or nil)
         </li>
         <li><span class="parameter">context</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          The callback context
         </li>
     </ul>
@@ -1723,7 +1811,7 @@ clientbuttons = awful.util.<span class="global">table</span>.join(
 
 
 
-    <span id=item804 class="hide_extra">
+    <span id=item801 class="hide_extra">
     </span>
 
 </dd>
@@ -1745,7 +1833,7 @@ clientbuttons = awful.util.<span class="global">table</span>.join(
          The callback (or nil)
         </li>
         <li><span class="parameter">context</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          The callback context
         </li>
     </ul>
@@ -1755,7 +1843,7 @@ clientbuttons = awful.util.<span class="global">table</span>.join(
 
 
 
-    <span id=item805 class="hide_extra">
+    <span id=item802 class="hide_extra">
     </span>
 
 </dd>
@@ -1776,7 +1864,7 @@ clientbuttons = awful.util.<span class="global">table</span>.join(
          The callback (or nil)
         </li>
         <li><span class="parameter">context</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          The callback context
         </li>
     </ul>
@@ -1786,7 +1874,7 @@ clientbuttons = awful.util.<span class="global">table</span>.join(
 
 
 
-    <span id=item806 class="hide_extra">
+    <span id=item803 class="hide_extra">
     </span>
 
 </dd>
@@ -1819,13 +1907,13 @@ clientbuttons = awful.util.<span class="global">table</span>.join(
          A client.
         </li>
         <li><span class="parameter">context</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          The resizing context.
         </li>
         <li><span class="parameter">args</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          A set of <a href="../libraries/awful.placement.html#">awful.placement</a> arguments.
-         (<em>default</em> {})
+         (<em>default</em> <code>{}</code>)
         </li>
     </ul>
 
@@ -1834,13 +1922,13 @@ clientbuttons = awful.util.<span class="global">table</span>.join(
 
 
      <br />
-     <center id=button807>
-     <a class="show_more_button" onclick="show_extra('807')">
+     <center id=button804>
+     <a class="show_more_button" onclick="show_extra('804')">
       Click to display more
      </a>
      </center>
 
-    <span id=item807 class="hide_extra">
+    <span id=item804 class="hide_extra">
      <h3>Requested actions or permissions:</h3>
      <table class='widget_list' border=1>
          <tr style='font-weight: bold;'>
@@ -1895,7 +1983,7 @@ clientbuttons = awful.util.<span class="global">table</span>.join(
 
 
 
-    <span id=item808 class="hide_extra">
+    <span id=item805 class="hide_extra">
     </span>
 
 </dd>
@@ -1906,7 +1994,6 @@ clientbuttons = awful.util.<span class="global">table</span>.join(
 </div> <!-- id="main" -->
 <div id="about">
 <i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.6</a></i>
-<i style="float:right;">Last updated 2021-05-01 17:20:18 </i>
 </div> <!-- id="about" -->
 </div> <!-- id="container" -->
 </body>

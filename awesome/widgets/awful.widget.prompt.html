@@ -141,6 +141,7 @@
   <li><a href="../popups_and_bars/awful.popup.html">awful.popup</a></li>
   <li><a href="../popups_and_bars/awful.titlebar.html">awful.titlebar</a></li>
   <li><a href="../popups_and_bars/awful.tooltip.html">awful.tooltip</a></li>
+  <li><a href="../popups_and_bars/awful.wallpaper.html">awful.wallpaper</a></li>
   <li><a href="../popups_and_bars/awful.wibar.html">awful.wibar</a></li>
   <li><a href="../popups_and_bars/awful.widget.calendar_popup.html">awful.widget.calendar_popup</a></li>
   <li><a href="../popups_and_bars/menubar.html">menubar</a></li>
@@ -241,7 +242,7 @@
 
 <pre>
 <span class="keyword">local</span> myprompt = awful.widget.prompt {
-    prompt = <span class="string">'Execute: '</span>
+    prompt = <span class="string">"Execute: "</span>
 }
 myprompt:run()
 </pre>
@@ -284,8 +285,15 @@ myprompt:run()
   <div class="extra-header__section">
     <h3>Info:</h3>
     <ul>
-            <li><strong>Copyright</strong>: 2009 Julien Danjou,2018 Aire-One</li>
-            <li><strong>Author</strong>: Julien Danjou &lt;julien@danjou.info&gt;</li>
+                <li><strong>Copyright</strong>: 2009 Julien Danjou,2018 Aire-One</li>
+                <li>
+                    <strong>Originally authored by</strong>: Julien Danjou &lt;julien@danjou.info&gt;<br />
+                    <small>(Full contributors list available on
+                    <a href="https://github.com/awesomeWM/awesome/graphs/contributors">
+                        our github project)
+                    </a></small>
+
+                </li>
     </ul>
   </div>
 
@@ -298,7 +306,9 @@ myprompt:run()
       <td class="name" >
         <a href="#awful.widget.prompt">awful.widget.prompt <span class='function_named_args'><b>{</b>[args]<b>}</b></span></a>
       </td>
-      <td colspan="2" class="summary">Create a prompt widget which will launch a command.</td>
+      <td colspan="2" class="summary">
+        Create a prompt widget which will launch a command.
+      </td>
     </tr>
 </table>
 <h2><a href="#Object_properties">Object properties</a></h2>
@@ -306,12 +316,16 @@ myprompt:run()
     <tr>
       <td class="shortname" ><a href="#with_shell">with_shell</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>boolean</span></td>
-      <td colspan="2" class="summary">Always spawn using a shell.</td>
+      <td colspan="2" class="summary">
+        Always spawn using a shell.
+      </td>
     </tr>
     <tr>
       <td class="shortname" ><a href="#widget">widget</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>widget</span></td>
-      <td colspan="1" class="summary">The widget displayed in the background widget.</td>
+      <td colspan="1" class="summary">
+        The widget displayed in the background widget.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from wibox.container.background
       </td>
@@ -319,7 +333,9 @@ myprompt:run()
     <tr>
       <td class="shortname" ><a href="#bg">bg</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>color</span></td>
-      <td colspan="1" class="summary">The background color/pattern/gradient to use.</td>
+      <td colspan="1" class="summary">
+        The background color/pattern/gradient to use.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from wibox.container.background
       </td>
@@ -327,7 +343,9 @@ myprompt:run()
     <tr>
       <td class="shortname" ><a href="#fg">fg</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>color</span></td>
-      <td colspan="1" class="summary">The foreground (text) color/pattern/gradient to use.</td>
+      <td colspan="1" class="summary">
+        The foreground (text) color/pattern/gradient to use.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from wibox.container.background
       </td>
@@ -335,7 +353,9 @@ myprompt:run()
     <tr>
       <td class="shortname" ><a href="#shape">shape</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>gears.shape <i>or</i> function</span></td>
-      <td colspan="1" class="summary">The background shape.</td>
+      <td colspan="1" class="summary">
+        The background shape.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from wibox.container.background
       </td>
@@ -343,7 +363,9 @@ myprompt:run()
     <tr>
       <td class="shortname" ><a href="#border_width">border_width</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>number</span></td>
-      <td colspan="1" class="summary">Add a border of a specific width.</td>
+      <td colspan="1" class="summary">
+        Add a border of a specific width.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from wibox.container.background
       </td>
@@ -351,7 +373,9 @@ myprompt:run()
     <tr>
       <td class="shortname" ><a href="#border_color">border_color</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>color</span></td>
-      <td colspan="1" class="summary">Set the color for the border.</td>
+      <td colspan="1" class="summary">
+        Set the color for the border.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from wibox.container.background
       </td>
@@ -359,7 +383,9 @@ myprompt:run()
     <tr>
       <td class="shortname" ><a href="#border_strategy">border_strategy</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>string</span></td>
-      <td colspan="1" class="summary">How the border width affects the contained widget.</td>
+      <td colspan="1" class="summary">
+        How the border width affects the contained widget.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from wibox.container.background
       </td>
@@ -367,7 +393,9 @@ myprompt:run()
     <tr>
       <td class="shortname" ><a href="#bgimage">bgimage</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>string <i>or</i> surface <i>or</i> function</span></td>
-      <td colspan="1" class="summary">The background image to use.</td>
+      <td colspan="1" class="summary">
+        The background image to use.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from wibox.container.background
       </td>
@@ -375,7 +403,9 @@ myprompt:run()
     <tr>
       <td class="shortname" ><a href="#wibox.widget.base.children">children</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>table</span></td>
-      <td colspan="1" class="summary">Get or set the children elements.</td>
+      <td colspan="1" class="summary">
+        Get or set the children elements.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from wibox.widget.base
       </td>
@@ -383,7 +413,9 @@ myprompt:run()
     <tr>
       <td class="shortname" ><a href="#wibox.widget.base.all_children">all_children</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>table</span></td>
-      <td colspan="1" class="summary">Get all direct and indirect children widgets.</td>
+      <td colspan="1" class="summary">
+        Get all direct and indirect children widgets.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from wibox.widget.base
       </td>
@@ -391,7 +423,9 @@ myprompt:run()
     <tr>
       <td class="shortname" ><a href="#wibox.widget.base.forced_height">forced_height</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>number <i>or</i> nil</span></td>
-      <td colspan="1" class="summary">Force a widget height.</td>
+      <td colspan="1" class="summary">
+        Force a widget height.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from wibox.widget.base
       </td>
@@ -399,7 +433,9 @@ myprompt:run()
     <tr>
       <td class="shortname" ><a href="#wibox.widget.base.forced_width">forced_width</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>number <i>or</i> nil</span></td>
-      <td colspan="1" class="summary">Force a widget width.</td>
+      <td colspan="1" class="summary">
+        Force a widget width.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from wibox.widget.base
       </td>
@@ -407,7 +443,9 @@ myprompt:run()
     <tr>
       <td class="shortname" ><a href="#wibox.widget.base.opacity">opacity</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>number</span></td>
-      <td colspan="1" class="summary">The widget opacity (transparency).</td>
+      <td colspan="1" class="summary">
+        The widget opacity (transparency).
+      </td>
       <td class="baseclass" nowrap>
         Inherited from wibox.widget.base
       </td>
@@ -415,7 +453,9 @@ myprompt:run()
     <tr>
       <td class="shortname" ><a href="#wibox.widget.base.visible">visible</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>boolean</span></td>
-      <td colspan="1" class="summary">The widget visibility.</td>
+      <td colspan="1" class="summary">
+        The widget visibility.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from wibox.widget.base
       </td>
@@ -423,7 +463,9 @@ myprompt:run()
     <tr>
       <td class="shortname" ><a href="#wibox.widget.base.buttons">buttons</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>table</span></td>
-      <td colspan="1" class="summary">The widget buttons.</td>
+      <td colspan="1" class="summary">
+        The widget buttons.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from wibox.widget.base
       </td>
@@ -434,12 +476,16 @@ myprompt:run()
     <tr>
       <td class="shortname" ><a href="#beautiful.prompt_fg">beautiful.prompt_fg</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>color</span></td>
-      <td colspan="2" class="summary">The prompt foreground color.</td>
+      <td colspan="2" class="summary">
+        The prompt foreground color.
+      </td>
     </tr>
     <tr>
       <td class="shortname" ><a href="#beautiful.prompt_bg">beautiful.prompt_bg</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>color</span></td>
-      <td colspan="2" class="summary">The prompt background color.</td>
+      <td colspan="2" class="summary">
+        The prompt background color.
+      </td>
     </tr>
 </table>
 <h2><a href="#Deprecated_object_properties">Deprecated object properties</a></h2>
@@ -447,7 +493,9 @@ myprompt:run()
     <tr>
       <td class="shortname" ><a href="#shape_border_width">shape_border_width</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>number</span></td>
-      <td colspan="1" class="summary">When a <code>shape</code> is set, also draw a border.</td>
+      <td colspan="1" class="summary">
+        When a <code>shape</code> is set, also draw a border.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from wibox.container.background
       </td>
@@ -455,7 +503,9 @@ myprompt:run()
     <tr>
       <td class="shortname" ><a href="#shape_border_color">shape_border_color</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>color</span></td>
-      <td colspan="1" class="summary">When a <code>shape</code> is set, also draw a border.</td>
+      <td colspan="1" class="summary">
+        When a <code>shape</code> is set, also draw a border.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from wibox.container.background
       </td>
@@ -468,7 +518,9 @@ myprompt:run()
         <a href="#set_shape">:set_shape <span class='function_args'> <b>(</b>shape<b>)</b></span></a>
         <span class="summarytype"></span>
       </td>
-      <td colspan="1" class="summary">Set the background shape.</td>
+      <td colspan="1" class="summary">
+        Set the background shape.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from wibox.container.background
       </td>
@@ -478,7 +530,9 @@ myprompt:run()
         <a href="#wibox.widget.base:add_button">:add_button <span class='function_args'> <b>(</b>button<b>)</b></span></a>
         <span class="summarytype"></span>
       </td>
-      <td colspan="1" class="summary">Add a new <a href="../input_handling/awful.button.html#">awful.button</a> to this widget.</td>
+      <td colspan="1" class="summary">
+        Add a new <a href="../input_handling/awful.button.html#">awful.button</a> to this widget.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from wibox.widget.base
       </td>
@@ -488,8 +542,10 @@ myprompt:run()
         <a href="#wibox.widget.base:emit_signal_recursive">:emit_signal_recursive <span class='function_args'> <b>(</b>signal_name, ...<b>)</b></span></a>
         <span class="summarytype"></span>
       </td>
-      <td colspan="1" class="summary">Emit a signal and ensure all parent widgets in the hierarchies also
- forward the signal.</td>
+      <td colspan="1" class="summary">
+        Emit a signal and ensure all parent widgets in the hierarchies also
+ forward the signal.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from wibox.widget.base
       </td>
@@ -499,7 +555,9 @@ myprompt:run()
         <a href="#wibox.widget.base:index">:index <span class='function_args'> <b>(</b>widget[, recursive[, ...]]<b>)</b></span></a>
         <span class="summarytype"><span class='summary_type'> -&gt;&nbsp;(number, widget, table)</span></span>
       </td>
-      <td colspan="1" class="summary">Get the index of a widget.</td>
+      <td colspan="1" class="summary">
+        Get the index of a widget.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from wibox.widget.base
       </td>
@@ -509,7 +567,9 @@ myprompt:run()
         <a href="#connect_signal">:connect_signal <span class='function_args'> <b>(</b>name, func<b>)</b></span></a>
         <span class="summarytype"></span>
       </td>
-      <td colspan="1" class="summary">Connect to a signal.</td>
+      <td colspan="1" class="summary">
+        Connect to a signal.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from gears.object
       </td>
@@ -519,7 +579,9 @@ myprompt:run()
         <a href="#weak_connect_signal">:weak_connect_signal <span class='function_args'> <b>(</b>name, func<b>)</b></span></a>
         <span class="summarytype"></span>
       </td>
-      <td colspan="1" class="summary">Connect to a signal weakly.</td>
+      <td colspan="1" class="summary">
+        Connect to a signal weakly.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from gears.object
       </td>
@@ -529,7 +591,9 @@ myprompt:run()
         <a href="#disconnect_signal">:disconnect_signal <span class='function_args'> <b>(</b>name, func<b>)</b></span></a>
         <span class="summarytype"></span>
       </td>
-      <td colspan="1" class="summary">Disonnect from a signal.</td>
+      <td colspan="1" class="summary">
+        Disonnect from a signal.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from gears.object
       </td>
@@ -539,7 +603,9 @@ myprompt:run()
         <a href="#emit_signal">:emit_signal <span class='function_args'> <b>(</b>name, ...<b>)</b></span></a>
         <span class="summarytype"></span>
       </td>
-      <td colspan="1" class="summary">Emit a signal.</td>
+      <td colspan="1" class="summary">
+        Emit a signal.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from gears.object
       </td>
@@ -551,7 +617,9 @@ myprompt:run()
       <td class="name" >
         <a href="#widget::layout_changed">widget::layout_changed</a>
       </td>
-      <td colspan="1" class="summary">When the layout (size) change.</td>
+      <td colspan="1" class="summary">
+        When the layout (size) change.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from wibox.widget.base
       </td>
@@ -560,7 +628,9 @@ myprompt:run()
       <td class="name" >
         <a href="#widget::redraw_needed">widget::redraw_needed</a>
       </td>
-      <td colspan="1" class="summary">When the widget content changed.</td>
+      <td colspan="1" class="summary">
+        When the widget content changed.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from wibox.widget.base
       </td>
@@ -569,7 +639,9 @@ myprompt:run()
       <td class="name" >
         <a href="#button::press">button::press</a>
       </td>
-      <td colspan="1" class="summary">When a mouse button is pressed over the widget.</td>
+      <td colspan="1" class="summary">
+        When a mouse button is pressed over the widget.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from wibox.widget.base
       </td>
@@ -578,7 +650,9 @@ myprompt:run()
       <td class="name" >
         <a href="#button::release">button::release</a>
       </td>
-      <td colspan="1" class="summary">When a mouse button is released over the widget.</td>
+      <td colspan="1" class="summary">
+        When a mouse button is released over the widget.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from wibox.widget.base
       </td>
@@ -587,7 +661,9 @@ myprompt:run()
       <td class="name" >
         <a href="#mouse::enter">mouse::enter</a>
       </td>
-      <td colspan="1" class="summary">When the mouse enter a widget.</td>
+      <td colspan="1" class="summary">
+        When the mouse enter a widget.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from wibox.widget.base
       </td>
@@ -596,7 +672,9 @@ myprompt:run()
       <td class="name" >
         <a href="#mouse::leave">mouse::leave</a>
       </td>
-      <td colspan="1" class="summary">When the mouse leave a widget.</td>
+      <td colspan="1" class="summary">
+        When the mouse leave a widget.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from wibox.widget.base
       </td>
@@ -626,19 +704,19 @@ myprompt:run()
         <li><span class="parameter">args</span> Prompt arguments.
         <ul>
         <li><span class="parameter">prompt</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          Prompt text.
-         (<em>default</em> "Run: ")
+         (<em>default</em> <code>"Run: "</code>)
         </li>
         <li><span class="parameter">bg</span>
             <span class="types"><span class="type">color</span></span>
            Prompt background color.
-         (<em>default</em> `beautiful.prompt_bg` or `beautiful.bg_normal`)
+         (<em>default</em> <code>`beautiful.prompt_bg` or `beautiful.bg_normal`</code>)
         </li>
         <li><span class="parameter">fg</span>
             <span class="types"><span class="type">color</span></span>
            Prompt foreground color.
-         (<em>default</em> `beautiful.prompt_fg` or `beautiful.fg_normal`)
+         (<em>default</em> <code>`beautiful.prompt_fg` or `beautiful.fg_normal`</code>)
         </li>
         <li><span class="parameter">fg_cursor</span>
             <span class="types"><span class="type">gears.color</span></span>
@@ -662,7 +740,7 @@ myprompt:run()
          (<em>optional</em>)
         </li>
         <li><span class="parameter">font</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
 
 
 
@@ -690,24 +768,24 @@ myprompt:run()
         <li><span class="parameter">with_shell</span>
             <span class="types"><span class="type">boolean</span></span>
          Use a (terminal) shell to execute this.
-         (<em>default</em> false)
+         (<em>default</em> <code>false</code>)
         </li>
         <li><span class="parameter">completion_callback</span>
             <span class="types"><span class="type">function</span></span>
            The callback function to call to get completion. See <a href="../libraries/awful.prompt.html#awful.prompt.run">awful.prompt.run</a>
    for details.
-         (<em>default</em> `awful.completion.shell`)
+         (<em>default</em> <code>`awful.completion.shell`</code>)
         </li>
         <li><span class="parameter">history_path</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          File path where the history should be saved.
-         (<em>default</em> `gears.filesystem.get_cache_dir() .. '/history'`)
+         (<em>default</em> <code>`gears.filesystem.get_cache_dir() .. '/history'`</code>)
         </li>
         <li><span class="parameter">history_max</span>
             <span class="types"><span class="type">integer</span></span>
          Set the maximum entries in
    history file.
-         (<em>default</em> 50)
+         (<em>default</em> <code>50</code>)
         </li>
         <li><span class="parameter">done_callback</span>
             <span class="types"><span class="type">function</span></span>
@@ -734,7 +812,7 @@ myprompt:run()
          (<em>optional</em>)
         </li>
         <li><span class="parameter">hooks</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          Similar to <a href="../input_handling/awful.key.html#">awful.key</a>. It will call a function
    for the matching modifiers + key. See <a href="../libraries/awful.prompt.html#awful.prompt.run">awful.prompt.run</a> for details.
          (<em>optional</em>)
@@ -753,7 +831,7 @@ myprompt:run()
 
 
 
-    <span id=item974 class="hide_extra">
+    <span id=item975 class="hide_extra">
     </span>
 
 </dd>
@@ -772,7 +850,7 @@ myprompt:run()
     Always spawn using a shell. </p>
 
 <p> When using the default <code>exe_callback</code>, use <a href="../libraries/awful.spawn.html#awful.spawn.with_shell">awful.spawn.with_shell</a> instead
- of <a href="../libraries/awful.spawn.html#">awful.spawn</a>. Depending on the ammount of customization to your shell
+ of <a href="../libraries/awful.spawn.html#">awful.spawn</a>. Depending on the amount of customization to your shell
  environment, this can increase startup time.
 
 
@@ -781,7 +859,7 @@ myprompt:run()
 
 
 
-    <span id=item975 class="hide_extra">
+    <span id=item976 class="hide_extra">
     </span>
 
 </dd>
@@ -810,7 +888,7 @@ myprompt:run()
 
 
 
-    <span id=item976 class="hide_extra">
+    <span id=item977 class="hide_extra">
     </span>
 
 </dd>
@@ -848,7 +926,7 @@ myprompt:run()
     <h3>Usage:</h3>
     <ul>
         <pre class="example"><span class="keyword">local</span> text_widget = {
-    text   = <span class="string">'Hello world!'</span>,
+    text   = <span class="string">"Hello world!"</span>,
     widget = wibox.widget.textbox
 }
 parent : setup {
@@ -873,13 +951,13 @@ parent : setup {
     </ul>
 
      <br />
-     <center id=button977>
-     <a class="show_more_button" onclick="show_extra('977')">
+     <center id=button978>
+     <a class="show_more_button" onclick="show_extra('978')">
       Click to display more
      </a>
      </center>
 
-    <span id=item977 class="hide_extra">
+    <span id=item978 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::bg</code></span>  When the <code>bg</code> value changes.</li>
@@ -925,7 +1003,7 @@ parent : setup {
     <h3>Usage:</h3>
     <ul>
         <pre class="example"><span class="keyword">local</span> text_widget = {
-    text   = <span class="string">'Hello world!'</span>,
+    text   = <span class="string">"Hello world!"</span>,
     widget = wibox.widget.textbox
 }
 parent : setup {
@@ -950,13 +1028,13 @@ parent : setup {
     </ul>
 
      <br />
-     <center id=button978>
-     <a class="show_more_button" onclick="show_extra('978')">
+     <center id=button979>
+     <a class="show_more_button" onclick="show_extra('979')">
       Click to display more
      </a>
      </center>
 
-    <span id=item978 class="hide_extra">
+    <span id=item979 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::fg</code></span>  When the <code>fg</code> value changes.</li>
@@ -1007,7 +1085,7 @@ parent : setup {
     {
         <span class="comment">-- Adding a shape without margin may result in cropped output
 </span>        {
-            text   = <span class="string">'Hello world!'</span>,
+            text   = <span class="string">"Hello world!"</span>,
             widget = wibox.widget.textbox
         },
         shape              = gears.shape.hexagon,
@@ -1020,7 +1098,7 @@ parent : setup {
         <span class="comment">-- To solve this, use a margin
 </span>        {
             {
-                text   = <span class="string">'Hello world!'</span>,
+                text   = <span class="string">"Hello world!"</span>,
                 widget = wibox.widget.textbox
             },
             left   = <span class="number">10</span>,
@@ -1041,7 +1119,7 @@ parent : setup {
     </ul>
 
 
-    <span id=item979 class="hide_extra">
+    <span id=item980 class="hide_extra">
     </span>
 
 </dd>
@@ -1066,7 +1144,7 @@ parent : setup {
         <li><span class="parameter">width</span>
             <span class="types"><span class="type">number</span></span>
          The border width.
-         (<em>default</em> 0)
+         (<em>default</em> <code>0</code>)
         </li>
     </ul>
 
@@ -1079,13 +1157,13 @@ parent : setup {
 
 
      <br />
-     <center id=button980>
-     <a class="show_more_button" onclick="show_extra('980')">
+     <center id=button981>
+     <a class="show_more_button" onclick="show_extra('981')">
       Click to display more
      </a>
      </center>
 
-    <span id=item980 class="hide_extra">
+    <span id=item981 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::border_width</code></span>  When the <code>border_width</code> value changes.</li>
@@ -1117,7 +1195,7 @@ parent : setup {
         <li><span class="parameter">fg</span>
             <span class="types"><span class="type">color</span></span>
          The border color, pattern or gradient
-         (<em>default</em> self._private.foreground)
+         (<em>default</em> <code>self._private.foreground</code>)
         </li>
     </ul>
 
@@ -1131,13 +1209,13 @@ parent : setup {
 
 
      <br />
-     <center id=button981>
-     <a class="show_more_button" onclick="show_extra('981')">
+     <center id=button982>
+     <a class="show_more_button" onclick="show_extra('982')">
       Click to display more
      </a>
      </center>
 
-    <span id=item981 class="hide_extra">
+    <span id=item982 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::border_color</code></span>  When the <code>border_color</code> value changes.</li>
@@ -1184,7 +1262,7 @@ parent : setup {
 
 
 
-    <span id=item982 class="hide_extra">
+    <span id=item983 class="hide_extra">
     </span>
 
 </dd>
@@ -1205,7 +1283,7 @@ parent : setup {
     <h3>Type constraints:</h3>
     <ul>
         <li><span class="parameter">image</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a>, <span class="type">surface</span> or <span class="type">function</span></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a>, <span class="type">surface</span> or <span class="type">function</span></span>
          A background image or a function
         </li>
     </ul>
@@ -1219,7 +1297,7 @@ parent : setup {
 
 
 
-    <span id=item983 class="hide_extra">
+    <span id=item984 class="hide_extra">
     </span>
 
 </dd>
@@ -1237,7 +1315,7 @@ parent : setup {
     <h3>Type constraints:</h3>
     <ul>
         <li><span class="parameter">children</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          The children.
         </li>
     </ul>
@@ -1247,7 +1325,7 @@ parent : setup {
 
 
 
-    <span id=item869 class="hide_extra">
+    <span id=item871 class="hide_extra">
     </span>
 
 </dd>
@@ -1269,7 +1347,7 @@ parent : setup {
     <h3>Type constraints:</h3>
     <ul>
         <li><span class="parameter">children</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          The children.
         </li>
     </ul>
@@ -1279,7 +1357,7 @@ parent : setup {
 
 
 
-    <span id=item870 class="hide_extra">
+    <span id=item872 class="hide_extra">
     </span>
 
 </dd>
@@ -1307,7 +1385,7 @@ parent : setup {
 
 
 
-    <span id=item871 class="hide_extra">
+    <span id=item873 class="hide_extra">
     </span>
 
 </dd>
@@ -1335,7 +1413,7 @@ parent : setup {
 
 
 
-    <span id=item872 class="hide_extra">
+    <span id=item874 class="hide_extra">
     </span>
 
 </dd>
@@ -1355,7 +1433,7 @@ parent : setup {
         <li><span class="parameter">opacity</span>
             <span class="types"><span class="type">number</span></span>
          The opacity (between 0 and 1)
-         (<em>default</em> 1)
+         (<em>default</em> <code>1</code>)
         </li>
     </ul>
 
@@ -1364,7 +1442,7 @@ parent : setup {
 
 
 
-    <span id=item873 class="hide_extra">
+    <span id=item875 class="hide_extra">
     </span>
 
 </dd>
@@ -1385,7 +1463,7 @@ parent : setup {
 
 
 
-    <span id=item874 class="hide_extra">
+    <span id=item876 class="hide_extra">
     </span>
 
 </dd>
@@ -1412,7 +1490,7 @@ parent : setup {
 
 
 
-    <span id=item875 class="hide_extra">
+    <span id=item877 class="hide_extra">
     </span>
 
 </dd>
@@ -1440,7 +1518,7 @@ parent : setup {
 
 
 
-    <span id=item984 class="hide_extra">
+    <span id=item985 class="hide_extra">
     </span>
 
 </dd>
@@ -1464,7 +1542,7 @@ parent : setup {
 
 
 
-    <span id=item985 class="hide_extra">
+    <span id=item986 class="hide_extra">
     </span>
 
 </dd>
@@ -1502,7 +1580,7 @@ parent : setup {
 
 
 
-    <span id=item986 class="hide_extra">
+    <span id=item987 class="hide_extra">
     </span>
 
 </dd>
@@ -1525,7 +1603,7 @@ parent : setup {
         <li><span class="parameter">fg</span>
             <span class="types"><span class="type">color</span></span>
          The border color, pattern or gradient
-         (<em>default</em> self._private.foreground)
+         (<em>default</em> <code>self._private.foreground</code>)
         </li>
     </ul>
 
@@ -1539,13 +1617,13 @@ parent : setup {
 
 
      <br />
-     <center id=button987>
-     <a class="show_more_button" onclick="show_extra('987')">
+     <center id=button988>
+     <a class="show_more_button" onclick="show_extra('988')">
       Click to display more
      </a>
      </center>
 
-    <span id=item987 class="hide_extra">
+    <span id=item988 class="hide_extra">
      <h3>Consumed theme variables:</h3>
      <table class='widget_list' border=1>
          <tr style='font-weight: bold;'>
@@ -1593,13 +1671,13 @@ parent : setup {
 
 
      <br />
-     <center id=button988>
-     <a class="show_more_button" onclick="show_extra('988')">
+     <center id=button989>
+     <a class="show_more_button" onclick="show_extra('989')">
       Click to display more
      </a>
      </center>
 
-    <span id=item988 class="hide_extra">
+    <span id=item989 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::set_shape</code></span>  When the <code>set_shape</code> value changes.</li>
@@ -1635,7 +1713,7 @@ parent : setup {
 
 
 
-    <span id=item876 class="hide_extra">
+    <span id=item878 class="hide_extra">
     </span>
 
 </dd>
@@ -1673,7 +1751,7 @@ parent : setup {
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">signal_name</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
 
 
 
@@ -1688,7 +1766,7 @@ parent : setup {
 
 
 
-    <span id=item877 class="hide_extra">
+    <span id=item879 class="hide_extra">
     </span>
 
 </dd>
@@ -1732,7 +1810,7 @@ parent : setup {
            <span class="types"><span class="type">widget</span></span>
         The parent widget.</li>
         <li>
-           <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+           <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
         The hierarchy path between "self" and "widget".</li>
     </ol>
 
@@ -1740,7 +1818,7 @@ parent : setup {
 
 
 
-    <span id=item878 class="hide_extra">
+    <span id=item880 class="hide_extra">
     </span>
 
 </dd>
@@ -1771,7 +1849,7 @@ In slot [obj]   foo bar 42
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">name</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          The name of the signal.
         </li>
         <li><span class="parameter">func</span>
@@ -1788,23 +1866,23 @@ In slot [obj]   foo bar 42
         <pre class="example"><span class="keyword">local</span> o = gears.object{}
 <span class="comment">-- Function can be attached to signals
 </span><span class="keyword">local</span> <span class="keyword">function</span> slot(obj, a, b, c)
-    <span class="global">print</span>(<span class="string">'In slot'</span>, obj, a, b, c)
+    <span class="global">print</span>(<span class="string">"In slot"</span>, obj, a, b, c)
 <span class="keyword">end</span>
-o:connect_signal(<span class="string">'my_signal'</span>, slot)
+o:connect_signal(<span class="string">"my_signal"</span>, slot)
 <span class="comment">-- Emitting can be done without arguments. In that case, the object will be
 </span><span class="comment">-- implicitly added as an argument.
-</span>o:emit_signal <span class="string">'my_signal'</span>
+</span>o:emit_signal <span class="string">"my_signal"</span>
 <span class="comment">-- It is also possible to add as many random arguments are required.
-</span>o:emit_signal(<span class="string">'my_signal'</span>, <span class="string">'foo'</span>, <span class="string">'bar'</span>, <span class="number">42</span>)
+</span>o:emit_signal(<span class="string">"my_signal"</span>, <span class="string">"foo"</span>, <span class="string">"bar"</span>, <span class="number">42</span>)
 <span class="comment">-- Finally, to allow the object to be garbage collected (the memory freed), it
 </span><span class="comment">-- is necessary to disconnect the signal or use <code>weak_connect_signal</code>
-</span>o:disconnect_signal(<span class="string">'my_signal'</span>, slot)
+</span>o:disconnect_signal(<span class="string">"my_signal"</span>, slot)
 <span class="comment">-- This time, the <code>slot</code> wont be called as it is no longer connected.
-</span>o:emit_signal <span class="string">'my_signal'</span></pre>
+</span>o:emit_signal <span class="string">"my_signal"</span></pre>
     </ul>
 
 
-    <span id=item879 class="hide_extra">
+    <span id=item881 class="hide_extra">
     </span>
 
 </dd>
@@ -1828,7 +1906,7 @@ o:connect_signal(<span class="string">'my_signal'</span>, slot)
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">name</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          The name of the signal.
         </li>
         <li><span class="parameter">func</span>
@@ -1842,7 +1920,7 @@ o:connect_signal(<span class="string">'my_signal'</span>, slot)
 
 
 
-    <span id=item880 class="hide_extra">
+    <span id=item882 class="hide_extra">
     </span>
 
 </dd>
@@ -1860,7 +1938,7 @@ o:connect_signal(<span class="string">'my_signal'</span>, slot)
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">name</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          The name of the signal.
         </li>
         <li><span class="parameter">func</span>
@@ -1874,7 +1952,7 @@ o:connect_signal(<span class="string">'my_signal'</span>, slot)
 
 
 
-    <span id=item881 class="hide_extra">
+    <span id=item883 class="hide_extra">
     </span>
 
 </dd>
@@ -1892,7 +1970,7 @@ o:connect_signal(<span class="string">'my_signal'</span>, slot)
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">name</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          The name of the signal
         </li>
         <li><span class="parameter">...</span>
@@ -1907,7 +1985,7 @@ o:connect_signal(<span class="string">'my_signal'</span>, slot)
 
 
 
-    <span id=item882 class="hide_extra">
+    <span id=item884 class="hide_extra">
     </span>
 
 </dd>
@@ -1938,7 +2016,7 @@ o:connect_signal(<span class="string">'my_signal'</span>, slot)
 
 
 
-    <span id=item883 class="hide_extra">
+    <span id=item885 class="hide_extra">
     </span>
 
 </dd>
@@ -1965,7 +2043,7 @@ o:connect_signal(<span class="string">'my_signal'</span>, slot)
 
 
 
-    <span id=item884 class="hide_extra">
+    <span id=item886 class="hide_extra">
     </span>
 
 </dd>
@@ -1982,7 +2060,7 @@ o:connect_signal(<span class="string">'my_signal'</span>, slot)
     <h3>Arguments:</h3>
     <ul>
         <li><span class="parameter">self</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          The current object instance itself.
         </li>
         <li><span class="parameter">lx</span>
@@ -2000,184 +2078,8 @@ o:connect_signal(<span class="string">'my_signal'</span>, slot)
          The button number.
         </li>
         <li><span class="parameter">mods</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          The modifiers (mod4, mod1 (alt), Control, Shift)
-        </li>
-        <li><span class="parameter">find_widgets_result</span> The entry from the result of
- <a href="../classes/wibox.drawable.html#wibox.drawable:find_widgets">wibox.drawable:find_widgets</a> for the position that the mouse hit.
-        <ul>
-        <li><span class="parameter">drawable</span>
-            <span class="types"><a class="type" href="../classes/wibox.drawable.html#">wibox.drawable</a></span>
-         The drawable containing
- the widget.
-        </li>
-        <li><span class="parameter">widget</span>
-            <span class="types"><span class="type">widget</span></span>
-         The widget being displayed.
-        </li>
-        <li><span class="parameter">hierarchy</span>
-            <span class="types"><a class="type" href="../classes/wibox.hierarchy.html#">wibox.hierarchy</a></span>
-         The hierarchy
- managing the widget's geometry.
-        </li>
-        <li><span class="parameter">x</span>
-            <span class="types"><span class="type">number</span></span>
-         An approximation of the X position that
- the widget is visible at on the surface.
-        </li>
-        <li><span class="parameter">y</span>
-            <span class="types"><span class="type">number</span></span>
-         An approximation of the Y position that
- the widget is visible at on the surface.
-        </li>
-        <li><span class="parameter">width</span>
-            <span class="types"><span class="type">number</span></span>
-         An approximation of the width that
- the widget is visible at on the surface.
-        </li>
-        <li><span class="parameter">height</span>
-            <span class="types"><span class="type">number</span></span>
-         An approximation of the height that
- the widget is visible at on the surface.
-        </li>
-        <li><span class="parameter">widget_width</span>
-            <span class="types"><span class="type">number</span></span>
-         The exact width of the widget
- in its local coordinate system.
-        </li>
-        <li><span class="parameter">widget_height</span>
-            <span class="types"><span class="type">number</span></span>
-         The exact height of the widget
- in its local coordinate system.
-        </li>
-        </li></ul>
-    </ul>
-
-
-
-    <h3>See also:</h3>
-    <ul>
-         <a href="../input_handling/mouse.html#">mouse</a>
-    </ul>
-
-
-
-    <span id=item885 class="hide_extra">
-    </span>
-
-</dd>
-    <dt>
-    <a name = "button::release"></a>
-    <strong>button::release</strong>
-    <span class="baseclass" >
-    &middot;&nbsp;Inherited from wibox.widget.base
-    </span>
-    </dt>
-    <dd>
-    When a mouse button is released over the widget.
-
-    <h3>Arguments:</h3>
-    <ul>
-        <li><span class="parameter">self</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
-         The current object instance itself.
-        </li>
-        <li><span class="parameter">lx</span>
-            <span class="types"><span class="type">number</span></span>
-         The horizontal position relative to the (0,0) position in
- the widget.
-        </li>
-        <li><span class="parameter">ly</span>
-            <span class="types"><span class="type">number</span></span>
-         The vertical position relative to the (0,0) position in the
- widget.
-        </li>
-        <li><span class="parameter">button</span>
-            <span class="types"><span class="type">number</span></span>
-         The button number.
-        </li>
-        <li><span class="parameter">mods</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
-         The modifiers (mod4, mod1 (alt), Control, Shift)
-        </li>
-        <li><span class="parameter">find_widgets_result</span> The entry from the result of
- <a href="../classes/wibox.drawable.html#wibox.drawable:find_widgets">wibox.drawable:find_widgets</a> for the position that the mouse hit.
-        <ul>
-        <li><span class="parameter">drawable</span>
-            <span class="types"><a class="type" href="../classes/wibox.drawable.html#">wibox.drawable</a></span>
-         The drawable containing
- the widget.
-        </li>
-        <li><span class="parameter">widget</span>
-            <span class="types"><span class="type">widget</span></span>
-         The widget being displayed.
-        </li>
-        <li><span class="parameter">hierarchy</span>
-            <span class="types"><a class="type" href="../classes/wibox.hierarchy.html#">wibox.hierarchy</a></span>
-         The hierarchy
- managing the widget's geometry.
-        </li>
-        <li><span class="parameter">x</span>
-            <span class="types"><span class="type">number</span></span>
-         An approximation of the X position that
- the widget is visible at on the surface.
-        </li>
-        <li><span class="parameter">y</span>
-            <span class="types"><span class="type">number</span></span>
-         An approximation of the Y position that
- the widget is visible at on the surface.
-        </li>
-        <li><span class="parameter">width</span>
-            <span class="types"><span class="type">number</span></span>
-         An approximation of the width that
- the widget is visible at on the surface.
-        </li>
-        <li><span class="parameter">height</span>
-            <span class="types"><span class="type">number</span></span>
-         An approximation of the height that
- the widget is visible at on the surface.
-        </li>
-        <li><span class="parameter">widget_width</span>
-            <span class="types"><span class="type">number</span></span>
-         The exact width of the widget
- in its local coordinate system.
-        </li>
-        <li><span class="parameter">widget_height</span>
-            <span class="types"><span class="type">number</span></span>
-         The exact height of the widget
- in its local coordinate system.
-        </li>
-        </li></ul>
-    </ul>
-
-
-
-    <h3>See also:</h3>
-    <ul>
-         <a href="../input_handling/mouse.html#">mouse</a>
-    </ul>
-
-
-
-    <span id=item886 class="hide_extra">
-    </span>
-
-</dd>
-    <dt>
-    <a name = "mouse::enter"></a>
-    <strong>mouse::enter</strong>
-    <span class="baseclass" >
-    &middot;&nbsp;Inherited from wibox.widget.base
-    </span>
-    </dt>
-    <dd>
-    When the mouse enter a widget.
-
-    <h3>Arguments:</h3>
-    <ul>
-        <li><span class="parameter">self</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
-         The current object instance itself.
         </li>
         <li><span class="parameter">find_widgets_result</span> The entry from the result of
  <a href="../classes/wibox.drawable.html#wibox.drawable:find_widgets">wibox.drawable:find_widgets</a> for the position that the mouse hit.
@@ -2243,20 +2145,38 @@ o:connect_signal(<span class="string">'my_signal'</span>, slot)
 
 </dd>
     <dt>
-    <a name = "mouse::leave"></a>
-    <strong>mouse::leave</strong>
+    <a name = "button::release"></a>
+    <strong>button::release</strong>
     <span class="baseclass" >
     &middot;&nbsp;Inherited from wibox.widget.base
     </span>
     </dt>
     <dd>
-    When the mouse leave a widget.
+    When a mouse button is released over the widget.
 
     <h3>Arguments:</h3>
     <ul>
         <li><span class="parameter">self</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          The current object instance itself.
+        </li>
+        <li><span class="parameter">lx</span>
+            <span class="types"><span class="type">number</span></span>
+         The horizontal position relative to the (0,0) position in
+ the widget.
+        </li>
+        <li><span class="parameter">ly</span>
+            <span class="types"><span class="type">number</span></span>
+         The vertical position relative to the (0,0) position in the
+ widget.
+        </li>
+        <li><span class="parameter">button</span>
+            <span class="types"><span class="type">number</span></span>
+         The button number.
+        </li>
+        <li><span class="parameter">mods</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+         The modifiers (mod4, mod1 (alt), Control, Shift)
         </li>
         <li><span class="parameter">find_widgets_result</span> The entry from the result of
  <a href="../classes/wibox.drawable.html#wibox.drawable:find_widgets">wibox.drawable:find_widgets</a> for the position that the mouse hit.
@@ -2321,6 +2241,164 @@ o:connect_signal(<span class="string">'my_signal'</span>, slot)
     </span>
 
 </dd>
+    <dt>
+    <a name = "mouse::enter"></a>
+    <strong>mouse::enter</strong>
+    <span class="baseclass" >
+    &middot;&nbsp;Inherited from wibox.widget.base
+    </span>
+    </dt>
+    <dd>
+    When the mouse enter a widget.
+
+    <h3>Arguments:</h3>
+    <ul>
+        <li><span class="parameter">self</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+         The current object instance itself.
+        </li>
+        <li><span class="parameter">find_widgets_result</span> The entry from the result of
+ <a href="../classes/wibox.drawable.html#wibox.drawable:find_widgets">wibox.drawable:find_widgets</a> for the position that the mouse hit.
+        <ul>
+        <li><span class="parameter">drawable</span>
+            <span class="types"><a class="type" href="../classes/wibox.drawable.html#">wibox.drawable</a></span>
+         The drawable containing
+ the widget.
+        </li>
+        <li><span class="parameter">widget</span>
+            <span class="types"><span class="type">widget</span></span>
+         The widget being displayed.
+        </li>
+        <li><span class="parameter">hierarchy</span>
+            <span class="types"><a class="type" href="../classes/wibox.hierarchy.html#">wibox.hierarchy</a></span>
+         The hierarchy
+ managing the widget's geometry.
+        </li>
+        <li><span class="parameter">x</span>
+            <span class="types"><span class="type">number</span></span>
+         An approximation of the X position that
+ the widget is visible at on the surface.
+        </li>
+        <li><span class="parameter">y</span>
+            <span class="types"><span class="type">number</span></span>
+         An approximation of the Y position that
+ the widget is visible at on the surface.
+        </li>
+        <li><span class="parameter">width</span>
+            <span class="types"><span class="type">number</span></span>
+         An approximation of the width that
+ the widget is visible at on the surface.
+        </li>
+        <li><span class="parameter">height</span>
+            <span class="types"><span class="type">number</span></span>
+         An approximation of the height that
+ the widget is visible at on the surface.
+        </li>
+        <li><span class="parameter">widget_width</span>
+            <span class="types"><span class="type">number</span></span>
+         The exact width of the widget
+ in its local coordinate system.
+        </li>
+        <li><span class="parameter">widget_height</span>
+            <span class="types"><span class="type">number</span></span>
+         The exact height of the widget
+ in its local coordinate system.
+        </li>
+        </li></ul>
+    </ul>
+
+
+
+    <h3>See also:</h3>
+    <ul>
+         <a href="../input_handling/mouse.html#">mouse</a>
+    </ul>
+
+
+
+    <span id=item889 class="hide_extra">
+    </span>
+
+</dd>
+    <dt>
+    <a name = "mouse::leave"></a>
+    <strong>mouse::leave</strong>
+    <span class="baseclass" >
+    &middot;&nbsp;Inherited from wibox.widget.base
+    </span>
+    </dt>
+    <dd>
+    When the mouse leave a widget.
+
+    <h3>Arguments:</h3>
+    <ul>
+        <li><span class="parameter">self</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+         The current object instance itself.
+        </li>
+        <li><span class="parameter">find_widgets_result</span> The entry from the result of
+ <a href="../classes/wibox.drawable.html#wibox.drawable:find_widgets">wibox.drawable:find_widgets</a> for the position that the mouse hit.
+        <ul>
+        <li><span class="parameter">drawable</span>
+            <span class="types"><a class="type" href="../classes/wibox.drawable.html#">wibox.drawable</a></span>
+         The drawable containing
+ the widget.
+        </li>
+        <li><span class="parameter">widget</span>
+            <span class="types"><span class="type">widget</span></span>
+         The widget being displayed.
+        </li>
+        <li><span class="parameter">hierarchy</span>
+            <span class="types"><a class="type" href="../classes/wibox.hierarchy.html#">wibox.hierarchy</a></span>
+         The hierarchy
+ managing the widget's geometry.
+        </li>
+        <li><span class="parameter">x</span>
+            <span class="types"><span class="type">number</span></span>
+         An approximation of the X position that
+ the widget is visible at on the surface.
+        </li>
+        <li><span class="parameter">y</span>
+            <span class="types"><span class="type">number</span></span>
+         An approximation of the Y position that
+ the widget is visible at on the surface.
+        </li>
+        <li><span class="parameter">width</span>
+            <span class="types"><span class="type">number</span></span>
+         An approximation of the width that
+ the widget is visible at on the surface.
+        </li>
+        <li><span class="parameter">height</span>
+            <span class="types"><span class="type">number</span></span>
+         An approximation of the height that
+ the widget is visible at on the surface.
+        </li>
+        <li><span class="parameter">widget_width</span>
+            <span class="types"><span class="type">number</span></span>
+         The exact width of the widget
+ in its local coordinate system.
+        </li>
+        <li><span class="parameter">widget_height</span>
+            <span class="types"><span class="type">number</span></span>
+         The exact height of the widget
+ in its local coordinate system.
+        </li>
+        </li></ul>
+    </ul>
+
+
+
+    <h3>See also:</h3>
+    <ul>
+         <a href="../input_handling/mouse.html#">mouse</a>
+    </ul>
+
+
+
+    <span id=item890 class="hide_extra">
+    </span>
+
+</dd>
 </dl>
 
 
@@ -2328,7 +2406,6 @@ o:connect_signal(<span class="string">'my_signal'</span>, slot)
 </div> <!-- id="main" -->
 <div id="about">
 <i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.6</a></i>
-<i style="float:right;">Last updated 2021-05-01 17:20:18 </i>
 </div> <!-- id="about" -->
 </div> <!-- id="container" -->
 </body>

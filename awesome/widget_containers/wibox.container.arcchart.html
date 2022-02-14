@@ -140,6 +140,7 @@
   <li><a href="../popups_and_bars/awful.popup.html">awful.popup</a></li>
   <li><a href="../popups_and_bars/awful.titlebar.html">awful.titlebar</a></li>
   <li><a href="../popups_and_bars/awful.tooltip.html">awful.tooltip</a></li>
+  <li><a href="../popups_and_bars/awful.wallpaper.html">awful.wallpaper</a></li>
   <li><a href="../popups_and_bars/awful.wibar.html">awful.wibar</a></li>
   <li><a href="../popups_and_bars/awful.widget.calendar_popup.html">awful.widget.calendar_popup</a></li>
   <li><a href="../popups_and_bars/menubar.html">menubar</a></li>
@@ -264,8 +265,15 @@
   <div class="extra-header__section">
     <h3>Info:</h3>
     <ul>
-            <li><strong>Copyright</strong>: 2013 Emmanuel Lepage Vallee</li>
-            <li><strong>Author</strong>: Emmanuel Lepage Vallee &lt;elv1313@gmail.com&gt;</li>
+                <li><strong>Copyright</strong>: 2013 Emmanuel Lepage Vallee</li>
+                <li>
+                    <strong>Originally authored by</strong>: Emmanuel Lepage Vallee &lt;elv1313@gmail.com&gt;<br />
+                    <small>(Full contributors list available on
+                    <a href="https://github.com/awesomeWM/awesome/graphs/contributors">
+                        our github project)
+                    </a></small>
+
+                </li>
     </ul>
   </div>
 
@@ -278,7 +286,9 @@
       <td class="name" >
         <a href="#wibox.container.arcchart">wibox.container.arcchart <span class='function_args'> <b>(</b>[widget]<b>)</b></span></a>
       </td>
-      <td colspan="2" class="summary">Returns a new arcchart layout.</td>
+      <td colspan="2" class="summary">
+        Returns a new arcchart layout.
+      </td>
     </tr>
 </table>
 <h2><a href="#Object_properties">Object properties</a></h2>
@@ -286,72 +296,100 @@
     <tr>
       <td class="shortname" ><a href="#widget">widget</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>widget</span></td>
-      <td colspan="2" class="summary">The widget to wrap in a radial proggressbar.</td>
+      <td colspan="2" class="summary">
+        The widget to wrap in a radial proggressbar.
+      </td>
     </tr>
     <tr>
       <td class="shortname" ><a href="#paddings">paddings</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>table <i>or</i> number</span></td>
-      <td colspan="2" class="summary">The padding between the outline and the progressbar.</td>
+      <td colspan="2" class="summary">
+        The padding between the outline and the progressbar.
+      </td>
     </tr>
     <tr>
       <td class="shortname" ><a href="#border_color">border_color</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>color</span></td>
-      <td colspan="2" class="summary">The border background color.</td>
+      <td colspan="2" class="summary">
+        The border background color.
+      </td>
     </tr>
     <tr>
       <td class="shortname" ><a href="#colors">colors</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>table</span></td>
-      <td colspan="2" class="summary">The arcchart values foreground colors.</td>
+      <td colspan="2" class="summary">
+        The arcchart values foreground colors.
+      </td>
     </tr>
     <tr>
       <td class="shortname" ><a href="#border_width">border_width</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>number</span></td>
-      <td colspan="2" class="summary">The border width.</td>
+      <td colspan="2" class="summary">
+        The border width.
+      </td>
     </tr>
     <tr>
       <td class="shortname" ><a href="#min_value">min_value</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>number</span></td>
-      <td colspan="2" class="summary">The minimum value.</td>
+      <td colspan="2" class="summary">
+        The minimum value.
+      </td>
     </tr>
     <tr>
       <td class="shortname" ><a href="#max_value">max_value</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>number</span></td>
-      <td colspan="2" class="summary">The maximum value.</td>
+      <td colspan="2" class="summary">
+        The maximum value.
+      </td>
     </tr>
     <tr>
       <td class="shortname" ><a href="#bg">bg</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>color</span></td>
-      <td colspan="2" class="summary">The radial background.</td>
+      <td colspan="2" class="summary">
+        The radial background.
+      </td>
     </tr>
     <tr>
       <td class="shortname" ><a href="#value">value</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>number</span></td>
-      <td colspan="2" class="summary">The value.</td>
+      <td colspan="2" class="summary">
+        The value.
+      </td>
     </tr>
     <tr>
       <td class="shortname" ><a href="#values">values</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>table</span></td>
-      <td colspan="2" class="summary">The values.</td>
+      <td colspan="2" class="summary">
+        The values.
+      </td>
     </tr>
     <tr>
       <td class="shortname" ><a href="#rounded_edge">rounded_edge</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>boolean</span></td>
-      <td colspan="2" class="summary">If the chart has rounded edges.</td>
+      <td colspan="2" class="summary">
+        If the chart has rounded edges.
+      </td>
     </tr>
     <tr>
       <td class="shortname" ><a href="#thickness">thickness</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>number</span></td>
-      <td colspan="2" class="summary">The arc thickness.</td>
+      <td colspan="2" class="summary">
+        The arc thickness.
+      </td>
     </tr>
     <tr>
       <td class="shortname" ><a href="#start_angle">start_angle</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>number</span></td>
-      <td colspan="2" class="summary">The (radiant) angle where the first value start.</td>
+      <td colspan="2" class="summary">
+        The (radiant) angle where the first value start.
+      </td>
     </tr>
     <tr>
       <td class="shortname" ><a href="#wibox.widget.base.children">children</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>table</span></td>
-      <td colspan="1" class="summary">Get or set the children elements.</td>
+      <td colspan="1" class="summary">
+        Get or set the children elements.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from wibox.widget.base
       </td>
@@ -359,7 +397,9 @@
     <tr>
       <td class="shortname" ><a href="#wibox.widget.base.all_children">all_children</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>table</span></td>
-      <td colspan="1" class="summary">Get all direct and indirect children widgets.</td>
+      <td colspan="1" class="summary">
+        Get all direct and indirect children widgets.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from wibox.widget.base
       </td>
@@ -367,7 +407,9 @@
     <tr>
       <td class="shortname" ><a href="#wibox.widget.base.forced_height">forced_height</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>number <i>or</i> nil</span></td>
-      <td colspan="1" class="summary">Force a widget height.</td>
+      <td colspan="1" class="summary">
+        Force a widget height.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from wibox.widget.base
       </td>
@@ -375,7 +417,9 @@
     <tr>
       <td class="shortname" ><a href="#wibox.widget.base.forced_width">forced_width</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>number <i>or</i> nil</span></td>
-      <td colspan="1" class="summary">Force a widget width.</td>
+      <td colspan="1" class="summary">
+        Force a widget width.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from wibox.widget.base
       </td>
@@ -383,7 +427,9 @@
     <tr>
       <td class="shortname" ><a href="#wibox.widget.base.opacity">opacity</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>number</span></td>
-      <td colspan="1" class="summary">The widget opacity (transparency).</td>
+      <td colspan="1" class="summary">
+        The widget opacity (transparency).
+      </td>
       <td class="baseclass" nowrap>
         Inherited from wibox.widget.base
       </td>
@@ -391,7 +437,9 @@
     <tr>
       <td class="shortname" ><a href="#wibox.widget.base.visible">visible</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>boolean</span></td>
-      <td colspan="1" class="summary">The widget visibility.</td>
+      <td colspan="1" class="summary">
+        The widget visibility.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from wibox.widget.base
       </td>
@@ -399,7 +447,9 @@
     <tr>
       <td class="shortname" ><a href="#wibox.widget.base.buttons">buttons</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>table</span></td>
-      <td colspan="1" class="summary">The widget buttons.</td>
+      <td colspan="1" class="summary">
+        The widget buttons.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from wibox.widget.base
       </td>
@@ -412,14 +462,18 @@
         <a href="#reset">:reset <span class='function_args'> <b>(</b><b>)</b></span></a>
         <span class="summarytype"></span>
       </td>
-      <td colspan="2" class="summary">Reset this layout.</td>
+      <td colspan="2" class="summary">
+        Reset this layout.
+      </td>
     </tr>
     <tr>
       <td class="name" >
         <a href="#wibox.widget.base:add_button">:add_button <span class='function_args'> <b>(</b>button<b>)</b></span></a>
         <span class="summarytype"></span>
       </td>
-      <td colspan="1" class="summary">Add a new <a href="../input_handling/awful.button.html#">awful.button</a> to this widget.</td>
+      <td colspan="1" class="summary">
+        Add a new <a href="../input_handling/awful.button.html#">awful.button</a> to this widget.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from wibox.widget.base
       </td>
@@ -429,8 +483,10 @@
         <a href="#wibox.widget.base:emit_signal_recursive">:emit_signal_recursive <span class='function_args'> <b>(</b>signal_name, ...<b>)</b></span></a>
         <span class="summarytype"></span>
       </td>
-      <td colspan="1" class="summary">Emit a signal and ensure all parent widgets in the hierarchies also
- forward the signal.</td>
+      <td colspan="1" class="summary">
+        Emit a signal and ensure all parent widgets in the hierarchies also
+ forward the signal.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from wibox.widget.base
       </td>
@@ -440,7 +496,9 @@
         <a href="#wibox.widget.base:index">:index <span class='function_args'> <b>(</b>widget[, recursive[, ...]]<b>)</b></span></a>
         <span class="summarytype"><span class='summary_type'> -&gt;&nbsp;(number, widget, table)</span></span>
       </td>
-      <td colspan="1" class="summary">Get the index of a widget.</td>
+      <td colspan="1" class="summary">
+        Get the index of a widget.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from wibox.widget.base
       </td>
@@ -450,7 +508,9 @@
         <a href="#connect_signal">:connect_signal <span class='function_args'> <b>(</b>name, func<b>)</b></span></a>
         <span class="summarytype"></span>
       </td>
-      <td colspan="1" class="summary">Connect to a signal.</td>
+      <td colspan="1" class="summary">
+        Connect to a signal.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from gears.object
       </td>
@@ -460,7 +520,9 @@
         <a href="#weak_connect_signal">:weak_connect_signal <span class='function_args'> <b>(</b>name, func<b>)</b></span></a>
         <span class="summarytype"></span>
       </td>
-      <td colspan="1" class="summary">Connect to a signal weakly.</td>
+      <td colspan="1" class="summary">
+        Connect to a signal weakly.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from gears.object
       </td>
@@ -470,7 +532,9 @@
         <a href="#disconnect_signal">:disconnect_signal <span class='function_args'> <b>(</b>name, func<b>)</b></span></a>
         <span class="summarytype"></span>
       </td>
-      <td colspan="1" class="summary">Disonnect from a signal.</td>
+      <td colspan="1" class="summary">
+        Disonnect from a signal.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from gears.object
       </td>
@@ -480,7 +544,9 @@
         <a href="#emit_signal">:emit_signal <span class='function_args'> <b>(</b>name, ...<b>)</b></span></a>
         <span class="summarytype"></span>
       </td>
-      <td colspan="1" class="summary">Emit a signal.</td>
+      <td colspan="1" class="summary">
+        Emit a signal.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from gears.object
       </td>
@@ -491,27 +557,37 @@
     <tr>
       <td class="shortname" ><a href="#beautiful.arcchart_border_color">beautiful.arcchart_border_color</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>color</span></td>
-      <td colspan="2" class="summary">The progressbar border background color.</td>
+      <td colspan="2" class="summary">
+        The progressbar border background color.
+      </td>
     </tr>
     <tr>
       <td class="shortname" ><a href="#beautiful.arcchart_color">beautiful.arcchart_color</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>color</span></td>
-      <td colspan="2" class="summary">The progressbar foreground color.</td>
+      <td colspan="2" class="summary">
+        The progressbar foreground color.
+      </td>
     </tr>
     <tr>
       <td class="shortname" ><a href="#beautiful.arcchart_border_width">beautiful.arcchart_border_width</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>number</span></td>
-      <td colspan="2" class="summary">The progressbar border width.</td>
+      <td colspan="2" class="summary">
+        The progressbar border width.
+      </td>
     </tr>
     <tr>
       <td class="shortname" ><a href="#beautiful.arcchart_paddings">beautiful.arcchart_paddings</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>table <i>or</i> number</span></td>
-      <td colspan="2" class="summary">The padding between the outline and the progressbar.</td>
+      <td colspan="2" class="summary">
+        The padding between the outline and the progressbar.
+      </td>
     </tr>
     <tr>
       <td class="shortname" ><a href="#beautiful.arcchart_thickness">beautiful.arcchart_thickness</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>number</span></td>
-      <td colspan="2" class="summary">The arc thickness.</td>
+      <td colspan="2" class="summary">
+        The arc thickness.
+      </td>
     </tr>
 </table>
 <h2><a href="#Signals">Signals</a></h2>
@@ -520,7 +596,9 @@
       <td class="name" >
         <a href="#widget::layout_changed">widget::layout_changed</a>
       </td>
-      <td colspan="1" class="summary">When the layout (size) change.</td>
+      <td colspan="1" class="summary">
+        When the layout (size) change.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from wibox.widget.base
       </td>
@@ -529,7 +607,9 @@
       <td class="name" >
         <a href="#widget::redraw_needed">widget::redraw_needed</a>
       </td>
-      <td colspan="1" class="summary">When the widget content changed.</td>
+      <td colspan="1" class="summary">
+        When the widget content changed.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from wibox.widget.base
       </td>
@@ -538,7 +618,9 @@
       <td class="name" >
         <a href="#button::press">button::press</a>
       </td>
-      <td colspan="1" class="summary">When a mouse button is pressed over the widget.</td>
+      <td colspan="1" class="summary">
+        When a mouse button is pressed over the widget.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from wibox.widget.base
       </td>
@@ -547,7 +629,9 @@
       <td class="name" >
         <a href="#button::release">button::release</a>
       </td>
-      <td colspan="1" class="summary">When a mouse button is released over the widget.</td>
+      <td colspan="1" class="summary">
+        When a mouse button is released over the widget.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from wibox.widget.base
       </td>
@@ -556,7 +640,9 @@
       <td class="name" >
         <a href="#mouse::enter">mouse::enter</a>
       </td>
-      <td colspan="1" class="summary">When the mouse enter a widget.</td>
+      <td colspan="1" class="summary">
+        When the mouse enter a widget.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from wibox.widget.base
       </td>
@@ -565,7 +651,9 @@
       <td class="name" >
         <a href="#mouse::leave">mouse::leave</a>
       </td>
-      <td colspan="1" class="summary">When the mouse leave a widget.</td>
+      <td colspan="1" class="summary">
+        When the mouse leave a widget.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from wibox.widget.base
       </td>
@@ -602,7 +690,7 @@
 
 
 
-    <span id=item1472 class="hide_extra">
+    <span id=item1485 class="hide_extra">
     </span>
 
 </dd>
@@ -633,7 +721,7 @@
 
 
 
-    <span id=item1473 class="hide_extra">
+    <span id=item1486 class="hide_extra">
     </span>
 
 </dd>
@@ -661,28 +749,28 @@
 
 
 
-         (<em>default</em> 0)
+         (<em>default</em> <code>0</code>)
         </li>
         <li><span class="parameter">bottom</span>
             <span class="types"><span class="type">number</span></span>
 
 
 
-         (<em>default</em> 0)
+         (<em>default</em> <code>0</code>)
         </li>
         <li><span class="parameter">left</span>
             <span class="types"><span class="type">number</span></span>
 
 
 
-         (<em>default</em> 0)
+         (<em>default</em> <code>0</code>)
         </li>
         <li><span class="parameter">right</span>
             <span class="types"><span class="type">number</span></span>
 
 
 
-         (<em>default</em> 0)
+         (<em>default</em> <code>0</code>)
         </li>
         </li></ul>
     </ul>
@@ -692,19 +780,19 @@
 
 
      <br />
-     <center id=button1474>
-     <a class="show_more_button" onclick="show_extra('1474')">
+     <center id=button1487>
+     <a class="show_more_button" onclick="show_extra('1487')">
       Click to display more
      </a>
      </center>
 
-    <span id=item1474 class="hide_extra">
+    <span id=item1487 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::paddings</code></span>  When the <a href="../widget_containers/wibox.container.arcchart.html#paddings">paddings</a> changes.</li>
            <ul>
              <li><span class="parameter"><code>self</code></span> <span class="types"><a href="../widget_containers/wibox.container.arcchart.html#widget">widget</a></span> The object being modified.</li>
-             <li><span class="parameter"><a href="../widget_containers/wibox.container.arcchart.html#paddings">paddings</a></span> <span class="types"><a href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span> The new paddings.</li>
+             <li><span class="parameter"><a href="../widget_containers/wibox.container.arcchart.html#paddings">paddings</a></span> <span class="types"><a href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span> The new paddings.</li>
            </ul>
      </ul>
      <h3>Consumed theme variables:</h3>
@@ -736,13 +824,13 @@
 
 
      <br />
-     <center id=button1475>
-     <a class="show_more_button" onclick="show_extra('1475')">
+     <center id=button1488>
+     <a class="show_more_button" onclick="show_extra('1488')">
       Click to display more
      </a>
      </center>
 
-    <span id=item1475 class="hide_extra">
+    <span id=item1488 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::border_color</code></span>  When the <a href="../widget_containers/wibox.container.arcchart.html#border_color">border_color</a> value changes.</li>
@@ -777,7 +865,7 @@
     <h3>Type constraints:</h3>
     <ul>
         <li><span class="parameter">values</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          An ordered set of colors for each value in arcchart.
         </li>
     </ul>
@@ -787,13 +875,13 @@
 
 
      <br />
-     <center id=button1476>
-     <a class="show_more_button" onclick="show_extra('1476')">
+     <center id=button1489>
+     <a class="show_more_button" onclick="show_extra('1489')">
       Click to display more
      </a>
      </center>
 
-    <span id=item1476 class="hide_extra">
+    <span id=item1489 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::colors</code></span>  When the <a href="../widget_containers/wibox.container.arcchart.html#colors">colors</a> value changes.</li>
@@ -835,13 +923,13 @@
 
 
      <br />
-     <center id=button1477>
-     <a class="show_more_button" onclick="show_extra('1477')">
+     <center id=button1490>
+     <a class="show_more_button" onclick="show_extra('1490')">
       Click to display more
      </a>
      </center>
 
-    <span id=item1477 class="hide_extra">
+    <span id=item1490 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::border_width</code></span>  When the <a href="../widget_containers/wibox.container.arcchart.html#border_width">border_width</a> value changes.</li>
@@ -878,13 +966,13 @@
 
 
      <br />
-     <center id=button1478>
-     <a class="show_more_button" onclick="show_extra('1478')">
+     <center id=button1491>
+     <a class="show_more_button" onclick="show_extra('1491')">
       Click to display more
      </a>
      </center>
 
-    <span id=item1478 class="hide_extra">
+    <span id=item1491 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::min_value</code></span>  When the <a href="../widget_containers/wibox.container.arcchart.html#min_value">min_value</a> value changes.</li>
@@ -913,13 +1001,13 @@
 
 
      <br />
-     <center id=button1479>
-     <a class="show_more_button" onclick="show_extra('1479')">
+     <center id=button1492>
+     <a class="show_more_button" onclick="show_extra('1492')">
       Click to display more
      </a>
      </center>
 
-    <span id=item1479 class="hide_extra">
+    <span id=item1492 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::max_value</code></span>  When the <a href="../widget_containers/wibox.container.arcchart.html#max_value">max_value</a> value changes.</li>
@@ -956,13 +1044,13 @@
 
 
      <br />
-     <center id=button1480>
-     <a class="show_more_button" onclick="show_extra('1480')">
+     <center id=button1493>
+     <a class="show_more_button" onclick="show_extra('1493')">
       Click to display more
      </a>
      </center>
 
-    <span id=item1480 class="hide_extra">
+    <span id=item1493 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::bg</code></span>  When the <a href="../widget_containers/wibox.container.arcchart.html#bg">bg</a> value changes.</li>
@@ -1013,13 +1101,13 @@
 
 
      <br />
-     <center id=button1481>
-     <a class="show_more_button" onclick="show_extra('1481')">
+     <center id=button1494>
+     <a class="show_more_button" onclick="show_extra('1494')">
       Click to display more
      </a>
      </center>
 
-    <span id=item1481 class="hide_extra">
+    <span id=item1494 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::value</code></span>  When the <a href="../widget_containers/wibox.container.arcchart.html#value">value</a> value changes.</li>
@@ -1047,7 +1135,7 @@
     <h3>Type constraints:</h3>
     <ul>
         <li><span class="parameter">values</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          An ordered set of values.
         </li>
     </ul>
@@ -1061,13 +1149,13 @@
 
 
      <br />
-     <center id=button1482>
-     <a class="show_more_button" onclick="show_extra('1482')">
+     <center id=button1495>
+     <a class="show_more_button" onclick="show_extra('1495')">
       Click to display more
      </a>
      </center>
 
-    <span id=item1482 class="hide_extra">
+    <span id=item1495 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::values</code></span>  When the <a href="../widget_containers/wibox.container.arcchart.html#values">values</a> value changes.</li>
@@ -1099,13 +1187,13 @@
 
 
      <br />
-     <center id=button1483>
-     <a class="show_more_button" onclick="show_extra('1483')">
+     <center id=button1496>
+     <a class="show_more_button" onclick="show_extra('1496')">
       Click to display more
      </a>
      </center>
 
-    <span id=item1483 class="hide_extra">
+    <span id=item1496 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::rounded_edge</code></span>  When the <a href="../widget_containers/wibox.container.arcchart.html#rounded_edge">rounded_edge</a> value changes.</li>
@@ -1137,13 +1225,13 @@
 
 
      <br />
-     <center id=button1484>
-     <a class="show_more_button" onclick="show_extra('1484')">
+     <center id=button1497>
+     <a class="show_more_button" onclick="show_extra('1497')">
       Click to display more
      </a>
      </center>
 
-    <span id=item1484 class="hide_extra">
+    <span id=item1497 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::thickness</code></span>  When the <a href="../widget_containers/wibox.container.arcchart.html#thickness">thickness</a> value changes.</li>
@@ -1174,7 +1262,7 @@
         <li><span class="parameter">start_angle</span>
             <span class="types"><span class="type">number</span></span>
          A number between 0 and 2*math.pi
-         (<em>default</em> math.pi)
+         (<em>default</em> <code>math.pi</code>)
         </li>
     </ul>
 
@@ -1183,13 +1271,13 @@
 
 
      <br />
-     <center id=button1485>
-     <a class="show_more_button" onclick="show_extra('1485')">
+     <center id=button1498>
+     <a class="show_more_button" onclick="show_extra('1498')">
       Click to display more
      </a>
      </center>
 
-    <span id=item1485 class="hide_extra">
+    <span id=item1498 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::start_angle</code></span>  When the <a href="../widget_containers/wibox.container.arcchart.html#start_angle">start_angle</a> value changes.</li>
@@ -1215,7 +1303,7 @@
     <h3>Type constraints:</h3>
     <ul>
         <li><span class="parameter">children</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          The children.
         </li>
     </ul>
@@ -1225,7 +1313,7 @@
 
 
 
-    <span id=item869 class="hide_extra">
+    <span id=item871 class="hide_extra">
     </span>
 
 </dd>
@@ -1247,7 +1335,7 @@
     <h3>Type constraints:</h3>
     <ul>
         <li><span class="parameter">children</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          The children.
         </li>
     </ul>
@@ -1257,7 +1345,7 @@
 
 
 
-    <span id=item870 class="hide_extra">
+    <span id=item872 class="hide_extra">
     </span>
 
 </dd>
@@ -1285,7 +1373,7 @@
 
 
 
-    <span id=item871 class="hide_extra">
+    <span id=item873 class="hide_extra">
     </span>
 
 </dd>
@@ -1313,7 +1401,7 @@
 
 
 
-    <span id=item872 class="hide_extra">
+    <span id=item874 class="hide_extra">
     </span>
 
 </dd>
@@ -1333,7 +1421,7 @@
         <li><span class="parameter">opacity</span>
             <span class="types"><span class="type">number</span></span>
          The opacity (between 0 and 1)
-         (<em>default</em> 1)
+         (<em>default</em> <code>1</code>)
         </li>
     </ul>
 
@@ -1342,7 +1430,7 @@
 
 
 
-    <span id=item873 class="hide_extra">
+    <span id=item875 class="hide_extra">
     </span>
 
 </dd>
@@ -1363,7 +1451,7 @@
 
 
 
-    <span id=item874 class="hide_extra">
+    <span id=item876 class="hide_extra">
     </span>
 
 </dd>
@@ -1390,7 +1478,7 @@
 
 
 
-    <span id=item875 class="hide_extra">
+    <span id=item877 class="hide_extra">
     </span>
 
 </dd>
@@ -1414,7 +1502,7 @@
 
 
 
-    <span id=item1486 class="hide_extra">
+    <span id=item1499 class="hide_extra">
     </span>
 
 </dd>
@@ -1442,7 +1530,7 @@
 
 
 
-    <span id=item876 class="hide_extra">
+    <span id=item878 class="hide_extra">
     </span>
 
 </dd>
@@ -1480,7 +1568,7 @@
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">signal_name</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
 
 
 
@@ -1495,7 +1583,7 @@
 
 
 
-    <span id=item877 class="hide_extra">
+    <span id=item879 class="hide_extra">
     </span>
 
 </dd>
@@ -1539,7 +1627,7 @@
            <span class="types"><a class="type" href="../widget_containers/wibox.container.arcchart.html#widget">widget</a></span>
         The parent widget.</li>
         <li>
-           <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+           <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
         The hierarchy path between "self" and "widget".</li>
     </ol>
 
@@ -1547,7 +1635,7 @@
 
 
 
-    <span id=item878 class="hide_extra">
+    <span id=item880 class="hide_extra">
     </span>
 
 </dd>
@@ -1578,7 +1666,7 @@ In slot [obj]   foo bar 42
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">name</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          The name of the signal.
         </li>
         <li><span class="parameter">func</span>
@@ -1595,23 +1683,23 @@ In slot [obj]   foo bar 42
         <pre class="example"><span class="keyword">local</span> o = gears.object{}
 <span class="comment">-- Function can be attached to signals
 </span><span class="keyword">local</span> <span class="keyword">function</span> slot(obj, a, b, c)
-    <span class="global">print</span>(<span class="string">'In slot'</span>, obj, a, b, c)
+    <span class="global">print</span>(<span class="string">"In slot"</span>, obj, a, b, c)
 <span class="keyword">end</span>
-o:connect_signal(<span class="string">'my_signal'</span>, slot)
+o:connect_signal(<span class="string">"my_signal"</span>, slot)
 <span class="comment">-- Emitting can be done without arguments. In that case, the object will be
 </span><span class="comment">-- implicitly added as an argument.
-</span>o:emit_signal <span class="string">'my_signal'</span>
+</span>o:emit_signal <span class="string">"my_signal"</span>
 <span class="comment">-- It is also possible to add as many random arguments are required.
-</span>o:emit_signal(<span class="string">'my_signal'</span>, <span class="string">'foo'</span>, <span class="string">'bar'</span>, <span class="number">42</span>)
+</span>o:emit_signal(<span class="string">"my_signal"</span>, <span class="string">"foo"</span>, <span class="string">"bar"</span>, <span class="number">42</span>)
 <span class="comment">-- Finally, to allow the object to be garbage collected (the memory freed), it
 </span><span class="comment">-- is necessary to disconnect the signal or use <code>weak_connect_signal</code>
-</span>o:disconnect_signal(<span class="string">'my_signal'</span>, slot)
+</span>o:disconnect_signal(<span class="string">"my_signal"</span>, slot)
 <span class="comment">-- This time, the <code>slot</code> wont be called as it is no longer connected.
-</span>o:emit_signal <span class="string">'my_signal'</span></pre>
+</span>o:emit_signal <span class="string">"my_signal"</span></pre>
     </ul>
 
 
-    <span id=item879 class="hide_extra">
+    <span id=item881 class="hide_extra">
     </span>
 
 </dd>
@@ -1635,7 +1723,7 @@ o:connect_signal(<span class="string">'my_signal'</span>, slot)
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">name</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          The name of the signal.
         </li>
         <li><span class="parameter">func</span>
@@ -1649,7 +1737,7 @@ o:connect_signal(<span class="string">'my_signal'</span>, slot)
 
 
 
-    <span id=item880 class="hide_extra">
+    <span id=item882 class="hide_extra">
     </span>
 
 </dd>
@@ -1667,7 +1755,7 @@ o:connect_signal(<span class="string">'my_signal'</span>, slot)
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">name</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          The name of the signal.
         </li>
         <li><span class="parameter">func</span>
@@ -1681,7 +1769,7 @@ o:connect_signal(<span class="string">'my_signal'</span>, slot)
 
 
 
-    <span id=item881 class="hide_extra">
+    <span id=item883 class="hide_extra">
     </span>
 
 </dd>
@@ -1699,7 +1787,7 @@ o:connect_signal(<span class="string">'my_signal'</span>, slot)
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">name</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          The name of the signal
         </li>
         <li><span class="parameter">...</span>
@@ -1714,7 +1802,7 @@ o:connect_signal(<span class="string">'my_signal'</span>, slot)
 
 
 
-    <span id=item882 class="hide_extra">
+    <span id=item884 class="hide_extra">
     </span>
 
 </dd>
@@ -1738,7 +1826,7 @@ o:connect_signal(<span class="string">'my_signal'</span>, slot)
 
 
 
-    <span id=item1487 class="hide_extra">
+    <span id=item1500 class="hide_extra">
     </span>
 
 </dd>
@@ -1758,7 +1846,7 @@ o:connect_signal(<span class="string">'my_signal'</span>, slot)
 
 
 
-    <span id=item1488 class="hide_extra">
+    <span id=item1501 class="hide_extra">
     </span>
 
 </dd>
@@ -1778,7 +1866,7 @@ o:connect_signal(<span class="string">'my_signal'</span>, slot)
 
 
 
-    <span id=item1489 class="hide_extra">
+    <span id=item1502 class="hide_extra">
     </span>
 
 </dd>
@@ -1801,28 +1889,28 @@ o:connect_signal(<span class="string">'my_signal'</span>, slot)
 
 
 
-         (<em>default</em> 0)
+         (<em>default</em> <code>0</code>)
         </li>
         <li><span class="parameter">bottom</span>
             <span class="types"><span class="type">number</span></span>
 
 
 
-         (<em>default</em> 0)
+         (<em>default</em> <code>0</code>)
         </li>
         <li><span class="parameter">left</span>
             <span class="types"><span class="type">number</span></span>
 
 
 
-         (<em>default</em> 0)
+         (<em>default</em> <code>0</code>)
         </li>
         <li><span class="parameter">right</span>
             <span class="types"><span class="type">number</span></span>
 
 
 
-         (<em>default</em> 0)
+         (<em>default</em> <code>0</code>)
         </li>
         </li></ul>
     </ul>
@@ -1832,7 +1920,7 @@ o:connect_signal(<span class="string">'my_signal'</span>, slot)
 
 
 
-    <span id=item1490 class="hide_extra">
+    <span id=item1503 class="hide_extra">
     </span>
 
 </dd>
@@ -1852,7 +1940,7 @@ o:connect_signal(<span class="string">'my_signal'</span>, slot)
 
 
 
-    <span id=item1491 class="hide_extra">
+    <span id=item1504 class="hide_extra">
     </span>
 
 </dd>
@@ -1883,7 +1971,7 @@ o:connect_signal(<span class="string">'my_signal'</span>, slot)
 
 
 
-    <span id=item883 class="hide_extra">
+    <span id=item885 class="hide_extra">
     </span>
 
 </dd>
@@ -1910,7 +1998,7 @@ o:connect_signal(<span class="string">'my_signal'</span>, slot)
 
 
 
-    <span id=item884 class="hide_extra">
+    <span id=item886 class="hide_extra">
     </span>
 
 </dd>
@@ -1927,7 +2015,7 @@ o:connect_signal(<span class="string">'my_signal'</span>, slot)
     <h3>Arguments:</h3>
     <ul>
         <li><span class="parameter">self</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          The current object instance itself.
         </li>
         <li><span class="parameter">lx</span>
@@ -1945,184 +2033,8 @@ o:connect_signal(<span class="string">'my_signal'</span>, slot)
          The button number.
         </li>
         <li><span class="parameter">mods</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          The modifiers (mod4, mod1 (alt), Control, Shift)
-        </li>
-        <li><span class="parameter">find_widgets_result</span> The entry from the result of
- <a href="../classes/wibox.drawable.html#wibox.drawable:find_widgets">wibox.drawable:find_widgets</a> for the position that the mouse hit.
-        <ul>
-        <li><span class="parameter">drawable</span>
-            <span class="types"><a class="type" href="../classes/wibox.drawable.html#">wibox.drawable</a></span>
-         The drawable containing
- the widget.
-        </li>
-        <li><span class="parameter">widget</span>
-            <span class="types"><a class="type" href="../widget_containers/wibox.container.arcchart.html#widget">widget</a></span>
-         The widget being displayed.
-        </li>
-        <li><span class="parameter">hierarchy</span>
-            <span class="types"><a class="type" href="../classes/wibox.hierarchy.html#">wibox.hierarchy</a></span>
-         The hierarchy
- managing the widget's geometry.
-        </li>
-        <li><span class="parameter">x</span>
-            <span class="types"><span class="type">number</span></span>
-         An approximation of the X position that
- the widget is visible at on the surface.
-        </li>
-        <li><span class="parameter">y</span>
-            <span class="types"><span class="type">number</span></span>
-         An approximation of the Y position that
- the widget is visible at on the surface.
-        </li>
-        <li><span class="parameter">width</span>
-            <span class="types"><span class="type">number</span></span>
-         An approximation of the width that
- the widget is visible at on the surface.
-        </li>
-        <li><span class="parameter">height</span>
-            <span class="types"><span class="type">number</span></span>
-         An approximation of the height that
- the widget is visible at on the surface.
-        </li>
-        <li><span class="parameter">widget_width</span>
-            <span class="types"><span class="type">number</span></span>
-         The exact width of the widget
- in its local coordinate system.
-        </li>
-        <li><span class="parameter">widget_height</span>
-            <span class="types"><span class="type">number</span></span>
-         The exact height of the widget
- in its local coordinate system.
-        </li>
-        </li></ul>
-    </ul>
-
-
-
-    <h3>See also:</h3>
-    <ul>
-         <a href="../input_handling/mouse.html#">mouse</a>
-    </ul>
-
-
-
-    <span id=item885 class="hide_extra">
-    </span>
-
-</dd>
-    <dt>
-    <a name = "button::release"></a>
-    <strong>button::release</strong>
-    <span class="baseclass" >
-    &middot;&nbsp;Inherited from wibox.widget.base
-    </span>
-    </dt>
-    <dd>
-    When a mouse button is released over the widget.
-
-    <h3>Arguments:</h3>
-    <ul>
-        <li><span class="parameter">self</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
-         The current object instance itself.
-        </li>
-        <li><span class="parameter">lx</span>
-            <span class="types"><span class="type">number</span></span>
-         The horizontal position relative to the (0,0) position in
- the widget.
-        </li>
-        <li><span class="parameter">ly</span>
-            <span class="types"><span class="type">number</span></span>
-         The vertical position relative to the (0,0) position in the
- widget.
-        </li>
-        <li><span class="parameter">button</span>
-            <span class="types"><span class="type">number</span></span>
-         The button number.
-        </li>
-        <li><span class="parameter">mods</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
-         The modifiers (mod4, mod1 (alt), Control, Shift)
-        </li>
-        <li><span class="parameter">find_widgets_result</span> The entry from the result of
- <a href="../classes/wibox.drawable.html#wibox.drawable:find_widgets">wibox.drawable:find_widgets</a> for the position that the mouse hit.
-        <ul>
-        <li><span class="parameter">drawable</span>
-            <span class="types"><a class="type" href="../classes/wibox.drawable.html#">wibox.drawable</a></span>
-         The drawable containing
- the widget.
-        </li>
-        <li><span class="parameter">widget</span>
-            <span class="types"><a class="type" href="../widget_containers/wibox.container.arcchart.html#widget">widget</a></span>
-         The widget being displayed.
-        </li>
-        <li><span class="parameter">hierarchy</span>
-            <span class="types"><a class="type" href="../classes/wibox.hierarchy.html#">wibox.hierarchy</a></span>
-         The hierarchy
- managing the widget's geometry.
-        </li>
-        <li><span class="parameter">x</span>
-            <span class="types"><span class="type">number</span></span>
-         An approximation of the X position that
- the widget is visible at on the surface.
-        </li>
-        <li><span class="parameter">y</span>
-            <span class="types"><span class="type">number</span></span>
-         An approximation of the Y position that
- the widget is visible at on the surface.
-        </li>
-        <li><span class="parameter">width</span>
-            <span class="types"><span class="type">number</span></span>
-         An approximation of the width that
- the widget is visible at on the surface.
-        </li>
-        <li><span class="parameter">height</span>
-            <span class="types"><span class="type">number</span></span>
-         An approximation of the height that
- the widget is visible at on the surface.
-        </li>
-        <li><span class="parameter">widget_width</span>
-            <span class="types"><span class="type">number</span></span>
-         The exact width of the widget
- in its local coordinate system.
-        </li>
-        <li><span class="parameter">widget_height</span>
-            <span class="types"><span class="type">number</span></span>
-         The exact height of the widget
- in its local coordinate system.
-        </li>
-        </li></ul>
-    </ul>
-
-
-
-    <h3>See also:</h3>
-    <ul>
-         <a href="../input_handling/mouse.html#">mouse</a>
-    </ul>
-
-
-
-    <span id=item886 class="hide_extra">
-    </span>
-
-</dd>
-    <dt>
-    <a name = "mouse::enter"></a>
-    <strong>mouse::enter</strong>
-    <span class="baseclass" >
-    &middot;&nbsp;Inherited from wibox.widget.base
-    </span>
-    </dt>
-    <dd>
-    When the mouse enter a widget.
-
-    <h3>Arguments:</h3>
-    <ul>
-        <li><span class="parameter">self</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
-         The current object instance itself.
         </li>
         <li><span class="parameter">find_widgets_result</span> The entry from the result of
  <a href="../classes/wibox.drawable.html#wibox.drawable:find_widgets">wibox.drawable:find_widgets</a> for the position that the mouse hit.
@@ -2188,20 +2100,38 @@ o:connect_signal(<span class="string">'my_signal'</span>, slot)
 
 </dd>
     <dt>
-    <a name = "mouse::leave"></a>
-    <strong>mouse::leave</strong>
+    <a name = "button::release"></a>
+    <strong>button::release</strong>
     <span class="baseclass" >
     &middot;&nbsp;Inherited from wibox.widget.base
     </span>
     </dt>
     <dd>
-    When the mouse leave a widget.
+    When a mouse button is released over the widget.
 
     <h3>Arguments:</h3>
     <ul>
         <li><span class="parameter">self</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          The current object instance itself.
+        </li>
+        <li><span class="parameter">lx</span>
+            <span class="types"><span class="type">number</span></span>
+         The horizontal position relative to the (0,0) position in
+ the widget.
+        </li>
+        <li><span class="parameter">ly</span>
+            <span class="types"><span class="type">number</span></span>
+         The vertical position relative to the (0,0) position in the
+ widget.
+        </li>
+        <li><span class="parameter">button</span>
+            <span class="types"><span class="type">number</span></span>
+         The button number.
+        </li>
+        <li><span class="parameter">mods</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+         The modifiers (mod4, mod1 (alt), Control, Shift)
         </li>
         <li><span class="parameter">find_widgets_result</span> The entry from the result of
  <a href="../classes/wibox.drawable.html#wibox.drawable:find_widgets">wibox.drawable:find_widgets</a> for the position that the mouse hit.
@@ -2266,6 +2196,164 @@ o:connect_signal(<span class="string">'my_signal'</span>, slot)
     </span>
 
 </dd>
+    <dt>
+    <a name = "mouse::enter"></a>
+    <strong>mouse::enter</strong>
+    <span class="baseclass" >
+    &middot;&nbsp;Inherited from wibox.widget.base
+    </span>
+    </dt>
+    <dd>
+    When the mouse enter a widget.
+
+    <h3>Arguments:</h3>
+    <ul>
+        <li><span class="parameter">self</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+         The current object instance itself.
+        </li>
+        <li><span class="parameter">find_widgets_result</span> The entry from the result of
+ <a href="../classes/wibox.drawable.html#wibox.drawable:find_widgets">wibox.drawable:find_widgets</a> for the position that the mouse hit.
+        <ul>
+        <li><span class="parameter">drawable</span>
+            <span class="types"><a class="type" href="../classes/wibox.drawable.html#">wibox.drawable</a></span>
+         The drawable containing
+ the widget.
+        </li>
+        <li><span class="parameter">widget</span>
+            <span class="types"><a class="type" href="../widget_containers/wibox.container.arcchart.html#widget">widget</a></span>
+         The widget being displayed.
+        </li>
+        <li><span class="parameter">hierarchy</span>
+            <span class="types"><a class="type" href="../classes/wibox.hierarchy.html#">wibox.hierarchy</a></span>
+         The hierarchy
+ managing the widget's geometry.
+        </li>
+        <li><span class="parameter">x</span>
+            <span class="types"><span class="type">number</span></span>
+         An approximation of the X position that
+ the widget is visible at on the surface.
+        </li>
+        <li><span class="parameter">y</span>
+            <span class="types"><span class="type">number</span></span>
+         An approximation of the Y position that
+ the widget is visible at on the surface.
+        </li>
+        <li><span class="parameter">width</span>
+            <span class="types"><span class="type">number</span></span>
+         An approximation of the width that
+ the widget is visible at on the surface.
+        </li>
+        <li><span class="parameter">height</span>
+            <span class="types"><span class="type">number</span></span>
+         An approximation of the height that
+ the widget is visible at on the surface.
+        </li>
+        <li><span class="parameter">widget_width</span>
+            <span class="types"><span class="type">number</span></span>
+         The exact width of the widget
+ in its local coordinate system.
+        </li>
+        <li><span class="parameter">widget_height</span>
+            <span class="types"><span class="type">number</span></span>
+         The exact height of the widget
+ in its local coordinate system.
+        </li>
+        </li></ul>
+    </ul>
+
+
+
+    <h3>See also:</h3>
+    <ul>
+         <a href="../input_handling/mouse.html#">mouse</a>
+    </ul>
+
+
+
+    <span id=item889 class="hide_extra">
+    </span>
+
+</dd>
+    <dt>
+    <a name = "mouse::leave"></a>
+    <strong>mouse::leave</strong>
+    <span class="baseclass" >
+    &middot;&nbsp;Inherited from wibox.widget.base
+    </span>
+    </dt>
+    <dd>
+    When the mouse leave a widget.
+
+    <h3>Arguments:</h3>
+    <ul>
+        <li><span class="parameter">self</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+         The current object instance itself.
+        </li>
+        <li><span class="parameter">find_widgets_result</span> The entry from the result of
+ <a href="../classes/wibox.drawable.html#wibox.drawable:find_widgets">wibox.drawable:find_widgets</a> for the position that the mouse hit.
+        <ul>
+        <li><span class="parameter">drawable</span>
+            <span class="types"><a class="type" href="../classes/wibox.drawable.html#">wibox.drawable</a></span>
+         The drawable containing
+ the widget.
+        </li>
+        <li><span class="parameter">widget</span>
+            <span class="types"><a class="type" href="../widget_containers/wibox.container.arcchart.html#widget">widget</a></span>
+         The widget being displayed.
+        </li>
+        <li><span class="parameter">hierarchy</span>
+            <span class="types"><a class="type" href="../classes/wibox.hierarchy.html#">wibox.hierarchy</a></span>
+         The hierarchy
+ managing the widget's geometry.
+        </li>
+        <li><span class="parameter">x</span>
+            <span class="types"><span class="type">number</span></span>
+         An approximation of the X position that
+ the widget is visible at on the surface.
+        </li>
+        <li><span class="parameter">y</span>
+            <span class="types"><span class="type">number</span></span>
+         An approximation of the Y position that
+ the widget is visible at on the surface.
+        </li>
+        <li><span class="parameter">width</span>
+            <span class="types"><span class="type">number</span></span>
+         An approximation of the width that
+ the widget is visible at on the surface.
+        </li>
+        <li><span class="parameter">height</span>
+            <span class="types"><span class="type">number</span></span>
+         An approximation of the height that
+ the widget is visible at on the surface.
+        </li>
+        <li><span class="parameter">widget_width</span>
+            <span class="types"><span class="type">number</span></span>
+         The exact width of the widget
+ in its local coordinate system.
+        </li>
+        <li><span class="parameter">widget_height</span>
+            <span class="types"><span class="type">number</span></span>
+         The exact height of the widget
+ in its local coordinate system.
+        </li>
+        </li></ul>
+    </ul>
+
+
+
+    <h3>See also:</h3>
+    <ul>
+         <a href="../input_handling/mouse.html#">mouse</a>
+    </ul>
+
+
+
+    <span id=item890 class="hide_extra">
+    </span>
+
+</dd>
 </dl>
 
 
@@ -2273,7 +2361,6 @@ o:connect_signal(<span class="string">'my_signal'</span>, slot)
 </div> <!-- id="main" -->
 <div id="about">
 <i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.6</a></i>
-<i style="float:right;">Last updated 2021-05-01 17:20:18 </i>
 </div> <!-- id="about" -->
 </div> <!-- id="container" -->
 </body>

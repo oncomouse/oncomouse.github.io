@@ -139,6 +139,7 @@
   <li><a href="../popups_and_bars/awful.popup.html">awful.popup</a></li>
   <li><a href="../popups_and_bars/awful.titlebar.html">awful.titlebar</a></li>
   <li><a href="../popups_and_bars/awful.tooltip.html">awful.tooltip</a></li>
+  <li><a href="../popups_and_bars/awful.wallpaper.html">awful.wallpaper</a></li>
   <li><a href="../popups_and_bars/awful.wibar.html">awful.wibar</a></li>
   <li><a href="../popups_and_bars/awful.widget.calendar_popup.html">awful.widget.calendar_popup</a></li>
   <li><a href="../popups_and_bars/menubar.html">menubar</a></li>
@@ -247,8 +248,15 @@
   <div class="extra-header__section">
     <h3>Info:</h3>
     <ul>
-            <li><strong>Copyright</strong>: 2019 Emmanuel Lepage Vallee</li>
-            <li><strong>Author</strong>: Emmanuel Lepage Vallee &lt;elv1313@gmail.com&gt;</li>
+                <li><strong>Copyright</strong>: 2019 Emmanuel Lepage Vallee</li>
+                <li>
+                    <strong>Originally authored by</strong>: Emmanuel Lepage Vallee &lt;elv1313@gmail.com&gt;<br />
+                    <small>(Full contributors list available on
+                    <a href="https://github.com/awesomeWM/awesome/graphs/contributors">
+                        our github project)
+                    </a></small>
+
+                </li>
     </ul>
   </div>
 
@@ -267,7 +275,9 @@
       <td class="name" >
         <a href="#naughty.container.background">naughty.container.background <span class='function_named_args'><b>{</b>[args]<b>}</b></span></a>
       </td>
-      <td colspan="2" class="summary">Create a new naughty.container.background.</td>
+      <td colspan="2" class="summary">
+        Create a new naughty.container.background.
+      </td>
     </tr>
 </table>
 <h2><a href="#Object_properties">Object properties</a></h2>
@@ -275,12 +285,16 @@
     <tr>
       <td class="shortname" ><a href="#notification">notification</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>naughty.notification</span></td>
-      <td colspan="2" class="summary">The attached notification.</td>
+      <td colspan="2" class="summary">
+        The attached notification.
+      </td>
     </tr>
     <tr>
       <td class="shortname" ><a href="#children">children</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>table</span></td>
-      <td colspan="1" class="summary">Get or set the children elements.</td>
+      <td colspan="1" class="summary">
+        Get or set the children elements.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from wibox.widget
       </td>
@@ -288,7 +302,9 @@
     <tr>
       <td class="shortname" ><a href="#all_children">all_children</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>table</span></td>
-      <td colspan="1" class="summary">Get all direct and indirect children widgets.</td>
+      <td colspan="1" class="summary">
+        Get all direct and indirect children widgets.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from wibox.widget
       </td>
@@ -296,7 +312,9 @@
     <tr>
       <td class="shortname" ><a href="#forced_height">forced_height</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>number <i>or</i> nil</span></td>
-      <td colspan="1" class="summary">Force a widget height.</td>
+      <td colspan="1" class="summary">
+        Force a widget height.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from wibox.widget
       </td>
@@ -304,7 +322,9 @@
     <tr>
       <td class="shortname" ><a href="#forced_width">forced_width</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>number <i>or</i> nil</span></td>
-      <td colspan="1" class="summary">Force a widget width.</td>
+      <td colspan="1" class="summary">
+        Force a widget width.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from wibox.widget
       </td>
@@ -312,7 +332,9 @@
     <tr>
       <td class="shortname" ><a href="#opacity">opacity</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>number</span></td>
-      <td colspan="1" class="summary">The widget opacity (transparency).</td>
+      <td colspan="1" class="summary">
+        The widget opacity (transparency).
+      </td>
       <td class="baseclass" nowrap>
         Inherited from wibox.widget
       </td>
@@ -320,7 +342,9 @@
     <tr>
       <td class="shortname" ><a href="#visible">visible</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>boolean</span></td>
-      <td colspan="1" class="summary">The widget visibility.</td>
+      <td colspan="1" class="summary">
+        The widget visibility.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from wibox.widget
       </td>
@@ -328,7 +352,9 @@
     <tr>
       <td class="shortname" ><a href="#buttons">buttons</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>table</span></td>
-      <td colspan="1" class="summary">The widget buttons.</td>
+      <td colspan="1" class="summary">
+        The widget buttons.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from wibox.widget
       </td>
@@ -341,7 +367,9 @@
         <a href="#setup">:setup <span class='function_named_args'><b>{</b>[args]<b>}</b></span></a>
         <span class="summarytype"></span>
       </td>
-      <td colspan="1" class="summary">Set a declarative widget hierarchy description.</td>
+      <td colspan="1" class="summary">
+        Set a declarative widget hierarchy description.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from wibox.widget
       </td>
@@ -351,7 +379,9 @@
         <a href="#add_button">:add_button <span class='function_args'> <b>(</b>button<b>)</b></span></a>
         <span class="summarytype"></span>
       </td>
-      <td colspan="1" class="summary">Add a new <a href="../input_handling/awful.button.html#">awful.button</a> to this widget.</td>
+      <td colspan="1" class="summary">
+        Add a new <a href="../input_handling/awful.button.html#">awful.button</a> to this widget.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from wibox.widget
       </td>
@@ -361,8 +391,10 @@
         <a href="#emit_signal_recursive">:emit_signal_recursive <span class='function_args'> <b>(</b>signal_name, ...<b>)</b></span></a>
         <span class="summarytype"></span>
       </td>
-      <td colspan="1" class="summary">Emit a signal and ensure all parent widgets in the hierarchies also
- forward the signal.</td>
+      <td colspan="1" class="summary">
+        Emit a signal and ensure all parent widgets in the hierarchies also
+ forward the signal.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from wibox.widget
       </td>
@@ -372,7 +404,9 @@
         <a href="#emit_signal">:emit_signal <span class='function_args'> <b>(</b>name, ...<b>)</b></span></a>
         <span class="summarytype"></span>
       </td>
-      <td colspan="1" class="summary">Emit a signal.</td>
+      <td colspan="1" class="summary">
+        Emit a signal.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from gears.object
       </td>
@@ -382,7 +416,9 @@
         <a href="#connect_signal">:connect_signal <span class='function_args'> <b>(</b>name, func<b>)</b></span></a>
         <span class="summarytype"></span>
       </td>
-      <td colspan="1" class="summary">Connect to a signal.</td>
+      <td colspan="1" class="summary">
+        Connect to a signal.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from gears.object
       </td>
@@ -392,7 +428,9 @@
         <a href="#weak_connect_signal">:weak_connect_signal <span class='function_args'> <b>(</b>name, func<b>)</b></span></a>
         <span class="summarytype"></span>
       </td>
-      <td colspan="1" class="summary">Connect to a signal weakly.</td>
+      <td colspan="1" class="summary">
+        Connect to a signal weakly.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from gears.object
       </td>
@@ -404,7 +442,9 @@
       <td class="name" >
         <a href="#widget::layout_changed">widget::layout_changed</a>
       </td>
-      <td colspan="1" class="summary">When the layout (size) change.</td>
+      <td colspan="1" class="summary">
+        When the layout (size) change.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from wibox.widget
       </td>
@@ -413,7 +453,9 @@
       <td class="name" >
         <a href="#widget::redraw_needed">widget::redraw_needed</a>
       </td>
-      <td colspan="1" class="summary">When the widget content changed.</td>
+      <td colspan="1" class="summary">
+        When the widget content changed.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from wibox.widget
       </td>
@@ -422,7 +464,9 @@
       <td class="name" >
         <a href="#button::press">button::press</a>
       </td>
-      <td colspan="1" class="summary">When a mouse button is pressed over the widget.</td>
+      <td colspan="1" class="summary">
+        When a mouse button is pressed over the widget.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from wibox.widget
       </td>
@@ -431,7 +475,9 @@
       <td class="name" >
         <a href="#button::release">button::release</a>
       </td>
-      <td colspan="1" class="summary">When a mouse button is released over the widget.</td>
+      <td colspan="1" class="summary">
+        When a mouse button is released over the widget.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from wibox.widget
       </td>
@@ -440,7 +486,9 @@
       <td class="name" >
         <a href="#mouse::enter">mouse::enter</a>
       </td>
-      <td colspan="1" class="summary">When the mouse enter a widget.</td>
+      <td colspan="1" class="summary">
+        When the mouse enter a widget.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from wibox.widget
       </td>
@@ -449,7 +497,9 @@
       <td class="name" >
         <a href="#mouse::leave">mouse::leave</a>
       </td>
-      <td colspan="1" class="summary">When the mouse leave a widget.</td>
+      <td colspan="1" class="summary">
+        When the mouse leave a widget.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from wibox.widget
       </td>
@@ -491,13 +541,13 @@
 
 
      <br />
-     <center id=button1451>
-     <a class="show_more_button" onclick="show_extra('1451')">
+     <center id=button1464>
+     <a class="show_more_button" onclick="show_extra('1464')">
       Click to display more
      </a>
      </center>
 
-    <span id=item1451 class="hide_extra">
+    <span id=item1464 class="hide_extra">
      <h3>Consumed theme variables:</h3>
      <table class='widget_list' border=1>
          <tr style='font-weight: bold;'>
@@ -532,13 +582,13 @@
 
 
      <br />
-     <center id=button1452>
-     <a class="show_more_button" onclick="show_extra('1452')">
+     <center id=button1465>
+     <a class="show_more_button" onclick="show_extra('1465')">
       Click to display more
      </a>
      </center>
 
-    <span id=item1452 class="hide_extra">
+    <span id=item1465 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::notification</code></span>  When the <a href="../widget_containers/naughty.widget.background.html#notification">notification</a> value changes.</li>
@@ -564,7 +614,7 @@
     <h3>Type constraints:</h3>
     <ul>
         <li><span class="parameter">children</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          The children.
         </li>
     </ul>
@@ -574,7 +624,7 @@
 
 
 
-    <span id=item1453 class="hide_extra">
+    <span id=item1466 class="hide_extra">
     </span>
 
 </dd>
@@ -595,7 +645,7 @@
     <h3>Type constraints:</h3>
     <ul>
         <li><span class="parameter">children</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          The children.
         </li>
     </ul>
@@ -605,7 +655,7 @@
 
 
 
-    <span id=item1454 class="hide_extra">
+    <span id=item1467 class="hide_extra">
     </span>
 
 </dd>
@@ -633,7 +683,7 @@
 
 
 
-    <span id=item1455 class="hide_extra">
+    <span id=item1468 class="hide_extra">
     </span>
 
 </dd>
@@ -661,7 +711,7 @@
 
 
 
-    <span id=item1456 class="hide_extra">
+    <span id=item1469 class="hide_extra">
     </span>
 
 </dd>
@@ -681,7 +731,7 @@
         <li><span class="parameter">opacity</span>
             <span class="types"><span class="type">number</span></span>
          The opacity (between 0 and 1)
-         (<em>default</em> 1)
+         (<em>default</em> <code>1</code>)
         </li>
     </ul>
 
@@ -690,7 +740,7 @@
 
 
 
-    <span id=item1457 class="hide_extra">
+    <span id=item1470 class="hide_extra">
     </span>
 
 </dd>
@@ -711,7 +761,7 @@
 
 
 
-    <span id=item1458 class="hide_extra">
+    <span id=item1471 class="hide_extra">
     </span>
 
 </dd>
@@ -738,7 +788,7 @@
 
 
 
-    <span id=item1459 class="hide_extra">
+    <span id=item1472 class="hide_extra">
     </span>
 
 </dd>
@@ -770,7 +820,7 @@
 
 
 
-    <span id=item1460 class="hide_extra">
+    <span id=item1473 class="hide_extra">
     </span>
 
 </dd>
@@ -798,7 +848,7 @@
 
 
 
-    <span id=item1461 class="hide_extra">
+    <span id=item1474 class="hide_extra">
     </span>
 
 </dd>
@@ -818,7 +868,7 @@
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">signal_name</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
 
 
 
@@ -833,7 +883,7 @@
 
 
 
-    <span id=item1462 class="hide_extra">
+    <span id=item1475 class="hide_extra">
     </span>
 
 </dd>
@@ -851,7 +901,7 @@
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">name</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          The name of the signal.
         </li>
         <li><span class="parameter">...</span>
@@ -866,7 +916,7 @@
 
 
 
-    <span id=item1463 class="hide_extra">
+    <span id=item1476 class="hide_extra">
     </span>
 
 </dd>
@@ -884,7 +934,7 @@
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">name</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          The name of the signal.
         </li>
         <li><span class="parameter">func</span>
@@ -898,7 +948,7 @@
 
 
 
-    <span id=item1464 class="hide_extra">
+    <span id=item1477 class="hide_extra">
     </span>
 
 </dd>
@@ -923,7 +973,7 @@
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">name</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          The name of the signal.
         </li>
         <li><span class="parameter">func</span>
@@ -937,7 +987,7 @@
 
 
 
-    <span id=item1465 class="hide_extra">
+    <span id=item1478 class="hide_extra">
     </span>
 
 </dd>
@@ -968,7 +1018,7 @@
 
 
 
-    <span id=item1466 class="hide_extra">
+    <span id=item1479 class="hide_extra">
     </span>
 
 </dd>
@@ -995,7 +1045,7 @@
 
 
 
-    <span id=item1467 class="hide_extra">
+    <span id=item1480 class="hide_extra">
     </span>
 
 </dd>
@@ -1012,7 +1062,7 @@
     <h3>Arguments:</h3>
     <ul>
         <li><span class="parameter">self</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          The current object instance itself.
         </li>
         <li><span class="parameter">lx</span>
@@ -1030,7 +1080,7 @@
          The button number.
         </li>
         <li><span class="parameter">mods</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          The modifiers (mod4, mod1 (alt), Control, Shift)
         </li>
         <li><span class="parameter">find_widgets_result</span> The entry from the result of
@@ -1092,7 +1142,7 @@
 
 
 
-    <span id=item1468 class="hide_extra">
+    <span id=item1481 class="hide_extra">
     </span>
 
 </dd>
@@ -1109,7 +1159,7 @@
     <h3>Arguments:</h3>
     <ul>
         <li><span class="parameter">self</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          The current object instance itself.
         </li>
         <li><span class="parameter">lx</span>
@@ -1127,7 +1177,7 @@
          The button number.
         </li>
         <li><span class="parameter">mods</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          The modifiers (mod4, mod1 (alt), Control, Shift)
         </li>
         <li><span class="parameter">find_widgets_result</span> The entry from the result of
@@ -1189,7 +1239,7 @@
 
 
 
-    <span id=item1469 class="hide_extra">
+    <span id=item1482 class="hide_extra">
     </span>
 
 </dd>
@@ -1206,7 +1256,7 @@
     <h3>Arguments:</h3>
     <ul>
         <li><span class="parameter">self</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          The current object instance itself.
         </li>
         <li><span class="parameter">find_widgets_result</span> The entry from the result of
@@ -1268,7 +1318,7 @@
 
 
 
-    <span id=item1470 class="hide_extra">
+    <span id=item1483 class="hide_extra">
     </span>
 
 </dd>
@@ -1285,7 +1335,7 @@
     <h3>Arguments:</h3>
     <ul>
         <li><span class="parameter">self</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          The current object instance itself.
         </li>
         <li><span class="parameter">find_widgets_result</span> The entry from the result of
@@ -1347,7 +1397,7 @@
 
 
 
-    <span id=item1471 class="hide_extra">
+    <span id=item1484 class="hide_extra">
     </span>
 
 </dd>
@@ -1358,7 +1408,6 @@
 </div> <!-- id="main" -->
 <div id="about">
 <i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.6</a></i>
-<i style="float:right;">Last updated 2021-05-01 17:20:18 </i>
 </div> <!-- id="about" -->
 </div> <!-- id="container" -->
 </body>

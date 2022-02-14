@@ -129,6 +129,7 @@
   <li><a href="popups_and_bars/awful.popup.html">awful.popup</a></li>
   <li><a href="popups_and_bars/awful.titlebar.html">awful.titlebar</a></li>
   <li><a href="popups_and_bars/awful.tooltip.html">awful.tooltip</a></li>
+  <li><a href="popups_and_bars/awful.wallpaper.html">awful.wallpaper</a></li>
   <li><a href="popups_and_bars/awful.wibar.html">awful.wibar</a></li>
   <li><a href="popups_and_bars/awful.widget.calendar_popup.html">awful.widget.calendar_popup</a></li>
   <li><a href="popups_and_bars/menubar.html">menubar</a></li>
@@ -217,7 +218,7 @@
 <div id="content">
 
 
-  <h2>API documentation for awesome, a highly configurable X window manager (version v4.3-1019-ga4572b9b).</h2>
+  <h2>API documentation for awesome, a highly configurable X window manager (version v4.3-1353-ge26069682).</h2>
   <p>
 <p>Welcome to the documentation for the Awesome window manager. Below you find an
 overview of the individual parts which links to the full documentation.</p>
@@ -230,23 +231,23 @@ should be useful for you.</p>
 
 <h3>Default configuration components name:</h3>
 
-<p><center><img src="../doc/images/AUTOGEN_awful_popup_defaultconfig.svg"></center></p>
+<p><center><img src="images/AUTOGEN_awful_popup_defaultconfig.svg"></center></p>
 
 <h3>Guides</h3>
 
 
 <div class="index_guides">
     <div>
-        <a href="../doc/documentation/07-my-first-awesome.md.html">Getting started</a>
-        <a href="../doc/documentation/90-FAQ.md.html">FAQ</a>
-        <a href="../doc/documentation/01-readme.md.html">Read me</a>
-        <a href="../doc/documentation/89-NEWS.md.html">NEWS</a>
+        <a href="documentation/07-my-first-awesome.md.html#">Getting started</a>
+        <a href="documentation/90-FAQ.md.html#">FAQ</a>
+        <a href="documentation/01-readme.md.html#">Read Me</a>
+        <a href="documentation/89-NEWS.md.html#">NEWS</a>
     </div>
     <div>
-        <a href="../doc/documentation/03-declarative-layout.md.html">The widget system</a>
-        <a href="../doc/documentation/09-options.md.html">Startup options</a>
-        <a href="../doc/documentation/05-awesomerc.md.html">The default rc.lua</a>
-        <a href="../doc/documentation/08-client-layout-system.md.html">Window management</a>
+        <a href="documentation/03-declarative-layout.md.html#">The widget system</a>
+        <a href="documentation/09-options.md.html#">Startup options</a>
+        <a href="documentation/05-awesomerc.md.html#">The default rc.lua</a>
+        <a href="documentation/08-client-layout-system.md.html#">Window management</a>
     </div>
 </div>
 
@@ -432,7 +433,7 @@ of those libraries.</p>
   </tr>
   <tr>
     <td class="name"  ><a href="widgets/wibox.widget.imagebox.html">wibox.widget.imagebox</a></td>
-    <td class="summary">A widget to display image.</td>
+    <td class="summary">A widget to display an image.</td>
   </tr>
   <tr>
     <td class="name"  ><a href="widgets/wibox.widget.piechart.html">wibox.widget.piechart</a></td>
@@ -458,9 +459,7 @@ of those libraries.</p>
   </tr>
   <tr>
     <td class="name"  ><a href="widgets/wibox.widget.textbox.html">wibox.widget.textbox</a></td>
-    <td class="summary">
-
-</td>
+    <td class="summary">A widget to display either plain or HTML text.</td>
   </tr>
   <tr>
     <td class="name"  ><a href="widgets/wibox.widget.textclock.html">wibox.widget.textclock</a></td>
@@ -523,21 +522,17 @@ of those libraries.</p>
 <table class="module_list">
   <tr>
     <td class="name"  ><a href="widget_layouts/wibox.layout.align.html">wibox.layout.align</a></td>
-    <td class="summary">
-
-</td>
+    <td class="summary">The <code>align</code> layout has three slots for child widgets.</td>
   </tr>
   <tr>
     <td class="name"  ><a href="widget_layouts/wibox.layout.fixed.html">wibox.layout.fixed</a></td>
-    <td class="summary">
-
-</td>
+    <td class="summary">A <code>fixed</code> layout may be initialized with any number of child widgets, and
+ during runtime widgets may be added and removed dynamically.</td>
   </tr>
   <tr>
     <td class="name"  ><a href="widget_layouts/wibox.layout.flex.html">wibox.layout.flex</a></td>
-    <td class="summary">
-
-</td>
+    <td class="summary">A <code>flex</code> layout may be initialized with any number of child widgets, and
+ during runtime widgets may be added and removed dynamically.</td>
   </tr>
   <tr>
     <td class="name"  ><a href="widget_layouts/wibox.layout.grid.html">wibox.layout.grid</a></td>
@@ -579,8 +574,12 @@ of those libraries.</p>
     <td class="summary">Tooltip module for awesome objects.</td>
   </tr>
   <tr>
+    <td class="name"  ><a href="popups_and_bars/awful.wallpaper.html">awful.wallpaper</a></td>
+    <td class="summary">Allows to use the wibox widget system to draw the wallpaper.</td>
+  </tr>
+  <tr>
     <td class="name"  ><a href="popups_and_bars/awful.wibar.html">awful.wibar</a></td>
-    <td class="summary">Wibox module for awful.</td>
+    <td class="summary">The main AwesomeWM "bar" module.</td>
   </tr>
   <tr>
     <td class="name"  ><a href="popups_and_bars/awful.widget.calendar_popup.html">awful.widget.calendar_popup</a></td>
@@ -870,7 +869,6 @@ of those libraries.</p>
 </div> <!-- id="main" -->
 <div id="about">
 <i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.6</a></i>
-<i style="float:right;">Last updated 2021-05-01 17:20:18 </i>
 </div> <!-- id="about" -->
 </div> <!-- id="container" -->
 </body>

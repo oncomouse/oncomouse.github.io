@@ -142,6 +142,7 @@
   <li><a href="../popups_and_bars/awful.popup.html">awful.popup</a></li>
   <li><a href="../popups_and_bars/awful.titlebar.html">awful.titlebar</a></li>
   <li><a href="../popups_and_bars/awful.tooltip.html">awful.tooltip</a></li>
+  <li><a href="../popups_and_bars/awful.wallpaper.html">awful.wallpaper</a></li>
   <li><a href="../popups_and_bars/awful.wibar.html">awful.wibar</a></li>
   <li><a href="../popups_and_bars/awful.widget.calendar_popup.html">awful.widget.calendar_popup</a></li>
   <li><a href="../popups_and_bars/menubar.html">menubar</a></li>
@@ -228,7 +229,7 @@
 <p>
 
 
-<p> It add the concept of "shape" to Awesome. A shape can be applied to a
+<p> It adds the concept of "shape" to Awesome. A shape can be applied to a
  background, a margin, a mask or a drawable shape bounding.</p>
 
 <p> The functions exposed by this module always take a cairo context as first
@@ -275,8 +276,15 @@
   <div class="extra-header__section">
     <h3>Info:</h3>
     <ul>
-            <li><strong>Copyright</strong>: 2011-2016 Emmanuel Lepage Vallee</li>
-            <li><strong>Author</strong>: Emmanuel Lepage Vallee</li>
+                <li><strong>Copyright</strong>: 2011-2016 Emmanuel Lepage Vallee</li>
+                <li>
+                    <strong>Originally authored by</strong>: Emmanuel Lepage Vallee<br />
+                    <small>(Full contributors list available on
+                    <a href="https://github.com/awesomeWM/awesome/graphs/contributors">
+                        our github project)
+                    </a></small>
+
+                </li>
     </ul>
   </div>
 
@@ -290,155 +298,199 @@
         <a href="#partial_squircle"><span class='function_modname'>gears.shape.</span>partial_squircle <span class='function_args'> <b>(</b>cr, width, height, tl, tr, br, bl, rate, delta<b>)</b></span></a>
         <span class="summarytype"></span>
       </td>
-      <td colspan="2" class="summary">Add a squircle shape with only some of the corner are "circled" to the current path.</td>
+      <td colspan="2" class="summary">
+        Add a squircle shape with only some of the corner are "circled" to the current path.
+      </td>
     </tr>
     <tr>
       <td class="name" >
         <a href="#squircle"><span class='function_modname'>gears.shape.</span>squircle <span class='function_args'> <b>(</b>cr, width, height, rate, delta<b>)</b></span></a>
         <span class="summarytype"></span>
       </td>
-      <td colspan="2" class="summary">Add a squircle shape to the current path.</td>
+      <td colspan="2" class="summary">
+        Add a squircle shape to the current path.
+      </td>
     </tr>
     <tr>
       <td class="name" >
         <a href="#star"><span class='function_modname'>gears.shape.</span>star <span class='function_args'> <b>(</b>cr, width, height, n<b>)</b></span></a>
         <span class="summarytype"></span>
       </td>
-      <td colspan="2" class="summary">Add a star shape to the current path.</td>
+      <td colspan="2" class="summary">
+        Add a star shape to the current path.
+      </td>
     </tr>
     <tr>
       <td class="name" >
         <a href="#rounded_rect"><span class='function_modname'>gears.shape.</span>rounded_rect <span class='function_args'> <b>(</b>cr, width, height, radius<b>)</b></span></a>
         <span class="summarytype"></span>
       </td>
-      <td colspan="2" class="summary">Add a rounded rectangle to the current path.</td>
+      <td colspan="2" class="summary">
+        Add a rounded rectangle to the current path.
+      </td>
     </tr>
     <tr>
       <td class="name" >
         <a href="#rounded_bar"><span class='function_modname'>gears.shape.</span>rounded_bar <span class='function_args'> <b>(</b>cr, width, height<b>)</b></span></a>
         <span class="summarytype"></span>
       </td>
-      <td colspan="2" class="summary">Add a rectangle delimited by 2 180 degree arcs to the path.</td>
+      <td colspan="2" class="summary">
+        Add a rectangle delimited by 2 180 degree arcs to the path.
+      </td>
     </tr>
     <tr>
       <td class="name" >
         <a href="#partially_rounded_rect"><span class='function_modname'>gears.shape.</span>partially_rounded_rect <span class='function_args'> <b>(</b>cr, width, height, tl, tr, br, bl, rad<b>)</b></span></a>
         <span class="summarytype"></span>
       </td>
-      <td colspan="2" class="summary">A rounded rect with only some of the corners rounded.</td>
+      <td colspan="2" class="summary">
+        A rounded rect with only some of the corners rounded.
+      </td>
     </tr>
     <tr>
       <td class="name" >
         <a href="#infobubble"><span class='function_modname'>gears.shape.</span>infobubble <span class='function_args'> <b>(</b>cr, width, height[, corner_radius=5[, arrow_size=10[, arrow_position=width/2 - arrow_size/2]]]<b>)</b></span></a>
         <span class="summarytype"></span>
       </td>
-      <td colspan="2" class="summary">A rounded rectangle with a triangle at the top.</td>
+      <td colspan="2" class="summary">
+        A rounded rectangle with a triangle at the top.
+      </td>
     </tr>
     <tr>
       <td class="name" >
         <a href="#rectangular_tag"><span class='function_modname'>gears.shape.</span>rectangular_tag <span class='function_args'> <b>(</b>cr, width, height[, arrow_length=height/2]<b>)</b></span></a>
         <span class="summarytype"></span>
       </td>
-      <td colspan="2" class="summary">A rectangle terminated by an arrow.</td>
+      <td colspan="2" class="summary">
+        A rectangle terminated by an arrow.
+      </td>
     </tr>
     <tr>
       <td class="name" >
         <a href="#arrow"><span class='function_modname'>gears.shape.</span>arrow <span class='function_args'> <b>(</b>cr, width, height[, head_width=head_width[, shaft_width=width /2[, shaft_length=height/2]]]<b>)</b></span></a>
         <span class="summarytype"></span>
       </td>
-      <td colspan="2" class="summary">A simple arrow shape.</td>
+      <td colspan="2" class="summary">
+        A simple arrow shape.
+      </td>
     </tr>
     <tr>
       <td class="name" >
         <a href="#hexagon"><span class='function_modname'>gears.shape.</span>hexagon <span class='function_args'> <b>(</b>cr, width, height<b>)</b></span></a>
         <span class="summarytype"></span>
       </td>
-      <td colspan="2" class="summary">A squeezed hexagon filling the rectangle.</td>
+      <td colspan="2" class="summary">
+        A squeezed hexagon filling the rectangle.
+      </td>
     </tr>
     <tr>
       <td class="name" >
         <a href="#powerline"><span class='function_modname'>gears.shape.</span>powerline <span class='function_args'> <b>(</b>cr, width, height[, arrow_depth=height/2]<b>)</b></span></a>
         <span class="summarytype"></span>
       </td>
-      <td colspan="2" class="summary">Double arrow popularized by the vim-powerline module.</td>
+      <td colspan="2" class="summary">
+        Double arrow popularized by the vim-powerline module.
+      </td>
     </tr>
     <tr>
       <td class="name" >
         <a href="#isosceles_triangle"><span class='function_modname'>gears.shape.</span>isosceles_triangle <span class='function_args'> <b>(</b>cr, width, height<b>)</b></span></a>
         <span class="summarytype"></span>
       </td>
-      <td colspan="2" class="summary">An isosceles triangle.</td>
+      <td colspan="2" class="summary">
+        An isosceles triangle.
+      </td>
     </tr>
     <tr>
       <td class="name" >
         <a href="#cross"><span class='function_modname'>gears.shape.</span>cross <span class='function_args'> <b>(</b>cr, width, height[, thickness=width/3]<b>)</b></span></a>
         <span class="summarytype"></span>
       </td>
-      <td colspan="2" class="summary">A cross (<strong>+</strong>) symbol.</td>
+      <td colspan="2" class="summary">
+        A cross (<strong>+</strong>) symbol.
+      </td>
     </tr>
     <tr>
       <td class="name" >
         <a href="#octogon"><span class='function_modname'>gears.shape.</span>octogon <span class='function_args'> <b>(</b>cr, width, height, corner_radius<b>)</b></span></a>
         <span class="summarytype"></span>
       </td>
-      <td colspan="2" class="summary">A similar shape to the <a href="../theme_related_libraries/gears.shape.html#rounded_rect">rounded_rect</a>, but with sharp corners.</td>
+      <td colspan="2" class="summary">
+        A similar shape to the <a href="../theme_related_libraries/gears.shape.html#rounded_rect">rounded_rect</a>, but with sharp corners.
+      </td>
     </tr>
     <tr>
       <td class="name" >
         <a href="#circle"><span class='function_modname'>gears.shape.</span>circle <span class='function_args'> <b>(</b>cr, width, height[, radius=math.min(width  height) / 2)]<b>)</b></span></a>
         <span class="summarytype"></span>
       </td>
-      <td colspan="2" class="summary">A circle shape.</td>
+      <td colspan="2" class="summary">
+        A circle shape.
+      </td>
     </tr>
     <tr>
       <td class="name" >
         <a href="#rectangle"><span class='function_modname'>gears.shape.</span>rectangle <span class='function_args'> <b>(</b>cr, width, height<b>)</b></span></a>
         <span class="summarytype"></span>
       </td>
-      <td colspan="2" class="summary">A simple rectangle.</td>
+      <td colspan="2" class="summary">
+        A simple rectangle.
+      </td>
     </tr>
     <tr>
       <td class="name" >
         <a href="#parallelogram"><span class='function_modname'>gears.shape.</span>parallelogram <span class='function_args'> <b>(</b>cr, width, height[, base_width=width/3]<b>)</b></span></a>
         <span class="summarytype"></span>
       </td>
-      <td colspan="2" class="summary">A diagonal parallelogram with the bottom left corner at x=0 and top right
- at x=width.</td>
+      <td colspan="2" class="summary">
+        A diagonal parallelogram with the bottom left corner at x=0 and top right
+ at x=width.
+      </td>
     </tr>
     <tr>
       <td class="name" >
         <a href="#losange"><span class='function_modname'>gears.shape.</span>losange <span class='function_args'> <b>(</b>cr, width, height<b>)</b></span></a>
         <span class="summarytype"></span>
       </td>
-      <td colspan="2" class="summary">A losange.</td>
+      <td colspan="2" class="summary">
+        A losange.
+      </td>
     </tr>
     <tr>
       <td class="name" >
         <a href="#pie"><span class='function_modname'>gears.shape.</span>pie <span class='function_args'> <b>(</b>cr, width, height[, start_angle=0[, end_angle=math.pi/2[, radius=math.min(width height)/2]]]<b>)</b></span></a>
         <span class="summarytype"></span>
       </td>
-      <td colspan="2" class="summary">A pie.</td>
+      <td colspan="2" class="summary">
+        A pie.
+      </td>
     </tr>
     <tr>
       <td class="name" >
         <a href="#arc"><span class='function_modname'>gears.shape.</span>arc <span class='function_args'> <b>(</b>cr, width, height[, thickness=math.min(width height)/2[, start_angle=0[, end_angle=math.pi/2[, start_rounded=false[, end_rounded=false]]]]]<b>)</b></span></a>
         <span class="summarytype"></span>
       </td>
-      <td colspan="2" class="summary">A rounded arc.</td>
+      <td colspan="2" class="summary">
+        A rounded arc.
+      </td>
     </tr>
     <tr>
       <td class="name" >
         <a href="#radial_progress"><span class='function_modname'>gears.shape.</span>radial_progress <span class='function_args'> <b>(</b>cr, w, h, percent, hide_left<b>)</b></span></a>
         <span class="summarytype"></span>
       </td>
-      <td colspan="2" class="summary">A partial rounded bar.</td>
+      <td colspan="2" class="summary">
+        A partial rounded bar.
+      </td>
     </tr>
     <tr>
       <td class="name" >
         <a href="#transform"><span class='function_modname'>gears.shape.</span>transform <span class='function_args'> <b>(</b>shape<b>)</b></span></a>
         <span class="summarytype"><span class='summary_type'> -&gt;&nbsp;()</span></span>
       </td>
-      <td colspan="2" class="summary">Adjust the shape using a transformation object</td>
+      <td colspan="2" class="summary">
+        Adjust the shape using a transformation object
+      </td>
     </tr>
 </table>
 
@@ -515,7 +567,7 @@ shape.partial_squircle(cr, <span class="number">70</span>, <span class="number">
     </ul>
 
 
-    <span id=item2168 class="hide_extra">
+    <span id=item2207 class="hide_extra">
     </span>
 
 </dd>
@@ -568,7 +620,7 @@ shape.squircle(cr, <span class="number">70</span>, <span class="number">70</span
     </ul>
 
 
-    <span id=item2169 class="hide_extra">
+    <span id=item2208 class="hide_extra">
     </span>
 
 </dd>
@@ -619,7 +671,7 @@ shape.transform(shape.star) : translate(<span class="number">70</span>/<span cla
     </ul>
 
 
-    <span id=item2170 class="hide_extra">
+    <span id=item2209 class="hide_extra">
     </span>
 
 </dd>
@@ -668,7 +720,7 @@ shape.transform(shape.rounded_rect) : translate(<span class="number">0</span>,<s
     </ul>
 
 
-    <span id=item2171 class="hide_extra">
+    <span id=item2210 class="hide_extra">
     </span>
 
 </dd>
@@ -710,7 +762,7 @@ shape.rounded_bar(cr, <span class="number">70</span>, <span class="number">20</s
     </ul>
 
 
-    <span id=item2172 class="hide_extra">
+    <span id=item2211 class="hide_extra">
     </span>
 
 </dd>
@@ -774,7 +826,7 @@ shape.partially_rounded_rect(cr, <span class="number">70</span>, <span class="nu
     </ul>
 
 
-    <span id=item2173 class="hide_extra">
+    <span id=item2212 class="hide_extra">
     </span>
 
 </dd>
@@ -808,17 +860,17 @@ shape.partially_rounded_rect(cr, <span class="number">70</span>, <span class="nu
         <li><span class="parameter">corner_radius</span>
             <span class="types"><span class="type">number</span></span>
          The corner radius
-         (<em>default</em> 5)
+         (<em>default</em> <code>5</code>)
         </li>
         <li><span class="parameter">arrow_size</span>
             <span class="types"><span class="type">number</span></span>
          The width and height of the arrow
-         (<em>default</em> 10)
+         (<em>default</em> <code>10</code>)
         </li>
         <li><span class="parameter">arrow_position</span>
             <span class="types"><span class="type">number</span></span>
          The position of the arrow
-         (<em>default</em> width/2 - arrow_size/2)
+         (<em>default</em> <code>width/2 - arrow_size/2</code>)
         </li>
     </ul>
 
@@ -835,7 +887,7 @@ shape.transform(shape.infobubble)
     </ul>
 
 
-    <span id=item2174 class="hide_extra">
+    <span id=item2213 class="hide_extra">
     </span>
 
 </dd>
@@ -869,7 +921,7 @@ shape.transform(shape.infobubble)
         <li><span class="parameter">arrow_length</span>
             <span class="types"><span class="type">number</span></span>
          The length of the arrow part
-         (<em>default</em> height/2)
+         (<em>default</em> <code>height/2</code>)
         </li>
     </ul>
 
@@ -884,7 +936,7 @@ shape.transform(shape.rectangular_tag) : translate(<span class="number">0</span>
     </ul>
 
 
-    <span id=item2175 class="hide_extra">
+    <span id=item2214 class="hide_extra">
     </span>
 
 </dd>
@@ -918,17 +970,17 @@ shape.transform(shape.rectangular_tag) : translate(<span class="number">0</span>
         <li><span class="parameter">head_width</span>
             <span class="types"><span class="type">number</span></span>
          The width of the head (/) of the arrow
-         (<em>default</em> head_width)
+         (<em>default</em> <code>head_width</code>)
         </li>
         <li><span class="parameter">shaft_width</span>
             <span class="types"><span class="type">number</span></span>
          The width of the shaft of the arrow
-         (<em>default</em> width /2)
+         (<em>default</em> <code>width /2</code>)
         </li>
         <li><span class="parameter">shaft_length</span>
             <span class="types"><span class="type">number</span></span>
          The head_length of the shaft (the rest is the head)
-         (<em>default</em> height/2)
+         (<em>default</em> <code>height/2</code>)
         </li>
     </ul>
 
@@ -943,7 +995,7 @@ shape.transform(shape.arrow) : rotate_at(<span class="number">35</span>,<span cl
     </ul>
 
 
-    <span id=item2176 class="hide_extra">
+    <span id=item2215 class="hide_extra">
     </span>
 
 </dd>
@@ -987,7 +1039,7 @@ shape.transform(shape.hexagon) : rotate_at(<span class="number">35</span>,<span 
     </ul>
 
 
-    <span id=item2177 class="hide_extra">
+    <span id=item2216 class="hide_extra">
     </span>
 
 </dd>
@@ -1021,7 +1073,7 @@ shape.transform(shape.hexagon) : rotate_at(<span class="number">35</span>,<span 
         <li><span class="parameter">arrow_depth</span>
             <span class="types"><span class="type">number</span></span>
          The width of the arrow part of the shape
-         (<em>default</em> height/2)
+         (<em>default</em> <code>height/2</code>)
         </li>
     </ul>
 
@@ -1036,7 +1088,7 @@ shape.transform(shape.powerline) : translate(<span class="number">0</span>, <spa
     </ul>
 
 
-    <span id=item2178 class="hide_extra">
+    <span id=item2217 class="hide_extra">
     </span>
 
 </dd>
@@ -1080,7 +1132,7 @@ shape.transform(shape.isosceles_triangle) : rotate_at(<span class="number">35</s
     </ul>
 
 
-    <span id=item2179 class="hide_extra">
+    <span id=item2218 class="hide_extra">
     </span>
 
 </dd>
@@ -1114,7 +1166,7 @@ shape.transform(shape.isosceles_triangle) : rotate_at(<span class="number">35</s
         <li><span class="parameter">thickness</span>
             <span class="types"><span class="type">number</span></span>
          The cross section thickness
-         (<em>default</em> width/3)
+         (<em>default</em> <code>width/3</code>)
         </li>
     </ul>
 
@@ -1129,7 +1181,7 @@ shape.transform(shape.cross) : scale(<span class="number">0.5</span>, <span clas
     </ul>
 
 
-    <span id=item2180 class="hide_extra">
+    <span id=item2219 class="hide_extra">
     </span>
 
 </dd>
@@ -1179,7 +1231,7 @@ shape.transform(shape.octogon) : translate(<span class="number">0</span>, <span 
     </ul>
 
 
-    <span id=item2181 class="hide_extra">
+    <span id=item2220 class="hide_extra">
     </span>
 
 </dd>
@@ -1213,7 +1265,7 @@ shape.transform(shape.octogon) : translate(<span class="number">0</span>, <span 
         <li><span class="parameter">radius</span>
             <span class="types"><span class="type">number</span></span>
          The radius
-         (<em>default</em> math.min(width  height) / 2))
+         (<em>default</em> <code>math.min(width  height) / 2)</code>)
         </li>
     </ul>
 
@@ -1228,7 +1280,7 @@ shape.transform(shape.circle) : scale(<span class="number">0.5</span>, <span cla
     </ul>
 
 
-    <span id=item2182 class="hide_extra">
+    <span id=item2221 class="hide_extra">
     </span>
 
 </dd>
@@ -1272,7 +1324,7 @@ shape.transform(shape.rectangle) : scale(<span class="number">0.5</span>, <span 
     </ul>
 
 
-    <span id=item2183 class="hide_extra">
+    <span id=item2222 class="hide_extra">
     </span>
 
 </dd>
@@ -1307,7 +1359,7 @@ shape.transform(shape.rectangle) : scale(<span class="number">0.5</span>, <span 
         <li><span class="parameter">base_width</span>
             <span class="types"><span class="type">number</span></span>
          The parallelogram base width
-         (<em>default</em> width/3)
+         (<em>default</em> <code>width/3</code>)
         </li>
     </ul>
 
@@ -1322,7 +1374,7 @@ shape.transform(shape.parallelogram) : scale(<span class="number">0.5</span>, <s
     </ul>
 
 
-    <span id=item2184 class="hide_extra">
+    <span id=item2223 class="hide_extra">
     </span>
 
 </dd>
@@ -1366,7 +1418,7 @@ shape.transform(shape.losange) : scale(<span class="number">0.5</span>, <span cl
     </ul>
 
 
-    <span id=item2185 class="hide_extra">
+    <span id=item2224 class="hide_extra">
     </span>
 
 </dd>
@@ -1402,17 +1454,17 @@ shape.transform(shape.losange) : scale(<span class="number">0.5</span>, <span cl
         <li><span class="parameter">start_angle</span>
             <span class="types"><span class="type">number</span></span>
          The start angle (in radian)
-         (<em>default</em> 0)
+         (<em>default</em> <code>0</code>)
         </li>
         <li><span class="parameter">end_angle</span>
             <span class="types"><span class="type">number</span></span>
          The end angle (in radian)
-         (<em>default</em> math.pi/2)
+         (<em>default</em> <code>math.pi/2</code>)
         </li>
         <li><span class="parameter">radius</span>
             <span class="types"><span class="type">number</span></span>
          The shape height
-         (<em>default</em> math.min(width height)/2)
+         (<em>default</em> <code>math.min(width height)/2</code>)
         </li>
     </ul>
 
@@ -1427,7 +1479,7 @@ shape.pie(cr,<span class="number">70</span>,<span class="number">70</span>, <spa
     </ul>
 
 
-    <span id=item2186 class="hide_extra">
+    <span id=item2225 class="hide_extra">
     </span>
 
 </dd>
@@ -1463,27 +1515,27 @@ shape.pie(cr,<span class="number">70</span>,<span class="number">70</span>, <spa
         <li><span class="parameter">thickness</span>
             <span class="types"><span class="type">number</span></span>
          The arc thickness
-         (<em>default</em> math.min(width height)/2)
+         (<em>default</em> <code>math.min(width height)/2</code>)
         </li>
         <li><span class="parameter">start_angle</span>
             <span class="types"><span class="type">number</span></span>
          The start angle (in radian)
-         (<em>default</em> 0)
+         (<em>default</em> <code>0</code>)
         </li>
         <li><span class="parameter">end_angle</span>
             <span class="types"><span class="type">number</span></span>
          The end angle (in radian)
-         (<em>default</em> math.pi/2)
+         (<em>default</em> <code>math.pi/2</code>)
         </li>
         <li><span class="parameter">start_rounded</span>
             <span class="types"><span class="type">boolean</span></span>
          if the arc start rounded
-         (<em>default</em> false)
+         (<em>default</em> <code>false</code>)
         </li>
         <li><span class="parameter">end_rounded</span>
             <span class="types"><span class="type">boolean</span></span>
          if the arc end rounded
-         (<em>default</em> false)
+         (<em>default</em> <code>false</code>)
         </li>
     </ul>
 
@@ -1498,7 +1550,7 @@ shape.arc(cr,<span class="number">70</span>,<span class="number">70</span>, <spa
     </ul>
 
 
-    <span id=item2187 class="hide_extra">
+    <span id=item2226 class="hide_extra">
     </span>
 
 </dd>
@@ -1554,7 +1606,7 @@ shape.radial_progress(cr, <span class="number">70</span>, <span class="number">2
     </ul>
 
 
-    <span id=item2188 class="hide_extra">
+    <span id=item2227 class="hide_extra">
     </span>
 
 </dd>
@@ -1591,7 +1643,7 @@ shape.radial_progress(cr, <span class="number">70</span>, <span class="number">2
     </ul>
 
 
-    <span id=item2189 class="hide_extra">
+    <span id=item2228 class="hide_extra">
     </span>
 
 </dd>
@@ -1602,7 +1654,6 @@ shape.radial_progress(cr, <span class="number">70</span>, <span class="number">2
 </div> <!-- id="main" -->
 <div id="about">
 <i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.6</a></i>
-<i style="float:right;">Last updated 2021-05-01 17:20:18 </i>
 </div> <!-- id="about" -->
 </div> <!-- id="container" -->
 </body>

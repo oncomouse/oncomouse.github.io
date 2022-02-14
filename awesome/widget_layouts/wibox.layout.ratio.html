@@ -140,6 +140,7 @@
   <li><a href="../popups_and_bars/awful.popup.html">awful.popup</a></li>
   <li><a href="../popups_and_bars/awful.titlebar.html">awful.titlebar</a></li>
   <li><a href="../popups_and_bars/awful.tooltip.html">awful.tooltip</a></li>
+  <li><a href="../popups_and_bars/awful.wallpaper.html">awful.wallpaper</a></li>
   <li><a href="../popups_and_bars/awful.wibar.html">awful.wibar</a></li>
   <li><a href="../popups_and_bars/awful.widget.calendar_popup.html">awful.widget.calendar_popup</a></li>
   <li><a href="../popups_and_bars/menubar.html">menubar</a></li>
@@ -239,9 +240,9 @@
     <h3>Usage:</h3>
     <ul>
         <pre class="example">local w = wibox.widget {
-    generic_widget( &apos;first&apos;  ),
-    generic_widget( &apos;second&apos; ),
-    generic_widget( &apos;third&apos;  ),
+    generic_widget( &quot;first&quot;  ),
+    generic_widget( &quot;second&quot; ),
+    generic_widget( &quot;third&quot;  ),
     layout  = wibox.layout.ratio.horizontal
 }
 w:adjust_ratio(2, 0.44, 0.33, 0.22)
@@ -291,8 +292,15 @@ w:adjust_ratio(2, 0.44, 0.33, 0.22)
   <div class="extra-header__section">
     <h3>Info:</h3>
     <ul>
-            <li><strong>Copyright</strong>: 2016 Emmanuel Lepage Vallee</li>
-            <li><strong>Author</strong>: Emmanuel Lepage Vallee</li>
+                <li><strong>Copyright</strong>: 2016 Emmanuel Lepage Vallee</li>
+                <li>
+                    <strong>Originally authored by</strong>: Emmanuel Lepage Vallee<br />
+                    <small>(Full contributors list available on
+                    <a href="https://github.com/awesomeWM/awesome/graphs/contributors">
+                        our github project)
+                    </a></small>
+
+                </li>
     </ul>
   </div>
 
@@ -311,13 +319,17 @@ w:adjust_ratio(2, 0.44, 0.33, 0.22)
       <td class="name" >
         <a href="#horizontal"><span class='function_modname'>wibox.layout.ratio.</span>horizontal <span class='function_args'> <b>(</b>...<b>)</b></span></a>
       </td>
-      <td colspan="2" class="summary">Returns a new horizontal ratio layout.</td>
+      <td colspan="2" class="summary">
+        Returns a new horizontal ratio layout.
+      </td>
     </tr>
     <tr>
       <td class="name" >
         <a href="#vertical"><span class='function_modname'>wibox.layout.ratio.</span>vertical <span class='function_args'> <b>(</b>...<b>)</b></span></a>
       </td>
-      <td colspan="2" class="summary">Returns a new vertical ratio layout.</td>
+      <td colspan="2" class="summary">
+        Returns a new vertical ratio layout.
+      </td>
     </tr>
 </table>
 <h2><a href="#Object_properties">Object properties</a></h2>
@@ -325,22 +337,30 @@ w:adjust_ratio(2, 0.44, 0.33, 0.22)
     <tr>
       <td class="shortname" ><a href="#spacing_widget">spacing_widget</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>widget</span></td>
-      <td colspan="2" class="summary">The widget used to fill the spacing between the layout elements.</td>
+      <td colspan="2" class="summary">
+        The widget used to fill the spacing between the layout elements.
+      </td>
     </tr>
     <tr>
       <td class="shortname" ><a href="#spacing">spacing</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>number</span></td>
-      <td colspan="2" class="summary">Add spacing between each layout widgets.</td>
+      <td colspan="2" class="summary">
+        Add spacing between each layout widgets.
+      </td>
     </tr>
     <tr>
       <td class="shortname" ><a href="#inner_fill_strategy">inner_fill_strategy</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>string</span></td>
-      <td colspan="2" class="summary">Set how the space of invisible or <code>0x0</code> sized widget is redistributed.</td>
+      <td colspan="2" class="summary">
+        Set how the space of invisible or <code>0x0</code> sized widget is redistributed.
+      </td>
     </tr>
     <tr>
       <td class="shortname" ><a href="#max_widget_size">max_widget_size</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>number</span></td>
-      <td colspan="1" class="summary">Set the maximum size the widgets in this layout will take.</td>
+      <td colspan="1" class="summary">
+        Set the maximum size the widgets in this layout will take.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from wibox.layout.flex
       </td>
@@ -348,7 +368,9 @@ w:adjust_ratio(2, 0.44, 0.33, 0.22)
     <tr>
       <td class="shortname" ><a href="#wibox.widget.base.children">children</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>table</span></td>
-      <td colspan="1" class="summary">Get or set the children elements.</td>
+      <td colspan="1" class="summary">
+        Get or set the children elements.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from wibox.widget.base
       </td>
@@ -356,7 +378,9 @@ w:adjust_ratio(2, 0.44, 0.33, 0.22)
     <tr>
       <td class="shortname" ><a href="#wibox.widget.base.all_children">all_children</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>table</span></td>
-      <td colspan="1" class="summary">Get all direct and indirect children widgets.</td>
+      <td colspan="1" class="summary">
+        Get all direct and indirect children widgets.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from wibox.widget.base
       </td>
@@ -364,7 +388,9 @@ w:adjust_ratio(2, 0.44, 0.33, 0.22)
     <tr>
       <td class="shortname" ><a href="#wibox.widget.base.forced_height">forced_height</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>number <i>or</i> nil</span></td>
-      <td colspan="1" class="summary">Force a widget height.</td>
+      <td colspan="1" class="summary">
+        Force a widget height.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from wibox.widget.base
       </td>
@@ -372,7 +398,9 @@ w:adjust_ratio(2, 0.44, 0.33, 0.22)
     <tr>
       <td class="shortname" ><a href="#wibox.widget.base.forced_width">forced_width</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>number <i>or</i> nil</span></td>
-      <td colspan="1" class="summary">Force a widget width.</td>
+      <td colspan="1" class="summary">
+        Force a widget width.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from wibox.widget.base
       </td>
@@ -380,7 +408,9 @@ w:adjust_ratio(2, 0.44, 0.33, 0.22)
     <tr>
       <td class="shortname" ><a href="#wibox.widget.base.opacity">opacity</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>number</span></td>
-      <td colspan="1" class="summary">The widget opacity (transparency).</td>
+      <td colspan="1" class="summary">
+        The widget opacity (transparency).
+      </td>
       <td class="baseclass" nowrap>
         Inherited from wibox.widget.base
       </td>
@@ -388,7 +418,9 @@ w:adjust_ratio(2, 0.44, 0.33, 0.22)
     <tr>
       <td class="shortname" ><a href="#wibox.widget.base.visible">visible</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>boolean</span></td>
-      <td colspan="1" class="summary">The widget visibility.</td>
+      <td colspan="1" class="summary">
+        The widget visibility.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from wibox.widget.base
       </td>
@@ -396,7 +428,9 @@ w:adjust_ratio(2, 0.44, 0.33, 0.22)
     <tr>
       <td class="shortname" ><a href="#wibox.widget.base.buttons">buttons</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>table</span></td>
-      <td colspan="1" class="summary">The widget buttons.</td>
+      <td colspan="1" class="summary">
+        The widget buttons.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from wibox.widget.base
       </td>
@@ -409,112 +443,144 @@ w:adjust_ratio(2, 0.44, 0.33, 0.22)
         <a href="#inc_ratio">:inc_ratio <span class='function_args'> <b>(</b>index, increment<b>)</b></span></a>
         <span class="summarytype"></span>
       </td>
-      <td colspan="2" class="summary">Increase the ratio of "widget".</td>
+      <td colspan="2" class="summary">
+        Increase the ratio of "widget".
+      </td>
     </tr>
     <tr>
       <td class="name" >
         <a href="#inc_widget_ratio">:inc_widget_ratio <span class='function_args'> <b>(</b>widget, increment<b>)</b></span></a>
         <span class="summarytype"></span>
       </td>
-      <td colspan="2" class="summary">Increment the ratio of the first instance of <code>widget</code>.</td>
+      <td colspan="2" class="summary">
+        Increment the ratio of the first instance of <code>widget</code>.
+      </td>
     </tr>
     <tr>
       <td class="name" >
         <a href="#set_ratio">:set_ratio <span class='function_args'> <b>(</b>index, percent<b>)</b></span></a>
         <span class="summarytype"></span>
       </td>
-      <td colspan="2" class="summary">Set the ratio of the widget at position <code>index</code>.</td>
+      <td colspan="2" class="summary">
+        Set the ratio of the widget at position <code>index</code>.
+      </td>
     </tr>
     <tr>
       <td class="name" >
         <a href="#get_ratio">:get_ratio <span class='function_args'> <b>(</b>index<b>)</b></span></a>
         <span class="summarytype"><span class='summary_type'> -&gt;&nbsp;number</span></span>
       </td>
-      <td colspan="2" class="summary">Get the ratio at <code>index</code>.</td>
+      <td colspan="2" class="summary">
+        Get the ratio at <code>index</code>.
+      </td>
     </tr>
     <tr>
       <td class="name" >
         <a href="#set_widget_ratio">:set_widget_ratio <span class='function_args'> <b>(</b>widget, percent<b>)</b></span></a>
         <span class="summarytype"></span>
       </td>
-      <td colspan="2" class="summary">Set the ratio of <code>widget</code> to <code>percent</code>.</td>
+      <td colspan="2" class="summary">
+        Set the ratio of <code>widget</code> to <code>percent</code>.
+      </td>
     </tr>
     <tr>
       <td class="name" >
         <a href="#adjust_ratio">:adjust_ratio <span class='function_args'> <b>(</b>index, before, itself, after<b>)</b></span></a>
         <span class="summarytype"></span>
       </td>
-      <td colspan="2" class="summary">Update all widgets to match a set of a ratio.</td>
+      <td colspan="2" class="summary">
+        Update all widgets to match a set of a ratio.
+      </td>
     </tr>
     <tr>
       <td class="name" >
         <a href="#adjust_widget_ratio">:adjust_widget_ratio <span class='function_args'> <b>(</b>widget, before, itself, after<b>)</b></span></a>
         <span class="summarytype"></span>
       </td>
-      <td colspan="2" class="summary">Update all widgets to match a set of a ratio.</td>
+      <td colspan="2" class="summary">
+        Update all widgets to match a set of a ratio.
+      </td>
     </tr>
     <tr>
       <td class="name" >
         <a href="#add">:add <span class='function_args'> <b>(</b>...<b>)</b></span></a>
         <span class="summarytype"></span>
       </td>
-      <td colspan="2" class="summary">Add some widgets to the given fixed layout.</td>
+      <td colspan="2" class="summary">
+        Add some widgets to the given fixed layout.
+      </td>
     </tr>
     <tr>
       <td class="name" >
         <a href="#remove">:remove <span class='function_args'> <b>(</b>index<b>)</b></span></a>
         <span class="summarytype"><span class='summary_type'> -&gt;&nbsp;boolean</span></span>
       </td>
-      <td colspan="2" class="summary">Remove a widget from the layout.</td>
+      <td colspan="2" class="summary">
+        Remove a widget from the layout.
+      </td>
     </tr>
     <tr>
       <td class="name" >
         <a href="#insert">:insert <span class='function_args'> <b>(</b>index, widget<b>)</b></span></a>
         <span class="summarytype"></span>
       </td>
-      <td colspan="2" class="summary">Insert a new widget in the layout at position <code>index</code>.</td>
+      <td colspan="2" class="summary">
+        Insert a new widget in the layout at position <code>index</code>.
+      </td>
     </tr>
     <tr>
       <td class="name" >
         <a href="#set">:set <span class='function_args'> <b>(</b>index, widget2<b>)</b></span></a>
         <span class="summarytype"><span class='summary_type'> -&gt;&nbsp;boolean</span></span>
       </td>
-      <td colspan="2" class="summary">Set a widget at a specific index, replace the current one.</td>
+      <td colspan="2" class="summary">
+        Set a widget at a specific index, replacing the current one.
+      </td>
     </tr>
     <tr>
       <td class="name" >
         <a href="#replace_widget">:replace_widget <span class='function_args'> <b>(</b>widget, widget2[, recursive=false]<b>)</b></span></a>
         <span class="summarytype"><span class='summary_type'> -&gt;&nbsp;boolean</span></span>
       </td>
-      <td colspan="2" class="summary">Replace the first instance of <code>widget</code> in the layout with <code>widget2</code>.</td>
+      <td colspan="2" class="summary">
+        Replace the first instance of <code>widget</code> in the layout with <code>widget2</code>.
+      </td>
     </tr>
     <tr>
       <td class="name" >
         <a href="#swap">:swap <span class='function_args'> <b>(</b>index1, index2<b>)</b></span></a>
         <span class="summarytype"><span class='summary_type'> -&gt;&nbsp;boolean</span></span>
       </td>
-      <td colspan="2" class="summary">Swap 2 widgets in a layout.</td>
+      <td colspan="2" class="summary">
+        Swap 2 widgets in a layout.
+      </td>
     </tr>
     <tr>
       <td class="name" >
         <a href="#swap_widgets">:swap_widgets <span class='function_args'> <b>(</b>widget1, widget2[, recursive=false]<b>)</b></span></a>
         <span class="summarytype"><span class='summary_type'> -&gt;&nbsp;boolean</span></span>
       </td>
-      <td colspan="2" class="summary">Swap 2 widgets in a layout.</td>
+      <td colspan="2" class="summary">
+        Swap 2 widgets in a layout.
+      </td>
     </tr>
     <tr>
       <td class="name" >
         <a href="#reset">:reset <span class='function_args'> <b>(</b><b>)</b></span></a>
         <span class="summarytype"></span>
       </td>
-      <td colspan="2" class="summary">Reset a ratio layout.</td>
+      <td colspan="2" class="summary">
+        Reset the layout.
+      </td>
     </tr>
     <tr>
       <td class="name" >
         <a href="#remove_widgets">:remove_widgets <span class='function_args'> <b>(</b>...<b>)</b></span></a>
         <span class="summarytype"><span class='summary_type'> -&gt;&nbsp;boolean</span></span>
       </td>
-      <td colspan="1" class="summary">Remove one or more widgets from the layout.</td>
+      <td colspan="1" class="summary">
+        Remove one or more widgets from the layout.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from wibox.layout.flex
       </td>
@@ -524,7 +590,9 @@ w:adjust_ratio(2, 0.44, 0.33, 0.22)
         <a href="#wibox.widget.base:add_button">:add_button <span class='function_args'> <b>(</b>button<b>)</b></span></a>
         <span class="summarytype"></span>
       </td>
-      <td colspan="1" class="summary">Add a new <a href="../input_handling/awful.button.html#">awful.button</a> to this widget.</td>
+      <td colspan="1" class="summary">
+        Add a new <a href="../input_handling/awful.button.html#">awful.button</a> to this widget.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from wibox.widget.base
       </td>
@@ -534,8 +602,10 @@ w:adjust_ratio(2, 0.44, 0.33, 0.22)
         <a href="#wibox.widget.base:emit_signal_recursive">:emit_signal_recursive <span class='function_args'> <b>(</b>signal_name, ...<b>)</b></span></a>
         <span class="summarytype"></span>
       </td>
-      <td colspan="1" class="summary">Emit a signal and ensure all parent widgets in the hierarchies also
- forward the signal.</td>
+      <td colspan="1" class="summary">
+        Emit a signal and ensure all parent widgets in the hierarchies also
+ forward the signal.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from wibox.widget.base
       </td>
@@ -545,7 +615,9 @@ w:adjust_ratio(2, 0.44, 0.33, 0.22)
         <a href="#wibox.widget.base:index">:index <span class='function_args'> <b>(</b>widget[, recursive[, ...]]<b>)</b></span></a>
         <span class="summarytype"><span class='summary_type'> -&gt;&nbsp;(number, widget, table)</span></span>
       </td>
-      <td colspan="1" class="summary">Get the index of a widget.</td>
+      <td colspan="1" class="summary">
+        Get the index of a widget.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from wibox.widget.base
       </td>
@@ -555,7 +627,9 @@ w:adjust_ratio(2, 0.44, 0.33, 0.22)
         <a href="#connect_signal">:connect_signal <span class='function_args'> <b>(</b>name, func<b>)</b></span></a>
         <span class="summarytype"></span>
       </td>
-      <td colspan="1" class="summary">Connect to a signal.</td>
+      <td colspan="1" class="summary">
+        Connect to a signal.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from gears.object
       </td>
@@ -565,7 +639,9 @@ w:adjust_ratio(2, 0.44, 0.33, 0.22)
         <a href="#weak_connect_signal">:weak_connect_signal <span class='function_args'> <b>(</b>name, func<b>)</b></span></a>
         <span class="summarytype"></span>
       </td>
-      <td colspan="1" class="summary">Connect to a signal weakly.</td>
+      <td colspan="1" class="summary">
+        Connect to a signal weakly.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from gears.object
       </td>
@@ -575,7 +651,9 @@ w:adjust_ratio(2, 0.44, 0.33, 0.22)
         <a href="#disconnect_signal">:disconnect_signal <span class='function_args'> <b>(</b>name, func<b>)</b></span></a>
         <span class="summarytype"></span>
       </td>
-      <td colspan="1" class="summary">Disonnect from a signal.</td>
+      <td colspan="1" class="summary">
+        Disonnect from a signal.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from gears.object
       </td>
@@ -585,7 +663,9 @@ w:adjust_ratio(2, 0.44, 0.33, 0.22)
         <a href="#emit_signal">:emit_signal <span class='function_args'> <b>(</b>name, ...<b>)</b></span></a>
         <span class="summarytype"></span>
       </td>
-      <td colspan="1" class="summary">Emit a signal.</td>
+      <td colspan="1" class="summary">
+        Emit a signal.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from gears.object
       </td>
@@ -597,13 +677,17 @@ w:adjust_ratio(2, 0.44, 0.33, 0.22)
       <td class="name" >
         <a href="#ajust_ratio">wibox.layout.ratio.ajust_ratio<i class="deprecated_label"> [deprecated]</i></a>
       </td>
-      <td colspan="2" class="summary">Update all widgets to match a set of a ratio.</td>
+      <td colspan="2" class="summary">
+        Update all widgets to match a set of a ratio.
+      </td>
     </tr>
     <tr>
       <td class="name" >
         <a href="#ajust_widget_ratio">wibox.layout.ratio.ajust_widget_ratio<i class="deprecated_label"> [deprecated]</i></a>
       </td>
-      <td colspan="2" class="summary">Update all widgets to match a set of a ratio.</td>
+      <td colspan="2" class="summary">
+        Update all widgets to match a set of a ratio.
+      </td>
     </tr>
 </table>
 <h2><a href="#Signals">Signals</a></h2>
@@ -612,7 +696,9 @@ w:adjust_ratio(2, 0.44, 0.33, 0.22)
       <td class="name" >
         <a href="#widget::layout_changed">widget::layout_changed</a>
       </td>
-      <td colspan="1" class="summary">When the layout (size) change.</td>
+      <td colspan="1" class="summary">
+        When the layout (size) change.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from wibox.widget.base
       </td>
@@ -621,7 +707,9 @@ w:adjust_ratio(2, 0.44, 0.33, 0.22)
       <td class="name" >
         <a href="#widget::redraw_needed">widget::redraw_needed</a>
       </td>
-      <td colspan="1" class="summary">When the widget content changed.</td>
+      <td colspan="1" class="summary">
+        When the widget content changed.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from wibox.widget.base
       </td>
@@ -630,7 +718,9 @@ w:adjust_ratio(2, 0.44, 0.33, 0.22)
       <td class="name" >
         <a href="#button::press">button::press</a>
       </td>
-      <td colspan="1" class="summary">When a mouse button is pressed over the widget.</td>
+      <td colspan="1" class="summary">
+        When a mouse button is pressed over the widget.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from wibox.widget.base
       </td>
@@ -639,7 +729,9 @@ w:adjust_ratio(2, 0.44, 0.33, 0.22)
       <td class="name" >
         <a href="#button::release">button::release</a>
       </td>
-      <td colspan="1" class="summary">When a mouse button is released over the widget.</td>
+      <td colspan="1" class="summary">
+        When a mouse button is released over the widget.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from wibox.widget.base
       </td>
@@ -648,7 +740,9 @@ w:adjust_ratio(2, 0.44, 0.33, 0.22)
       <td class="name" >
         <a href="#mouse::enter">mouse::enter</a>
       </td>
-      <td colspan="1" class="summary">When the mouse enter a widget.</td>
+      <td colspan="1" class="summary">
+        When the mouse enter a widget.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from wibox.widget.base
       </td>
@@ -657,7 +751,9 @@ w:adjust_ratio(2, 0.44, 0.33, 0.22)
       <td class="name" >
         <a href="#mouse::leave">mouse::leave</a>
       </td>
-      <td colspan="1" class="summary">When the mouse leave a widget.</td>
+      <td colspan="1" class="summary">
+        When the mouse leave a widget.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from wibox.widget.base
       </td>
@@ -694,7 +790,7 @@ w:adjust_ratio(2, 0.44, 0.33, 0.22)
 
 
 
-    <span id=item1648 class="hide_extra">
+    <span id=item1661 class="hide_extra">
     </span>
 
 </dd>
@@ -721,7 +817,7 @@ w:adjust_ratio(2, 0.44, 0.33, 0.22)
 
 
 
-    <span id=item1649 class="hide_extra">
+    <span id=item1662 class="hide_extra">
     </span>
 
 </dd>
@@ -758,34 +854,37 @@ w:adjust_ratio(2, 0.44, 0.33, 0.22)
     spacing_widget = wibox.widget.separator,
     layout         = wibox.layout.ratio.horizontal
 }
+
 <span class="comment">-- Use a standard declarative widget construct
 </span><span class="keyword">local</span> w2 = wibox.widget {
     spacing = <span class="number">10</span>,
     spacing_widget = {
-        color  = <span class="string">'#00ff00'</span>,
+        color  = <span class="string">"#00ff00"</span>,
         shape  = gears.shape.circle,
         widget = wibox.widget.separator,
     },
     layout = wibox.layout.ratio.horizontal
 }
+
 <span class="comment">-- Use composed widgets
 </span><span class="keyword">local</span> w3 = wibox.widget {
     spacing = <span class="number">10</span>,
     spacing_widget = {
         {
-            text   = <span class="string">'F'</span>,
+            text   = <span class="string">"F"</span>,
             widget = wibox.widget.textbox,
         },
-        bg     = <span class="string">'#ff0000'</span>,
+        bg     = <span class="string">"#ff0000"</span>,
         widget = wibox.container.background,
     },
     layout = wibox.layout.ratio.horizontal
 }
+
 <span class="comment">-- Use negative spacing to create a powerline effect
 </span><span class="keyword">local</span> w4 = wibox.widget {
     spacing = -<span class="number">12</span>,
     spacing_widget = {
-        color  = <span class="string">'#ff0000'</span>,
+        color  = <span class="string">"#ff0000"</span>,
         shape  = gears.shape.powerline,
         widget = wibox.widget.separator,
     },
@@ -794,13 +893,13 @@ w:adjust_ratio(2, 0.44, 0.33, 0.22)
     </ul>
 
      <br />
-     <center id=button1650>
-     <a class="show_more_button" onclick="show_extra('1650')">
+     <center id=button1663>
+     <a class="show_more_button" onclick="show_extra('1663')">
       Click to display more
      </a>
      </center>
 
-    <span id=item1650 class="hide_extra">
+    <span id=item1663 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::spacing_widget</code></span>  When the <a href="../widget_layouts/wibox.layout.ratio.html#spacing_widget">spacing_widget</a> value changes.</li>
@@ -852,13 +951,13 @@ w:adjust_ratio(2, 0.44, 0.33, 0.22)
     </ul>
 
      <br />
-     <center id=button1651>
-     <a class="show_more_button" onclick="show_extra('1651')">
+     <center id=button1664>
+     <a class="show_more_button" onclick="show_extra('1664')">
       Click to display more
      </a>
      </center>
 
-    <span id=item1651 class="hide_extra">
+    <span id=item1664 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::spacing</code></span>  When the <a href="../widget_layouts/wibox.layout.ratio.html#spacing">spacing</a> value changes.</li>
@@ -900,7 +999,7 @@ w:adjust_ratio(2, 0.44, 0.33, 0.22)
     <h3>Type constraints:</h3>
     <ul>
         <li><span class="parameter">inner_fill_strategy</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          One of the value listed above.
         </li>
     </ul>
@@ -910,13 +1009,13 @@ w:adjust_ratio(2, 0.44, 0.33, 0.22)
 
 
      <br />
-     <center id=button1652>
-     <a class="show_more_button" onclick="show_extra('1652')">
+     <center id=button1665>
+     <a class="show_more_button" onclick="show_extra('1665')">
       Click to display more
      </a>
      </center>
 
-    <span id=item1652 class="hide_extra">
+    <span id=item1665 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::inner_fill_strategy</code></span>  When the <a href="../widget_layouts/wibox.layout.ratio.html#inner_fill_strategy">inner_fill_strategy</a> value changes.</li>
@@ -948,13 +1047,13 @@ w:adjust_ratio(2, 0.44, 0.33, 0.22)
 
 
      <br />
-     <center id=button1584>
-     <a class="show_more_button" onclick="show_extra('1584')">
+     <center id=button1597>
+     <a class="show_more_button" onclick="show_extra('1597')">
       Click to display more
      </a>
      </center>
 
-    <span id=item1584 class="hide_extra">
+    <span id=item1597 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::max_widget_size</code></span>  When the <code>max_widget_size</code> value changes.</li>
@@ -980,7 +1079,7 @@ w:adjust_ratio(2, 0.44, 0.33, 0.22)
     <h3>Type constraints:</h3>
     <ul>
         <li><span class="parameter">children</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          The children.
         </li>
     </ul>
@@ -990,7 +1089,7 @@ w:adjust_ratio(2, 0.44, 0.33, 0.22)
 
 
 
-    <span id=item869 class="hide_extra">
+    <span id=item871 class="hide_extra">
     </span>
 
 </dd>
@@ -1012,7 +1111,7 @@ w:adjust_ratio(2, 0.44, 0.33, 0.22)
     <h3>Type constraints:</h3>
     <ul>
         <li><span class="parameter">children</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          The children.
         </li>
     </ul>
@@ -1022,7 +1121,7 @@ w:adjust_ratio(2, 0.44, 0.33, 0.22)
 
 
 
-    <span id=item870 class="hide_extra">
+    <span id=item872 class="hide_extra">
     </span>
 
 </dd>
@@ -1050,7 +1149,7 @@ w:adjust_ratio(2, 0.44, 0.33, 0.22)
 
 
 
-    <span id=item871 class="hide_extra">
+    <span id=item873 class="hide_extra">
     </span>
 
 </dd>
@@ -1078,7 +1177,7 @@ w:adjust_ratio(2, 0.44, 0.33, 0.22)
 
 
 
-    <span id=item872 class="hide_extra">
+    <span id=item874 class="hide_extra">
     </span>
 
 </dd>
@@ -1098,7 +1197,7 @@ w:adjust_ratio(2, 0.44, 0.33, 0.22)
         <li><span class="parameter">opacity</span>
             <span class="types"><span class="type">number</span></span>
          The opacity (between 0 and 1)
-         (<em>default</em> 1)
+         (<em>default</em> <code>1</code>)
         </li>
     </ul>
 
@@ -1107,7 +1206,7 @@ w:adjust_ratio(2, 0.44, 0.33, 0.22)
 
 
 
-    <span id=item873 class="hide_extra">
+    <span id=item875 class="hide_extra">
     </span>
 
 </dd>
@@ -1128,7 +1227,7 @@ w:adjust_ratio(2, 0.44, 0.33, 0.22)
 
 
 
-    <span id=item874 class="hide_extra">
+    <span id=item876 class="hide_extra">
     </span>
 
 </dd>
@@ -1155,7 +1254,7 @@ w:adjust_ratio(2, 0.44, 0.33, 0.22)
 
 
 
-    <span id=item875 class="hide_extra">
+    <span id=item877 class="hide_extra">
     </span>
 
 </dd>
@@ -1210,7 +1309,7 @@ w:adjust_ratio(2, 0.44, 0.33, 0.22)
     </ul>
 
 
-    <span id=item1653 class="hide_extra">
+    <span id=item1666 class="hide_extra">
     </span>
 
 </dd>
@@ -1244,7 +1343,7 @@ w:adjust_ratio(2, 0.44, 0.33, 0.22)
 
 
 
-    <span id=item1654 class="hide_extra">
+    <span id=item1667 class="hide_extra">
     </span>
 
 </dd>
@@ -1275,7 +1374,7 @@ w:adjust_ratio(2, 0.44, 0.33, 0.22)
 
 
 
-    <span id=item1655 class="hide_extra">
+    <span id=item1668 class="hide_extra">
     </span>
 
 </dd>
@@ -1308,7 +1407,7 @@ w:adjust_ratio(2, 0.44, 0.33, 0.22)
 
 
 
-    <span id=item1656 class="hide_extra">
+    <span id=item1669 class="hide_extra">
     </span>
 
 </dd>
@@ -1339,7 +1438,7 @@ w:adjust_ratio(2, 0.44, 0.33, 0.22)
 
 
 
-    <span id=item1657 class="hide_extra">
+    <span id=item1670 class="hide_extra">
     </span>
 
 </dd>
@@ -1398,12 +1497,12 @@ w:adjust_ratio(2, 0.44, 0.33, 0.22)
     {<span class="number">0</span>, <span class="number">1</span>, <span class="number">0</span>},
 }
 <span class="keyword">for</span> i=<span class="number">1</span>, <span class="number">5</span> <span class="keyword">do</span>
-    w:adjust_ratio(<span class="number">2</span>, unpack(values[i]))
+    w:adjust_ratio(<span class="number">2</span>, <span class="global">unpack</span>(values[i]))
 <span class="keyword">end</span></pre>
     </ul>
 
 
-    <span id=item1658 class="hide_extra">
+    <span id=item1671 class="hide_extra">
     </span>
 
 </dd>
@@ -1442,7 +1541,7 @@ w:adjust_ratio(2, 0.44, 0.33, 0.22)
 
 
 
-    <span id=item1659 class="hide_extra">
+    <span id=item1672 class="hide_extra">
     </span>
 
 </dd>
@@ -1470,13 +1569,13 @@ w:adjust_ratio(2, 0.44, 0.33, 0.22)
 
 
      <br />
-     <center id=button1660>
-     <a class="show_more_button" onclick="show_extra('1660')">
+     <center id=button1673>
+     <a class="show_more_button" onclick="show_extra('1673')">
       Click to display more
      </a>
      </center>
 
-    <span id=item1660 class="hide_extra">
+    <span id=item1673 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>widget::added</code></span>  All new widgets are passed in the parameters.</li>
@@ -1517,13 +1616,13 @@ w:adjust_ratio(2, 0.44, 0.33, 0.22)
 
 
      <br />
-     <center id=button1661>
-     <a class="show_more_button" onclick="show_extra('1661')">
+     <center id=button1674>
+     <a class="show_more_button" onclick="show_extra('1674')">
       Click to display more
      </a>
      </center>
 
-    <span id=item1661 class="hide_extra">
+    <span id=item1674 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>widget::removed</code></span>  </li>
@@ -1564,13 +1663,13 @@ w:adjust_ratio(2, 0.44, 0.33, 0.22)
 
 
      <br />
-     <center id=button1662>
-     <a class="show_more_button" onclick="show_extra('1662')">
+     <center id=button1675>
+     <a class="show_more_button" onclick="show_extra('1675')">
       Click to display more
      </a>
      </center>
 
-    <span id=item1662 class="hide_extra">
+    <span id=item1675 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>widget::inserted</code></span>  </li>
@@ -1592,7 +1691,7 @@ w:adjust_ratio(2, 0.44, 0.33, 0.22)
     </span>
     </dt>
     <dd>
-    Set a widget at a specific index, replace the current one.
+    Set a widget at a specific index, replacing the current one.
 
     <h3>Parameters:</h3>
     <ul>
@@ -1602,7 +1701,7 @@ w:adjust_ratio(2, 0.44, 0.33, 0.22)
         </li>
         <li><span class="parameter">widget2</span>
             <span class="types"><span class="type">widget</span></span>
-         The widget to take the place of the first one
+         The widget to replace the previous one with
         </li>
     </ul>
 
@@ -1610,26 +1709,27 @@ w:adjust_ratio(2, 0.44, 0.33, 0.22)
     <ol>
 
            <span class="types"><span class="type">boolean</span></span>
-        If the operation is successful
+        Returns <code>true</code> if the widget was replaced successfully,
+   <code>false</code> otherwise.
     </ol>
 
 
 
 
      <br />
-     <center id=button1663>
-     <a class="show_more_button" onclick="show_extra('1663')">
+     <center id=button1676>
+     <a class="show_more_button" onclick="show_extra('1676')">
       Click to display more
      </a>
      </center>
 
-    <span id=item1663 class="hide_extra">
+    <span id=item1676 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>widget::replaced</code></span>  </li>
            <ul>
              <li><span class="parameter"><code>self</code></span> <span class="types"><code>widget</code></span> The layout.</li>
-             <li><span class="parameter"><code>widget</code></span> <span class="types"><code>widget</code></span> index The inserted widget.</li>
+             <li><span class="parameter"><code>widget</code></span> <span class="types"><code>widget</code></span> The inserted widget.</li>
              <li><span class="parameter"><code>previous</code></span> <span class="types"><code>widget</code></span> The previous widget.</li>
              <li><span class="parameter"><code>index</code></span> <span class="types"><code>number</code></span> The replaced index.</li>
            </ul>
@@ -1646,10 +1746,7 @@ w:adjust_ratio(2, 0.44, 0.33, 0.22)
     </span>
     </dt>
     <dd>
-    Replace the first instance of <code>widget</code> in the layout with <code>widget2</code>. </p>
-
-<p> <strong>Signal:</strong> widget::replaced The argument is the new widget and the old one
- and the index.
+    Replace the first instance of <code>widget</code> in the layout with <code>widget2</code>.
 
     <h3>Parameters:</h3>
     <ul>
@@ -1663,8 +1760,9 @@ w:adjust_ratio(2, 0.44, 0.33, 0.22)
         </li>
         <li><span class="parameter">recursive</span>
             <span class="types"><span class="type">boolean</span></span>
-         Dig in all compatible layouts to find the widget.
-         (<em>default</em> false)
+         Recurse into all compatible layouts to
+   find the widget.
+         (<em>default</em> <code>false</code>)
         </li>
     </ul>
 
@@ -1672,20 +1770,21 @@ w:adjust_ratio(2, 0.44, 0.33, 0.22)
     <ol>
 
            <span class="types"><span class="type">boolean</span></span>
-        If the operation is successful
+        Returns <code>true</code> if the widget was replaced successfully,
+   <code>false</code> otherwise.
     </ol>
 
 
 
 
      <br />
-     <center id=button1664>
-     <a class="show_more_button" onclick="show_extra('1664')">
+     <center id=button1677>
+     <a class="show_more_button" onclick="show_extra('1677')">
       Click to display more
      </a>
      </center>
 
-    <span id=item1664 class="hide_extra">
+    <span id=item1677 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>widget::replaced</code></span>  </li>
@@ -1726,27 +1825,28 @@ w:adjust_ratio(2, 0.44, 0.33, 0.22)
     <ol>
 
            <span class="types"><span class="type">boolean</span></span>
-        If the operation is successful
+        Returns <code>true</code> if the widget was replaced successfully,
+   <code>false</code> otherwise.
     </ol>
 
 
 
 
      <br />
-     <center id=button1665>
-     <a class="show_more_button" onclick="show_extra('1665')">
+     <center id=button1678>
+     <a class="show_more_button" onclick="show_extra('1678')">
       Click to display more
      </a>
      </center>
 
-    <span id=item1665 class="hide_extra">
+    <span id=item1678 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>widget::swapped</code></span>  </li>
            <ul>
              <li><span class="parameter"><code>self</code></span> <span class="types"><code>widget</code></span> The layout.</li>
-             <li><span class="parameter"><code>widget1</code></span> <span class="types"><code>widget</code></span> index The first widget.</li>
-             <li><span class="parameter"><code>widget2</code></span> <span class="types"><code>widget</code></span> index The second widget.</li>
+             <li><span class="parameter"><code>widget1</code></span> <span class="types"><code>widget</code></span> The first widget.</li>
+             <li><span class="parameter"><code>widget2</code></span> <span class="types"><code>widget</code></span> The second widget.</li>
              <li><span class="parameter"><code>index1</code></span> <span class="types"><code>number</code></span> The first index.</li>
              <li><span class="parameter"><code>index1</code></span> <span class="types"><code>number</code></span> The second index.</li>
            </ul>
@@ -1763,10 +1863,12 @@ w:adjust_ratio(2, 0.44, 0.33, 0.22)
     </span>
     </dt>
     <dd>
-    Swap 2 widgets in a layout.
- If widget1 is present multiple time, only the first instance is swapped
- <strong>Signal:</strong> widget::swapped The arguments are both widgets and both (new) indexes.
- if the layouts not the same, then only <code>widget::replaced</code> will be emitted.
+    Swap 2 widgets in a layout. </p>
+
+<p> If <code>widget1</code> is present multiple time, only the first instance is swapped.</p>
+
+<p> Calls <a href="../widget_layouts/wibox.layout.ratio.html#set">set</a> internally, so the signal <code>widget::replaced</code> is emitted for both
+ widgets as well.
 
     <h3>Parameters:</h3>
     <ul>
@@ -1780,8 +1882,9 @@ w:adjust_ratio(2, 0.44, 0.33, 0.22)
         </li>
         <li><span class="parameter">recursive</span>
             <span class="types"><span class="type">boolean</span></span>
-         Dig in all compatible layouts to find the widget.
-         (<em>default</em> false)
+         Recurse into all compatible layouts to
+   find the widget.
+         (<em>default</em> <code>false</code>)
         </li>
     </ul>
 
@@ -1789,27 +1892,32 @@ w:adjust_ratio(2, 0.44, 0.33, 0.22)
     <ol>
 
            <span class="types"><span class="type">boolean</span></span>
-        If the operation is successful
+        Returns <code>true</code> if the widget was replaced successfully,
+   <code>false</code> otherwise.
     </ol>
 
 
+    <h3>See also:</h3>
+    <ul>
+         <a href="../widget_layouts/wibox.layout.ratio.html#set">set</a>
+    </ul>
 
 
      <br />
-     <center id=button1666>
-     <a class="show_more_button" onclick="show_extra('1666')">
+     <center id=button1679>
+     <a class="show_more_button" onclick="show_extra('1679')">
       Click to display more
      </a>
      </center>
 
-    <span id=item1666 class="hide_extra">
+    <span id=item1679 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>widget::swapped</code></span>  </li>
            <ul>
              <li><span class="parameter"><code>self</code></span> <span class="types"><code>widget</code></span> The layout.</li>
-             <li><span class="parameter"><code>widget1</code></span> <span class="types"><code>widget</code></span> index The first widget.</li>
-             <li><span class="parameter"><code>widget2</code></span> <span class="types"><code>widget</code></span> index The second widget.</li>
+             <li><span class="parameter"><code>widget1</code></span> <span class="types"><code>widget</code></span> The first widget.</li>
+             <li><span class="parameter"><code>widget2</code></span> <span class="types"><code>widget</code></span> The second widget.</li>
              <li><span class="parameter"><code>index1</code></span> <span class="types"><code>number</code></span> The first index.</li>
              <li><span class="parameter"><code>index1</code></span> <span class="types"><code>number</code></span> The second index.</li>
            </ul>
@@ -1826,7 +1934,7 @@ w:adjust_ratio(2, 0.44, 0.33, 0.22)
     </span>
     </dt>
     <dd>
-    Reset a ratio layout.  This removes all widgets from the layout.
+    Reset the layout.  This removes all widgets from the layout.
 
 
 
@@ -1834,13 +1942,13 @@ w:adjust_ratio(2, 0.44, 0.33, 0.22)
 
 
      <br />
-     <center id=button1667>
-     <a class="show_more_button" onclick="show_extra('1667')">
+     <center id=button1680>
+     <a class="show_more_button" onclick="show_extra('1680')">
       Click to display more
      </a>
      </center>
 
-    <span id=item1667 class="hide_extra">
+    <span id=item1680 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>widget::reset</code></span>  </li>
@@ -1884,7 +1992,7 @@ w:adjust_ratio(2, 0.44, 0.33, 0.22)
 
 
 
-    <span id=item1587 class="hide_extra">
+    <span id=item1600 class="hide_extra">
     </span>
 
 </dd>
@@ -1912,7 +2020,7 @@ w:adjust_ratio(2, 0.44, 0.33, 0.22)
 
 
 
-    <span id=item876 class="hide_extra">
+    <span id=item878 class="hide_extra">
     </span>
 
 </dd>
@@ -1950,7 +2058,7 @@ w:adjust_ratio(2, 0.44, 0.33, 0.22)
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">signal_name</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
 
 
 
@@ -1965,7 +2073,7 @@ w:adjust_ratio(2, 0.44, 0.33, 0.22)
 
 
 
-    <span id=item877 class="hide_extra">
+    <span id=item879 class="hide_extra">
     </span>
 
 </dd>
@@ -2009,7 +2117,7 @@ w:adjust_ratio(2, 0.44, 0.33, 0.22)
            <span class="types"><span class="type">widget</span></span>
         The parent widget.</li>
         <li>
-           <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+           <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
         The hierarchy path between "self" and "widget".</li>
     </ol>
 
@@ -2017,7 +2125,7 @@ w:adjust_ratio(2, 0.44, 0.33, 0.22)
 
 
 
-    <span id=item878 class="hide_extra">
+    <span id=item880 class="hide_extra">
     </span>
 
 </dd>
@@ -2048,7 +2156,7 @@ In slot [obj]   foo bar 42
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">name</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          The name of the signal.
         </li>
         <li><span class="parameter">func</span>
@@ -2065,23 +2173,23 @@ In slot [obj]   foo bar 42
         <pre class="example"><span class="keyword">local</span> o = gears.object{}
 <span class="comment">-- Function can be attached to signals
 </span><span class="keyword">local</span> <span class="keyword">function</span> slot(obj, a, b, c)
-    <span class="global">print</span>(<span class="string">'In slot'</span>, obj, a, b, c)
+    <span class="global">print</span>(<span class="string">"In slot"</span>, obj, a, b, c)
 <span class="keyword">end</span>
-o:connect_signal(<span class="string">'my_signal'</span>, slot)
+o:connect_signal(<span class="string">"my_signal"</span>, slot)
 <span class="comment">-- Emitting can be done without arguments. In that case, the object will be
 </span><span class="comment">-- implicitly added as an argument.
-</span>o:emit_signal <span class="string">'my_signal'</span>
+</span>o:emit_signal <span class="string">"my_signal"</span>
 <span class="comment">-- It is also possible to add as many random arguments are required.
-</span>o:emit_signal(<span class="string">'my_signal'</span>, <span class="string">'foo'</span>, <span class="string">'bar'</span>, <span class="number">42</span>)
+</span>o:emit_signal(<span class="string">"my_signal"</span>, <span class="string">"foo"</span>, <span class="string">"bar"</span>, <span class="number">42</span>)
 <span class="comment">-- Finally, to allow the object to be garbage collected (the memory freed), it
 </span><span class="comment">-- is necessary to disconnect the signal or use <code>weak_connect_signal</code>
-</span>o:disconnect_signal(<span class="string">'my_signal'</span>, slot)
+</span>o:disconnect_signal(<span class="string">"my_signal"</span>, slot)
 <span class="comment">-- This time, the <code>slot</code> wont be called as it is no longer connected.
-</span>o:emit_signal <span class="string">'my_signal'</span></pre>
+</span>o:emit_signal <span class="string">"my_signal"</span></pre>
     </ul>
 
 
-    <span id=item879 class="hide_extra">
+    <span id=item881 class="hide_extra">
     </span>
 
 </dd>
@@ -2105,7 +2213,7 @@ o:connect_signal(<span class="string">'my_signal'</span>, slot)
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">name</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          The name of the signal.
         </li>
         <li><span class="parameter">func</span>
@@ -2119,7 +2227,7 @@ o:connect_signal(<span class="string">'my_signal'</span>, slot)
 
 
 
-    <span id=item880 class="hide_extra">
+    <span id=item882 class="hide_extra">
     </span>
 
 </dd>
@@ -2137,7 +2245,7 @@ o:connect_signal(<span class="string">'my_signal'</span>, slot)
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">name</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          The name of the signal.
         </li>
         <li><span class="parameter">func</span>
@@ -2151,7 +2259,7 @@ o:connect_signal(<span class="string">'my_signal'</span>, slot)
 
 
 
-    <span id=item881 class="hide_extra">
+    <span id=item883 class="hide_extra">
     </span>
 
 </dd>
@@ -2169,7 +2277,7 @@ o:connect_signal(<span class="string">'my_signal'</span>, slot)
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">name</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          The name of the signal
         </li>
         <li><span class="parameter">...</span>
@@ -2184,7 +2292,7 @@ o:connect_signal(<span class="string">'my_signal'</span>, slot)
 
 
 
-    <span id=item882 class="hide_extra">
+    <span id=item884 class="hide_extra">
     </span>
 
 </dd>
@@ -2248,7 +2356,7 @@ o:connect_signal(<span class="string">'my_signal'</span>, slot)
 
 
 
-    <span id=item1668 class="hide_extra">
+    <span id=item1681 class="hide_extra">
     </span>
 
 </dd>
@@ -2304,7 +2412,7 @@ o:connect_signal(<span class="string">'my_signal'</span>, slot)
 
 
 
-    <span id=item1669 class="hide_extra">
+    <span id=item1682 class="hide_extra">
     </span>
 
 </dd>
@@ -2335,7 +2443,7 @@ o:connect_signal(<span class="string">'my_signal'</span>, slot)
 
 
 
-    <span id=item883 class="hide_extra">
+    <span id=item885 class="hide_extra">
     </span>
 
 </dd>
@@ -2362,7 +2470,7 @@ o:connect_signal(<span class="string">'my_signal'</span>, slot)
 
 
 
-    <span id=item884 class="hide_extra">
+    <span id=item886 class="hide_extra">
     </span>
 
 </dd>
@@ -2379,7 +2487,7 @@ o:connect_signal(<span class="string">'my_signal'</span>, slot)
     <h3>Arguments:</h3>
     <ul>
         <li><span class="parameter">self</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          The current object instance itself.
         </li>
         <li><span class="parameter">lx</span>
@@ -2397,184 +2505,8 @@ o:connect_signal(<span class="string">'my_signal'</span>, slot)
          The button number.
         </li>
         <li><span class="parameter">mods</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          The modifiers (mod4, mod1 (alt), Control, Shift)
-        </li>
-        <li><span class="parameter">find_widgets_result</span> The entry from the result of
- <a href="../classes/wibox.drawable.html#wibox.drawable:find_widgets">wibox.drawable:find_widgets</a> for the position that the mouse hit.
-        <ul>
-        <li><span class="parameter">drawable</span>
-            <span class="types"><a class="type" href="../classes/wibox.drawable.html#">wibox.drawable</a></span>
-         The drawable containing
- the widget.
-        </li>
-        <li><span class="parameter">widget</span>
-            <span class="types"><span class="type">widget</span></span>
-         The widget being displayed.
-        </li>
-        <li><span class="parameter">hierarchy</span>
-            <span class="types"><a class="type" href="../classes/wibox.hierarchy.html#">wibox.hierarchy</a></span>
-         The hierarchy
- managing the widget's geometry.
-        </li>
-        <li><span class="parameter">x</span>
-            <span class="types"><span class="type">number</span></span>
-         An approximation of the X position that
- the widget is visible at on the surface.
-        </li>
-        <li><span class="parameter">y</span>
-            <span class="types"><span class="type">number</span></span>
-         An approximation of the Y position that
- the widget is visible at on the surface.
-        </li>
-        <li><span class="parameter">width</span>
-            <span class="types"><span class="type">number</span></span>
-         An approximation of the width that
- the widget is visible at on the surface.
-        </li>
-        <li><span class="parameter">height</span>
-            <span class="types"><span class="type">number</span></span>
-         An approximation of the height that
- the widget is visible at on the surface.
-        </li>
-        <li><span class="parameter">widget_width</span>
-            <span class="types"><span class="type">number</span></span>
-         The exact width of the widget
- in its local coordinate system.
-        </li>
-        <li><span class="parameter">widget_height</span>
-            <span class="types"><span class="type">number</span></span>
-         The exact height of the widget
- in its local coordinate system.
-        </li>
-        </li></ul>
-    </ul>
-
-
-
-    <h3>See also:</h3>
-    <ul>
-         <a href="../input_handling/mouse.html#">mouse</a>
-    </ul>
-
-
-
-    <span id=item885 class="hide_extra">
-    </span>
-
-</dd>
-    <dt>
-    <a name = "button::release"></a>
-    <strong>button::release</strong>
-    <span class="baseclass" >
-    &middot;&nbsp;Inherited from wibox.widget.base
-    </span>
-    </dt>
-    <dd>
-    When a mouse button is released over the widget.
-
-    <h3>Arguments:</h3>
-    <ul>
-        <li><span class="parameter">self</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
-         The current object instance itself.
-        </li>
-        <li><span class="parameter">lx</span>
-            <span class="types"><span class="type">number</span></span>
-         The horizontal position relative to the (0,0) position in
- the widget.
-        </li>
-        <li><span class="parameter">ly</span>
-            <span class="types"><span class="type">number</span></span>
-         The vertical position relative to the (0,0) position in the
- widget.
-        </li>
-        <li><span class="parameter">button</span>
-            <span class="types"><span class="type">number</span></span>
-         The button number.
-        </li>
-        <li><span class="parameter">mods</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
-         The modifiers (mod4, mod1 (alt), Control, Shift)
-        </li>
-        <li><span class="parameter">find_widgets_result</span> The entry from the result of
- <a href="../classes/wibox.drawable.html#wibox.drawable:find_widgets">wibox.drawable:find_widgets</a> for the position that the mouse hit.
-        <ul>
-        <li><span class="parameter">drawable</span>
-            <span class="types"><a class="type" href="../classes/wibox.drawable.html#">wibox.drawable</a></span>
-         The drawable containing
- the widget.
-        </li>
-        <li><span class="parameter">widget</span>
-            <span class="types"><span class="type">widget</span></span>
-         The widget being displayed.
-        </li>
-        <li><span class="parameter">hierarchy</span>
-            <span class="types"><a class="type" href="../classes/wibox.hierarchy.html#">wibox.hierarchy</a></span>
-         The hierarchy
- managing the widget's geometry.
-        </li>
-        <li><span class="parameter">x</span>
-            <span class="types"><span class="type">number</span></span>
-         An approximation of the X position that
- the widget is visible at on the surface.
-        </li>
-        <li><span class="parameter">y</span>
-            <span class="types"><span class="type">number</span></span>
-         An approximation of the Y position that
- the widget is visible at on the surface.
-        </li>
-        <li><span class="parameter">width</span>
-            <span class="types"><span class="type">number</span></span>
-         An approximation of the width that
- the widget is visible at on the surface.
-        </li>
-        <li><span class="parameter">height</span>
-            <span class="types"><span class="type">number</span></span>
-         An approximation of the height that
- the widget is visible at on the surface.
-        </li>
-        <li><span class="parameter">widget_width</span>
-            <span class="types"><span class="type">number</span></span>
-         The exact width of the widget
- in its local coordinate system.
-        </li>
-        <li><span class="parameter">widget_height</span>
-            <span class="types"><span class="type">number</span></span>
-         The exact height of the widget
- in its local coordinate system.
-        </li>
-        </li></ul>
-    </ul>
-
-
-
-    <h3>See also:</h3>
-    <ul>
-         <a href="../input_handling/mouse.html#">mouse</a>
-    </ul>
-
-
-
-    <span id=item886 class="hide_extra">
-    </span>
-
-</dd>
-    <dt>
-    <a name = "mouse::enter"></a>
-    <strong>mouse::enter</strong>
-    <span class="baseclass" >
-    &middot;&nbsp;Inherited from wibox.widget.base
-    </span>
-    </dt>
-    <dd>
-    When the mouse enter a widget.
-
-    <h3>Arguments:</h3>
-    <ul>
-        <li><span class="parameter">self</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
-         The current object instance itself.
         </li>
         <li><span class="parameter">find_widgets_result</span> The entry from the result of
  <a href="../classes/wibox.drawable.html#wibox.drawable:find_widgets">wibox.drawable:find_widgets</a> for the position that the mouse hit.
@@ -2640,20 +2572,38 @@ o:connect_signal(<span class="string">'my_signal'</span>, slot)
 
 </dd>
     <dt>
-    <a name = "mouse::leave"></a>
-    <strong>mouse::leave</strong>
+    <a name = "button::release"></a>
+    <strong>button::release</strong>
     <span class="baseclass" >
     &middot;&nbsp;Inherited from wibox.widget.base
     </span>
     </dt>
     <dd>
-    When the mouse leave a widget.
+    When a mouse button is released over the widget.
 
     <h3>Arguments:</h3>
     <ul>
         <li><span class="parameter">self</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          The current object instance itself.
+        </li>
+        <li><span class="parameter">lx</span>
+            <span class="types"><span class="type">number</span></span>
+         The horizontal position relative to the (0,0) position in
+ the widget.
+        </li>
+        <li><span class="parameter">ly</span>
+            <span class="types"><span class="type">number</span></span>
+         The vertical position relative to the (0,0) position in the
+ widget.
+        </li>
+        <li><span class="parameter">button</span>
+            <span class="types"><span class="type">number</span></span>
+         The button number.
+        </li>
+        <li><span class="parameter">mods</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+         The modifiers (mod4, mod1 (alt), Control, Shift)
         </li>
         <li><span class="parameter">find_widgets_result</span> The entry from the result of
  <a href="../classes/wibox.drawable.html#wibox.drawable:find_widgets">wibox.drawable:find_widgets</a> for the position that the mouse hit.
@@ -2718,6 +2668,164 @@ o:connect_signal(<span class="string">'my_signal'</span>, slot)
     </span>
 
 </dd>
+    <dt>
+    <a name = "mouse::enter"></a>
+    <strong>mouse::enter</strong>
+    <span class="baseclass" >
+    &middot;&nbsp;Inherited from wibox.widget.base
+    </span>
+    </dt>
+    <dd>
+    When the mouse enter a widget.
+
+    <h3>Arguments:</h3>
+    <ul>
+        <li><span class="parameter">self</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+         The current object instance itself.
+        </li>
+        <li><span class="parameter">find_widgets_result</span> The entry from the result of
+ <a href="../classes/wibox.drawable.html#wibox.drawable:find_widgets">wibox.drawable:find_widgets</a> for the position that the mouse hit.
+        <ul>
+        <li><span class="parameter">drawable</span>
+            <span class="types"><a class="type" href="../classes/wibox.drawable.html#">wibox.drawable</a></span>
+         The drawable containing
+ the widget.
+        </li>
+        <li><span class="parameter">widget</span>
+            <span class="types"><span class="type">widget</span></span>
+         The widget being displayed.
+        </li>
+        <li><span class="parameter">hierarchy</span>
+            <span class="types"><a class="type" href="../classes/wibox.hierarchy.html#">wibox.hierarchy</a></span>
+         The hierarchy
+ managing the widget's geometry.
+        </li>
+        <li><span class="parameter">x</span>
+            <span class="types"><span class="type">number</span></span>
+         An approximation of the X position that
+ the widget is visible at on the surface.
+        </li>
+        <li><span class="parameter">y</span>
+            <span class="types"><span class="type">number</span></span>
+         An approximation of the Y position that
+ the widget is visible at on the surface.
+        </li>
+        <li><span class="parameter">width</span>
+            <span class="types"><span class="type">number</span></span>
+         An approximation of the width that
+ the widget is visible at on the surface.
+        </li>
+        <li><span class="parameter">height</span>
+            <span class="types"><span class="type">number</span></span>
+         An approximation of the height that
+ the widget is visible at on the surface.
+        </li>
+        <li><span class="parameter">widget_width</span>
+            <span class="types"><span class="type">number</span></span>
+         The exact width of the widget
+ in its local coordinate system.
+        </li>
+        <li><span class="parameter">widget_height</span>
+            <span class="types"><span class="type">number</span></span>
+         The exact height of the widget
+ in its local coordinate system.
+        </li>
+        </li></ul>
+    </ul>
+
+
+
+    <h3>See also:</h3>
+    <ul>
+         <a href="../input_handling/mouse.html#">mouse</a>
+    </ul>
+
+
+
+    <span id=item889 class="hide_extra">
+    </span>
+
+</dd>
+    <dt>
+    <a name = "mouse::leave"></a>
+    <strong>mouse::leave</strong>
+    <span class="baseclass" >
+    &middot;&nbsp;Inherited from wibox.widget.base
+    </span>
+    </dt>
+    <dd>
+    When the mouse leave a widget.
+
+    <h3>Arguments:</h3>
+    <ul>
+        <li><span class="parameter">self</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+         The current object instance itself.
+        </li>
+        <li><span class="parameter">find_widgets_result</span> The entry from the result of
+ <a href="../classes/wibox.drawable.html#wibox.drawable:find_widgets">wibox.drawable:find_widgets</a> for the position that the mouse hit.
+        <ul>
+        <li><span class="parameter">drawable</span>
+            <span class="types"><a class="type" href="../classes/wibox.drawable.html#">wibox.drawable</a></span>
+         The drawable containing
+ the widget.
+        </li>
+        <li><span class="parameter">widget</span>
+            <span class="types"><span class="type">widget</span></span>
+         The widget being displayed.
+        </li>
+        <li><span class="parameter">hierarchy</span>
+            <span class="types"><a class="type" href="../classes/wibox.hierarchy.html#">wibox.hierarchy</a></span>
+         The hierarchy
+ managing the widget's geometry.
+        </li>
+        <li><span class="parameter">x</span>
+            <span class="types"><span class="type">number</span></span>
+         An approximation of the X position that
+ the widget is visible at on the surface.
+        </li>
+        <li><span class="parameter">y</span>
+            <span class="types"><span class="type">number</span></span>
+         An approximation of the Y position that
+ the widget is visible at on the surface.
+        </li>
+        <li><span class="parameter">width</span>
+            <span class="types"><span class="type">number</span></span>
+         An approximation of the width that
+ the widget is visible at on the surface.
+        </li>
+        <li><span class="parameter">height</span>
+            <span class="types"><span class="type">number</span></span>
+         An approximation of the height that
+ the widget is visible at on the surface.
+        </li>
+        <li><span class="parameter">widget_width</span>
+            <span class="types"><span class="type">number</span></span>
+         The exact width of the widget
+ in its local coordinate system.
+        </li>
+        <li><span class="parameter">widget_height</span>
+            <span class="types"><span class="type">number</span></span>
+         The exact height of the widget
+ in its local coordinate system.
+        </li>
+        </li></ul>
+    </ul>
+
+
+
+    <h3>See also:</h3>
+    <ul>
+         <a href="../input_handling/mouse.html#">mouse</a>
+    </ul>
+
+
+
+    <span id=item890 class="hide_extra">
+    </span>
+
+</dd>
 </dl>
 
 
@@ -2725,7 +2833,6 @@ o:connect_signal(<span class="string">'my_signal'</span>, slot)
 </div> <!-- id="main" -->
 <div id="about">
 <i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.6</a></i>
-<i style="float:right;">Last updated 2021-05-01 17:20:18 </i>
 </div> <!-- id="about" -->
 </div> <!-- id="container" -->
 </body>

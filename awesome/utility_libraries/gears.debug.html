@@ -149,6 +149,7 @@
   <li><a href="../popups_and_bars/awful.popup.html">awful.popup</a></li>
   <li><a href="../popups_and_bars/awful.titlebar.html">awful.titlebar</a></li>
   <li><a href="../popups_and_bars/awful.tooltip.html">awful.tooltip</a></li>
+  <li><a href="../popups_and_bars/awful.wallpaper.html">awful.wallpaper</a></li>
   <li><a href="../popups_and_bars/awful.wibar.html">awful.wibar</a></li>
   <li><a href="../popups_and_bars/awful.widget.calendar_popup.html">awful.widget.calendar_popup</a></li>
   <li><a href="../popups_and_bars/menubar.html">menubar</a></li>
@@ -236,8 +237,15 @@
   <div class="extra-header__section">
     <h3>Info:</h3>
     <ul>
-            <li><strong>Copyright</strong>: 2010 Uli Schlachter</li>
-            <li><strong>Author</strong>: Uli Schlachter</li>
+                <li><strong>Copyright</strong>: 2010 Uli Schlachter</li>
+                <li>
+                    <strong>Originally authored by</strong>: Uli Schlachter<br />
+                    <small>(Full contributors list available on
+                    <a href="https://github.com/awesomeWM/awesome/graphs/contributors">
+                        our github project)
+                    </a></small>
+
+                </li>
     </ul>
   </div>
 
@@ -251,42 +259,54 @@
         <a href="#dump_return"><span class='function_modname'>gears.debug.</span>dump_return <span class='function_args'> <b>(</b>data, tag[, depth]<b>)</b></span></a>
         <span class="summarytype"><span class='summary_type'> -&gt;&nbsp;()</span></span>
       </td>
-      <td colspan="2" class="summary">Inspect the value in data.</td>
+      <td colspan="2" class="summary">
+        Inspect the value in data.
+      </td>
     </tr>
     <tr>
       <td class="name" >
         <a href="#dump"><span class='function_modname'>gears.debug.</span>dump <span class='function_args'> <b>(</b>data, tag[, depth]<b>)</b></span></a>
         <span class="summarytype"></span>
       </td>
-      <td colspan="2" class="summary">Print the table (or any other value) to the console.</td>
+      <td colspan="2" class="summary">
+        Print the table (or any other value) to the console.
+      </td>
     </tr>
     <tr>
       <td class="name" >
         <a href="#print_warning"><span class='function_modname'>gears.debug.</span>print_warning <span class='function_args'> <b>(</b>message<b>)</b></span></a>
         <span class="summarytype"></span>
       </td>
-      <td colspan="2" class="summary">Print an warning message</td>
+      <td colspan="2" class="summary">
+        Print an warning message
+      </td>
     </tr>
     <tr>
       <td class="name" >
         <a href="#print_error"><span class='function_modname'>gears.debug.</span>print_error <span class='function_args'> <b>(</b>message<b>)</b></span></a>
         <span class="summarytype"></span>
       </td>
-      <td colspan="2" class="summary">Print an error message</td>
+      <td colspan="2" class="summary">
+        Print an error message
+      </td>
     </tr>
     <tr>
       <td class="name" >
         <a href="#deprecate"><span class='function_modname'>gears.debug.</span>deprecate <span class='function_args'> <b>(</b>[see], args<b>)</b></span></a>
         <span class="summarytype"></span>
       </td>
-      <td colspan="2" class="summary">Display a deprecation notice, but only once per traceback.</td>
+      <td colspan="2" class="summary">
+        Display a deprecation notice, but only once per traceback.
+      </td>
     </tr>
     <tr>
       <td class="name" >
         <a href="#deprecate_class"><span class='function_modname'>gears.debug.</span>deprecate_class <span class='function_args'> <b>(</b>fallback, old_name, new_name[, The={}]<b>)</b></span></a>
         <span class="summarytype"><span class='summary_type'> -&gt;&nbsp;table</span></span>
       </td>
-      <td colspan="2" class="summary">Create a class proxy with deprecation messages.</td>
+      <td colspan="2" class="summary">
+        Create a class proxy with deprecation messages.
+      </td>
     </tr>
 </table>
 
@@ -332,7 +352,7 @@
 
 
 
-    <span id=item2051 class="hide_extra">
+    <span id=item2090 class="hide_extra">
     </span>
 
 </dd>
@@ -366,7 +386,7 @@
 
 
 
-    <span id=item2052 class="hide_extra">
+    <span id=item2091 class="hide_extra">
     </span>
 
 </dd>
@@ -383,7 +403,7 @@
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">message</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          The warning message to print.
         </li>
     </ul>
@@ -393,7 +413,7 @@
 
 
 
-    <span id=item2053 class="hide_extra">
+    <span id=item2092 class="hide_extra">
     </span>
 
 </dd>
@@ -410,7 +430,7 @@
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">message</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          The error message to print.
         </li>
     </ul>
@@ -420,7 +440,7 @@
 
 
 
-    <span id=item2054 class="hide_extra">
+    <span id=item2093 class="hide_extra">
     </span>
 
 </dd>
@@ -464,24 +484,24 @@
 
 
      <br />
-     <center id=button2055>
-     <a class="show_more_button" onclick="show_extra('2055')">
+     <center id=button2094>
+     <a class="show_more_button" onclick="show_extra('2094')">
       Click to display more
      </a>
      </center>
 
-    <span id=item2055 class="hide_extra">
+    <span id=item2094 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>debug::deprecation</code></span>  This is usually routed to stdout when the API is newly deprecated.</li>
            <ul>
-             <li><span class="parameter"><code>msg</code></span> <span class="types"><a href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span> The full formatted message.</li>
-             <li><span class="parameter"><code>see</code></span> <span class="types"><a href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span> A message provided by the caller.</li>
-             <li><span class="parameter"><code>args</code></span> <span class="types"><a href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span> Some extra context.</li>
+             <li><span class="parameter"><code>msg</code></span> <span class="types"><a href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span> The full formatted message.</li>
+             <li><span class="parameter"><code>see</code></span> <span class="types"><a href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span> A message provided by the caller.</li>
+             <li><span class="parameter"><code>args</code></span> <span class="types"><a href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span> Some extra context.</li>
            </ul>
           <li><span class="parameter"><code>debug::error</code></span>  When the API has been deprecated for more than one API level.</li>
            <ul>
-             <li><span class="parameter"><code>msg</code></span> <span class="types"><a href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span> The full formatted message.</li>
+             <li><span class="parameter"><code>msg</code></span> <span class="types"><a href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span> The full formatted message.</li>
            </ul>
      </ul>
     </span>
@@ -501,28 +521,28 @@
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">fallback</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          The new class.
         </li>
         <li><span class="parameter">old_name</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          The old class name.
         </li>
         <li><span class="parameter">new_name</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          The new class name.
         </li>
         <li><span class="parameter">The</span>
             <span class="types"><span class="type">args</span></span>
          name.
-         (<em>default</em> {})
+         (<em>default</em> <code>{}</code>)
         </li>
     </ul>
 
     <h3>Returns:</h3>
     <ol>
 
-           <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+           <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
         A proxy class.
     </ol>
 
@@ -530,7 +550,7 @@
 
 
 
-    <span id=item2056 class="hide_extra">
+    <span id=item2095 class="hide_extra">
     </span>
 
 </dd>
@@ -541,7 +561,6 @@
 </div> <!-- id="main" -->
 <div id="about">
 <i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.6</a></i>
-<i style="float:right;">Last updated 2021-05-01 17:20:18 </i>
 </div> <!-- id="about" -->
 </div> <!-- id="container" -->
 </body>

@@ -149,6 +149,7 @@
   <li><a href="../popups_and_bars/awful.popup.html">awful.popup</a></li>
   <li><a href="../popups_and_bars/awful.titlebar.html">awful.titlebar</a></li>
   <li><a href="../popups_and_bars/awful.tooltip.html">awful.tooltip</a></li>
+  <li><a href="../popups_and_bars/awful.wallpaper.html">awful.wallpaper</a></li>
   <li><a href="../popups_and_bars/awful.wibar.html">awful.wibar</a></li>
   <li><a href="../popups_and_bars/awful.widget.calendar_popup.html">awful.widget.calendar_popup</a></li>
   <li><a href="../popups_and_bars/menubar.html">menubar</a></li>
@@ -233,8 +234,15 @@
   <div class="extra-header__section">
     <h3>Info:</h3>
     <ul>
-            <li><strong>Copyright</strong>: 2008 Julien Danjou</li>
-            <li><strong>Author</strong>: Julien Danjou &lt;julien@danjou.info&gt;</li>
+                <li><strong>Copyright</strong>: 2008 Julien Danjou</li>
+                <li>
+                    <strong>Originally authored by</strong>: Julien Danjou &lt;julien@danjou.info&gt;<br />
+                    <small>(Full contributors list available on
+                    <a href="https://github.com/awesomeWM/awesome/graphs/contributors">
+                        our github project)
+                    </a></small>
+
+                </li>
     </ul>
   </div>
 
@@ -248,64 +256,82 @@
         <a href="#gears.geometry.rectangle.get_square_distance"><span class='function_modname'>gears.geometry.</span>rectangle.get_square_distance <span class='function_args'> <b>(</b>geom, x, y<b>)</b></span></a>
         <span class="summarytype"><span class='summary_type'> -&gt;&nbsp;number</span></span>
       </td>
-      <td colspan="2" class="summary">Get the square distance between a rectangle and a point.</td>
+      <td colspan="2" class="summary">
+        Get the square distance between a rectangle and a point.
+      </td>
     </tr>
     <tr>
       <td class="name" >
         <a href="#gears.geometry.rectangle.get_closest_by_coord"><span class='function_modname'>gears.geometry.</span>rectangle.get_closest_by_coord <span class='function_args'> <b>(</b>list, x, y<b>)</b></span></a>
         <span class="summarytype"><span class='summary_type'> -&gt;&nbsp;()</span></span>
       </td>
-      <td colspan="2" class="summary">Return the closest rectangle from <code>list</code> for a given point.</td>
+      <td colspan="2" class="summary">
+        Return the closest rectangle from <code>list</code> for a given point.
+      </td>
     </tr>
     <tr>
       <td class="name" >
         <a href="#gears.geometry.rectangle.get_by_coord"><span class='function_modname'>gears.geometry.</span>rectangle.get_by_coord <span class='function_args'> <b>(</b>list, x, y<b>)</b></span></a>
         <span class="summarytype"><span class='summary_type'> -&gt;&nbsp;()</span></span>
       </td>
-      <td colspan="2" class="summary">Return the rectangle containing the [x, y] point.</td>
+      <td colspan="2" class="summary">
+        Return the rectangle containing the [x, y] point.
+      </td>
     </tr>
     <tr>
       <td class="name" >
         <a href="#gears.geometry.rectangle.get_in_direction"><span class='function_modname'>gears.geometry.</span>rectangle.get_in_direction <span class='function_args'> <b>(</b>dir, recttbl, cur<b>)</b></span></a>
         <span class="summarytype"><span class='summary_type'> -&gt;&nbsp;()</span></span>
       </td>
-      <td colspan="2" class="summary">Get the nearest rectangle in the given direction.</td>
+      <td colspan="2" class="summary">
+        Get the nearest rectangle in the given direction.
+      </td>
     </tr>
     <tr>
       <td class="name" >
         <a href="#gears.geometry.rectangle.are_equal"><span class='function_modname'>gears.geometry.</span>rectangle.are_equal <span class='function_args'> <b>(</b>a, b<b>)</b></span></a>
         <span class="summarytype"><span class='summary_type'> -&gt;&nbsp;boolean</span></span>
       </td>
-      <td colspan="2" class="summary">Return true if the area are exactly identical.</td>
+      <td colspan="2" class="summary">
+        Return true if the area are exactly identical.
+      </td>
     </tr>
     <tr>
       <td class="name" >
         <a href="#gears.geometry.rectangle.is_inside"><span class='function_modname'>gears.geometry.</span>rectangle.is_inside <span class='function_args'> <b>(</b>a, b<b>)</b></span></a>
         <span class="summarytype"><span class='summary_type'> -&gt;&nbsp;boolean</span></span>
       </td>
-      <td colspan="2" class="summary">Return if rectangle <code>a</code> is within rectangle <code>b</code>.</td>
+      <td colspan="2" class="summary">
+        Return if rectangle <code>a</code> is within rectangle <code>b</code>.
+      </td>
     </tr>
     <tr>
       <td class="name" >
         <a href="#gears.geometry.rectangle.area_intersect_area"><span class='function_modname'>gears.geometry.</span>rectangle.area_intersect_area <span class='function_args'> <b>(</b>a, b<b>)</b></span></a>
         <span class="summarytype"><span class='summary_type'> -&gt;&nbsp;()</span></span>
       </td>
-      <td colspan="2" class="summary">Check if an area intersect another area.</td>
+      <td colspan="2" class="summary">
+        Check if an area intersect another area.
+      </td>
     </tr>
     <tr>
       <td class="name" >
         <a href="#gears.geometry.rectangle.get_intersection"><span class='function_modname'>gears.geometry.</span>rectangle.get_intersection <span class='function_args'> <b>(</b>a, b<b>)</b></span></a>
         <span class="summarytype"><span class='summary_type'> -&gt;&nbsp;table</span></span>
       </td>
-      <td colspan="2" class="summary">Get the intersect area between a and b.</td>
+      <td colspan="2" class="summary">
+        Get the intersect area between a and b.
+      </td>
     </tr>
     <tr>
       <td class="name" >
         <a href="#gears.geometry.rectangle.area_remove"><span class='function_modname'>gears.geometry.</span>rectangle.area_remove <span class='function_args'> <b>(</b>areas, elem<b>)</b></span></a>
         <span class="summarytype"><span class='summary_type'> -&gt;&nbsp;()</span></span>
       </td>
-      <td colspan="2" class="summary">Remove an area from a list, splitting the space between several area that
- can overlap.</td>
+      <td colspan="2" class="summary">
+        Remove an area from a list, splitting the space between several area that
+ can overlap.
+      </td>
     </tr>
 </table>
 
@@ -368,7 +394,7 @@
 
 
 
-    <span id=item2073 class="hide_extra">
+    <span id=item2112 class="hide_extra">
     </span>
 
 </dd>
@@ -385,7 +411,7 @@
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">list</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          A list of geometry tables.
         </li>
         <li><span class="parameter">x</span>
@@ -408,7 +434,7 @@
 
 
 
-    <span id=item2074 class="hide_extra">
+    <span id=item2113 class="hide_extra">
     </span>
 
 </dd>
@@ -428,7 +454,7 @@
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">list</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          A list of geometry tables.
         </li>
         <li><span class="parameter">x</span>
@@ -452,7 +478,7 @@
 
 
 
-    <span id=item2075 class="hide_extra">
+    <span id=item2114 class="hide_extra">
     </span>
 
 </dd>
@@ -470,15 +496,15 @@
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">dir</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          The direction, can be either <em>up</em>, <em>down</em>, <em>left</em> or <em>right</em>.
         </li>
         <li><span class="parameter">recttbl</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          A table of rectangle specifications.
         </li>
         <li><span class="parameter">cur</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          The current rectangle.
         </li>
     </ul>
@@ -493,7 +519,7 @@
 
 
 
-    <span id=item2076 class="hide_extra">
+    <span id=item2115 class="hide_extra">
     </span>
 
 </dd>
@@ -512,11 +538,11 @@
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">a</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          The area.
         </li>
         <li><span class="parameter">b</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          The other area.
         </li>
     </ul>
@@ -532,7 +558,7 @@
 
 
 
-    <span id=item2077 class="hide_extra">
+    <span id=item2116 class="hide_extra">
     </span>
 
 </dd>
@@ -553,11 +579,11 @@
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">a</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          The smaller area.
         </li>
         <li><span class="parameter">b</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          The larger area.
         </li>
     </ul>
@@ -577,7 +603,7 @@
 
 
 
-    <span id=item2078 class="hide_extra">
+    <span id=item2117 class="hide_extra">
     </span>
 
 </dd>
@@ -594,11 +620,11 @@
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">a</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          The area.
         </li>
         <li><span class="parameter">b</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          The other area.
         </li>
     </ul>
@@ -613,7 +639,7 @@
 
 
 
-    <span id=item2079 class="hide_extra">
+    <span id=item2118 class="hide_extra">
     </span>
 
 </dd>
@@ -672,7 +698,7 @@
     <h3>Returns:</h3>
     <ol>
 
-           <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+           <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
         The intersect area.
     </ol>
 
@@ -684,7 +710,7 @@
 
 
 
-    <span id=item2080 class="hide_extra">
+    <span id=item2119 class="hide_extra">
     </span>
 
 </dd>
@@ -702,7 +728,7 @@
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">areas</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          Table of areas.
         </li>
         <li><span class="parameter">elem</span> Area to remove.
@@ -736,7 +762,7 @@
 
 
 
-    <span id=item2081 class="hide_extra">
+    <span id=item2120 class="hide_extra">
     </span>
 
 </dd>
@@ -747,7 +773,6 @@
 </div> <!-- id="main" -->
 <div id="about">
 <i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.6</a></i>
-<i style="float:right;">Last updated 2021-05-01 17:20:18 </i>
 </div> <!-- id="about" -->
 </div> <!-- id="container" -->
 </body>

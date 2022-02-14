@@ -155,6 +155,7 @@
   <li><a href="../popups_and_bars/awful.popup.html">awful.popup</a></li>
   <li><a href="../popups_and_bars/awful.titlebar.html">awful.titlebar</a></li>
   <li><a href="../popups_and_bars/awful.tooltip.html">awful.tooltip</a></li>
+  <li><a href="../popups_and_bars/awful.wallpaper.html">awful.wallpaper</a></li>
   <li><a href="../popups_and_bars/awful.wibar.html">awful.wibar</a></li>
   <li><a href="../popups_and_bars/awful.widget.calendar_popup.html">awful.widget.calendar_popup</a></li>
   <li><a href="../popups_and_bars/menubar.html">menubar</a></li>
@@ -285,14 +286,14 @@
   <tr><td><a href='../libraries/awful.permissions.html#beautiful.maximized_honor_padding'>maximized_honor_padding</a></td><td>Honor the screen padding when maximizing</td></tr>
   <tr><td><a href='../libraries/awful.permissions.html#beautiful.fullscreen_hide_border'>fullscreen_hide_border</a></td><td>Hide the border on fullscreen clients</td></tr>
   <tr><td><a href='../libraries/awful.permissions.html#beautiful.maximized_hide_border'>maximized_hide_border</a></td><td>Hide the border on maximized clients</td></tr>
-  <tr><td><a href='../popups_and_bars/awful.popup.html#beautiful.bg_normal'>bg_normal</a></td><td>The default background color</td></tr>
-  <tr><td><a href='../popups_and_bars/awful.popup.html#beautiful.fg_normal'>fg_normal</a></td><td>The default foreground (text) color</td></tr>
+  <tr><td><ul><li><a href='../popups_and_bars/awful.popup.html#beautiful.bg_normal'>bg_normal</a> (awful.popup)</li><li><a href='../popups_and_bars/awful.wibar.html#beautiful.bg_normal'>bg_normal</a>(awful.wibar)</li><li><a href='../theme_related_libraries/beautiful.html#beautiful.bg_normal'>bg_normal</a>(beautiful.init)</li><li><a href='../popups_and_bars/naughty.layout.box.html#beautiful.bg_normal'>bg_normal</a>(naughty.layout.box)</li><li><a href='../popups_and_bars/wibox.html#beautiful.bg_normal'>bg_normal</a>(wibox.init)</li></ul></td><td><ul><li>The default background color</li><li>The default background color</li><li>The default background color</li><li>The default background color</li><li>The default background color</li></ul></td></tr>
+  <tr><td><ul><li><a href='../popups_and_bars/awful.popup.html#beautiful.fg_normal'>fg_normal</a> (awful.popup)</li><li><a href='../popups_and_bars/awful.wibar.html#beautiful.fg_normal'>fg_normal</a>(awful.wibar)</li><li><a href='../theme_related_libraries/beautiful.html#beautiful.fg_normal'>fg_normal</a>(beautiful.init)</li><li><a href='../popups_and_bars/naughty.layout.box.html#beautiful.fg_normal'>fg_normal</a>(naughty.layout.box)</li><li><a href='../popups_and_bars/wibox.html#beautiful.fg_normal'>fg_normal</a>(wibox.init)</li></ul></td><td><ul><li>The default foreground (text) color</li><li>The default foreground (text) color</li><li>The default focused element foreground (text) color</li><li>The default foreground (text) color</li><li>The default foreground (text) color</li></ul></td></tr>
   <tr><td><a href='../libraries/awful.prompt.html#beautiful.prompt_fg_cursor'>prompt_fg_cursor</a></td><td>The prompt cursor foreground color</td></tr>
   <tr><td><a href='../libraries/awful.prompt.html#beautiful.prompt_bg_cursor'>prompt_bg_cursor</a></td><td>The prompt cursor background color</td></tr>
   <tr><td><a href='../libraries/awful.prompt.html#beautiful.prompt_font'>prompt_font</a></td><td>The prompt text font</td></tr>
   <tr><td><a href='../libraries/awful.startup_notification.html#beautiful.enable_spawn_cursor'>enable_spawn_cursor</a></td><td>Show busy mouse cursor during spawn</td></tr>
   <tr><td><a href='../libraries/awful.tag.html#beautiful.master_width_factor'>master_width_factor</a></td><td>The default master width factor</td></tr>
-  <tr><td><a href='../libraries/awful.tag.html#beautiful.useless_gap'>useless_gap</a></td><td>The default gap</td></tr>
+  <tr><td><ul><li><a href='../libraries/awful.tag.html#beautiful.useless_gap'>useless_gap</a> (awful.tag)</li><li><a href='../theme_related_libraries/beautiful.html#beautiful.useless_gap'>useless_gap</a>(beautiful.init)</li></ul></td><td><ul><li>The default gap</li><li>The gap between clients</li></ul></td></tr>
   <tr><td><a href='../libraries/awful.tag.html#beautiful.gap_single_client'>gap_single_client</a></td><td>Enable gaps for a single client</td></tr>
   <tr><td><a href='../libraries/awful.tag.html#beautiful.master_fill_policy'>master_fill_policy</a></td><td>The default fill policy</td></tr>
   <tr><td><a href='../libraries/awful.tag.html#beautiful.master_count'>master_count</a></td><td>The default number of master windows</td></tr>
@@ -306,6 +307,9 @@
   <tr><td><a href='../popups_and_bars/awful.titlebar.html#beautiful.titlebar_fg_focus'>titlebar_fg_focus</a></td><td>The focused titlebar foreground (text) color</td></tr>
   <tr><td><a href='../popups_and_bars/awful.titlebar.html#beautiful.titlebar_bg_focus'>titlebar_bg_focus</a></td><td>The focused titlebar background color</td></tr>
   <tr><td><a href='../popups_and_bars/awful.titlebar.html#beautiful.titlebar_bgimage_focus'>titlebar_bgimage_focus</a></td><td>The focused titlebar background image image</td></tr>
+  <tr><td><a href='../popups_and_bars/awful.titlebar.html#beautiful.titlebar_fg_urgent'>titlebar_fg_urgent</a></td><td>The urgent titlebar foreground (text) color</td></tr>
+  <tr><td><a href='../popups_and_bars/awful.titlebar.html#beautiful.titlebar_bg_urgent'>titlebar_bg_urgent</a></td><td>The urgent titlebar background color</td></tr>
+  <tr><td><a href='../popups_and_bars/awful.titlebar.html#beautiful.titlebar_bgimage_urgent'>titlebar_bgimage_urgent</a></td><td>The urgent titlebar background image image</td></tr>
   <tr><td><a href='../popups_and_bars/awful.titlebar.html#beautiful.titlebar_floating_button_normal'>titlebar_floating_button_normal</a></td><td>floating<em>button</em>normal</td></tr>
   <tr><td><a href='../popups_and_bars/awful.titlebar.html#beautiful.titlebar_maximized_button_normal'>titlebar_maximized_button_normal</a></td><td>maximized<em>button</em>normal</td></tr>
   <tr><td><a href='../popups_and_bars/awful.titlebar.html#beautiful.titlebar_minimize_button_normal'>titlebar_minimize_button_normal</a></td><td>minimize<em>button</em>normal</td></tr>
@@ -383,7 +387,10 @@
   <tr><td><a href='../popups_and_bars/awful.tooltip.html#beautiful.tooltip_gaps'>tooltip_gaps</a></td><td>The tooltip margins</td></tr>
   <tr><td><a href='../popups_and_bars/awful.tooltip.html#beautiful.tooltip_shape'>tooltip_shape</a></td><td>The default tooltip shape</td></tr>
   <tr><td><a href='../popups_and_bars/awful.tooltip.html#beautiful.tooltip_align'>tooltip_align</a></td><td>The default tooltip alignment</td></tr>
+  <tr><td><a href='../popups_and_bars/awful.wallpaper.html#beautiful.wallpaper_bg'>wallpaper_bg</a></td><td>The default wallpaper background color</td></tr>
+  <tr><td><a href='../popups_and_bars/awful.wallpaper.html#beautiful.wallpaper_fg'>wallpaper_fg</a></td><td>The default wallpaper foreground color</td></tr>
   <tr><td><a href='../popups_and_bars/awful.wibar.html#beautiful.wibar_stretch'>wibar_stretch</a></td><td>If the wibar needs to be stretched to fill the screen</td></tr>
+  <tr><td><a href='../popups_and_bars/awful.wibar.html#beautiful.wibar_favor_vertical'>wibar_favor_vertical</a></td><td>If there is both vertical and horizontal wibar, give more space to vertical ones</td></tr>
   <tr><td><a href='../popups_and_bars/awful.wibar.html#beautiful.wibar_border_width'>wibar_border_width</a></td><td>The wibar border width</td></tr>
   <tr><td><a href='../popups_and_bars/awful.wibar.html#beautiful.wibar_border_color'>wibar_border_color</a></td><td>The wibar border color</td></tr>
   <tr><td><a href='../popups_and_bars/awful.wibar.html#beautiful.wibar_ontop'>wibar_ontop</a></td><td>If the wibar is to be on top of other windows</td></tr>
@@ -396,8 +403,8 @@
   <tr><td><a href='../popups_and_bars/awful.wibar.html#beautiful.wibar_bgimage'>wibar_bgimage</a></td><td>The wibar's background image</td></tr>
   <tr><td><a href='../popups_and_bars/awful.wibar.html#beautiful.wibar_fg'>wibar_fg</a></td><td>The wibar's foreground (text) color</td></tr>
   <tr><td><a href='../popups_and_bars/awful.wibar.html#beautiful.wibar_shape'>wibar_shape</a></td><td>The wibar's shape</td></tr>
-  <tr><td><a href='../popups_and_bars/awful.wibar.html#beautiful.bg_normal'>bg_normal</a></td><td>The default background color</td></tr>
-  <tr><td><a href='../popups_and_bars/awful.wibar.html#beautiful.fg_normal'>fg_normal</a></td><td>The default foreground (text) color</td></tr>
+  <tr><td><a href='../popups_and_bars/awful.wibar.html#beautiful.wibar_margins'>wibar_margins</a></td><td>The wibar's margins</td></tr>
+  <tr><td><a href='../popups_and_bars/awful.wibar.html#beautiful.wibar_align'>wibar_align</a></td><td>The wibar's alignments</td></tr>
   <tr><td><a href='../popups_and_bars/awful.widget.calendar_popup.html#beautiful.calendar_style'>calendar_style</a></td><td>The generic calendar style table</td></tr>
   <tr><td><a href='../widgets/awful.widget.layoutlist.html#beautiful.layoutlist_fg_normal'>layoutlist_fg_normal</a></td><td>The default foreground (text) color</td></tr>
   <tr><td><a href='../widgets/awful.widget.layoutlist.html#beautiful.layoutlist_bg_normal'>layoutlist_bg_normal</a></td><td>The default background color</td></tr>
@@ -473,6 +480,7 @@
   <tr><td><a href='../widgets/awful.widget.tasklist.html#beautiful.tasklist_maximized'>tasklist_maximized</a></td><td>Extra tasklist client property notification icon for clients with the maximized property set</td></tr>
   <tr><td><a href='../widgets/awful.widget.tasklist.html#beautiful.tasklist_maximized_horizontal'>tasklist_maximized_horizontal</a></td><td>Extra tasklist client property notification icon for clients with the maximized_horizontal property set</td></tr>
   <tr><td><a href='../widgets/awful.widget.tasklist.html#beautiful.tasklist_maximized_vertical'>tasklist_maximized_vertical</a></td><td>Extra tasklist client property notification icon for clients with the maximized_vertical property set</td></tr>
+  <tr><td><a href='../widgets/awful.widget.tasklist.html#beautiful.tasklist_minimized'>tasklist_minimized</a></td><td>Extra tasklist client property notification icon for clients with the minimized property set</td></tr>
   <tr><td><a href='../widgets/awful.widget.tasklist.html#beautiful.tasklist_font'>tasklist_font</a></td><td>The tasklist font</td></tr>
   <tr><td><a href='../widgets/awful.widget.tasklist.html#beautiful.tasklist_align'>tasklist_align</a></td><td>The focused client alignment</td></tr>
   <tr><td><a href='../widgets/awful.widget.tasklist.html#beautiful.tasklist_font_focus'>tasklist_font_focus</a></td><td>The focused client title alignment</td></tr>
@@ -491,18 +499,15 @@
   <tr><td><a href='../widgets/awful.widget.tasklist.html#beautiful.tasklist_shape_urgent'>tasklist_shape_urgent</a></td><td>The urgent clients shape</td></tr>
   <tr><td><a href='../widgets/awful.widget.tasklist.html#beautiful.tasklist_shape_border_width_urgent'>tasklist_shape_border_width_urgent</a></td><td>The urgent clients border width</td></tr>
   <tr><td><a href='../widgets/awful.widget.tasklist.html#beautiful.tasklist_shape_border_color_urgent'>tasklist_shape_border_color_urgent</a></td><td>The urgent clients border color</td></tr>
-  <tr><td><a href='../theme_related_libraries/beautiful.html#beautiful.font'>font</a></td><td>The default font</td></tr>
-  <tr><td><a href='../theme_related_libraries/beautiful.html#beautiful.bg_normal'>bg_normal</a></td><td>The default background color</td></tr>
+  <tr><td><ul><li><a href='../theme_related_libraries/beautiful.html#beautiful.font'>font</a> (beautiful.init)</li><li><a href='../widgets/wibox.widget.textbox.html#beautiful.font'>font</a>(wibox.widget.textbox)</li></ul></td><td><ul><li>The default font</li><li>The textbox font</li></ul></td></tr>
   <tr><td><a href='../theme_related_libraries/beautiful.html#beautiful.bg_focus'>bg_focus</a></td><td>The default focused element background color</td></tr>
   <tr><td><a href='../theme_related_libraries/beautiful.html#beautiful.bg_urgent'>bg_urgent</a></td><td>The default urgent element background color</td></tr>
   <tr><td><a href='../theme_related_libraries/beautiful.html#beautiful.bg_minimize'>bg_minimize</a></td><td>The default minimized element background color</td></tr>
-  <tr><td><a href='../theme_related_libraries/beautiful.html#beautiful.bg_systray'>bg_systray</a></td><td>The system tray background color</td></tr>
-  <tr><td><a href='../theme_related_libraries/beautiful.html#beautiful.fg_normal'>fg_normal</a></td><td>The default focused element foreground (text) color</td></tr>
+  <tr><td><ul><li><a href='../theme_related_libraries/beautiful.html#beautiful.bg_systray'>bg_systray</a> (beautiful.init)</li><li><a href='../widgets/wibox.widget.systray.html#beautiful.bg_systray'>bg_systray</a>(wibox.widget.systray)</li></ul></td><td><ul><li>The system tray background color</li><li>The systray background color</li></ul></td></tr>
   <tr><td><a href='../theme_related_libraries/beautiful.html#beautiful.fg_focus'>fg_focus</a></td><td>The default focused element foreground (text) color</td></tr>
   <tr><td><a href='../theme_related_libraries/beautiful.html#beautiful.fg_urgent'>fg_urgent</a></td><td>The default urgent element foreground (text) color</td></tr>
   <tr><td><a href='../theme_related_libraries/beautiful.html#beautiful.fg_minimize'>fg_minimize</a></td><td>The default minimized element foreground (text) color</td></tr>
-  <tr><td><a href='../theme_related_libraries/beautiful.html#beautiful.useless_gap'>useless_gap</a></td><td>The gap between clients</td></tr>
-  <tr><td><a href='../theme_related_libraries/beautiful.html#beautiful.border_width'>border_width</a></td><td>The fallback border width</td></tr>
+  <tr><td><ul><li><a href='../theme_related_libraries/beautiful.html#beautiful.border_width'>border_width</a> (beautiful.init)</li><li><a href='../core_components/client.html#beautiful.border_width'>border_width</a>(client)</li></ul></td><td><ul><li>The fallback border width</li><li>The fallback border width when nothing else is set</li></ul></td></tr>
   <tr><td><a href='../theme_related_libraries/beautiful.html#beautiful.border_color'>border_color</a></td><td>The fallback border color</td></tr>
   <tr><td><a href='../theme_related_libraries/beautiful.html#beautiful.wallpaper'>wallpaper</a></td><td>The wallpaper path</td></tr>
   <tr><td><a href='../theme_related_libraries/beautiful.html#beautiful.icon_theme'>icon_theme</a></td><td>The icon theme name</td></tr>
@@ -513,10 +518,9 @@
   <tr><td><a href='../popups_and_bars/menubar.html#beautiful.menubar_border_color'>menubar_border_color</a></td><td>Menubar border color</td></tr>
   <tr><td><a href='../popups_and_bars/menubar.html#beautiful.menubar_fg_focus'>menubar_fg_focus</a></td><td>Menubar selected item text color</td></tr>
   <tr><td><a href='../popups_and_bars/menubar.html#beautiful.menubar_bg_focus'>menubar_bg_focus</a></td><td>Menubar selected item background color</td></tr>
+  <tr><td><a href='../popups_and_bars/menubar.html#beautiful.menubar_font'>menubar_font</a></td><td>Menubar font</td></tr>
   <tr><td><a href='../popups_and_bars/naughty.layout.box.html#beautiful.notification_max_width'>notification_max_width</a></td><td>The maximum notification width</td></tr>
   <tr><td><a href='../popups_and_bars/naughty.layout.box.html#beautiful.notification_position'>notification_position</a></td><td>The maximum notification position</td></tr>
-  <tr><td><a href='../popups_and_bars/naughty.layout.box.html#beautiful.bg_normal'>bg_normal</a></td><td>The default background color</td></tr>
-  <tr><td><a href='../popups_and_bars/naughty.layout.box.html#beautiful.fg_normal'>fg_normal</a></td><td>The default foreground (text) color</td></tr>
   <tr><td><a href='../widgets/naughty.list.actions.html#beautiful.notification_action_underline_normal'>notification_action_underline_normal</a></td><td>Whether or not to underline the action name</td></tr>
   <tr><td><a href='../widgets/naughty.list.actions.html#beautiful.notification_action_underline_selected'>notification_action_underline_selected</a></td><td>Whether or not to underline the selected action name</td></tr>
   <tr><td><a href='../widgets/naughty.list.actions.html#beautiful.notification_action_icon_only'>notification_action_icon_only</a></td><td>Whether or not the action label should be shown</td></tr>
@@ -570,13 +574,12 @@
   <tr><td><a href='../widget_containers/wibox.container.radialprogressbar.html#beautiful.radialprogressbar_color'>radialprogressbar_color</a></td><td>The progressbar foreground color</td></tr>
   <tr><td><a href='../widget_containers/wibox.container.radialprogressbar.html#beautiful.radialprogressbar_border_width'>radialprogressbar_border_width</a></td><td>The progressbar border width</td></tr>
   <tr><td><a href='../widget_containers/wibox.container.radialprogressbar.html#beautiful.radialprogressbar_paddings'>radialprogressbar_paddings</a></td><td>The padding between the outline and the progressbar</td></tr>
-  <tr><td><a href='../popups_and_bars/wibox.html#beautiful.bg_normal'>bg_normal</a></td><td>The default background color</td></tr>
-  <tr><td><a href='../popups_and_bars/wibox.html#beautiful.fg_normal'>fg_normal</a></td><td>The default foreground (text) color</td></tr>
   <tr><td><a href='../widgets/wibox.widget.calendar.html#beautiful.calendar_font'>calendar_font</a></td><td>The calendar font</td></tr>
   <tr><td><a href='../widgets/wibox.widget.calendar.html#beautiful.calendar_spacing'>calendar_spacing</a></td><td>The calendar spacing</td></tr>
   <tr><td><a href='../widgets/wibox.widget.calendar.html#beautiful.calendar_week_numbers'>calendar_week_numbers</a></td><td>Display the calendar week numbers</td></tr>
   <tr><td><a href='../widgets/wibox.widget.calendar.html#beautiful.calendar_start_sunday'>calendar_start_sunday</a></td><td>Start the week on Sunday</td></tr>
   <tr><td><a href='../widgets/wibox.widget.calendar.html#beautiful.calendar_long_weekdays'>calendar_long_weekdays</a></td><td>Format the weekdays with three characters instead of two</td></tr>
+  <tr><td><a href='../widgets/wibox.widget.calendar.html#beautiful.flex_height'>flex_height</a></td><td>Allow cells to have flexible height</td></tr>
   <tr><td><a href='../widgets/wibox.widget.checkbox.html#beautiful.checkbox_border_width'>checkbox_border_width</a></td><td>The outer (unchecked area) border width</td></tr>
   <tr><td><a href='../widgets/wibox.widget.checkbox.html#beautiful.checkbox_bg'>checkbox_bg</a></td><td>The outer (unchecked area) background color, pattern or gradient</td></tr>
   <tr><td><a href='../widgets/wibox.widget.checkbox.html#beautiful.checkbox_border_color'>checkbox_border_color</a></td><td>The outer (unchecked area) border color</td></tr>
@@ -587,8 +590,8 @@
   <tr><td><a href='../widgets/wibox.widget.checkbox.html#beautiful.checkbox_check_shape'>checkbox_check_shape</a></td><td>The checked part shape</td></tr>
   <tr><td><a href='../widgets/wibox.widget.checkbox.html#beautiful.checkbox_paddings'>checkbox_paddings</a></td><td>The padding between the outline and the progressbar</td></tr>
   <tr><td><a href='../widgets/wibox.widget.checkbox.html#beautiful.checkbox_color'>checkbox_color</a></td><td>The checkbox color</td></tr>
-  <tr><td><a href='../widgets/wibox.widget.graph.html#beautiful.graph_bg'>graph_bg</a></td><td>The graph background color</td></tr>
   <tr><td><a href='../widgets/wibox.widget.graph.html#beautiful.graph_fg'>graph_fg</a></td><td>The graph foreground color</td></tr>
+  <tr><td><a href='../widgets/wibox.widget.graph.html#beautiful.graph_bg'>graph_bg</a></td><td>The graph background color</td></tr>
   <tr><td><a href='../widgets/wibox.widget.graph.html#beautiful.graph_border_color'>graph_border_color</a></td><td>The graph border color</td></tr>
   <tr><td><a href='../widgets/wibox.widget.piechart.html#beautiful.piechart_border_color'>piechart_border_color</a></td><td>The border color</td></tr>
   <tr><td><a href='../widgets/wibox.widget.piechart.html#beautiful.piechart_border_width'>piechart_border_width</a></td><td>The pie elements border width</td></tr>
@@ -622,9 +625,8 @@
   <tr><td><a href='../widgets/wibox.widget.slider.html#beautiful.slider_handle_margins'>slider_handle_margins</a></td><td>The slider handle margins</td></tr>
   <tr><td><a href='../widgets/wibox.widget.slider.html#beautiful.slider_bar_color'>slider_bar_color</a></td><td>The bar (background) color</td></tr>
   <tr><td><a href='../widgets/wibox.widget.slider.html#beautiful.slider_bar_active_color'>slider_bar_active_color</a></td><td>The bar (active) color</td></tr>
-  <tr><td><a href='../widgets/wibox.widget.systray.html#beautiful.bg_systray'>bg_systray</a></td><td>The systray background color</td></tr>
+  <tr><td><a href='../widgets/wibox.widget.systray.html#beautiful.systray_max_rows'>systray_max_rows</a></td><td>The maximum number of rows for systray icons</td></tr>
   <tr><td><a href='../widgets/wibox.widget.systray.html#beautiful.systray_icon_spacing'>systray_icon_spacing</a></td><td>The systray icon spacing</td></tr>
-  <tr><td><a href='../widgets/wibox.widget.textbox.html#beautiful.font'>font</a></td><td>The textbox font</td></tr>
   <tr><td><a href='../core_components/client.html#beautiful.border_color_marked'>border_color_marked</a></td><td>The border color when the client is marked</td></tr>
   <tr><td><a href='../core_components/client.html#beautiful.border_color_floating'>border_color_floating</a></td><td>The fallback border color when the client is floating</td></tr>
   <tr><td><a href='../core_components/client.html#beautiful.border_color_maximized'>border_color_maximized</a></td><td>The fallback border color when the client is maximized</td></tr>
@@ -645,7 +647,6 @@
   <tr><td><a href='../core_components/client.html#beautiful.border_color_fullscreen_normal'>border_color_fullscreen_normal</a></td><td>The border color when the (fullscreen) client is not active</td></tr>
   <tr><td><a href='../core_components/client.html#beautiful.border_color_fullscreen_urgent'>border_color_fullscreen_urgent</a></td><td>The border color when the (fullscreen) client has the urgent property set</td></tr>
   <tr><td><a href='../core_components/client.html#beautiful.border_color_fullscreen_new'>border_color_fullscreen_new</a></td><td>The border color when the (fullscreen) client is not active and new</td></tr>
-  <tr><td><a href='../core_components/client.html#beautiful.border_width'>border_width</a></td><td>The fallback border width when nothing else is set</td></tr>
   <tr><td><a href='../core_components/client.html#beautiful.border_width_floating'>border_width_floating</a></td><td>The fallback border width when the client is floating</td></tr>
   <tr><td><a href='../core_components/client.html#beautiful.border_width_maximized'>border_width_maximized</a></td><td>The fallback border width when the client is maximized</td></tr>
   <tr><td><a href='../core_components/client.html#beautiful.border_width_normal'>border_width_normal</a></td><td>The client border width for the normal clients</td></tr>
@@ -694,28 +695,17 @@
 </span><span class="comment">-- theme.bg_normal = nil
 </span><span class="comment">-- theme.fg_normal = nil
 </span><span class="comment">-- theme.useless_gap = nil
-</span><span class="comment">-- theme.bg_normal = nil
-</span><span class="comment">-- theme.fg_normal = nil
 </span><span class="comment">-- theme.font = nil
-</span><span class="comment">-- theme.bg_normal = nil
 </span><span class="comment">-- theme.bg_focus = nil
 </span><span class="comment">-- theme.bg_urgent = nil
 </span><span class="comment">-- theme.bg_minimize = nil
 </span><span class="comment">-- theme.bg_systray = nil
-</span><span class="comment">-- theme.fg_normal = nil
 </span><span class="comment">-- theme.fg_focus = nil
 </span><span class="comment">-- theme.fg_urgent = nil
 </span><span class="comment">-- theme.fg_minimize = nil
-</span><span class="comment">-- theme.useless_gap = nil
 </span><span class="comment">-- theme.border_width = nil
 </span><span class="comment">-- theme.border_color = nil
 </span><span class="comment">-- theme.wallpaper = nil
-</span><span class="comment">-- theme.bg_normal = nil
-</span><span class="comment">-- theme.fg_normal = nil
-</span><span class="comment">-- theme.bg_normal = nil
-</span><span class="comment">-- theme.fg_normal = nil
-</span><span class="comment">-- theme.bg_systray = nil
-</span><span class="comment">-- theme.font = nil
 </span><span class="comment">-- theme.border_color_marked = nil
 </span><span class="comment">-- theme.border_color_floating = nil
 </span><span class="comment">-- theme.border_color_maximized = nil
@@ -736,7 +726,6 @@
 </span><span class="comment">-- theme.border_color_fullscreen_normal = nil
 </span><span class="comment">-- theme.border_color_fullscreen_urgent = nil
 </span><span class="comment">-- theme.border_color_fullscreen_new = nil
-</span><span class="comment">-- theme.border_width = nil
 </span><span class="comment">-- theme.border_width_floating = nil
 </span><span class="comment">-- theme.border_width_maximized = nil
 </span><span class="comment">-- theme.border_width_normal = nil
@@ -796,6 +785,9 @@
 <span class="comment">-- enable
 </span><span class="comment">-- theme.enable_spawn_cursor = nil
 </span>
+<span class="comment">-- flex
+</span><span class="comment">-- theme.flex_height = nil
+</span>
 <span class="comment">-- fullscreen
 </span><span class="comment">-- theme.fullscreen_hide_border = nil
 </span>
@@ -803,8 +795,8 @@
 </span><span class="comment">-- theme.gap_single_client = nil
 </span>
 <span class="comment">-- graph
-</span><span class="comment">-- theme.graph_bg = nil
 </span><span class="comment">-- theme.graph_fg = nil
+</span><span class="comment">-- theme.graph_bg = nil
 </span><span class="comment">-- theme.graph_border_color = nil
 </span>
 <span class="comment">-- hotkeys
@@ -888,6 +880,7 @@
 </span><span class="comment">-- theme.menubar_border_color = nil
 </span><span class="comment">-- theme.menubar_fg_focus = nil
 </span><span class="comment">-- theme.menubar_bg_focus = nil
+</span><span class="comment">-- theme.menubar_font = nil
 </span>
 <span class="comment">-- notification
 </span><span class="comment">-- theme.notification_max_width = nil
@@ -1017,6 +1010,7 @@
 </span><span class="comment">-- theme.snapper_gap = nil
 </span>
 <span class="comment">-- systray
+</span><span class="comment">-- theme.systray_max_rows = nil
 </span><span class="comment">-- theme.systray_icon_spacing = nil
 </span>
 <span class="comment">-- taglist
@@ -1078,6 +1072,7 @@
 </span><span class="comment">-- theme.tasklist_maximized = nil
 </span><span class="comment">-- theme.tasklist_maximized_horizontal = nil
 </span><span class="comment">-- theme.tasklist_maximized_vertical = nil
+</span><span class="comment">-- theme.tasklist_minimized = nil
 </span><span class="comment">-- theme.tasklist_font = nil
 </span><span class="comment">-- theme.tasklist_align = nil
 </span><span class="comment">-- theme.tasklist_font_focus = nil
@@ -1107,6 +1102,9 @@
 </span><span class="comment">-- theme.titlebar_fg_focus = nil
 </span><span class="comment">-- theme.titlebar_bg_focus = nil
 </span><span class="comment">-- theme.titlebar_bgimage_focus = nil
+</span><span class="comment">-- theme.titlebar_fg_urgent = nil
+</span><span class="comment">-- theme.titlebar_bg_urgent = nil
+</span><span class="comment">-- theme.titlebar_bgimage_urgent = nil
 </span><span class="comment">-- theme.titlebar_floating_button_normal = nil
 </span><span class="comment">-- theme.titlebar_maximized_button_normal = nil
 </span><span class="comment">-- theme.titlebar_minimize_button_normal = nil
@@ -1187,8 +1185,13 @@
 </span><span class="comment">-- theme.tooltip_shape = nil
 </span><span class="comment">-- theme.tooltip_align = nil
 </span>
+<span class="comment">-- wallpaper
+</span><span class="comment">-- theme.wallpaper_bg = nil
+</span><span class="comment">-- theme.wallpaper_fg = nil
+</span>
 <span class="comment">-- wibar
 </span><span class="comment">-- theme.wibar_stretch = nil
+</span><span class="comment">-- theme.wibar_favor_vertical = nil
 </span><span class="comment">-- theme.wibar_border_width = nil
 </span><span class="comment">-- theme.wibar_border_color = nil
 </span><span class="comment">-- theme.wibar_ontop = nil
@@ -1201,6 +1204,8 @@
 </span><span class="comment">-- theme.wibar_bgimage = nil
 </span><span class="comment">-- theme.wibar_fg = nil
 </span><span class="comment">-- theme.wibar_shape = nil
+</span><span class="comment">-- theme.wibar_margins = nil
+</span><span class="comment">-- theme.wibar_align = nil
 </span>
 <span class="keyword">return</span> theme
 
@@ -1213,7 +1218,6 @@
 </div> <!-- id="main" -->
 <div id="about">
 <i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.6</a></i>
-<i style="float:right;">Last updated 2021-05-01 17:20:18 </i>
 </div> <!-- id="about" -->
 </div> <!-- id="container" -->
 </body>

@@ -157,6 +157,7 @@
   <li><a href="../popups_and_bars/awful.popup.html">awful.popup</a></li>
   <li><a href="../popups_and_bars/awful.titlebar.html">awful.titlebar</a></li>
   <li><a href="../popups_and_bars/awful.tooltip.html">awful.tooltip</a></li>
+  <li><a href="../popups_and_bars/awful.wallpaper.html">awful.wallpaper</a></li>
   <li><a href="../popups_and_bars/awful.wibar.html">awful.wibar</a></li>
   <li><a href="../popups_and_bars/awful.widget.calendar_popup.html">awful.widget.calendar_popup</a></li>
   <li><a href="../popups_and_bars/menubar.html">menubar</a></li>
@@ -237,8 +238,15 @@
   <div class="extra-header__section">
     <h3>Info:</h3>
     <ul>
-            <li><strong>Copyright</strong>: 2012 Uli Schlachter</li>
-            <li><strong>Author</strong>: Uli Schlachter</li>
+                <li><strong>Copyright</strong>: 2012 Uli Schlachter</li>
+                <li>
+                    <strong>Originally authored by</strong>: Uli Schlachter<br />
+                    <small>(Full contributors list available on
+                    <a href="https://github.com/awesomeWM/awesome/graphs/contributors">
+                        our github project)
+                    </a></small>
+
+                </li>
     </ul>
   </div>
 
@@ -252,57 +260,73 @@
         <a href="#load_uncached_silently"><span class='function_modname'>gears.surface.</span>load_uncached_silently <span class='function_args'> <b>(</b>_surface, default<b>)</b></span></a>
         <span class="summarytype"><span class='summary_type'> -&gt;&nbsp;()</span></span>
       </td>
-      <td colspan="2" class="summary">Try to convert the argument into an lgi cairo surface.</td>
+      <td colspan="2" class="summary">
+        Try to convert the argument into an lgi cairo surface.
+      </td>
     </tr>
     <tr>
       <td class="name" >
         <a href="#load_silently"><span class='function_modname'>gears.surface.</span>load_silently <span class='function_args'> <b>(</b>_surface, default<b>)</b></span></a>
         <span class="summarytype"><span class='summary_type'> -&gt;&nbsp;()</span></span>
       </td>
-      <td colspan="2" class="summary">Try to convert the argument into an lgi cairo surface.</td>
+      <td colspan="2" class="summary">
+        Try to convert the argument into an lgi cairo surface.
+      </td>
     </tr>
     <tr>
       <td class="name" >
         <a href="#load_uncached"><span class='function_modname'>gears.surface.</span>load_uncached <span class='function_args'> <b>(</b>_surface<b>)</b></span></a>
         <span class="summarytype"><span class='summary_type'> -&gt;&nbsp;()</span></span>
       </td>
-      <td colspan="2" class="summary">Try to convert the argument into an lgi cairo surface.</td>
+      <td colspan="2" class="summary">
+        Try to convert the argument into an lgi cairo surface.
+      </td>
     </tr>
     <tr>
       <td class="name" >
         <a href="#gears.surface">gears.surface <span class='function_args'> <b>(</b>_surface<b>)</b></span></a>
         <span class="summarytype"><span class='summary_type'> -&gt;&nbsp;()</span></span>
       </td>
-      <td colspan="2" class="summary">Try to convert the argument into an lgi cairo surface.</td>
+      <td colspan="2" class="summary">
+        Try to convert the argument into an lgi cairo surface.
+      </td>
     </tr>
     <tr>
       <td class="name" >
         <a href="#get_size"><span class='function_modname'>gears.surface.</span>get_size <span class='function_args'> <b>(</b>surf<b>)</b></span></a>
         <span class="summarytype"><span class='summary_type'> -&gt;&nbsp;()</span></span>
       </td>
-      <td colspan="2" class="summary">Get the size of a cairo surface</td>
+      <td colspan="2" class="summary">
+        Get the size of a cairo surface
+      </td>
     </tr>
     <tr>
       <td class="name" >
         <a href="#duplicate_surface"><span class='function_modname'>gears.surface.</span>duplicate_surface <span class='function_args'> <b>(</b>s<b>)</b></span></a>
         <span class="summarytype"><span class='summary_type'> -&gt;&nbsp;()</span></span>
       </td>
-      <td colspan="2" class="summary">Create a copy of a cairo surface.</td>
+      <td colspan="2" class="summary">
+        Create a copy of a cairo surface.
+      </td>
     </tr>
     <tr>
       <td class="name" >
         <a href="#load_from_shape"><span class='function_modname'>gears.surface.</span>load_from_shape <span class='function_args'> <b>(</b>width, height, shape[, shape_color=white[, bg_color=transparent]]<b>)</b></span></a>
         <span class="summarytype"><span class='summary_type'> -&gt;&nbsp;cairo.surface</span></span>
       </td>
-      <td colspan="2" class="summary">Create a surface from a <a href="../theme_related_libraries/gears.shape.html#">gears.shape</a>
- Any additional parameters will be passed to the shape function</td>
+      <td colspan="2" class="summary">
+        Create a surface from a <a href="../theme_related_libraries/gears.shape.html#">gears.shape</a>
+ Any additional parameters will be passed to the shape function
+      </td>
     </tr>
     <tr>
       <td class="name" >
         <a href="#apply_shape_bounding"><span class='function_modname'>gears.surface.</span>apply_shape_bounding <span class='function_args'> <b>(</b>draw, shape[, Any]<b>)</b></span></a>
         <span class="summarytype"></span>
       </td>
-      <td colspan="2" class="summary">Apply a shape to a client or a wibox.</td>
+      <td colspan="2" class="summary">
+        Apply a shape to a client or a wibox.
+      </td>
     </tr>
 </table>
 <h2><a href="#Deprecated_functions">Deprecated functions</a></h2>
@@ -311,13 +335,17 @@
       <td class="name" >
         <a href="#draw_to_svg_file">gears.surface.draw_to_svg_file<i class="deprecated_label"> [deprecated]</i></a>
       </td>
-      <td colspan="2" class="summary">Create an SVG file with this widget content.</td>
+      <td colspan="2" class="summary">
+        Create an SVG file with this widget content.
+      </td>
     </tr>
     <tr>
       <td class="name" >
         <a href="#draw_to_image_surface">gears.surface.draw_to_image_surface<i class="deprecated_label"> [deprecated]</i></a>
       </td>
-      <td colspan="2" class="summary">Create a cairo surface with this widget content.</td>
+      <td colspan="2" class="summary">
+        Create a cairo surface with this widget content.
+      </td>
     </tr>
 </table>
 
@@ -362,7 +390,7 @@
 
 
 
-    <span id=item2384 class="hide_extra">
+    <span id=item2423 class="hide_extra">
     </span>
 
 </dd>
@@ -402,7 +430,7 @@
 
 
 
-    <span id=item2385 class="hide_extra">
+    <span id=item2424 class="hide_extra">
     </span>
 
 </dd>
@@ -435,7 +463,7 @@
 
 
 
-    <span id=item2386 class="hide_extra">
+    <span id=item2425 class="hide_extra">
     </span>
 
 </dd>
@@ -468,7 +496,7 @@
 
 
 
-    <span id=item2387 class="hide_extra">
+    <span id=item2426 class="hide_extra">
     </span>
 
 </dd>
@@ -499,7 +527,7 @@
 
 
 
-    <span id=item2388 class="hide_extra">
+    <span id=item2427 class="hide_extra">
     </span>
 
 </dd>
@@ -537,7 +565,7 @@
 
 
 
-    <span id=item2389 class="hide_extra">
+    <span id=item2428 class="hide_extra">
     </span>
 
 </dd>
@@ -567,11 +595,11 @@
         </li>
         <li><span class="parameter">shape_color</span>
          The shape color or pattern
-         (<em>default</em> white)
+         (<em>default</em> <code>white</code>)
         </li>
         <li><span class="parameter">bg_color</span>
          The surface background color
-         (<em>default</em> transparent)
+         (<em>default</em> <code>transparent</code>)
         </li>
     </ul>
 
@@ -586,7 +614,7 @@
 
 
 
-    <span id=item2390 class="hide_extra">
+    <span id=item2429 class="hide_extra">
     </span>
 
 </dd>
@@ -623,7 +651,7 @@
 
 
 
-    <span id=item2391 class="hide_extra">
+    <span id=item2430 class="hide_extra">
     </span>
 
 </dd>
@@ -649,7 +677,7 @@
          A widget
         </li>
         <li><span class="parameter">path</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          The output file path
         </li>
         <li><span class="parameter">width</span>
@@ -679,7 +707,7 @@
 
 
 
-    <span id=item2392 class="hide_extra">
+    <span id=item2431 class="hide_extra">
     </span>
 
 </dd>
@@ -710,7 +738,7 @@
         </li>
         <li><span class="parameter">format</span>
          The surface format
-         (<em>default</em> cairo.Format.ARGB32)
+         (<em>default</em> <code>cairo.Format.ARGB32</code>)
         </li>
     </ul>
 
@@ -731,7 +759,7 @@
 
 
 
-    <span id=item2393 class="hide_extra">
+    <span id=item2432 class="hide_extra">
     </span>
 
 </dd>
@@ -742,7 +770,6 @@
 </div> <!-- id="main" -->
 <div id="about">
 <i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.6</a></i>
-<i style="float:right;">Last updated 2021-05-01 17:20:18 </i>
 </div> <!-- id="about" -->
 </div> <!-- id="container" -->
 </body>

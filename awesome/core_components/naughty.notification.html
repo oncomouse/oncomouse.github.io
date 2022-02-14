@@ -141,6 +141,7 @@
   <li><a href="../popups_and_bars/awful.popup.html">awful.popup</a></li>
   <li><a href="../popups_and_bars/awful.titlebar.html">awful.titlebar</a></li>
   <li><a href="../popups_and_bars/awful.tooltip.html">awful.tooltip</a></li>
+  <li><a href="../popups_and_bars/awful.wallpaper.html">awful.wallpaper</a></li>
   <li><a href="../popups_and_bars/awful.wibar.html">awful.wibar</a></li>
   <li><a href="../popups_and_bars/awful.widget.calendar_popup.html">awful.widget.calendar_popup</a></li>
   <li><a href="../popups_and_bars/menubar.html">menubar</a></li>
@@ -246,8 +247,15 @@
   <div class="extra-header__section">
     <h3>Info:</h3>
     <ul>
-            <li><strong>Copyright</strong>: 2008 koniu,2017 Emmanuel Lepage Vallee</li>
-            <li><strong>Author</strong>: Emmanuel Lepage Vallee</li>
+                <li><strong>Copyright</strong>: 2008 koniu,2017 Emmanuel Lepage Vallee</li>
+                <li>
+                    <strong>Originally authored by</strong>: Emmanuel Lepage Vallee<br />
+                    <small>(Full contributors list available on
+                    <a href="https://github.com/awesomeWM/awesome/graphs/contributors">
+                        our github project)
+                    </a></small>
+
+                </li>
     </ul>
   </div>
 
@@ -260,7 +268,9 @@
       <td class="name" >
         <a href="#naughty.notification">naughty.notification <span class='function_args'> <b>(</b>args[, opt=""]<b>)</b></span></a>
       </td>
-      <td colspan="2" class="summary">Create a notification.</td>
+      <td colspan="2" class="summary">
+        Create a notification.
+      </td>
     </tr>
 </table>
 <h2><a href="#Object_properties">Object properties</a></h2>
@@ -268,177 +278,247 @@
     <tr>
       <td class="shortname" ><a href="#title">title</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>string</span></td>
-      <td colspan="2" class="summary">Title of the notification.</td>
+      <td colspan="2" class="summary">
+        Title of the notification.
+      </td>
     </tr>
     <tr>
       <td class="shortname" ><a href="#timeout">timeout</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>number</span></td>
-      <td colspan="2" class="summary">Time in seconds after which popup expires.</td>
+      <td colspan="2" class="summary">
+        Time in seconds after which popup expires.
+      </td>
     </tr>
     <tr>
       <td class="shortname" ><a href="#urgency">urgency</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>string</span></td>
-      <td colspan="2" class="summary">The notification urgency level.</td>
+      <td colspan="2" class="summary">
+        The notification urgency level.
+      </td>
     </tr>
     <tr>
       <td class="shortname" ><a href="#category">category</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>string <i>or</i> nil</span></td>
-      <td colspan="2" class="summary">The notification category.</td>
+      <td colspan="2" class="summary">
+        The notification category.
+      </td>
     </tr>
     <tr>
       <td class="shortname" ><a href="#resident">resident</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>boolean</span></td>
-      <td colspan="2" class="summary">True if the notification should be kept when an action is pressed.</td>
+      <td colspan="2" class="summary">
+        True if the notification should be kept when an action is pressed.
+      </td>
     </tr>
     <tr>
       <td class="shortname" ><a href="#hover_timeout">hover_timeout</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>number</span></td>
-      <td colspan="2" class="summary">Delay in seconds after which hovered popup disappears.</td>
+      <td colspan="2" class="summary">
+        Delay in seconds after which hovered popup disappears.
+      </td>
     </tr>
     <tr>
       <td class="shortname" ><a href="#screen">screen</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>screen</span></td>
-      <td colspan="2" class="summary">Target screen for the notification.</td>
+      <td colspan="2" class="summary">
+        Target screen for the notification.
+      </td>
     </tr>
     <tr>
       <td class="shortname" ><a href="#position">position</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>string</span></td>
-      <td colspan="2" class="summary">Corner of the workarea displaying the popups.</td>
+      <td colspan="2" class="summary">
+        Corner of the workarea displaying the popups.
+      </td>
     </tr>
     <tr>
       <td class="shortname" ><a href="#ontop">ontop</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>boolean</span></td>
-      <td colspan="2" class="summary">Boolean forcing popups to display on top.</td>
+      <td colspan="2" class="summary">
+        Boolean forcing popups to display on top.
+      </td>
     </tr>
     <tr>
       <td class="shortname" ><a href="#height">height</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>number</span></td>
-      <td colspan="2" class="summary">Popup height.</td>
+      <td colspan="2" class="summary">
+        Popup height.
+      </td>
     </tr>
     <tr>
       <td class="shortname" ><a href="#width">width</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>number</span></td>
-      <td colspan="2" class="summary">Popup width.</td>
+      <td colspan="2" class="summary">
+        Popup width.
+      </td>
     </tr>
     <tr>
       <td class="shortname" ><a href="#font">font</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>string</span></td>
-      <td colspan="2" class="summary">Notification font.</td>
+      <td colspan="2" class="summary">
+        Notification font.
+      </td>
     </tr>
     <tr>
       <td class="shortname" ><a href="#icon">icon</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>string <i>or</i> surface</span></td>
-      <td colspan="2" class="summary">"All in one" way to access the default image or icon.</td>
+      <td colspan="2" class="summary">
+        "All in one" way to access the default image or icon.
+      </td>
     </tr>
     <tr>
       <td class="shortname" ><a href="#icon_size">icon_size</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>number</span></td>
-      <td colspan="2" class="summary">Desired icon size in px.</td>
+      <td colspan="2" class="summary">
+        Desired icon size in px.
+      </td>
     </tr>
     <tr>
       <td class="shortname" ><a href="#app_icon">app_icon</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>string</span></td>
-      <td colspan="2" class="summary">The icon provided in the <a href="../core_components/naughty.notification.html#app_icon">app_icon</a> field of the DBus notification.</td>
+      <td colspan="2" class="summary">
+        The icon provided in the <a href="../core_components/naughty.notification.html#app_icon">app_icon</a> field of the DBus notification.
+      </td>
     </tr>
     <tr>
       <td class="shortname" ><a href="#image">image</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>string <i>or</i> surface</span></td>
-      <td colspan="2" class="summary">The notification image.</td>
+      <td colspan="2" class="summary">
+        The notification image.
+      </td>
     </tr>
     <tr>
       <td class="shortname" ><a href="#images">images</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>nil <i>or</i> table</span></td>
-      <td colspan="2" class="summary">The notification (animated) images.</td>
+      <td colspan="2" class="summary">
+        The notification (animated) images.
+      </td>
     </tr>
     <tr>
       <td class="shortname" ><a href="#fg">fg</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>string <i>or</i> color <i>or</i> pattern</span></td>
-      <td colspan="2" class="summary">Foreground color.</td>
+      <td colspan="2" class="summary">
+        Foreground color.
+      </td>
     </tr>
     <tr>
       <td class="shortname" ><a href="#bg">bg</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>string <i>or</i> color <i>or</i> pattern</span></td>
-      <td colspan="2" class="summary">Background color.</td>
+      <td colspan="2" class="summary">
+        Background color.
+      </td>
     </tr>
     <tr>
       <td class="shortname" ><a href="#border_width">border_width</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>number</span></td>
-      <td colspan="2" class="summary">Border width.</td>
+      <td colspan="2" class="summary">
+        Border width.
+      </td>
     </tr>
     <tr>
       <td class="shortname" ><a href="#border_color">border_color</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>string</span></td>
-      <td colspan="2" class="summary">Border color.</td>
+      <td colspan="2" class="summary">
+        Border color.
+      </td>
     </tr>
     <tr>
       <td class="shortname" ><a href="#shape">shape</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>gears.shape</span></td>
-      <td colspan="2" class="summary">Widget shape.</td>
+      <td colspan="2" class="summary">
+        Widget shape.
+      </td>
     </tr>
     <tr>
       <td class="shortname" ><a href="#opacity">opacity</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>number</span></td>
-      <td colspan="2" class="summary">Widget opacity.</td>
+      <td colspan="2" class="summary">
+        Widget opacity.
+      </td>
     </tr>
     <tr>
       <td class="shortname" ><a href="#margin">margin</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>number <i>or</i> table</span></td>
-      <td colspan="2" class="summary">Widget margin.</td>
+      <td colspan="2" class="summary">
+        Widget margin.
+      </td>
     </tr>
     <tr>
       <td class="shortname" ><a href="#preset">preset</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>table</span></td>
-      <td colspan="2" class="summary">Table with any of the above parameters.</td>
+      <td colspan="2" class="summary">
+        Table with any of the above parameters.
+      </td>
     </tr>
     <tr>
       <td class="shortname" ><a href="#callback">callback</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>function</span></td>
-      <td colspan="2" class="summary">Function that will be called with all arguments.</td>
+      <td colspan="2" class="summary">
+        Function that will be called with all arguments.
+      </td>
     </tr>
     <tr>
       <td class="shortname" ><a href="#actions">actions</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>table</span></td>
-      <td colspan="2" class="summary">A table containing strings that represents actions to buttons.</td>
+      <td colspan="2" class="summary">
+        A table containing strings that represents actions to buttons.
+      </td>
     </tr>
     <tr>
       <td class="shortname" ><a href="#ignore">ignore</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>boolean</span></td>
-      <td colspan="2" class="summary">Ignore this notification, do not display.</td>
+      <td colspan="2" class="summary">
+        Ignore this notification, do not display.
+      </td>
     </tr>
     <tr>
       <td class="shortname" ><a href="#suspended">suspended</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>boolean</span></td>
-      <td colspan="2" class="summary">Tell if the notification is currently suspended (read only).</td>
+      <td colspan="2" class="summary">
+        Tell if the notification is currently suspended (read only).
+      </td>
     </tr>
     <tr>
       <td class="shortname" ><a href="#is_expired">is_expired</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>boolean</span></td>
-      <td colspan="2" class="summary">If the notification is expired.</td>
+      <td colspan="2" class="summary">
+        If the notification is expired.
+      </td>
     </tr>
     <tr>
       <td class="shortname" ><a href="#auto_reset_timeout">auto_reset_timeout</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>boolean</span></td>
-      <td colspan="2" class="summary">If the timeout needs to be reset when a property changes.</td>
+      <td colspan="2" class="summary">
+        If the timeout needs to be reset when a property changes.
+      </td>
     </tr>
     <tr>
       <td class="shortname" ><a href="#clients">clients</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>table</span></td>
-      <td colspan="2" class="summary">A list of clients associated with this notification.</td>
+      <td colspan="2" class="summary">
+        A list of clients associated with this notification.
+      </td>
     </tr>
     <tr>
       <td class="shortname" ><a href="#max_width">max_width</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>number</span></td>
-      <td colspan="2" class="summary">The maximum popup width.</td>
+      <td colspan="2" class="summary">
+        The maximum popup width.
+      </td>
     </tr>
     <tr>
       <td class="shortname" ><a href="#app_name">app_name</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>string</span></td>
-      <td colspan="2" class="summary">The application name specified by the notification.</td>
+      <td colspan="2" class="summary">
+        The application name specified by the notification.
+      </td>
     </tr>
     <tr>
       <td class="shortname" ><a href="#widget_template">widget_template</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>table</span></td>
-      <td colspan="2" class="summary">The widget template used to represent the notification.</td>
+      <td colspan="2" class="summary">
+        The widget template used to represent the notification.
+      </td>
     </tr>
 </table>
 <h2><a href="#Deprecated_object_properties">Deprecated object properties</a></h2>
@@ -446,17 +526,23 @@
     <tr>
       <td class="shortname" ><a href="#text">text</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>string</span></td>
-      <td colspan="2" class="summary">Text of the notification.</td>
+      <td colspan="2" class="summary">
+        Text of the notification.
+      </td>
     </tr>
     <tr>
       <td class="shortname" ><a href="#run">run</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>function</span></td>
-      <td colspan="2" class="summary">Function to run on left click.</td>
+      <td colspan="2" class="summary">
+        Function to run on left click.
+      </td>
     </tr>
     <tr>
       <td class="shortname" ><a href="#destroy">destroy</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>function</span></td>
-      <td colspan="2" class="summary">Function to run when notification is destroyed.</td>
+      <td colspan="2" class="summary">
+        Function to run when notification is destroyed.
+      </td>
     </tr>
 </table>
 <h2><a href="#Object_methods">Object methods </a></h2>
@@ -466,42 +552,54 @@
         <a href="#destroy">:destroy <span class='function_args'> <b>(</b>reason[, keep_visible=false]<b>)</b></span></a>
         <span class="summarytype"><span class='summary_type'> -&gt;&nbsp;boolean</span></span>
       </td>
-      <td colspan="2" class="summary">Destroy notification by notification object.</td>
+      <td colspan="2" class="summary">
+        Destroy notification by notification object.
+      </td>
     </tr>
     <tr>
       <td class="name" >
         <a href="#reset_timeout">:reset_timeout <span class='function_args'> <b>(</b>new_timeout<b>)</b></span></a>
         <span class="summarytype"></span>
       </td>
-      <td colspan="2" class="summary">Set new notification timeout.</td>
+      <td colspan="2" class="summary">
+        Set new notification timeout.
+      </td>
     </tr>
     <tr>
       <td class="name" >
         <a href="#append_actions">:append_actions <span class='function_args'> <b>(</b>new_actions<b>)</b></span></a>
         <span class="summarytype"></span>
       </td>
-      <td colspan="2" class="summary">Add more actions to the notification.</td>
+      <td colspan="2" class="summary">
+        Add more actions to the notification.
+      </td>
     </tr>
     <tr>
       <td class="name" >
         <a href="#grant">:grant <span class='function_args'> <b>(</b>permission, context<b>)</b></span></a>
         <span class="summarytype"></span>
       </td>
-      <td colspan="2" class="summary">Grant a permission for a notification.</td>
+      <td colspan="2" class="summary">
+        Grant a permission for a notification.
+      </td>
     </tr>
     <tr>
       <td class="name" >
         <a href="#deny">:deny <span class='function_args'> <b>(</b>permission, context<b>)</b></span></a>
         <span class="summarytype"></span>
       </td>
-      <td colspan="2" class="summary">Deny a permission for a notification</td>
+      <td colspan="2" class="summary">
+        Deny a permission for a notification
+      </td>
     </tr>
     <tr>
       <td class="name" >
         <a href="#emit_signal">:emit_signal <span class='function_args'> <b>(</b>name, ...<b>)</b></span></a>
         <span class="summarytype"></span>
       </td>
-      <td colspan="1" class="summary">Emit a signal.</td>
+      <td colspan="1" class="summary">
+        Emit a signal.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from gears.object
       </td>
@@ -511,7 +609,9 @@
         <a href="#connect_signal">:connect_signal <span class='function_args'> <b>(</b>name, func<b>)</b></span></a>
         <span class="summarytype"></span>
       </td>
-      <td colspan="1" class="summary">Connect to a signal.</td>
+      <td colspan="1" class="summary">
+        Connect to a signal.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from gears.object
       </td>
@@ -521,7 +621,9 @@
         <a href="#weak_connect_signal">:weak_connect_signal <span class='function_args'> <b>(</b>name, func<b>)</b></span></a>
         <span class="summarytype"></span>
       </td>
-      <td colspan="1" class="summary">Connect to a signal weakly.</td>
+      <td colspan="1" class="summary">
+        Connect to a signal weakly.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from gears.object
       </td>
@@ -533,7 +635,9 @@
       <td class="name" >
         <a href="#destroyed">destroyed</a>
       </td>
-      <td colspan="2" class="summary">Emitted when the notification is destroyed.</td>
+      <td colspan="2" class="summary">
+        Emitted when the notification is destroyed.
+      </td>
     </tr>
 </table>
 <h2><a href="#Theme_variables">Theme variables</a></h2>
@@ -541,57 +645,79 @@
     <tr>
       <td class="shortname" ><a href="#beautiful.notification_font">beautiful.notification_font</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>string <i>or</i> lgi.Pango.FontDescription</span></td>
-      <td colspan="2" class="summary">Notifications font.</td>
+      <td colspan="2" class="summary">
+        Notifications font.
+      </td>
     </tr>
     <tr>
       <td class="shortname" ><a href="#beautiful.notification_bg">beautiful.notification_bg</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>color</span></td>
-      <td colspan="2" class="summary">Notifications background color.</td>
+      <td colspan="2" class="summary">
+        Notifications background color.
+      </td>
     </tr>
     <tr>
       <td class="shortname" ><a href="#beautiful.notification_fg">beautiful.notification_fg</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>color</span></td>
-      <td colspan="2" class="summary">Notifications foreground color.</td>
+      <td colspan="2" class="summary">
+        Notifications foreground color.
+      </td>
     </tr>
     <tr>
       <td class="shortname" ><a href="#beautiful.notification_border_width">beautiful.notification_border_width</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>int</span></td>
-      <td colspan="2" class="summary">Notifications border width.</td>
+      <td colspan="2" class="summary">
+        Notifications border width.
+      </td>
     </tr>
     <tr>
       <td class="shortname" ><a href="#beautiful.notification_border_color">beautiful.notification_border_color</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>color</span></td>
-      <td colspan="2" class="summary">Notifications border color.</td>
+      <td colspan="2" class="summary">
+        Notifications border color.
+      </td>
     </tr>
     <tr>
       <td class="shortname" ><a href="#beautiful.notification_shape">beautiful.notification_shape</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>gears.shape</span></td>
-      <td colspan="2" class="summary">Notifications shape.</td>
+      <td colspan="2" class="summary">
+        Notifications shape.
+      </td>
     </tr>
     <tr>
       <td class="shortname" ><a href="#beautiful.notification_opacity">beautiful.notification_opacity</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>int</span></td>
-      <td colspan="2" class="summary">Notifications opacity.</td>
+      <td colspan="2" class="summary">
+        Notifications opacity.
+      </td>
     </tr>
     <tr>
       <td class="shortname" ><a href="#beautiful.notification_margin">beautiful.notification_margin</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>int</span></td>
-      <td colspan="2" class="summary">The margins inside of the notification widget (or popup).</td>
+      <td colspan="2" class="summary">
+        The margins inside of the notification widget (or popup).
+      </td>
     </tr>
     <tr>
       <td class="shortname" ><a href="#beautiful.notification_width">beautiful.notification_width</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>int</span></td>
-      <td colspan="2" class="summary">Notifications width.</td>
+      <td colspan="2" class="summary">
+        Notifications width.
+      </td>
     </tr>
     <tr>
       <td class="shortname" ><a href="#beautiful.notification_height">beautiful.notification_height</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>int</span></td>
-      <td colspan="2" class="summary">Notifications height.</td>
+      <td colspan="2" class="summary">
+        Notifications height.
+      </td>
     </tr>
     <tr>
       <td class="shortname" ><a href="#beautiful.notification_spacing">beautiful.notification_spacing</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>number</span></td>
-      <td colspan="2" class="summary">The spacing between the notifications.</td>
+      <td colspan="2" class="summary">
+        The spacing between the notifications.
+      </td>
     </tr>
 </table>
 
@@ -618,17 +744,17 @@
         <li><span class="parameter">shape</span>
             <span class="types"><span class="type">gears.shape</span></span>
          Widget shape.
-         (<em>default</em> `beautiful.notification_shape`)
+         (<em>default</em> <code>`beautiful.notification_shape`</code>)
         </li>
         <li><span class="parameter">opacity</span>
             <span class="types"><span class="type">gears.opacity</span></span>
          Widget opacity.
-         (<em>default</em> `beautiful.notification_opacity`)
+         (<em>default</em> <code>`beautiful.notification_opacity`</code>)
         </li>
         <li><span class="parameter">margin</span>
             <span class="types"><span class="type">gears.margin</span></span>
          Widget margin.
-         (<em>default</em> `beautiful.notification_margin`)
+         (<em>default</em> <code>`beautiful.notification_margin`</code>)
         </li>
         <li><span class="parameter">run</span>
             <span class="types"><span class="type">func</span></span>
@@ -645,7 +771,7 @@
          (<em>optional</em>)
         </li>
         <li><span class="parameter">preset</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          Table with any of the above parameters.
    Note: Any parameters specified directly in args will override ones defined
    in the preset.
@@ -659,7 +785,7 @@
          (<em>optional</em>)
         </li>
         <li><span class="parameter">actions</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          A list of <a href="../core_components/naughty.action.html#">naughty.action</a>s.
          (<em>optional</em>)
         </li>
@@ -667,11 +793,11 @@
             <span class="types"><span class="type">bool</span></span>
          If set to true this notification
    will be shown even if notifications are suspended via <a href="../libraries/naughty.html#suspend">naughty.suspend</a>.
-         (<em>default</em> false)
+         (<em>default</em> <code>false</code>)
         </li>
         </li></ul>
         <li><span class="parameter">opt</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
         =<a href="../core_components/naughty.notification.html#beautiful.notification_border_color">beautiful.notification_border_color</a> or
    <code>beautiful.border_color_active</code> or <code>&apos;#535d6c&apos;</code>] args.border_color Border color.
         </li>
@@ -680,7 +806,7 @@
     <h3>Returns:</h3>
     <ol>
 
-           <span class="types">optional <a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+           <span class="types">optional <a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
         The notification object, or nil in case a notification was
    not displayed.
     </ol>
@@ -693,7 +819,7 @@
     </ul>
 
 
-    <span id=item501 class="hide_extra">
+    <span id=item496 class="hide_extra">
     </span>
 
 </dd>
@@ -721,13 +847,13 @@
 
 
      <br />
-     <center id=button502>
-     <a class="show_more_button" onclick="show_extra('502')">
+     <center id=button497>
+     <a class="show_more_button" onclick="show_extra('497')">
       Click to display more
      </a>
      </center>
 
-    <span id=item502 class="hide_extra">
+    <span id=item497 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::title</code></span>  When the <a href="../core_components/naughty.notification.html#title">title</a> value changes.</li>
@@ -757,13 +883,13 @@
 
 
      <br />
-     <center id=button503>
-     <a class="show_more_button" onclick="show_extra('503')">
+     <center id=button498>
+     <a class="show_more_button" onclick="show_extra('498')">
       Click to display more
      </a>
      </center>
 
-    <span id=item503 class="hide_extra">
+    <span id=item498 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::timeout</code></span>  When the <a href="../core_components/naughty.notification.html#timeout">timeout</a> value changes.</li>
@@ -803,19 +929,19 @@
 
 
      <br />
-     <center id=button504>
-     <a class="show_more_button" onclick="show_extra('504')">
+     <center id=button499>
+     <a class="show_more_button" onclick="show_extra('499')">
       Click to display more
      </a>
      </center>
 
-    <span id=item504 class="hide_extra">
+    <span id=item499 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::urgency</code></span>  When the <a href="../core_components/naughty.notification.html#urgency">urgency</a> value changes.</li>
            <ul>
              <li><span class="parameter"><code>self</code></span> <span class="types"><a href="../core_components/naughty.notification.html#">naughty.notification</a></span> The object which changed (useful when connecting many object to the same callback).</li>
-             <li><span class="parameter"><code>new_value</code></span> <span class="types"><a href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span> The new value affected to the property.</li>
+             <li><span class="parameter"><code>new_value</code></span> <span class="types"><a href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span> The new value affected to the property.</li>
            </ul>
      </ul>
     </span>
@@ -879,13 +1005,13 @@
 
 
      <br />
-     <center id=button505>
-     <a class="show_more_button" onclick="show_extra('505')">
+     <center id=button500>
+     <a class="show_more_button" onclick="show_extra('500')">
       Click to display more
      </a>
      </center>
 
-    <span id=item505 class="hide_extra">
+    <span id=item500 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::category</code></span>  When the <a href="../core_components/naughty.notification.html#category">category</a> value changes.</li>
@@ -918,13 +1044,13 @@
 
 
      <br />
-     <center id=button506>
-     <a class="show_more_button" onclick="show_extra('506')">
+     <center id=button501>
+     <a class="show_more_button" onclick="show_extra('501')">
       Click to display more
      </a>
      </center>
 
-    <span id=item506 class="hide_extra">
+    <span id=item501 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::resident</code></span>  When the <a href="../core_components/naughty.notification.html#resident">resident</a> value changes.</li>
@@ -953,13 +1079,13 @@
 
 
      <br />
-     <center id=button507>
-     <a class="show_more_button" onclick="show_extra('507')">
+     <center id=button502>
+     <a class="show_more_button" onclick="show_extra('502')">
       Click to display more
      </a>
      </center>
 
-    <span id=item507 class="hide_extra">
+    <span id=item502 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::hover_timeout</code></span>  When the <a href="../core_components/naughty.notification.html#hover_timeout">hover_timeout</a> value changes.</li>
@@ -988,13 +1114,13 @@
 
 
      <br />
-     <center id=button508>
-     <a class="show_more_button" onclick="show_extra('508')">
+     <center id=button503>
+     <a class="show_more_button" onclick="show_extra('503')">
       Click to display more
      </a>
      </center>
 
-    <span id=item508 class="hide_extra">
+    <span id=item503 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::screen</code></span>  When the <a href="../core_components/screen.html#">screen</a> value changes.</li>
@@ -1038,13 +1164,13 @@
 
 
 <pre><code>for _, pos in ipairs {
-    'top_left'   , 'top_middle'   , 'top_right',
-    'bottom_left', 'bottom_middle', 'bottom_right',
+    "top_left"   , "top_middle"   , "top_right",
+    "bottom_left", "bottom_middle", "bottom_right",
 } do
     for i=1, 3 do
         naughty.notification {
             position = pos,
-            title    = pos .. ' ' .. i,
+            title    = pos .. " " .. i,
             message  = ever_longer_messages(i)
         }
     end
@@ -1063,19 +1189,19 @@ end
 
 
      <br />
-     <center id=button509>
-     <a class="show_more_button" onclick="show_extra('509')">
+     <center id=button504>
+     <a class="show_more_button" onclick="show_extra('504')">
       Click to display more
      </a>
      </center>
 
-    <span id=item509 class="hide_extra">
+    <span id=item504 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::position</code></span>  When the <a href="../core_components/naughty.notification.html#position">position</a> value changes.</li>
            <ul>
              <li><span class="parameter"><code>self</code></span> <span class="types"><a href="../core_components/naughty.notification.html#">naughty.notification</a></span> The object which changed (useful when connecting many object to the same callback).</li>
-             <li><span class="parameter"><code>new_value</code></span> <span class="types"><a href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span> The new value affected to the property.</li>
+             <li><span class="parameter"><code>new_value</code></span> <span class="types"><a href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span> The new value affected to the property.</li>
            </ul>
      </ul>
     </span>
@@ -1097,7 +1223,7 @@ end
 
 
 
-    <span id=item510 class="hide_extra">
+    <span id=item505 class="hide_extra">
     </span>
 
 </dd>
@@ -1120,17 +1246,17 @@ end
 
 
 <pre><code>for _, pos in ipairs {
-    'top_left'   , 'top_middle'   , 'top_right',
-    'bottom_left', 'bottom_middle', 'bottom_right',
+    "top_left"   , "top_middle"   , "top_right",
+    "bottom_left", "bottom_middle", "bottom_right",
 } do
     for i=1, 2 do
         naughty.notification {
             position = pos,
-            title    = pos .. ' ' .. i,
+            title    = pos .. " " .. i,
             width    = 50*i,
             height   = 50*i,
-            message  = 'This is a very, very, very, '..
-                'very, very very long message',
+            message  = "This is a very, very, very, "..
+                "very, very very long message",
         }
     end
 end
@@ -1148,13 +1274,13 @@ end
 
 
      <br />
-     <center id=button511>
-     <a class="show_more_button" onclick="show_extra('511')">
+     <center id=button506>
+     <a class="show_more_button" onclick="show_extra('506')">
       Click to display more
      </a>
      </center>
 
-    <span id=item511 class="hide_extra">
+    <span id=item506 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::height</code></span>  When the <a href="../core_components/naughty.notification.html#height">height</a> value changes.</li>
@@ -1187,13 +1313,13 @@ end
 
 
      <br />
-     <center id=button512>
-     <a class="show_more_button" onclick="show_extra('512')">
+     <center id=button507>
+     <a class="show_more_button" onclick="show_extra('507')">
       Click to display more
      </a>
      </center>
 
-    <span id=item512 class="hide_extra">
+    <span id=item507 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::width</code></span>  When the <a href="../core_components/naughty.notification.html#width">width</a> value changes.</li>
@@ -1227,32 +1353,32 @@ end
     <ul>
         <pre class="example"><span class="keyword">local</span> text = <span class="string">[[An &lt;b&gt;important&lt;/b&gt;;&lt;i&gt;notification&lt;/i&gt;;]]</span>
 
-<span class="global">require</span>(<span class="string">'naughty'</span>).notification {
-    title        = <span class="string">'Hello world!'</span>,
+<span class="global">require</span>(<span class="string">"naughty"</span>).notification {
+    title        = <span class="string">"Hello world!"</span>,
     text         = text,
     icon         = beautiful.icon,
-    bg           = <span class="string">'#0000ff'</span>,
-    fg           = <span class="string">'#ff0000'</span>,
-    font         = <span class="string">'verdana 14'</span>,
+    bg           = <span class="string">"#0000ff"</span>,
+    fg           = <span class="string">"#ff0000"</span>,
+    font         = <span class="string">"verdana 14"</span>,
     border_width = <span class="number">1</span>,
-    border_color = <span class="string">'#ff0000'</span>
+    border_color = <span class="string">"#ff0000"</span>
 }</pre>
     </ul>
 
      <br />
-     <center id=button513>
-     <a class="show_more_button" onclick="show_extra('513')">
+     <center id=button508>
+     <a class="show_more_button" onclick="show_extra('508')">
       Click to display more
      </a>
      </center>
 
-    <span id=item513 class="hide_extra">
+    <span id=item508 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::font</code></span>  When the <a href="../core_components/naughty.notification.html#font">font</a> value changes.</li>
            <ul>
              <li><span class="parameter"><code>self</code></span> <span class="types"><a href="../core_components/naughty.notification.html#">naughty.notification</a></span> The object which changed (useful when connecting many object to the same callback).</li>
-             <li><span class="parameter"><code>new_value</code></span> <span class="types"><a href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span> The new value affected to the property.</li>
+             <li><span class="parameter"><code>new_value</code></span> <span class="types"><a href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span> The new value affected to the property.</li>
            </ul>
      </ul>
     </span>
@@ -1299,13 +1425,13 @@ end
 
 
      <br />
-     <center id=button514>
-     <a class="show_more_button" onclick="show_extra('514')">
+     <center id=button509>
+     <a class="show_more_button" onclick="show_extra('509')">
       Click to display more
      </a>
      </center>
 
-    <span id=item514 class="hide_extra">
+    <span id=item509 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::icon</code></span>  When the <a href="../core_components/naughty.notification.html#icon">icon</a> value changes.</li>
@@ -1334,13 +1460,13 @@ end
 
 
      <br />
-     <center id=button515>
-     <a class="show_more_button" onclick="show_extra('515')">
+     <center id=button510>
+     <a class="show_more_button" onclick="show_extra('510')">
       Click to display more
      </a>
      </center>
 
-    <span id=item515 class="hide_extra">
+    <span id=item510 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::icon_size</code></span>  When the <a href="../core_components/naughty.notification.html#icon_size">icon_size</a> value changes.</li>
@@ -1372,19 +1498,19 @@ end
 
 
      <br />
-     <center id=button516>
-     <a class="show_more_button" onclick="show_extra('516')">
+     <center id=button511>
+     <a class="show_more_button" onclick="show_extra('511')">
       Click to display more
      </a>
      </center>
 
-    <span id=item516 class="hide_extra">
+    <span id=item511 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::app_icon</code></span>  When the <a href="../core_components/naughty.notification.html#app_icon">app_icon</a> value changes.</li>
            <ul>
              <li><span class="parameter"><code>self</code></span> <span class="types"><a href="../core_components/naughty.notification.html#">naughty.notification</a></span> The object which changed (useful when connecting many object to the same callback).</li>
-             <li><span class="parameter"><code>new_value</code></span> <span class="types"><a href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span> The new value affected to the property.</li>
+             <li><span class="parameter"><code>new_value</code></span> <span class="types"><a href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span> The new value affected to the property.</li>
            </ul>
      </ul>
     </span>
@@ -1411,13 +1537,13 @@ end
 
 
      <br />
-     <center id=button517>
-     <a class="show_more_button" onclick="show_extra('517')">
+     <center id=button512>
+     <a class="show_more_button" onclick="show_extra('512')">
       Click to display more
      </a>
      </center>
 
-    <span id=item517 class="hide_extra">
+    <span id=item512 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::image</code></span>  When the <a href="../core_components/naughty.notification.html#image">image</a> value changes.</li>
@@ -1452,13 +1578,13 @@ end
 
 
      <br />
-     <center id=button518>
-     <a class="show_more_button" onclick="show_extra('518')">
+     <center id=button513>
+     <a class="show_more_button" onclick="show_extra('513')">
       Click to display more
      </a>
      </center>
 
-    <span id=item518 class="hide_extra">
+    <span id=item513 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::images</code></span>  When the <a href="../core_components/naughty.notification.html#images">images</a> value changes.</li>
@@ -1488,22 +1614,22 @@ end
 
 
 <pre><code>-- A notification popup using the default widget_template.
-naughty.connect_signal('request::display', function(n)
+naughty.connect_signal("request::display", function(n)
     naughty.layout.box {notification = n}
 end)
 
 -- Notifications as widgets for any &lt;a href="../popups_and_bars/wibox.html#"&gt;wibox&lt;/a&gt;/&lt;a href="../popups_and_bars/awful.wibar.html#"&gt;awful.wibar&lt;/a&gt;/&lt;a href="../popups_and_bars/awful.popup.html#"&gt;awful.popup&lt;/a&gt;
 some_wibar.widget = naughty.list.notifications {}
 
-for _, color in ipairs {'#ff0000', '#00ff00', '#0000ff'} do
+for _, color in ipairs {"#ff0000", "#00ff00", "#0000ff"} do
     naughty.notification {
-        title   = 'A '.. color ..' notification',
-        message = 'Message',
+        title   = "A ".. color .." notification",
+        message = "Message",
         fg      = color,
     }
 end
 </code></pre>
-<p> require('gears.timer').run<em>delayed</em>calls_now()
+<p> require("gears.timer").run<em>delayed</em>calls_now()
 
 
 
@@ -1516,13 +1642,13 @@ end
 
 
      <br />
-     <center id=button519>
-     <a class="show_more_button" onclick="show_extra('519')">
+     <center id=button514>
+     <a class="show_more_button" onclick="show_extra('514')">
       Click to display more
      </a>
      </center>
 
-    <span id=item519 class="hide_extra">
+    <span id=item514 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::fg</code></span>  When the <a href="../core_components/naughty.notification.html#fg">fg</a> value changes.</li>
@@ -1552,21 +1678,21 @@ end
 
 
 <pre><code>-- A notification popup using the default widget_template.
-naughty.connect_signal('request::display', function(n)
+naughty.connect_signal("request::display", function(n)
     naughty.layout.box {notification = n}
 end)
 
 -- Notifications as widgets for any &lt;a href="../popups_and_bars/wibox.html#"&gt;wibox&lt;/a&gt;/&lt;a href="../popups_and_bars/awful.wibar.html#"&gt;awful.wibar&lt;/a&gt;/&lt;a href="../popups_and_bars/awful.popup.html#"&gt;awful.popup&lt;/a&gt;
 some_wibar.widget = naughty.list.notifications {}
 
-for _, color in ipairs {'#ff0000', '#00ff00', '#0000ff'} do
+for _, color in ipairs {"#ff0000", "#00ff00", "#0000ff"} do
     naughty.notification {
-        title = 'A '.. color ..' notification',
+        title = "A ".. color .." notification",
         bg    = color,
     }
 end
 </code></pre>
-<p> require('gears.timer').run<em>delayed</em>calls_now()
+<p> require("gears.timer").run<em>delayed</em>calls_now()
 
 
 
@@ -1579,13 +1705,13 @@ end
 
 
      <br />
-     <center id=button520>
-     <a class="show_more_button" onclick="show_extra('520')">
+     <center id=button515>
+     <a class="show_more_button" onclick="show_extra('515')">
       Click to display more
      </a>
      </center>
 
-    <span id=item520 class="hide_extra">
+    <span id=item515 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::bg</code></span>  When the <a href="../core_components/naughty.notification.html#bg">bg</a> value changes.</li>
@@ -1614,13 +1740,13 @@ end
 
 
      <br />
-     <center id=button521>
-     <a class="show_more_button" onclick="show_extra('521')">
+     <center id=button516>
+     <a class="show_more_button" onclick="show_extra('516')">
       Click to display more
      </a>
      </center>
 
-    <span id=item521 class="hide_extra">
+    <span id=item516 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::border_width</code></span>  When the <a href="../core_components/naughty.notification.html#border_width">border_width</a> value changes.</li>
@@ -1650,22 +1776,22 @@ end
 
 
 <pre><code>-- A notification popup using the default widget_template.
-naughty.connect_signal('request::display', function(n)
+naughty.connect_signal("request::display", function(n)
     naughty.layout.box {notification = n}
 end)
 
 -- Notifications as widgets for any &lt;a href="../popups_and_bars/wibox.html#"&gt;wibox&lt;/a&gt;/&lt;a href="../popups_and_bars/awful.wibar.html#"&gt;awful.wibar&lt;/a&gt;/&lt;a href="../popups_and_bars/awful.popup.html#"&gt;awful.popup&lt;/a&gt;
 some_wibar.widget = naughty.list.notifications {}
 
-for bw, color in ipairs {'#ff0000', '#00ff00', '#0000ff'} do
+for bw, color in ipairs {"#ff0000", "#00ff00", "#0000ff"} do
     naughty.notification {
-        title        = 'A '.. color ..' notification',
+        title        = "A ".. color .." notification",
         border_color = color,
         border_width = bw*2,
     }
 end
 </code></pre>
-<p> require('gears.timer').run<em>delayed</em>calls_now()
+<p> require("gears.timer").run<em>delayed</em>calls_now()
 
 
 
@@ -1677,19 +1803,19 @@ end
 
 
      <br />
-     <center id=button522>
-     <a class="show_more_button" onclick="show_extra('522')">
+     <center id=button517>
+     <a class="show_more_button" onclick="show_extra('517')">
       Click to display more
      </a>
      </center>
 
-    <span id=item522 class="hide_extra">
+    <span id=item517 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::border_color</code></span>  When the <a href="../core_components/naughty.notification.html#border_color">border_color</a> value changes.</li>
            <ul>
              <li><span class="parameter"><code>self</code></span> <span class="types"><a href="../core_components/naughty.notification.html#">naughty.notification</a></span> The object which changed (useful when connecting many object to the same callback).</li>
-             <li><span class="parameter"><code>new_value</code></span> <span class="types"><a href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span> The new value affected to the property.</li>
+             <li><span class="parameter"><code>new_value</code></span> <span class="types"><a href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span> The new value affected to the property.</li>
            </ul>
      </ul>
     </span>
@@ -1723,7 +1849,7 @@ shape = #n.actions &gt; 0 and
 
 
 <pre><code>-- A notification popup using the default widget_template.
-naughty.connect_signal('request::display', function(n)
+naughty.connect_signal("request::display", function(n)
     naughty.layout.box {notification = n}
 end)
 
@@ -1738,14 +1864,14 @@ local shapes = {
 
 for idx=1, 3 do
     naughty.notification {
-        title        = 'A notification',
-        border_color = '#0000ff',
+        title        = "A notification",
+        border_color = "#0000ff",
         border_width = idx*2,
         shape        = shapes[idx],
     }
 end
 </code></pre>
-<p> require('gears.timer').run<em>delayed</em>calls_now()</p>
+<p> require("gears.timer").run<em>delayed</em>calls_now()</p>
 
 
 
@@ -1765,7 +1891,7 @@ local shapes = {
 
 for _, s in ipairs(shapes) do
     naughty.notify {
-        title        = 'Hello world!',
+        title        = "Hello world!",
         text         = text,
         icon         = beautiful.icon,
         shape        = s,
@@ -1784,13 +1910,13 @@ end
 
 
      <br />
-     <center id=button523>
-     <a class="show_more_button" onclick="show_extra('523')">
+     <center id=button518>
+     <a class="show_more_button" onclick="show_extra('518')">
       Click to display more
      </a>
      </center>
 
-    <span id=item523 class="hide_extra">
+    <span id=item518 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::shape</code></span>  When the <a href="../core_components/naughty.notification.html#shape">shape</a> value changes.</li>
@@ -1826,13 +1952,13 @@ end
 
 
      <br />
-     <center id=button524>
-     <a class="show_more_button" onclick="show_extra('524')">
+     <center id=button519>
+     <a class="show_more_button" onclick="show_extra('519')">
       Click to display more
      </a>
      </center>
 
-    <span id=item524 class="hide_extra">
+    <span id=item519 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::opacity</code></span>  When the <a href="../core_components/naughty.notification.html#opacity">opacity</a> value changes.</li>
@@ -1862,7 +1988,7 @@ end
 
 
 <pre><code>-- A notification popup using the default widget_template.
-naughty.connect_signal('request::display', function(n)
+naughty.connect_signal("request::display", function(n)
     naughty.layout.box {notification = n}
 end)
 
@@ -1876,14 +2002,14 @@ some_wibar.widget = naughty.list.notifications {
 
 for margin = 10, 20, 5 do
     naughty.notification {
-        title        = 'A notification',
+        title        = "A notification",
         margin       = margin,
         border_width = 1,
-        border_color = '#ff0000',
+        border_color = "#ff0000",
     }
 end
 </code></pre>
-<p> require('gears.timer').run<em>delayed</em>calls_now()
+<p> require("gears.timer").run<em>delayed</em>calls_now()
 
 
 
@@ -1895,13 +2021,13 @@ end
 
 
      <br />
-     <center id=button525>
-     <a class="show_more_button" onclick="show_extra('525')">
+     <center id=button520>
+     <a class="show_more_button" onclick="show_extra('520')">
       Click to display more
      </a>
      </center>
 
-    <span id=item525 class="hide_extra">
+    <span id=item520 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::margin</code></span>  When the <a href="../core_components/naughty.notification.html#margin">margin</a> value changes.</li>
@@ -1932,19 +2058,19 @@ end
 
 
      <br />
-     <center id=button526>
-     <a class="show_more_button" onclick="show_extra('526')">
+     <center id=button521>
+     <a class="show_more_button" onclick="show_extra('521')">
       Click to display more
      </a>
      </center>
 
-    <span id=item526 class="hide_extra">
+    <span id=item521 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::preset</code></span>  When the <a href="../core_components/naughty.notification.html#preset">preset</a> value changes.</li>
            <ul>
              <li><span class="parameter"><code>self</code></span> <span class="types"><a href="../core_components/naughty.notification.html#">naughty.notification</a></span> The object which changed (useful when connecting many object to the same callback).</li>
-             <li><span class="parameter"><code>new_value</code></span> <span class="types"><a href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span> The new value affected to the property.</li>
+             <li><span class="parameter"><code>new_value</code></span> <span class="types"><a href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span> The new value affected to the property.</li>
            </ul>
      </ul>
     </span>
@@ -1969,13 +2095,13 @@ end
 
 
      <br />
-     <center id=button527>
-     <a class="show_more_button" onclick="show_extra('527')">
+     <center id=button522>
+     <a class="show_more_button" onclick="show_extra('522')">
       Click to display more
      </a>
      </center>
 
-    <span id=item527 class="hide_extra">
+    <span id=item522 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::callback</code></span>  When the <a href="../core_components/naughty.notification.html#callback">callback</a> value changes.</li>
@@ -2006,19 +2132,19 @@ end
 
 
      <br />
-     <center id=button528>
-     <a class="show_more_button" onclick="show_extra('528')">
+     <center id=button523>
+     <a class="show_more_button" onclick="show_extra('523')">
       Click to display more
      </a>
      </center>
 
-    <span id=item528 class="hide_extra">
+    <span id=item523 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::actions</code></span>  When the <a href="../core_components/naughty.notification.html#actions">actions</a> value changes.</li>
            <ul>
              <li><span class="parameter"><code>self</code></span> <span class="types"><a href="../core_components/naughty.notification.html#">naughty.notification</a></span> The object which changed (useful when connecting many object to the same callback).</li>
-             <li><span class="parameter"><code>new_value</code></span> <span class="types"><a href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span> The new value affected to the property.</li>
+             <li><span class="parameter"><code>new_value</code></span> <span class="types"><a href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span> The new value affected to the property.</li>
            </ul>
      </ul>
     </span>
@@ -2044,13 +2170,13 @@ end
 
 
      <br />
-     <center id=button529>
-     <a class="show_more_button" onclick="show_extra('529')">
+     <center id=button524>
+     <a class="show_more_button" onclick="show_extra('524')">
       Click to display more
      </a>
      </center>
 
-    <span id=item529 class="hide_extra">
+    <span id=item524 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::ignore</code></span>  When the <a href="../core_components/naughty.notification.html#ignore">ignore</a> value changes.</li>
@@ -2081,13 +2207,13 @@ end
 
 
      <br />
-     <center id=button530>
-     <a class="show_more_button" onclick="show_extra('530')">
+     <center id=button525>
+     <a class="show_more_button" onclick="show_extra('525')">
       Click to display more
      </a>
      </center>
 
-    <span id=item530 class="hide_extra">
+    <span id=item525 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::suspended</code></span>  When the <a href="../core_components/naughty.notification.html#suspended">suspended</a> value changes.</li>
@@ -2120,13 +2246,13 @@ end
 
 
      <br />
-     <center id=button531>
-     <a class="show_more_button" onclick="show_extra('531')">
+     <center id=button526>
+     <a class="show_more_button" onclick="show_extra('526')">
       Click to display more
      </a>
      </center>
 
-    <span id=item531 class="hide_extra">
+    <span id=item526 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::is_expired</code></span>  When the <a href="../core_components/naughty.notification.html#is_expired">is_expired</a> value changes.</li>
@@ -2158,13 +2284,13 @@ end
 
 
      <br />
-     <center id=button532>
-     <a class="show_more_button" onclick="show_extra('532')">
+     <center id=button527>
+     <a class="show_more_button" onclick="show_extra('527')">
       Click to display more
      </a>
      </center>
 
-    <span id=item532 class="hide_extra">
+    <span id=item527 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::auto_reset_timeout</code></span>  When the <a href="../core_components/naughty.notification.html#auto_reset_timeout">auto_reset_timeout</a> value changes.</li>
@@ -2198,7 +2324,7 @@ end
 
 
 
-    <span id=item533 class="hide_extra">
+    <span id=item528 class="hide_extra">
     </span>
 
 </dd>
@@ -2223,13 +2349,13 @@ end
 
 
      <br />
-     <center id=button534>
-     <a class="show_more_button" onclick="show_extra('534')">
+     <center id=button529>
+     <a class="show_more_button" onclick="show_extra('529')">
       Click to display more
      </a>
      </center>
 
-    <span id=item534 class="hide_extra">
+    <span id=item529 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::max_width</code></span>  When the <a href="../core_components/naughty.notification.html#max_width">max_width</a> value changes.</li>
@@ -2262,19 +2388,19 @@ end
 
 
      <br />
-     <center id=button535>
-     <a class="show_more_button" onclick="show_extra('535')">
+     <center id=button530>
+     <a class="show_more_button" onclick="show_extra('530')">
       Click to display more
      </a>
      </center>
 
-    <span id=item535 class="hide_extra">
+    <span id=item530 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::app_name</code></span>  When the <a href="../core_components/naughty.notification.html#app_name">app_name</a> value changes.</li>
            <ul>
              <li><span class="parameter"><code>self</code></span> <span class="types"><a href="../core_components/naughty.notification.html#">naughty.notification</a></span> The object which changed (useful when connecting many object to the same callback).</li>
-             <li><span class="parameter"><code>new_value</code></span> <span class="types"><a href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span> The new value affected to the property.</li>
+             <li><span class="parameter"><code>new_value</code></span> <span class="types"><a href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span> The new value affected to the property.</li>
            </ul>
      </ul>
     </span>
@@ -2300,19 +2426,19 @@ end
 
 
      <br />
-     <center id=button536>
-     <a class="show_more_button" onclick="show_extra('536')">
+     <center id=button531>
+     <a class="show_more_button" onclick="show_extra('531')">
       Click to display more
      </a>
      </center>
 
-    <span id=item536 class="hide_extra">
+    <span id=item531 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::widget_template</code></span>  When the <a href="../core_components/naughty.notification.html#widget_template">widget_template</a> value changes.</li>
            <ul>
              <li><span class="parameter"><code>self</code></span> <span class="types"><a href="../core_components/naughty.notification.html#">naughty.notification</a></span> The object which changed (useful when connecting many object to the same callback).</li>
-             <li><span class="parameter"><code>new_value</code></span> <span class="types"><a href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span> The new value affected to the property.</li>
+             <li><span class="parameter"><code>new_value</code></span> <span class="types"><a href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span> The new value affected to the property.</li>
            </ul>
      </ul>
     </span>
@@ -2345,7 +2471,7 @@ end
 
 
 
-    <span id=item537 class="hide_extra">
+    <span id=item532 class="hide_extra">
     </span>
 
 </dd>
@@ -2371,7 +2497,7 @@ end
 
 
 
-    <span id=item538 class="hide_extra">
+    <span id=item533 class="hide_extra">
     </span>
 
 </dd>
@@ -2397,7 +2523,7 @@ end
 
 
 
-    <span id=item539 class="hide_extra">
+    <span id=item534 class="hide_extra">
     </span>
 
 </dd>
@@ -2419,13 +2545,13 @@ end
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">reason</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          One of the reasons from <code>notification_closed_reason</code>
         </li>
         <li><span class="parameter">keep_visible</span>
             <span class="types"><span class="type">boolean</span></span>
          If true, keep the notification visible
-         (<em>default</em> false)
+         (<em>default</em> <code>false</code>)
         </li>
     </ul>
 
@@ -2444,13 +2570,13 @@ end
 
 
      <br />
-     <center id=button540>
-     <a class="show_more_button" onclick="show_extra('540')">
+     <center id=button535>
+     <a class="show_more_button" onclick="show_extra('535')">
       Click to display more
      </a>
      </center>
 
-    <span id=item540 class="hide_extra">
+    <span id=item535 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><a href="../core_components/naughty.notification.html#destroyed">destroyed</a></span>  </li>
@@ -2485,7 +2611,7 @@ end
 
 
 
-    <span id=item541 class="hide_extra">
+    <span id=item536 class="hide_extra">
     </span>
 
 </dd>
@@ -2502,7 +2628,7 @@ end
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">new_actions</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
 
 
 
@@ -2514,7 +2640,7 @@ end
 
 
 
-    <span id=item542 class="hide_extra">
+    <span id=item537 class="hide_extra">
     </span>
 
 </dd>
@@ -2531,11 +2657,11 @@ end
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">permission</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          The permission name (just the name, no <code>request::</code>).
         </li>
         <li><span class="parameter">context</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          The reason why this permission is requested.
         </li>
     </ul>
@@ -2549,7 +2675,7 @@ end
 
 
 
-    <span id=item543 class="hide_extra">
+    <span id=item538 class="hide_extra">
     </span>
 
 </dd>
@@ -2566,11 +2692,11 @@ end
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">permission</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          The permission name (just the name, no <code>request::</code>).
         </li>
         <li><span class="parameter">context</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          The reason why this permission is requested.
         </li>
     </ul>
@@ -2584,7 +2710,7 @@ end
 
 
 
-    <span id=item544 class="hide_extra">
+    <span id=item539 class="hide_extra">
     </span>
 
 </dd>
@@ -2602,7 +2728,7 @@ end
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">name</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          The name of the signal.
         </li>
         <li><span class="parameter">...</span>
@@ -2617,7 +2743,7 @@ end
 
 
 
-    <span id=item545 class="hide_extra">
+    <span id=item540 class="hide_extra">
     </span>
 
 </dd>
@@ -2635,7 +2761,7 @@ end
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">name</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          The name of the signal.
         </li>
         <li><span class="parameter">func</span>
@@ -2649,7 +2775,7 @@ end
 
 
 
-    <span id=item546 class="hide_extra">
+    <span id=item541 class="hide_extra">
     </span>
 
 </dd>
@@ -2674,7 +2800,7 @@ end
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">name</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          The name of the signal.
         </li>
         <li><span class="parameter">func</span>
@@ -2688,7 +2814,7 @@ end
 
 
 
-    <span id=item547 class="hide_extra">
+    <span id=item542 class="hide_extra">
     </span>
 
 </dd>
@@ -2726,7 +2852,7 @@ end
 
 
 
-    <span id=item548 class="hide_extra">
+    <span id=item543 class="hide_extra">
     </span>
 
 </dd>
@@ -2750,7 +2876,7 @@ end
 
 
 
-    <span id=item549 class="hide_extra">
+    <span id=item544 class="hide_extra">
     </span>
 
 </dd>
@@ -2770,7 +2896,7 @@ end
 
 
 
-    <span id=item550 class="hide_extra">
+    <span id=item545 class="hide_extra">
     </span>
 
 </dd>
@@ -2790,7 +2916,7 @@ end
 
 
 
-    <span id=item551 class="hide_extra">
+    <span id=item546 class="hide_extra">
     </span>
 
 </dd>
@@ -2810,7 +2936,7 @@ end
 
 
 
-    <span id=item552 class="hide_extra">
+    <span id=item547 class="hide_extra">
     </span>
 
 </dd>
@@ -2830,7 +2956,7 @@ end
 
 
 
-    <span id=item553 class="hide_extra">
+    <span id=item548 class="hide_extra">
     </span>
 
 </dd>
@@ -2854,7 +2980,7 @@ end
 
 
 
-    <span id=item554 class="hide_extra">
+    <span id=item549 class="hide_extra">
     </span>
 
 </dd>
@@ -2874,7 +3000,7 @@ end
 
 
 
-    <span id=item555 class="hide_extra">
+    <span id=item550 class="hide_extra">
     </span>
 
 </dd>
@@ -2894,7 +3020,7 @@ end
 
 
 
-    <span id=item556 class="hide_extra">
+    <span id=item551 class="hide_extra">
     </span>
 
 </dd>
@@ -2914,7 +3040,7 @@ end
 
 
 
-    <span id=item557 class="hide_extra">
+    <span id=item552 class="hide_extra">
     </span>
 
 </dd>
@@ -2934,7 +3060,7 @@ end
 
 
 
-    <span id=item558 class="hide_extra">
+    <span id=item553 class="hide_extra">
     </span>
 
 </dd>
@@ -2958,7 +3084,7 @@ end
 
 
 
-    <span id=item559 class="hide_extra">
+    <span id=item554 class="hide_extra">
     </span>
 
 </dd>
@@ -2969,7 +3095,6 @@ end
 </div> <!-- id="main" -->
 <div id="about">
 <i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.6</a></i>
-<i style="float:right;">Last updated 2021-05-01 17:20:18 </i>
 </div> <!-- id="about" -->
 </div> <!-- id="container" -->
 </body>
