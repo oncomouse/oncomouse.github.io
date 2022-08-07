@@ -1,0 +1,113 @@
+{
+	"Lectures": [
+		"Text-only reading guides or slideshows with text and image",
+		"Podcast (audio with script) or prerecorded video (with closed- captioning)",
+		"Prerecorded video or audio with option for user annotations or comments",
+		"Live videoconference",
+		"Face-to-face lecture",
+		"Restricted only to certain meeting days or ten-minute blocks"
+	],
+	"Discussion": [
+		"Full-class asynchronous discussion boards",
+		"Small-group asynchronous discussion boards",
+		"Full-class face-to-face discussion with small-group breakouts",
+		"Small group discussions with only occasional class-wide discussion",
+		"Verbal discussion supplemented by collaborative notetaking (e.g., through GoogleDocs)",
+		"Student-led (select one student per day to lead discussion for 10-15 minutes)"
+	],
+	"Office hours": [
+		"Emphasis on email and Zoom meetings over face-to-face office hours",
+		"Required individual office hours attendance (once per semester)",
+		"Required small-group office hours attendance (perhaps paired with group assignment)",
+		"Replace one week of course content with mandatory office hours meeting",
+		"Supplemental office hours offered each week before a major assignment is due",
+		"Offer audio-only option (e.g., phone call) for students technological or logistical limitations"
+	],
+	"Feedback": [
+		"Written or recorded feedback by instructor after submission",
+		"Written or recorded feedback by instructor before and after submission",
+		"Written or recorded reviews by instructor and peers before submission; written reviews by instructor after submission",
+		"Periodic feedback from peers and instructor during stages of a scaffolded (term-long) assignment",
+		"Anonymized peer feedback through course LMS",
+		"Brief but frequent feedback"
+	],
+	"Course texts": [
+		"Maximized: emphasis on scope and coverage",
+		"Focused on a particular theme",
+		"Paired down rigorously to pair with particular activities/assignments",
+		"Eclectic use of multiple genres and media formats",
+		"Emphasis on challenging a canon or convention",
+		"Chosen because of affordability and accessibility"
+	],
+	"Slideshows": [
+		"Content focused: just quotations from readings",
+		"Question-based: each slide ends with question for discussion",
+		"Outward-facing: Links and bibliographies to show further reading/sources for students to consult",
+		"Multimedia emphasis: image, video, audio, etc",
+		"Create or edit collaboratively with students",
+		"Restricted to providing historical or theoretical contexts not given in course readings"
+	],
+	"Activities": [
+		"Emphasis on building discussion (e.g., Think Pair Share)",
+		"Emphasis on practicing writing skills or technical skills",
+		"Emphasis on making progress for a particular graded assignment or test",
+		"Emphasis on exploration and critical thinking",
+		"Emphasis on community building and/or self-reflection",
+		"Emphasis on hands-on experience, making, or building"
+	],
+	"Traditional assignments": [
+		"3 tests/exams with weekly short writings or quizzes",
+		"1-3 major projects with daily or weekly written homework",
+		"5-6 short projects without graded homework",
+		"1 major, semester-long project divided into parts, plus regular homework",
+		"Weekly response/reading journals leading up to individually tailored projects"
+	],
+	"DH assignments": [
+		"Classwide digital project that lasts the entire semester",
+		"One set of small-group DH projects at the end of the semester",
+		"One major DH project, with the rest being traditional ",
+		"DH work restricted to in-class activities or presented as optional element for traditional assignments intended for extra credit or honors credit",
+		"All major assignments are related to one type of DH, moving progressively from beginner to advanced applications",
+		"All major assignments are related to different modalities of DH, with all of them pitched at a beginner level"
+	],
+	"Collaboration": [
+		"Mostly in small-group discussions and activities",
+		"Focused on a particular group project",
+		"Used primarily for peer evaluation/feedback",
+		"Aimed to find collaborators beyond the classroom (e.g., external scholars, librarians, other fields/disciplines)",
+		"Opportunities for students to contribute to instructor's research (fairly, of course!)",
+		"Creation of perrmanent small groups for discussion, feedback, presentations, and office hours attendance"
+	],
+	"Student presentations": [
+		"None; emphasis is instead on developing communication skills during class discussions",
+		"Group presentations only",
+		"Historical, theoretical, or factual context presentation",
+		"Share in-progress project to solicit feedback",
+		"Report on completed assignment as a relaxing debriefing session",
+		"As part of an honors contract, undergraduate research opportunity, or graduate school application"
+	],
+	"Enrichments": [
+		"Group fieldtrip to museum, gallery, or site beyond campus",
+		"Invited lecturer",
+		"Hands-on craft, book-making or physical computing session",
+		"Research workshop at campus library",
+		"Tour of on-campus museum, gallery, library, archives, or landmark",
+		"Review of an off-campus performance or heritage site individually chosen by each student"
+	],
+	"First day activity": [
+		"Ask students to reflect on and share their goals for the class",
+		"Survey: gather information from students about their prior experiene in your discipline",
+		"Brief in-class reading or viewing of course text (e.g., poem or video clip) as a preview of course content",
+		"Collaborative syllabus design: leave some course days blank and ask students to pick 1-2 course texts or a theme",
+		"Dismantle myths, stereotypes, or misunderstandings of your field/course topic",
+		"Project a word cloud generated from course materials or show students an existing DH project in your field"
+	],
+	"Attendance and participation": [
+		"Record manually on paper or on your institutional CMS",
+		"Use digital or paper exit tickets or in-class writings to track attendance",
+		"Use peer evaluations as supplements for your own attendance/participation recordkeeping",
+		"Deploy polls or ungraded quizzes at the beginning or end of class to track attendance/participation",
+		"Take screenshot of videoconference or copy-paste attendees' names to track attendance",
+		"Collect exit tickets via a digital tool, such as Flip or GoogleForms"
+	]
+}
