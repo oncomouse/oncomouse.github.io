@@ -1,4 +1,4 @@
-/* globals fetch R $ */
+/* globals fetch $ */
 fetch('assets/data.json')
   .then(function (response) {
     return response.json();
@@ -7,43 +7,38 @@ fetch('assets/data.json')
     runSite(data);
   });
 
-const randomItem = R.curry(function (xs) {
+function randomItem (xs) {
   return xs[Math.floor(Math.random() * xs.length)];
-});
+}
 
-const makeId = R.curry(function (id) {
+function makeId (id) {
   return id.replace(/[^0-9A-Za-z]/g, '-').toLowerCase();
-});
+}
 
 function runSite (data) {
   const outputElement = $('#output');
-  R.pipe(
-    R.keys,
-    R.forEach(function (key) {
-      const planElement = $('<div/>');
-      planElement.addClass('plan');
+  Object.keys(data).forEach(function (key) {
+    const planElement = $('<div/>');
+    planElement.addClass('plan');
 
-      const labelElement = $('<div/>');
-      labelElement.addClass('plan__label');
-      labelElement.html(key + ':');
+    const labelElement = $('<div/>');
+    labelElement.addClass('plan__label');
+    labelElement.html(key + ':');
 
-      const itemElement = $('<div/>');
-      itemElement.addClass('plan__item');
-      itemElement.attr('id', makeId(key));
+    const itemElement = $('<div/>');
+    itemElement.addClass('plan__item');
+    itemElement.attr('id', makeId(key));
 
-      labelElement.appendTo(planElement);
-      itemElement.appendTo(planElement);
-      planElement.appendTo(outputElement);
-    })
-  )(data);
+    labelElement.appendTo(planElement);
+    itemElement.appendTo(planElement);
+    planElement.appendTo(outputElement);
+  });
+
   function generateCoursePlan () {
-    R.pipe(
-      R.keys,
-      R.forEach(function (key) {
-        const content = randomItem(data[key]);
-        $('#' + makeId(key)).html(content);
-      })
-    )(data);
+    Object.keys(data).forEach(function (key) {
+      const content = randomItem(data[key]);
+      $('#' + makeId(key)).html(content);
+    });
   }
   $('#generator').on('click', generateCoursePlan);
 }
