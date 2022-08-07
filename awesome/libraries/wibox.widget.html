@@ -156,6 +156,7 @@
   <li><a href="../popups_and_bars/awful.popup.html">awful.popup</a></li>
   <li><a href="../popups_and_bars/awful.titlebar.html">awful.titlebar</a></li>
   <li><a href="../popups_and_bars/awful.tooltip.html">awful.tooltip</a></li>
+  <li><a href="../popups_and_bars/awful.wallpaper.html">awful.wallpaper</a></li>
   <li><a href="../popups_and_bars/awful.wibar.html">awful.wibar</a></li>
   <li><a href="../popups_and_bars/awful.widget.calendar_popup.html">awful.widget.calendar_popup</a></li>
   <li><a href="../popups_and_bars/menubar.html">menubar</a></li>
@@ -236,8 +237,15 @@
   <div class="extra-header__section">
     <h3>Info:</h3>
     <ul>
-            <li><strong>Copyright</strong>: 2010 Uli Schlachter</li>
-            <li><strong>Author</strong>: Uli Schlachter</li>
+                <li><strong>Copyright</strong>: 2010 Uli Schlachter</li>
+                <li>
+                    <strong>Originally authored by</strong>: Uli Schlachter<br />
+                    <small>(Full contributors list available on
+                    <a href="https://github.com/awesomeWM/awesome/graphs/contributors">
+                        our github project)
+                    </a></small>
+
+                </li>
     </ul>
   </div>
 
@@ -251,21 +259,27 @@
         <a href="#wibox.widget.draw_to_cairo_context"><span class='function_modname'>wibox.widget.</span>draw_to_cairo_context <span class='function_args'> <b>(</b>wdg, cr, width, height[, context={dpi=96}]<b>)</b></span></a>
         <span class="summarytype"></span>
       </td>
-      <td colspan="2" class="summary">Draw a widget directly to a given cairo context.</td>
+      <td colspan="2" class="summary">
+        Draw a widget directly to a given cairo context.
+      </td>
     </tr>
     <tr>
       <td class="name" >
         <a href="#wibox.widget.draw_to_svg_file"><span class='function_modname'>wibox.widget.</span>draw_to_svg_file <span class='function_args'> <b>(</b>wdg, path, width, height[, context={dpi=96}]<b>)</b></span></a>
         <span class="summarytype"></span>
       </td>
-      <td colspan="2" class="summary">Create an SVG file showing this widget.</td>
+      <td colspan="2" class="summary">
+        Create an SVG file showing this widget.
+      </td>
     </tr>
     <tr>
       <td class="name" >
         <a href="#wibox.widget.draw_to_image_surface"><span class='function_modname'>wibox.widget.</span>draw_to_image_surface <span class='function_args'> <b>(</b>wdg, width, height[, format=cairo.Format.ARGB32[, context={dpi=96}]]<b>)</b></span></a>
         <span class="summarytype"><span class='summary_type'> -&gt;&nbsp;()</span></span>
       </td>
-      <td colspan="2" class="summary">Create a cairo image surface showing this widget.</td>
+      <td colspan="2" class="summary">
+        Create a cairo image surface showing this widget.
+      </td>
     </tr>
 </table>
 
@@ -307,9 +321,9 @@
          The height of the widget
         </li>
         <li><span class="parameter">context</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          The context information to give to the widget.
-         (<em>default</em> {dpi=96})
+         (<em>default</em> <code>{dpi=96}</code>)
         </li>
     </ul>
 
@@ -318,7 +332,7 @@
 
 
 
-    <span id=item2445 class="hide_extra">
+    <span id=item2483 class="hide_extra">
     </span>
 
 </dd>
@@ -339,7 +353,7 @@
          A widget
         </li>
         <li><span class="parameter">path</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          The output file path
         </li>
         <li><span class="parameter">width</span>
@@ -351,9 +365,9 @@
          The surface height
         </li>
         <li><span class="parameter">context</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          The context information to give to the widget.
-         (<em>default</em> {dpi=96})
+         (<em>default</em> <code>{dpi=96}</code>)
         </li>
     </ul>
 
@@ -362,7 +376,7 @@
 
 
 
-    <span id=item2446 class="hide_extra">
+    <span id=item2484 class="hide_extra">
     </span>
 
 </dd>
@@ -392,12 +406,12 @@
         </li>
         <li><span class="parameter">format</span>
          The surface format
-         (<em>default</em> cairo.Format.ARGB32)
+         (<em>default</em> <code>cairo.Format.ARGB32</code>)
         </li>
         <li><span class="parameter">context</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          The context information to give to the widget.
-         (<em>default</em> {dpi=96})
+         (<em>default</em> <code>{dpi=96}</code>)
         </li>
     </ul>
 
@@ -411,7 +425,7 @@
 
 
 
-    <span id=item2447 class="hide_extra">
+    <span id=item2485 class="hide_extra">
     </span>
 
 </dd>
@@ -422,7 +436,6 @@
 </div> <!-- id="main" -->
 <div id="about">
 <i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.6</a></i>
-<i style="float:right;">Last updated 2021-05-01 17:20:18 </i>
 </div> <!-- id="about" -->
 </div> <!-- id="container" -->
 </body>

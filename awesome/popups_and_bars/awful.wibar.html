@@ -60,6 +60,7 @@
   <li><a href="../popups_and_bars/awful.popup.html">awful.popup</a></li>
   <li><a href="../popups_and_bars/awful.titlebar.html">awful.titlebar</a></li>
   <li><a href="../popups_and_bars/awful.tooltip.html">awful.tooltip</a></li>
+  <li><a href="../popups_and_bars/awful.wallpaper.html">awful.wallpaper</a></li>
   <li><strong>awful.wibar</strong></li>
   <li><a href="../popups_and_bars/awful.widget.calendar_popup.html">awful.widget.calendar_popup</a></li>
   <li><a href="../popups_and_bars/menubar.html">menubar</a></li>
@@ -228,8 +229,9 @@
 <div id="content">
 
 <h1>Module: <code>awful.wibar</code></h1>
-<p>Wibox module for awful.</p>
+<p>The main AwesomeWM "bar" module.</p>
 <p>
+
 
 <p> This module allows you to easily create wibox and attach them to the edge of
  a screen.</p>
@@ -241,7 +243,7 @@
 
 
 <pre>
-<span class="keyword">local</span> wb = awful.wibar { position = <span class="string">'top'</span> }
+<span class="keyword">local</span> wb = awful.wibar { position = <span class="string">"top"</span> }
 wb:setup {
     layout = wibox.layout.align.horizontal,
     {
@@ -260,12 +262,13 @@ wb:setup {
 <p> You can even have vertical bars too.</p>
 
 
+
 <p><img src="../images/AUTOGEN_awful_wibar_left.svg" alt="Usage example"/></p>
 
 
 
 <pre>
-<span class="keyword">local</span> wb = awful.wibar { position = <span class="string">'left'</span> }
+<span class="keyword">local</span> wb = awful.wibar { position = <span class="string">"left"</span> }
 wb:setup {
     layout = wibox.layout.align.vertical,
     {
@@ -325,8 +328,15 @@ wb:setup {
   <div class="extra-header__section">
     <h3>Info:</h3>
     <ul>
-            <li><strong>Copyright</strong>: 2016 Emmanuel Lepage Vallee</li>
-            <li><strong>Author</strong>: Emmanuel Lepage Vallee &lt;elv1313@gmail.com&gt;</li>
+                <li><strong>Copyright</strong>: 2016 Emmanuel Lepage Vallee</li>
+                <li>
+                    <strong>Originally authored by</strong>: Emmanuel Lepage Vallee &lt;elv1313@gmail.com&gt;<br />
+                    <small>(Full contributors list available on
+                    <a href="https://github.com/awesomeWM/awesome/graphs/contributors">
+                        our github project)
+                    </a></small>
+
+                </li>
     </ul>
   </div>
 
@@ -339,7 +349,9 @@ wb:setup {
       <td class="name" >
         <a href="#awful.wibar">awful.wibar <span class='function_named_args'><b>{</b>[args]<b>}</b></span></a>
       </td>
-      <td colspan="2" class="summary">Create a new wibox and attach it to a screen edge.</td>
+      <td colspan="2" class="summary">
+        Create a new wibox and attach it to a screen edge.
+      </td>
     </tr>
 </table>
 <h2><a href="#Object_properties">Object properties</a></h2>
@@ -347,17 +359,44 @@ wb:setup {
     <tr>
       <td class="shortname" ><a href="#stretch">stretch</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>boolean</span></td>
-      <td colspan="2" class="summary">If the wibar needs to be stretched to fill the screen.</td>
+      <td colspan="2" class="summary">
+        If the wibar needs to be stretched to fill the screen.
+      </td>
+    </tr>
+    <tr>
+      <td class="shortname" ><a href="#align">align</a></td>
+      <td class="summarytype" nowrap><span class='summary_type'>string</span></td>
+      <td colspan="2" class="summary">
+        How to align non-stretched wibars.
+      </td>
+    </tr>
+    <tr>
+      <td class="shortname" ><a href="#margins">margins</a></td>
+      <td class="summarytype" nowrap><span class='summary_type'>number <i>or</i> table</span></td>
+      <td colspan="2" class="summary">
+        Margins on each side of the wibar.
+      </td>
+    </tr>
+    <tr>
+      <td class="shortname" ><a href="#restrict_workarea">restrict_workarea</a></td>
+      <td class="summarytype" nowrap><span class='summary_type'>boolean</span></td>
+      <td colspan="2" class="summary">
+        Allow or deny the tiled clients to cover the wibar.
+      </td>
     </tr>
     <tr>
       <td class="shortname" ><a href="#position">position</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>string</span></td>
-      <td colspan="2" class="summary">The wibox position.</td>
+      <td colspan="2" class="summary">
+        The wibox position.
+      </td>
     </tr>
     <tr>
       <td class="shortname" ><a href="#border_width">border_width</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>integer</span></td>
-      <td colspan="1" class="summary">Border width.</td>
+      <td colspan="1" class="summary">
+        Border width.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from wibox
       </td>
@@ -365,7 +404,9 @@ wb:setup {
     <tr>
       <td class="shortname" ><a href="#border_color">border_color</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>string</span></td>
-      <td colspan="1" class="summary">Border color.</td>
+      <td colspan="1" class="summary">
+        Border color.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from wibox
       </td>
@@ -373,7 +414,9 @@ wb:setup {
     <tr>
       <td class="shortname" ><a href="#ontop">ontop</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>boolean</span></td>
-      <td colspan="1" class="summary">On top of other windows.</td>
+      <td colspan="1" class="summary">
+        On top of other windows.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from wibox
       </td>
@@ -381,7 +424,9 @@ wb:setup {
     <tr>
       <td class="shortname" ><a href="#cursor">cursor</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>string</span></td>
-      <td colspan="1" class="summary">The mouse cursor.</td>
+      <td colspan="1" class="summary">
+        The mouse cursor.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from wibox
       </td>
@@ -389,7 +434,9 @@ wb:setup {
     <tr>
       <td class="shortname" ><a href="#visible">visible</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>boolean</span></td>
-      <td colspan="1" class="summary">Visibility.</td>
+      <td colspan="1" class="summary">
+        Visibility.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from wibox
       </td>
@@ -397,7 +444,9 @@ wb:setup {
     <tr>
       <td class="shortname" ><a href="#opacity">opacity</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>number</span></td>
-      <td colspan="1" class="summary">The opacity of the wibox, between 0 and 1.</td>
+      <td colspan="1" class="summary">
+        The opacity of the wibox, between 0 and 1.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from wibox
       </td>
@@ -405,7 +454,9 @@ wb:setup {
     <tr>
       <td class="shortname" ><a href="#type">type</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>string</span></td>
-      <td colspan="1" class="summary">The window type (desktop, normal, dock, ...).</td>
+      <td colspan="1" class="summary">
+        The window type (desktop, normal, dock, ...).
+      </td>
       <td class="baseclass" nowrap>
         Inherited from wibox
       </td>
@@ -413,7 +464,9 @@ wb:setup {
     <tr>
       <td class="shortname" ><a href="#x">x</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>integer</span></td>
-      <td colspan="1" class="summary">The x coordinates.</td>
+      <td colspan="1" class="summary">
+        The x coordinates.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from wibox
       </td>
@@ -421,7 +474,9 @@ wb:setup {
     <tr>
       <td class="shortname" ><a href="#y">y</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>integer</span></td>
-      <td colspan="1" class="summary">The y coordinates.</td>
+      <td colspan="1" class="summary">
+        The y coordinates.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from wibox
       </td>
@@ -429,7 +484,9 @@ wb:setup {
     <tr>
       <td class="shortname" ><a href="#width">width</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>width</span></td>
-      <td colspan="1" class="summary">The width of the wibox.</td>
+      <td colspan="1" class="summary">
+        The width of the wibox.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from wibox
       </td>
@@ -437,7 +494,9 @@ wb:setup {
     <tr>
       <td class="shortname" ><a href="#height">height</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>height</span></td>
-      <td colspan="1" class="summary">The height of the wibox.</td>
+      <td colspan="1" class="summary">
+        The height of the wibox.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from wibox
       </td>
@@ -445,7 +504,9 @@ wb:setup {
     <tr>
       <td class="shortname" ><a href="#screen">screen</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>screen</span></td>
-      <td colspan="1" class="summary">The wibox screen.</td>
+      <td colspan="1" class="summary">
+        The wibox screen.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from wibox
       </td>
@@ -453,7 +514,9 @@ wb:setup {
     <tr>
       <td class="shortname" ><a href="#drawable">drawable</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>drawable</span></td>
-      <td colspan="1" class="summary">The wibox's <a href="../core_components/drawable.html#">drawable</a>.</td>
+      <td colspan="1" class="summary">
+        The wibox's <a href="../core_components/drawable.html#">drawable</a>.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from wibox
       </td>
@@ -461,7 +524,9 @@ wb:setup {
     <tr>
       <td class="shortname" ><a href="#widget">widget</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>widget</span></td>
-      <td colspan="1" class="summary">The widget that the <a href="../popups_and_bars/wibox.html#">wibox</a> displays.</td>
+      <td colspan="1" class="summary">
+        The widget that the <a href="../popups_and_bars/wibox.html#">wibox</a> displays.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from wibox
       </td>
@@ -469,7 +534,9 @@ wb:setup {
     <tr>
       <td class="shortname" ><a href="#window">window</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>string</span></td>
-      <td colspan="1" class="summary">The X window id.</td>
+      <td colspan="1" class="summary">
+        The X window id.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from wibox
       </td>
@@ -477,7 +544,9 @@ wb:setup {
     <tr>
       <td class="shortname" ><a href="#shape_bounding">shape_bounding</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>N/A</span></td>
-      <td colspan="1" class="summary">The wibox's bounding shape as a (native) cairo surface.</td>
+      <td colspan="1" class="summary">
+        The wibox's bounding shape as a (native) cairo surface.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from wibox
       </td>
@@ -485,7 +554,9 @@ wb:setup {
     <tr>
       <td class="shortname" ><a href="#shape_clip">shape_clip</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>N/A</span></td>
-      <td colspan="1" class="summary">The wibox's clip shape as a (native) cairo surface.</td>
+      <td colspan="1" class="summary">
+        The wibox's clip shape as a (native) cairo surface.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from wibox
       </td>
@@ -493,7 +564,9 @@ wb:setup {
     <tr>
       <td class="shortname" ><a href="#shape_input">shape_input</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>N/A</span></td>
-      <td colspan="1" class="summary">The wibox's input shape as a (native) cairo surface.</td>
+      <td colspan="1" class="summary">
+        The wibox's input shape as a (native) cairo surface.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from wibox
       </td>
@@ -501,7 +574,9 @@ wb:setup {
     <tr>
       <td class="shortname" ><a href="#shape">shape</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>gears.shape</span></td>
-      <td colspan="1" class="summary">The wibar's shape.</td>
+      <td colspan="1" class="summary">
+        The wibar's shape.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from wibox
       </td>
@@ -509,7 +584,9 @@ wb:setup {
     <tr>
       <td class="shortname" ><a href="#input_passthrough">input_passthrough</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>boolean</span></td>
-      <td colspan="1" class="summary">Forward the inputs to the client below the wibox.</td>
+      <td colspan="1" class="summary">
+        Forward the inputs to the client below the wibox.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from wibox
       </td>
@@ -517,7 +594,9 @@ wb:setup {
     <tr>
       <td class="shortname" ><a href="#buttons">buttons</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>buttons_table</span></td>
-      <td colspan="1" class="summary">Get or set mouse buttons bindings to a wibox.</td>
+      <td colspan="1" class="summary">
+        Get or set mouse buttons bindings to a wibox.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from wibox
       </td>
@@ -525,7 +604,9 @@ wb:setup {
     <tr>
       <td class="shortname" ><a href="#bg">bg</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>c</span></td>
-      <td colspan="1" class="summary">The background of the wibox.</td>
+      <td colspan="1" class="summary">
+        The background of the wibox.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from wibox
       </td>
@@ -533,7 +614,9 @@ wb:setup {
     <tr>
       <td class="shortname" ><a href="#bgimage">bgimage</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>gears.suface <i>or</i> string <i>or</i> function</span></td>
-      <td colspan="1" class="summary">The background image of the drawable.</td>
+      <td colspan="1" class="summary">
+        The background image of the drawable.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from wibox
       </td>
@@ -541,7 +624,9 @@ wb:setup {
     <tr>
       <td class="shortname" ><a href="#fg">fg</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>color</span></td>
-      <td colspan="1" class="summary">The foreground (text) of the wibox.</td>
+      <td colspan="1" class="summary">
+        The foreground (text) of the wibox.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from wibox
       </td>
@@ -549,7 +634,9 @@ wb:setup {
     <tr>
       <td class="shortname" ><a href="#preferred_positions">preferred_positions</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>table <i>or</i> string</span></td>
-      <td colspan="1" class="summary">Set the preferred popup position relative to its parent.</td>
+      <td colspan="1" class="summary">
+        Set the preferred popup position relative to its parent.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from awful.popup
       </td>
@@ -557,7 +644,9 @@ wb:setup {
     <tr>
       <td class="shortname" ><a href="#preferred_anchors">preferred_anchors</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>table <i>or</i> string</span></td>
-      <td colspan="1" class="summary">Set the preferred popup anchors relative to the parent.</td>
+      <td colspan="1" class="summary">
+        Set the preferred popup anchors relative to the parent.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from awful.popup
       </td>
@@ -565,7 +654,9 @@ wb:setup {
     <tr>
       <td class="shortname" ><a href="#current_position">current_position</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>string</span></td>
-      <td colspan="1" class="summary">The current position relative to the parent object.</td>
+      <td colspan="1" class="summary">
+        The current position relative to the parent object.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from awful.popup
       </td>
@@ -573,7 +664,9 @@ wb:setup {
     <tr>
       <td class="shortname" ><a href="#current_anchor">current_anchor</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>string</span></td>
-      <td colspan="1" class="summary">Get the current anchor relative to the parent object.</td>
+      <td colspan="1" class="summary">
+        Get the current anchor relative to the parent object.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from awful.popup
       </td>
@@ -581,7 +674,9 @@ wb:setup {
     <tr>
       <td class="shortname" ><a href="#hide_on_right_click">hide_on_right_click</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>boolean</span></td>
-      <td colspan="1" class="summary">Hide the popup when right clicked.</td>
+      <td colspan="1" class="summary">
+        Hide the popup when right clicked.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from awful.popup
       </td>
@@ -589,7 +684,9 @@ wb:setup {
     <tr>
       <td class="shortname" ><a href="#minimum_width">minimum_width</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>number</span></td>
-      <td colspan="1" class="summary">The popup minimum width.</td>
+      <td colspan="1" class="summary">
+        The popup minimum width.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from awful.popup
       </td>
@@ -597,7 +694,9 @@ wb:setup {
     <tr>
       <td class="shortname" ><a href="#minimum_height">minimum_height</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>number</span></td>
-      <td colspan="1" class="summary">The popup minimum height.</td>
+      <td colspan="1" class="summary">
+        The popup minimum height.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from awful.popup
       </td>
@@ -605,7 +704,9 @@ wb:setup {
     <tr>
       <td class="shortname" ><a href="#maximum_width">maximum_width</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>number</span></td>
-      <td colspan="1" class="summary">The popup maximum width.</td>
+      <td colspan="1" class="summary">
+        The popup maximum width.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from awful.popup
       </td>
@@ -613,7 +714,9 @@ wb:setup {
     <tr>
       <td class="shortname" ><a href="#maximum_height">maximum_height</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>number</span></td>
-      <td colspan="1" class="summary">The popup maximum height.</td>
+      <td colspan="1" class="summary">
+        The popup maximum height.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from awful.popup
       </td>
@@ -621,7 +724,9 @@ wb:setup {
     <tr>
       <td class="shortname" ><a href="#offset">offset</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>table <i>or</i> number</span></td>
-      <td colspan="1" class="summary">The distance between the popup and its parent (if any).</td>
+      <td colspan="1" class="summary">
+        The distance between the popup and its parent (if any).
+      </td>
       <td class="baseclass" nowrap>
         Inherited from awful.popup
       </td>
@@ -629,7 +734,9 @@ wb:setup {
     <tr>
       <td class="shortname" ><a href="#placement">placement</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>function <i>or</i> string <i>or</i> boolean</span></td>
-      <td colspan="1" class="summary">Set the placement function.</td>
+      <td colspan="1" class="summary">
+        Set the placement function.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from awful.popup
       </td>
@@ -642,14 +749,18 @@ wb:setup {
         <a href="#remove">:remove <span class='function_args'> <b>(</b><b>)</b></span></a>
         <span class="summarytype"></span>
       </td>
-      <td colspan="2" class="summary">Remove a wibar.</td>
+      <td colspan="2" class="summary">
+        Remove a wibar.
+      </td>
     </tr>
     <tr>
       <td class="name" >
         <a href="#geometry">:geometry <span class='function_args'> <b>(</b>A<b>)</b></span></a>
         <span class="summarytype"><span class='summary_type'> -&gt;&nbsp;()</span></span>
       </td>
-      <td colspan="1" class="summary">Get or set wibox geometry.</td>
+      <td colspan="1" class="summary">
+        Get or set wibox geometry.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from wibox
       </td>
@@ -659,7 +770,9 @@ wb:setup {
         <a href="#struts">:struts <span class='function_args'> <b>(</b>strut<b>)</b></span></a>
         <span class="summarytype"><span class='summary_type'> -&gt;&nbsp;()</span></span>
       </td>
-      <td colspan="1" class="summary">Get or set wibox struts.</td>
+      <td colspan="1" class="summary">
+        Get or set wibox struts.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from wibox
       </td>
@@ -669,7 +782,9 @@ wb:setup {
         <a href="#setup">:setup <span class='function_named_args'><b>{</b>[args]<b>}</b></span></a>
         <span class="summarytype"></span>
       </td>
-      <td colspan="1" class="summary">Set a declarative widget hierarchy description.</td>
+      <td colspan="1" class="summary">
+        Set a declarative widget hierarchy description.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from wibox
       </td>
@@ -679,7 +794,9 @@ wb:setup {
         <a href="#find_widgets">:find_widgets <span class='function_args'> <b>(</b>x, y<b>)</b></span></a>
         <span class="summarytype"><span class='summary_type'> -&gt;&nbsp;table</span></span>
       </td>
-      <td colspan="1" class="summary">Find a widget by a point.</td>
+      <td colspan="1" class="summary">
+        Find a widget by a point.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from wibox
       </td>
@@ -689,7 +806,9 @@ wb:setup {
         <a href="#emit_signal">:emit_signal <span class='function_args'> <b>(</b>name, ...<b>)</b></span></a>
         <span class="summarytype"></span>
       </td>
-      <td colspan="1" class="summary">Emit a signal.</td>
+      <td colspan="1" class="summary">
+        Emit a signal.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from gears.object
       </td>
@@ -699,7 +818,9 @@ wb:setup {
         <a href="#connect_signal">:connect_signal <span class='function_args'> <b>(</b>name, func<b>)</b></span></a>
         <span class="summarytype"></span>
       </td>
-      <td colspan="1" class="summary">Connect to a signal.</td>
+      <td colspan="1" class="summary">
+        Connect to a signal.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from gears.object
       </td>
@@ -709,7 +830,9 @@ wb:setup {
         <a href="#weak_connect_signal">:weak_connect_signal <span class='function_args'> <b>(</b>name, func<b>)</b></span></a>
         <span class="summarytype"></span>
       </td>
-      <td colspan="1" class="summary">Connect to a signal weakly.</td>
+      <td colspan="1" class="summary">
+        Connect to a signal weakly.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from gears.object
       </td>
@@ -719,7 +842,9 @@ wb:setup {
         <a href="#move_next_to">:move_next_to <span class='function_args'> <b>(</b>[obj=mouse]<b>)</b></span></a>
         <span class="summarytype"><span class='summary_type'> -&gt;&nbsp;table</span></span>
       </td>
-      <td colspan="1" class="summary">Move the wibox to a position relative to <code>geo</code>.</td>
+      <td colspan="1" class="summary">
+        Move the wibox to a position relative to <code>geo</code>.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from awful.popup
       </td>
@@ -729,7 +854,9 @@ wb:setup {
         <a href="#bind_to_widget">:bind_to_widget <span class='function_args'> <b>(</b>widget[, button=1]<b>)</b></span></a>
         <span class="summarytype"></span>
       </td>
-      <td colspan="1" class="summary">Bind the popup to a widget button press.</td>
+      <td colspan="1" class="summary">
+        Bind the popup to a widget button press.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from awful.popup
       </td>
@@ -739,7 +866,9 @@ wb:setup {
         <a href="#unbind_to_widget">:unbind_to_widget <span class='function_args'> <b>(</b>widget<b>)</b></span></a>
         <span class="summarytype"></span>
       </td>
-      <td colspan="1" class="summary">Unbind the popup from a widget button.</td>
+      <td colspan="1" class="summary">
+        Unbind the popup from a widget button.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from awful.popup
       </td>
@@ -749,7 +878,9 @@ wb:setup {
         <a href="#to_widget">:to_widget <span class='function_args'> <b>(</b><b>)</b></span></a>
         <span class="summarytype"><span class='summary_type'> -&gt;&nbsp;widget</span></span>
       </td>
-      <td colspan="1" class="summary">Create a widget that reflects the current state of this wibox.</td>
+      <td colspan="1" class="summary">
+        Create a widget that reflects the current state of this wibox.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from wibox
       </td>
@@ -759,7 +890,9 @@ wb:setup {
         <a href="#save_to_svg">:save_to_svg <span class='function_args'> <b>(</b>path[, context=nil]<b>)</b></span></a>
         <span class="summarytype"></span>
       </td>
-      <td colspan="1" class="summary">Save a screenshot of the wibox to <code>path</code>.</td>
+      <td colspan="1" class="summary">
+        Save a screenshot of the wibox to <code>path</code>.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from wibox
       </td>
@@ -769,7 +902,9 @@ wb:setup {
         <a href="#draw">:draw <span class='function_args'> <b>(</b>wibox<b>)</b></span></a>
         <span class="summarytype"></span>
       </td>
-      <td colspan="1" class="summary">Redraw a wibox.</td>
+      <td colspan="1" class="summary">
+        Redraw a wibox.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from wibox
       </td>
@@ -780,72 +915,121 @@ wb:setup {
     <tr>
       <td class="shortname" ><a href="#beautiful.wibar_stretch">beautiful.wibar_stretch</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>boolean</span></td>
-      <td colspan="2" class="summary">If the wibar needs to be stretched to fill the screen.</td>
+      <td colspan="2" class="summary">
+        If the wibar needs to be stretched to fill the screen.
+      </td>
+    </tr>
+    <tr>
+      <td class="shortname" ><a href="#beautiful.wibar_favor_vertical">beautiful.wibar_favor_vertical</a></td>
+      <td class="summarytype" nowrap><span class='summary_type'>boolean</span></td>
+      <td colspan="2" class="summary">
+        If there is both vertical and horizontal wibar, give more space to vertical ones.
+      </td>
     </tr>
     <tr>
       <td class="shortname" ><a href="#beautiful.wibar_border_width">beautiful.wibar_border_width</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>integer</span></td>
-      <td colspan="2" class="summary">The wibar border width.</td>
+      <td colspan="2" class="summary">
+        The wibar border width.
+      </td>
     </tr>
     <tr>
       <td class="shortname" ><a href="#beautiful.wibar_border_color">beautiful.wibar_border_color</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>string</span></td>
-      <td colspan="2" class="summary">The wibar border color.</td>
+      <td colspan="2" class="summary">
+        The wibar border color.
+      </td>
     </tr>
     <tr>
       <td class="shortname" ><a href="#beautiful.wibar_ontop">beautiful.wibar_ontop</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>boolean</span></td>
-      <td colspan="2" class="summary">If the wibar is to be on top of other windows.</td>
+      <td colspan="2" class="summary">
+        If the wibar is to be on top of other windows.
+      </td>
     </tr>
     <tr>
       <td class="shortname" ><a href="#beautiful.wibar_cursor">beautiful.wibar_cursor</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>string</span></td>
-      <td colspan="2" class="summary">The wibar's mouse cursor.</td>
+      <td colspan="2" class="summary">
+        The wibar's mouse cursor.
+      </td>
     </tr>
     <tr>
       <td class="shortname" ><a href="#beautiful.wibar_opacity">beautiful.wibar_opacity</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>number</span></td>
-      <td colspan="2" class="summary">The wibar opacity, between 0 and 1.</td>
+      <td colspan="2" class="summary">
+        The wibar opacity, between 0 and 1.
+      </td>
     </tr>
     <tr>
       <td class="shortname" ><a href="#beautiful.wibar_type">beautiful.wibar_type</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>string</span></td>
-      <td colspan="2" class="summary">The window type (desktop, normal, dock, …).</td>
+      <td colspan="2" class="summary">
+        The window type (desktop, normal, dock, …).
+      </td>
     </tr>
     <tr>
       <td class="shortname" ><a href="#beautiful.wibar_width">beautiful.wibar_width</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>integer</span></td>
-      <td colspan="2" class="summary">The wibar's width.</td>
+      <td colspan="2" class="summary">
+        The wibar's width.
+      </td>
     </tr>
     <tr>
       <td class="shortname" ><a href="#beautiful.wibar_height">beautiful.wibar_height</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>integer</span></td>
-      <td colspan="2" class="summary">The wibar's height.</td>
+      <td colspan="2" class="summary">
+        The wibar's height.
+      </td>
     </tr>
     <tr>
       <td class="shortname" ><a href="#beautiful.wibar_bg">beautiful.wibar_bg</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>color</span></td>
-      <td colspan="2" class="summary">The wibar's background color.</td>
+      <td colspan="2" class="summary">
+        The wibar's background color.
+      </td>
     </tr>
     <tr>
       <td class="shortname" ><a href="#beautiful.wibar_bgimage">beautiful.wibar_bgimage</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>surface</span></td>
-      <td colspan="2" class="summary">The wibar's background image.</td>
+      <td colspan="2" class="summary">
+        The wibar's background image.
+      </td>
     </tr>
     <tr>
       <td class="shortname" ><a href="#beautiful.wibar_fg">beautiful.wibar_fg</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>color</span></td>
-      <td colspan="2" class="summary">The wibar's foreground (text) color.</td>
+      <td colspan="2" class="summary">
+        The wibar's foreground (text) color.
+      </td>
     </tr>
     <tr>
       <td class="shortname" ><a href="#beautiful.wibar_shape">beautiful.wibar_shape</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>gears.shape</span></td>
-      <td colspan="2" class="summary">The wibar's shape.</td>
+      <td colspan="2" class="summary">
+        The wibar's shape.
+      </td>
+    </tr>
+    <tr>
+      <td class="shortname" ><a href="#beautiful.wibar_margins">beautiful.wibar_margins</a></td>
+      <td class="summarytype" nowrap><span class='summary_type'>number <i>or</i> table</span></td>
+      <td colspan="2" class="summary">
+        The wibar's margins.
+      </td>
+    </tr>
+    <tr>
+      <td class="shortname" ><a href="#beautiful.wibar_align">beautiful.wibar_align</a></td>
+      <td class="summarytype" nowrap><span class='summary_type'>string</span></td>
+      <td colspan="2" class="summary">
+        The wibar's alignments.
+      </td>
     </tr>
     <tr>
       <td class="shortname" ><a href="#beautiful.bg_normal">beautiful.bg_normal</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>color</span></td>
-      <td colspan="1" class="summary">The default background color.</td>
+      <td colspan="1" class="summary">
+        The default background color.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from wibox
       </td>
@@ -853,7 +1037,9 @@ wb:setup {
     <tr>
       <td class="shortname" ><a href="#beautiful.fg_normal">beautiful.fg_normal</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>color</span></td>
-      <td colspan="1" class="summary">The default foreground (text) color.</td>
+      <td colspan="1" class="summary">
+        The default foreground (text) color.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from wibox
       </td>
@@ -863,33 +1049,27 @@ wb:setup {
 <table class="function_list">
     <tr>
       <td class="name" >
-        <a href="#get_position">awful.wibar.get_position<i class="deprecated_label"> [deprecated]</i></a>
-      </td>
-      <td colspan="2" class="summary">Get a wibox position if it has been set, or return top.</td>
-    </tr>
-    <tr>
-      <td class="name" >
-        <a href="#set_position">awful.wibar.set_position<i class="deprecated_label"> [deprecated]</i></a>
-      </td>
-      <td colspan="2" class="summary">Put a wibox on a screen at this position.</td>
-    </tr>
-    <tr>
-      <td class="name" >
         <a href="#attach">awful.wibar.attach<i class="deprecated_label"> [deprecated]</i></a>
       </td>
-      <td colspan="2" class="summary">Attach a wibox to a screen.</td>
+      <td colspan="2" class="summary">
+        Attach a wibox to a screen.
+      </td>
     </tr>
     <tr>
       <td class="name" >
         <a href="#align">awful.wibar.align<i class="deprecated_label"> [deprecated]</i></a>
       </td>
-      <td colspan="2" class="summary">Align a wibox.</td>
+      <td colspan="2" class="summary">
+        Align a wibox.
+      </td>
     </tr>
     <tr>
       <td class="name" >
         <a href="#awful.wibox.stretch">awful.wibox.stretch<i class="deprecated_label"> [deprecated]</i></a>
       </td>
-      <td colspan="2" class="summary">Stretch a wibox so it takes all screen width or height.</td>
+      <td colspan="2" class="summary">
+        Stretch a wibox so it takes all screen width or height.
+      </td>
     </tr>
 </table>
 
@@ -920,28 +1100,40 @@ wb:setup {
 
         <ul>
         <li><span class="parameter">position</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          The position.
         </li>
         <li><span class="parameter">stretch</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          If the wibar need to be stretched to fill the screen.
+        </li>
+        <li><span class="parameter">restrict_workarea</span>
+            <span class="types"><span class="type">boolean</span></span>
+         Allow or deny the tiled clients to cover the wibar.
+        </li>
+        <li><span class="parameter">align</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         How to align non-stretched wibars.
+        </li>
+        <li><span class="parameter">margins</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a> or <span class="type">number</span></span>
+         The wibar margins.
         </li>
         <li><span class="parameter">border_width</span>
             <span class="types"><span class="type">integer</span></span>
          Border width.
         </li>
         <li><span class="parameter">border_color</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          Border color.
         </li>
         <li><span class="parameter">ontop</span>
             <span class="types"><span class="type">boolean</span></span>
          On top of other windows.
-         (<em>default</em> false)
+         (<em>default</em> <code>false</code>)
         </li>
         <li><span class="parameter">cursor</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          The mouse cursor.
         </li>
         <li><span class="parameter">visible</span>
@@ -951,10 +1143,10 @@ wb:setup {
         <li><span class="parameter">opacity</span>
             <span class="types"><span class="type">number</span></span>
          The opacity, between 0 and 1.
-         (<em>default</em> 1)
+         (<em>default</em> <code>1</code>)
         </li>
         <li><span class="parameter">type</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          The window type (desktop, normal, dock, …).
         </li>
         <li><span class="parameter">x</span>
@@ -1010,7 +1202,7 @@ wb:setup {
             <span class="types"><span class="type">boolean</span></span>
          If the inputs are
   forward to the element below.
-         (<em>default</em> false)
+         (<em>default</em> <code>false</code>)
         </li>
         </li></ul>
     </ul>
@@ -1029,7 +1221,7 @@ wb:setup {
 
 
 
-    <span id=item1927 class="hide_extra">
+    <span id=item1961 class="hide_extra">
     </span>
 
 </dd>
@@ -1047,21 +1239,55 @@ wb:setup {
     </span>
     </dt>
     <dd>
-    If the wibar needs to be stretched to fill the screen.
+    If the wibar needs to be stretched to fill the screen. </p>
+
+
+
+<p><img src="../images/AUTOGEN_awful_wibar_stretch.svg" alt="Usage example"/>
 
 
 
 
+    <h3>See also:</h3>
+    <ul>
+         <a href="../popups_and_bars/awful.wibar.html#align">align</a>
+    </ul>
 
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example">awful.wibar {
+    position = <span class="string">"top"</span>,
+    screen   = screen[<span class="number">1</span>],
+    stretch  = <span class="keyword">true</span>,
+    width    = <span class="number">196</span>,
+    widget   = {
+        text   = <span class="string">"stretched"</span>,
+        align  = <span class="string">"center"</span>,
+        widget = wibox.widget.textbox
+    },
+}
+
+awful.wibar {
+    position = <span class="string">"top"</span>,
+    screen   = screen[<span class="number">2</span>],
+    stretch  = <span class="keyword">false</span>,
+    width    = <span class="number">196</span>,
+    widget   = {
+        text   = <span class="string">"not stretched"</span>,
+        align  = <span class="string">"center"</span>,
+        widget = wibox.widget.textbox
+    },
+}</pre>
+    </ul>
 
      <br />
-     <center id=button1928>
-     <a class="show_more_button" onclick="show_extra('1928')">
+     <center id=button1962>
+     <a class="show_more_button" onclick="show_extra('1962')">
       Click to display more
      </a>
      </center>
 
-    <span id=item1928 class="hide_extra">
+    <span id=item1962 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::stretch</code></span>  When the <a href="../popups_and_bars/awful.wibar.html#stretch">stretch</a> value changes.</li>
@@ -1078,6 +1304,250 @@ wb:setup {
          </tr>
           <tr><td><a href="../popups_and_bars/awful.wibar.html#beautiful.wibar_stretch">beautiful.wibar_stretch</a></td><td>Fallback when <a href="../popups_and_bars/awful.wibar.html#stretch">stretch</a> isn't set.</td></tr>
      </table>
+    </span>
+
+</dd>
+    <dt>
+    <a name = "align"></a>
+    <strong>align</strong>
+    <span class="proptype"><span class='summary_type'>string</span></span>
+    <span class="baseclass" >
+         &middot 1 signal
+         &middot 1 theme variable
+    </span>
+    </dt>
+    <dd>
+    How to align non-stretched wibars. </p>
+
+<p> Values are:</p>
+
+<ul>
+    <li><code>&quot;top&quot;</code></li>
+    <li><code>&quot;bottom&quot;</code></li>
+    <li><code>&quot;left&quot;</code></li>
+    <li><code>&quot;right&quot;</code></li>
+    <li><code>&quot;centered&quot;</code></li>
+</ul>
+
+
+
+<p><img src="../images/AUTOGEN_awful_wibar_align.svg" alt="Usage example"/>
+
+
+
+
+    <h3>See also:</h3>
+    <ul>
+         <a href="../popups_and_bars/awful.wibar.html#stretch">stretch</a>
+    </ul>
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example"><span class="keyword">for</span> s, align <span class="keyword">in</span> <span class="global">ipairs</span> { <span class="string">"left"</span>, <span class="string">"centered"</span>, <span class="string">"right"</span> } <span class="keyword">do</span>
+    awful.wibar {
+        position = <span class="string">"top"</span>,
+        screen   = screen[s],
+        stretch  = <span class="keyword">false</span>,
+        width    = <span class="number">196</span>,
+        align    = align,
+        widget   = {
+            text   = align,
+            align  = <span class="string">"center"</span>,
+            widget = wibox.widget.textbox
+        },
+    }
+<span class="keyword">end</span>
+
+<span class="keyword">for</span> s, align <span class="keyword">in</span> <span class="global">ipairs</span> { <span class="string">"top"</span>, <span class="string">"centered"</span>, <span class="string">"bottom"</span> } <span class="keyword">do</span>
+    awful.wibar {
+        position = <span class="string">"left"</span>,
+        screen   = screen[s+<span class="number">3</span>],
+        stretch  = <span class="keyword">false</span>,
+        height   = <span class="number">128</span>,
+        align    = align,
+        widget   = {
+            {
+                text   = align,
+                align  = <span class="string">"center"</span>,
+                widget = wibox.widget.textbox
+            },
+            direction = <span class="string">"east"</span>,
+            widget    = wibox.container.rotate
+        },
+    }
+<span class="keyword">end</span></pre>
+    </ul>
+
+     <br />
+     <center id=button1963>
+     <a class="show_more_button" onclick="show_extra('1963')">
+      Click to display more
+     </a>
+     </center>
+
+    <span id=item1963 class="hide_extra">
+     <h3>Emit signals:</h3>
+     <ul>
+          <li><span class="parameter"><code>property::align</code></span>  When the <a href="../popups_and_bars/awful.wibar.html#align">align</a> value changes.</li>
+           <ul>
+             <li><span class="parameter"><code>self</code></span> <span class="types"><a href="../popups_and_bars/awful.wibar.html#">awful.wibar</a></span> The object which changed (useful when connecting many object to the same callback).</li>
+             <li><span class="parameter"><code>new_value</code></span> <span class="types"><a href="../popups_and_bars/awful.wibar.html#align">align</a></span> The new value affected to the property.</li>
+           </ul>
+     </ul>
+     <h3>Consumed theme variables:</h3>
+     <table class='widget_list' border=1>
+         <tr style='font-weight: bold;'>
+           <th>Theme variable</th>
+           <th>Usage</th>
+         </tr>
+          <tr><td><a href="../popups_and_bars/awful.wibar.html#beautiful.wibar_align">beautiful.wibar_align</a></td><td>Fallback when <a href="../popups_and_bars/awful.wibar.html#align">align</a> isn't set.</td></tr>
+     </table>
+    </span>
+
+</dd>
+    <dt>
+    <a name = "margins"></a>
+    <strong>margins</strong>
+    <span class="proptype"><span class='summary_type'>number <i>or</i> table</span></span>
+    <span class="baseclass" >
+         &middot 1 signal
+         &middot 1 theme variable
+    </span>
+    </dt>
+    <dd>
+    Margins on each side of the wibar. </p>
+
+<p> It can either be a table with <code>top</code>, <code>bottom</code>, <code>left</code> and <code>right</code>
+ properties, or a single number that applies to all four sides.</p>
+
+
+
+<p><img src="../images/AUTOGEN_awful_wibar_margins.svg" alt="Usage example"/>
+
+
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example">awful.wibar {
+    position = <span class="string">"top"</span>,
+    screen   = screen[<span class="number">1</span>],
+    stretch  = <span class="keyword">false</span>,
+    width    = <span class="number">196</span>,
+    margins  = <span class="number">24</span>,
+    widget   = {
+        align  = <span class="string">"center"</span>,
+        text   = <span class="string">"unform margins"</span>,
+        widget = wibox.widget.textbox
+    }
+}
+
+awful.wibar {
+    position = <span class="string">"top"</span>,
+    screen   = screen[<span class="number">2</span>],
+    stretch  = <span class="keyword">false</span>,
+    width    = <span class="number">196</span>,
+    margins = {
+        top    = <span class="number">12</span>,
+        bottom = <span class="number">5</span>
+    },
+    widget   = {
+        align  = <span class="string">"center"</span>,
+        text   = <span class="string">"non unform margins"</span>,
+        widget = wibox.widget.textbox
+    }
+}</pre>
+    </ul>
+
+     <br />
+     <center id=button1964>
+     <a class="show_more_button" onclick="show_extra('1964')">
+      Click to display more
+     </a>
+     </center>
+
+    <span id=item1964 class="hide_extra">
+     <h3>Emit signals:</h3>
+     <ul>
+          <li><span class="parameter"><code>property::margins</code></span>  When the <a href="../popups_and_bars/awful.wibar.html#margins">margins</a> value changes.</li>
+           <ul>
+             <li><span class="parameter"><code>self</code></span> <span class="types"><a href="../popups_and_bars/awful.wibar.html#">awful.wibar</a></span> The object which changed (useful when connecting many object to the same callback).</li>
+             <li><span class="parameter"><code>new_value</code></span> <span class="types"><a href="../popups_and_bars/awful.wibar.html#margins">margins</a></span> The new value affected to the property.</li>
+           </ul>
+     </ul>
+     <h3>Consumed theme variables:</h3>
+     <table class='widget_list' border=1>
+         <tr style='font-weight: bold;'>
+           <th>Theme variable</th>
+           <th>Usage</th>
+         </tr>
+          <tr><td><a href="../popups_and_bars/awful.wibar.html#beautiful.wibar_margins">beautiful.wibar_margins</a></td><td>Fallback when <a href="../popups_and_bars/awful.wibar.html#margins">margins</a> isn't set.</td></tr>
+     </table>
+    </span>
+
+</dd>
+    <dt>
+    <a name = "restrict_workarea"></a>
+    <strong>restrict_workarea</strong>
+    <span class="proptype"><span class='summary_type'>boolean</span></span>
+    <span class="baseclass" >
+         &middot 1 signal
+    </span>
+    </dt>
+    <dd>
+    Allow or deny the tiled clients to cover the wibar. </p>
+
+<p> In the example below, we can see that the first screen workarea
+ shrunk by the height of the wibar while the second screen is
+ unchanged.</p>
+
+
+
+<p><img src="../images/AUTOGEN_screen_wibar_workarea.svg" alt="Usage example"/>
+
+
+
+
+    <h3>See also:</h3>
+    <ul>
+         <li><a href="../core_components/client.html#struts">client.struts</a></li>
+         <li><a href="../core_components/screen.html#workarea">screen.workarea</a></li>
+    </ul>
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example"><span class="keyword">local</span> screen1_wibar = awful.wibar {
+    position          = <span class="string">"top"</span>,
+    restrict_workarea = <span class="keyword">true</span>,
+    height            = <span class="number">24</span>,
+    screen            = screen[<span class="number">1</span>],
+}
+
+<span class="keyword">local</span> screen2_wibar = awful.wibar {
+    position          = <span class="string">"top"</span>,
+    restrict_workarea = <span class="keyword">false</span>,
+    height            = <span class="number">24</span>,
+    screen            = screen[<span class="number">2</span>],
+}</pre>
+    </ul>
+
+     <br />
+     <center id=button1965>
+     <a class="show_more_button" onclick="show_extra('1965')">
+      Click to display more
+     </a>
+     </center>
+
+    <span id=item1965 class="hide_extra">
+     <h3>Emit signals:</h3>
+     <ul>
+          <li><span class="parameter"><code>property::restrict_workarea</code></span>  When the <a href="../popups_and_bars/awful.wibar.html#restrict_workarea">restrict_workarea</a> value changes.</li>
+           <ul>
+             <li><span class="parameter"><code>self</code></span> <span class="types"><a href="../popups_and_bars/awful.wibar.html#">awful.wibar</a></span> The object which changed (useful when connecting many object to the same callback).</li>
+             <li><span class="parameter"><code>new_value</code></span> <span class="types"><a href="../popups_and_bars/awful.wibar.html#restrict_workarea">restrict_workarea</a></span> The new value affected to the property.</li>
+           </ul>
+     </ul>
     </span>
 
 </dd>
@@ -1104,10 +1574,40 @@ wb:setup {
 
 
 
+<p><img src="../images/AUTOGEN_awful_wibar_position.svg" alt="Usage example"/></p>
+
+
+<pre><code>local colors = {
+    top    = "#ffff00",
+    bottom = "#ff00ff",
+    left   = "#00ffff",
+    right  = "#ffcc00"
+}
+
+for _, position in ipairs { "top", "bottom", "left", "right" } do
+    awful.wibar {
+        position = position,
+        bg       = colors[position],
+        widget   = {
+            {
+                text   = position,
+                align  = "center",
+                widget = wibox.widget.textbox
+            },
+            direction = (position == "left" or position == "right") and
+                "east" or "north",
+            widget    = wibox.container.rotate
+        },
+    }
+end
+</code></pre>
+
+
+
     <h3>Type constraints:</h3>
     <ul>
         <li><span class="parameter">position</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          Either "left", right", "top" or "bottom"
         </li>
     </ul>
@@ -1117,13 +1617,13 @@ wb:setup {
 
 
      <br />
-     <center id=button1929>
-     <a class="show_more_button" onclick="show_extra('1929')">
+     <center id=button1966>
+     <a class="show_more_button" onclick="show_extra('1966')">
       Click to display more
      </a>
      </center>
 
-    <span id=item1929 class="hide_extra">
+    <span id=item1966 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::position</code></span>  When the <a href="../popups_and_bars/awful.wibar.html#position">position</a> value changes.</li>
@@ -1153,13 +1653,13 @@ wb:setup {
 
 
      <br />
-     <center id=button1930>
-     <a class="show_more_button" onclick="show_extra('1930')">
+     <center id=button1967>
+     <a class="show_more_button" onclick="show_extra('1967')">
       Click to display more
      </a>
      </center>
 
-    <span id=item1930 class="hide_extra">
+    <span id=item1967 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::border_width</code></span>  When the <a href="../popups_and_bars/awful.wibar.html#border_width">border_width</a> value changes.</li>
@@ -1208,13 +1708,13 @@ Green   Alpha
 
 
      <br />
-     <center id=button1931>
-     <a class="show_more_button" onclick="show_extra('1931')">
+     <center id=button1968>
+     <a class="show_more_button" onclick="show_extra('1968')">
       Click to display more
      </a>
      </center>
 
-    <span id=item1931 class="hide_extra">
+    <span id=item1968 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::border_color</code></span>  When the <a href="../popups_and_bars/awful.wibar.html#border_color">border_color</a> value changes.</li>
@@ -1243,13 +1743,13 @@ Green   Alpha
 
 
      <br />
-     <center id=button1932>
-     <a class="show_more_button" onclick="show_extra('1932')">
+     <center id=button1969>
+     <a class="show_more_button" onclick="show_extra('1969')">
       Click to display more
      </a>
      </center>
 
-    <span id=item1932 class="hide_extra">
+    <span id=item1969 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::ontop</code></span>  When the <a href="../popups_and_bars/awful.wibar.html#ontop">ontop</a> value changes.</li>
@@ -1282,13 +1782,13 @@ Green   Alpha
 
 
      <br />
-     <center id=button1933>
-     <a class="show_more_button" onclick="show_extra('1933')">
+     <center id=button1970>
+     <a class="show_more_button" onclick="show_extra('1970')">
       Click to display more
      </a>
      </center>
 
-    <span id=item1933 class="hide_extra">
+    <span id=item1970 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::cursor</code></span>  When the <a href="../popups_and_bars/awful.wibar.html#cursor">cursor</a> value changes.</li>
@@ -1317,13 +1817,13 @@ Green   Alpha
 
 
      <br />
-     <center id=button1934>
-     <a class="show_more_button" onclick="show_extra('1934')">
+     <center id=button1971>
+     <a class="show_more_button" onclick="show_extra('1971')">
       Click to display more
      </a>
      </center>
 
-    <span id=item1934 class="hide_extra">
+    <span id=item1971 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::visible</code></span>  When the <a href="../popups_and_bars/awful.wibar.html#visible">visible</a> value changes.</li>
@@ -1359,13 +1859,13 @@ Green   Alpha
 
 
      <br />
-     <center id=button1935>
-     <a class="show_more_button" onclick="show_extra('1935')">
+     <center id=button1972>
+     <a class="show_more_button" onclick="show_extra('1972')">
       Click to display more
      </a>
      </center>
 
-    <span id=item1935 class="hide_extra">
+    <span id=item1972 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::opacity</code></span>  When the <a href="../popups_and_bars/awful.wibar.html#opacity">opacity</a> value changes.</li>
@@ -1398,13 +1898,13 @@ Green   Alpha
 
 
      <br />
-     <center id=button1936>
-     <a class="show_more_button" onclick="show_extra('1936')">
+     <center id=button1973>
+     <a class="show_more_button" onclick="show_extra('1973')">
       Click to display more
      </a>
      </center>
 
-    <span id=item1936 class="hide_extra">
+    <span id=item1973 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::type</code></span>  When the <a href="../popups_and_bars/awful.wibar.html#type">type</a> value changes.</li>
@@ -1433,13 +1933,13 @@ Green   Alpha
 
 
      <br />
-     <center id=button1937>
-     <a class="show_more_button" onclick="show_extra('1937')">
+     <center id=button1974>
+     <a class="show_more_button" onclick="show_extra('1974')">
       Click to display more
      </a>
      </center>
 
-    <span id=item1937 class="hide_extra">
+    <span id=item1974 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::x</code></span>  When the <a href="../popups_and_bars/awful.wibar.html#x">x</a> value changes.</li>
@@ -1468,13 +1968,13 @@ Green   Alpha
 
 
      <br />
-     <center id=button1938>
-     <a class="show_more_button" onclick="show_extra('1938')">
+     <center id=button1975>
+     <a class="show_more_button" onclick="show_extra('1975')">
       Click to display more
      </a>
      </center>
 
-    <span id=item1938 class="hide_extra">
+    <span id=item1975 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::y</code></span>  When the <a href="../popups_and_bars/awful.wibar.html#y">y</a> value changes.</li>
@@ -1503,13 +2003,13 @@ Green   Alpha
 
 
      <br />
-     <center id=button1939>
-     <a class="show_more_button" onclick="show_extra('1939')">
+     <center id=button1976>
+     <a class="show_more_button" onclick="show_extra('1976')">
       Click to display more
      </a>
      </center>
 
-    <span id=item1939 class="hide_extra">
+    <span id=item1976 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::width</code></span>  When the <a href="../popups_and_bars/awful.wibar.html#width">width</a> value changes.</li>
@@ -1538,13 +2038,13 @@ Green   Alpha
 
 
      <br />
-     <center id=button1940>
-     <a class="show_more_button" onclick="show_extra('1940')">
+     <center id=button1977>
+     <a class="show_more_button" onclick="show_extra('1977')">
       Click to display more
      </a>
      </center>
 
-    <span id=item1940 class="hide_extra">
+    <span id=item1977 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::height</code></span>  When the <a href="../popups_and_bars/awful.wibar.html#height">height</a> value changes.</li>
@@ -1573,13 +2073,13 @@ Green   Alpha
 
 
      <br />
-     <center id=button1941>
-     <a class="show_more_button" onclick="show_extra('1941')">
+     <center id=button1978>
+     <a class="show_more_button" onclick="show_extra('1978')">
       Click to display more
      </a>
      </center>
 
-    <span id=item1941 class="hide_extra">
+    <span id=item1978 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::screen</code></span>  When the <a href="../core_components/screen.html#">screen</a> value changes.</li>
@@ -1609,13 +2109,13 @@ Green   Alpha
 
 
      <br />
-     <center id=button1942>
-     <a class="show_more_button" onclick="show_extra('1942')">
+     <center id=button1979>
+     <a class="show_more_button" onclick="show_extra('1979')">
       Click to display more
      </a>
      </center>
 
-    <span id=item1942 class="hide_extra">
+    <span id=item1979 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::drawable</code></span>  When the <a href="../core_components/drawable.html#">drawable</a> value changes.</li>
@@ -1644,13 +2144,13 @@ Green   Alpha
 
 
      <br />
-     <center id=button1943>
-     <a class="show_more_button" onclick="show_extra('1943')">
+     <center id=button1980>
+     <a class="show_more_button" onclick="show_extra('1980')">
       Click to display more
      </a>
      </center>
 
-    <span id=item1943 class="hide_extra">
+    <span id=item1980 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::widget</code></span>  When the <a href="../popups_and_bars/awful.wibar.html#widget">widget</a> value changes.</li>
@@ -1684,13 +2184,13 @@ Green   Alpha
 
 
      <br />
-     <center id=button1944>
-     <a class="show_more_button" onclick="show_extra('1944')">
+     <center id=button1981>
+     <a class="show_more_button" onclick="show_extra('1981')">
       Click to display more
      </a>
      </center>
 
-    <span id=item1944 class="hide_extra">
+    <span id=item1981 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::window</code></span>  When the <a href="../popups_and_bars/awful.wibar.html#window">window</a> value changes.</li>
@@ -1727,13 +2227,13 @@ Green   Alpha
 
 
      <br />
-     <center id=button1945>
-     <a class="show_more_button" onclick="show_extra('1945')">
+     <center id=button1982>
+     <a class="show_more_button" onclick="show_extra('1982')">
       Click to display more
      </a>
      </center>
 
-    <span id=item1945 class="hide_extra">
+    <span id=item1982 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::shape_bounding</code></span>  When the <a href="../popups_and_bars/awful.wibar.html#shape_bounding">shape_bounding</a> value changes.</li>
@@ -1769,13 +2269,13 @@ Green   Alpha
 
 
      <br />
-     <center id=button1946>
-     <a class="show_more_button" onclick="show_extra('1946')">
+     <center id=button1983>
+     <a class="show_more_button" onclick="show_extra('1983')">
       Click to display more
      </a>
      </center>
 
-    <span id=item1946 class="hide_extra">
+    <span id=item1983 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::shape_clip</code></span>  When the <a href="../popups_and_bars/awful.wibar.html#shape_clip">shape_clip</a> value changes.</li>
@@ -1812,13 +2312,13 @@ Green   Alpha
 
 
      <br />
-     <center id=button1947>
-     <a class="show_more_button" onclick="show_extra('1947')">
+     <center id=button1984>
+     <a class="show_more_button" onclick="show_extra('1984')">
       Click to display more
      </a>
      </center>
 
-    <span id=item1947 class="hide_extra">
+    <span id=item1984 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::shape_input</code></span>  When the <a href="../popups_and_bars/awful.wibar.html#shape_input">shape_input</a> value changes.</li>
@@ -1851,13 +2351,13 @@ Green   Alpha
 
 
      <br />
-     <center id=button1948>
-     <a class="show_more_button" onclick="show_extra('1948')">
+     <center id=button1985>
+     <a class="show_more_button" onclick="show_extra('1985')">
       Click to display more
      </a>
      </center>
 
-    <span id=item1948 class="hide_extra">
+    <span id=item1985 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::shape</code></span>  When the <a href="../popups_and_bars/awful.wibar.html#shape">shape</a> value changes.</li>
@@ -1897,13 +2397,13 @@ Green   Alpha
 
 
      <br />
-     <center id=button1949>
-     <a class="show_more_button" onclick="show_extra('1949')">
+     <center id=button1986>
+     <a class="show_more_button" onclick="show_extra('1986')">
       Click to display more
      </a>
      </center>
 
-    <span id=item1949 class="hide_extra">
+    <span id=item1986 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::input_passthrough</code></span>  When the <a href="../popups_and_bars/awful.wibar.html#input_passthrough">input_passthrough</a> value changes.</li>
@@ -1939,13 +2439,13 @@ Green   Alpha
 
 
      <br />
-     <center id=button1950>
-     <a class="show_more_button" onclick="show_extra('1950')">
+     <center id=button1987>
+     <a class="show_more_button" onclick="show_extra('1987')">
       Click to display more
      </a>
      </center>
 
-    <span id=item1950 class="hide_extra">
+    <span id=item1987 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::buttons</code></span>  When the <a href="../popups_and_bars/awful.wibar.html#buttons">buttons</a> value changes.</li>
@@ -1993,13 +2493,13 @@ Green   Alpha
 
 
      <br />
-     <center id=button1951>
-     <a class="show_more_button" onclick="show_extra('1951')">
+     <center id=button1988>
+     <a class="show_more_button" onclick="show_extra('1988')">
       Click to display more
      </a>
      </center>
 
-    <span id=item1951 class="hide_extra">
+    <span id=item1988 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::bg</code></span>  When the <a href="../popups_and_bars/awful.wibar.html#bg">bg</a> value changes.</li>
@@ -2037,7 +2537,7 @@ Green   Alpha
     <h3>Type constraints:</h3>
     <ul>
         <li><span class="parameter">image</span>
-            <span class="types"><span class="type">gears.suface</span>, <a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a> or <span class="type">function</span></span>
+            <span class="types"><span class="type">gears.suface</span>, <a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a> or <span class="type">function</span></span>
          A background image or a function.
         </li>
     </ul>
@@ -2051,13 +2551,13 @@ Green   Alpha
 
 
      <br />
-     <center id=button1952>
-     <a class="show_more_button" onclick="show_extra('1952')">
+     <center id=button1989>
+     <a class="show_more_button" onclick="show_extra('1989')">
       Click to display more
      </a>
      </center>
 
-    <span id=item1952 class="hide_extra">
+    <span id=item1989 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::bgimage</code></span>  When the <a href="../popups_and_bars/awful.wibar.html#bgimage">bgimage</a> value changes.</li>
@@ -2105,13 +2605,13 @@ Green   Alpha
 
 
      <br />
-     <center id=button1953>
-     <a class="show_more_button" onclick="show_extra('1953')">
+     <center id=button1990>
+     <a class="show_more_button" onclick="show_extra('1990')">
       Click to display more
      </a>
      </center>
 
-    <span id=item1953 class="hide_extra">
+    <span id=item1990 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::fg</code></span>  When the <a href="../popups_and_bars/awful.wibar.html#fg">fg</a> value changes.</li>
@@ -2164,13 +2664,13 @@ Green   Alpha
 <p><img src="../images/AUTOGEN_awful_popup_position1.svg" alt="Usage example"/></p>
 
 
-<pre><code>for _, v in ipairs {'left', 'right', 'bottom', 'top'} do
+<pre><code>for _, v in ipairs {"left", "right", "bottom", "top"} do
     local p2 = awful.popup {
         widget = wibox.widget {
-            text   = 'On the '..v,
+            text   = "On the "..v,
             widget = wibox.widget.textbox
         },
-        border_color        = '#777777',
+        border_color        = "#777777",
         border_width        = 2,
         preferred_positions = v,
         ontop               = true,
@@ -2187,14 +2687,14 @@ end
 <p><img src="../images/AUTOGEN_awful_popup_position2.svg" alt="Usage example"/></p>
 
 
-<pre><code>for _, v in ipairs {'left', 'right'} do
+<pre><code>for _, v in ipairs {"left", "right"} do
     local p2 = awful.popup {
         widget = wibox.widget {
-            text = 'On the '..v,
+            text = "On the "..v,
             forced_height = 100,
             widget = wibox.widget.textbox
         },
-        border_color  = '#0000ff',
+        border_color  = "#0000ff",
         preferred_positions = v,
         border_width  = 2,
     }
@@ -2207,7 +2707,7 @@ end
     <h3>Type constraints:</h3>
     <ul>
         <li><span class="parameter">preferred_positions</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a> or <a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a> or <a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          A position name or an ordered
   table of positions
         </li>
@@ -2223,13 +2723,13 @@ end
 
 
      <br />
-     <center id=button1730>
-     <a class="show_more_button" onclick="show_extra('1730')">
+     <center id=button1743>
+     <a class="show_more_button" onclick="show_extra('1743')">
       Click to display more
      </a>
      </center>
 
-    <span id=item1730 class="hide_extra">
+    <span id=item1743 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::preferred_positions</code></span>  When the <code>preferred_positions</code> value changes.</li>
@@ -2274,25 +2774,25 @@ end
 
 <pre><code> local p2 = awful.popup {
      widget = wibox.widget {
-         text   = 'A popup',
+         text   = "A popup",
          forced_height = 100,
          widget = wibox.widget.textbox
      },
-     border_color        = '#777777',
+     border_color        = "#777777",
      border_width        = 2,
-     preferred_positions = 'right',
-     preferred_anchors   = {'front', 'back'},
+     preferred_positions = "right",
+     preferred_anchors   = {"front", "back"},
  }
  local p4 = awful.popup {
      widget = wibox.widget {
-         text   = 'A popup2',
+         text   = "A popup2",
          forced_height = 100,
          widget = wibox.widget.textbox
      },
-     border_color        = '#777777',
+     border_color        = "#777777",
      border_width        = 2,
-     preferred_positions = 'right',
-     preferred_anchors   = {'front', 'back'},
+     preferred_positions = "right",
+     preferred_anchors   = {"front", "back"},
  }
 </code></pre>
 
@@ -2301,7 +2801,7 @@ end
     <h3>Type constraints:</h3>
     <ul>
         <li><span class="parameter">preferred_anchors</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a> or <a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a> or <a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          Either a single anchor name or a table
   ordered by priority.
         </li>
@@ -2317,13 +2817,13 @@ end
 
 
      <br />
-     <center id=button1731>
-     <a class="show_more_button" onclick="show_extra('1731')">
+     <center id=button1744>
+     <a class="show_more_button" onclick="show_extra('1744')">
       Click to display more
      </a>
      </center>
 
-    <span id=item1731 class="hide_extra">
+    <span id=item1744 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::preferred_anchors</code></span>  When the <code>preferred_anchors</code> value changes.</li>
@@ -2354,7 +2854,7 @@ end
     <h3>Type constraints:</h3>
     <ul>
         <li><span class="parameter">current_position</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          Either "left", "right", "top" or "bottom"
         </li>
     </ul>
@@ -2364,7 +2864,7 @@ end
 
 
 
-    <span id=item1732 class="hide_extra">
+    <span id=item1745 class="hide_extra">
     </span>
 
 </dd>
@@ -2387,7 +2887,7 @@ end
     <h3>Type constraints:</h3>
     <ul>
         <li><span class="parameter">current_anchor</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          Either "front", "middle", "back"
         </li>
     </ul>
@@ -2397,7 +2897,7 @@ end
 
 
 
-    <span id=item1733 class="hide_extra">
+    <span id=item1746 class="hide_extra">
     </span>
 
 </dd>
@@ -2419,13 +2919,13 @@ end
 
 
      <br />
-     <center id=button1734>
-     <a class="show_more_button" onclick="show_extra('1734')">
+     <center id=button1747>
+     <a class="show_more_button" onclick="show_extra('1747')">
       Click to display more
      </a>
      </center>
 
-    <span id=item1734 class="hide_extra">
+    <span id=item1747 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::hide_on_right_click</code></span>  When the <code>hide_on_right_click</code> value changes.</li>
@@ -2454,7 +2954,7 @@ end
         <li><span class="parameter">minimum_width</span>
             <span class="types"><span class="type">number</span></span>
          The minimum width.
-         (<em>default</em> 1)
+         (<em>default</em> <code>1</code>)
         </li>
     </ul>
 
@@ -2463,13 +2963,13 @@ end
 
 
      <br />
-     <center id=button1735>
-     <a class="show_more_button" onclick="show_extra('1735')">
+     <center id=button1748>
+     <a class="show_more_button" onclick="show_extra('1748')">
       Click to display more
      </a>
      </center>
 
-    <span id=item1735 class="hide_extra">
+    <span id=item1748 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::minimum_width</code></span>  When the <code>minimum_width</code> value changes.</li>
@@ -2498,7 +2998,7 @@ end
         <li><span class="parameter">minimum_height</span>
             <span class="types"><span class="type">number</span></span>
          The minimum height.
-         (<em>default</em> 1)
+         (<em>default</em> <code>1</code>)
         </li>
     </ul>
 
@@ -2507,13 +3007,13 @@ end
 
 
      <br />
-     <center id=button1736>
-     <a class="show_more_button" onclick="show_extra('1736')">
+     <center id=button1749>
+     <a class="show_more_button" onclick="show_extra('1749')">
       Click to display more
      </a>
      </center>
 
-    <span id=item1736 class="hide_extra">
+    <span id=item1749 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::minimum_height</code></span>  When the <code>minimum_height</code> value changes.</li>
@@ -2542,7 +3042,7 @@ end
         <li><span class="parameter">maximum_width</span>
             <span class="types"><span class="type">number</span></span>
          The maximum width.
-         (<em>default</em> 1)
+         (<em>default</em> <code>1</code>)
         </li>
     </ul>
 
@@ -2551,13 +3051,13 @@ end
 
 
      <br />
-     <center id=button1737>
-     <a class="show_more_button" onclick="show_extra('1737')">
+     <center id=button1750>
+     <a class="show_more_button" onclick="show_extra('1750')">
       Click to display more
      </a>
      </center>
 
-    <span id=item1737 class="hide_extra">
+    <span id=item1750 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::maximum_width</code></span>  When the <code>maximum_width</code> value changes.</li>
@@ -2586,7 +3086,7 @@ end
         <li><span class="parameter">maximum_height</span>
             <span class="types"><span class="type">number</span></span>
          The maximum height.
-         (<em>default</em> 1)
+         (<em>default</em> <code>1</code>)
         </li>
     </ul>
 
@@ -2595,13 +3095,13 @@ end
 
 
      <br />
-     <center id=button1738>
-     <a class="show_more_button" onclick="show_extra('1738')">
+     <center id=button1751>
+     <a class="show_more_button" onclick="show_extra('1751')">
       Click to display more
      </a>
      </center>
 
-    <span id=item1738 class="hide_extra">
+    <span id=item1751 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::maximum_height</code></span>  When the <code>maximum_height</code> value changes.</li>
@@ -2638,13 +3138,13 @@ end
 for i=1, 5 do
     local p2 = awful.popup {
         widget = wibox.widget {
-            text   = 'Hello world!  '..i..'  aaaa.',
+            text   = "Hello world!  "..i.."  aaaa.",
             widget = wibox.widget.textbox
         },
         border_color        = beautiful.border_color,
-        preferred_positions = 'bottom',
+        preferred_positions = "bottom",
         border_width        = 2,
-        preferred_anchors   = 'back',
+        preferred_anchors   = "back",
         placement           = (not previous) and awful.placement.top or nil,
         offset = {
              y = 10,
@@ -2663,12 +3163,12 @@ end
         <li><span class="parameter">x</span>
             <span class="types"><span class="type">number</span></span>
          The horizontal distance.
-         (<em>default</em> offset)
+         (<em>default</em> <code>offset</code>)
         </li>
         <li><span class="parameter">y</span>
             <span class="types"><span class="type">number</span></span>
          The vertical distance.
-         (<em>default</em> offset)
+         (<em>default</em> <code>offset</code>)
         </li>
         </li></ul>
     </ul>
@@ -2678,13 +3178,13 @@ end
 
 
      <br />
-     <center id=button1739>
-     <a class="show_more_button" onclick="show_extra('1739')">
+     <center id=button1752>
+     <a class="show_more_button" onclick="show_extra('1752')">
       Click to display more
      </a>
      </center>
 
-    <span id=item1739 class="hide_extra">
+    <span id=item1752 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::offset</code></span>  When the <code>offset</code> value changes.</li>
@@ -2711,10 +3211,10 @@ end
     <h3>Type constraints:</h3>
     <ul>
         <li><span class="parameter">The</span>
-            <span class="types"><span class="type">function</span>, <a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a> or <span class="type">boolean</span></span>
+            <span class="types"><span class="type">function</span>, <a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a> or <span class="type">boolean</span></span>
          placement function or name
  (or false to disable placement)
-         (<em>default</em> next_to)
+         (<em>default</em> <code>next_to</code>)
         </li>
         <li><span class="parameter">function</span>
 
@@ -2732,13 +3232,13 @@ end
 
 
      <br />
-     <center id=button1740>
-     <a class="show_more_button" onclick="show_extra('1740')">
+     <center id=button1753>
+     <a class="show_more_button" onclick="show_extra('1753')">
       Click to display more
      </a>
      </center>
 
-    <span id=item1740 class="hide_extra">
+    <span id=item1753 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::placement</code></span>  When the <code>placement</code> value changes.</li>
@@ -2770,7 +3270,7 @@ end
 
 
 
-    <span id=item1954 class="hide_extra">
+    <span id=item1991 class="hide_extra">
     </span>
 
 </dd>
@@ -2804,18 +3304,18 @@ end
 
 
      <br />
-     <center id=button1955>
-     <a class="show_more_button" onclick="show_extra('1955')">
+     <center id=button1992>
+     <a class="show_more_button" onclick="show_extra('1992')">
       Click to display more
      </a>
      </center>
 
-    <span id=item1955 class="hide_extra">
+    <span id=item1992 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::geometry</code></span>  When the geometry change.</li>
            <ul>
-             <li><span class="parameter"><code>geo</code></span> <span class="types"><a href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span> The geometry table.</li>
+             <li><span class="parameter"><code>geo</code></span> <span class="types"><a href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span> The geometry table.</li>
            </ul>
      </ul>
     </span>
@@ -2861,13 +3361,13 @@ end
 
 
      <br />
-     <center id=button1956>
-     <a class="show_more_button" onclick="show_extra('1956')">
+     <center id=button1993>
+     <a class="show_more_button" onclick="show_extra('1993')">
       Click to display more
      </a>
      </center>
 
-    <span id=item1956 class="hide_extra">
+    <span id=item1993 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::struts</code></span>  </li>
@@ -2899,7 +3399,7 @@ end
 
 
 
-    <span id=item1957 class="hide_extra">
+    <span id=item1994 class="hide_extra">
     </span>
 
 </dd>
@@ -2930,7 +3430,7 @@ end
     <h3>Returns:</h3>
     <ol>
 
-           <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+           <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          A sorted table of widgets positions. The first element is the biggest
  container while the last is the topmost widget. The table contains <em>x</em>, <em>y</em>,
  <em>width</em>, <em>height</em> and <em>widget</em>.
@@ -2940,7 +3440,7 @@ end
 
 
 
-    <span id=item1958 class="hide_extra">
+    <span id=item1995 class="hide_extra">
     </span>
 
 </dd>
@@ -2958,7 +3458,7 @@ end
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">name</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          The name of the signal.
         </li>
         <li><span class="parameter">...</span>
@@ -2973,7 +3473,7 @@ end
 
 
 
-    <span id=item1959 class="hide_extra">
+    <span id=item1996 class="hide_extra">
     </span>
 
 </dd>
@@ -2991,7 +3491,7 @@ end
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">name</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          The name of the signal.
         </li>
         <li><span class="parameter">func</span>
@@ -3005,7 +3505,7 @@ end
 
 
 
-    <span id=item1960 class="hide_extra">
+    <span id=item1997 class="hide_extra">
     </span>
 
 </dd>
@@ -3030,7 +3530,7 @@ end
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">name</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          The name of the signal.
         </li>
         <li><span class="parameter">func</span>
@@ -3044,7 +3544,7 @@ end
 
 
 
-    <span id=item1961 class="hide_extra">
+    <span id=item1998 class="hide_extra">
     </span>
 
 </dd>
@@ -3066,14 +3566,14 @@ end
         <li><span class="parameter">obj</span>
          An object such as a wibox, client or a table entry
   returned by <code>wibox:find_widgets()</code>.
-         (<em>default</em> mouse)
+         (<em>default</em> <code>mouse</code>)
         </li>
     </ul>
 
     <h3>Returns:</h3>
     <ol>
 
-           <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+           <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
         The new geometry
     </ol>
 
@@ -3087,7 +3587,7 @@ end
 
 
 
-    <span id=item1765 class="hide_extra">
+    <span id=item1778 class="hide_extra">
     </span>
 
 </dd>
@@ -3111,7 +3611,7 @@ end
         <li><span class="parameter">button</span>
             <span class="types"><span class="type">number</span></span>
          The button index
-         (<em>default</em> 1)
+         (<em>default</em> <code>1</code>)
         </li>
     </ul>
 
@@ -3120,7 +3620,7 @@ end
 
 
 
-    <span id=item1766 class="hide_extra">
+    <span id=item1779 class="hide_extra">
     </span>
 
 </dd>
@@ -3148,7 +3648,7 @@ end
 
 
 
-    <span id=item1767 class="hide_extra">
+    <span id=item1780 class="hide_extra">
     </span>
 
 </dd>
@@ -3175,7 +3675,7 @@ end
 
 
 
-    <span id=item1772 class="hide_extra">
+    <span id=item1785 class="hide_extra">
     </span>
 
 </dd>
@@ -3193,13 +3693,13 @@ end
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">path</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          The path.
         </li>
         <li><span class="parameter">context</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          A widget context.
-         (<em>default</em> nil)
+         (<em>default</em> <code>nil</code>)
         </li>
     </ul>
 
@@ -3208,7 +3708,7 @@ end
 
 
 
-    <span id=item1773 class="hide_extra">
+    <span id=item1786 class="hide_extra">
     </span>
 
 </dd>
@@ -3238,7 +3738,7 @@ end
 
 
 
-    <span id=item1774 class="hide_extra">
+    <span id=item1787 class="hide_extra">
     </span>
 
 </dd>
@@ -3262,7 +3762,38 @@ end
 
 
 
-    <span id=item1962 class="hide_extra">
+    <span id=item1999 class="hide_extra">
+    </span>
+
+</dd>
+    <dt>
+    <a name = "beautiful.wibar_favor_vertical"></a>
+    <strong>beautiful.wibar_favor_vertical</strong>
+    <span class="proptype"><span class='summary_type'>boolean</span></span>
+    <span class="baseclass" >
+    </span>
+    </dt>
+    <dd>
+    If there is both vertical and horizontal wibar, give more space to vertical ones. </p>
+
+<p> By default, if multiple wibars risk overlapping, it will be resolved
+ by giving more space to the horizontal one:</p>
+
+<p> <img src="../images/AUTOGEN_awful_wibar_position.svg" alt="wibar position"/></p>
+
+<p> If this variable is to to <code>true</code>, it will behave like:</p>
+
+
+
+<p><img src="../images/AUTOGEN_awful_wibar_position2.svg" alt="Usage example"/>
+
+
+
+
+
+
+
+    <span id=item2000 class="hide_extra">
     </span>
 
 </dd>
@@ -3282,7 +3813,7 @@ end
 
 
 
-    <span id=item1963 class="hide_extra">
+    <span id=item2001 class="hide_extra">
     </span>
 
 </dd>
@@ -3302,7 +3833,7 @@ end
 
 
 
-    <span id=item1964 class="hide_extra">
+    <span id=item2002 class="hide_extra">
     </span>
 
 </dd>
@@ -3322,7 +3853,7 @@ end
 
 
 
-    <span id=item1965 class="hide_extra">
+    <span id=item2003 class="hide_extra">
     </span>
 
 </dd>
@@ -3342,7 +3873,7 @@ end
 
 
 
-    <span id=item1966 class="hide_extra">
+    <span id=item2004 class="hide_extra">
     </span>
 
 </dd>
@@ -3362,7 +3893,7 @@ end
 
 
 
-    <span id=item1967 class="hide_extra">
+    <span id=item2005 class="hide_extra">
     </span>
 
 </dd>
@@ -3382,7 +3913,7 @@ end
 
 
 
-    <span id=item1968 class="hide_extra">
+    <span id=item2006 class="hide_extra">
     </span>
 
 </dd>
@@ -3402,7 +3933,7 @@ end
 
 
 
-    <span id=item1969 class="hide_extra">
+    <span id=item2007 class="hide_extra">
     </span>
 
 </dd>
@@ -3422,7 +3953,7 @@ end
 
 
 
-    <span id=item1970 class="hide_extra">
+    <span id=item2008 class="hide_extra">
     </span>
 
 </dd>
@@ -3442,7 +3973,7 @@ end
 
 
 
-    <span id=item1971 class="hide_extra">
+    <span id=item2009 class="hide_extra">
     </span>
 
 </dd>
@@ -3462,7 +3993,7 @@ end
 
 
 
-    <span id=item1972 class="hide_extra">
+    <span id=item2010 class="hide_extra">
     </span>
 
 </dd>
@@ -3482,7 +4013,7 @@ end
 
 
 
-    <span id=item1973 class="hide_extra">
+    <span id=item2011 class="hide_extra">
     </span>
 
 </dd>
@@ -3502,7 +4033,47 @@ end
 
 
 
-    <span id=item1974 class="hide_extra">
+    <span id=item2012 class="hide_extra">
+    </span>
+
+</dd>
+    <dt>
+    <a name = "beautiful.wibar_margins"></a>
+    <strong>beautiful.wibar_margins</strong>
+    <span class="proptype"><span class='summary_type'>number <i>or</i> table</span></span>
+    <span class="baseclass" >
+    </span>
+    </dt>
+    <dd>
+    The wibar's margins.
+
+
+
+
+
+
+
+    <span id=item2013 class="hide_extra">
+    </span>
+
+</dd>
+    <dt>
+    <a name = "beautiful.wibar_align"></a>
+    <strong>beautiful.wibar_align</strong>
+    <span class="proptype"><span class='summary_type'>string</span></span>
+    <span class="baseclass" >
+    </span>
+    </dt>
+    <dd>
+    The wibar's alignments.
+
+
+
+
+
+
+
+    <span id=item2014 class="hide_extra">
     </span>
 
 </dd>
@@ -3533,7 +4104,7 @@ end
 
 
 
-    <span id=item1975 class="hide_extra">
+    <span id=item2015 class="hide_extra">
     </span>
 
 </dd>
@@ -3558,7 +4129,7 @@ end
 
 
 
-    <span id=item1976 class="hide_extra">
+    <span id=item2016 class="hide_extra">
     </span>
 
 </dd>
@@ -3566,67 +4137,6 @@ end
     <h2 class="section-header "><a name="Deprecated_functions"></a>Deprecated functions</h2>
 
     <dl class="function">
-    <dt>
-    <a name = "get_position"></a>
-    <strong>awful.wibar.get_position<i class="deprecated_label"> [deprecated]</i></strong>
-    <span class="baseclass" >
-    </span>
-    </dt>
-    <dd>
-    Get a wibox position if it has been set, or return top.
-
-    <h3>Parameters:</h3>
-    <ul>
-        <li><span class="parameter">wb</span>
-         The wibox
-        </li>
-    </ul>
-
-    <h3>Returns:</h3>
-    <ol>
-
-        The wibox position.
-    </ol>
-
-
-
-
-
-    <span id=item1977 class="hide_extra">
-    </span>
-
-</dd>
-    <dt>
-    <a name = "set_position"></a>
-    <strong>awful.wibar.set_position<i class="deprecated_label"> [deprecated]</i></strong>
-    <span class="baseclass" >
-    </span>
-    </dt>
-    <dd>
-    Put a wibox on a screen at this position.
-
-    <h3>Parameters:</h3>
-    <ul>
-        <li><span class="parameter">wb</span>
-         The wibox to attach.
-        </li>
-        <li><span class="parameter">position</span>
-         The position: top, bottom left or right.
-        </li>
-        <li><span class="parameter">screen</span>
-         This argument is deprecated, use wb.screen directly.
-        </li>
-    </ul>
-
-
-
-
-
-
-    <span id=item1978 class="hide_extra">
-    </span>
-
-</dd>
     <dt>
     <a name = "attach"></a>
     <strong>awful.wibar.attach<i class="deprecated_label"> [deprecated]</i></strong>
@@ -3661,7 +4171,7 @@ end
 
 
 
-    <span id=item1979 class="hide_extra">
+    <span id=item2017 class="hide_extra">
     </span>
 
 </dd>
@@ -3716,7 +4226,7 @@ end
 
 
 
-    <span id=item1980 class="hide_extra">
+    <span id=item2018 class="hide_extra">
     </span>
 
 </dd>
@@ -3742,7 +4252,7 @@ end
 
 
 
-    <span id=item1981 class="hide_extra">
+    <span id=item2019 class="hide_extra">
     </span>
 
 </dd>
@@ -3753,7 +4263,6 @@ end
 </div> <!-- id="main" -->
 <div id="about">
 <i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.6</a></i>
-<i style="float:right;">Last updated 2021-05-01 17:20:18 </i>
 </div> <!-- id="about" -->
 </div> <!-- id="container" -->
 </body>

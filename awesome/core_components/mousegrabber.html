@@ -136,6 +136,7 @@
   <li><a href="../popups_and_bars/awful.popup.html">awful.popup</a></li>
   <li><a href="../popups_and_bars/awful.titlebar.html">awful.titlebar</a></li>
   <li><a href="../popups_and_bars/awful.tooltip.html">awful.tooltip</a></li>
+  <li><a href="../popups_and_bars/awful.wallpaper.html">awful.wallpaper</a></li>
   <li><a href="../popups_and_bars/awful.wibar.html">awful.wibar</a></li>
   <li><a href="../popups_and_bars/awful.widget.calendar_popup.html">awful.widget.calendar_popup</a></li>
   <li><a href="../popups_and_bars/menubar.html">menubar</a></li>
@@ -234,8 +235,15 @@
   <div class="extra-header__section">
     <h3>Info:</h3>
     <ul>
-            <li><strong>Copyright</strong>: 2008-2009 Julien Danjou</li>
-            <li><strong>Author</strong>: Julien Danjou &lt;julien@danjou.info&gt;</li>
+                <li><strong>Copyright</strong>: 2008-2009 Julien Danjou</li>
+                <li>
+                    <strong>Originally authored by</strong>: Julien Danjou &lt;julien@danjou.info&gt;<br />
+                    <small>(Full contributors list available on
+                    <a href="https://github.com/awesomeWM/awesome/graphs/contributors">
+                        our github project)
+                    </a></small>
+
+                </li>
     </ul>
   </div>
 
@@ -249,22 +257,28 @@
         <a href="#run"><span class='function_modname'>mousegrabber.</span>run <span class='function_args'> <b>(</b>func, cursor<b>)</b></span></a>
         <span class="summarytype"></span>
       </td>
-      <td colspan="2" class="summary">Grab the mouse pointer and list motions, calling callback function at each
- motion.</td>
+      <td colspan="2" class="summary">
+        Grab the mouse pointer and list motions, calling callback function at each
+ motion.
+      </td>
     </tr>
     <tr>
       <td class="name" >
         <a href="#stop"><span class='function_modname'>mousegrabber.</span>stop <span class='function_args'> <b>(</b><b>)</b></span></a>
         <span class="summarytype"></span>
       </td>
-      <td colspan="2" class="summary">Stop grabbing the mouse pointer.</td>
+      <td colspan="2" class="summary">
+        Stop grabbing the mouse pointer.
+      </td>
     </tr>
     <tr>
       <td class="name" >
         <a href="#isrunning"><span class='function_modname'>mousegrabber.</span>isrunning <span class='function_args'> <b>(</b><b>)</b></span></a>
         <span class="summarytype"><span class='summary_type'> -&gt;&nbsp;boolean</span></span>
       </td>
-      <td colspan="2" class="summary">Check if mousegrabber is running.</td>
+      <td colspan="2" class="summary">
+        Check if mousegrabber is running.
+      </td>
     </tr>
 </table>
 
@@ -283,100 +297,94 @@
     </span>
     </dt>
     <dd>
-
-<p>Grab the mouse pointer and list motions, calling callback function at each
+    Grab the mouse pointer and list motions, calling callback function at each
  motion.  The callback function must return a boolean value: true to
  continue grabbing, false to stop.
  The function is called with one argument:
  a table containing modifiers pointer coordinates.</p>
 
-<p> The list of valid cusrors are:</p>
+<p> The list of valid cursors is:</p>
 
-<ul>
-    <li><table class='widget_list' border=1>
-    <tr><td>num_glyphs          </td></tr>
-    <tr><td>cursor              </td></tr>
-    <tr><td>arrow               </td></tr>
-    <tr><td>based<em>arrow</em>down    </td></tr>
-    <tr><td>based<em>arrow</em>up      </td></tr>
-    <tr><td>boat                </td></tr>
-    <tr><td>bogosity            </td></tr>
-    <tr><td>bottom<em>left</em>corner  </td></tr>
-    <tr><td>bottom<em>right</em>corner </td></tr>
-    <tr><td>bottom_side         </td></tr>
-    <tr><td>bottom_tee          </td></tr>
-    <tr><td>box_spiral          </td></tr>
-    <tr><td>center_ptr          </td></tr>
-    <tr><td>circle              </td></tr>
-    <tr><td>clock               </td></tr>
-    <tr><td>coffee_mug          </td></tr>
-    <tr><td>cross               </td></tr>
-    <tr><td>cross_reverse       </td></tr>
-    <tr><td>crosshair           </td></tr>
-    <tr><td>diamond_cross       </td></tr>
-    <tr><td>dot                 </td></tr>
-    <tr><td>dotbox              </td></tr>
-    <tr><td>double_arrow        </td></tr>
-    <tr><td>draft_large         </td></tr>
-    <tr><td>draft_small         </td></tr>
-    <tr><td>draped_box          </td></tr>
-    <tr><td>exchange            </td></tr>
-    <tr><td>fleur               </td></tr>
-    <tr><td>gobbler             </td></tr>
-    <tr><td>gumby               </td></tr>
-    <tr><td>hand                </td></tr>
-    <tr><td>hand                </td></tr>
-    <tr><td>heart               </td></tr>
-    <tr><td>icon                </td></tr>
-    <tr><td>iron_cross          </td></tr>
-    <tr><td>left_ptr            </td></tr>
-    <tr><td>left_side           </td></tr>
-    <tr><td>left_tee            </td></tr>
-    <tr><td>leftbutton          </td></tr>
-    <tr><td>ll_angle            </td></tr>
-    <tr><td>lr_angle            </td></tr>
-    <tr><td>man                 </td></tr>
-    <tr><td>middlebutton        </td></tr>
-    <tr><td>mouse               </td></tr>
-    <tr><td>pencil              </td></tr>
-    <tr><td>pirate              </td></tr>
-    <tr><td>plus                </td></tr>
-    <tr><td>question_arrow      </td></tr>
-    <tr><td>right_ptr           </td></tr>
-    <tr><td>right_side          </td></tr>
-    <tr><td>right_tee           </td></tr>
-    <tr><td>rightbutton         </td></tr>
-    <tr><td>rtl_logo            </td></tr>
-    <tr><td>sailboat            </td></tr>
-    <tr><td>sb<em>down</em>arrow       </td></tr>
-    <tr><td>sb<em>h</em>double_arrow   </td></tr>
-    <tr><td>sb<em>left</em>arrow       </td></tr>
-    <tr><td>sb<em>right</em>arrow      </td></tr>
-    <tr><td>sb<em>up</em>arrow         </td></tr>
-    <tr><td>sb<em>v</em>double_arrow   </td></tr>
-    <tr><td>shuttle             </td></tr>
-    <tr><td>sizing              </td></tr>
-    <tr><td>spider              </td></tr>
-    <tr><td>spraycan            </td></tr>
-    <tr><td>star                </td></tr>
-    <tr><td>target              </td></tr>
-    <tr><td>tcross              </td></tr>
-    <tr><td>top<em>left</em>arrow      </td></tr>
-    <tr><td>top<em>left</em>corner     </td></tr>
-    <tr><td>top<em>right</em>corner    </td></tr>
-    <tr><td>top_side            </td></tr>
-    <tr><td>top_tee             </td></tr>
-    <tr><td>trek                </td></tr>
-    <tr><td>ul_angle            </td></tr>
-    <tr><td>umbrella            </td></tr>
-    <tr><td>ur_angle            </td></tr>
-    <tr><td>watch               </td></tr>
-    <tr><td>xterm               </td></tr>
-    </table></li>
-</ul>
-
-
-
+<p>  <div class='flex-list'>
+ <div>num_glyphs</div>
+ <div>arrow</div>
+ <div>based_arrow_down</div>
+ <div>based_arrow_up</div>
+ <div>boat</div>
+ <div>bogosity</div>
+ <div>bottom_left_corner</div>
+ <div>bottom_right_corner</div>
+ <div>bottom_side</div>
+ <div>bottom_tee</div>
+ <div>box_spiral</div>
+ <div>center_ptr</div>
+ <div>circle</div>
+ <div>clock</div>
+ <div>coffee_mug</div>
+ <div>cross</div>
+ <div>crosshair</div>
+ <div>cross_reverse</div>
+ <div>cursor</div>
+ <div>diamond_cross</div>
+ <div>dotbox</div>
+ <div>dot</div>
+ <div>double_arrow</div>
+ <div>draft_large</div>
+ <div>draft_small</div>
+ <div>draped_box</div>
+ <div>exchange</div>
+ <div>fleur</div>
+ <div>gobbler</div>
+ <div>gumby</div>
+ <div>hand</div>
+ <div>hand</div>
+ <div>heart</div>
+ <div>icon</div>
+ <div>iron_cross</div>
+ <div>leftbutton</div>
+ <div>left_ptr</div>
+ <div>left_side</div>
+ <div>left_tee</div>
+ <div>ll_angle</div>
+ <div>lr_angle</div>
+ <div>man</div>
+ <div>middlebutton</div>
+ <div>mouse</div>
+ <div>pencil</div>
+ <div>pirate</div>
+ <div>plus</div>
+ <div>question_arrow</div>
+ <div>rightbutton</div>
+ <div>right_ptr</div>
+ <div>right_side</div>
+ <div>right_tee</div>
+ <div>rtl_logo</div>
+ <div>sailboat</div>
+ <div>sb_down_arrow</div>
+ <div>sb_h_double_arrow</div>
+ <div>sb_left_arrow</div>
+ <div>sb_right_arrow</div>
+ <div>sb_up_arrow</div>
+ <div>sb_v_double_arrow</div>
+ <div>shuttle</div>
+ <div>sizing</div>
+ <div>spider</div>
+ <div>spraycan</div>
+ <div>star</div>
+ <div>target</div>
+ <div>tcross</div>
+ <div>top_left_arrow</div>
+ <div>top_left_corner</div>
+ <div>top_right_corner</div>
+ <div>top_side</div>
+ <div>top_tee</div>
+ <div>trek</div>
+ <div>ul_angle</div>
+ <div>umbrella</div>
+ <div>ur_angle</div>
+ <div>watch</div>
+ <div>xterm</div>
+ </div>
 
     <h3>Parameters:</h3>
     <ul>
@@ -393,7 +401,7 @@
 
 
 
-    <span id=item489 class="hide_extra">
+    <span id=item484 class="hide_extra">
     </span>
 
 </dd>
@@ -413,7 +421,7 @@
 
 
 
-    <span id=item490 class="hide_extra">
+    <span id=item485 class="hide_extra">
     </span>
 
 </dd>
@@ -439,7 +447,7 @@
 
 
 
-    <span id=item491 class="hide_extra">
+    <span id=item486 class="hide_extra">
     </span>
 
 </dd>
@@ -450,7 +458,6 @@
 </div> <!-- id="main" -->
 <div id="about">
 <i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.6</a></i>
-<i style="float:right;">Last updated 2021-05-01 17:20:18 </i>
 </div> <!-- id="about" -->
 </div> <!-- id="container" -->
 </body>

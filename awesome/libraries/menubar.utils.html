@@ -157,6 +157,7 @@
   <li><a href="../popups_and_bars/awful.popup.html">awful.popup</a></li>
   <li><a href="../popups_and_bars/awful.titlebar.html">awful.titlebar</a></li>
   <li><a href="../popups_and_bars/awful.tooltip.html">awful.tooltip</a></li>
+  <li><a href="../popups_and_bars/awful.wallpaper.html">awful.wallpaper</a></li>
   <li><a href="../popups_and_bars/awful.wibar.html">awful.wibar</a></li>
   <li><a href="../popups_and_bars/awful.widget.calendar_popup.html">awful.widget.calendar_popup</a></li>
   <li><a href="../popups_and_bars/menubar.html">menubar</a></li>
@@ -235,8 +236,15 @@
   <div class="extra-header__section">
     <h3>Info:</h3>
     <ul>
-            <li><strong>Copyright</strong>: 2009, 2011-2012 Antonio Terceiro, Alexander Yakushev</li>
-            <li><strong>Author</strong>: Antonio Terceiro</li>
+                <li><strong>Copyright</strong>: 2009, 2011-2012 Antonio Terceiro, Alexander Yakushev</li>
+                <li>
+                    <strong>Originally authored by</strong>: Antonio Terceiro<br />
+                    <small>(Full contributors list available on
+                    <a href="https://github.com/awesomeWM/awesome/graphs/contributors">
+                        our github project)
+                    </a></small>
+
+                </li>
     </ul>
   </div>
 
@@ -250,42 +258,45 @@
         <a href="#menubar.utils.rtrim"><span class='function_modname'>menubar.utils.</span>rtrim <span class='function_args'> <b>(</b>s<b>)</b></span></a>
         <span class="summarytype"></span>
       </td>
-      <td colspan="2" class="summary">Remove CR newline from the end of the string.</td>
+      <td colspan="2" class="summary">
+        Remove CR newline from the end of the string.
+      </td>
     </tr>
     <tr>
       <td class="name" >
         <a href="#menubar.utils.lookup_icon_uncached"><span class='function_modname'>menubar.utils.</span>lookup_icon_uncached <span class='function_args'> <b>(</b>icon_file<b>)</b></span></a>
         <span class="summarytype"><span class='summary_type'> -&gt;&nbsp;string <i>or</i> boolean</span></span>
       </td>
-      <td colspan="2" class="summary">Lookup an icon in different folders of the filesystem.</td>
+      <td colspan="2" class="summary">
+        Lookup an icon in different folders of the filesystem.
+      </td>
     </tr>
     <tr>
       <td class="name" >
         <a href="#menubar.utils.lookup_icon"><span class='function_modname'>menubar.utils.</span>lookup_icon <span class='function_args'> <b>(</b>icon<b>)</b></span></a>
         <span class="summarytype"><span class='summary_type'> -&gt;&nbsp;()</span></span>
       </td>
-      <td colspan="2" class="summary">Lookup an icon in different folders of the filesystem (cached).</td>
+      <td colspan="2" class="summary">
+        Lookup an icon in different folders of the filesystem (cached).
+      </td>
     </tr>
     <tr>
       <td class="name" >
         <a href="#menubar.utils.parse_desktop_file"><span class='function_modname'>menubar.utils.</span>parse_desktop_file <span class='function_args'> <b>(</b>file<b>)</b></span></a>
         <span class="summarytype"><span class='summary_type'> -&gt;&nbsp;()</span></span>
       </td>
-      <td colspan="2" class="summary">Parse a .desktop file.</td>
+      <td colspan="2" class="summary">
+        Parse a .desktop file.
+      </td>
     </tr>
     <tr>
       <td class="name" >
         <a href="#menubar.utils.parse_dir"><span class='function_modname'>menubar.utils.</span>parse_dir <span class='function_args'> <b>(</b>dir_path, callback<b>)</b></span></a>
         <span class="summarytype"></span>
       </td>
-      <td colspan="2" class="summary">Parse a directory with .desktop files recursively.</td>
-    </tr>
-    <tr>
-      <td class="name" >
-        <a href="#menubar.utils.compute_text_width"><span class='function_modname'>menubar.utils.</span>compute_text_width <span class='function_args'> <b>(</b>text, s<b>)</b></span></a>
-        <span class="summarytype"><span class='summary_type'> -&gt;&nbsp;int</span></span>
+      <td colspan="2" class="summary">
+        Parse a directory with .desktop files recursively.
       </td>
-      <td colspan="2" class="summary">Compute text width.</td>
     </tr>
 </table>
 <h2><a href="#Fields">Fields</a></h2>
@@ -293,12 +304,16 @@
     <tr>
       <td class="shortname" ><a href="#terminal"><span class='function_modname'>menubar.utils.</span>terminal</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>string</span></td>
-      <td colspan="2" class="summary">Terminal which applications that need terminal would open in.</td>
+      <td colspan="2" class="summary">
+        Terminal which applications that need terminal would open in.
+      </td>
     </tr>
     <tr>
       <td class="shortname" ><a href="#wm_name"><span class='function_modname'>menubar.utils.</span>wm_name</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>string</span></td>
-      <td colspan="2" class="summary">Name of the WM for the OnlyShowIn entry in the .desktop file.</td>
+      <td colspan="2" class="summary">
+        Name of the WM for the OnlyShowIn entry in the .desktop file.
+      </td>
     </tr>
 </table>
 
@@ -331,7 +346,7 @@
 
 
 
-    <span id=item2398 class="hide_extra">
+    <span id=item2437 class="hide_extra">
     </span>
 
 </dd>
@@ -348,7 +363,7 @@
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">icon_file</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          Short or full name of the icon.
         </li>
     </ul>
@@ -356,7 +371,7 @@
     <h3>Returns:</h3>
     <ol>
 
-           <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a> or <span class="type">boolean</span></span>
+           <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a> or <span class="type">boolean</span></span>
         Full name of the icon, or false on failure.
     </ol>
 
@@ -364,7 +379,7 @@
 
 
 
-    <span id=item2399 class="hide_extra">
+    <span id=item2438 class="hide_extra">
     </span>
 
 </dd>
@@ -395,7 +410,7 @@
 
 
 
-    <span id=item2400 class="hide_extra">
+    <span id=item2439 class="hide_extra">
     </span>
 
 </dd>
@@ -426,7 +441,7 @@
 
 
 
-    <span id=item2401 class="hide_extra">
+    <span id=item2440 class="hide_extra">
     </span>
 
 </dd>
@@ -443,14 +458,14 @@
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">dir_path</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          The directory path.
         </li>
         <li><span class="parameter">callback</span> Will be fired when all the files were parsed
  with the resulting list of menu entries as argument.
         <ul>
         <li><span class="parameter">programs</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          Paths of found .desktop files.
         </li>
         </li></ul>
@@ -461,44 +476,7 @@
 
 
 
-    <span id=item2402 class="hide_extra">
-    </span>
-
-</dd>
-    <dt>
-    <a name = "menubar.utils.compute_text_width"></a>
-    <strong><span class='function_modname'>menubar.utils.</span>compute_text_width <span class='function_args'> <b>(</b>text, s<b>)</b></span></strong>
-    <span class="proptype"><span class='summary_type'> -&gt;&nbsp;int</span></span>
-    <span class="baseclass" >
-    </span>
-    </dt>
-    <dd>
-    Compute text width.
-
-    <h3>Parameters:</h3>
-    <ul>
-        <li><span class="parameter">text</span>
-            <span class="types"><span class="type">str</span></span>
-         Text.
-        </li>
-        <li><span class="parameter">s</span>
-            <span class="types"><span class="type">number</span> or <span class="type">screen</span></span>
-         Screen
-        </li>
-    </ul>
-
-    <h3>Returns:</h3>
-    <ol>
-
-           <span class="types"><span class="type">int</span></span>
-        Text width.
-    </ol>
-
-
-
-
-
-    <span id=item2403 class="hide_extra">
+    <span id=item2441 class="hide_extra">
     </span>
 
 </dd>
@@ -522,7 +500,7 @@
 
 
 
-    <span id=item2404 class="hide_extra">
+    <span id=item2442 class="hide_extra">
     </span>
 
 </dd>
@@ -542,7 +520,7 @@
 
 
 
-    <span id=item2405 class="hide_extra">
+    <span id=item2443 class="hide_extra">
     </span>
 
 </dd>
@@ -553,7 +531,6 @@
 </div> <!-- id="main" -->
 <div id="about">
 <i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.6</a></i>
-<i style="float:right;">Last updated 2021-05-01 17:20:18 </i>
 </div> <!-- id="about" -->
 </div> <!-- id="container" -->
 </body>

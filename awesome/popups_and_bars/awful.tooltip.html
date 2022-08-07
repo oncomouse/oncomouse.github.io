@@ -59,6 +59,7 @@
   <li><a href="../popups_and_bars/awful.popup.html">awful.popup</a></li>
   <li><a href="../popups_and_bars/awful.titlebar.html">awful.titlebar</a></li>
   <li><strong>awful.tooltip</strong></li>
+  <li><a href="../popups_and_bars/awful.wallpaper.html">awful.wallpaper</a></li>
   <li><a href="../popups_and_bars/awful.wibar.html">awful.wibar</a></li>
   <li><a href="../popups_and_bars/awful.widget.calendar_popup.html">awful.widget.calendar_popup</a></li>
   <li><a href="../popups_and_bars/menubar.html">menubar</a></li>
@@ -248,7 +249,7 @@
 <span class="keyword">local</span> myclock_t = awful.tooltip {
     objects        = { mytextclock },
     timer_function = <span class="keyword">function</span>()
-        <span class="keyword">return</span> <span class="global">os</span>.date(<span class="string">'Today is %A %B %d %Y\nThe time is %T'</span>)
+        <span class="keyword">return</span> <span class="global">os</span>.date(<span class="string">"Today is %A %B %d %Y\nThe time is %T"</span>)
     <span class="keyword">end</span>,
 }
 </pre>
@@ -268,8 +269,8 @@
 
 myclock_t:add_to_object(mytextclock)
 
-mytextclock:connect_signal(<span class="string">'mouse::enter'</span>, <span class="keyword">function</span>()
-    myclock_t.text = <span class="global">os</span>.date(<span class="string">'Today is %A %B %d %Y\nThe time is %T'</span>)
+mytextclock:connect_signal(<span class="string">"mouse::enter"</span>, <span class="keyword">function</span>()
+    myclock_t.text = <span class="global">os</span>.date(<span class="string">"Today is %A %B %d %Y\nThe time is %T"</span>)
 <span class="keyword">end</span>)
 </pre>
 
@@ -283,7 +284,7 @@ mytextclock:connect_signal(<span class="string">'mouse::enter'</span>, <span cla
 
 <pre>
 <span class="keyword">local</span> tt = awful.tooltip {
-    text = <span class="string">'A tooltip!'</span>,
+    text = <span class="string">"A tooltip!"</span>,
     visible = <span class="keyword">true</span>,
 }
 
@@ -332,8 +333,15 @@ myclock_t:remove_from_object(obj2)
   <div class="extra-header__section">
     <h3>Info:</h3>
     <ul>
-            <li><strong>Copyright</strong>: 2009 Sébastien Gross</li>
-            <li><strong>Author</strong>: Sébastien Gross &lt;seb•ɱɩɲʋʃ•awesome•ɑƬ•chezwam•ɖɵʈ•org&gt;</li>
+                <li><strong>Copyright</strong>: 2009 Sébastien Gross</li>
+                <li>
+                    <strong>Originally authored by</strong>: Sébastien Gross &lt;seb•ɱɩɲʋʃ•awesome•ɑƬ•chezwam•ɖɵʈ•org&gt;<br />
+                    <small>(Full contributors list available on
+                    <a href="https://github.com/awesomeWM/awesome/graphs/contributors">
+                        our github project)
+                    </a></small>
+
+                </li>
     </ul>
   </div>
 
@@ -346,7 +354,9 @@ myclock_t:remove_from_object(obj2)
       <td class="name" >
         <a href="#awful.tooltip">awful.tooltip <span class='function_named_args'><b>{</b>[args]<b>}</b></span></a>
       </td>
-      <td colspan="2" class="summary">Create a new tooltip and link it to a widget.</td>
+      <td colspan="2" class="summary">
+        Create a new tooltip and link it to a widget.
+      </td>
     </tr>
 </table>
 <h2><a href="#Object_properties">Object properties</a></h2>
@@ -354,87 +364,121 @@ myclock_t:remove_from_object(obj2)
     <tr>
       <td class="shortname" ><a href="#wibox">wibox</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>wibox</span></td>
-      <td colspan="2" class="summary">The wibox containing the tooltip widgets.</td>
+      <td colspan="2" class="summary">
+        The wibox containing the tooltip widgets.
+      </td>
     </tr>
     <tr>
       <td class="shortname" ><a href="#visible">visible</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>boolean</span></td>
-      <td colspan="2" class="summary">Is the tooltip visible?</td>
+      <td colspan="2" class="summary">
+        Is the tooltip visible?
+      </td>
     </tr>
     <tr>
       <td class="shortname" ><a href="#align">align</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>string</span></td>
-      <td colspan="2" class="summary">The horizontal alignment.</td>
+      <td colspan="2" class="summary">
+        The horizontal alignment.
+      </td>
     </tr>
     <tr>
       <td class="shortname" ><a href="#shape">shape</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>gears.shape</span></td>
-      <td colspan="2" class="summary">The shape of the tooltip window.</td>
+      <td colspan="2" class="summary">
+        The shape of the tooltip window.
+      </td>
     </tr>
     <tr>
       <td class="shortname" ><a href="#mode">mode</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>string</span></td>
-      <td colspan="2" class="summary">Set the tooltip positioning mode.</td>
+      <td colspan="2" class="summary">
+        Set the tooltip positioning mode.
+      </td>
     </tr>
     <tr>
       <td class="shortname" ><a href="#preferred_positions">preferred_positions</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>table</span></td>
-      <td colspan="2" class="summary">The preferred positions when in <code>outside</code> mode.</td>
+      <td colspan="2" class="summary">
+        The preferred positions when in <code>outside</code> mode.
+      </td>
     </tr>
     <tr>
       <td class="shortname" ><a href="#preferred_alignments">preferred_alignments</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>string</span></td>
-      <td colspan="2" class="summary">The preferred alignment when using the <code>outside</code> mode.</td>
+      <td colspan="2" class="summary">
+        The preferred alignment when using the <code>outside</code> mode.
+      </td>
     </tr>
     <tr>
       <td class="shortname" ><a href="#text">text</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>string</span></td>
-      <td colspan="2" class="summary">Change displayed text.</td>
+      <td colspan="2" class="summary">
+        Change displayed text.
+      </td>
     </tr>
     <tr>
       <td class="shortname" ><a href="#markup">markup</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>string</span></td>
-      <td colspan="2" class="summary">Change displayed markup.</td>
+      <td colspan="2" class="summary">
+        Change displayed markup.
+      </td>
     </tr>
     <tr>
       <td class="shortname" ><a href="#timeout">timeout</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>number</span></td>
-      <td colspan="2" class="summary">Change the tooltip's update interval.</td>
+      <td colspan="2" class="summary">
+        Change the tooltip's update interval.
+      </td>
     </tr>
     <tr>
       <td class="shortname" ><a href="#margins">margins</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>number <i>or</i> table</span></td>
-      <td colspan="2" class="summary">Set all margins around the tooltip textbox.</td>
+      <td colspan="2" class="summary">
+        Set all margins around the tooltip textbox.
+      </td>
     </tr>
     <tr>
       <td class="shortname" ><a href="#border_width">border_width</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>number</span></td>
-      <td colspan="2" class="summary">The border width.</td>
+      <td colspan="2" class="summary">
+        The border width.
+      </td>
     </tr>
     <tr>
       <td class="shortname" ><a href="#border_color">border_color</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>color</span></td>
-      <td colspan="2" class="summary">The border color.</td>
+      <td colspan="2" class="summary">
+        The border color.
+      </td>
     </tr>
     <tr>
       <td class="shortname" ><a href="#margins_leftright">margins_leftright</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>number</span></td>
-      <td colspan="2" class="summary">Set the margins around the left and right of the tooltip textbox.</td>
+      <td colspan="2" class="summary">
+        Set the margins around the left and right of the tooltip textbox.
+      </td>
     </tr>
     <tr>
       <td class="shortname" ><a href="#margins_topbottom">margins_topbottom</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>number</span></td>
-      <td colspan="2" class="summary">Set the margins around the top and bottom of the tooltip textbox.</td>
+      <td colspan="2" class="summary">
+        Set the margins around the top and bottom of the tooltip textbox.
+      </td>
     </tr>
     <tr>
       <td class="shortname" ><a href="#gaps">gaps</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>number <i>or</i> table</span></td>
-      <td colspan="2" class="summary">Set the margins between the tooltip and its parent.</td>
+      <td colspan="2" class="summary">
+        Set the margins between the tooltip and its parent.
+      </td>
     </tr>
     <tr>
       <td class="shortname" ><a href="#ontop">ontop</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>boolean</span></td>
-      <td colspan="1" class="summary">On top of other windows.</td>
+      <td colspan="1" class="summary">
+        On top of other windows.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from wibox
       </td>
@@ -442,7 +486,9 @@ myclock_t:remove_from_object(obj2)
     <tr>
       <td class="shortname" ><a href="#cursor">cursor</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>string</span></td>
-      <td colspan="1" class="summary">The mouse cursor.</td>
+      <td colspan="1" class="summary">
+        The mouse cursor.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from wibox
       </td>
@@ -450,7 +496,9 @@ myclock_t:remove_from_object(obj2)
     <tr>
       <td class="shortname" ><a href="#opacity">opacity</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>number</span></td>
-      <td colspan="1" class="summary">The opacity of the wibox, between 0 and 1.</td>
+      <td colspan="1" class="summary">
+        The opacity of the wibox, between 0 and 1.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from wibox
       </td>
@@ -458,7 +506,9 @@ myclock_t:remove_from_object(obj2)
     <tr>
       <td class="shortname" ><a href="#type">type</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>string</span></td>
-      <td colspan="1" class="summary">The window type (desktop, normal, dock, ...).</td>
+      <td colspan="1" class="summary">
+        The window type (desktop, normal, dock, ...).
+      </td>
       <td class="baseclass" nowrap>
         Inherited from wibox
       </td>
@@ -466,7 +516,9 @@ myclock_t:remove_from_object(obj2)
     <tr>
       <td class="shortname" ><a href="#x">x</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>integer</span></td>
-      <td colspan="1" class="summary">The x coordinates.</td>
+      <td colspan="1" class="summary">
+        The x coordinates.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from wibox
       </td>
@@ -474,7 +526,9 @@ myclock_t:remove_from_object(obj2)
     <tr>
       <td class="shortname" ><a href="#y">y</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>integer</span></td>
-      <td colspan="1" class="summary">The y coordinates.</td>
+      <td colspan="1" class="summary">
+        The y coordinates.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from wibox
       </td>
@@ -482,7 +536,9 @@ myclock_t:remove_from_object(obj2)
     <tr>
       <td class="shortname" ><a href="#width">width</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>width</span></td>
-      <td colspan="1" class="summary">The width of the wibox.</td>
+      <td colspan="1" class="summary">
+        The width of the wibox.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from wibox
       </td>
@@ -490,7 +546,9 @@ myclock_t:remove_from_object(obj2)
     <tr>
       <td class="shortname" ><a href="#height">height</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>height</span></td>
-      <td colspan="1" class="summary">The height of the wibox.</td>
+      <td colspan="1" class="summary">
+        The height of the wibox.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from wibox
       </td>
@@ -498,7 +556,9 @@ myclock_t:remove_from_object(obj2)
     <tr>
       <td class="shortname" ><a href="#screen">screen</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>screen</span></td>
-      <td colspan="1" class="summary">The wibox screen.</td>
+      <td colspan="1" class="summary">
+        The wibox screen.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from wibox
       </td>
@@ -506,7 +566,9 @@ myclock_t:remove_from_object(obj2)
     <tr>
       <td class="shortname" ><a href="#drawable">drawable</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>drawable</span></td>
-      <td colspan="1" class="summary">The wibox's <a href="../core_components/drawable.html#">drawable</a>.</td>
+      <td colspan="1" class="summary">
+        The wibox's <a href="../core_components/drawable.html#">drawable</a>.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from wibox
       </td>
@@ -514,7 +576,9 @@ myclock_t:remove_from_object(obj2)
     <tr>
       <td class="shortname" ><a href="#widget">widget</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>widget</span></td>
-      <td colspan="1" class="summary">The widget that the <a href="../popups_and_bars/wibox.html#">wibox</a> displays.</td>
+      <td colspan="1" class="summary">
+        The widget that the <a href="../popups_and_bars/wibox.html#">wibox</a> displays.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from wibox
       </td>
@@ -522,7 +586,9 @@ myclock_t:remove_from_object(obj2)
     <tr>
       <td class="shortname" ><a href="#window">window</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>string</span></td>
-      <td colspan="1" class="summary">The X window id.</td>
+      <td colspan="1" class="summary">
+        The X window id.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from wibox
       </td>
@@ -530,7 +596,9 @@ myclock_t:remove_from_object(obj2)
     <tr>
       <td class="shortname" ><a href="#shape_bounding">shape_bounding</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>N/A</span></td>
-      <td colspan="1" class="summary">The wibox's bounding shape as a (native) cairo surface.</td>
+      <td colspan="1" class="summary">
+        The wibox's bounding shape as a (native) cairo surface.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from wibox
       </td>
@@ -538,7 +606,9 @@ myclock_t:remove_from_object(obj2)
     <tr>
       <td class="shortname" ><a href="#shape_clip">shape_clip</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>N/A</span></td>
-      <td colspan="1" class="summary">The wibox's clip shape as a (native) cairo surface.</td>
+      <td colspan="1" class="summary">
+        The wibox's clip shape as a (native) cairo surface.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from wibox
       </td>
@@ -546,7 +616,9 @@ myclock_t:remove_from_object(obj2)
     <tr>
       <td class="shortname" ><a href="#shape_input">shape_input</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>N/A</span></td>
-      <td colspan="1" class="summary">The wibox's input shape as a (native) cairo surface.</td>
+      <td colspan="1" class="summary">
+        The wibox's input shape as a (native) cairo surface.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from wibox
       </td>
@@ -554,7 +626,9 @@ myclock_t:remove_from_object(obj2)
     <tr>
       <td class="shortname" ><a href="#input_passthrough">input_passthrough</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>boolean</span></td>
-      <td colspan="1" class="summary">Forward the inputs to the client below the wibox.</td>
+      <td colspan="1" class="summary">
+        Forward the inputs to the client below the wibox.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from wibox
       </td>
@@ -562,7 +636,9 @@ myclock_t:remove_from_object(obj2)
     <tr>
       <td class="shortname" ><a href="#buttons">buttons</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>buttons_table</span></td>
-      <td colspan="1" class="summary">Get or set mouse buttons bindings to a wibox.</td>
+      <td colspan="1" class="summary">
+        Get or set mouse buttons bindings to a wibox.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from wibox
       </td>
@@ -570,7 +646,9 @@ myclock_t:remove_from_object(obj2)
     <tr>
       <td class="shortname" ><a href="#bg">bg</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>c</span></td>
-      <td colspan="1" class="summary">The background of the wibox.</td>
+      <td colspan="1" class="summary">
+        The background of the wibox.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from wibox
       </td>
@@ -578,7 +656,9 @@ myclock_t:remove_from_object(obj2)
     <tr>
       <td class="shortname" ><a href="#bgimage">bgimage</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>gears.suface <i>or</i> string <i>or</i> function</span></td>
-      <td colspan="1" class="summary">The background image of the drawable.</td>
+      <td colspan="1" class="summary">
+        The background image of the drawable.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from wibox
       </td>
@@ -586,7 +666,9 @@ myclock_t:remove_from_object(obj2)
     <tr>
       <td class="shortname" ><a href="#fg">fg</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>color</span></td>
-      <td colspan="1" class="summary">The foreground (text) of the wibox.</td>
+      <td colspan="1" class="summary">
+        The foreground (text) of the wibox.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from wibox
       </td>
@@ -599,21 +681,27 @@ myclock_t:remove_from_object(obj2)
         <a href="#add_to_object">:add_to_object <span class='function_args'> <b>(</b>self, obj<b>)</b></span></a>
         <span class="summarytype"></span>
       </td>
-      <td colspan="2" class="summary">Add tooltip to an object.</td>
+      <td colspan="2" class="summary">
+        Add tooltip to an object.
+      </td>
     </tr>
     <tr>
       <td class="name" >
         <a href="#remove_from_object">:remove_from_object <span class='function_args'> <b>(</b>self, obj<b>)</b></span></a>
         <span class="summarytype"></span>
       </td>
-      <td colspan="2" class="summary">Remove tooltip from an object.</td>
+      <td colspan="2" class="summary">
+        Remove tooltip from an object.
+      </td>
     </tr>
     <tr>
       <td class="name" >
         <a href="#emit_signal">:emit_signal <span class='function_args'> <b>(</b>name, ...<b>)</b></span></a>
         <span class="summarytype"></span>
       </td>
-      <td colspan="1" class="summary">Emit a signal.</td>
+      <td colspan="1" class="summary">
+        Emit a signal.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from gears.object
       </td>
@@ -623,7 +711,9 @@ myclock_t:remove_from_object(obj2)
         <a href="#connect_signal">:connect_signal <span class='function_args'> <b>(</b>name, func<b>)</b></span></a>
         <span class="summarytype"></span>
       </td>
-      <td colspan="1" class="summary">Connect to a signal.</td>
+      <td colspan="1" class="summary">
+        Connect to a signal.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from gears.object
       </td>
@@ -633,7 +723,9 @@ myclock_t:remove_from_object(obj2)
         <a href="#weak_connect_signal">:weak_connect_signal <span class='function_args'> <b>(</b>name, func<b>)</b></span></a>
         <span class="summarytype"></span>
       </td>
-      <td colspan="1" class="summary">Connect to a signal weakly.</td>
+      <td colspan="1" class="summary">
+        Connect to a signal weakly.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from gears.object
       </td>
@@ -643,7 +735,9 @@ myclock_t:remove_from_object(obj2)
         <a href="#geometry">:geometry <span class='function_args'> <b>(</b>A<b>)</b></span></a>
         <span class="summarytype"><span class='summary_type'> -&gt;&nbsp;()</span></span>
       </td>
-      <td colspan="1" class="summary">Get or set wibox geometry.</td>
+      <td colspan="1" class="summary">
+        Get or set wibox geometry.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from wibox
       </td>
@@ -653,7 +747,9 @@ myclock_t:remove_from_object(obj2)
         <a href="#struts">:struts <span class='function_args'> <b>(</b>strut<b>)</b></span></a>
         <span class="summarytype"><span class='summary_type'> -&gt;&nbsp;()</span></span>
       </td>
-      <td colspan="1" class="summary">Get or set wibox struts.</td>
+      <td colspan="1" class="summary">
+        Get or set wibox struts.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from wibox
       </td>
@@ -663,7 +759,9 @@ myclock_t:remove_from_object(obj2)
         <a href="#setup">:setup <span class='function_named_args'><b>{</b>[args]<b>}</b></span></a>
         <span class="summarytype"></span>
       </td>
-      <td colspan="1" class="summary">Set a declarative widget hierarchy description.</td>
+      <td colspan="1" class="summary">
+        Set a declarative widget hierarchy description.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from wibox
       </td>
@@ -673,7 +771,9 @@ myclock_t:remove_from_object(obj2)
         <a href="#find_widgets">:find_widgets <span class='function_args'> <b>(</b>x, y<b>)</b></span></a>
         <span class="summarytype"><span class='summary_type'> -&gt;&nbsp;table</span></span>
       </td>
-      <td colspan="1" class="summary">Find a widget by a point.</td>
+      <td colspan="1" class="summary">
+        Find a widget by a point.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from wibox
       </td>
@@ -683,7 +783,9 @@ myclock_t:remove_from_object(obj2)
         <a href="#to_widget">:to_widget <span class='function_args'> <b>(</b><b>)</b></span></a>
         <span class="summarytype"><span class='summary_type'> -&gt;&nbsp;widget</span></span>
       </td>
-      <td colspan="1" class="summary">Create a widget that reflects the current state of this wibox.</td>
+      <td colspan="1" class="summary">
+        Create a widget that reflects the current state of this wibox.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from wibox
       </td>
@@ -693,7 +795,9 @@ myclock_t:remove_from_object(obj2)
         <a href="#save_to_svg">:save_to_svg <span class='function_args'> <b>(</b>path[, context=nil]<b>)</b></span></a>
         <span class="summarytype"></span>
       </td>
-      <td colspan="1" class="summary">Save a screenshot of the wibox to <code>path</code>.</td>
+      <td colspan="1" class="summary">
+        Save a screenshot of the wibox to <code>path</code>.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from wibox
       </td>
@@ -703,7 +807,9 @@ myclock_t:remove_from_object(obj2)
         <a href="#draw">:draw <span class='function_args'> <b>(</b>wibox<b>)</b></span></a>
         <span class="summarytype"></span>
       </td>
-      <td colspan="1" class="summary">Redraw a wibox.</td>
+      <td colspan="1" class="summary">
+        Redraw a wibox.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from wibox
       </td>
@@ -714,52 +820,72 @@ myclock_t:remove_from_object(obj2)
     <tr>
       <td class="shortname" ><a href="#beautiful.tooltip_border_color">beautiful.tooltip_border_color</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>color</span></td>
-      <td colspan="2" class="summary">The tooltip border color.</td>
+      <td colspan="2" class="summary">
+        The tooltip border color.
+      </td>
     </tr>
     <tr>
       <td class="shortname" ><a href="#beautiful.tooltip_bg">beautiful.tooltip_bg</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>color</span></td>
-      <td colspan="2" class="summary">The tooltip background color.</td>
+      <td colspan="2" class="summary">
+        The tooltip background color.
+      </td>
     </tr>
     <tr>
       <td class="shortname" ><a href="#beautiful.tooltip_fg">beautiful.tooltip_fg</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>color</span></td>
-      <td colspan="2" class="summary">The tooltip foregound (text) color.</td>
+      <td colspan="2" class="summary">
+        The tooltip foregound (text) color.
+      </td>
     </tr>
     <tr>
       <td class="shortname" ><a href="#beautiful.tooltip_font">beautiful.tooltip_font</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>string</span></td>
-      <td colspan="2" class="summary">The tooltip font.</td>
+      <td colspan="2" class="summary">
+        The tooltip font.
+      </td>
     </tr>
     <tr>
       <td class="shortname" ><a href="#beautiful.tooltip_border_width">beautiful.tooltip_border_width</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>number</span></td>
-      <td colspan="2" class="summary">The tooltip border width.</td>
+      <td colspan="2" class="summary">
+        The tooltip border width.
+      </td>
     </tr>
     <tr>
       <td class="shortname" ><a href="#beautiful.tooltip_opacity">beautiful.tooltip_opacity</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>number</span></td>
-      <td colspan="2" class="summary">The tooltip opacity.</td>
+      <td colspan="2" class="summary">
+        The tooltip opacity.
+      </td>
     </tr>
     <tr>
       <td class="shortname" ><a href="#beautiful.tooltip_gaps">beautiful.tooltip_gaps</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>table</span></td>
-      <td colspan="2" class="summary">The tooltip margins.</td>
+      <td colspan="2" class="summary">
+        The tooltip margins.
+      </td>
     </tr>
     <tr>
       <td class="shortname" ><a href="#beautiful.tooltip_shape">beautiful.tooltip_shape</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>gears.shape</span></td>
-      <td colspan="2" class="summary">The default tooltip shape.</td>
+      <td colspan="2" class="summary">
+        The default tooltip shape.
+      </td>
     </tr>
     <tr>
       <td class="shortname" ><a href="#beautiful.tooltip_align">beautiful.tooltip_align</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>string</span></td>
-      <td colspan="2" class="summary">The default tooltip alignment.</td>
+      <td colspan="2" class="summary">
+        The default tooltip alignment.
+      </td>
     </tr>
     <tr>
       <td class="shortname" ><a href="#beautiful.bg_normal">beautiful.bg_normal</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>color</span></td>
-      <td colspan="1" class="summary">The default background color.</td>
+      <td colspan="1" class="summary">
+        The default background color.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from wibox
       </td>
@@ -767,7 +893,9 @@ myclock_t:remove_from_object(obj2)
     <tr>
       <td class="shortname" ><a href="#beautiful.fg_normal">beautiful.fg_normal</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>color</span></td>
-      <td colspan="1" class="summary">The default foreground (text) color.</td>
+      <td colspan="1" class="summary">
+        The default foreground (text) color.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from wibox
       </td>
@@ -805,10 +933,10 @@ myclock_t:remove_from_object(obj2)
             <span class="types"><span class="type">number</span></span>
          The timeout value for
    <code>timer_function</code>.
-         (<em>default</em> 1)
+         (<em>default</em> <code>1</code>)
         </li>
         <li><span class="parameter">objects</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          A list of objects linked to the tooltip.
          (<em>optional</em>)
         </li>
@@ -821,30 +949,30 @@ myclock_t:remove_from_object(obj2)
         <li><span class="parameter">margin_leftright</span>
             <span class="types"><span class="type">integer</span></span>
          The left/right margin for the text.
-         (<em>default</em> apply_dpi(5))
+         (<em>default</em> <code>apply_dpi(5)</code>)
         </li>
         <li><span class="parameter">margin_topbottom</span>
             <span class="types"><span class="type">integer</span></span>
          The top/bottom margin for the text.
-         (<em>default</em> apply_dpi(3))
+         (<em>default</em> <code>apply_dpi(3)</code>)
         </li>
         <li><span class="parameter">shape</span>
             <span class="types"><span class="type">gears.shape</span></span>
          The shape.
-         (<em>default</em> nil)
+         (<em>default</em> <code>nil</code>)
         </li>
         <li><span class="parameter">bg</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          The background color.
          (<em>optional</em>)
         </li>
         <li><span class="parameter">fg</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          The foreground color.
          (<em>optional</em>)
         </li>
         <li><span class="parameter">border_color</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          The tooltip border color.
          (<em>optional</em>)
         </li>
@@ -854,12 +982,12 @@ myclock_t:remove_from_object(obj2)
          (<em>optional</em>)
         </li>
         <li><span class="parameter">align</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          The horizontal alignment.
          (<em>optional</em>)
         </li>
         <li><span class="parameter">font</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          The tooltip font.
          (<em>optional</em>)
         </li>
@@ -869,7 +997,7 @@ myclock_t:remove_from_object(obj2)
          (<em>optional</em>)
         </li>
         <li><span class="parameter">gaps</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a> or <span class="type">number</span></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a> or <span class="type">number</span></span>
          The tooltip margins.
          (<em>optional</em>)
         </li>
@@ -895,7 +1023,7 @@ myclock_t:remove_from_object(obj2)
 
 
 
-    <span id=item1870 class="hide_extra">
+    <span id=item1886 class="hide_extra">
     </span>
 
 </dd>
@@ -919,7 +1047,7 @@ myclock_t:remove_from_object(obj2)
 
 
 
-    <span id=item1871 class="hide_extra">
+    <span id=item1887 class="hide_extra">
     </span>
 
 </dd>
@@ -940,13 +1068,13 @@ myclock_t:remove_from_object(obj2)
 
 
      <br />
-     <center id=button1872>
-     <a class="show_more_button" onclick="show_extra('1872')">
+     <center id=button1888>
+     <a class="show_more_button" onclick="show_extra('1888')">
       Click to display more
      </a>
      </center>
 
-    <span id=item1872 class="hide_extra">
+    <span id=item1888 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::visible</code></span>  When the <a href="../popups_and_bars/awful.tooltip.html#visible">visible</a> value changes.</li>
@@ -1010,19 +1138,19 @@ myclock_t:remove_from_object(obj2)
 
 
      <br />
-     <center id=button1873>
-     <a class="show_more_button" onclick="show_extra('1873')">
+     <center id=button1889>
+     <a class="show_more_button" onclick="show_extra('1889')">
       Click to display more
      </a>
      </center>
 
-    <span id=item1873 class="hide_extra">
+    <span id=item1889 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::align</code></span>  When the <a href="../popups_and_bars/awful.tooltip.html#align">align</a> value changes.</li>
            <ul>
              <li><span class="parameter"><code>self</code></span> <span class="types"><a href="../popups_and_bars/awful.tooltip.html#">awful.tooltip</a></span> The object which changed (useful when connecting many object to the same callback).</li>
-             <li><span class="parameter"><code>new_value</code></span> <span class="types"><a href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span> The new value affected to the property.</li>
+             <li><span class="parameter"><code>new_value</code></span> <span class="types"><a href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span> The new value affected to the property.</li>
            </ul>
      </ul>
      <h3>Consumed theme variables:</h3>
@@ -1062,13 +1190,13 @@ myclock_t:remove_from_object(obj2)
 
 
      <br />
-     <center id=button1874>
-     <a class="show_more_button" onclick="show_extra('1874')">
+     <center id=button1890>
+     <a class="show_more_button" onclick="show_extra('1890')">
       Click to display more
      </a>
      </center>
 
-    <span id=item1874 class="hide_extra">
+    <span id=item1890 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::shape</code></span>  When the <a href="../popups_and_bars/awful.tooltip.html#shape">shape</a> value changes.</li>
@@ -1132,19 +1260,19 @@ myclock_t:remove_from_object(obj2)
 
 
      <br />
-     <center id=button1875>
-     <a class="show_more_button" onclick="show_extra('1875')">
+     <center id=button1891>
+     <a class="show_more_button" onclick="show_extra('1891')">
       Click to display more
      </a>
      </center>
 
-    <span id=item1875 class="hide_extra">
+    <span id=item1891 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::mode</code></span>  When the <a href="../popups_and_bars/awful.tooltip.html#mode">mode</a> value changes.</li>
            <ul>
              <li><span class="parameter"><code>self</code></span> <span class="types"><a href="../popups_and_bars/awful.tooltip.html#">awful.tooltip</a></span> The object which changed (useful when connecting many object to the same callback).</li>
-             <li><span class="parameter"><code>new_value</code></span> <span class="types"><a href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span> The new value affected to the property.</li>
+             <li><span class="parameter"><code>new_value</code></span> <span class="types"><a href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span> The new value affected to the property.</li>
            </ul>
      </ul>
     </span>
@@ -1189,7 +1317,7 @@ myclock_t:remove_from_object(obj2)
     <h3>Type constraints:</h3>
     <ul>
         <li><span class="parameter">preferred_positions</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          The position, ordered by priorities
         </li>
     </ul>
@@ -1205,13 +1333,13 @@ myclock_t:remove_from_object(obj2)
 
 
      <br />
-     <center id=button1876>
-     <a class="show_more_button" onclick="show_extra('1876')">
+     <center id=button1892>
+     <a class="show_more_button" onclick="show_extra('1892')">
       Click to display more
      </a>
      </center>
 
-    <span id=item1876 class="hide_extra">
+    <span id=item1892 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::preferred_positions</code></span>  When the <a href="../popups_and_bars/awful.tooltip.html#preferred_positions">preferred_positions</a> value changes.</li>
@@ -1284,19 +1412,19 @@ myclock_t:remove_from_object(obj2)
 
 
      <br />
-     <center id=button1877>
-     <a class="show_more_button" onclick="show_extra('1877')">
+     <center id=button1893>
+     <a class="show_more_button" onclick="show_extra('1893')">
       Click to display more
      </a>
      </center>
 
-    <span id=item1877 class="hide_extra">
+    <span id=item1893 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::preferred_alignments</code></span>  When the <a href="../popups_and_bars/awful.tooltip.html#preferred_alignments">preferred_alignments</a> value changes.</li>
            <ul>
              <li><span class="parameter"><code>self</code></span> <span class="types"><a href="../popups_and_bars/awful.tooltip.html#">awful.tooltip</a></span> The object which changed (useful when connecting many object to the same callback).</li>
-             <li><span class="parameter"><code>new_value</code></span> <span class="types"><a href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span> The new value affected to the property.</li>
+             <li><span class="parameter"><code>new_value</code></span> <span class="types"><a href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span> The new value affected to the property.</li>
            </ul>
      </ul>
     </span>
@@ -1316,7 +1444,7 @@ myclock_t:remove_from_object(obj2)
     <h3>Type constraints:</h3>
     <ul>
         <li><span class="parameter">text</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          New tooltip text, passed to
    <code>wibox.widget.textbox.set_text</code>.
         </li>
@@ -1331,13 +1459,13 @@ myclock_t:remove_from_object(obj2)
 
 
      <br />
-     <center id=button1878>
-     <a class="show_more_button" onclick="show_extra('1878')">
+     <center id=button1894>
+     <a class="show_more_button" onclick="show_extra('1894')">
       Click to display more
      </a>
      </center>
 
-    <span id=item1878 class="hide_extra">
+    <span id=item1894 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::text</code></span>  When the <a href="../popups_and_bars/awful.tooltip.html#text">text</a> value changes.</li>
@@ -1363,7 +1491,7 @@ myclock_t:remove_from_object(obj2)
     <h3>Type constraints:</h3>
     <ul>
         <li><span class="parameter">text</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          New tooltip markup, passed to
    <code>wibox.widget.textbox.set_markup</code>.
         </li>
@@ -1378,13 +1506,13 @@ myclock_t:remove_from_object(obj2)
 
 
      <br />
-     <center id=button1879>
-     <a class="show_more_button" onclick="show_extra('1879')">
+     <center id=button1895>
+     <a class="show_more_button" onclick="show_extra('1895')">
       Click to display more
      </a>
      </center>
 
-    <span id=item1879 class="hide_extra">
+    <span id=item1895 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::markup</code></span>  When the <a href="../popups_and_bars/awful.tooltip.html#markup">markup</a> value changes.</li>
@@ -1420,13 +1548,13 @@ myclock_t:remove_from_object(obj2)
 
 
      <br />
-     <center id=button1880>
-     <a class="show_more_button" onclick="show_extra('1880')">
+     <center id=button1896>
+     <a class="show_more_button" onclick="show_extra('1896')">
       Click to display more
      </a>
      </center>
 
-    <span id=item1880 class="hide_extra">
+    <span id=item1896 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::timeout</code></span>  When the <a href="../popups_and_bars/awful.tooltip.html#timeout">timeout</a> value changes.</li>
@@ -1456,7 +1584,7 @@ myclock_t:remove_from_object(obj2)
     <h3>Type constraints:</h3>
     <ul>
         <li><span class="parameter">New</span>
-            <span class="types"><span class="type">number</span> or <a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><span class="type">number</span> or <a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          margins value.
         </li>
     </ul>
@@ -1466,13 +1594,13 @@ myclock_t:remove_from_object(obj2)
 
 
      <br />
-     <center id=button1881>
-     <a class="show_more_button" onclick="show_extra('1881')">
+     <center id=button1897>
+     <a class="show_more_button" onclick="show_extra('1897')">
       Click to display more
      </a>
      </center>
 
-    <span id=item1881 class="hide_extra">
+    <span id=item1897 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::margins</code></span>  When the <a href="../popups_and_bars/awful.tooltip.html#margins">margins</a> value changes.</li>
@@ -1506,13 +1634,13 @@ myclock_t:remove_from_object(obj2)
 
 
      <br />
-     <center id=button1882>
-     <a class="show_more_button" onclick="show_extra('1882')">
+     <center id=button1898>
+     <a class="show_more_button" onclick="show_extra('1898')">
       Click to display more
      </a>
      </center>
 
-    <span id=item1882 class="hide_extra">
+    <span id=item1898 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::border_width</code></span>  When the <a href="../popups_and_bars/awful.tooltip.html#border_width">border_width</a> value changes.</li>
@@ -1553,13 +1681,13 @@ myclock_t:remove_from_object(obj2)
 
 
      <br />
-     <center id=button1883>
-     <a class="show_more_button" onclick="show_extra('1883')">
+     <center id=button1899>
+     <a class="show_more_button" onclick="show_extra('1899')">
       Click to display more
      </a>
      </center>
 
-    <span id=item1883 class="hide_extra">
+    <span id=item1899 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::border_color</code></span>  When the <a href="../popups_and_bars/awful.tooltip.html#border_color">border_color</a> value changes.</li>
@@ -1599,13 +1727,13 @@ myclock_t:remove_from_object(obj2)
 
 
      <br />
-     <center id=button1884>
-     <a class="show_more_button" onclick="show_extra('1884')">
+     <center id=button1900>
+     <a class="show_more_button" onclick="show_extra('1900')">
       Click to display more
      </a>
      </center>
 
-    <span id=item1884 class="hide_extra">
+    <span id=item1900 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::margins_leftright</code></span>  When the <a href="../popups_and_bars/awful.tooltip.html#margins_leftright">margins_leftright</a> value changes.</li>
@@ -1645,13 +1773,13 @@ myclock_t:remove_from_object(obj2)
 
 
      <br />
-     <center id=button1885>
-     <a class="show_more_button" onclick="show_extra('1885')">
+     <center id=button1901>
+     <a class="show_more_button" onclick="show_extra('1901')">
       Click to display more
      </a>
      </center>
 
-    <span id=item1885 class="hide_extra">
+    <span id=item1901 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::margins_topbottom</code></span>  When the <a href="../popups_and_bars/awful.tooltip.html#margins_topbottom">margins_topbottom</a> value changes.</li>
@@ -1681,7 +1809,7 @@ myclock_t:remove_from_object(obj2)
     <h3>Type constraints:</h3>
     <ul>
         <li><span class="parameter">New</span>
-            <span class="types"><span class="type">number</span> or <a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><span class="type">number</span> or <a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          margins value.
         </li>
     </ul>
@@ -1691,13 +1819,13 @@ myclock_t:remove_from_object(obj2)
 
 
      <br />
-     <center id=button1886>
-     <a class="show_more_button" onclick="show_extra('1886')">
+     <center id=button1902>
+     <a class="show_more_button" onclick="show_extra('1902')">
       Click to display more
      </a>
      </center>
 
-    <span id=item1886 class="hide_extra">
+    <span id=item1902 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::gaps</code></span>  When the <a href="../popups_and_bars/awful.tooltip.html#gaps">gaps</a> value changes.</li>
@@ -1727,13 +1855,13 @@ myclock_t:remove_from_object(obj2)
 
 
      <br />
-     <center id=button1887>
-     <a class="show_more_button" onclick="show_extra('1887')">
+     <center id=button1903>
+     <a class="show_more_button" onclick="show_extra('1903')">
       Click to display more
      </a>
      </center>
 
-    <span id=item1887 class="hide_extra">
+    <span id=item1903 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::ontop</code></span>  When the <code>ontop</code> value changes.</li>
@@ -1766,13 +1894,13 @@ myclock_t:remove_from_object(obj2)
 
 
      <br />
-     <center id=button1888>
-     <a class="show_more_button" onclick="show_extra('1888')">
+     <center id=button1904>
+     <a class="show_more_button" onclick="show_extra('1904')">
       Click to display more
      </a>
      </center>
 
-    <span id=item1888 class="hide_extra">
+    <span id=item1904 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::cursor</code></span>  When the <code>cursor</code> value changes.</li>
@@ -1808,13 +1936,13 @@ myclock_t:remove_from_object(obj2)
 
 
      <br />
-     <center id=button1889>
-     <a class="show_more_button" onclick="show_extra('1889')">
+     <center id=button1905>
+     <a class="show_more_button" onclick="show_extra('1905')">
       Click to display more
      </a>
      </center>
 
-    <span id=item1889 class="hide_extra">
+    <span id=item1905 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::opacity</code></span>  When the <code>opacity</code> value changes.</li>
@@ -1847,16 +1975,16 @@ myclock_t:remove_from_object(obj2)
 
 
      <br />
-     <center id=button1890>
-     <a class="show_more_button" onclick="show_extra('1890')">
+     <center id=button1906>
+     <a class="show_more_button" onclick="show_extra('1906')">
       Click to display more
      </a>
      </center>
 
-    <span id=item1890 class="hide_extra">
+    <span id=item1906 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
-          <li><span class="parameter"><code>property::type</code></span>  When the <a href="https://www.lua.org/manual/5.3/manual.html#pdf-type">type</a> value changes.</li>
+          <li><span class="parameter"><code>property::type</code></span>  When the <a href="https://www.lua.org/manual/5.1/manual.html#pdf-type">type</a> value changes.</li>
            <ul>
              <li><span class="parameter"><code>self</code></span> <span class="types"><a href="../popups_and_bars/wibox.html#">wibox</a></span> The object which changed (useful when connecting many object to the same callback).</li>
            </ul>
@@ -1882,13 +2010,13 @@ myclock_t:remove_from_object(obj2)
 
 
      <br />
-     <center id=button1891>
-     <a class="show_more_button" onclick="show_extra('1891')">
+     <center id=button1907>
+     <a class="show_more_button" onclick="show_extra('1907')">
       Click to display more
      </a>
      </center>
 
-    <span id=item1891 class="hide_extra">
+    <span id=item1907 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::x</code></span>  When the <code>x</code> value changes.</li>
@@ -1917,13 +2045,13 @@ myclock_t:remove_from_object(obj2)
 
 
      <br />
-     <center id=button1892>
-     <a class="show_more_button" onclick="show_extra('1892')">
+     <center id=button1908>
+     <a class="show_more_button" onclick="show_extra('1908')">
       Click to display more
      </a>
      </center>
 
-    <span id=item1892 class="hide_extra">
+    <span id=item1908 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::y</code></span>  When the <code>y</code> value changes.</li>
@@ -1952,13 +2080,13 @@ myclock_t:remove_from_object(obj2)
 
 
      <br />
-     <center id=button1893>
-     <a class="show_more_button" onclick="show_extra('1893')">
+     <center id=button1909>
+     <a class="show_more_button" onclick="show_extra('1909')">
       Click to display more
      </a>
      </center>
 
-    <span id=item1893 class="hide_extra">
+    <span id=item1909 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::width</code></span>  When the <code>width</code> value changes.</li>
@@ -1987,13 +2115,13 @@ myclock_t:remove_from_object(obj2)
 
 
      <br />
-     <center id=button1894>
-     <a class="show_more_button" onclick="show_extra('1894')">
+     <center id=button1910>
+     <a class="show_more_button" onclick="show_extra('1910')">
       Click to display more
      </a>
      </center>
 
-    <span id=item1894 class="hide_extra">
+    <span id=item1910 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::height</code></span>  When the <code>height</code> value changes.</li>
@@ -2022,13 +2150,13 @@ myclock_t:remove_from_object(obj2)
 
 
      <br />
-     <center id=button1895>
-     <a class="show_more_button" onclick="show_extra('1895')">
+     <center id=button1911>
+     <a class="show_more_button" onclick="show_extra('1911')">
       Click to display more
      </a>
      </center>
 
-    <span id=item1895 class="hide_extra">
+    <span id=item1911 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::screen</code></span>  When the <a href="../core_components/screen.html#">screen</a> value changes.</li>
@@ -2058,13 +2186,13 @@ myclock_t:remove_from_object(obj2)
 
 
      <br />
-     <center id=button1896>
-     <a class="show_more_button" onclick="show_extra('1896')">
+     <center id=button1912>
+     <a class="show_more_button" onclick="show_extra('1912')">
       Click to display more
      </a>
      </center>
 
-    <span id=item1896 class="hide_extra">
+    <span id=item1912 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::drawable</code></span>  When the <a href="../core_components/drawable.html#">drawable</a> value changes.</li>
@@ -2093,13 +2221,13 @@ myclock_t:remove_from_object(obj2)
 
 
      <br />
-     <center id=button1897>
-     <a class="show_more_button" onclick="show_extra('1897')">
+     <center id=button1913>
+     <a class="show_more_button" onclick="show_extra('1913')">
       Click to display more
      </a>
      </center>
 
-    <span id=item1897 class="hide_extra">
+    <span id=item1913 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::widget</code></span>  When the <code>widget</code> value changes.</li>
@@ -2133,13 +2261,13 @@ myclock_t:remove_from_object(obj2)
 
 
      <br />
-     <center id=button1898>
-     <a class="show_more_button" onclick="show_extra('1898')">
+     <center id=button1914>
+     <a class="show_more_button" onclick="show_extra('1914')">
       Click to display more
      </a>
      </center>
 
-    <span id=item1898 class="hide_extra">
+    <span id=item1914 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::window</code></span>  When the <code>window</code> value changes.</li>
@@ -2176,13 +2304,13 @@ myclock_t:remove_from_object(obj2)
 
 
      <br />
-     <center id=button1899>
-     <a class="show_more_button" onclick="show_extra('1899')">
+     <center id=button1915>
+     <a class="show_more_button" onclick="show_extra('1915')">
       Click to display more
      </a>
      </center>
 
-    <span id=item1899 class="hide_extra">
+    <span id=item1915 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::shape_bounding</code></span>  When the <code>shape_bounding</code> value changes.</li>
@@ -2218,13 +2346,13 @@ myclock_t:remove_from_object(obj2)
 
 
      <br />
-     <center id=button1900>
-     <a class="show_more_button" onclick="show_extra('1900')">
+     <center id=button1916>
+     <a class="show_more_button" onclick="show_extra('1916')">
       Click to display more
      </a>
      </center>
 
-    <span id=item1900 class="hide_extra">
+    <span id=item1916 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::shape_clip</code></span>  When the <code>shape_clip</code> value changes.</li>
@@ -2261,13 +2389,13 @@ myclock_t:remove_from_object(obj2)
 
 
      <br />
-     <center id=button1901>
-     <a class="show_more_button" onclick="show_extra('1901')">
+     <center id=button1917>
+     <a class="show_more_button" onclick="show_extra('1917')">
       Click to display more
      </a>
      </center>
 
-    <span id=item1901 class="hide_extra">
+    <span id=item1917 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::shape_input</code></span>  When the <code>shape_input</code> value changes.</li>
@@ -2306,13 +2434,13 @@ myclock_t:remove_from_object(obj2)
 
 
      <br />
-     <center id=button1902>
-     <a class="show_more_button" onclick="show_extra('1902')">
+     <center id=button1918>
+     <a class="show_more_button" onclick="show_extra('1918')">
       Click to display more
      </a>
      </center>
 
-    <span id=item1902 class="hide_extra">
+    <span id=item1918 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::input_passthrough</code></span>  When the <code>input_passthrough</code> value changes.</li>
@@ -2348,13 +2476,13 @@ myclock_t:remove_from_object(obj2)
 
 
      <br />
-     <center id=button1903>
-     <a class="show_more_button" onclick="show_extra('1903')">
+     <center id=button1919>
+     <a class="show_more_button" onclick="show_extra('1919')">
       Click to display more
      </a>
      </center>
 
-    <span id=item1903 class="hide_extra">
+    <span id=item1919 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::buttons</code></span>  When the <code>buttons</code> value changes.</li>
@@ -2402,13 +2530,13 @@ myclock_t:remove_from_object(obj2)
 
 
      <br />
-     <center id=button1904>
-     <a class="show_more_button" onclick="show_extra('1904')">
+     <center id=button1920>
+     <a class="show_more_button" onclick="show_extra('1920')">
       Click to display more
      </a>
      </center>
 
-    <span id=item1904 class="hide_extra">
+    <span id=item1920 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::bg</code></span>  When the <code>bg</code> value changes.</li>
@@ -2446,7 +2574,7 @@ myclock_t:remove_from_object(obj2)
     <h3>Type constraints:</h3>
     <ul>
         <li><span class="parameter">image</span>
-            <span class="types"><span class="type">gears.suface</span>, <a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a> or <span class="type">function</span></span>
+            <span class="types"><span class="type">gears.suface</span>, <a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a> or <span class="type">function</span></span>
          A background image or a function.
         </li>
     </ul>
@@ -2460,13 +2588,13 @@ myclock_t:remove_from_object(obj2)
 
 
      <br />
-     <center id=button1905>
-     <a class="show_more_button" onclick="show_extra('1905')">
+     <center id=button1921>
+     <a class="show_more_button" onclick="show_extra('1921')">
       Click to display more
      </a>
      </center>
 
-    <span id=item1905 class="hide_extra">
+    <span id=item1921 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::bgimage</code></span>  When the <code>bgimage</code> value changes.</li>
@@ -2514,13 +2642,13 @@ myclock_t:remove_from_object(obj2)
 
 
      <br />
-     <center id=button1906>
-     <a class="show_more_button" onclick="show_extra('1906')">
+     <center id=button1922>
+     <a class="show_more_button" onclick="show_extra('1922')">
       Click to display more
      </a>
      </center>
 
-    <span id=item1906 class="hide_extra">
+    <span id=item1922 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::fg</code></span>  When the <code>fg</code> value changes.</li>
@@ -2572,7 +2700,7 @@ myclock_t:remove_from_object(obj2)
 
 
 
-    <span id=item1907 class="hide_extra">
+    <span id=item1923 class="hide_extra">
     </span>
 
 </dd>
@@ -2604,7 +2732,7 @@ myclock_t:remove_from_object(obj2)
 
 
 
-    <span id=item1908 class="hide_extra">
+    <span id=item1924 class="hide_extra">
     </span>
 
 </dd>
@@ -2622,7 +2750,7 @@ myclock_t:remove_from_object(obj2)
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">name</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          The name of the signal.
         </li>
         <li><span class="parameter">...</span>
@@ -2637,7 +2765,7 @@ myclock_t:remove_from_object(obj2)
 
 
 
-    <span id=item1909 class="hide_extra">
+    <span id=item1925 class="hide_extra">
     </span>
 
 </dd>
@@ -2655,7 +2783,7 @@ myclock_t:remove_from_object(obj2)
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">name</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          The name of the signal.
         </li>
         <li><span class="parameter">func</span>
@@ -2669,7 +2797,7 @@ myclock_t:remove_from_object(obj2)
 
 
 
-    <span id=item1910 class="hide_extra">
+    <span id=item1926 class="hide_extra">
     </span>
 
 </dd>
@@ -2694,7 +2822,7 @@ myclock_t:remove_from_object(obj2)
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">name</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          The name of the signal.
         </li>
         <li><span class="parameter">func</span>
@@ -2708,7 +2836,7 @@ myclock_t:remove_from_object(obj2)
 
 
 
-    <span id=item1911 class="hide_extra">
+    <span id=item1927 class="hide_extra">
     </span>
 
 </dd>
@@ -2742,18 +2870,18 @@ myclock_t:remove_from_object(obj2)
 
 
      <br />
-     <center id=button1912>
-     <a class="show_more_button" onclick="show_extra('1912')">
+     <center id=button1928>
+     <a class="show_more_button" onclick="show_extra('1928')">
       Click to display more
      </a>
      </center>
 
-    <span id=item1912 class="hide_extra">
+    <span id=item1928 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::geometry</code></span>  When the geometry change.</li>
            <ul>
-             <li><span class="parameter"><code>geo</code></span> <span class="types"><a href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span> The geometry table.</li>
+             <li><span class="parameter"><code>geo</code></span> <span class="types"><a href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span> The geometry table.</li>
            </ul>
      </ul>
     </span>
@@ -2799,13 +2927,13 @@ myclock_t:remove_from_object(obj2)
 
 
      <br />
-     <center id=button1913>
-     <a class="show_more_button" onclick="show_extra('1913')">
+     <center id=button1929>
+     <a class="show_more_button" onclick="show_extra('1929')">
       Click to display more
      </a>
      </center>
 
-    <span id=item1913 class="hide_extra">
+    <span id=item1929 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::struts</code></span>  </li>
@@ -2837,7 +2965,7 @@ myclock_t:remove_from_object(obj2)
 
 
 
-    <span id=item1914 class="hide_extra">
+    <span id=item1930 class="hide_extra">
     </span>
 
 </dd>
@@ -2868,7 +2996,7 @@ myclock_t:remove_from_object(obj2)
     <h3>Returns:</h3>
     <ol>
 
-           <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+           <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          A sorted table of widgets positions. The first element is the biggest
  container while the last is the topmost widget. The table contains <em>x</em>, <em>y</em>,
  <em>width</em>, <em>height</em> and <em>widget</em>.
@@ -2878,7 +3006,7 @@ myclock_t:remove_from_object(obj2)
 
 
 
-    <span id=item1915 class="hide_extra">
+    <span id=item1931 class="hide_extra">
     </span>
 
 </dd>
@@ -2905,7 +3033,7 @@ myclock_t:remove_from_object(obj2)
 
 
 
-    <span id=item1772 class="hide_extra">
+    <span id=item1785 class="hide_extra">
     </span>
 
 </dd>
@@ -2923,13 +3051,13 @@ myclock_t:remove_from_object(obj2)
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">path</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          The path.
         </li>
         <li><span class="parameter">context</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          A widget context.
-         (<em>default</em> nil)
+         (<em>default</em> <code>nil</code>)
         </li>
     </ul>
 
@@ -2938,7 +3066,7 @@ myclock_t:remove_from_object(obj2)
 
 
 
-    <span id=item1773 class="hide_extra">
+    <span id=item1786 class="hide_extra">
     </span>
 
 </dd>
@@ -2968,7 +3096,7 @@ myclock_t:remove_from_object(obj2)
 
 
 
-    <span id=item1774 class="hide_extra">
+    <span id=item1787 class="hide_extra">
     </span>
 
 </dd>
@@ -2992,7 +3120,7 @@ myclock_t:remove_from_object(obj2)
 
 
 
-    <span id=item1916 class="hide_extra">
+    <span id=item1932 class="hide_extra">
     </span>
 
 </dd>
@@ -3012,7 +3140,7 @@ myclock_t:remove_from_object(obj2)
 
 
 
-    <span id=item1917 class="hide_extra">
+    <span id=item1933 class="hide_extra">
     </span>
 
 </dd>
@@ -3032,7 +3160,7 @@ myclock_t:remove_from_object(obj2)
 
 
 
-    <span id=item1918 class="hide_extra">
+    <span id=item1934 class="hide_extra">
     </span>
 
 </dd>
@@ -3052,7 +3180,7 @@ myclock_t:remove_from_object(obj2)
 
 
 
-    <span id=item1919 class="hide_extra">
+    <span id=item1935 class="hide_extra">
     </span>
 
 </dd>
@@ -3072,7 +3200,7 @@ myclock_t:remove_from_object(obj2)
 
 
 
-    <span id=item1920 class="hide_extra">
+    <span id=item1936 class="hide_extra">
     </span>
 
 </dd>
@@ -3098,7 +3226,7 @@ myclock_t:remove_from_object(obj2)
 
 
 
-    <span id=item1921 class="hide_extra">
+    <span id=item1937 class="hide_extra">
     </span>
 
 </dd>
@@ -3118,7 +3246,7 @@ myclock_t:remove_from_object(obj2)
 
 
 
-    <span id=item1922 class="hide_extra">
+    <span id=item1938 class="hide_extra">
     </span>
 
 </dd>
@@ -3140,7 +3268,7 @@ myclock_t:remove_from_object(obj2)
             <span class="types"><span class="type">gears.shape</span></span>
          A <a href="../theme_related_libraries/gears.shape.html#">gears.shape</a>
   compatible function
-         (<em>default</em> gears.shape.rectangle)
+         (<em>default</em> <code>gears.shape.rectangle</code>)
         </li>
     </ul>
 
@@ -3154,7 +3282,7 @@ myclock_t:remove_from_object(obj2)
 
 
 
-    <span id=item1923 class="hide_extra">
+    <span id=item1939 class="hide_extra">
     </span>
 
 </dd>
@@ -3178,7 +3306,7 @@ myclock_t:remove_from_object(obj2)
 
 
 
-    <span id=item1924 class="hide_extra">
+    <span id=item1940 class="hide_extra">
     </span>
 
 </dd>
@@ -3209,7 +3337,7 @@ myclock_t:remove_from_object(obj2)
 
 
 
-    <span id=item1925 class="hide_extra">
+    <span id=item1941 class="hide_extra">
     </span>
 
 </dd>
@@ -3234,7 +3362,7 @@ myclock_t:remove_from_object(obj2)
 
 
 
-    <span id=item1926 class="hide_extra">
+    <span id=item1942 class="hide_extra">
     </span>
 
 </dd>
@@ -3245,7 +3373,6 @@ myclock_t:remove_from_object(obj2)
 </div> <!-- id="main" -->
 <div id="about">
 <i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.6</a></i>
-<i style="float:right;">Last updated 2021-05-01 17:20:18 </i>
 </div> <!-- id="about" -->
 </div> <!-- id="container" -->
 </body>

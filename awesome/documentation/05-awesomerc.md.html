@@ -48,7 +48,8 @@
 <li><a href="#Error_handling">Error handling </a></li>
 <li><a href="#Variable_definitions">Variable definitions </a></li>
 <li><a href="#Menu">Menu </a></li>
-<li><a href="#Tag">Tag </a></li>
+<li><a href="#Tag_layout">Tag layout </a></li>
+<li><a href="#Wallpaper">Wallpaper </a></li>
 <li><a href="#Wibar">Wibar </a></li>
 <li><a href="#Mouse_bindings">Mouse bindings </a></li>
 <li><a href="#Key_bindings">Key bindings </a></li>
@@ -163,6 +164,7 @@
   <li><a href="../popups_and_bars/awful.popup.html">awful.popup</a></li>
   <li><a href="../popups_and_bars/awful.titlebar.html">awful.titlebar</a></li>
   <li><a href="../popups_and_bars/awful.tooltip.html">awful.tooltip</a></li>
+  <li><a href="../popups_and_bars/awful.wallpaper.html">awful.wallpaper</a></li>
   <li><a href="../popups_and_bars/awful.wibar.html">awful.wibar</a></li>
   <li><a href="../popups_and_bars/awful.widget.calendar_popup.html">awful.widget.calendar_popup</a></li>
   <li><a href="../popups_and_bars/menubar.html">menubar</a></li>
@@ -424,8 +426,8 @@ mylauncher = <span class="backtick"><a href="../widgets/awful.widget.launcher.ht
 <span class="backtick"><a href="../libraries/menubar.utils.html#terminal">menubar.utils.terminal</a></span> = terminal <span class="comment">-- Set the terminal for applications that require it</span>
 </pre>
 
-<p><a name="Tag"></a></p>
-<h2>Tag</h2>
+<p><a name="Tag_layout"></a></p>
+<h2>Tag layout</h2>
 <p> &nbsp;
  Table of layouts to cover with awful.layout.inc, order matters.</p>
 
@@ -450,6 +452,39 @@ tag.connect_signal(<span class="string">"request::default_layouts"</span>, <span
 <span class="keyword">end</span>)
 </pre>
 
+<p><a name="Wallpaper"></a></p>
+<h2>Wallpaper</h2>
+<p>The AwesomeWM wallpaper module, <a href="../popups_and_bars/awful.wallpaper.html#">awful.wallpaper</a> support both per-screen wallpaper
+and wallpaper across multiple screens. In the default configuration, the <code>&quot;request::wallpaper&quot;</code> signal
+is emitted everytime a screen is added, moved, resized or when the bars
+(<a href="../popups_and_bars/awful.wibar.html#">awful.wibar</a>) are moved.</p>
+
+<p>This is will suited for single-screen wallpapers. If you wish to use multi-screen wallpaper,
+it is better to create a global wallpaper object and edit it when the screen change. See
+the <code>add_screen</code>/<code>remove_screens</code> methods and the <code>screens</code> property of <a href="../popups_and_bars/awful.wallpaper.html#">awful.wallpaper</a> for
+examples.</p>
+
+
+<pre>
+screen.connect_signal(<span class="string">"request::wallpaper"</span>, <span class="keyword">function</span>(s)
+    <span class="backtick"><a href="../popups_and_bars/awful.wallpaper.html#">awful.wallpaper</a></span> {
+        screen = s,
+        widget = {
+            {
+                image     = <span class="backtick"><a href="../theme_related_libraries/beautiful.html#wallpaper">beautiful.wallpaper</a></span>,
+                upscale   = <span class="keyword">true</span>,
+                downscale = <span class="keyword">true</span>,
+                widget    = <span class="backtick"><a href="../widgets/wibox.widget.imagebox.html#">wibox.widget.imagebox</a></span>,
+            },
+            valign = <span class="string">"center"</span>,
+            halign = <span class="string">"center"</span>,
+            tiled  = <span class="keyword">false</span>,
+            widget = <span class="backtick"><a href="../widget_containers/wibox.container.tile.html#">wibox.container.tile</a></span>,
+        }
+    }
+<span class="keyword">end</span>)
+</pre>
+
 <p><a name="Wibar"></a></p>
 <h2>Wibar</h2>
 
@@ -466,22 +501,6 @@ mykeyboardlayout = <span class="backtick"><a href="../widgets/awful.widget.keybo
 
 <pre>
 mytextclock = <span class="backtick"><a href="../widgets/wibox.widget.textclock.html#">wibox.widget.textclock</a></span>()
-
-
-
-
-
-screen.connect_signal(<span class="string">"request::wallpaper"</span>, <span class="keyword">function</span>(s)
-    <span class="comment">-- Wallpaper
-</span>    <span class="keyword">if</span> <span class="backtick"><a href="../theme_related_libraries/beautiful.html#wallpaper">beautiful.wallpaper</a></span> <span class="keyword">then</span>
-        <span class="keyword">local</span> wallpaper = <span class="backtick"><a href="../theme_related_libraries/beautiful.html#wallpaper">beautiful.wallpaper</a></span>
-        <span class="comment">-- If wallpaper is a function, call it with the screen
-</span>        <span class="keyword">if</span> <span class="global">type</span>(wallpaper) == <span class="string">"function"</span> <span class="keyword">then</span>
-            wallpaper = wallpaper(s)
-        <span class="keyword">end</span>
-        <span class="backtick"><a href="../utility_libraries/gears.wallpaper.html#maximized">gears.wallpaper.maximized</a></span>(wallpaper, s, <span class="keyword">true</span>)
-    <span class="keyword">end</span>
-<span class="keyword">end</span>)
 </pre>
 
 <p> &nbsp;</p>
@@ -554,15 +573,16 @@ screen.connect_signal(<span class="string">"request::desktop_decoration"</span>,
 
 <pre>
 <span class="comment">-- Create the wibox
-</span>s.mywibox = <span class="backtick"><a href="../popups_and_bars/awful.wibar.html#">awful.wibar</a></span>({ position = <span class="string">"top"</span>, screen = s })
+</span>s.mywibox = <span class="backtick"><a href="../popups_and_bars/awful.wibar.html#">awful.wibar</a></span> {
+    position = <span class="string">"top"</span>,
+    screen   = s,
 </pre>
 
 <p> &nbsp;</p>
 
 
 <pre>
-<span class="comment">-- Add widgets to the wibox
-</span>s.my<span class="backtick"><a href="../libraries/wibox.widget.html#">wibox.widget</a></span> = {
+widget   = {
     layout = <span class="backtick"><a href="../widget_layouts/wibox.layout.align.html#horizontal">wibox.layout.align.horizontal</a></span>,
     { <span class="comment">-- Left widgets
 </span>        layout = <span class="backtick"><a href="../widget_layouts/wibox.layout.fixed.html#horizontal">wibox.layout.fixed.horizontal</a></span>,
@@ -1083,7 +1103,6 @@ client.connect_signal(<span class="string">"mouse::enter"</span>, <span class="k
 </div> <!-- id="main" -->
 <div id="about">
 <i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.6</a></i>
-<i style="float:right;">Last updated 2021-05-01 17:20:18 </i>
 </div> <!-- id="about" -->
 </div> <!-- id="container" -->
 </body>

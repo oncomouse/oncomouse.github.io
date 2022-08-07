@@ -145,6 +145,7 @@
   <li><a href="../popups_and_bars/awful.popup.html">awful.popup</a></li>
   <li><a href="../popups_and_bars/awful.titlebar.html">awful.titlebar</a></li>
   <li><a href="../popups_and_bars/awful.tooltip.html">awful.tooltip</a></li>
+  <li><a href="../popups_and_bars/awful.wallpaper.html">awful.wallpaper</a></li>
   <li><a href="../popups_and_bars/awful.wibar.html">awful.wibar</a></li>
   <li><a href="../popups_and_bars/awful.widget.calendar_popup.html">awful.widget.calendar_popup</a></li>
   <li><a href="../popups_and_bars/menubar.html">menubar</a></li>
@@ -237,8 +238,15 @@
   <div class="extra-header__section">
     <h3>Info:</h3>
     <ul>
-            <li><strong>Copyright</strong>: 2008-2009 Damien Leone, Julien Danjou</li>
-            <li><strong>Author</strong>: Damien Leone &lt;damien.leone@gmail.com&gt;,Julien Danjou &lt;julien@danjou.info&gt;</li>
+                <li><strong>Copyright</strong>: 2008-2009 Damien Leone, Julien Danjou</li>
+                <li>
+                    <strong>Originally authored by</strong>: Damien Leone &lt;damien.leone@gmail.com&gt;,Julien Danjou &lt;julien@danjou.info&gt;<br />
+                    <small>(Full contributors list available on
+                    <a href="https://github.com/awesomeWM/awesome/graphs/contributors">
+                        our github project)
+                    </a></small>
+
+                </li>
     </ul>
   </div>
 
@@ -252,119 +260,153 @@
         <a href="#beautiful.gtk.get_theme_variables"><span class='function_modname'>beautiful.</span>gtk.get_theme_variables <span class='function_args'> <b>(</b><b>)</b></span></a>
         <span class="summarytype"><span class='summary_type'> -&gt;&nbsp;table</span></span>
       </td>
-      <td colspan="2" class="summary">Get GTK+3 theme variables from GtkStyleContext</td>
+      <td colspan="2" class="summary">
+        Get GTK+3 theme variables from GtkStyleContext
+      </td>
     </tr>
     <tr>
       <td class="name" >
         <a href="#get_font"><span class='function_modname'>beautiful.</span>get_font <span class='function_args'> <b>(</b>name<b>)</b></span></a>
         <span class="summarytype"><span class='summary_type'> -&gt;&nbsp;lgi.Pango.FontDescription</span></span>
       </td>
-      <td colspan="2" class="summary">Get a font description.</td>
+      <td colspan="2" class="summary">
+        Get a font description.
+      </td>
     </tr>
     <tr>
       <td class="name" >
         <a href="#get_merged_font"><span class='function_modname'>beautiful.</span>get_merged_font <span class='function_args'> <b>(</b>name, merge<b>)</b></span></a>
         <span class="summarytype"><span class='summary_type'> -&gt;&nbsp;lgi.Pango.FontDescription</span></span>
       </td>
-      <td colspan="2" class="summary">Get a new font with merged attributes, based on another one.</td>
+      <td colspan="2" class="summary">
+        Get a new font with merged attributes, based on another one.
+      </td>
     </tr>
     <tr>
       <td class="name" >
         <a href="#get_font_height"><span class='function_modname'>beautiful.</span>get_font_height <span class='function_args'> <b>(</b>name<b>)</b></span></a>
         <span class="summarytype"></span>
       </td>
-      <td colspan="2" class="summary">Get the height of a font.</td>
+      <td colspan="2" class="summary">
+        Get the height of a font.
+      </td>
     </tr>
     <tr>
       <td class="name" >
         <a href="#init"><span class='function_modname'>beautiful.</span>init <span class='function_args'> <b>(</b>config<b>)</b></span></a>
         <span class="summarytype"><span class='summary_type'> -&gt;&nbsp;true <i>or</i> nil</span></span>
       </td>
-      <td colspan="2" class="summary">Function that initializes the theme settings.</td>
+      <td colspan="2" class="summary">
+        Function that initializes the theme settings.
+      </td>
     </tr>
     <tr>
       <td class="name" >
         <a href="#get"><span class='function_modname'>beautiful.</span>get <span class='function_args'> <b>(</b><b>)</b></span></a>
         <span class="summarytype"><span class='summary_type'> -&gt;&nbsp;table</span></span>
       </td>
-      <td colspan="2" class="summary">Get the current theme.</td>
+      <td colspan="2" class="summary">
+        Get the current theme.
+      </td>
     </tr>
     <tr>
       <td class="name" >
         <a href="#beautiful.theme_assets.taglist_squares_sel"><span class='function_modname'>beautiful.</span>theme_assets.taglist_squares_sel <span class='function_args'> <b>(</b>size, fg<b>)</b></span></a>
         <span class="summarytype"><span class='summary_type'> -&gt;&nbsp;()</span></span>
       </td>
-      <td colspan="2" class="summary">Generate selected taglist square.</td>
+      <td colspan="2" class="summary">
+        Generate selected taglist square.
+      </td>
     </tr>
     <tr>
       <td class="name" >
         <a href="#beautiful.theme_assets.taglist_squares_unsel"><span class='function_modname'>beautiful.</span>theme_assets.taglist_squares_unsel <span class='function_args'> <b>(</b>size, fg<b>)</b></span></a>
         <span class="summarytype"><span class='summary_type'> -&gt;&nbsp;()</span></span>
       </td>
-      <td colspan="2" class="summary">Generate unselected taglist square.</td>
+      <td colspan="2" class="summary">
+        Generate unselected taglist square.
+      </td>
     </tr>
     <tr>
       <td class="name" >
         <a href="#beautiful.theme_assets.gen_awesome_name"><span class='function_modname'>beautiful.</span>theme_assets.gen_awesome_name <span class='function_args'> <b>(</b>cr, height, bg, fg, alt_fg<b>)</b></span></a>
         <span class="summarytype"></span>
       </td>
-      <td colspan="2" class="summary">Put Awesome WM name onto cairo surface.</td>
+      <td colspan="2" class="summary">
+        Put Awesome WM name onto cairo surface.
+      </td>
     </tr>
     <tr>
       <td class="name" >
         <a href="#beautiful.theme_assets.gen_logo"><span class='function_modname'>beautiful.</span>theme_assets.gen_logo <span class='function_args'> <b>(</b>cr, width, height, bg, fg<b>)</b></span></a>
         <span class="summarytype"></span>
       </td>
-      <td colspan="2" class="summary">Put Awesome WM logo onto cairo surface.</td>
+      <td colspan="2" class="summary">
+        Put Awesome WM logo onto cairo surface.
+      </td>
     </tr>
     <tr>
       <td class="name" >
         <a href="#beautiful.theme_assets.awesome_icon"><span class='function_modname'>beautiful.</span>theme_assets.awesome_icon <span class='function_args'> <b>(</b>size, bg, fg<b>)</b></span></a>
         <span class="summarytype"><span class='summary_type'> -&gt;&nbsp;()</span></span>
       </td>
-      <td colspan="2" class="summary">Generate Awesome WM logo.</td>
+      <td colspan="2" class="summary">
+        Generate Awesome WM logo.
+      </td>
     </tr>
     <tr>
       <td class="name" >
         <a href="#beautiful.theme_assets.wallpaper"><span class='function_modname'>beautiful.</span>theme_assets.wallpaper <span class='function_args'> <b>(</b>bg, fg, alt_fg, s<b>)</b></span></a>
         <span class="summarytype"><span class='summary_type'> -&gt;&nbsp;()</span></span>
       </td>
-      <td colspan="2" class="summary">Generate Awesome WM wallpaper.</td>
+      <td colspan="2" class="summary">
+        Generate Awesome WM wallpaper.
+      </td>
     </tr>
     <tr>
       <td class="name" >
         <a href="#beautiful.theme_assets.recolor_titlebar"><span class='function_modname'>beautiful.</span>theme_assets.recolor_titlebar <span class='function_args'> <b>(</b>theme, color, state, postfix, toggle_state<b>)</b></span></a>
         <span class="summarytype"><span class='summary_type'> -&gt;&nbsp;table</span></span>
       </td>
-      <td colspan="2" class="summary">Recolor titlebar icons.</td>
+      <td colspan="2" class="summary">
+        Recolor titlebar icons.
+      </td>
     </tr>
     <tr>
       <td class="name" >
         <a href="#beautiful.theme_assets.recolor_layout"><span class='function_modname'>beautiful.</span>theme_assets.recolor_layout <span class='function_args'> <b>(</b>theme, color<b>)</b></span></a>
         <span class="summarytype"><span class='summary_type'> -&gt;&nbsp;table</span></span>
       </td>
-      <td colspan="2" class="summary">Recolor layout icons.</td>
+      <td colspan="2" class="summary">
+        Recolor layout icons.
+      </td>
     </tr>
     <tr>
       <td class="name" >
         <a href="#beautiful.xresources.get_current_theme"><span class='function_modname'>beautiful.</span>xresources.get_current_theme <span class='function_args'> <b>(</b><b>)</b></span></a>
         <span class="summarytype"><span class='summary_type'> -&gt;&nbsp;table</span></span>
       </td>
-      <td colspan="2" class="summary">Get current base colorscheme from xrdb.</td>
+      <td colspan="2" class="summary">
+        Get current base colorscheme from xrdb.
+      </td>
     </tr>
     <tr>
       <td class="name" >
         <a href="#beautiful.xresources.set_dpi"><span class='function_modname'>beautiful.</span>xresources.set_dpi <span class='function_args'> <b>(</b>dpi[, s]<b>)</b></span></a>
         <span class="summarytype"></span>
       </td>
-      <td colspan="2" class="summary">Set DPI for a given screen (defaults to global).</td>
+      <td colspan="2" class="summary">
+        Set DPI for a given screen (defaults to global).
+      </td>
     </tr>
     <tr>
       <td class="name" >
         <a href="#beautiful.xresources.apply_dpi"><span class='function_modname'>beautiful.</span>xresources.apply_dpi <span class='function_args'> <b>(</b>size[, s]<b>)</b></span></a>
         <span class="summarytype"><span class='summary_type'> -&gt;&nbsp;integer</span></span>
       </td>
-      <td colspan="2" class="summary">Compute resulting size applying current DPI value (optionally per screen).</td>
+      <td colspan="2" class="summary">
+        Compute resulting size applying current DPI value (optionally per screen).
+      </td>
     </tr>
 </table>
 <h2><a href="#Theme_variables">Theme variables</a></h2>
@@ -372,32 +414,44 @@
     <tr>
       <td class="shortname" ><a href="#font">font</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>string</span></td>
-      <td colspan="2" class="summary">The default font.</td>
+      <td colspan="2" class="summary">
+        The default font.
+      </td>
     </tr>
     <tr>
       <td class="shortname" ><a href="#useless_gap">useless_gap</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>number</span></td>
-      <td colspan="2" class="summary">The gap between clients.</td>
+      <td colspan="2" class="summary">
+        The gap between clients.
+      </td>
     </tr>
     <tr>
       <td class="shortname" ><a href="#border_width">border_width</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>number</span></td>
-      <td colspan="2" class="summary">The fallback border width.</td>
+      <td colspan="2" class="summary">
+        The fallback border width.
+      </td>
     </tr>
     <tr>
       <td class="shortname" ><a href="#border_color">border_color</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>color</span></td>
-      <td colspan="2" class="summary">The fallback border color.</td>
+      <td colspan="2" class="summary">
+        The fallback border color.
+      </td>
     </tr>
     <tr>
       <td class="shortname" ><a href="#wallpaper">wallpaper</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>string <i>or</i> gears.surface</span></td>
-      <td colspan="2" class="summary">The wallpaper path.</td>
+      <td colspan="2" class="summary">
+        The wallpaper path.
+      </td>
     </tr>
     <tr>
       <td class="shortname" ><a href="#awesome_icon">awesome_icon</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>string <i>or</i> gears.surface</span></td>
-      <td colspan="2" class="summary">The Awesome icon path.</td>
+      <td colspan="2" class="summary">
+        The Awesome icon path.
+      </td>
     </tr>
 </table>
 <h2><a href="#Deprecated_functions">Deprecated functions</a></h2>
@@ -406,19 +460,25 @@
       <td class="name" >
         <a href="#recolor_titlebar_normal">beautiful.recolor_titlebar_normal<i class="deprecated_label"> [deprecated]</i></a>
       </td>
-      <td colspan="2" class="summary">Recolor unfocused titlebar icons.</td>
+      <td colspan="2" class="summary">
+        Recolor unfocused titlebar icons.
+      </td>
     </tr>
     <tr>
       <td class="name" >
         <a href="#recolor_titlebar_focus">beautiful.recolor_titlebar_focus<i class="deprecated_label"> [deprecated]</i></a>
       </td>
-      <td colspan="2" class="summary">Recolor focused titlebar icons.</td>
+      <td colspan="2" class="summary">
+        Recolor focused titlebar icons.
+      </td>
     </tr>
     <tr>
       <td class="name" >
         <a href="#beautiful.xresources.get_dpi">beautiful.xresources.get_dpi<i class="deprecated_label"> [deprecated]</i></a>
       </td>
-      <td colspan="2" class="summary">Get global or per-screen DPI value falling back to xrdb.</td>
+      <td colspan="2" class="summary">
+        Get global or per-screen DPI value falling back to xrdb.
+      </td>
     </tr>
 </table>
 <h2><a href="#Fields">Fields</a></h2>
@@ -426,7 +486,9 @@
     <tr>
       <td class="shortname" ><a href="#theme_path"><span class='function_modname'>beautiful.</span>theme_path</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>string</span></td>
-      <td colspan="2" class="summary">The current theme path (if any)</td>
+      <td colspan="2" class="summary">
+        The current theme path (if any)
+      </td>
     </tr>
 </table>
 
@@ -451,7 +513,7 @@
     <h3>Returns:</h3>
     <ol>
 
-           <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+           <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          Key-value table with the following structure:
  <table class='widget_list' border=1>
  <tr style='font-weight: bold;'> <th align='center'>Result key</th> <th align='center'>StyleContext key</th> <th align='center'>StyleContext fallback #1</th> <th align='center'>StyleContext fallback #2</th> <th align='center'>GTK Widget fallback</th> </tr>
@@ -501,7 +563,7 @@
 
 
 
-    <span id=item2129 class="hide_extra">
+    <span id=item2168 class="hide_extra">
     </span>
 
 </dd>
@@ -520,7 +582,7 @@
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">name</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a> or <span class="type">lgi.Pango.FontDescription</span></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a> or <span class="type">lgi.Pango.FontDescription</span></span>
          The name of the font.
         </li>
     </ul>
@@ -538,7 +600,7 @@
 
 
 
-    <span id=item2130 class="hide_extra">
+    <span id=item2169 class="hide_extra">
     </span>
 
 </dd>
@@ -557,11 +619,11 @@
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">name</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a> or <span class="type">Pango.FontDescription</span></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a> or <span class="type">Pango.FontDescription</span></span>
          The base font.
         </li>
         <li><span class="parameter">merge</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          Attributes that should be merged, e.g. "bold".
         </li>
     </ul>
@@ -579,7 +641,7 @@
 
 
 
-    <span id=item2131 class="hide_extra">
+    <span id=item2170 class="hide_extra">
     </span>
 
 </dd>
@@ -605,7 +667,7 @@
 
 
 
-    <span id=item2132 class="hide_extra">
+    <span id=item2171 class="hide_extra">
     </span>
 
 </dd>
@@ -650,7 +712,7 @@ end
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">config</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a> or <a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a> or <a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          The theme to load. It can be either the path to
    the theme file (which should return a table) or directly a table
    containing all the theme values.
@@ -668,7 +730,7 @@ end
 
 
 
-    <span id=item2133 class="hide_extra">
+    <span id=item2172 class="hide_extra">
     </span>
 
 </dd>
@@ -686,7 +748,7 @@ end
     <h3>Returns:</h3>
     <ol>
 
-           <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+           <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
         The current theme table.
     </ol>
 
@@ -694,7 +756,7 @@ end
 
 
 
-    <span id=item2134 class="hide_extra">
+    <span id=item2173 class="hide_extra">
     </span>
 
 </dd>
@@ -730,7 +792,7 @@ end
 
 
 
-    <span id=item2135 class="hide_extra">
+    <span id=item2174 class="hide_extra">
     </span>
 
 </dd>
@@ -766,7 +828,7 @@ end
 
 
 
-    <span id=item2136 class="hide_extra">
+    <span id=item2175 class="hide_extra">
     </span>
 
 </dd>
@@ -808,7 +870,7 @@ end
 
 
 
-    <span id=item2137 class="hide_extra">
+    <span id=item2176 class="hide_extra">
     </span>
 
 </dd>
@@ -850,7 +912,7 @@ end
 
 
 
-    <span id=item2138 class="hide_extra">
+    <span id=item2177 class="hide_extra">
     </span>
 
 </dd>
@@ -890,7 +952,7 @@ end
 
 
 
-    <span id=item2139 class="hide_extra">
+    <span id=item2178 class="hide_extra">
     </span>
 
 </dd>
@@ -934,7 +996,7 @@ end
 
 
 
-    <span id=item2140 class="hide_extra">
+    <span id=item2179 class="hide_extra">
     </span>
 
 </dd>
@@ -951,7 +1013,7 @@ end
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">theme</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          Beautiful theme table.
         </li>
         <li><span class="parameter">color</span>
@@ -959,15 +1021,15 @@ end
          Icons' color.
         </li>
         <li><span class="parameter">state</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          <code>&quot;normal&quot;</code> or <code>&quot;focus&quot;</code>.
         </li>
         <li><span class="parameter">postfix</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          <code>nil</code>, <code>&quot;hover&quot;</code> or <code>&quot;press&quot;</code>.
         </li>
         <li><span class="parameter">toggle_state</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          <code>nil</code>, <code>&quot;active&quot;</code> or <code>&quot;inactive&quot;</code>.
         </li>
     </ul>
@@ -975,7 +1037,7 @@ end
     <h3>Returns:</h3>
     <ol>
 
-           <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+           <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
         Beautiful theme table with the images recolored.
     </ol>
 
@@ -983,7 +1045,7 @@ end
 
 
 
-    <span id=item2141 class="hide_extra">
+    <span id=item2180 class="hide_extra">
     </span>
 
 </dd>
@@ -1000,7 +1062,7 @@ end
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">theme</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          Beautiful theme table
         </li>
         <li><span class="parameter">color</span>
@@ -1012,7 +1074,7 @@ end
     <h3>Returns:</h3>
     <ol>
 
-           <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+           <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
         Beautiful theme table with the images recolored.
     </ol>
 
@@ -1020,7 +1082,7 @@ end
 
 
 
-    <span id=item2142 class="hide_extra">
+    <span id=item2181 class="hide_extra">
     </span>
 
 </dd>
@@ -1038,7 +1100,7 @@ end
     <h3>Returns:</h3>
     <ol>
 
-           <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+           <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
         Color table with keys 'background', 'foreground' and 'color0'..'color15'.
     </ol>
 
@@ -1046,7 +1108,7 @@ end
 
 
 
-    <span id=item2143 class="hide_extra">
+    <span id=item2182 class="hide_extra">
     </span>
 
 </dd>
@@ -1078,7 +1140,7 @@ end
 
 
 
-    <span id=item2144 class="hide_extra">
+    <span id=item2183 class="hide_extra">
     </span>
 
 </dd>
@@ -1116,7 +1178,7 @@ end
 
 
 
-    <span id=item2145 class="hide_extra">
+    <span id=item2184 class="hide_extra">
     </span>
 
 </dd>
@@ -1140,7 +1202,7 @@ end
 
 
 
-    <span id=item2146 class="hide_extra">
+    <span id=item2185 class="hide_extra">
     </span>
 
 </dd>
@@ -1160,7 +1222,7 @@ end
 
 
 
-    <span id=item2147 class="hide_extra">
+    <span id=item2186 class="hide_extra">
     </span>
 
 </dd>
@@ -1180,7 +1242,7 @@ end
 
 
 
-    <span id=item2148 class="hide_extra">
+    <span id=item2187 class="hide_extra">
     </span>
 
 </dd>
@@ -1200,7 +1262,7 @@ end
 
 
 
-    <span id=item2149 class="hide_extra">
+    <span id=item2188 class="hide_extra">
     </span>
 
 </dd>
@@ -1220,7 +1282,7 @@ end
 
 
 
-    <span id=item2150 class="hide_extra">
+    <span id=item2189 class="hide_extra">
     </span>
 
 </dd>
@@ -1240,7 +1302,7 @@ end
 
 
 
-    <span id=item2151 class="hide_extra">
+    <span id=item2190 class="hide_extra">
     </span>
 
 </dd>
@@ -1261,7 +1323,7 @@ end
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">theme</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          Beautiful theme table
         </li>
         <li><span class="parameter">color</span>
@@ -1273,7 +1335,7 @@ end
     <h3>Returns:</h3>
     <ol>
 
-           <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+           <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
         Beautiful theme table with the images recolored.
     </ol>
 
@@ -1281,7 +1343,7 @@ end
 
 
 
-    <span id=item2152 class="hide_extra">
+    <span id=item2191 class="hide_extra">
     </span>
 
 </dd>
@@ -1298,7 +1360,7 @@ end
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">theme</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          Beautiful theme table
         </li>
         <li><span class="parameter">color</span>
@@ -1310,7 +1372,7 @@ end
     <h3>Returns:</h3>
     <ol>
 
-           <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+           <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
         Beautiful theme table with the images recolored.
     </ol>
 
@@ -1318,7 +1380,7 @@ end
 
 
 
-    <span id=item2153 class="hide_extra">
+    <span id=item2192 class="hide_extra">
     </span>
 
 </dd>
@@ -1354,7 +1416,7 @@ end
 
 
 
-    <span id=item2154 class="hide_extra">
+    <span id=item2193 class="hide_extra">
     </span>
 
 </dd>
@@ -1378,7 +1440,7 @@ end
 
 
 
-    <span id=item2155 class="hide_extra">
+    <span id=item2194 class="hide_extra">
     </span>
 
 </dd>
@@ -1389,7 +1451,6 @@ end
 </div> <!-- id="main" -->
 <div id="about">
 <i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.6</a></i>
-<i style="float:right;">Last updated 2021-05-01 17:20:18 </i>
 </div> <!-- id="about" -->
 </div> <!-- id="container" -->
 </body>

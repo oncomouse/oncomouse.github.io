@@ -156,6 +156,7 @@
   <li><a href="../popups_and_bars/awful.popup.html">awful.popup</a></li>
   <li><a href="../popups_and_bars/awful.titlebar.html">awful.titlebar</a></li>
   <li><a href="../popups_and_bars/awful.tooltip.html">awful.tooltip</a></li>
+  <li><a href="../popups_and_bars/awful.wallpaper.html">awful.wallpaper</a></li>
   <li><a href="../popups_and_bars/awful.wibar.html">awful.wibar</a></li>
   <li><a href="../popups_and_bars/awful.widget.calendar_popup.html">awful.widget.calendar_popup</a></li>
   <li><a href="../popups_and_bars/menubar.html">menubar</a></li>
@@ -232,8 +233,15 @@
   <div class="extra-header__section">
     <h3>Info:</h3>
     <ul>
-            <li><strong>Copyright</strong>: 2008 Julien Danjou, Sébastien Gross</li>
-            <li><strong>Author</strong>: Julien Danjou &lt;julien@danjou.info&gt;,Sébastien Gross &lt;seb-awesome@chezwam.org&gt;</li>
+                <li><strong>Copyright</strong>: 2008 Julien Danjou, Sébastien Gross</li>
+                <li>
+                    <strong>Originally authored by</strong>: Julien Danjou &lt;julien@danjou.info&gt;,Sébastien Gross &lt;seb-awesome@chezwam.org&gt;<br />
+                    <small>(Full contributors list available on
+                    <a href="https://github.com/awesomeWM/awesome/graphs/contributors">
+                        our github project)
+                    </a></small>
+
+                </li>
     </ul>
   </div>
 
@@ -247,22 +255,28 @@
         <a href="#awful.completion.bashcomp_load"><span class='function_modname'>awful.completion.</span>bashcomp_load <span class='function_args'> <b>(</b>src<b>)</b></span></a>
         <span class="summarytype"></span>
       </td>
-      <td colspan="2" class="summary">Enable programmable bash completion in awful.completion.bash at the price of
- a slight overhead.</td>
+      <td colspan="2" class="summary">
+        Enable programmable bash completion in awful.completion.bash at the price of
+ a slight overhead.
+      </td>
     </tr>
     <tr>
       <td class="name" >
         <a href="#awful.completion.shell"><span class='function_modname'>awful.completion.</span>shell <span class='function_args'> <b>(</b>command, cur_pos, ncomp[, shell=based on SHELL]<b>)</b></span></a>
         <span class="summarytype"><span class='summary_type'> -&gt;&nbsp;(string, number, table)</span></span>
       </td>
-      <td colspan="2" class="summary">Use shell completion system to complete commands and filenames.</td>
+      <td colspan="2" class="summary">
+        Use shell completion system to complete commands and filenames.
+      </td>
     </tr>
     <tr>
       <td class="name" >
         <a href="#awful.completion.generic"><span class='function_modname'>awful.completion.</span>generic <span class='function_args'> <b>(</b>text, cur_pos, ncomp, keywords<b>)</b></span></a>
         <span class="summarytype"><span class='summary_type'> -&gt;&nbsp;()</span></span>
       </td>
-      <td colspan="2" class="summary">Run a generic completion.</td>
+      <td colspan="2" class="summary">
+        Run a generic completion.
+      </td>
     </tr>
 </table>
 
@@ -296,7 +310,7 @@
 
 
 
-    <span id=item2190 class="hide_extra">
+    <span id=item2229 class="hide_extra">
     </span>
 
 </dd>
@@ -313,7 +327,7 @@
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">command</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          The command line.
         </li>
         <li><span class="parameter">cur_pos</span>
@@ -325,23 +339,23 @@
          The element number to complete.
         </li>
         <li><span class="parameter">shell</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          The shell to use for completion.
    Supports "bash" and "zsh".
-         (<em>default</em> based on SHELL)
+         (<em>default</em> <code>based on SHELL</code>)
         </li>
     </ul>
 
     <h3>Returns:</h3>
     <ol>
         <li>
-           <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+           <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
         The new command.</li>
         <li>
            <span class="types"><span class="type">number</span></span>
         The new cursor position.</li>
         <li>
-           <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+           <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
         The table with all matches.</li>
     </ol>
 
@@ -349,7 +363,7 @@
 
 
 
-    <span id=item2191 class="hide_extra">
+    <span id=item2230 class="hide_extra">
     </span>
 
 </dd>
@@ -391,7 +405,7 @@
 
 
 
-    <span id=item2192 class="hide_extra">
+    <span id=item2231 class="hide_extra">
     </span>
 
 </dd>
@@ -402,7 +416,6 @@
 </div> <!-- id="main" -->
 <div id="about">
 <i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.6</a></i>
-<i style="float:right;">Last updated 2021-05-01 17:20:18 </i>
 </div> <!-- id="about" -->
 </div> <!-- id="container" -->
 </body>

@@ -149,6 +149,7 @@
   <li><a href="../popups_and_bars/awful.popup.html">awful.popup</a></li>
   <li><a href="../popups_and_bars/awful.titlebar.html">awful.titlebar</a></li>
   <li><a href="../popups_and_bars/awful.tooltip.html">awful.tooltip</a></li>
+  <li><a href="../popups_and_bars/awful.wallpaper.html">awful.wallpaper</a></li>
   <li><a href="../popups_and_bars/awful.wibar.html">awful.wibar</a></li>
   <li><a href="../popups_and_bars/awful.widget.calendar_popup.html">awful.widget.calendar_popup</a></li>
   <li><a href="../popups_and_bars/menubar.html">menubar</a></li>
@@ -242,41 +243,53 @@
         <a href="#append">:append <span class='function_args'> <b>(</b>node, dependencies<b>)</b></span></a>
         <span class="summarytype"></span>
       </td>
-      <td colspan="2" class="summary">Ensure that <code>node</code> appears after all <code>dependencies</code>.</td>
+      <td colspan="2" class="summary">
+        Ensure that <code>node</code> appears after all <code>dependencies</code>.
+      </td>
     </tr>
     <tr>
       <td class="name" >
         <a href="#prepend">:prepend <span class='function_args'> <b>(</b>node, subordinates<b>)</b></span></a>
         <span class="summarytype"></span>
       </td>
-      <td colspan="2" class="summary">Ensure that <code>node</code> appears before all <code>subordinates</code>.</td>
+      <td colspan="2" class="summary">
+        Ensure that <code>node</code> appears before all <code>subordinates</code>.
+      </td>
     </tr>
     <tr>
       <td class="name" >
         <a href="#clone">:clone <span class='function_args'> <b>(</b><b>)</b></span></a>
         <span class="summarytype"></span>
       </td>
-      <td colspan="2" class="summary">Create a copy of this topological sort.</td>
+      <td colspan="2" class="summary">
+        Create a copy of this topological sort.
+      </td>
     </tr>
     <tr>
       <td class="name" >
         <a href="#remove">:remove <span class='function_args'> <b>(</b>node<b>)</b></span></a>
         <span class="summarytype"></span>
       </td>
-      <td colspan="2" class="summary">Remove a node from the topological map.</td>
+      <td colspan="2" class="summary">
+        Remove a node from the topological map.
+      </td>
     </tr>
     <tr>
       <td class="name" >
         <a href="#sort">:sort <span class='function_args'> <b>(</b><b>)</b></span></a>
         <span class="summarytype"><span class='summary_type'> -&gt;&nbsp;table <i>or</i> nil</span></span>
       </td>
-      <td colspan="2" class="summary">Try to sort the nodes.</td>
+      <td colspan="2" class="summary">
+        Try to sort the nodes.
+      </td>
     </tr>
     <tr>
       <td class="name" >
         <a href="#topological"><span class='function_modname'>gears.sort.</span>topological <span class='function_args'> <b>(</b><b>)</b></span></a>
       </td>
-      <td colspan="2" class="summary">A topological sorting class.</td>
+      <td colspan="2" class="summary">
+        A topological sorting class.
+      </td>
     </tr>
 </table>
 
@@ -303,7 +316,7 @@
          The node that edges are added to.
         </li>
         <li><span class="parameter">dependencies</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          List of nodes that have to appear before <code>node</code>.
         </li>
     </ul>
@@ -313,7 +326,7 @@
 
 
 
-    <span id=item2092 class="hide_extra">
+    <span id=item2131 class="hide_extra">
     </span>
 
 </dd>
@@ -333,7 +346,7 @@
          The node that edges are added to.
         </li>
         <li><span class="parameter">subordinates</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          List of nodes that have to appear after <code>node</code>.
         </li>
     </ul>
@@ -343,7 +356,7 @@
 
 
 
-    <span id=item2093 class="hide_extra">
+    <span id=item2132 class="hide_extra">
     </span>
 
 </dd>
@@ -365,7 +378,7 @@
 
 
 
-    <span id=item2094 class="hide_extra">
+    <span id=item2133 class="hide_extra">
     </span>
 
 </dd>
@@ -391,7 +404,7 @@
 
 
 
-    <span id=item2095 class="hide_extra">
+    <span id=item2134 class="hide_extra">
     </span>
 
 </dd>
@@ -409,7 +422,7 @@
     <h3>Returns:</h3>
     <ol>
 
-           <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+           <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
         A sorted list of nodes
     </ol>
      <h3>Or</h3>
@@ -427,7 +440,7 @@
 
 
 
-    <span id=item2096 class="hide_extra">
+    <span id=item2135 class="hide_extra">
     </span>
 
 </dd>
@@ -475,12 +488,12 @@ tsort:append(<span class="string">'e'</span>, { <span class="string">'d'</span> 
 tsort:append(<span class="string">'f'</span>, { <span class="string">'e'</span>, <span class="string">'d'</span> })
 <span class="keyword">local</span> res = <span class="global">assert</span>(tsort:sort())
 <span class="keyword">for</span> k, v <span class="keyword">in</span> <span class="global">ipairs</span>(res) <span class="keyword">do</span>
-    <span class="global">print</span>(<span class="string">'The position #'</span>..k..<span class="string">' is: '</span>..v)
+    <span class="global">print</span>(<span class="string">"The position #"</span>..k..<span class="string">" is: "</span>..v)
 <span class="keyword">end</span></pre>
     </ul>
 
 
-    <span id=item2097 class="hide_extra">
+    <span id=item2136 class="hide_extra">
     </span>
 
 </dd>
@@ -491,7 +504,6 @@ tsort:append(<span class="string">'f'</span>, { <span class="string">'e'</span>,
 </div> <!-- id="main" -->
 <div id="about">
 <i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.6</a></i>
-<i style="float:right;">Last updated 2021-05-01 17:20:18 </i>
 </div> <!-- id="about" -->
 </div> <!-- id="container" -->
 </body>

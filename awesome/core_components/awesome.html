@@ -138,6 +138,7 @@
   <li><a href="../popups_and_bars/awful.popup.html">awful.popup</a></li>
   <li><a href="../popups_and_bars/awful.titlebar.html">awful.titlebar</a></li>
   <li><a href="../popups_and_bars/awful.tooltip.html">awful.tooltip</a></li>
+  <li><a href="../popups_and_bars/awful.wallpaper.html">awful.wallpaper</a></li>
   <li><a href="../popups_and_bars/awful.wibar.html">awful.wibar</a></li>
   <li><a href="../popups_and_bars/awful.widget.calendar_popup.html">awful.widget.calendar_popup</a></li>
   <li><a href="../popups_and_bars/menubar.html">menubar</a></li>
@@ -238,8 +239,15 @@
   <div class="extra-header__section">
     <h3>Info:</h3>
     <ul>
-            <li><strong>Copyright</strong>: 2008-2009 Julien Danjou</li>
-            <li><strong>Author</strong>: Julien Danjou &lt;julien@danjou.info&gt;</li>
+                <li><strong>Copyright</strong>: 2008-2009 Julien Danjou</li>
+                <li>
+                    <strong>Originally authored by</strong>: Julien Danjou &lt;julien@danjou.info&gt;<br />
+                    <small>(Full contributors list available on
+                    <a href="https://github.com/awesomeWM/awesome/graphs/contributors">
+                        our github project)
+                    </a></small>
+
+                </li>
     </ul>
   </div>
 
@@ -253,113 +261,145 @@
         <a href="#register_xproperty"><span class='function_modname'>awesome.</span>register_xproperty <span class='function_args'> <b>(</b>name, type<b>)</b></span></a>
         <span class="summarytype"></span>
       </td>
-      <td colspan="2" class="summary">Register a new xproperty.</td>
+      <td colspan="2" class="summary">
+        Register a new xproperty.
+      </td>
     </tr>
     <tr>
       <td class="name" >
         <a href="#quit"><span class='function_modname'>awesome.</span>quit <span class='function_args'> <b>(</b>[code=0]<b>)</b></span></a>
         <span class="summarytype"></span>
       </td>
-      <td colspan="2" class="summary">Quit awesome.</td>
+      <td colspan="2" class="summary">
+        Quit awesome.
+      </td>
     </tr>
     <tr>
       <td class="name" >
         <a href="#exec"><span class='function_modname'>awesome.</span>exec <span class='function_args'> <b>(</b>cmd<b>)</b></span></a>
         <span class="summarytype"></span>
       </td>
-      <td colspan="2" class="summary">Execute another application, probably a window manager, to replace
- awesome.</td>
+      <td colspan="2" class="summary">
+        Execute another application, probably a window manager, to replace
+ awesome.
+      </td>
     </tr>
     <tr>
       <td class="name" >
         <a href="#restart"><span class='function_modname'>awesome.</span>restart <span class='function_args'> <b>(</b><b>)</b></span></a>
         <span class="summarytype"></span>
       </td>
-      <td colspan="2" class="summary">Restart awesome.</td>
+      <td colspan="2" class="summary">
+        Restart awesome.
+      </td>
     </tr>
     <tr>
       <td class="name" >
         <a href="#kill"><span class='function_modname'>awesome.</span>kill <span class='function_args'> <b>(</b>pid, sig<b>)</b></span></a>
         <span class="summarytype"><span class='summary_type'> -&gt;&nbsp;boolean</span></span>
       </td>
-      <td colspan="2" class="summary">Send a signal to a process.</td>
+      <td colspan="2" class="summary">
+        Send a signal to a process.
+      </td>
     </tr>
     <tr>
       <td class="name" >
         <a href="#sync"><span class='function_modname'>awesome.</span>sync <span class='function_args'> <b>(</b><b>)</b></span></a>
         <span class="summarytype"></span>
       </td>
-      <td colspan="2" class="summary">Synchronize with the X11 server.</td>
+      <td colspan="2" class="summary">
+        Synchronize with the X11 server.
+      </td>
     </tr>
     <tr>
       <td class="name" >
         <a href="#pixbuf_to_surface"><span class='function_modname'>awesome.</span>pixbuf_to_surface <span class='function_args'> <b>(</b>pixbuf, path<b>)</b></span></a>
         <span class="summarytype"><span class='summary_type'> -&gt;&nbsp;()</span></span>
       </td>
-      <td colspan="2" class="summary">Translate a GdkPixbuf to a cairo image surface..</td>
+      <td colspan="2" class="summary">
+        Translate a GdkPixbuf to a cairo image surface..
+      </td>
     </tr>
     <tr>
       <td class="name" >
         <a href="#load_image"><span class='function_modname'>awesome.</span>load_image <span class='function_args'> <b>(</b>name<b>)</b></span></a>
         <span class="summarytype"><span class='summary_type'> -&gt;&nbsp;() <i>or</i> string</span></span>
       </td>
-      <td colspan="2" class="summary">Load an image from a given path.</td>
+      <td colspan="2" class="summary">
+        Load an image from a given path.
+      </td>
     </tr>
     <tr>
       <td class="name" >
         <a href="#set_preferred_icon_size"><span class='function_modname'>awesome.</span>set_preferred_icon_size <span class='function_args'> <b>(</b>size<b>)</b></span></a>
         <span class="summarytype"></span>
       </td>
-      <td colspan="2" class="summary">Set the preferred size for client icons.</td>
+      <td colspan="2" class="summary">
+        Set the preferred size for client icons.
+      </td>
     </tr>
     <tr>
       <td class="name" >
         <a href="#connect_signal"><span class='function_modname'>awesome.</span>connect_signal <span class='function_args'> <b>(</b>name, func<b>)</b></span></a>
         <span class="summarytype"></span>
       </td>
-      <td colspan="2" class="summary">Add a global signal.</td>
+      <td colspan="2" class="summary">
+        Add a global signal.
+      </td>
     </tr>
     <tr>
       <td class="name" >
         <a href="#disconnect_signal"><span class='function_modname'>awesome.</span>disconnect_signal <span class='function_args'> <b>(</b>name, func<b>)</b></span></a>
         <span class="summarytype"></span>
       </td>
-      <td colspan="2" class="summary">Remove a global signal.</td>
+      <td colspan="2" class="summary">
+        Remove a global signal.
+      </td>
     </tr>
     <tr>
       <td class="name" >
         <a href="#emit_signal"><span class='function_modname'>awesome.</span>emit_signal <span class='function_args'> <b>(</b>name, ...<b>)</b></span></a>
         <span class="summarytype"></span>
       </td>
-      <td colspan="2" class="summary">Emit a global signal.</td>
+      <td colspan="2" class="summary">
+        Emit a global signal.
+      </td>
     </tr>
     <tr>
       <td class="name" >
         <a href="#spawn"><span class='function_modname'>awesome.</span>spawn <span class='function_args'> <b>(</b>cmd[, use_sn=true[, stdin=false[, stdout=false[, stderr=false[, exit_callback=nil[, cmd=nil]]]]]]<b>)</b></span></a>
         <span class="summarytype"><span class='summary_type'> -&gt;&nbsp;(integer, string, integer, integer, integer) <i>or</i> string</span></span>
       </td>
-      <td colspan="2" class="summary">Spawn a program.</td>
+      <td colspan="2" class="summary">
+        Spawn a program.
+      </td>
     </tr>
     <tr>
       <td class="name" >
         <a href="#xkb_set_layout_group"><span class='function_modname'>awesome.</span>xkb_set_layout_group <span class='function_args'> <b>(</b>num<b>)</b></span></a>
         <span class="summarytype"></span>
       </td>
-      <td colspan="2" class="summary">Switch keyboard layout.</td>
+      <td colspan="2" class="summary">
+        Switch keyboard layout.
+      </td>
     </tr>
     <tr>
       <td class="name" >
         <a href="#xkb_get_layout_group"><span class='function_modname'>awesome.</span>xkb_get_layout_group <span class='function_args'> <b>(</b><b>)</b></span></a>
         <span class="summarytype"><span class='summary_type'> -&gt;&nbsp;integer</span></span>
       </td>
-      <td colspan="2" class="summary">Get current layout number.</td>
+      <td colspan="2" class="summary">
+        Get current layout number.
+      </td>
     </tr>
     <tr>
       <td class="name" >
         <a href="#xkb_get_group_names"><span class='function_modname'>awesome.</span>xkb_get_group_names <span class='function_args'> <b>(</b><b>)</b></span></a>
         <span class="summarytype"><span class='summary_type'> -&gt;&nbsp;string</span></span>
       </td>
-      <td colspan="2" class="summary">Get layout short names.</td>
+      <td colspan="2" class="summary">
+        Get layout short names.
+      </td>
     </tr>
 </table>
 <h2><a href="#Signals">Signals</a></h2>
@@ -368,103 +408,137 @@
       <td class="name" >
         <a href="#debug::error">debug::error</a>
       </td>
-      <td colspan="2" class="summary">A call into the Lua code aborted with an error.</td>
+      <td colspan="2" class="summary">
+        A call into the Lua code aborted with an error.
+      </td>
     </tr>
     <tr>
       <td class="name" >
         <a href="#debug::deprecation">debug::deprecation</a>
       </td>
-      <td colspan="2" class="summary">A deprecated Lua function was called.</td>
+      <td colspan="2" class="summary">
+        A deprecated Lua function was called.
+      </td>
     </tr>
     <tr>
       <td class="name" >
         <a href="#debug::index::miss">debug::index::miss</a>
       </td>
-      <td colspan="2" class="summary">An invalid key was read from an object.</td>
+      <td colspan="2" class="summary">
+        An invalid key was read from an object.
+      </td>
     </tr>
     <tr>
       <td class="name" >
         <a href="#debug::newindex::miss">debug::newindex::miss</a>
       </td>
-      <td colspan="2" class="summary">An invalid key was written to an object.</td>
+      <td colspan="2" class="summary">
+        An invalid key was written to an object.
+      </td>
     </tr>
     <tr>
       <td class="name" >
         <a href="#systray::update">systray::update</a>
       </td>
-      <td colspan="2" class="summary">The systray should be updated.</td>
+      <td colspan="2" class="summary">
+        The systray should be updated.
+      </td>
     </tr>
     <tr>
       <td class="name" >
         <a href="#wallpaper_changed">wallpaper_changed</a>
       </td>
-      <td colspan="2" class="summary">The wallpaper has changed.</td>
+      <td colspan="2" class="summary">
+        The wallpaper has changed.
+      </td>
     </tr>
     <tr>
       <td class="name" >
         <a href="#xkb::map_changed">xkb::map_changed</a>
       </td>
-      <td colspan="2" class="summary">Keyboard map has changed.</td>
+      <td colspan="2" class="summary">
+        Keyboard map has changed.
+      </td>
     </tr>
     <tr>
       <td class="name" >
         <a href="#xkb::group_changed.">xkb::group_changed.</a>
       </td>
-      <td colspan="2" class="summary">Keyboard group has changed.</td>
+      <td colspan="2" class="summary">
+        Keyboard group has changed.
+      </td>
     </tr>
     <tr>
       <td class="name" >
         <a href="#refresh">refresh</a>
       </td>
-      <td colspan="2" class="summary">Refresh.</td>
+      <td colspan="2" class="summary">
+        Refresh.
+      </td>
     </tr>
     <tr>
       <td class="name" >
         <a href="#startup">startup</a>
       </td>
-      <td colspan="2" class="summary">AwesomeWM is about to enter the event loop.</td>
+      <td colspan="2" class="summary">
+        AwesomeWM is about to enter the event loop.
+      </td>
     </tr>
     <tr>
       <td class="name" >
         <a href="#exit">exit</a>
       </td>
-      <td colspan="2" class="summary">AwesomeWM is exiting / about to restart.</td>
+      <td colspan="2" class="summary">
+        AwesomeWM is exiting / about to restart.
+      </td>
     </tr>
     <tr>
       <td class="name" >
         <a href="#screen::change">screen::change</a>
       </td>
-      <td colspan="2" class="summary">The output status of a screen has changed.</td>
+      <td colspan="2" class="summary">
+        The output status of a screen has changed.
+      </td>
     </tr>
     <tr>
       <td class="name" >
         <a href="#spawn::canceled">spawn::canceled</a>
       </td>
-      <td colspan="2" class="summary">For some reason the application aborted startup</td>
+      <td colspan="2" class="summary">
+        For some reason the application aborted startup
+      </td>
     </tr>
     <tr>
       <td class="name" >
         <a href="#spawn::change">spawn::change</a>
       </td>
-      <td colspan="2" class="summary">When one of the fields from the <a href="../core_components/awesome.html#spawn::initiated">spawn::initiated</a> table changes</td>
+      <td colspan="2" class="summary">
+        When one of the fields from the <a href="../core_components/awesome.html#spawn::initiated">spawn::initiated</a> table changes
+      </td>
     </tr>
     <tr>
       <td class="name" >
         <a href="#spawn::completed">spawn::completed</a>
       </td>
-      <td colspan="2" class="summary">An application finished starting</td>
+      <td colspan="2" class="summary">
+        An application finished starting
+      </td>
     </tr>
     <tr>
       <td class="name" >
         <a href="#spawn::initiated">spawn::initiated</a>
       </td>
-      <td colspan="2" class="summary">When a new client is beginning to start</td>
+      <td colspan="2" class="summary">
+        When a new client is beginning to start
+      </td>
     </tr>
     <tr>
       <td class="name" >
         <a href="#spawn::timeout">spawn::timeout</a>
       </td>
-      <td colspan="2" class="summary">An application started a spawn event but didn't start in time.</td>
+      <td colspan="2" class="summary">
+        An application started a spawn event but didn't start in time.
+      </td>
     </tr>
 </table>
 <h2><a href="#Fields">Fields</a></h2>
@@ -472,58 +546,80 @@
     <tr>
       <td class="shortname" ><a href="#version"><span class='function_modname'>awesome.</span>version</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>string</span></td>
-      <td colspan="2" class="summary">The AwesomeWM version.</td>
+      <td colspan="2" class="summary">
+        The AwesomeWM version.
+      </td>
     </tr>
     <tr>
       <td class="shortname" ><a href="#release"><span class='function_modname'>awesome.</span>release</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>string</span></td>
-      <td colspan="2" class="summary">The AwesomeWM release name.</td>
+      <td colspan="2" class="summary">
+        The AwesomeWM release name.
+      </td>
     </tr>
     <tr>
       <td class="shortname" ><a href="#api_level"><span class='function_modname'>awesome.</span>api_level</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>string</span></td>
-      <td colspan="2" class="summary">The AwesomeWM API level.</td>
+      <td colspan="2" class="summary">
+        The AwesomeWM API level.
+      </td>
     </tr>
     <tr>
       <td class="shortname" ><a href="#conffile"><span class='function_modname'>awesome.</span>conffile</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>string</span></td>
-      <td colspan="2" class="summary">The configuration file which has been loaded.</td>
+      <td colspan="2" class="summary">
+        The configuration file which has been loaded.
+      </td>
     </tr>
     <tr>
       <td class="shortname" ><a href="#startup"><span class='function_modname'>awesome.</span>startup</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>boolean</span></td>
-      <td colspan="2" class="summary">True if we are still in startup, false otherwise.</td>
+      <td colspan="2" class="summary">
+        True if we are still in startup, false otherwise.
+      </td>
     </tr>
     <tr>
       <td class="shortname" ><a href="#startup_errors"><span class='function_modname'>awesome.</span>startup_errors</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>string</span></td>
-      <td colspan="2" class="summary">Error message for errors that occured during
-  startup.</td>
+      <td colspan="2" class="summary">
+        Error message for errors that occurred during
+  startup.
+      </td>
     </tr>
     <tr>
       <td class="shortname" ><a href="#composite_manager_running"><span class='function_modname'>awesome.</span>composite_manager_running</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>boolean</span></td>
-      <td colspan="2" class="summary">True if a composite manager is running.</td>
+      <td colspan="2" class="summary">
+        True if a composite manager is running.
+      </td>
     </tr>
     <tr>
       <td class="shortname" ><a href="#unix_signal"><span class='function_modname'>awesome.</span>unix_signal</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>table</span></td>
-      <td colspan="2" class="summary">Table mapping between signal numbers and signal identifiers.</td>
+      <td colspan="2" class="summary">
+        Table mapping between signal numbers and signal identifiers.
+      </td>
     </tr>
     <tr>
       <td class="shortname" ><a href="#hostname"><span class='function_modname'>awesome.</span>hostname</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>string</span></td>
-      <td colspan="2" class="summary">The hostname of the computer on which we are running.</td>
+      <td colspan="2" class="summary">
+        The hostname of the computer on which we are running.
+      </td>
     </tr>
     <tr>
       <td class="shortname" ><a href="#themes_path"><span class='function_modname'>awesome.</span>themes_path</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>string</span></td>
-      <td colspan="2" class="summary">The path where themes were installed to.</td>
+      <td colspan="2" class="summary">
+        The path where themes were installed to.
+      </td>
     </tr>
     <tr>
       <td class="shortname" ><a href="#icon_path"><span class='function_modname'>awesome.</span>icon_path</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>string</span></td>
-      <td colspan="2" class="summary">The path where icons were installed to.</td>
+      <td colspan="2" class="summary">
+        The path where icons were installed to.
+      </td>
     </tr>
 </table>
 
@@ -547,11 +643,11 @@
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">name</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          The name of the X11 property.
         </li>
         <li><span class="parameter">type</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          One of "string", "number" or "boolean".
         </li>
     </ul>
@@ -561,7 +657,7 @@
 
 
 
-    <span id=item131 class="hide_extra">
+    <span id=item132 class="hide_extra">
     </span>
 
 </dd>
@@ -580,7 +676,7 @@
         <li><span class="parameter">code</span>
             <span class="types"><span class="type">integer</span></span>
          The exit code to use when exiting.
-         (<em>default</em> 0)
+         (<em>default</em> <code>0</code>)
         </li>
     </ul>
 
@@ -589,7 +685,7 @@
 
 
 
-    <span id=item132 class="hide_extra">
+    <span id=item133 class="hide_extra">
     </span>
 
 </dd>
@@ -616,7 +712,7 @@
 
 
 
-    <span id=item133 class="hide_extra">
+    <span id=item134 class="hide_extra">
     </span>
 
 </dd>
@@ -636,7 +732,7 @@
 
 
 
-    <span id=item134 class="hide_extra">
+    <span id=item135 class="hide_extra">
     </span>
 
 </dd>
@@ -675,7 +771,7 @@
 
 
 
-    <span id=item135 class="hide_extra">
+    <span id=item136 class="hide_extra">
     </span>
 
 </dd>
@@ -696,7 +792,7 @@
 
 
 
-    <span id=item136 class="hide_extra">
+    <span id=item137 class="hide_extra">
     </span>
 
 </dd>
@@ -730,7 +826,7 @@
 
 
 
-    <span id=item137 class="hide_extra">
+    <span id=item138 class="hide_extra">
     </span>
 
 </dd>
@@ -761,7 +857,7 @@
         <li>
         nil</li>
         <li>
-           <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+           <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
         Error message</li>
     </ol>
 
@@ -769,7 +865,7 @@
 
 
 
-    <span id=item138 class="hide_extra">
+    <span id=item139 class="hide_extra">
     </span>
 
 </dd>
@@ -798,7 +894,7 @@
 
 
 
-    <span id=item139 class="hide_extra">
+    <span id=item140 class="hide_extra">
     </span>
 
 </dd>
@@ -827,7 +923,7 @@
 
 
 
-    <span id=item140 class="hide_extra">
+    <span id=item141 class="hide_extra">
     </span>
 
 </dd>
@@ -856,7 +952,7 @@
 
 
 
-    <span id=item141 class="hide_extra">
+    <span id=item142 class="hide_extra">
     </span>
 
 </dd>
@@ -885,7 +981,7 @@
 
 
 
-    <span id=item142 class="hide_extra">
+    <span id=item143 class="hide_extra">
     </span>
 
 </dd>
@@ -903,43 +999,43 @@
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">cmd</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          The environment to use for the spawned program.
    Without this the spawned process inherits awesome's environment.
-         (<em>default</em> nil)
+         (<em>default</em> <code>nil</code>)
         </li>
         <li><span class="parameter">use_sn</span>
             <span class="types"><span class="type">boolean</span></span>
          Use startup-notification?
-         (<em>default</em> true)
+         (<em>default</em> <code>true</code>)
         </li>
         <li><span class="parameter">stdin</span>
             <span class="types"><span class="type">boolean</span></span>
          Return a fd for stdin?
-         (<em>default</em> false)
+         (<em>default</em> <code>false</code>)
         </li>
         <li><span class="parameter">stdout</span>
             <span class="types"><span class="type">boolean</span></span>
          Return a fd for stdout?
-         (<em>default</em> false)
+         (<em>default</em> <code>false</code>)
         </li>
         <li><span class="parameter">stderr</span>
             <span class="types"><span class="type">boolean</span></span>
          Return a fd for stderr?
-         (<em>default</em> false)
+         (<em>default</em> <code>false</code>)
         </li>
         <li><span class="parameter">exit_callback</span>
             <span class="types"><span class="type">function</span></span>
          Function to call on process exit. The
    function arguments will be type of exit ("exit" or "signal") and the exit
    code / the signal number causing process termination.
-         (<em>default</em> nil)
+         (<em>default</em> <code>nil</code>)
         </li>
         <li><span class="parameter">cmd</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          The environment to use for the spawned program.
    Without this the spawned process inherits awesome's environment.
-         (<em>default</em> nil)
+         (<em>default</em> <code>nil</code>)
         </li>
     </ul>
 
@@ -949,7 +1045,7 @@
            <span class="types"><span class="type">integer</span></span>
         Process ID if everything is OK.</li>
         <li>
-           <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+           <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
         Startup-notification ID, if <code>use_sn</code> is true.</li>
         <li>
            <span class="types"><span class="type">integer</span></span>
@@ -964,7 +1060,7 @@
      <h3>Or</h3>
     <ol>
 
-           <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+           <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
         An error string if an error occurred.
     </ol>
 
@@ -972,7 +1068,7 @@
 
 
 
-    <span id=item143 class="hide_extra">
+    <span id=item144 class="hide_extra">
     </span>
 
 </dd>
@@ -999,7 +1095,7 @@
 
 
 
-    <span id=item144 class="hide_extra">
+    <span id=item145 class="hide_extra">
     </span>
 
 </dd>
@@ -1025,7 +1121,7 @@
 
 
 
-    <span id=item145 class="hide_extra">
+    <span id=item146 class="hide_extra">
     </span>
 
 </dd>
@@ -1043,7 +1139,7 @@
     <h3>Returns:</h3>
     <ol>
 
-           <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+           <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
         A string describing the current layout settings,
    e.g.: 'pc+us+de:2+inet(evdev)+group(alt<em>shift</em>toggle)+ctrl(nocaps)'
     </ol>
@@ -1052,7 +1148,7 @@
 
 
 
-    <span id=item146 class="hide_extra">
+    <span id=item147 class="hide_extra">
     </span>
 
 </dd>
@@ -1085,7 +1181,7 @@
 
 
 
-    <span id=item147 class="hide_extra">
+    <span id=item148 class="hide_extra">
     </span>
 
 </dd>
@@ -1101,19 +1197,19 @@
     <h3>Arguments:</h3>
     <ul>
         <li><span class="parameter">hint</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          String with a hint on what to use instead of the
  deprecated functionality.
         </li>
         <li><span class="parameter">see</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a> or <span class="type">nil</span></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a> or <span class="type">nil</span></span>
          The name of the newer API
-         (<em>default</em> nil)
+         (<em>default</em> <code>nil</code>)
         </li>
         <li><span class="parameter">args</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a> or <span class="type">nil</span></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a> or <span class="type">nil</span></span>
          The name of the newer API
-         (<em>default</em> nil)
+         (<em>default</em> <code>nil</code>)
         </li>
     </ul>
 
@@ -1122,7 +1218,7 @@
 
 
 
-    <span id=item148 class="hide_extra">
+    <span id=item149 class="hide_extra">
     </span>
 
 </dd>
@@ -1152,7 +1248,7 @@
 
 
 
-    <span id=item149 class="hide_extra">
+    <span id=item150 class="hide_extra">
     </span>
 
 </dd>
@@ -1185,7 +1281,7 @@
 
 
 
-    <span id=item150 class="hide_extra">
+    <span id=item151 class="hide_extra">
     </span>
 
 </dd>
@@ -1206,7 +1302,7 @@
 
 
 
-    <span id=item151 class="hide_extra">
+    <span id=item152 class="hide_extra">
     </span>
 
 </dd>
@@ -1228,7 +1324,7 @@
 
 
 
-    <span id=item152 class="hide_extra">
+    <span id=item153 class="hide_extra">
     </span>
 
 </dd>
@@ -1250,7 +1346,7 @@
 
 
 
-    <span id=item153 class="hide_extra">
+    <span id=item154 class="hide_extra">
     </span>
 
 </dd>
@@ -1277,7 +1373,7 @@
 
 
 
-    <span id=item154 class="hide_extra">
+    <span id=item155 class="hide_extra">
     </span>
 
 </dd>
@@ -1299,7 +1395,7 @@
 
 
 
-    <span id=item155 class="hide_extra">
+    <span id=item156 class="hide_extra">
     </span>
 
 </dd>
@@ -1320,7 +1416,7 @@
 
 
 
-    <span id=item156 class="hide_extra">
+    <span id=item157 class="hide_extra">
     </span>
 
 </dd>
@@ -1349,7 +1445,7 @@
 
 
 
-    <span id=item157 class="hide_extra">
+    <span id=item158 class="hide_extra">
     </span>
 
 </dd>
@@ -1365,11 +1461,11 @@
     <h3>Arguments:</h3>
     <ul>
         <li><span class="parameter">output</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          String containing which output has changed.
         </li>
         <li><span class="parameter">connection_state</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          String containing the connection status of
  the output: It will be either "Connected", "Disconnected" or
  "Unknown".
@@ -1381,7 +1477,7 @@
 
 
 
-    <span id=item158 class="hide_extra">
+    <span id=item159 class="hide_extra">
     </span>
 
 </dd>
@@ -1406,7 +1502,7 @@
 
 
 
-    <span id=item159 class="hide_extra">
+    <span id=item160 class="hide_extra">
     </span>
 
 </dd>
@@ -1431,7 +1527,7 @@
 
 
 
-    <span id=item160 class="hide_extra">
+    <span id=item161 class="hide_extra">
     </span>
 
 </dd>
@@ -1456,7 +1552,7 @@
 
 
 
-    <span id=item161 class="hide_extra">
+    <span id=item162 class="hide_extra">
     </span>
 
 </dd>
@@ -1481,7 +1577,7 @@
 
 
 
-    <span id=item162 class="hide_extra">
+    <span id=item163 class="hide_extra">
     </span>
 
 </dd>
@@ -1506,7 +1602,7 @@
 
 
 
-    <span id=item163 class="hide_extra">
+    <span id=item164 class="hide_extra">
     </span>
 
 </dd>
@@ -1530,7 +1626,7 @@
 
 
 
-    <span id=item164 class="hide_extra">
+    <span id=item165 class="hide_extra">
     </span>
 
 </dd>
@@ -1550,7 +1646,7 @@
 
 
 
-    <span id=item165 class="hide_extra">
+    <span id=item166 class="hide_extra">
     </span>
 
 </dd>
@@ -1568,7 +1664,7 @@
 
 <p> API levels are used to allow newer version of AwesomeWM to alter the behavior
  and subset deprecated APIs. Using an older API level than the current major
- version allows to use legacy <a href="../sample files/rc.lua.html#">rc.lua</a> with little porting. However, they wont
+ version allows to use legacy <a href="../sample files/rc.lua.html#">rc.lua</a> with little porting. However, they won't
  be able to use all the new features. Attempting to use a newer feature along
  with an older API level is not and will not be supported, even if it almost
  works. Keeping up to date with the newer API levels is highly recommended.</p>
@@ -1581,7 +1677,7 @@
  APIs. Testing your patches with mode and the default config is recommended
  before submitting a patch.</p>
 
-<p> You can use the <a href="../core_components/awesome.html#api_level">-l</a> command line option or <code>api-level</code> modeline key to set
+<p> You can use the <a href="../core_components/awesome.html#emit_signal">-l</a> command line option or <code>api-level</code> modeline key to set
  the API level for your <a href="../sample files/rc.lua.html#">rc.lua</a>. This setting is global and read only,
  individual modules cannot set their own API level.
 
@@ -1591,7 +1687,7 @@
 
 
 
-    <span id=item166 class="hide_extra">
+    <span id=item167 class="hide_extra">
     </span>
 
 </dd>
@@ -1611,7 +1707,7 @@
 
 
 
-    <span id=item167 class="hide_extra">
+    <span id=item168 class="hide_extra">
     </span>
 
 </dd>
@@ -1631,7 +1727,7 @@
 
 
 
-    <span id=item168 class="hide_extra">
+    <span id=item169 class="hide_extra">
     </span>
 
 </dd>
@@ -1643,7 +1739,7 @@
     </span>
     </dt>
     <dd>
-    Error message for errors that occured during
+    Error message for errors that occurred during
   startup.
 
 
@@ -1652,7 +1748,7 @@
 
 
 
-    <span id=item169 class="hide_extra">
+    <span id=item170 class="hide_extra">
     </span>
 
 </dd>
@@ -1672,7 +1768,7 @@
 
 
 
-    <span id=item170 class="hide_extra">
+    <span id=item171 class="hide_extra">
     </span>
 
 </dd>
@@ -1692,7 +1788,7 @@
 
 
 
-    <span id=item171 class="hide_extra">
+    <span id=item172 class="hide_extra">
     </span>
 
 </dd>
@@ -1712,7 +1808,7 @@
 
 
 
-    <span id=item172 class="hide_extra">
+    <span id=item173 class="hide_extra">
     </span>
 
 </dd>
@@ -1732,7 +1828,7 @@
 
 
 
-    <span id=item173 class="hide_extra">
+    <span id=item174 class="hide_extra">
     </span>
 
 </dd>
@@ -1752,7 +1848,7 @@
 
 
 
-    <span id=item174 class="hide_extra">
+    <span id=item175 class="hide_extra">
     </span>
 
 </dd>
@@ -1763,7 +1859,6 @@
 </div> <!-- id="main" -->
 <div id="about">
 <i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.6</a></i>
-<i style="float:right;">Last updated 2021-05-01 17:20:18 </i>
 </div> <!-- id="about" -->
 </div> <!-- id="container" -->
 </body>

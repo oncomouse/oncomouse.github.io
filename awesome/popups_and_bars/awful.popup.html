@@ -59,6 +59,7 @@
   <li><strong>awful.popup</strong></li>
   <li><a href="../popups_and_bars/awful.titlebar.html">awful.titlebar</a></li>
   <li><a href="../popups_and_bars/awful.tooltip.html">awful.tooltip</a></li>
+  <li><a href="../popups_and_bars/awful.wallpaper.html">awful.wallpaper</a></li>
   <li><a href="../popups_and_bars/awful.wibar.html">awful.wibar</a></li>
   <li><a href="../popups_and_bars/awful.widget.calendar_popup.html">awful.widget.calendar_popup</a></li>
   <li><a href="../popups_and_bars/menubar.html">menubar</a></li>
@@ -250,15 +251,15 @@ awful.popup {
     widget = {
         {
             {
-                text   = <span class="string">'foobar'</span>,
+                text   = <span class="string">"foobar"</span>,
                 widget = wibox.widget.textbox
             },
             {
                 {
-                    text   = <span class="string">'foobar'</span>,
+                    text   = <span class="string">"foobar"</span>,
                     widget = wibox.widget.textbox
                 },
-                bg     = <span class="string">'#ff00ff'</span>,
+                bg     = <span class="string">"#ff00ff"</span>,
                 clip   = <span class="keyword">true</span>,
                 shape  = gears.shape.rounded_bar,
                 widget = wibox.widget.background
@@ -274,7 +275,7 @@ awful.popup {
         margins = <span class="number">10</span>,
         widget  = wibox.container.margin
     },
-    border_color = <span class="string">'#00ff00'</span>,
+    border_color = <span class="string">"#00ff00"</span>,
     border_width = <span class="number">5</span>,
     placement    = awful.placement.top_left,
     shape        = gears.shape.rounded_rect,
@@ -308,22 +309,22 @@ awful.popup {
         widget_template = {
             {
                 {
-                    id     = <span class="string">'clienticon'</span>,
+                    id     = <span class="string">"clienticon"</span>,
                     widget = awful.widget.clienticon,
                 },
                 margins = <span class="number">4</span>,
                 widget  = wibox.container.margin,
             },
-            id              = <span class="string">'background_role'</span>,
+            id              = <span class="string">"background_role"</span>,
             forced_width    = <span class="number">48</span>,
             forced_height   = <span class="number">48</span>,
             widget          = wibox.container.background,
             create_callback = <span class="keyword">function</span>(self, c, index, objects) <span class="comment">--luacheck: no unused
-</span>                self:get_children_by_id(<span class="string">'clienticon'</span>)[<span class="number">1</span>].client = c
+</span>                self:get_children_by_id(<span class="string">"clienticon"</span>)[<span class="number">1</span>].client = c
             <span class="keyword">end</span>,
         },
     },
-    border_color = <span class="string">'#777777'</span>,
+    border_color = <span class="string">"#777777"</span>,
     border_width = <span class="number">2</span>,
     ontop        = <span class="keyword">true</span>,
     placement    = awful.placement.centered,
@@ -355,8 +356,15 @@ awful.popup {
   <div class="extra-header__section">
     <h3>Info:</h3>
     <ul>
-            <li><strong>Copyright</strong>: 2016 Emmanuel Lepage Vallee</li>
-            <li><strong>Author</strong>: Emmanuel Lepage Vallee</li>
+                <li><strong>Copyright</strong>: 2016 Emmanuel Lepage Vallee</li>
+                <li>
+                    <strong>Originally authored by</strong>: Emmanuel Lepage Vallee<br />
+                    <small>(Full contributors list available on
+                    <a href="https://github.com/awesomeWM/awesome/graphs/contributors">
+                        our github project)
+                    </a></small>
+
+                </li>
     </ul>
   </div>
 
@@ -369,7 +377,9 @@ awful.popup {
       <td class="name" >
         <a href="#awful.popup">awful.popup <span class='function_named_args'><b>{</b>[args]<b>}</b></span></a>
       </td>
-      <td colspan="2" class="summary">Create a new popup build around a passed in widget.</td>
+      <td colspan="2" class="summary">
+        Create a new popup build around a passed in widget.
+      </td>
     </tr>
 </table>
 <h2><a href="#Object_properties">Object properties</a></h2>
@@ -377,62 +387,86 @@ awful.popup {
     <tr>
       <td class="shortname" ><a href="#preferred_positions">preferred_positions</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>table <i>or</i> string</span></td>
-      <td colspan="2" class="summary">Set the preferred popup position relative to its parent.</td>
+      <td colspan="2" class="summary">
+        Set the preferred popup position relative to its parent.
+      </td>
     </tr>
     <tr>
       <td class="shortname" ><a href="#preferred_anchors">preferred_anchors</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>table <i>or</i> string</span></td>
-      <td colspan="2" class="summary">Set the preferred popup anchors relative to the parent.</td>
+      <td colspan="2" class="summary">
+        Set the preferred popup anchors relative to the parent.
+      </td>
     </tr>
     <tr>
       <td class="shortname" ><a href="#current_position">current_position</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>string</span></td>
-      <td colspan="2" class="summary">The current position relative to the parent object.</td>
+      <td colspan="2" class="summary">
+        The current position relative to the parent object.
+      </td>
     </tr>
     <tr>
       <td class="shortname" ><a href="#current_anchor">current_anchor</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>string</span></td>
-      <td colspan="2" class="summary">Get the current anchor relative to the parent object.</td>
+      <td colspan="2" class="summary">
+        Get the current anchor relative to the parent object.
+      </td>
     </tr>
     <tr>
       <td class="shortname" ><a href="#hide_on_right_click">hide_on_right_click</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>boolean</span></td>
-      <td colspan="2" class="summary">Hide the popup when right clicked.</td>
+      <td colspan="2" class="summary">
+        Hide the popup when right clicked.
+      </td>
     </tr>
     <tr>
       <td class="shortname" ><a href="#minimum_width">minimum_width</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>number</span></td>
-      <td colspan="2" class="summary">The popup minimum width.</td>
+      <td colspan="2" class="summary">
+        The popup minimum width.
+      </td>
     </tr>
     <tr>
       <td class="shortname" ><a href="#minimum_height">minimum_height</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>number</span></td>
-      <td colspan="2" class="summary">The popup minimum height.</td>
+      <td colspan="2" class="summary">
+        The popup minimum height.
+      </td>
     </tr>
     <tr>
       <td class="shortname" ><a href="#maximum_width">maximum_width</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>number</span></td>
-      <td colspan="2" class="summary">The popup maximum width.</td>
+      <td colspan="2" class="summary">
+        The popup maximum width.
+      </td>
     </tr>
     <tr>
       <td class="shortname" ><a href="#maximum_height">maximum_height</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>number</span></td>
-      <td colspan="2" class="summary">The popup maximum height.</td>
+      <td colspan="2" class="summary">
+        The popup maximum height.
+      </td>
     </tr>
     <tr>
       <td class="shortname" ><a href="#offset">offset</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>table <i>or</i> number</span></td>
-      <td colspan="2" class="summary">The distance between the popup and its parent (if any).</td>
+      <td colspan="2" class="summary">
+        The distance between the popup and its parent (if any).
+      </td>
     </tr>
     <tr>
       <td class="shortname" ><a href="#placement">placement</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>function <i>or</i> string <i>or</i> boolean</span></td>
-      <td colspan="2" class="summary">Set the placement function.</td>
+      <td colspan="2" class="summary">
+        Set the placement function.
+      </td>
     </tr>
     <tr>
       <td class="shortname" ><a href="#border_width">border_width</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>integer</span></td>
-      <td colspan="1" class="summary">Border width.</td>
+      <td colspan="1" class="summary">
+        Border width.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from wibox
       </td>
@@ -440,7 +474,9 @@ awful.popup {
     <tr>
       <td class="shortname" ><a href="#border_color">border_color</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>string</span></td>
-      <td colspan="1" class="summary">Border color.</td>
+      <td colspan="1" class="summary">
+        Border color.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from wibox
       </td>
@@ -448,7 +484,9 @@ awful.popup {
     <tr>
       <td class="shortname" ><a href="#ontop">ontop</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>boolean</span></td>
-      <td colspan="1" class="summary">On top of other windows.</td>
+      <td colspan="1" class="summary">
+        On top of other windows.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from wibox
       </td>
@@ -456,7 +494,9 @@ awful.popup {
     <tr>
       <td class="shortname" ><a href="#cursor">cursor</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>string</span></td>
-      <td colspan="1" class="summary">The mouse cursor.</td>
+      <td colspan="1" class="summary">
+        The mouse cursor.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from wibox
       </td>
@@ -464,7 +504,9 @@ awful.popup {
     <tr>
       <td class="shortname" ><a href="#visible">visible</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>boolean</span></td>
-      <td colspan="1" class="summary">Visibility.</td>
+      <td colspan="1" class="summary">
+        Visibility.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from wibox
       </td>
@@ -472,7 +514,9 @@ awful.popup {
     <tr>
       <td class="shortname" ><a href="#opacity">opacity</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>number</span></td>
-      <td colspan="1" class="summary">The opacity of the wibox, between 0 and 1.</td>
+      <td colspan="1" class="summary">
+        The opacity of the wibox, between 0 and 1.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from wibox
       </td>
@@ -480,7 +524,9 @@ awful.popup {
     <tr>
       <td class="shortname" ><a href="#type">type</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>string</span></td>
-      <td colspan="1" class="summary">The window type (desktop, normal, dock, ...).</td>
+      <td colspan="1" class="summary">
+        The window type (desktop, normal, dock, ...).
+      </td>
       <td class="baseclass" nowrap>
         Inherited from wibox
       </td>
@@ -488,7 +534,9 @@ awful.popup {
     <tr>
       <td class="shortname" ><a href="#x">x</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>integer</span></td>
-      <td colspan="1" class="summary">The x coordinates.</td>
+      <td colspan="1" class="summary">
+        The x coordinates.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from wibox
       </td>
@@ -496,7 +544,9 @@ awful.popup {
     <tr>
       <td class="shortname" ><a href="#y">y</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>integer</span></td>
-      <td colspan="1" class="summary">The y coordinates.</td>
+      <td colspan="1" class="summary">
+        The y coordinates.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from wibox
       </td>
@@ -504,7 +554,9 @@ awful.popup {
     <tr>
       <td class="shortname" ><a href="#width">width</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>width</span></td>
-      <td colspan="1" class="summary">The width of the wibox.</td>
+      <td colspan="1" class="summary">
+        The width of the wibox.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from wibox
       </td>
@@ -512,7 +564,9 @@ awful.popup {
     <tr>
       <td class="shortname" ><a href="#height">height</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>height</span></td>
-      <td colspan="1" class="summary">The height of the wibox.</td>
+      <td colspan="1" class="summary">
+        The height of the wibox.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from wibox
       </td>
@@ -520,7 +574,9 @@ awful.popup {
     <tr>
       <td class="shortname" ><a href="#screen">screen</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>screen</span></td>
-      <td colspan="1" class="summary">The wibox screen.</td>
+      <td colspan="1" class="summary">
+        The wibox screen.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from wibox
       </td>
@@ -528,7 +584,9 @@ awful.popup {
     <tr>
       <td class="shortname" ><a href="#drawable">drawable</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>drawable</span></td>
-      <td colspan="1" class="summary">The wibox's <a href="../core_components/drawable.html#">drawable</a>.</td>
+      <td colspan="1" class="summary">
+        The wibox's <a href="../core_components/drawable.html#">drawable</a>.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from wibox
       </td>
@@ -536,7 +594,9 @@ awful.popup {
     <tr>
       <td class="shortname" ><a href="#widget">widget</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>widget</span></td>
-      <td colspan="1" class="summary">The widget that the <a href="../popups_and_bars/wibox.html#">wibox</a> displays.</td>
+      <td colspan="1" class="summary">
+        The widget that the <a href="../popups_and_bars/wibox.html#">wibox</a> displays.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from wibox
       </td>
@@ -544,7 +604,9 @@ awful.popup {
     <tr>
       <td class="shortname" ><a href="#window">window</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>string</span></td>
-      <td colspan="1" class="summary">The X window id.</td>
+      <td colspan="1" class="summary">
+        The X window id.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from wibox
       </td>
@@ -552,7 +614,9 @@ awful.popup {
     <tr>
       <td class="shortname" ><a href="#shape_bounding">shape_bounding</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>N/A</span></td>
-      <td colspan="1" class="summary">The wibox's bounding shape as a (native) cairo surface.</td>
+      <td colspan="1" class="summary">
+        The wibox's bounding shape as a (native) cairo surface.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from wibox
       </td>
@@ -560,7 +624,9 @@ awful.popup {
     <tr>
       <td class="shortname" ><a href="#shape_clip">shape_clip</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>N/A</span></td>
-      <td colspan="1" class="summary">The wibox's clip shape as a (native) cairo surface.</td>
+      <td colspan="1" class="summary">
+        The wibox's clip shape as a (native) cairo surface.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from wibox
       </td>
@@ -568,7 +634,9 @@ awful.popup {
     <tr>
       <td class="shortname" ><a href="#shape_input">shape_input</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>N/A</span></td>
-      <td colspan="1" class="summary">The wibox's input shape as a (native) cairo surface.</td>
+      <td colspan="1" class="summary">
+        The wibox's input shape as a (native) cairo surface.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from wibox
       </td>
@@ -576,7 +644,9 @@ awful.popup {
     <tr>
       <td class="shortname" ><a href="#shape">shape</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>gears.shape</span></td>
-      <td colspan="1" class="summary">The wibar's shape.</td>
+      <td colspan="1" class="summary">
+        The wibar's shape.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from wibox
       </td>
@@ -584,7 +654,9 @@ awful.popup {
     <tr>
       <td class="shortname" ><a href="#input_passthrough">input_passthrough</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>boolean</span></td>
-      <td colspan="1" class="summary">Forward the inputs to the client below the wibox.</td>
+      <td colspan="1" class="summary">
+        Forward the inputs to the client below the wibox.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from wibox
       </td>
@@ -592,7 +664,9 @@ awful.popup {
     <tr>
       <td class="shortname" ><a href="#buttons">buttons</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>buttons_table</span></td>
-      <td colspan="1" class="summary">Get or set mouse buttons bindings to a wibox.</td>
+      <td colspan="1" class="summary">
+        Get or set mouse buttons bindings to a wibox.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from wibox
       </td>
@@ -600,7 +674,9 @@ awful.popup {
     <tr>
       <td class="shortname" ><a href="#bg">bg</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>c</span></td>
-      <td colspan="1" class="summary">The background of the wibox.</td>
+      <td colspan="1" class="summary">
+        The background of the wibox.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from wibox
       </td>
@@ -608,7 +684,9 @@ awful.popup {
     <tr>
       <td class="shortname" ><a href="#bgimage">bgimage</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>gears.suface <i>or</i> string <i>or</i> function</span></td>
-      <td colspan="1" class="summary">The background image of the drawable.</td>
+      <td colspan="1" class="summary">
+        The background image of the drawable.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from wibox
       </td>
@@ -616,7 +694,9 @@ awful.popup {
     <tr>
       <td class="shortname" ><a href="#fg">fg</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>color</span></td>
-      <td colspan="1" class="summary">The foreground (text) of the wibox.</td>
+      <td colspan="1" class="summary">
+        The foreground (text) of the wibox.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from wibox
       </td>
@@ -629,28 +709,36 @@ awful.popup {
         <a href="#move_next_to">:move_next_to <span class='function_args'> <b>(</b>[obj=mouse]<b>)</b></span></a>
         <span class="summarytype"><span class='summary_type'> -&gt;&nbsp;table</span></span>
       </td>
-      <td colspan="2" class="summary">Move the wibox to a position relative to <code>geo</code>.</td>
+      <td colspan="2" class="summary">
+        Move the wibox to a position relative to <code>geo</code>.
+      </td>
     </tr>
     <tr>
       <td class="name" >
         <a href="#bind_to_widget">:bind_to_widget <span class='function_args'> <b>(</b>widget[, button=1]<b>)</b></span></a>
         <span class="summarytype"></span>
       </td>
-      <td colspan="2" class="summary">Bind the popup to a widget button press.</td>
+      <td colspan="2" class="summary">
+        Bind the popup to a widget button press.
+      </td>
     </tr>
     <tr>
       <td class="name" >
         <a href="#unbind_to_widget">:unbind_to_widget <span class='function_args'> <b>(</b>widget<b>)</b></span></a>
         <span class="summarytype"></span>
       </td>
-      <td colspan="2" class="summary">Unbind the popup from a widget button.</td>
+      <td colspan="2" class="summary">
+        Unbind the popup from a widget button.
+      </td>
     </tr>
     <tr>
       <td class="name" >
         <a href="#geometry">:geometry <span class='function_args'> <b>(</b>A<b>)</b></span></a>
         <span class="summarytype"><span class='summary_type'> -&gt;&nbsp;()</span></span>
       </td>
-      <td colspan="1" class="summary">Get or set wibox geometry.</td>
+      <td colspan="1" class="summary">
+        Get or set wibox geometry.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from wibox
       </td>
@@ -660,7 +748,9 @@ awful.popup {
         <a href="#struts">:struts <span class='function_args'> <b>(</b>strut<b>)</b></span></a>
         <span class="summarytype"><span class='summary_type'> -&gt;&nbsp;()</span></span>
       </td>
-      <td colspan="1" class="summary">Get or set wibox struts.</td>
+      <td colspan="1" class="summary">
+        Get or set wibox struts.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from wibox
       </td>
@@ -670,7 +760,9 @@ awful.popup {
         <a href="#setup">:setup <span class='function_named_args'><b>{</b>[args]<b>}</b></span></a>
         <span class="summarytype"></span>
       </td>
-      <td colspan="1" class="summary">Set a declarative widget hierarchy description.</td>
+      <td colspan="1" class="summary">
+        Set a declarative widget hierarchy description.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from wibox
       </td>
@@ -680,7 +772,9 @@ awful.popup {
         <a href="#find_widgets">:find_widgets <span class='function_args'> <b>(</b>x, y<b>)</b></span></a>
         <span class="summarytype"><span class='summary_type'> -&gt;&nbsp;table</span></span>
       </td>
-      <td colspan="1" class="summary">Find a widget by a point.</td>
+      <td colspan="1" class="summary">
+        Find a widget by a point.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from wibox
       </td>
@@ -690,7 +784,9 @@ awful.popup {
         <a href="#to_widget">:to_widget <span class='function_args'> <b>(</b><b>)</b></span></a>
         <span class="summarytype"><span class='summary_type'> -&gt;&nbsp;widget</span></span>
       </td>
-      <td colspan="1" class="summary">Create a widget that reflects the current state of this wibox.</td>
+      <td colspan="1" class="summary">
+        Create a widget that reflects the current state of this wibox.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from wibox
       </td>
@@ -700,7 +796,9 @@ awful.popup {
         <a href="#save_to_svg">:save_to_svg <span class='function_args'> <b>(</b>path[, context=nil]<b>)</b></span></a>
         <span class="summarytype"></span>
       </td>
-      <td colspan="1" class="summary">Save a screenshot of the wibox to <code>path</code>.</td>
+      <td colspan="1" class="summary">
+        Save a screenshot of the wibox to <code>path</code>.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from wibox
       </td>
@@ -710,7 +808,9 @@ awful.popup {
         <a href="#draw">:draw <span class='function_args'> <b>(</b>wibox<b>)</b></span></a>
         <span class="summarytype"></span>
       </td>
-      <td colspan="1" class="summary">Redraw a wibox.</td>
+      <td colspan="1" class="summary">
+        Redraw a wibox.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from wibox
       </td>
@@ -721,7 +821,9 @@ awful.popup {
     <tr>
       <td class="shortname" ><a href="#beautiful.bg_normal">beautiful.bg_normal</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>color</span></td>
-      <td colspan="1" class="summary">The default background color.</td>
+      <td colspan="1" class="summary">
+        The default background color.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from wibox
       </td>
@@ -729,7 +831,9 @@ awful.popup {
     <tr>
       <td class="shortname" ><a href="#beautiful.fg_normal">beautiful.fg_normal</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>color</span></td>
-      <td colspan="1" class="summary">The default foreground (text) color.</td>
+      <td colspan="1" class="summary">
+        The default foreground (text) color.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from wibox
       </td>
@@ -763,16 +867,16 @@ awful.popup {
          Border width.
         </li>
         <li><span class="parameter">border_color</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          Border color.
         </li>
         <li><span class="parameter">ontop</span>
             <span class="types"><span class="type">boolean</span></span>
          On top of other windows.
-         (<em>default</em> false)
+         (<em>default</em> <code>false</code>)
         </li>
         <li><span class="parameter">cursor</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          The mouse cursor.
         </li>
         <li><span class="parameter">visible</span>
@@ -782,10 +886,10 @@ awful.popup {
         <li><span class="parameter">opacity</span>
             <span class="types"><span class="type">number</span></span>
          The opacity, between 0 and 1.
-         (<em>default</em> 1)
+         (<em>default</em> <code>1</code>)
         </li>
         <li><span class="parameter">type</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          The window type (desktop, normal, dock, …).
         </li>
         <li><span class="parameter">x</span>
@@ -841,26 +945,26 @@ awful.popup {
             <span class="types"><span class="type">boolean</span></span>
          If the inputs are
   forward to the element below.
-         (<em>default</em> false)
+         (<em>default</em> <code>false</code>)
         </li>
         <li><span class="parameter">placement</span>
             <span class="types"><span class="type">function</span></span>
          The <a href="../libraries/awful.placement.html#">awful.placement</a> function
         </li>
         <li><span class="parameter">preferred_positions</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a> or <a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a> or <a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
 
 
 
         </li>
         <li><span class="parameter">preferred_anchors</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a> or <a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a> or <a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
 
 
 
         </li>
         <li><span class="parameter">offset</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a> or <span class="type">number</span></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a> or <span class="type">number</span></span>
          The X and Y offset compared to the parent object
         </li>
         <li><span class="parameter">hide_on_right_click</span>
@@ -876,7 +980,7 @@ awful.popup {
 
 
 
-    <span id=item1729 class="hide_extra">
+    <span id=item1742 class="hide_extra">
     </span>
 
 </dd>
@@ -916,13 +1020,13 @@ awful.popup {
 <p><img src="../images/AUTOGEN_awful_popup_position1.svg" alt="Usage example"/></p>
 
 
-<pre><code>for _, v in ipairs {'left', 'right', 'bottom', 'top'} do
+<pre><code>for _, v in ipairs {"left", "right", "bottom", "top"} do
     local p2 = awful.popup {
         widget = wibox.widget {
-            text   = 'On the '..v,
+            text   = "On the "..v,
             widget = wibox.widget.textbox
         },
-        border_color        = '#777777',
+        border_color        = "#777777",
         border_width        = 2,
         preferred_positions = v,
         ontop               = true,
@@ -939,14 +1043,14 @@ end
 <p><img src="../images/AUTOGEN_awful_popup_position2.svg" alt="Usage example"/></p>
 
 
-<pre><code>for _, v in ipairs {'left', 'right'} do
+<pre><code>for _, v in ipairs {"left", "right"} do
     local p2 = awful.popup {
         widget = wibox.widget {
-            text = 'On the '..v,
+            text = "On the "..v,
             forced_height = 100,
             widget = wibox.widget.textbox
         },
-        border_color  = '#0000ff',
+        border_color  = "#0000ff",
         preferred_positions = v,
         border_width  = 2,
     }
@@ -959,7 +1063,7 @@ end
     <h3>Type constraints:</h3>
     <ul>
         <li><span class="parameter">preferred_positions</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a> or <a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a> or <a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          A position name or an ordered
   table of positions
         </li>
@@ -975,13 +1079,13 @@ end
 
 
      <br />
-     <center id=button1730>
-     <a class="show_more_button" onclick="show_extra('1730')">
+     <center id=button1743>
+     <a class="show_more_button" onclick="show_extra('1743')">
       Click to display more
      </a>
      </center>
 
-    <span id=item1730 class="hide_extra">
+    <span id=item1743 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::preferred_positions</code></span>  When the <a href="../popups_and_bars/awful.popup.html#preferred_positions">preferred_positions</a> value changes.</li>
@@ -1025,25 +1129,25 @@ end
 
 <pre><code> local p2 = awful.popup {
      widget = wibox.widget {
-         text   = 'A popup',
+         text   = "A popup",
          forced_height = 100,
          widget = wibox.widget.textbox
      },
-     border_color        = '#777777',
+     border_color        = "#777777",
      border_width        = 2,
-     preferred_positions = 'right',
-     preferred_anchors   = {'front', 'back'},
+     preferred_positions = "right",
+     preferred_anchors   = {"front", "back"},
  }
  local p4 = awful.popup {
      widget = wibox.widget {
-         text   = 'A popup2',
+         text   = "A popup2",
          forced_height = 100,
          widget = wibox.widget.textbox
      },
-     border_color        = '#777777',
+     border_color        = "#777777",
      border_width        = 2,
-     preferred_positions = 'right',
-     preferred_anchors   = {'front', 'back'},
+     preferred_positions = "right",
+     preferred_anchors   = {"front", "back"},
  }
 </code></pre>
 
@@ -1052,7 +1156,7 @@ end
     <h3>Type constraints:</h3>
     <ul>
         <li><span class="parameter">preferred_anchors</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a> or <a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a> or <a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          Either a single anchor name or a table
   ordered by priority.
         </li>
@@ -1068,13 +1172,13 @@ end
 
 
      <br />
-     <center id=button1731>
-     <a class="show_more_button" onclick="show_extra('1731')">
+     <center id=button1744>
+     <a class="show_more_button" onclick="show_extra('1744')">
       Click to display more
      </a>
      </center>
 
-    <span id=item1731 class="hide_extra">
+    <span id=item1744 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::preferred_anchors</code></span>  When the <a href="../popups_and_bars/awful.popup.html#preferred_anchors">preferred_anchors</a> value changes.</li>
@@ -1104,7 +1208,7 @@ end
     <h3>Type constraints:</h3>
     <ul>
         <li><span class="parameter">current_position</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          Either "left", "right", "top" or "bottom"
         </li>
     </ul>
@@ -1114,7 +1218,7 @@ end
 
 
 
-    <span id=item1732 class="hide_extra">
+    <span id=item1745 class="hide_extra">
     </span>
 
 </dd>
@@ -1136,7 +1240,7 @@ end
     <h3>Type constraints:</h3>
     <ul>
         <li><span class="parameter">current_anchor</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          Either "front", "middle", "back"
         </li>
     </ul>
@@ -1146,7 +1250,7 @@ end
 
 
 
-    <span id=item1733 class="hide_extra">
+    <span id=item1746 class="hide_extra">
     </span>
 
 </dd>
@@ -1167,13 +1271,13 @@ end
 
 
      <br />
-     <center id=button1734>
-     <a class="show_more_button" onclick="show_extra('1734')">
+     <center id=button1747>
+     <a class="show_more_button" onclick="show_extra('1747')">
       Click to display more
      </a>
      </center>
 
-    <span id=item1734 class="hide_extra">
+    <span id=item1747 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::hide_on_right_click</code></span>  When the <a href="../popups_and_bars/awful.popup.html#hide_on_right_click">hide_on_right_click</a> value changes.</li>
@@ -1201,7 +1305,7 @@ end
         <li><span class="parameter">minimum_width</span>
             <span class="types"><span class="type">number</span></span>
          The minimum width.
-         (<em>default</em> 1)
+         (<em>default</em> <code>1</code>)
         </li>
     </ul>
 
@@ -1210,13 +1314,13 @@ end
 
 
      <br />
-     <center id=button1735>
-     <a class="show_more_button" onclick="show_extra('1735')">
+     <center id=button1748>
+     <a class="show_more_button" onclick="show_extra('1748')">
       Click to display more
      </a>
      </center>
 
-    <span id=item1735 class="hide_extra">
+    <span id=item1748 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::minimum_width</code></span>  When the <a href="../popups_and_bars/awful.popup.html#minimum_width">minimum_width</a> value changes.</li>
@@ -1244,7 +1348,7 @@ end
         <li><span class="parameter">minimum_height</span>
             <span class="types"><span class="type">number</span></span>
          The minimum height.
-         (<em>default</em> 1)
+         (<em>default</em> <code>1</code>)
         </li>
     </ul>
 
@@ -1253,13 +1357,13 @@ end
 
 
      <br />
-     <center id=button1736>
-     <a class="show_more_button" onclick="show_extra('1736')">
+     <center id=button1749>
+     <a class="show_more_button" onclick="show_extra('1749')">
       Click to display more
      </a>
      </center>
 
-    <span id=item1736 class="hide_extra">
+    <span id=item1749 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::minimum_height</code></span>  When the <a href="../popups_and_bars/awful.popup.html#minimum_height">minimum_height</a> value changes.</li>
@@ -1287,7 +1391,7 @@ end
         <li><span class="parameter">maximum_width</span>
             <span class="types"><span class="type">number</span></span>
          The maximum width.
-         (<em>default</em> 1)
+         (<em>default</em> <code>1</code>)
         </li>
     </ul>
 
@@ -1296,13 +1400,13 @@ end
 
 
      <br />
-     <center id=button1737>
-     <a class="show_more_button" onclick="show_extra('1737')">
+     <center id=button1750>
+     <a class="show_more_button" onclick="show_extra('1750')">
       Click to display more
      </a>
      </center>
 
-    <span id=item1737 class="hide_extra">
+    <span id=item1750 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::maximum_width</code></span>  When the <a href="../popups_and_bars/awful.popup.html#maximum_width">maximum_width</a> value changes.</li>
@@ -1330,7 +1434,7 @@ end
         <li><span class="parameter">maximum_height</span>
             <span class="types"><span class="type">number</span></span>
          The maximum height.
-         (<em>default</em> 1)
+         (<em>default</em> <code>1</code>)
         </li>
     </ul>
 
@@ -1339,13 +1443,13 @@ end
 
 
      <br />
-     <center id=button1738>
-     <a class="show_more_button" onclick="show_extra('1738')">
+     <center id=button1751>
+     <a class="show_more_button" onclick="show_extra('1751')">
       Click to display more
      </a>
      </center>
 
-    <span id=item1738 class="hide_extra">
+    <span id=item1751 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::maximum_height</code></span>  When the <a href="../popups_and_bars/awful.popup.html#maximum_height">maximum_height</a> value changes.</li>
@@ -1381,13 +1485,13 @@ end
 for i=1, 5 do
     local p2 = awful.popup {
         widget = wibox.widget {
-            text   = 'Hello world!  '..i..'  aaaa.',
+            text   = "Hello world!  "..i.."  aaaa.",
             widget = wibox.widget.textbox
         },
         border_color        = beautiful.border_color,
-        preferred_positions = 'bottom',
+        preferred_positions = "bottom",
         border_width        = 2,
-        preferred_anchors   = 'back',
+        preferred_anchors   = "back",
         placement           = (not previous) and awful.placement.top or nil,
         offset = {
              y = 10,
@@ -1406,12 +1510,12 @@ end
         <li><span class="parameter">x</span>
             <span class="types"><span class="type">number</span></span>
          The horizontal distance.
-         (<em>default</em> offset)
+         (<em>default</em> <code>offset</code>)
         </li>
         <li><span class="parameter">y</span>
             <span class="types"><span class="type">number</span></span>
          The vertical distance.
-         (<em>default</em> offset)
+         (<em>default</em> <code>offset</code>)
         </li>
         </li></ul>
     </ul>
@@ -1421,13 +1525,13 @@ end
 
 
      <br />
-     <center id=button1739>
-     <a class="show_more_button" onclick="show_extra('1739')">
+     <center id=button1752>
+     <a class="show_more_button" onclick="show_extra('1752')">
       Click to display more
      </a>
      </center>
 
-    <span id=item1739 class="hide_extra">
+    <span id=item1752 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::offset</code></span>  When the <a href="../popups_and_bars/awful.popup.html#offset">offset</a> value changes.</li>
@@ -1453,10 +1557,10 @@ end
     <h3>Type constraints:</h3>
     <ul>
         <li><span class="parameter">The</span>
-            <span class="types"><span class="type">function</span>, <a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a> or <span class="type">boolean</span></span>
+            <span class="types"><span class="type">function</span>, <a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a> or <span class="type">boolean</span></span>
          placement function or name
  (or false to disable placement)
-         (<em>default</em> next_to)
+         (<em>default</em> <code>next_to</code>)
         </li>
         <li><span class="parameter">function</span>
 
@@ -1474,13 +1578,13 @@ end
 
 
      <br />
-     <center id=button1740>
-     <a class="show_more_button" onclick="show_extra('1740')">
+     <center id=button1753>
+     <a class="show_more_button" onclick="show_extra('1753')">
       Click to display more
      </a>
      </center>
 
-    <span id=item1740 class="hide_extra">
+    <span id=item1753 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::placement</code></span>  When the <a href="../popups_and_bars/awful.popup.html#placement">placement</a> value changes.</li>
@@ -1510,13 +1614,13 @@ end
 
 
      <br />
-     <center id=button1741>
-     <a class="show_more_button" onclick="show_extra('1741')">
+     <center id=button1754>
+     <a class="show_more_button" onclick="show_extra('1754')">
       Click to display more
      </a>
      </center>
 
-    <span id=item1741 class="hide_extra">
+    <span id=item1754 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::border_width</code></span>  When the <a href="../popups_and_bars/awful.popup.html#border_width">border_width</a> value changes.</li>
@@ -1565,13 +1669,13 @@ Green   Alpha
 
 
      <br />
-     <center id=button1742>
-     <a class="show_more_button" onclick="show_extra('1742')">
+     <center id=button1755>
+     <a class="show_more_button" onclick="show_extra('1755')">
       Click to display more
      </a>
      </center>
 
-    <span id=item1742 class="hide_extra">
+    <span id=item1755 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::border_color</code></span>  When the <a href="../popups_and_bars/awful.popup.html#border_color">border_color</a> value changes.</li>
@@ -1600,13 +1704,13 @@ Green   Alpha
 
 
      <br />
-     <center id=button1743>
-     <a class="show_more_button" onclick="show_extra('1743')">
+     <center id=button1756>
+     <a class="show_more_button" onclick="show_extra('1756')">
       Click to display more
      </a>
      </center>
 
-    <span id=item1743 class="hide_extra">
+    <span id=item1756 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::ontop</code></span>  When the <a href="../popups_and_bars/awful.popup.html#ontop">ontop</a> value changes.</li>
@@ -1639,13 +1743,13 @@ Green   Alpha
 
 
      <br />
-     <center id=button1744>
-     <a class="show_more_button" onclick="show_extra('1744')">
+     <center id=button1757>
+     <a class="show_more_button" onclick="show_extra('1757')">
       Click to display more
      </a>
      </center>
 
-    <span id=item1744 class="hide_extra">
+    <span id=item1757 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::cursor</code></span>  When the <a href="../popups_and_bars/awful.popup.html#cursor">cursor</a> value changes.</li>
@@ -1674,13 +1778,13 @@ Green   Alpha
 
 
      <br />
-     <center id=button1745>
-     <a class="show_more_button" onclick="show_extra('1745')">
+     <center id=button1758>
+     <a class="show_more_button" onclick="show_extra('1758')">
       Click to display more
      </a>
      </center>
 
-    <span id=item1745 class="hide_extra">
+    <span id=item1758 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::visible</code></span>  When the <a href="../popups_and_bars/awful.popup.html#visible">visible</a> value changes.</li>
@@ -1716,13 +1820,13 @@ Green   Alpha
 
 
      <br />
-     <center id=button1746>
-     <a class="show_more_button" onclick="show_extra('1746')">
+     <center id=button1759>
+     <a class="show_more_button" onclick="show_extra('1759')">
       Click to display more
      </a>
      </center>
 
-    <span id=item1746 class="hide_extra">
+    <span id=item1759 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::opacity</code></span>  When the <a href="../popups_and_bars/awful.popup.html#opacity">opacity</a> value changes.</li>
@@ -1755,13 +1859,13 @@ Green   Alpha
 
 
      <br />
-     <center id=button1747>
-     <a class="show_more_button" onclick="show_extra('1747')">
+     <center id=button1760>
+     <a class="show_more_button" onclick="show_extra('1760')">
       Click to display more
      </a>
      </center>
 
-    <span id=item1747 class="hide_extra">
+    <span id=item1760 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::type</code></span>  When the <a href="../popups_and_bars/awful.popup.html#type">type</a> value changes.</li>
@@ -1790,13 +1894,13 @@ Green   Alpha
 
 
      <br />
-     <center id=button1748>
-     <a class="show_more_button" onclick="show_extra('1748')">
+     <center id=button1761>
+     <a class="show_more_button" onclick="show_extra('1761')">
       Click to display more
      </a>
      </center>
 
-    <span id=item1748 class="hide_extra">
+    <span id=item1761 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::x</code></span>  When the <a href="../popups_and_bars/awful.popup.html#x">x</a> value changes.</li>
@@ -1825,13 +1929,13 @@ Green   Alpha
 
 
      <br />
-     <center id=button1749>
-     <a class="show_more_button" onclick="show_extra('1749')">
+     <center id=button1762>
+     <a class="show_more_button" onclick="show_extra('1762')">
       Click to display more
      </a>
      </center>
 
-    <span id=item1749 class="hide_extra">
+    <span id=item1762 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::y</code></span>  When the <a href="../popups_and_bars/awful.popup.html#y">y</a> value changes.</li>
@@ -1860,13 +1964,13 @@ Green   Alpha
 
 
      <br />
-     <center id=button1750>
-     <a class="show_more_button" onclick="show_extra('1750')">
+     <center id=button1763>
+     <a class="show_more_button" onclick="show_extra('1763')">
       Click to display more
      </a>
      </center>
 
-    <span id=item1750 class="hide_extra">
+    <span id=item1763 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::width</code></span>  When the <a href="../popups_and_bars/awful.popup.html#width">width</a> value changes.</li>
@@ -1895,13 +1999,13 @@ Green   Alpha
 
 
      <br />
-     <center id=button1751>
-     <a class="show_more_button" onclick="show_extra('1751')">
+     <center id=button1764>
+     <a class="show_more_button" onclick="show_extra('1764')">
       Click to display more
      </a>
      </center>
 
-    <span id=item1751 class="hide_extra">
+    <span id=item1764 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::height</code></span>  When the <a href="../popups_and_bars/awful.popup.html#height">height</a> value changes.</li>
@@ -1930,13 +2034,13 @@ Green   Alpha
 
 
      <br />
-     <center id=button1752>
-     <a class="show_more_button" onclick="show_extra('1752')">
+     <center id=button1765>
+     <a class="show_more_button" onclick="show_extra('1765')">
       Click to display more
      </a>
      </center>
 
-    <span id=item1752 class="hide_extra">
+    <span id=item1765 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::screen</code></span>  When the <a href="../core_components/screen.html#">screen</a> value changes.</li>
@@ -1966,13 +2070,13 @@ Green   Alpha
 
 
      <br />
-     <center id=button1753>
-     <a class="show_more_button" onclick="show_extra('1753')">
+     <center id=button1766>
+     <a class="show_more_button" onclick="show_extra('1766')">
       Click to display more
      </a>
      </center>
 
-    <span id=item1753 class="hide_extra">
+    <span id=item1766 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::drawable</code></span>  When the <a href="../core_components/drawable.html#">drawable</a> value changes.</li>
@@ -2001,13 +2105,13 @@ Green   Alpha
 
 
      <br />
-     <center id=button1754>
-     <a class="show_more_button" onclick="show_extra('1754')">
+     <center id=button1767>
+     <a class="show_more_button" onclick="show_extra('1767')">
       Click to display more
      </a>
      </center>
 
-    <span id=item1754 class="hide_extra">
+    <span id=item1767 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::widget</code></span>  When the <a href="../popups_and_bars/awful.popup.html#widget">widget</a> value changes.</li>
@@ -2041,13 +2145,13 @@ Green   Alpha
 
 
      <br />
-     <center id=button1755>
-     <a class="show_more_button" onclick="show_extra('1755')">
+     <center id=button1768>
+     <a class="show_more_button" onclick="show_extra('1768')">
       Click to display more
      </a>
      </center>
 
-    <span id=item1755 class="hide_extra">
+    <span id=item1768 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::window</code></span>  When the <a href="../popups_and_bars/awful.popup.html#window">window</a> value changes.</li>
@@ -2084,13 +2188,13 @@ Green   Alpha
 
 
      <br />
-     <center id=button1756>
-     <a class="show_more_button" onclick="show_extra('1756')">
+     <center id=button1769>
+     <a class="show_more_button" onclick="show_extra('1769')">
       Click to display more
      </a>
      </center>
 
-    <span id=item1756 class="hide_extra">
+    <span id=item1769 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::shape_bounding</code></span>  When the <a href="../popups_and_bars/awful.popup.html#shape_bounding">shape_bounding</a> value changes.</li>
@@ -2126,13 +2230,13 @@ Green   Alpha
 
 
      <br />
-     <center id=button1757>
-     <a class="show_more_button" onclick="show_extra('1757')">
+     <center id=button1770>
+     <a class="show_more_button" onclick="show_extra('1770')">
       Click to display more
      </a>
      </center>
 
-    <span id=item1757 class="hide_extra">
+    <span id=item1770 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::shape_clip</code></span>  When the <a href="../popups_and_bars/awful.popup.html#shape_clip">shape_clip</a> value changes.</li>
@@ -2169,13 +2273,13 @@ Green   Alpha
 
 
      <br />
-     <center id=button1758>
-     <a class="show_more_button" onclick="show_extra('1758')">
+     <center id=button1771>
+     <a class="show_more_button" onclick="show_extra('1771')">
       Click to display more
      </a>
      </center>
 
-    <span id=item1758 class="hide_extra">
+    <span id=item1771 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::shape_input</code></span>  When the <a href="../popups_and_bars/awful.popup.html#shape_input">shape_input</a> value changes.</li>
@@ -2208,13 +2312,13 @@ Green   Alpha
 
 
      <br />
-     <center id=button1759>
-     <a class="show_more_button" onclick="show_extra('1759')">
+     <center id=button1772>
+     <a class="show_more_button" onclick="show_extra('1772')">
       Click to display more
      </a>
      </center>
 
-    <span id=item1759 class="hide_extra">
+    <span id=item1772 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::shape</code></span>  When the <a href="../popups_and_bars/awful.popup.html#shape">shape</a> value changes.</li>
@@ -2254,13 +2358,13 @@ Green   Alpha
 
 
      <br />
-     <center id=button1760>
-     <a class="show_more_button" onclick="show_extra('1760')">
+     <center id=button1773>
+     <a class="show_more_button" onclick="show_extra('1773')">
       Click to display more
      </a>
      </center>
 
-    <span id=item1760 class="hide_extra">
+    <span id=item1773 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::input_passthrough</code></span>  When the <a href="../popups_and_bars/awful.popup.html#input_passthrough">input_passthrough</a> value changes.</li>
@@ -2296,13 +2400,13 @@ Green   Alpha
 
 
      <br />
-     <center id=button1761>
-     <a class="show_more_button" onclick="show_extra('1761')">
+     <center id=button1774>
+     <a class="show_more_button" onclick="show_extra('1774')">
       Click to display more
      </a>
      </center>
 
-    <span id=item1761 class="hide_extra">
+    <span id=item1774 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::buttons</code></span>  When the <a href="../popups_and_bars/awful.popup.html#buttons">buttons</a> value changes.</li>
@@ -2350,13 +2454,13 @@ Green   Alpha
 
 
      <br />
-     <center id=button1762>
-     <a class="show_more_button" onclick="show_extra('1762')">
+     <center id=button1775>
+     <a class="show_more_button" onclick="show_extra('1775')">
       Click to display more
      </a>
      </center>
 
-    <span id=item1762 class="hide_extra">
+    <span id=item1775 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::bg</code></span>  When the <a href="../popups_and_bars/awful.popup.html#bg">bg</a> value changes.</li>
@@ -2394,7 +2498,7 @@ Green   Alpha
     <h3>Type constraints:</h3>
     <ul>
         <li><span class="parameter">image</span>
-            <span class="types"><span class="type">gears.suface</span>, <a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a> or <span class="type">function</span></span>
+            <span class="types"><span class="type">gears.suface</span>, <a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a> or <span class="type">function</span></span>
          A background image or a function.
         </li>
     </ul>
@@ -2408,13 +2512,13 @@ Green   Alpha
 
 
      <br />
-     <center id=button1763>
-     <a class="show_more_button" onclick="show_extra('1763')">
+     <center id=button1776>
+     <a class="show_more_button" onclick="show_extra('1776')">
       Click to display more
      </a>
      </center>
 
-    <span id=item1763 class="hide_extra">
+    <span id=item1776 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::bgimage</code></span>  When the <a href="../popups_and_bars/awful.popup.html#bgimage">bgimage</a> value changes.</li>
@@ -2462,13 +2566,13 @@ Green   Alpha
 
 
      <br />
-     <center id=button1764>
-     <a class="show_more_button" onclick="show_extra('1764')">
+     <center id=button1777>
+     <a class="show_more_button" onclick="show_extra('1777')">
       Click to display more
      </a>
      </center>
 
-    <span id=item1764 class="hide_extra">
+    <span id=item1777 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::fg</code></span>  When the <a href="../popups_and_bars/awful.popup.html#fg">fg</a> value changes.</li>
@@ -2509,14 +2613,14 @@ Green   Alpha
         <li><span class="parameter">obj</span>
          An object such as a wibox, client or a table entry
   returned by <code>wibox:find_widgets()</code>.
-         (<em>default</em> mouse)
+         (<em>default</em> <code>mouse</code>)
         </li>
     </ul>
 
     <h3>Returns:</h3>
     <ol>
 
-           <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+           <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
         The new geometry
     </ol>
 
@@ -2530,7 +2634,7 @@ Green   Alpha
 
 
 
-    <span id=item1765 class="hide_extra">
+    <span id=item1778 class="hide_extra">
     </span>
 
 </dd>
@@ -2553,7 +2657,7 @@ Green   Alpha
         <li><span class="parameter">button</span>
             <span class="types"><span class="type">number</span></span>
          The button index
-         (<em>default</em> 1)
+         (<em>default</em> <code>1</code>)
         </li>
     </ul>
 
@@ -2562,7 +2666,7 @@ Green   Alpha
 
 
 
-    <span id=item1766 class="hide_extra">
+    <span id=item1779 class="hide_extra">
     </span>
 
 </dd>
@@ -2589,7 +2693,7 @@ Green   Alpha
 
 
 
-    <span id=item1767 class="hide_extra">
+    <span id=item1780 class="hide_extra">
     </span>
 
 </dd>
@@ -2623,18 +2727,18 @@ Green   Alpha
 
 
      <br />
-     <center id=button1768>
-     <a class="show_more_button" onclick="show_extra('1768')">
+     <center id=button1781>
+     <a class="show_more_button" onclick="show_extra('1781')">
       Click to display more
      </a>
      </center>
 
-    <span id=item1768 class="hide_extra">
+    <span id=item1781 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::geometry</code></span>  When the geometry change.</li>
            <ul>
-             <li><span class="parameter"><code>geo</code></span> <span class="types"><a href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span> The geometry table.</li>
+             <li><span class="parameter"><code>geo</code></span> <span class="types"><a href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span> The geometry table.</li>
            </ul>
      </ul>
     </span>
@@ -2680,13 +2784,13 @@ Green   Alpha
 
 
      <br />
-     <center id=button1769>
-     <a class="show_more_button" onclick="show_extra('1769')">
+     <center id=button1782>
+     <a class="show_more_button" onclick="show_extra('1782')">
       Click to display more
      </a>
      </center>
 
-    <span id=item1769 class="hide_extra">
+    <span id=item1782 class="hide_extra">
      <h3>Emit signals:</h3>
      <ul>
           <li><span class="parameter"><code>property::struts</code></span>  </li>
@@ -2718,7 +2822,7 @@ Green   Alpha
 
 
 
-    <span id=item1770 class="hide_extra">
+    <span id=item1783 class="hide_extra">
     </span>
 
 </dd>
@@ -2749,7 +2853,7 @@ Green   Alpha
     <h3>Returns:</h3>
     <ol>
 
-           <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+           <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          A sorted table of widgets positions. The first element is the biggest
  container while the last is the topmost widget. The table contains <em>x</em>, <em>y</em>,
  <em>width</em>, <em>height</em> and <em>widget</em>.
@@ -2759,7 +2863,7 @@ Green   Alpha
 
 
 
-    <span id=item1771 class="hide_extra">
+    <span id=item1784 class="hide_extra">
     </span>
 
 </dd>
@@ -2786,7 +2890,7 @@ Green   Alpha
 
 
 
-    <span id=item1772 class="hide_extra">
+    <span id=item1785 class="hide_extra">
     </span>
 
 </dd>
@@ -2804,13 +2908,13 @@ Green   Alpha
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">path</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          The path.
         </li>
         <li><span class="parameter">context</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          A widget context.
-         (<em>default</em> nil)
+         (<em>default</em> <code>nil</code>)
         </li>
     </ul>
 
@@ -2819,7 +2923,7 @@ Green   Alpha
 
 
 
-    <span id=item1773 class="hide_extra">
+    <span id=item1786 class="hide_extra">
     </span>
 
 </dd>
@@ -2849,7 +2953,7 @@ Green   Alpha
 
 
 
-    <span id=item1774 class="hide_extra">
+    <span id=item1787 class="hide_extra">
     </span>
 
 </dd>
@@ -2884,7 +2988,7 @@ Green   Alpha
 
 
 
-    <span id=item1775 class="hide_extra">
+    <span id=item1788 class="hide_extra">
     </span>
 
 </dd>
@@ -2909,7 +3013,7 @@ Green   Alpha
 
 
 
-    <span id=item1776 class="hide_extra">
+    <span id=item1789 class="hide_extra">
     </span>
 
 </dd>
@@ -2920,7 +3024,6 @@ Green   Alpha
 </div> <!-- id="main" -->
 <div id="about">
 <i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.6</a></i>
-<i style="float:right;">Last updated 2021-05-01 17:20:18 </i>
 </div> <!-- id="about" -->
 </div> <!-- id="container" -->
 </body>

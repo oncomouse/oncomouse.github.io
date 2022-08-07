@@ -144,6 +144,7 @@
   <li><a href="../popups_and_bars/awful.popup.html">awful.popup</a></li>
   <li><a href="../popups_and_bars/awful.titlebar.html">awful.titlebar</a></li>
   <li><a href="../popups_and_bars/awful.tooltip.html">awful.tooltip</a></li>
+  <li><a href="../popups_and_bars/awful.wallpaper.html">awful.wallpaper</a></li>
   <li><a href="../popups_and_bars/awful.wibar.html">awful.wibar</a></li>
   <li><a href="../popups_and_bars/awful.widget.calendar_popup.html">awful.widget.calendar_popup</a></li>
   <li><a href="../popups_and_bars/menubar.html">menubar</a></li>
@@ -272,8 +273,15 @@
   <div class="extra-header__section">
     <h3>Info:</h3>
     <ul>
-            <li><strong>Copyright</strong>: 2010 Uli Schlachter</li>
-            <li><strong>Author</strong>: Uli Schlachter</li>
+                <li><strong>Copyright</strong>: 2010 Uli Schlachter</li>
+                <li>
+                    <strong>Originally authored by</strong>: Uli Schlachter<br />
+                    <small>(Full contributors list available on
+                    <a href="https://github.com/awesomeWM/awesome/graphs/contributors">
+                        our github project)
+                    </a></small>
+
+                </li>
     </ul>
   </div>
 
@@ -285,72 +293,92 @@
     <tr>
       <td class="name" >
         <a href="#parse_color"><span class='function_modname'>gears.color.</span>parse_color <span class='function_args'> <b>(</b>col<b>)</b></span></a>
-        <span class="summarytype"><span class='summary_type'> -&gt;&nbsp;table</span></span>
+        <span class="summarytype"><span class='summary_type'> -&gt;&nbsp;(number, number, number, number, nil)</span></span>
       </td>
-      <td colspan="2" class="summary">Parse a HTML-color.</td>
+      <td colspan="2" class="summary">
+        Parse a HTML-color.
+      </td>
     </tr>
     <tr>
       <td class="name" >
         <a href="#create_solid_pattern"><span class='function_modname'>gears.color.</span>create_solid_pattern <span class='function_args'> <b>(</b>col<b>)</b></span></a>
         <span class="summarytype"><span class='summary_type'> -&gt;&nbsp;()</span></span>
       </td>
-      <td colspan="2" class="summary">Create a solid pattern</td>
+      <td colspan="2" class="summary">
+        Create a solid pattern
+      </td>
     </tr>
     <tr>
       <td class="name" >
         <a href="#create_png_pattern"><span class='function_modname'>gears.color.</span>create_png_pattern <span class='function_args'> <b>(</b>file<b>)</b></span></a>
         <span class="summarytype"><span class='summary_type'> -&gt;&nbsp;()</span></span>
       </td>
-      <td colspan="2" class="summary">Create an image pattern from a png file</td>
+      <td colspan="2" class="summary">
+        Create an image pattern from a png file
+      </td>
     </tr>
     <tr>
       <td class="name" >
         <a href="#create_linear_pattern"><span class='function_modname'>gears.color.</span>create_linear_pattern <span class='function_args'> <b>(</b>arg<b>)</b></span></a>
         <span class="summarytype"><span class='summary_type'> -&gt;&nbsp;()</span></span>
       </td>
-      <td colspan="2" class="summary">Create a linear pattern object.</td>
+      <td colspan="2" class="summary">
+        Create a linear pattern object.
+      </td>
     </tr>
     <tr>
       <td class="name" >
         <a href="#create_radial_pattern"><span class='function_modname'>gears.color.</span>create_radial_pattern <span class='function_args'> <b>(</b>arg<b>)</b></span></a>
         <span class="summarytype"><span class='summary_type'> -&gt;&nbsp;()</span></span>
       </td>
-      <td colspan="2" class="summary">Create a radial pattern object.</td>
+      <td colspan="2" class="summary">
+        Create a radial pattern object.
+      </td>
     </tr>
     <tr>
       <td class="name" >
         <a href="#create_pattern_uncached"><span class='function_modname'>gears.color.</span>create_pattern_uncached <span class='function_args'> <b>(</b>col<b>)</b></span></a>
         <span class="summarytype"><span class='summary_type'> -&gt;&nbsp;()</span></span>
       </td>
-      <td colspan="2" class="summary">Create a pattern from a given string.</td>
+      <td colspan="2" class="summary">
+        Create a pattern from a given string.
+      </td>
     </tr>
     <tr>
       <td class="name" >
         <a href="#create_pattern"><span class='function_modname'>gears.color.</span>create_pattern <span class='function_args'> <b>(</b><b>)</b></span></a>
         <span class="summarytype"></span>
       </td>
-      <td colspan="2" class="summary">Create a pattern from a given string, same as <a href="../theme_related_libraries/gears.color.html#">gears.color</a>.</td>
+      <td colspan="2" class="summary">
+        Create a pattern from a given string, same as <a href="../theme_related_libraries/gears.color.html#">gears.color</a>.
+      </td>
     </tr>
     <tr>
       <td class="name" >
         <a href="#create_opaque_pattern"><span class='function_modname'>gears.color.</span>create_opaque_pattern <span class='function_args'> <b>(</b>col<b>)</b></span></a>
         <span class="summarytype"><span class='summary_type'> -&gt;&nbsp;()</span></span>
       </td>
-      <td colspan="2" class="summary">Check if a pattern is opaque.</td>
+      <td colspan="2" class="summary">
+        Check if a pattern is opaque.
+      </td>
     </tr>
     <tr>
       <td class="name" >
         <a href="#recolor_image"><span class='function_modname'>gears.color.</span>recolor_image <span class='function_args'> <b>(</b>image, new_color<b>)</b></span></a>
         <span class="summarytype"><span class='summary_type'> -&gt;&nbsp;()</span></span>
       </td>
-      <td colspan="2" class="summary">Fill non-transparent area of an image with a given color.</td>
+      <td colspan="2" class="summary">
+        Fill non-transparent area of an image with a given color.
+      </td>
     </tr>
     <tr>
       <td class="name" >
         <a href="#ensure_pango_color"><span class='function_modname'>gears.color.</span>ensure_pango_color <span class='function_args'> <b>(</b>check_color, fallback<b>)</b></span></a>
         <span class="summarytype"><span class='summary_type'> -&gt;&nbsp;string</span></span>
       </td>
-      <td colspan="2" class="summary">Get a valid color for Pango markup</td>
+      <td colspan="2" class="summary">
+        Get a valid color for Pango markup
+      </td>
     </tr>
 </table>
 <h2><a href="#Tables">Tables</a></h2>
@@ -359,7 +387,9 @@
       <td class="name" >
         <a href="#color.types">color.types</a>
       </td>
-      <td colspan="2" class="summary">Mapping of all supported color types.</td>
+      <td colspan="2" class="summary">
+        Mapping of all supported color types.
+      </td>
     </tr>
 </table>
 <h2><a href="#Fields">Fields</a></h2>
@@ -367,7 +397,9 @@
     <tr>
       <td class="shortname" ><a href="#color.transparent"><span class='function_modname'>gears.color.</span>color.transparent</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>N/A</span></td>
-      <td colspan="2" class="summary">No color</td>
+      <td colspan="2" class="summary">
+        No color
+      </td>
     </tr>
 </table>
 
@@ -381,7 +413,7 @@
     <dt>
     <a name = "parse_color"></a>
     <strong><span class='function_modname'>gears.color.</span>parse_color <span class='function_args'> <b>(</b>col<b>)</b></span></strong>
-    <span class="proptype"><span class='summary_type'> -&gt;&nbsp;table</span></span>
+    <span class="proptype"><span class='summary_type'> -&gt;&nbsp;(number, number, number, number, nil)</span></span>
     <span class="baseclass" >
     </span>
     </dt>
@@ -399,22 +431,36 @@
 
     <h3>Returns:</h3>
     <ol>
-
-           <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
-        4 values representing color in RGBA format (each of them in
- [0, 1] range) or nil if input is incorrect.
+        <li>
+           <span class="types"><span class="type">number</span></span>
+        between 0 and 1 for the 'red' value (1st channel)</li>
+        <li>
+           <span class="types"><span class="type">number</span></span>
+        between 0 and 1 for the 'green' value (2nd channel)</li>
+        <li>
+           <span class="types"><span class="type">number</span></span>
+        between 0 and 1 for the 'blue' value (3rd channel)</li>
+        <li>
+           <span class="types"><span class="type">number</span></span>
+         between 0 and 1 for the 'opacity' value (4th channel)
+ if the incoming color code only has 3 values (only rgb, not opacity) the 4th
+ return value is 1.</li>
+        <li>
+           <span class="types"><span class="type">nil</span></span>
+        if input is incorrect</li>
     </ol>
 
 
 
     <h3>Usage:</h3>
     <ul>
-        <pre class="example"><span class="comment">-- This will return 0, 1, 0, 1
-</span> gears.color.parse_color(<span class="string">"#00ff00ff"</span>)</pre>
+        <pre class="example"><span class="comment">-- Both of the following will return 0, 0.4, 0.8, 1
+</span>gears.color.parse_color(<span class="string">"#0066ccff"</span>)
+gears.color.parse_color(<span class="string">"#0066cc"</span>)</pre>
     </ul>
 
 
-    <span id=item2156 class="hide_extra">
+    <span id=item2195 class="hide_extra">
     </span>
 
 </dd>
@@ -445,7 +491,7 @@
 
 
 
-    <span id=item2157 class="hide_extra">
+    <span id=item2196 class="hide_extra">
     </span>
 
 </dd>
@@ -476,7 +522,7 @@
 
 
 
-    <span id=item2158 class="hide_extra">
+    <span id=item2197 class="hide_extra">
     </span>
 
 </dd>
@@ -501,7 +547,7 @@
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">arg</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a> or <a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a> or <a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          The argument describing the pattern.
         </li>
     </ul>
@@ -516,7 +562,7 @@
 
 
 
-    <span id=item2159 class="hide_extra">
+    <span id=item2198 class="hide_extra">
     </span>
 
 </dd>
@@ -542,7 +588,7 @@
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">arg</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a> or <a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a> or <a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          The argument describing the pattern
         </li>
     </ul>
@@ -557,7 +603,7 @@
 
 
 
-    <span id=item2160 class="hide_extra">
+    <span id=item2199 class="hide_extra">
     </span>
 
 </dd>
@@ -597,7 +643,7 @@
 
 
 
-    <span id=item2161 class="hide_extra">
+    <span id=item2200 class="hide_extra">
     </span>
 
 </dd>
@@ -621,7 +667,7 @@
 
 
 
-    <span id=item2162 class="hide_extra">
+    <span id=item2201 class="hide_extra">
     </span>
 
 </dd>
@@ -654,7 +700,7 @@
 
 
 
-    <span id=item2163 class="hide_extra">
+    <span id=item2202 class="hide_extra">
     </span>
 
 </dd>
@@ -688,7 +734,7 @@
 
 
 
-    <span id=item2164 class="hide_extra">
+    <span id=item2203 class="hide_extra">
     </span>
 
 </dd>
@@ -708,7 +754,7 @@
          The color to check.
         </li>
         <li><span class="parameter">fallback</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          The color to return if the first is invalid. (default: black)
         </li>
     </ul>
@@ -716,7 +762,7 @@
     <h3>Returns:</h3>
     <ol>
 
-           <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+           <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
         color if it is valid, else fallback.
     </ol>
 
@@ -724,7 +770,7 @@
 
 
 
-    <span id=item2165 class="hide_extra">
+    <span id=item2204 class="hide_extra">
     </span>
 
 </dd>
@@ -770,7 +816,7 @@
 
 
 
-    <span id=item2166 class="hide_extra">
+    <span id=item2205 class="hide_extra">
     </span>
 
 </dd>
@@ -794,7 +840,7 @@
 
 
 
-    <span id=item2167 class="hide_extra">
+    <span id=item2206 class="hide_extra">
     </span>
 
 </dd>
@@ -805,7 +851,6 @@
 </div> <!-- id="main" -->
 <div id="about">
 <i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.6</a></i>
-<i style="float:right;">Last updated 2021-05-01 17:20:18 </i>
 </div> <!-- id="about" -->
 </div> <!-- id="container" -->
 </body>

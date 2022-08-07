@@ -139,6 +139,7 @@
   <li><a href="../popups_and_bars/awful.popup.html">awful.popup</a></li>
   <li><a href="../popups_and_bars/awful.titlebar.html">awful.titlebar</a></li>
   <li><a href="../popups_and_bars/awful.tooltip.html">awful.tooltip</a></li>
+  <li><a href="../popups_and_bars/awful.wallpaper.html">awful.wallpaper</a></li>
   <li><a href="../popups_and_bars/awful.wibar.html">awful.wibar</a></li>
   <li><a href="../popups_and_bars/awful.widget.calendar_popup.html">awful.widget.calendar_popup</a></li>
   <li><a href="../popups_and_bars/menubar.html">menubar</a></li>
@@ -267,7 +268,7 @@
 
 
 <pre>
-awful.widget.watch(<span class="string">'bash -c '</span>echo Hello world! | grep Hello<span class="string">''</span>, <span class="number">15</span>)
+awful.widget.watch(<span class="string">'bash -c "echo Hello world! | grep Hello"'</span>, <span class="number">15</span>)
 </pre>
 
 </p>
@@ -277,8 +278,15 @@ awful.widget.watch(<span class="string">'bash -c '</span>echo Hello world! | gre
   <div class="extra-header__section">
     <h3>Info:</h3>
     <ul>
-            <li><strong>Copyright</strong>: 2015, 2016 Benjamin Petrenko, Yauheni Kirylau</li>
-            <li><strong>Author</strong>: Benjamin Petrenko,Yauheni Kirylau</li>
+                <li><strong>Copyright</strong>: 2015, 2016 Benjamin Petrenko, Yauheni Kirylau</li>
+                <li>
+                    <strong>Originally authored by</strong>: Benjamin Petrenko,Yauheni Kirylau<br />
+                    <small>(Full contributors list available on
+                    <a href="https://github.com/awesomeWM/awesome/graphs/contributors">
+                        our github project)
+                    </a></small>
+
+                </li>
     </ul>
   </div>
 
@@ -291,8 +299,10 @@ awful.widget.watch(<span class="string">'bash -c '</span>echo Hello world! | gre
       <td class="name" >
         <a href="#awful.widget.watch">awful.widget.watch <span class='function_args'> <b>(</b>command[, timeout=5][, callback], base_widget<b>)</b></span></a>
       </td>
-      <td colspan="2" class="summary">Create a textbox that shows the output of a command
- and updates it at a given time interval.</td>
+      <td colspan="2" class="summary">
+        Create a textbox that shows the output of a command
+ and updates it at a given time interval.
+      </td>
     </tr>
 </table>
 <h2><a href="#Object_properties">Object properties</a></h2>
@@ -300,7 +310,9 @@ awful.widget.watch(<span class="string">'bash -c '</span>echo Hello world! | gre
     <tr>
       <td class="shortname" ><a href="#children">children</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>table</span></td>
-      <td colspan="1" class="summary">Get or set the children elements.</td>
+      <td colspan="1" class="summary">
+        Get or set the children elements.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from wibox.widget
       </td>
@@ -308,7 +320,9 @@ awful.widget.watch(<span class="string">'bash -c '</span>echo Hello world! | gre
     <tr>
       <td class="shortname" ><a href="#all_children">all_children</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>table</span></td>
-      <td colspan="1" class="summary">Get all direct and indirect children widgets.</td>
+      <td colspan="1" class="summary">
+        Get all direct and indirect children widgets.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from wibox.widget
       </td>
@@ -316,7 +330,9 @@ awful.widget.watch(<span class="string">'bash -c '</span>echo Hello world! | gre
     <tr>
       <td class="shortname" ><a href="#forced_height">forced_height</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>number <i>or</i> nil</span></td>
-      <td colspan="1" class="summary">Force a widget height.</td>
+      <td colspan="1" class="summary">
+        Force a widget height.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from wibox.widget
       </td>
@@ -324,7 +340,9 @@ awful.widget.watch(<span class="string">'bash -c '</span>echo Hello world! | gre
     <tr>
       <td class="shortname" ><a href="#forced_width">forced_width</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>number <i>or</i> nil</span></td>
-      <td colspan="1" class="summary">Force a widget width.</td>
+      <td colspan="1" class="summary">
+        Force a widget width.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from wibox.widget
       </td>
@@ -332,7 +350,9 @@ awful.widget.watch(<span class="string">'bash -c '</span>echo Hello world! | gre
     <tr>
       <td class="shortname" ><a href="#opacity">opacity</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>number</span></td>
-      <td colspan="1" class="summary">The widget opacity (transparency).</td>
+      <td colspan="1" class="summary">
+        The widget opacity (transparency).
+      </td>
       <td class="baseclass" nowrap>
         Inherited from wibox.widget
       </td>
@@ -340,7 +360,9 @@ awful.widget.watch(<span class="string">'bash -c '</span>echo Hello world! | gre
     <tr>
       <td class="shortname" ><a href="#visible">visible</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>boolean</span></td>
-      <td colspan="1" class="summary">The widget visibility.</td>
+      <td colspan="1" class="summary">
+        The widget visibility.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from wibox.widget
       </td>
@@ -348,7 +370,9 @@ awful.widget.watch(<span class="string">'bash -c '</span>echo Hello world! | gre
     <tr>
       <td class="shortname" ><a href="#buttons">buttons</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>table</span></td>
-      <td colspan="1" class="summary">The widget buttons.</td>
+      <td colspan="1" class="summary">
+        The widget buttons.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from wibox.widget
       </td>
@@ -361,7 +385,9 @@ awful.widget.watch(<span class="string">'bash -c '</span>echo Hello world! | gre
         <a href="#setup">:setup <span class='function_named_args'><b>{</b>[args]<b>}</b></span></a>
         <span class="summarytype"></span>
       </td>
-      <td colspan="1" class="summary">Set a declarative widget hierarchy description.</td>
+      <td colspan="1" class="summary">
+        Set a declarative widget hierarchy description.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from wibox.widget
       </td>
@@ -371,7 +397,9 @@ awful.widget.watch(<span class="string">'bash -c '</span>echo Hello world! | gre
         <a href="#add_button">:add_button <span class='function_args'> <b>(</b>button<b>)</b></span></a>
         <span class="summarytype"></span>
       </td>
-      <td colspan="1" class="summary">Add a new <a href="../input_handling/awful.button.html#">awful.button</a> to this widget.</td>
+      <td colspan="1" class="summary">
+        Add a new <a href="../input_handling/awful.button.html#">awful.button</a> to this widget.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from wibox.widget
       </td>
@@ -381,8 +409,10 @@ awful.widget.watch(<span class="string">'bash -c '</span>echo Hello world! | gre
         <a href="#emit_signal_recursive">:emit_signal_recursive <span class='function_args'> <b>(</b>signal_name, ...<b>)</b></span></a>
         <span class="summarytype"></span>
       </td>
-      <td colspan="1" class="summary">Emit a signal and ensure all parent widgets in the hierarchies also
- forward the signal.</td>
+      <td colspan="1" class="summary">
+        Emit a signal and ensure all parent widgets in the hierarchies also
+ forward the signal.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from wibox.widget
       </td>
@@ -392,7 +422,9 @@ awful.widget.watch(<span class="string">'bash -c '</span>echo Hello world! | gre
         <a href="#emit_signal">:emit_signal <span class='function_args'> <b>(</b>name, ...<b>)</b></span></a>
         <span class="summarytype"></span>
       </td>
-      <td colspan="1" class="summary">Emit a signal.</td>
+      <td colspan="1" class="summary">
+        Emit a signal.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from gears.object
       </td>
@@ -402,7 +434,9 @@ awful.widget.watch(<span class="string">'bash -c '</span>echo Hello world! | gre
         <a href="#connect_signal">:connect_signal <span class='function_args'> <b>(</b>name, func<b>)</b></span></a>
         <span class="summarytype"></span>
       </td>
-      <td colspan="1" class="summary">Connect to a signal.</td>
+      <td colspan="1" class="summary">
+        Connect to a signal.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from gears.object
       </td>
@@ -412,7 +446,9 @@ awful.widget.watch(<span class="string">'bash -c '</span>echo Hello world! | gre
         <a href="#weak_connect_signal">:weak_connect_signal <span class='function_args'> <b>(</b>name, func<b>)</b></span></a>
         <span class="summarytype"></span>
       </td>
-      <td colspan="1" class="summary">Connect to a signal weakly.</td>
+      <td colspan="1" class="summary">
+        Connect to a signal weakly.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from gears.object
       </td>
@@ -424,7 +460,9 @@ awful.widget.watch(<span class="string">'bash -c '</span>echo Hello world! | gre
       <td class="name" >
         <a href="#widget::layout_changed">widget::layout_changed</a>
       </td>
-      <td colspan="1" class="summary">When the layout (size) change.</td>
+      <td colspan="1" class="summary">
+        When the layout (size) change.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from wibox.widget
       </td>
@@ -433,7 +471,9 @@ awful.widget.watch(<span class="string">'bash -c '</span>echo Hello world! | gre
       <td class="name" >
         <a href="#widget::redraw_needed">widget::redraw_needed</a>
       </td>
-      <td colspan="1" class="summary">When the widget content changed.</td>
+      <td colspan="1" class="summary">
+        When the widget content changed.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from wibox.widget
       </td>
@@ -442,7 +482,9 @@ awful.widget.watch(<span class="string">'bash -c '</span>echo Hello world! | gre
       <td class="name" >
         <a href="#button::press">button::press</a>
       </td>
-      <td colspan="1" class="summary">When a mouse button is pressed over the widget.</td>
+      <td colspan="1" class="summary">
+        When a mouse button is pressed over the widget.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from wibox.widget
       </td>
@@ -451,7 +493,9 @@ awful.widget.watch(<span class="string">'bash -c '</span>echo Hello world! | gre
       <td class="name" >
         <a href="#button::release">button::release</a>
       </td>
-      <td colspan="1" class="summary">When a mouse button is released over the widget.</td>
+      <td colspan="1" class="summary">
+        When a mouse button is released over the widget.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from wibox.widget
       </td>
@@ -460,7 +504,9 @@ awful.widget.watch(<span class="string">'bash -c '</span>echo Hello world! | gre
       <td class="name" >
         <a href="#mouse::enter">mouse::enter</a>
       </td>
-      <td colspan="1" class="summary">When the mouse enter a widget.</td>
+      <td colspan="1" class="summary">
+        When the mouse enter a widget.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from wibox.widget
       </td>
@@ -469,7 +515,9 @@ awful.widget.watch(<span class="string">'bash -c '</span>echo Hello world! | gre
       <td class="name" >
         <a href="#mouse::leave">mouse::leave</a>
       </td>
-      <td colspan="1" class="summary">When the mouse leave a widget.</td>
+      <td colspan="1" class="summary">
+        When the mouse leave a widget.
+      </td>
       <td class="baseclass" nowrap>
         Inherited from wibox.widget
       </td>
@@ -496,14 +544,14 @@ awful.widget.watch(<span class="string">'bash -c '</span>echo Hello world! | gre
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">command</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a> or <a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a> or <a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          The command.
         </li>
         <li><span class="parameter">timeout</span>
             <span class="types"><span class="type">integer</span></span>
          The time interval at which the textbox
  will be updated.
-         (<em>default</em> 5)
+         (<em>default</em> <code>5</code>)
         </li>
         <li><span class="parameter">callback</span>
 <p> The function that will be called after
@@ -519,15 +567,15 @@ awful.widget.watch(<span class="string">'bash -c '</span>echo Hello world! | gre
          Base widget instance.
         </li>
         <li><span class="parameter">stdout</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          Output on stdout.
         </li>
         <li><span class="parameter">stderr</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          Output on stderr.
         </li>
         <li><span class="parameter">exitreason</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          Exit Reason.
  The reason can be "exit" or "signal".
         </li>
@@ -540,7 +588,7 @@ awful.widget.watch(<span class="string">'bash -c '</span>echo Hello world! | gre
         </li></ul>
         <li><span class="parameter">base_widget</span>
          Base widget.
-         (<em>default</em> wibox.widget.textbox())
+         (<em>default</em> <code>wibox.widget.textbox()</code>)
         </li>
     </ul>
 
@@ -556,7 +604,7 @@ awful.widget.watch(<span class="string">'bash -c '</span>echo Hello world! | gre
 
 
 
-    <span id=item1113 class="hide_extra">
+    <span id=item1115 class="hide_extra">
     </span>
 
 </dd>
@@ -578,7 +626,7 @@ awful.widget.watch(<span class="string">'bash -c '</span>echo Hello world! | gre
     <h3>Type constraints:</h3>
     <ul>
         <li><span class="parameter">children</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          The children.
         </li>
     </ul>
@@ -588,7 +636,7 @@ awful.widget.watch(<span class="string">'bash -c '</span>echo Hello world! | gre
 
 
 
-    <span id=item1114 class="hide_extra">
+    <span id=item1116 class="hide_extra">
     </span>
 
 </dd>
@@ -609,7 +657,7 @@ awful.widget.watch(<span class="string">'bash -c '</span>echo Hello world! | gre
     <h3>Type constraints:</h3>
     <ul>
         <li><span class="parameter">children</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          The children.
         </li>
     </ul>
@@ -619,7 +667,7 @@ awful.widget.watch(<span class="string">'bash -c '</span>echo Hello world! | gre
 
 
 
-    <span id=item1115 class="hide_extra">
+    <span id=item1117 class="hide_extra">
     </span>
 
 </dd>
@@ -647,7 +695,7 @@ awful.widget.watch(<span class="string">'bash -c '</span>echo Hello world! | gre
 
 
 
-    <span id=item1116 class="hide_extra">
+    <span id=item1118 class="hide_extra">
     </span>
 
 </dd>
@@ -675,7 +723,7 @@ awful.widget.watch(<span class="string">'bash -c '</span>echo Hello world! | gre
 
 
 
-    <span id=item1117 class="hide_extra">
+    <span id=item1119 class="hide_extra">
     </span>
 
 </dd>
@@ -695,7 +743,7 @@ awful.widget.watch(<span class="string">'bash -c '</span>echo Hello world! | gre
         <li><span class="parameter">opacity</span>
             <span class="types"><span class="type">number</span></span>
          The opacity (between 0 and 1)
-         (<em>default</em> 1)
+         (<em>default</em> <code>1</code>)
         </li>
     </ul>
 
@@ -704,7 +752,7 @@ awful.widget.watch(<span class="string">'bash -c '</span>echo Hello world! | gre
 
 
 
-    <span id=item1118 class="hide_extra">
+    <span id=item1120 class="hide_extra">
     </span>
 
 </dd>
@@ -725,7 +773,7 @@ awful.widget.watch(<span class="string">'bash -c '</span>echo Hello world! | gre
 
 
 
-    <span id=item1119 class="hide_extra">
+    <span id=item1121 class="hide_extra">
     </span>
 
 </dd>
@@ -752,7 +800,7 @@ awful.widget.watch(<span class="string">'bash -c '</span>echo Hello world! | gre
 
 
 
-    <span id=item1120 class="hide_extra">
+    <span id=item1122 class="hide_extra">
     </span>
 
 </dd>
@@ -784,7 +832,7 @@ awful.widget.watch(<span class="string">'bash -c '</span>echo Hello world! | gre
 
 
 
-    <span id=item1121 class="hide_extra">
+    <span id=item1123 class="hide_extra">
     </span>
 
 </dd>
@@ -812,7 +860,7 @@ awful.widget.watch(<span class="string">'bash -c '</span>echo Hello world! | gre
 
 
 
-    <span id=item1122 class="hide_extra">
+    <span id=item1124 class="hide_extra">
     </span>
 
 </dd>
@@ -832,7 +880,7 @@ awful.widget.watch(<span class="string">'bash -c '</span>echo Hello world! | gre
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">signal_name</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
 
 
 
@@ -847,7 +895,7 @@ awful.widget.watch(<span class="string">'bash -c '</span>echo Hello world! | gre
 
 
 
-    <span id=item1123 class="hide_extra">
+    <span id=item1125 class="hide_extra">
     </span>
 
 </dd>
@@ -865,7 +913,7 @@ awful.widget.watch(<span class="string">'bash -c '</span>echo Hello world! | gre
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">name</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          The name of the signal.
         </li>
         <li><span class="parameter">...</span>
@@ -880,7 +928,7 @@ awful.widget.watch(<span class="string">'bash -c '</span>echo Hello world! | gre
 
 
 
-    <span id=item1124 class="hide_extra">
+    <span id=item1126 class="hide_extra">
     </span>
 
 </dd>
@@ -898,7 +946,7 @@ awful.widget.watch(<span class="string">'bash -c '</span>echo Hello world! | gre
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">name</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          The name of the signal.
         </li>
         <li><span class="parameter">func</span>
@@ -912,7 +960,7 @@ awful.widget.watch(<span class="string">'bash -c '</span>echo Hello world! | gre
 
 
 
-    <span id=item1125 class="hide_extra">
+    <span id=item1127 class="hide_extra">
     </span>
 
 </dd>
@@ -937,7 +985,7 @@ awful.widget.watch(<span class="string">'bash -c '</span>echo Hello world! | gre
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">name</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          The name of the signal.
         </li>
         <li><span class="parameter">func</span>
@@ -951,7 +999,7 @@ awful.widget.watch(<span class="string">'bash -c '</span>echo Hello world! | gre
 
 
 
-    <span id=item1126 class="hide_extra">
+    <span id=item1128 class="hide_extra">
     </span>
 
 </dd>
@@ -982,7 +1030,7 @@ awful.widget.watch(<span class="string">'bash -c '</span>echo Hello world! | gre
 
 
 
-    <span id=item1127 class="hide_extra">
+    <span id=item1129 class="hide_extra">
     </span>
 
 </dd>
@@ -1009,7 +1057,7 @@ awful.widget.watch(<span class="string">'bash -c '</span>echo Hello world! | gre
 
 
 
-    <span id=item1128 class="hide_extra">
+    <span id=item1130 class="hide_extra">
     </span>
 
 </dd>
@@ -1026,7 +1074,7 @@ awful.widget.watch(<span class="string">'bash -c '</span>echo Hello world! | gre
     <h3>Arguments:</h3>
     <ul>
         <li><span class="parameter">self</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          The current object instance itself.
         </li>
         <li><span class="parameter">lx</span>
@@ -1044,184 +1092,8 @@ awful.widget.watch(<span class="string">'bash -c '</span>echo Hello world! | gre
          The button number.
         </li>
         <li><span class="parameter">mods</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          The modifiers (mod4, mod1 (alt), Control, Shift)
-        </li>
-        <li><span class="parameter">find_widgets_result</span> The entry from the result of
- <a href="../classes/wibox.drawable.html#wibox.drawable:find_widgets">wibox.drawable:find_widgets</a> for the position that the mouse hit.
-        <ul>
-        <li><span class="parameter">drawable</span>
-            <span class="types"><a class="type" href="../classes/wibox.drawable.html#">wibox.drawable</a></span>
-         The drawable containing
- the widget.
-        </li>
-        <li><span class="parameter">widget</span>
-            <span class="types"><span class="type">widget</span></span>
-         The widget being displayed.
-        </li>
-        <li><span class="parameter">hierarchy</span>
-            <span class="types"><a class="type" href="../classes/wibox.hierarchy.html#">wibox.hierarchy</a></span>
-         The hierarchy
- managing the widget's geometry.
-        </li>
-        <li><span class="parameter">x</span>
-            <span class="types"><span class="type">number</span></span>
-         An approximation of the X position that
- the widget is visible at on the surface.
-        </li>
-        <li><span class="parameter">y</span>
-            <span class="types"><span class="type">number</span></span>
-         An approximation of the Y position that
- the widget is visible at on the surface.
-        </li>
-        <li><span class="parameter">width</span>
-            <span class="types"><span class="type">number</span></span>
-         An approximation of the width that
- the widget is visible at on the surface.
-        </li>
-        <li><span class="parameter">height</span>
-            <span class="types"><span class="type">number</span></span>
-         An approximation of the height that
- the widget is visible at on the surface.
-        </li>
-        <li><span class="parameter">widget_width</span>
-            <span class="types"><span class="type">number</span></span>
-         The exact width of the widget
- in its local coordinate system.
-        </li>
-        <li><span class="parameter">widget_height</span>
-            <span class="types"><span class="type">number</span></span>
-         The exact height of the widget
- in its local coordinate system.
-        </li>
-        </li></ul>
-    </ul>
-
-
-
-    <h3>See also:</h3>
-    <ul>
-         <a href="../input_handling/mouse.html#">mouse</a>
-    </ul>
-
-
-
-    <span id=item1129 class="hide_extra">
-    </span>
-
-</dd>
-    <dt>
-    <a name = "button::release"></a>
-    <strong>button::release</strong>
-    <span class="baseclass" >
-    &middot;&nbsp;Inherited from wibox.widget
-    </span>
-    </dt>
-    <dd>
-    When a mouse button is released over the widget.
-
-    <h3>Arguments:</h3>
-    <ul>
-        <li><span class="parameter">self</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
-         The current object instance itself.
-        </li>
-        <li><span class="parameter">lx</span>
-            <span class="types"><span class="type">number</span></span>
-         The horizontal position relative to the (0,0) position in
- the widget.
-        </li>
-        <li><span class="parameter">ly</span>
-            <span class="types"><span class="type">number</span></span>
-         The vertical position relative to the (0,0) position in the
- widget.
-        </li>
-        <li><span class="parameter">button</span>
-            <span class="types"><span class="type">number</span></span>
-         The button number.
-        </li>
-        <li><span class="parameter">mods</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
-         The modifiers (mod4, mod1 (alt), Control, Shift)
-        </li>
-        <li><span class="parameter">find_widgets_result</span> The entry from the result of
- <a href="../classes/wibox.drawable.html#wibox.drawable:find_widgets">wibox.drawable:find_widgets</a> for the position that the mouse hit.
-        <ul>
-        <li><span class="parameter">drawable</span>
-            <span class="types"><a class="type" href="../classes/wibox.drawable.html#">wibox.drawable</a></span>
-         The drawable containing
- the widget.
-        </li>
-        <li><span class="parameter">widget</span>
-            <span class="types"><span class="type">widget</span></span>
-         The widget being displayed.
-        </li>
-        <li><span class="parameter">hierarchy</span>
-            <span class="types"><a class="type" href="../classes/wibox.hierarchy.html#">wibox.hierarchy</a></span>
-         The hierarchy
- managing the widget's geometry.
-        </li>
-        <li><span class="parameter">x</span>
-            <span class="types"><span class="type">number</span></span>
-         An approximation of the X position that
- the widget is visible at on the surface.
-        </li>
-        <li><span class="parameter">y</span>
-            <span class="types"><span class="type">number</span></span>
-         An approximation of the Y position that
- the widget is visible at on the surface.
-        </li>
-        <li><span class="parameter">width</span>
-            <span class="types"><span class="type">number</span></span>
-         An approximation of the width that
- the widget is visible at on the surface.
-        </li>
-        <li><span class="parameter">height</span>
-            <span class="types"><span class="type">number</span></span>
-         An approximation of the height that
- the widget is visible at on the surface.
-        </li>
-        <li><span class="parameter">widget_width</span>
-            <span class="types"><span class="type">number</span></span>
-         The exact width of the widget
- in its local coordinate system.
-        </li>
-        <li><span class="parameter">widget_height</span>
-            <span class="types"><span class="type">number</span></span>
-         The exact height of the widget
- in its local coordinate system.
-        </li>
-        </li></ul>
-    </ul>
-
-
-
-    <h3>See also:</h3>
-    <ul>
-         <a href="../input_handling/mouse.html#">mouse</a>
-    </ul>
-
-
-
-    <span id=item1130 class="hide_extra">
-    </span>
-
-</dd>
-    <dt>
-    <a name = "mouse::enter"></a>
-    <strong>mouse::enter</strong>
-    <span class="baseclass" >
-    &middot;&nbsp;Inherited from wibox.widget
-    </span>
-    </dt>
-    <dd>
-    When the mouse enter a widget.
-
-    <h3>Arguments:</h3>
-    <ul>
-        <li><span class="parameter">self</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
-         The current object instance itself.
         </li>
         <li><span class="parameter">find_widgets_result</span> The entry from the result of
  <a href="../classes/wibox.drawable.html#wibox.drawable:find_widgets">wibox.drawable:find_widgets</a> for the position that the mouse hit.
@@ -1287,20 +1159,38 @@ awful.widget.watch(<span class="string">'bash -c '</span>echo Hello world! | gre
 
 </dd>
     <dt>
-    <a name = "mouse::leave"></a>
-    <strong>mouse::leave</strong>
+    <a name = "button::release"></a>
+    <strong>button::release</strong>
     <span class="baseclass" >
     &middot;&nbsp;Inherited from wibox.widget
     </span>
     </dt>
     <dd>
-    When the mouse leave a widget.
+    When a mouse button is released over the widget.
 
     <h3>Arguments:</h3>
     <ul>
         <li><span class="parameter">self</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          The current object instance itself.
+        </li>
+        <li><span class="parameter">lx</span>
+            <span class="types"><span class="type">number</span></span>
+         The horizontal position relative to the (0,0) position in
+ the widget.
+        </li>
+        <li><span class="parameter">ly</span>
+            <span class="types"><span class="type">number</span></span>
+         The vertical position relative to the (0,0) position in the
+ widget.
+        </li>
+        <li><span class="parameter">button</span>
+            <span class="types"><span class="type">number</span></span>
+         The button number.
+        </li>
+        <li><span class="parameter">mods</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+         The modifiers (mod4, mod1 (alt), Control, Shift)
         </li>
         <li><span class="parameter">find_widgets_result</span> The entry from the result of
  <a href="../classes/wibox.drawable.html#wibox.drawable:find_widgets">wibox.drawable:find_widgets</a> for the position that the mouse hit.
@@ -1365,6 +1255,164 @@ awful.widget.watch(<span class="string">'bash -c '</span>echo Hello world! | gre
     </span>
 
 </dd>
+    <dt>
+    <a name = "mouse::enter"></a>
+    <strong>mouse::enter</strong>
+    <span class="baseclass" >
+    &middot;&nbsp;Inherited from wibox.widget
+    </span>
+    </dt>
+    <dd>
+    When the mouse enter a widget.
+
+    <h3>Arguments:</h3>
+    <ul>
+        <li><span class="parameter">self</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+         The current object instance itself.
+        </li>
+        <li><span class="parameter">find_widgets_result</span> The entry from the result of
+ <a href="../classes/wibox.drawable.html#wibox.drawable:find_widgets">wibox.drawable:find_widgets</a> for the position that the mouse hit.
+        <ul>
+        <li><span class="parameter">drawable</span>
+            <span class="types"><a class="type" href="../classes/wibox.drawable.html#">wibox.drawable</a></span>
+         The drawable containing
+ the widget.
+        </li>
+        <li><span class="parameter">widget</span>
+            <span class="types"><span class="type">widget</span></span>
+         The widget being displayed.
+        </li>
+        <li><span class="parameter">hierarchy</span>
+            <span class="types"><a class="type" href="../classes/wibox.hierarchy.html#">wibox.hierarchy</a></span>
+         The hierarchy
+ managing the widget's geometry.
+        </li>
+        <li><span class="parameter">x</span>
+            <span class="types"><span class="type">number</span></span>
+         An approximation of the X position that
+ the widget is visible at on the surface.
+        </li>
+        <li><span class="parameter">y</span>
+            <span class="types"><span class="type">number</span></span>
+         An approximation of the Y position that
+ the widget is visible at on the surface.
+        </li>
+        <li><span class="parameter">width</span>
+            <span class="types"><span class="type">number</span></span>
+         An approximation of the width that
+ the widget is visible at on the surface.
+        </li>
+        <li><span class="parameter">height</span>
+            <span class="types"><span class="type">number</span></span>
+         An approximation of the height that
+ the widget is visible at on the surface.
+        </li>
+        <li><span class="parameter">widget_width</span>
+            <span class="types"><span class="type">number</span></span>
+         The exact width of the widget
+ in its local coordinate system.
+        </li>
+        <li><span class="parameter">widget_height</span>
+            <span class="types"><span class="type">number</span></span>
+         The exact height of the widget
+ in its local coordinate system.
+        </li>
+        </li></ul>
+    </ul>
+
+
+
+    <h3>See also:</h3>
+    <ul>
+         <a href="../input_handling/mouse.html#">mouse</a>
+    </ul>
+
+
+
+    <span id=item1133 class="hide_extra">
+    </span>
+
+</dd>
+    <dt>
+    <a name = "mouse::leave"></a>
+    <strong>mouse::leave</strong>
+    <span class="baseclass" >
+    &middot;&nbsp;Inherited from wibox.widget
+    </span>
+    </dt>
+    <dd>
+    When the mouse leave a widget.
+
+    <h3>Arguments:</h3>
+    <ul>
+        <li><span class="parameter">self</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+         The current object instance itself.
+        </li>
+        <li><span class="parameter">find_widgets_result</span> The entry from the result of
+ <a href="../classes/wibox.drawable.html#wibox.drawable:find_widgets">wibox.drawable:find_widgets</a> for the position that the mouse hit.
+        <ul>
+        <li><span class="parameter">drawable</span>
+            <span class="types"><a class="type" href="../classes/wibox.drawable.html#">wibox.drawable</a></span>
+         The drawable containing
+ the widget.
+        </li>
+        <li><span class="parameter">widget</span>
+            <span class="types"><span class="type">widget</span></span>
+         The widget being displayed.
+        </li>
+        <li><span class="parameter">hierarchy</span>
+            <span class="types"><a class="type" href="../classes/wibox.hierarchy.html#">wibox.hierarchy</a></span>
+         The hierarchy
+ managing the widget's geometry.
+        </li>
+        <li><span class="parameter">x</span>
+            <span class="types"><span class="type">number</span></span>
+         An approximation of the X position that
+ the widget is visible at on the surface.
+        </li>
+        <li><span class="parameter">y</span>
+            <span class="types"><span class="type">number</span></span>
+         An approximation of the Y position that
+ the widget is visible at on the surface.
+        </li>
+        <li><span class="parameter">width</span>
+            <span class="types"><span class="type">number</span></span>
+         An approximation of the width that
+ the widget is visible at on the surface.
+        </li>
+        <li><span class="parameter">height</span>
+            <span class="types"><span class="type">number</span></span>
+         An approximation of the height that
+ the widget is visible at on the surface.
+        </li>
+        <li><span class="parameter">widget_width</span>
+            <span class="types"><span class="type">number</span></span>
+         The exact width of the widget
+ in its local coordinate system.
+        </li>
+        <li><span class="parameter">widget_height</span>
+            <span class="types"><span class="type">number</span></span>
+         The exact height of the widget
+ in its local coordinate system.
+        </li>
+        </li></ul>
+    </ul>
+
+
+
+    <h3>See also:</h3>
+    <ul>
+         <a href="../input_handling/mouse.html#">mouse</a>
+    </ul>
+
+
+
+    <span id=item1134 class="hide_extra">
+    </span>
+
+</dd>
 </dl>
 
 
@@ -1372,7 +1420,6 @@ awful.widget.watch(<span class="string">'bash -c '</span>echo Hello world! | gre
 </div> <!-- id="main" -->
 <div id="about">
 <i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.6</a></i>
-<i style="float:right;">Last updated 2021-05-01 17:20:18 </i>
 </div> <!-- id="about" -->
 </div> <!-- id="container" -->
 </body>

@@ -60,6 +60,7 @@
   <li><a href="../popups_and_bars/awful.popup.html">awful.popup</a></li>
   <li><a href="../popups_and_bars/awful.titlebar.html">awful.titlebar</a></li>
   <li><a href="../popups_and_bars/awful.tooltip.html">awful.tooltip</a></li>
+  <li><a href="../popups_and_bars/awful.wallpaper.html">awful.wallpaper</a></li>
   <li><a href="../popups_and_bars/awful.wibar.html">awful.wibar</a></li>
   <li><a href="../popups_and_bars/awful.widget.calendar_popup.html">awful.widget.calendar_popup</a></li>
   <li><a href="../popups_and_bars/menubar.html">menubar</a></li>
@@ -278,8 +279,15 @@ hotkeys_popup.add_hotkeys(firefox_keys)
   <div class="extra-header__section">
     <h3>Info:</h3>
     <ul>
-            <li><strong>Copyright</strong>: 2014-2015 Yauheni Kirylau</li>
-            <li><strong>Author</strong>: Yauheni Kirylau &lt;yawghen@gmail.com&gt;</li>
+                <li><strong>Copyright</strong>: 2014-2015 Yauheni Kirylau</li>
+                <li>
+                    <strong>Originally authored by</strong>: Yauheni Kirylau &lt;yawghen@gmail.com&gt;<br />
+                    <small>(Full contributors list available on
+                    <a href="https://github.com/awesomeWM/awesome/graphs/contributors">
+                        our github project)
+                    </a></small>
+
+                </li>
     </ul>
   </div>
 
@@ -292,7 +300,9 @@ hotkeys_popup.add_hotkeys(firefox_keys)
       <td class="name" >
         <a href="#awful.widget.hotkeys_popup.widget.new">awful.widget.hotkeys_popup.widget.new <span class='function_named_args'><b>{</b>[args]<b>}</b></span></a>
       </td>
-      <td colspan="2" class="summary">Create an instance of widget with hotkeys help.</td>
+      <td colspan="2" class="summary">
+        Create an instance of widget with hotkeys help.
+      </td>
     </tr>
 </table>
 <h2><a href="#Static_module_functions">Static module functions</a></h2>
@@ -302,23 +312,29 @@ hotkeys_popup.add_hotkeys(firefox_keys)
         <a href="#show_help"><span class='function_modname'>awful.hotkeys_popup.widget.</span>show_help <span class='function_args'> <b>(</b>[c[, s[, args]]]<b>)</b></span></a>
         <span class="summarytype"></span>
       </td>
-      <td colspan="2" class="summary">Show popup with hotkeys help (default widget instance will be used).</td>
+      <td colspan="2" class="summary">
+        Show popup with hotkeys help (default widget instance will be used).
+      </td>
     </tr>
     <tr>
       <td class="name" >
         <a href="#add_hotkeys"><span class='function_modname'>awful.hotkeys_popup.widget.</span>add_hotkeys <span class='function_args'> <b>(</b>hotkeys<b>)</b></span></a>
         <span class="summarytype"></span>
       </td>
-      <td colspan="2" class="summary">Add hotkey descriptions for third-party applications
- (default widget instance will be used).</td>
+      <td colspan="2" class="summary">
+        Add hotkey descriptions for third-party applications
+ (default widget instance will be used).
+      </td>
     </tr>
     <tr>
       <td class="name" >
         <a href="#add_group_rules"><span class='function_modname'>awful.hotkeys_popup.widget.</span>add_group_rules <span class='function_args'> <b>(</b>group, data<b>)</b></span></a>
         <span class="summarytype"></span>
       </td>
-      <td colspan="2" class="summary">Add hotkey group rules for third-party applications
- (default widget instance will be used).</td>
+      <td colspan="2" class="summary">
+        Add hotkey group rules for third-party applications
+ (default widget instance will be used).
+      </td>
     </tr>
 </table>
 <h2><a href="#Object_methods">Object methods </a></h2>
@@ -328,21 +344,27 @@ hotkeys_popup.add_hotkeys(firefox_keys)
         <a href="#show_help">:show_help <span class='function_args'> <b>(</b>[c[, s[, show_args]]]<b>)</b></span></a>
         <span class="summarytype"></span>
       </td>
-      <td colspan="2" class="summary">Show popup with hotkeys help.</td>
+      <td colspan="2" class="summary">
+        Show popup with hotkeys help.
+      </td>
     </tr>
     <tr>
       <td class="name" >
         <a href="#add_hotkeys">:add_hotkeys <span class='function_args'> <b>(</b>hotkeys<b>)</b></span></a>
         <span class="summarytype"></span>
       </td>
-      <td colspan="2" class="summary">Add hotkey descriptions for third-party applications.</td>
+      <td colspan="2" class="summary">
+        Add hotkey descriptions for third-party applications.
+      </td>
     </tr>
     <tr>
       <td class="name" >
         <a href="#add_group_rules">:add_group_rules <span class='function_args'> <b>(</b>group, data<b>)</b></span></a>
         <span class="summarytype"></span>
       </td>
-      <td colspan="2" class="summary">Add hotkey group rules for third-party applications.</td>
+      <td colspan="2" class="summary">
+        Add hotkey group rules for third-party applications.
+      </td>
     </tr>
 </table>
 <h2><a href="#Theme_variables">Theme variables</a></h2>
@@ -350,57 +372,79 @@ hotkeys_popup.add_hotkeys(firefox_keys)
     <tr>
       <td class="shortname" ><a href="#beautiful.hotkeys_bg">beautiful.hotkeys_bg</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>color</span></td>
-      <td colspan="2" class="summary">Hotkeys widget background color.</td>
+      <td colspan="2" class="summary">
+        Hotkeys widget background color.
+      </td>
     </tr>
     <tr>
       <td class="shortname" ><a href="#beautiful.hotkeys_fg">beautiful.hotkeys_fg</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>color</span></td>
-      <td colspan="2" class="summary">Hotkeys widget foreground color.</td>
+      <td colspan="2" class="summary">
+        Hotkeys widget foreground color.
+      </td>
     </tr>
     <tr>
       <td class="shortname" ><a href="#beautiful.hotkeys_border_width">beautiful.hotkeys_border_width</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>int</span></td>
-      <td colspan="2" class="summary">Hotkeys widget border width.</td>
+      <td colspan="2" class="summary">
+        Hotkeys widget border width.
+      </td>
     </tr>
     <tr>
       <td class="shortname" ><a href="#beautiful.hotkeys_border_color">beautiful.hotkeys_border_color</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>color</span></td>
-      <td colspan="2" class="summary">Hotkeys widget border color.</td>
+      <td colspan="2" class="summary">
+        Hotkeys widget border color.
+      </td>
     </tr>
     <tr>
       <td class="shortname" ><a href="#beautiful.hotkeys_shape">beautiful.hotkeys_shape</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>gears.shape</span></td>
-      <td colspan="2" class="summary">Hotkeys widget shape.</td>
+      <td colspan="2" class="summary">
+        Hotkeys widget shape.
+      </td>
     </tr>
     <tr>
       <td class="shortname" ><a href="#beautiful.hotkeys_modifiers_fg">beautiful.hotkeys_modifiers_fg</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>color</span></td>
-      <td colspan="2" class="summary">Foreground color used for hotkey modifiers (Ctrl, Alt, Super, etc).</td>
+      <td colspan="2" class="summary">
+        Foreground color used for hotkey modifiers (Ctrl, Alt, Super, etc).
+      </td>
     </tr>
     <tr>
       <td class="shortname" ><a href="#beautiful.hotkeys_label_bg">beautiful.hotkeys_label_bg</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>color</span></td>
-      <td colspan="2" class="summary">Background color used for miscellaneous labels of hotkeys widget.</td>
+      <td colspan="2" class="summary">
+        Background color used for miscellaneous labels of hotkeys widget.
+      </td>
     </tr>
     <tr>
       <td class="shortname" ><a href="#beautiful.hotkeys_label_fg">beautiful.hotkeys_label_fg</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>color</span></td>
-      <td colspan="2" class="summary">Foreground color used for hotkey groups and other labels.</td>
+      <td colspan="2" class="summary">
+        Foreground color used for hotkey groups and other labels.
+      </td>
     </tr>
     <tr>
       <td class="shortname" ><a href="#beautiful.hotkeys_font">beautiful.hotkeys_font</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>string <i>or</i> lgi.Pango.FontDescription</span></td>
-      <td colspan="2" class="summary">Main hotkeys widget font.</td>
+      <td colspan="2" class="summary">
+        Main hotkeys widget font.
+      </td>
     </tr>
     <tr>
       <td class="shortname" ><a href="#beautiful.hotkeys_description_font">beautiful.hotkeys_description_font</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>string <i>or</i> lgi.Pango.FontDescription</span></td>
-      <td colspan="2" class="summary">Font used for hotkeys' descriptions.</td>
+      <td colspan="2" class="summary">
+        Font used for hotkeys' descriptions.
+      </td>
     </tr>
     <tr>
       <td class="shortname" ><a href="#beautiful.hotkeys_group_margin">beautiful.hotkeys_group_margin</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>int</span></td>
-      <td colspan="2" class="summary">Margin between hotkeys groups.</td>
+      <td colspan="2" class="summary">
+        Margin between hotkeys groups.
+      </td>
     </tr>
 </table>
 <h2><a href="#Fields">Fields</a></h2>
@@ -408,13 +452,17 @@ hotkeys_popup.add_hotkeys(firefox_keys)
     <tr>
       <td class="shortname" ><a href="#widget.hide_without_description"><span class='function_modname'>awful.hotkeys_popup.widget.</span>widget.hide_without_description</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>boolean</span></td>
-      <td colspan="2" class="summary">Don't show hotkeys without descriptions.</td>
+      <td colspan="2" class="summary">
+        Don't show hotkeys without descriptions.
+      </td>
     </tr>
     <tr>
       <td class="shortname" ><a href="#widget.merge_duplicates"><span class='function_modname'>awful.hotkeys_popup.widget.</span>widget.merge_duplicates</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>boolean</span></td>
-      <td colspan="2" class="summary">Merge hotkey records into one if they have the same modifiers and
- description.</td>
+      <td colspan="2" class="summary">
+        Merge hotkey records into one if they have the same modifiers and
+ description.
+      </td>
     </tr>
 </table>
 
@@ -486,12 +534,12 @@ hotkeys_popup.add_hotkeys(firefox_keys)
          (<em>optional</em>)
         </li>
         <li><span class="parameter">font</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a> or <span class="type">lgi.Pango.FontDescription</span></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a> or <span class="type">lgi.Pango.FontDescription</span></span>
          Main widget font.
          (<em>optional</em>)
         </li>
         <li><span class="parameter">description_font</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a> or <span class="type">lgi.Pango.FontDescription</span></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a> or <span class="type">lgi.Pango.FontDescription</span></span>
          Font used for hotkeys' descriptions.
          (<em>optional</em>)
         </li>
@@ -518,12 +566,12 @@ hotkeys_popup.add_hotkeys(firefox_keys)
          (<em>optional</em>)
         </li>
         <li><span class="parameter">labels</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          Labels used for displaying human-readable keynames.
          (<em>optional</em>)
         </li>
         <li><span class="parameter">group_rules</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          Rules for showing 3rd-party hotkeys. @see <code>awful.hotkeys_popup.keys.vim</code>.
          (<em>optional</em>)
         </li>
@@ -540,7 +588,7 @@ hotkeys_popup.add_hotkeys(firefox_keys)
 
 
 
-    <span id=item1686 class="hide_extra">
+    <span id=item1699 class="hide_extra">
     </span>
 
 </dd>
@@ -576,7 +624,7 @@ hotkeys_popup.add_hotkeys(firefox_keys)
             <span class="types"><span class="type">boolean</span></span>
          Show AwesomeWM hotkeys.
  When set to <code>false</code> only app-specific hotkeys will be shown.
-         (<em>default</em> true)
+         (<em>default</em> <code>true</code>)
         </li>
         </li></ul>
     </ul>
@@ -586,7 +634,7 @@ hotkeys_popup.add_hotkeys(firefox_keys)
 
 
 
-    <span id=item1687 class="hide_extra">
+    <span id=item1700 class="hide_extra">
     </span>
 
 </dd>
@@ -604,7 +652,7 @@ hotkeys_popup.add_hotkeys(firefox_keys)
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">hotkeys</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          Table with bindings,
  see <code>awful.hotkeys_popup.key.vim</code> as an example.
         </li>
@@ -615,7 +663,7 @@ hotkeys_popup.add_hotkeys(firefox_keys)
 
 
 
-    <span id=item1688 class="hide_extra">
+    <span id=item1701 class="hide_extra">
     </span>
 
 </dd>
@@ -633,11 +681,11 @@ hotkeys_popup.add_hotkeys(firefox_keys)
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">group</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          rule group name,
         </li>
         <li><span class="parameter">data</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          rule data for the group
  see <code>awful.hotkeys_popup.key.vim</code> as an example.
         </li>
@@ -648,7 +696,7 @@ hotkeys_popup.add_hotkeys(firefox_keys)
 
 
 
-    <span id=item1689 class="hide_extra">
+    <span id=item1702 class="hide_extra">
     </span>
 
 </dd>
@@ -684,7 +732,7 @@ hotkeys_popup.add_hotkeys(firefox_keys)
             <span class="types"><span class="type">boolean</span></span>
          Show AwesomeWM hotkeys.
  When set to <code>false</code> only app-specific hotkeys will be shown.
-         (<em>default</em> true)
+         (<em>default</em> <code>true</code>)
         </li>
         </li></ul>
     </ul>
@@ -694,7 +742,7 @@ hotkeys_popup.add_hotkeys(firefox_keys)
 
 
 
-    <span id=item1690 class="hide_extra">
+    <span id=item1703 class="hide_extra">
     </span>
 
 </dd>
@@ -711,7 +759,7 @@ hotkeys_popup.add_hotkeys(firefox_keys)
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">hotkeys</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          Table with bindings,
  see <code>awful.hotkeys_popup.key.vim</code> as an example.
         </li>
@@ -722,7 +770,7 @@ hotkeys_popup.add_hotkeys(firefox_keys)
 
 
 
-    <span id=item1691 class="hide_extra">
+    <span id=item1704 class="hide_extra">
     </span>
 
 </dd>
@@ -739,11 +787,11 @@ hotkeys_popup.add_hotkeys(firefox_keys)
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">group</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          hotkeys group name,
         </li>
         <li><span class="parameter">data</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          rule data for the group
  see <code>awful.hotkeys_popup.key.vim</code> as an example.
         </li>
@@ -754,7 +802,7 @@ hotkeys_popup.add_hotkeys(firefox_keys)
 
 
 
-    <span id=item1692 class="hide_extra">
+    <span id=item1705 class="hide_extra">
     </span>
 
 </dd>
@@ -778,7 +826,7 @@ hotkeys_popup.add_hotkeys(firefox_keys)
 
 
 
-    <span id=item1693 class="hide_extra">
+    <span id=item1706 class="hide_extra">
     </span>
 
 </dd>
@@ -798,7 +846,7 @@ hotkeys_popup.add_hotkeys(firefox_keys)
 
 
 
-    <span id=item1694 class="hide_extra">
+    <span id=item1707 class="hide_extra">
     </span>
 
 </dd>
@@ -818,7 +866,7 @@ hotkeys_popup.add_hotkeys(firefox_keys)
 
 
 
-    <span id=item1695 class="hide_extra">
+    <span id=item1708 class="hide_extra">
     </span>
 
 </dd>
@@ -838,7 +886,7 @@ hotkeys_popup.add_hotkeys(firefox_keys)
 
 
 
-    <span id=item1696 class="hide_extra">
+    <span id=item1709 class="hide_extra">
     </span>
 
 </dd>
@@ -862,7 +910,7 @@ hotkeys_popup.add_hotkeys(firefox_keys)
 
 
 
-    <span id=item1697 class="hide_extra">
+    <span id=item1710 class="hide_extra">
     </span>
 
 </dd>
@@ -882,7 +930,7 @@ hotkeys_popup.add_hotkeys(firefox_keys)
 
 
 
-    <span id=item1698 class="hide_extra">
+    <span id=item1711 class="hide_extra">
     </span>
 
 </dd>
@@ -902,7 +950,7 @@ hotkeys_popup.add_hotkeys(firefox_keys)
 
 
 
-    <span id=item1699 class="hide_extra">
+    <span id=item1712 class="hide_extra">
     </span>
 
 </dd>
@@ -922,7 +970,7 @@ hotkeys_popup.add_hotkeys(firefox_keys)
 
 
 
-    <span id=item1700 class="hide_extra">
+    <span id=item1713 class="hide_extra">
     </span>
 
 </dd>
@@ -942,7 +990,7 @@ hotkeys_popup.add_hotkeys(firefox_keys)
 
 
 
-    <span id=item1701 class="hide_extra">
+    <span id=item1714 class="hide_extra">
     </span>
 
 </dd>
@@ -962,7 +1010,7 @@ hotkeys_popup.add_hotkeys(firefox_keys)
 
 
 
-    <span id=item1702 class="hide_extra">
+    <span id=item1715 class="hide_extra">
     </span>
 
 </dd>
@@ -982,7 +1030,7 @@ hotkeys_popup.add_hotkeys(firefox_keys)
 
 
 
-    <span id=item1703 class="hide_extra">
+    <span id=item1716 class="hide_extra">
     </span>
 
 </dd>
@@ -1006,7 +1054,7 @@ hotkeys_popup.add_hotkeys(firefox_keys)
 
 
 
-    <span id=item1704 class="hide_extra">
+    <span id=item1717 class="hide_extra">
     </span>
 
 </dd>
@@ -1031,7 +1079,7 @@ hotkeys_popup.add_hotkeys(firefox_keys)
 
 
 
-    <span id=item1705 class="hide_extra">
+    <span id=item1718 class="hide_extra">
     </span>
 
 </dd>
@@ -1042,7 +1090,6 @@ hotkeys_popup.add_hotkeys(firefox_keys)
 </div> <!-- id="main" -->
 <div id="about">
 <i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.6</a></i>
-<i style="float:right;">Last updated 2021-05-01 17:20:18 </i>
 </div> <!-- id="about" -->
 </div> <!-- id="container" -->
 </body>

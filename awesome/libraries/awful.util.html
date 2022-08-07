@@ -158,6 +158,7 @@
   <li><a href="../popups_and_bars/awful.popup.html">awful.popup</a></li>
   <li><a href="../popups_and_bars/awful.titlebar.html">awful.titlebar</a></li>
   <li><a href="../popups_and_bars/awful.tooltip.html">awful.tooltip</a></li>
+  <li><a href="../popups_and_bars/awful.wallpaper.html">awful.wallpaper</a></li>
   <li><a href="../popups_and_bars/awful.wibar.html">awful.wibar</a></li>
   <li><a href="../popups_and_bars/awful.widget.calendar_popup.html">awful.widget.calendar_popup</a></li>
   <li><a href="../popups_and_bars/menubar.html">menubar</a></li>
@@ -236,8 +237,15 @@
   <div class="extra-header__section">
     <h3>Info:</h3>
     <ul>
-            <li><strong>Copyright</strong>: 2008 Julien Danjou</li>
-            <li><strong>Author</strong>: Julien Danjou &lt;julien@danjou.info&gt;</li>
+                <li><strong>Copyright</strong>: 2008 Julien Danjou</li>
+                <li>
+                    <strong>Originally authored by</strong>: Julien Danjou &lt;julien@danjou.info&gt;<br />
+                    <small>(Full contributors list available on
+                    <a href="https://github.com/awesomeWM/awesome/graphs/contributors">
+                        our github project)
+                    </a></small>
+
+                </li>
     </ul>
   </div>
 
@@ -251,28 +259,36 @@
         <a href="#awful.util.eval"><span class='function_modname'>awful.util.</span>eval <span class='function_args'> <b>(</b><b>)</b></span></a>
         <span class="summarytype"><span class='summary_type'> -&gt;&nbsp;()</span></span>
       </td>
-      <td colspan="2" class="summary">Eval Lua code.</td>
+      <td colspan="2" class="summary">
+        Eval Lua code.
+      </td>
     </tr>
     <tr>
       <td class="name" >
         <a href="#awful.util.checkfile"><span class='function_modname'>awful.util.</span>checkfile <span class='function_args'> <b>(</b>path<b>)</b></span></a>
         <span class="summarytype"><span class='summary_type'> -&gt;&nbsp;()</span></span>
       </td>
-      <td colspan="2" class="summary">Check if a file is a Lua valid file.</td>
+      <td colspan="2" class="summary">
+        Check if a file is a Lua valid file.
+      </td>
     </tr>
     <tr>
       <td class="name" >
         <a href="#awful.util.restart"><span class='function_modname'>awful.util.</span>restart <span class='function_args'> <b>(</b><b>)</b></span></a>
         <span class="summarytype"><span class='summary_type'> -&gt;&nbsp;()</span></span>
       </td>
-      <td colspan="2" class="summary">Try to restart awesome.</td>
+      <td colspan="2" class="summary">
+        Try to restart awesome.
+      </td>
     </tr>
     <tr>
       <td class="name" >
         <a href="#awful.util.geticonpath"><span class='function_modname'>awful.util.</span>geticonpath <span class='function_args'> <b>(</b>iconname, exts, dirs[, size]<b>)</b></span></a>
         <span class="summarytype"></span>
       </td>
-      <td colspan="2" class="summary">Search for an icon and return the full path.</td>
+      <td colspan="2" class="summary">
+        Search for an icon and return the full path.
+      </td>
     </tr>
 </table>
 <h2><a href="#Deprecated_functions">Deprecated functions</a></h2>
@@ -281,203 +297,269 @@
       <td class="name" >
         <a href="#awful.util.pread">awful.util.pread<i class="deprecated_label"> [deprecated]</i></a>
       </td>
-      <td colspan="2" class="summary">Execute a system command and road the output.</td>
+      <td colspan="2" class="summary">
+        Execute a system command and road the output.
+      </td>
     </tr>
     <tr>
       <td class="name" >
         <a href="#deprecate">awful.util.deprecate<i class="deprecated_label"> [deprecated]</i></a>
       </td>
-      <td colspan="2" class="summary">Display a deprecation notice, but only once per traceback.</td>
+      <td colspan="2" class="summary">
+        Display a deprecation notice, but only once per traceback.
+      </td>
     </tr>
     <tr>
       <td class="name" >
         <a href="#deprecate_class">awful.util.deprecate_class<i class="deprecated_label"> [deprecated]</i></a>
       </td>
-      <td colspan="2" class="summary">Create a class proxy with deprecation messages.</td>
+      <td colspan="2" class="summary">
+        Create a class proxy with deprecation messages.
+      </td>
     </tr>
     <tr>
       <td class="name" >
         <a href="#ensure_pango_color">awful.util.ensure_pango_color<i class="deprecated_label"> [deprecated]</i></a>
       </td>
-      <td colspan="2" class="summary">Get a valid color for Pango markup</td>
+      <td colspan="2" class="summary">
+        Get a valid color for Pango markup
+      </td>
     </tr>
     <tr>
       <td class="name" >
         <a href="#cycle">awful.util.cycle<i class="deprecated_label"> [deprecated]</i></a>
       </td>
-      <td colspan="2" class="summary">Make i cycle.</td>
+      <td colspan="2" class="summary">
+        Make i cycle.
+      </td>
     </tr>
     <tr>
       <td class="name" >
         <a href="#mkdir">awful.util.mkdir<i class="deprecated_label"> [deprecated]</i></a>
       </td>
-      <td colspan="2" class="summary">Create a directory</td>
+      <td colspan="2" class="summary">
+        Create a directory
+      </td>
     </tr>
     <tr>
       <td class="name" >
         <a href="#escape">awful.util.escape<i class="deprecated_label"> [deprecated]</i></a>
       </td>
-      <td colspan="2" class="summary">Escape a string from XML char.</td>
+      <td colspan="2" class="summary">
+        Escape a string from XML char.
+      </td>
     </tr>
     <tr>
       <td class="name" >
         <a href="#unescape">awful.util.unescape<i class="deprecated_label"> [deprecated]</i></a>
       </td>
-      <td colspan="2" class="summary">Unescape a string from entities.</td>
+      <td colspan="2" class="summary">
+        Unescape a string from entities.
+      </td>
     </tr>
     <tr>
       <td class="name" >
         <a href="#get_xdg_config_home">awful.util.get_xdg_config_home<i class="deprecated_label"> [deprecated]</i></a>
       </td>
-      <td colspan="2" class="summary">Get the config home according to the XDG basedir specification.</td>
+      <td colspan="2" class="summary">
+        Get the config home according to the XDG basedir specification.
+      </td>
     </tr>
     <tr>
       <td class="name" >
         <a href="#get_xdg_cache_home">awful.util.get_xdg_cache_home<i class="deprecated_label"> [deprecated]</i></a>
       </td>
-      <td colspan="2" class="summary">Get the cache home according to the XDG basedir specification.</td>
+      <td colspan="2" class="summary">
+        Get the cache home according to the XDG basedir specification.
+      </td>
     </tr>
     <tr>
       <td class="name" >
         <a href="#get_configuration_dir">awful.util.get_configuration_dir<i class="deprecated_label"> [deprecated]</i></a>
       </td>
-      <td colspan="2" class="summary">Get the path to the user's config dir.</td>
+      <td colspan="2" class="summary">
+        Get the path to the user's config dir.
+      </td>
     </tr>
     <tr>
       <td class="name" >
         <a href="#get_cache_dir">awful.util.get_cache_dir<i class="deprecated_label"> [deprecated]</i></a>
       </td>
-      <td colspan="2" class="summary">Get the path to a directory that should be used for caching data.</td>
+      <td colspan="2" class="summary">
+        Get the path to a directory that should be used for caching data.
+      </td>
     </tr>
     <tr>
       <td class="name" >
         <a href="#get_themes_dir">awful.util.get_themes_dir<i class="deprecated_label"> [deprecated]</i></a>
       </td>
-      <td colspan="2" class="summary">Get the path to the directory where themes are installed.</td>
+      <td colspan="2" class="summary">
+        Get the path to the directory where themes are installed.
+      </td>
     </tr>
     <tr>
       <td class="name" >
         <a href="#get_awesome_icon_dir">awful.util.get_awesome_icon_dir<i class="deprecated_label"> [deprecated]</i></a>
       </td>
-      <td colspan="2" class="summary">Get the path to the directory where our icons are installed.</td>
+      <td colspan="2" class="summary">
+        Get the path to the directory where our icons are installed.
+      </td>
     </tr>
     <tr>
       <td class="name" >
         <a href="#getdir">awful.util.getdir<i class="deprecated_label"> [deprecated]</i></a>
       </td>
-      <td colspan="2" class="summary">Get the user's config or cache dir.</td>
+      <td colspan="2" class="summary">
+        Get the user's config or cache dir.
+      </td>
     </tr>
     <tr>
       <td class="name" >
         <a href="#file_readable">awful.util.file_readable<i class="deprecated_label"> [deprecated]</i></a>
       </td>
-      <td colspan="2" class="summary">Check if a file exists, is readable and not a directory.</td>
+      <td colspan="2" class="summary">
+        Check if a file exists, is readable and not a directory.
+      </td>
     </tr>
     <tr>
       <td class="name" >
         <a href="#dir_readable">awful.util.dir_readable<i class="deprecated_label"> [deprecated]</i></a>
       </td>
-      <td colspan="2" class="summary">Check if a path exists, is readable and is a directory.</td>
+      <td colspan="2" class="summary">
+        Check if a path exists, is readable and is a directory.
+      </td>
     </tr>
     <tr>
       <td class="name" >
         <a href="#is_dir">awful.util.is_dir<i class="deprecated_label"> [deprecated]</i></a>
       </td>
-      <td colspan="2" class="summary">Check if a path is a directory.</td>
+      <td colspan="2" class="summary">
+        Check if a path is a directory.
+      </td>
     </tr>
     <tr>
       <td class="name" >
         <a href="#subsets">awful.util.subsets<i class="deprecated_label"> [deprecated]</i></a>
       </td>
-      <td colspan="2" class="summary">Return all subsets of a specific set.</td>
+      <td colspan="2" class="summary">
+        Return all subsets of a specific set.
+      </td>
     </tr>
     <tr>
       <td class="name" >
         <a href="#awful.util.get_rectangle_in_direction">awful.util.get_rectangle_in_direction<i class="deprecated_label"> [deprecated]</i></a>
       </td>
-      <td colspan="2" class="summary">Get the nearest rectangle in the given direction.</td>
+      <td colspan="2" class="summary">
+        Get the nearest rectangle in the given direction.
+      </td>
     </tr>
     <tr>
       <td class="name" >
         <a href="#util.table.join">util.table.join<i class="deprecated_label"> [deprecated]</i></a>
       </td>
-      <td colspan="2" class="summary">Join all tables given as parameters.</td>
+      <td colspan="2" class="summary">
+        Join all tables given as parameters.
+      </td>
     </tr>
     <tr>
       <td class="name" >
         <a href="#util.table.crush">util.table.crush<i class="deprecated_label"> [deprecated]</i></a>
       </td>
-      <td colspan="2" class="summary">Override elements in the first table by the one in the second.</td>
+      <td colspan="2" class="summary">
+        Override elements in the first table by the one in the second.
+      </td>
     </tr>
     <tr>
       <td class="name" >
         <a href="#util.table.from_sparse">util.table.from_sparse<i class="deprecated_label"> [deprecated]</i></a>
       </td>
-      <td colspan="2" class="summary">Pack all elements with an integer key into a new table
+      <td colspan="2" class="summary">
+        Pack all elements with an integer key into a new table
  While both lua and luajit implement __len over sparse
  table, the standard define it as an implementation
- detail.</td>
+ detail.
+      </td>
     </tr>
     <tr>
       <td class="name" >
         <a href="#util.table.hasitem">util.table.hasitem<i class="deprecated_label"> [deprecated]</i></a>
       </td>
-      <td colspan="2" class="summary">Check if a table has an item and return its key.</td>
+      <td colspan="2" class="summary">
+        Check if a table has an item and return its key.
+      </td>
     </tr>
     <tr>
       <td class="name" >
         <a href="#linewrap">awful.util.linewrap<i class="deprecated_label"> [deprecated]</i></a>
       </td>
-      <td colspan="2" class="summary">Split a string into multiple lines</td>
+      <td colspan="2" class="summary">
+        Split a string into multiple lines
+      </td>
     </tr>
     <tr>
       <td class="name" >
         <a href="#linecount">awful.util.linecount<i class="deprecated_label"> [deprecated]</i></a>
       </td>
-      <td colspan="2" class="summary">Count number of lines in a string</td>
+      <td colspan="2" class="summary">
+        Count number of lines in a string
+      </td>
     </tr>
     <tr>
       <td class="name" >
         <a href="#util.table.keys">util.table.keys<i class="deprecated_label"> [deprecated]</i></a>
       </td>
-      <td colspan="2" class="summary">Get a sorted table with all keys from a table.</td>
+      <td colspan="2" class="summary">
+        Get a sorted table with all keys from a table.
+      </td>
     </tr>
     <tr>
       <td class="name" >
         <a href="#util.table.keys_filter">util.table.keys_filter<i class="deprecated_label"> [deprecated]</i></a>
       </td>
-      <td colspan="2" class="summary">Filter a tables keys for certain content types</td>
+      <td colspan="2" class="summary">
+        Filter a tables keys for certain content types
+      </td>
     </tr>
     <tr>
       <td class="name" >
         <a href="#util.table.reverse">util.table.reverse<i class="deprecated_label"> [deprecated]</i></a>
       </td>
-      <td colspan="2" class="summary">Reverse a table</td>
+      <td colspan="2" class="summary">
+        Reverse a table
+      </td>
     </tr>
     <tr>
       <td class="name" >
         <a href="#util.table.clone">util.table.clone<i class="deprecated_label"> [deprecated]</i></a>
       </td>
-      <td colspan="2" class="summary">Clone a table</td>
+      <td colspan="2" class="summary">
+        Clone a table
+      </td>
     </tr>
     <tr>
       <td class="name" >
         <a href="#util.table.iterate">util.table.iterate<i class="deprecated_label"> [deprecated]</i></a>
       </td>
-      <td colspan="2" class="summary">Returns an iterator to cycle through, starting from the first element or the
- given index, all elements of a table that match a given criteria.</td>
+      <td colspan="2" class="summary">
+        Returns an iterator to cycle through, starting from the first element or the
+ given index, all elements of a table that match a given criteria.
+      </td>
     </tr>
     <tr>
       <td class="name" >
         <a href="#util.table.merge">util.table.merge<i class="deprecated_label"> [deprecated]</i></a>
       </td>
-      <td colspan="2" class="summary">Merge items from the one table to another one</td>
+      <td colspan="2" class="summary">
+        Merge items from the one table to another one
+      </td>
     </tr>
     <tr>
       <td class="name" >
         <a href="#round">awful.util.round<i class="deprecated_label"> [deprecated]</i></a>
       </td>
-      <td colspan="2" class="summary">Round a number to an integer.</td>
+      <td colspan="2" class="summary">
+        Round a number to an integer.
+      </td>
     </tr>
 </table>
 <h2><a href="#Fields">Fields</a></h2>
@@ -485,7 +567,9 @@
     <tr>
       <td class="shortname" ><a href="#shell"><span class='function_modname'>awful.util.</span>shell</a></td>
       <td class="summarytype" nowrap><span class='summary_type'>string</span></td>
-      <td colspan="2" class="summary">The default shell used when spawing processes.</td>
+      <td colspan="2" class="summary">
+        The default shell used when spawning processes.
+      </td>
     </tr>
 </table>
 
@@ -517,7 +601,7 @@
 
 
 
-    <span id=item2308 class="hide_extra">
+    <span id=item2347 class="hide_extra">
     </span>
 
 </dd>
@@ -550,7 +634,7 @@
 
 
 
-    <span id=item2309 class="hide_extra">
+    <span id=item2348 class="hide_extra">
     </span>
 
 </dd>
@@ -577,7 +661,7 @@
 
 
 
-    <span id=item2310 class="hide_extra">
+    <span id=item2349 class="hide_extra">
     </span>
 
 </dd>
@@ -605,7 +689,7 @@
          Table of dirs to search, otherwise { '/usr/share/pixmaps/' }
         </li>
         <li><span class="parameter">size</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          The size. If this is specified, subdirectories <code>x</code>
    of the dirs are searched first.
          (<em>optional</em>)
@@ -617,7 +701,7 @@
 
 
 
-    <span id=item2311 class="hide_extra">
+    <span id=item2350 class="hide_extra">
     </span>
 
 </dd>
@@ -642,7 +726,7 @@
 
 
 
-    <span id=item2312 class="hide_extra">
+    <span id=item2351 class="hide_extra">
     </span>
 
 </dd>
@@ -685,7 +769,7 @@
 
 
 
-    <span id=item2313 class="hide_extra">
+    <span id=item2352 class="hide_extra">
     </span>
 
 </dd>
@@ -702,15 +786,15 @@
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">fallback</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          The new class
         </li>
         <li><span class="parameter">old_name</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          The old class name
         </li>
         <li><span class="parameter">new_name</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          The new class name
         </li>
     </ul>
@@ -718,7 +802,7 @@
     <h3>Returns:</h3>
     <ol>
 
-           <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+           <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
         A proxy class.
     </ol>
 
@@ -730,7 +814,7 @@
 
 
 
-    <span id=item2314 class="hide_extra">
+    <span id=item2353 class="hide_extra">
     </span>
 
 </dd>
@@ -749,7 +833,7 @@
          The color.
         </li>
         <li><span class="parameter">fallback</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          The color to return if the first is invalid. (default: black)
         </li>
     </ul>
@@ -757,7 +841,7 @@
     <h3>Returns:</h3>
     <ol>
 
-           <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+           <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
         color if it is valid, else fallback.
     </ol>
 
@@ -769,7 +853,7 @@
 
 
 
-    <span id=item2315 class="hide_extra">
+    <span id=item2354 class="hide_extra">
     </span>
 
 </dd>
@@ -806,7 +890,7 @@
 
 
 
-    <span id=item2316 class="hide_extra">
+    <span id=item2355 class="hide_extra">
     </span>
 
 </dd>
@@ -840,7 +924,7 @@
 
 
 
-    <span id=item2317 class="hide_extra">
+    <span id=item2356 class="hide_extra">
     </span>
 
 </dd>
@@ -875,7 +959,7 @@
 
 
 
-    <span id=item2318 class="hide_extra">
+    <span id=item2357 class="hide_extra">
     </span>
 
 </dd>
@@ -909,7 +993,7 @@
 
 
 
-    <span id=item2319 class="hide_extra">
+    <span id=item2358 class="hide_extra">
     </span>
 
 </dd>
@@ -937,7 +1021,7 @@
 
 
 
-    <span id=item2320 class="hide_extra">
+    <span id=item2359 class="hide_extra">
     </span>
 
 </dd>
@@ -965,7 +1049,7 @@
 
 
 
-    <span id=item2321 class="hide_extra">
+    <span id=item2360 class="hide_extra">
     </span>
 
 </dd>
@@ -994,7 +1078,7 @@
 
 
 
-    <span id=item2322 class="hide_extra">
+    <span id=item2361 class="hide_extra">
     </span>
 
 </dd>
@@ -1022,7 +1106,7 @@
 
 
 
-    <span id=item2323 class="hide_extra">
+    <span id=item2362 class="hide_extra">
     </span>
 
 </dd>
@@ -1050,7 +1134,7 @@
 
 
 
-    <span id=item2324 class="hide_extra">
+    <span id=item2363 class="hide_extra">
     </span>
 
 </dd>
@@ -1078,7 +1162,7 @@
 
 
 
-    <span id=item2325 class="hide_extra">
+    <span id=item2364 class="hide_extra">
     </span>
 
 </dd>
@@ -1114,7 +1198,7 @@
 
 
 
-    <span id=item2326 class="hide_extra">
+    <span id=item2365 class="hide_extra">
     </span>
 
 </dd>
@@ -1148,7 +1232,7 @@
 
 
 
-    <span id=item2327 class="hide_extra">
+    <span id=item2366 class="hide_extra">
     </span>
 
 </dd>
@@ -1164,7 +1248,7 @@
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">path</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          The directory path.
         </li>
     </ul>
@@ -1184,7 +1268,7 @@
 
 
 
-    <span id=item2328 class="hide_extra">
+    <span id=item2367 class="hide_extra">
     </span>
 
 </dd>
@@ -1200,7 +1284,7 @@
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">path</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
 
 
 
@@ -1222,7 +1306,7 @@
 
 
 
-    <span id=item2329 class="hide_extra">
+    <span id=item2368 class="hide_extra">
     </span>
 
 </dd>
@@ -1260,7 +1344,7 @@
 
 
 
-    <span id=item2330 class="hide_extra">
+    <span id=item2369 class="hide_extra">
     </span>
 
 </dd>
@@ -1301,7 +1385,7 @@
 
 
 
-    <span id=item2331 class="hide_extra">
+    <span id=item2370 class="hide_extra">
     </span>
 
 </dd>
@@ -1336,7 +1420,7 @@
 
 
 
-    <span id=item2332 class="hide_extra">
+    <span id=item2371 class="hide_extra">
     </span>
 
 </dd>
@@ -1354,24 +1438,24 @@
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">t</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
-         the table to be overriden
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+         the table to be overridden
         </li>
         <li><span class="parameter">set</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          the table used to override members of <code>t</code>
         </li>
         <li><span class="parameter">raw</span>
             <span class="types"><span class="type">boolean</span></span>
          Use rawset (avoid the metatable)
-         (<em>default</em> false)
+         (<em>default</em> <code>false</code>)
         </li>
     </ul>
 
     <h3>Returns:</h3>
     <ol>
 
-           <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+           <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
         t (for convenience)
     </ol>
 
@@ -1383,7 +1467,7 @@
 
 
 
-    <span id=item2333 class="hide_extra">
+    <span id=item2372 class="hide_extra">
     </span>
 
 </dd>
@@ -1404,7 +1488,7 @@
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">t</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          A potentially sparse table
         </li>
     </ul>
@@ -1412,7 +1496,7 @@
     <h3>Returns:</h3>
     <ol>
 
-           <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+           <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
         A packed table with all numeric keys
     </ol>
 
@@ -1424,7 +1508,7 @@
 
 
 
-    <span id=item2334 class="hide_extra">
+    <span id=item2373 class="hide_extra">
     </span>
 
 </dd>
@@ -1461,7 +1545,7 @@
 
 
 
-    <span id=item2335 class="hide_extra">
+    <span id=item2374 class="hide_extra">
     </span>
 
 </dd>
@@ -1501,7 +1585,7 @@
 
 
 
-    <span id=item2336 class="hide_extra">
+    <span id=item2375 class="hide_extra">
     </span>
 
 </dd>
@@ -1517,7 +1601,7 @@
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">text</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          Input string.
         </li>
     </ul>
@@ -1537,7 +1621,7 @@
 
 
 
-    <span id=item2337 class="hide_extra">
+    <span id=item2376 class="hide_extra">
     </span>
 
 </dd>
@@ -1571,7 +1655,7 @@
 
 
 
-    <span id=item2338 class="hide_extra">
+    <span id=item2377 class="hide_extra">
     </span>
 
 </dd>
@@ -1608,7 +1692,7 @@
 
 
 
-    <span id=item2339 class="hide_extra">
+    <span id=item2378 class="hide_extra">
     </span>
 
 </dd>
@@ -1642,7 +1726,7 @@
 
 
 
-    <span id=item2340 class="hide_extra">
+    <span id=item2379 class="hide_extra">
     </span>
 
 </dd>
@@ -1679,7 +1763,7 @@
 
 
 
-    <span id=item2341 class="hide_extra">
+    <span id=item2380 class="hide_extra">
     </span>
 
 </dd>
@@ -1719,7 +1803,7 @@
 
 
 
-    <span id=item2342 class="hide_extra">
+    <span id=item2381 class="hide_extra">
     </span>
 
 </dd>
@@ -1735,11 +1819,11 @@
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">t</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          the container table
         </li>
         <li><span class="parameter">set</span>
-            <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          the mixin table
         </li>
     </ul>
@@ -1747,7 +1831,7 @@
     <h3>Returns:</h3>
     <ol>
 
-           <span class="types"><a class="type" href="https://www.lua.org/manual/5.3/manual.html#6.6">table</a></span>
+           <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
         Return <code>t</code> for convenience
     </ol>
 
@@ -1759,7 +1843,7 @@
 
 
 
-    <span id=item2343 class="hide_extra">
+    <span id=item2382 class="hide_extra">
     </span>
 
 </dd>
@@ -1799,7 +1883,7 @@
 
 
 
-    <span id=item2344 class="hide_extra">
+    <span id=item2383 class="hide_extra">
     </span>
 
 </dd>
@@ -1815,7 +1899,7 @@
     </span>
     </dt>
     <dd>
-    The default shell used when spawing processes.
+    The default shell used when spawning processes.
 
 
 
@@ -1823,7 +1907,7 @@
 
 
 
-    <span id=item2345 class="hide_extra">
+    <span id=item2384 class="hide_extra">
     </span>
 
 </dd>
@@ -1834,7 +1918,6 @@
 </div> <!-- id="main" -->
 <div id="about">
 <i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.6</a></i>
-<i style="float:right;">Last updated 2021-05-01 17:20:18 </i>
 </div> <!-- id="about" -->
 </div> <!-- id="container" -->
 </body>
